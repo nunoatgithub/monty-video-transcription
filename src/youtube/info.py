@@ -50,7 +50,7 @@ class YouTubeVideoInfo:
             return None
 
     @staticmethod
-    def fetch_from_url(url: str) -> YouTubeVideoInfo | None:
+    def from_url(url: str) -> YouTubeVideoInfo | None:
         path = YouTubeVideoInfo._find_existing(url)
         if path is not None:
             print(f"Info about {url} already exists, loading it from file {path}...")
@@ -110,7 +110,7 @@ class YouTubeChannel:
         video_urls = self._get_youtube_channel_video_urls()
         video_info = []
         for url in video_urls:
-            info = YouTubeVideoInfo.fetch_from_url(url)
+            info = YouTubeVideoInfo.from_url(url)
             if info is not None:
                 video_info.append(info)
         return video_info
@@ -138,7 +138,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Download info about YouTube videos"
     )
-    parser.add_argument("channel", nargs="?", help="URL of a YouTube channel to download all video transcripts")
+    parser.add_argument("channel", nargs="?", help="URL of a YouTube channel")
     args = parser.parse_args()
 
     if not args.channel:

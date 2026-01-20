@@ -8,10 +8,10 @@ import time
 import traceback
 from pathlib import Path
 
-from torch import manual_seed
-from youtube_transcript_api import YouTubeTranscriptApi, FetchedTranscript, NoTranscriptFound
+from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound
 
 from youtube.info import YouTubeVideoInfo
+
 
 class YouTubeTranscript:
 
@@ -202,9 +202,12 @@ class YouTubeTranscript:
         return YouTubeTranscript._ytt_api
 
 def main():
-    parser = argparse.ArgumentParser(description="YouTube transcription with Whisper")
+    parser = argparse.ArgumentParser(description="YouTube transcription download and pre-process")
     parser.add_argument("input_path", help="Single video_info file or folder containing multiple such files")
     args = parser.parse_args()
+
+    if not args.input_path:
+        parser.error("You must provide an video info input_path.")
 
     input_path = Path(args.input_path)
 
