@@ -1,0 +1,602 @@
+[
+    {
+        "text": "Jeremy Shoemaker: So yeah, I'm Jeremy\nShoemaker, I'm a staff software engineer",
+        "start": 1.501,
+        "duration": 2.85
+    },
+    {
+        "text": "at the Thousand Brains Project, and\nI'm going to explain how you can go",
+        "start": 4.401,
+        "duration": 3.72
+    },
+    {
+        "text": "through the pull request process and\ncontribute code and other related things.",
+        "start": 8.121,
+        "duration": 4.44
+    },
+    {
+        "text": "So yeah, so an overview of\nmaking a code contribution.",
+        "start": 16.221,
+        "duration": 2.28
+    },
+    {
+        "text": "Most of our code changes are made\nin the tbp.monty repository, so",
+        "start": 18.501,
+        "duration": 5.11
+    },
+    {
+        "text": "you'll need to fork that on GitHub.",
+        "start": 23.611,
+        "duration": 2.162
+    },
+    {
+        "text": "You'll need to set it up locally for\ndevelopment, and then you'll need to sign",
+        "start": 25.773,
+        "duration": 3.088
+    },
+    {
+        "text": "the contributor license agreement, which\nis pretty typical of open source projects.",
+        "start": 28.941,
+        "duration": 3.769
+    },
+    {
+        "text": "You can go read the details of that.",
+        "start": 33.196,
+        "duration": 2.05
+    },
+    {
+        "text": "Then you make your changes in a branch\non your fork and open a pull request,",
+        "start": 35.376,
+        "duration": 2.58
+    },
+    {
+        "text": "and then the engineering team will\ntriage it and assign it to one of the",
+        "start": 38.276,
+        "duration": 2.705
+    },
+    {
+        "text": "maintainers to review, and then one or\nmore of the maintainers, and then you'll",
+        "start": 41.026,
+        "duration": 3.78
+    },
+    {
+        "text": "work with them until they're ready to\napprove it, and then if the tests pass,",
+        "start": 44.806,
+        "duration": 2.88
+    },
+    {
+        "text": "one of the maintainers will merge the PR.",
+        "start": 47.686,
+        "duration": 1.86
+    },
+    {
+        "text": "What, So all the details on how this\nprocess works is in our documentation.",
+        "start": 49.546,
+        "duration": 6.332
+    },
+    {
+        "text": "You can get more details there than\nI'm going to cover, but I'm going",
+        "start": 55.878,
+        "duration": 2.64
+    },
+    {
+        "text": "to cover the broad strokes here.",
+        "start": 58.598,
+        "duration": 1.21
+    },
+    {
+        "text": "Also, documentation updates are\ncode contributions, so if you think",
+        "start": 60.768,
+        "duration": 3.7
+    },
+    {
+        "text": "there's a way you can improve the\ndocumentation or add something to",
+        "start": 64.468,
+        "duration": 2.66
+    },
+    {
+        "text": "make it better, please do And pretty\nmuch every page in their documentation",
+        "start": 67.128,
+        "duration": 3.99
+    },
+    {
+        "text": "has this nice, convenient link where\nyou can click \"Make Contribution\",",
+        "start": 71.128,
+        "duration": 3.07
+    },
+    {
+        "text": "and it'll open up a editor in GitHub\nto let you just make a change there.",
+        "start": 74.198,
+        "duration": 4.53
+    },
+    {
+        "text": "quick fixes are really easy to do.",
+        "start": 79.418,
+        "duration": 1.39
+    },
+    {
+        "text": "So",
+        "start": 80.818,
+        "duration": 0.02
+    },
+    {
+        "text": "the first main thing you\nneed to do is sign the CLA.",
+        "start": 83.078,
+        "duration": 1.98
+    },
+    {
+        "text": "This is done in a separate repository.",
+        "start": 85.778,
+        "duration": 1.28
+    },
+    {
+        "text": "You just basically go there,\nopen up an issue, and do the sign",
+        "start": 88.268,
+        "duration": 3.8
+    },
+    {
+        "text": "contributor license agreement.",
+        "start": 92.328,
+        "duration": 1.17
+    },
+    {
+        "text": "You can read it, it's pretty standard.",
+        "start": 93.818,
+        "duration": 1.2
+    },
+    {
+        "text": "It basically lets us, distribute\nthe changes you've made and gives",
+        "start": 95.018,
+        "duration": 4.63
+    },
+    {
+        "text": "us permission To do all that stuff.",
+        "start": 99.648,
+        "duration": 3.69
+    },
+    {
+        "text": "Making some changes.",
+        "start": 105.538,
+        "duration": 0.96
+    },
+    {
+        "text": "Depending on what you're doing, different\nthings will require different chain\u2026",
+        "start": 107.088,
+        "duration": 2.69
+    },
+    {
+        "text": "different, approaches, but, one of the\nthings I want to point out is that we have",
+        "start": 109.828,
+        "duration": 3.71
+    },
+    {
+        "text": "a style guide that kind of goes through\nthe different code style things we do.",
+        "start": 113.538,
+        "duration": 4.81
+    },
+    {
+        "text": "Code formatting is usually\ndone automatically with Ruff.",
+        "start": 119.098,
+        "duration": 2.93
+    },
+    {
+        "text": "We have a particular style\nfor how we do our docstrings.",
+        "start": 122.668,
+        "duration": 1.38
+    },
+    {
+        "text": "Another thing I want to call out here is\nthat we have a code organization guide.",
+        "start": 124.978,
+        "duration": 2.82
+    },
+    {
+        "text": "Which documents how we want to\nuse Python's object-oriented",
+        "start": 127.818,
+        "duration": 3.64
+    },
+    {
+        "text": "programming features.",
+        "start": 131.458,
+        "duration": 0.8
+    },
+    {
+        "text": "Some of them we don't want to\nnecessarily use, because they make",
+        "start": 132.748,
+        "duration": 2.15
+    },
+    {
+        "text": "things more complicated than they\nneed to be, and so there's a nice",
+        "start": 134.898,
+        "duration": 2.85
+    },
+    {
+        "text": "document there that you can go through\nand figure out how that might fit in.",
+        "start": 137.748,
+        "duration": 5.09
+    },
+    {
+        "text": "And then we also have a typing\nguide, which describes how we",
+        "start": 142.858,
+        "duration": 1.82
+    },
+    {
+        "text": "want to apply type hinting.",
+        "start": 144.678,
+        "duration": 1.19
+    },
+    {
+        "text": "We don't currently actually run any\ntype checking because our codebase",
+        "start": 146.448,
+        "duration": 4.203
+    },
+    {
+        "text": "doesn't have complete coverage.",
+        "start": 150.651,
+        "duration": 1.227
+    },
+    {
+        "text": "But as we're making changes we're\ntrying to add in type hints so",
+        "start": 151.878,
+        "duration": 3.53
+    },
+    {
+        "text": "that we can eventually get a nice\napproach and support there for type",
+        "start": 155.408,
+        "duration": 4.62
+    },
+    {
+        "text": "hinting.",
+        "start": 162.038,
+        "duration": 0.06
+    },
+    {
+        "text": "So how we triage the pull requests is that\nthe engineering team rotates weekly on",
+        "start": 162.338,
+        "duration": 3.53
+    },
+    {
+        "text": "who handles triage, and currently that's\njust me and Tristan, and so it alternates.",
+        "start": 165.868,
+        "duration": 3.58
+    },
+    {
+        "text": "And at least once a day, we'll go\nthrough and look at all the open",
+        "start": 169.788,
+        "duration": 2.8
+    },
+    {
+        "text": "pull requests that haven't been\ntriaged and then assign them out.",
+        "start": 172.588,
+        "duration": 3.13
+    },
+    {
+        "text": "And it usually involves checking\nthe title to make sure it matches",
+        "start": 175.718,
+        "duration": 2.35
+    },
+    {
+        "text": "our conventional commits format\nwhich is in our documentation.",
+        "start": 178.068,
+        "duration": 3.41
+    },
+    {
+        "text": "You can look there in the code style.",
+        "start": 181.488,
+        "duration": 1.22
+    },
+    {
+        "text": "Making sure the description\nadequately explains the change.",
+        "start": 183.928,
+        "duration": 2.31
+    },
+    {
+        "text": "That way we and when we reference\nback to it we know what was going on",
+        "start": 186.668,
+        "duration": 3.57
+    },
+    {
+        "text": "and what the thinking was behind it.",
+        "start": 190.238,
+        "duration": 1.43
+    },
+    {
+        "text": "We'll cursorily look at the changes\nto determine who on the team would",
+        "start": 192.098,
+        "duration": 4.73
+    },
+    {
+        "text": "be best to review the changes and\nthen assign one or more maintainers",
+        "start": 196.838,
+        "duration": 3.02
+    },
+    {
+        "text": "based off that to the assignees.",
+        "start": 199.888,
+        "duration": 0.72
+    },
+    {
+        "text": "One thing to note here is we use the\nassignees field, not the reviewers",
+        "start": 201.608,
+        "duration": 2.44
+    },
+    {
+        "text": "field, to determine if PR has the\napprovals it needs for a maintainer but",
+        "start": 204.048,
+        "duration": 3.01
+    },
+    {
+        "text": "from the maintainers of the project.",
+        "start": 207.338,
+        "duration": 1.11
+    },
+    {
+        "text": "So even if you've got multiple reviewers\nthat have approved it, it has to",
+        "start": 209.408,
+        "duration": 3.48
+    },
+    {
+        "text": "be the assignees that approve the",
+        "start": 212.978,
+        "duration": 1.91
+    },
+    {
+        "text": "PR.",
+        "start": 217.578,
+        "duration": 0.01
+    },
+    {
+        "text": "As I mentioned before we\nuse Ruff for style checking.",
+        "start": 217.588,
+        "duration": 1.8
+    },
+    {
+        "text": "I recommend you set this up as\nan onsave thing in your editor.",
+        "start": 219.398,
+        "duration": 5.29
+    },
+    {
+        "text": "You can do this in VS Code, and\nother IDEs have this as well.",
+        "start": 224.708,
+        "duration": 3.16
+    },
+    {
+        "text": "Running Ruff check fix-sfix will actually\nfix a lot of these automatically.",
+        "start": 228.318,
+        "duration": 4.48
+    },
+    {
+        "text": "And then rough formatting\nto do just general code",
+        "start": 233.088,
+        "duration": 2.25
+    },
+    {
+        "text": "formatting to match our style.",
+        "start": 236.038,
+        "duration": 1.31
+    },
+    {
+        "text": "You could also set these up in a\npre-commit hook but that's Less useful",
+        "start": 238.688,
+        "duration": 4.79
+    },
+    {
+        "text": "in my experience because it's after\nyou've been making the changes and you",
+        "start": 243.498,
+        "duration": 3.41
+    },
+    {
+        "text": "have to go back and do it again versus\njust running it when you save stuff.",
+        "start": 246.908,
+        "duration": 2.92
+    },
+    {
+        "text": "You can run our test suite locally from\nthe top-level directory of the repository.",
+        "start": 250.948,
+        "duration": 3.46
+    },
+    {
+        "text": "Which is just running pytest\nand it'll run all the tests.",
+        "start": 254.438,
+        "duration": 2.3
+    },
+    {
+        "text": "There are various options you\ncould add there, but that'll",
+        "start": 257.498,
+        "duration": 3.39
+    },
+    {
+        "text": "basically run the full suite.",
+        "start": 260.888,
+        "duration": 1.09
+    },
+    {
+        "text": "These are also run in GitHub anytime\nyou make a PR so if they don't pass",
+        "start": 262.688,
+        "duration": 4.82
+    },
+    {
+        "text": "there you'll get a notification and\nhave to be fixed before we can merge it.",
+        "start": 267.508,
+        "duration": 4.17
+    },
+    {
+        "text": "We also have a set of benchmark\nexperiments that we run to augment our",
+        "start": 273.048,
+        "duration": 3.18
+    },
+    {
+        "text": "test suite and provide more coverage.",
+        "start": 276.228,
+        "duration": 1.64
+    },
+    {
+        "text": "These can be run locally and\nHojae discussed earlier how you",
+        "start": 278.758,
+        "duration": 3.88
+    },
+    {
+        "text": "can run an experiment and you can\nfind the instructions that she",
+        "start": 282.638,
+        "duration": 2.25
+    },
+    {
+        "text": "mentioned in our documentation.",
+        "start": 284.888,
+        "duration": 1.28
+    },
+    {
+        "text": "For changes that we think could affect\nbenchmark results, the maintainers",
+        "start": 286.808,
+        "duration": 5.21
+    },
+    {
+        "text": "will usually run the full suite in our\nAWS infrastructure to ensure that the",
+        "start": 292.018,
+        "duration": 4.11
+    },
+    {
+        "text": "results haven't changed unexpectedly.",
+        "start": 296.128,
+        "duration": 1.37
+    },
+    {
+        "text": "Sometimes that might require further\nback-and-forth changes to figure",
+        "start": 297.538,
+        "duration": 3.68
+    },
+    {
+        "text": "out what happened, what might\nhave caused the differences, if",
+        "start": 301.218,
+        "duration": 2.54
+    },
+    {
+        "text": "they're expected or unexpected.",
+        "start": 303.758,
+        "duration": 1.43
+    },
+    {
+        "text": "The documentation goes into\ndetails about the benchmarks.",
+        "start": 306.028,
+        "duration": 2.91
+    },
+    {
+        "text": "Talking about what experiments we\nhave, what they are, and then there's",
+        "start": 309.548,
+        "duration": 3.38
+    },
+    {
+        "text": "a couple of tables of the results\nthat we expect to see currently.",
+        "start": 313.358,
+        "duration": 3.62
+    },
+    {
+        "text": "And that kind of gets updated\nwhenever we make significant",
+        "start": 316.978,
+        "duration": 2.26
+    },
+    {
+        "text": "changes that affect the results.",
+        "start": 319.238,
+        "duration": 1.51
+    },
+    {
+        "text": "Now, the basics of the reviews\nprocess is pretty typical.",
+        "start": 322.408,
+        "duration": 4.57
+    },
+    {
+        "text": "We use squash merges so don't\nworry about a messy commit history",
+        "start": 327.428,
+        "duration": 3.0
+    },
+    {
+        "text": "because it'll all get squashed down.",
+        "start": 330.448,
+        "duration": 1.08
+    },
+    {
+        "text": "We ask that you please refrain from using\nGit Rebase or any other form of history",
+        "start": 331.988,
+        "duration": 4.79
+    },
+    {
+        "text": "rewriting because it makes it difficult\nfor reviewers to review new changes.",
+        "start": 336.778,
+        "duration": 3.19
+    },
+    {
+        "text": "Because GitHub doesn't do a good job\nof letting you see the differences.",
+        "start": 339.968,
+        "duration": 3.59
+    },
+    {
+        "text": "And just work with the assigned\nmaintainers to get the PR into a",
+        "start": 344.908,
+        "duration": 3.157
+    },
+    {
+        "text": "state that they'll approve it and\nonce they do, They'll merge it.",
+        "start": 348.068,
+        "duration": 3.04
+    },
+    {
+        "text": "Some changes, like I mentioned,\nwill require benchmark runs, and",
+        "start": 352.048,
+        "duration": 2.56
+    },
+    {
+        "text": "the maintainer will run it and\npost the results and go from there.",
+        "start": 354.718,
+        "duration": 3.78
+    },
+    {
+        "text": "Once all the assignees approve it one of\nthe maintainers will merge it and then",
+        "start": 358.998,
+        "duration": 3.8
+    },
+    {
+        "text": "you've successfully made a code change.",
+        "start": 362.988,
+        "duration": 2.29
+    },
+    {
+        "text": "I want to say thank you to all\nthe people who've contributed and",
+        "start": 365.288,
+        "duration": 3.48
+    },
+    {
+        "text": "anyone in the future who contributes\nbecause we really appreciate all",
+        "start": 368.768,
+        "duration": 2.25
+    },
+    {
+        "text": "the work and it really helps.",
+        "start": 371.018,
+        "duration": 2.54
+    },
+    {
+        "text": "And any of your contributions\nusually go into our community",
+        "start": 373.808,
+        "duration": 2.77
+    },
+    {
+        "text": "shoutouts and our monthly review\nvideos so you get kudos there.",
+        "start": 376.578,
+        "duration": 3.2
+    },
+    {
+        "text": "And with that, I will hand it\nover to Tristan to discuss how",
+        "start": 380.878,
+        "duration": 3.51
+    },
+    {
+        "text": "we plan to evolve Monty into",
+        "start": 384.388,
+        "duration": 2.62
+    },
+    {
+        "text": "an easy-to-use platform.",
+        "start": 389.108,
+        "duration": 1.25
+    }
+]

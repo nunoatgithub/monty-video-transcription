@@ -1,0 +1,4627 @@
+[
+    {
+        "text": "Yeah, the first part is a recap of this\npre basic proposal that I made a couple",
+        "start": 8.522,
+        "duration": 5.34
+    },
+    {
+        "text": "of weeks ago, or general idea that,\nbehavior and morphology columns might be",
+        "start": 13.862,
+        "duration": 5.4
+    },
+    {
+        "text": "mo models, might be in separate columns\nand one might also call it going full",
+        "start": 19.532,
+        "duration": 5.43
+    },
+    {
+        "text": "Monty since no one referenced before.",
+        "start": 24.962,
+        "duration": 3.81
+    },
+    {
+        "text": "So that, that's the code\nname I'm using for it now.",
+        "start": 31.412,
+        "duration": 3.24
+    },
+    {
+        "text": "because well, yeah, just following\nMount Castle's proposal to the end",
+        "start": 36.272,
+        "duration": 5.25
+    },
+    {
+        "text": "that whatever each column models just\ndepends on the input it, receives.",
+        "start": 41.522,
+        "duration": 5.61
+    },
+    {
+        "text": "so very quickly, here's our current model.",
+        "start": 49.232,
+        "duration": 3.0
+    },
+    {
+        "text": "We have, movement and feature\ninput from the sensorimotor going",
+        "start": 52.382,
+        "duration": 3.21
+    },
+    {
+        "text": "through the thalamus movement.",
+        "start": 55.592,
+        "duration": 1.29
+    },
+    {
+        "text": "Input.",
+        "start": 56.882,
+        "duration": 0.33
+    },
+    {
+        "text": "Input goes in, here, upper layer six,\nfeature input goes into layer four.",
+        "start": 57.242,
+        "duration": 7.5
+    },
+    {
+        "text": "And then we talked before that,\nperhaps, or, orientation input",
+        "start": 65.012,
+        "duration": 3.87
+    },
+    {
+        "text": "goes at in, at the border and\nkind of activates the minicolumns.",
+        "start": 68.882,
+        "duration": 3.69
+    },
+    {
+        "text": "And then, features might, cause\nlike very specific activations",
+        "start": 72.572,
+        "duration": 4.65
+    },
+    {
+        "text": "within the minicolumns.",
+        "start": 77.222,
+        "duration": 1.2
+    },
+    {
+        "text": "and then we have associative\nconnections between layer four",
+        "start": 79.922,
+        "duration": 2.37
+    },
+    {
+        "text": "and layer six that learn, which\nfeatures are at what locations.",
+        "start": 82.292,
+        "duration": 4.2
+    },
+    {
+        "text": "layer six is the location on the object.",
+        "start": 87.452,
+        "duration": 1.86
+    },
+    {
+        "text": "And then, a. A is location on the object,\nb orientation of the object and the",
+        "start": 89.312,
+        "duration": 5.205
+    },
+    {
+        "text": "orientation of the object can be used to\nrotate both the incoming movement vector",
+        "start": 94.517,
+        "duration": 4.26
+    },
+    {
+        "text": "and the incoming orientation feature.",
+        "start": 98.777,
+        "duration": 2.25
+    },
+    {
+        "text": "over time, those activations\nget pooled into, something",
+        "start": 102.617,
+        "duration": 5.31
+    },
+    {
+        "text": "one might call an object id.",
+        "start": 107.957,
+        "duration": 1.98
+    },
+    {
+        "text": "So which objects are we sensing overall?",
+        "start": 109.937,
+        "duration": 2.4
+    },
+    {
+        "text": "And that is kinda stable.",
+        "start": 112.727,
+        "duration": 1.38
+    },
+    {
+        "text": "So as we move over an object, the\nsensations that come in and that are",
+        "start": 114.107,
+        "duration": 4.53
+    },
+    {
+        "text": "in layer four and layer six change at\nevery step, but that remains stable",
+        "start": 118.637,
+        "duration": 4.17
+    },
+    {
+        "text": "as long as we're on the same object.",
+        "start": 122.807,
+        "duration": 1.65
+    },
+    {
+        "text": "Okay?",
+        "start": 125.717,
+        "duration": 0.24
+    },
+    {
+        "text": "And then we can also have this kinda\nfeedback input from a higher level",
+        "start": 125.957,
+        "duration": 3.63
+    },
+    {
+        "text": "column that tells this column which\nlocation it should expect to be at,",
+        "start": 129.587,
+        "duration": 6.66
+    },
+    {
+        "text": "and then this kind of broader context\nsignal to multiple columns, in the",
+        "start": 136.577,
+        "duration": 6.27
+    },
+    {
+        "text": "lower level, in the hierarchy, in layer\none, that, can be connected to layer",
+        "start": 142.847,
+        "duration": 7.65
+    },
+    {
+        "text": "two to three five A, not a hundred\npercent sure exactly what each of",
+        "start": 150.497,
+        "duration": 5.25
+    },
+    {
+        "text": "these get out of this context signal.",
+        "start": 155.747,
+        "duration": 1.98
+    },
+    {
+        "text": "So far so good.",
+        "start": 159.077,
+        "duration": 0.93
+    },
+    {
+        "text": "nothing new here.",
+        "start": 160.727,
+        "duration": 1.02
+    },
+    {
+        "text": "so now what we introduced when we\ntalked about behavior models is, what",
+        "start": 163.307,
+        "duration": 7.8
+    },
+    {
+        "text": "if there's just a parallel system?",
+        "start": 171.107,
+        "duration": 2.19
+    },
+    {
+        "text": "we get, changes and directions\nas input to upper layer three",
+        "start": 173.987,
+        "duration": 4.62
+    },
+    {
+        "text": "and layer three minicolumns.",
+        "start": 178.607,
+        "duration": 1.98
+    },
+    {
+        "text": "we got a movement vector\nas input to layer five B.",
+        "start": 182.012,
+        "duration": 3.63
+    },
+    {
+        "text": "We have basically two reference frames.",
+        "start": 185.642,
+        "duration": 2.19
+    },
+    {
+        "text": "One for the behavior model,\none for the morphology model.",
+        "start": 187.892,
+        "duration": 2.94
+    },
+    {
+        "text": "that one also has an orientation\nwhich can be used to rotate the input.",
+        "start": 191.912,
+        "duration": 4.35
+    },
+    {
+        "text": "We also have associative connections in\nthis case, maybe between layer three and",
+        "start": 197.042,
+        "duration": 4.77
+    },
+    {
+        "text": "layer five B. And those, I'm sorry, did\nit require doubling up on these things?",
+        "start": 201.812,
+        "duration": 5.16
+    },
+    {
+        "text": "I thought, it didn't.",
+        "start": 207.452,
+        "duration": 0.84
+    },
+    {
+        "text": "Yeah, I thought it didn't require\na separate movement vector and",
+        "start": 209.102,
+        "duration": 3.36
+    },
+    {
+        "text": "a separate orientation vector.",
+        "start": 212.462,
+        "duration": 1.65
+    },
+    {
+        "text": "I thought those were shared.",
+        "start": 214.502,
+        "duration": 2.25
+    },
+    {
+        "text": "they need to be separate if we wanna\nbe able to recognize behaviors and",
+        "start": 219.062,
+        "duration": 4.23
+    },
+    {
+        "text": "morphologies independently of each\nother in independent orientations.",
+        "start": 223.352,
+        "duration": 4.35
+    },
+    {
+        "text": "Oh, Yeah.",
+        "start": 227.762,
+        "duration": 1.405
+    },
+    {
+        "text": "Sorry.",
+        "start": 231.572,
+        "duration": 0.27
+    },
+    {
+        "text": "so yeah, then they get\npulled into a behavior id.",
+        "start": 232.982,
+        "duration": 4.95
+    },
+    {
+        "text": "and yeah, that's then the, additional\nthing would be that there's some",
+        "start": 239.792,
+        "duration": 6.9
+    },
+    {
+        "text": "kind of time signal, in layer one\nthat we can have neurons in layer",
+        "start": 246.692,
+        "duration": 7.14
+    },
+    {
+        "text": "three synapse to and kinda temp, have\nsome temporal conditioning on what,",
+        "start": 253.832,
+        "duration": 6.18
+    },
+    {
+        "text": "changes to expect at which locations.",
+        "start": 260.522,
+        "duration": 2.31
+    },
+    {
+        "text": "And Do you notice\nsomething in this picture?",
+        "start": 264.182,
+        "duration": 3.6
+    },
+    {
+        "text": "Wow.",
+        "start": 268.712,
+        "duration": 0.36
+    },
+    {
+        "text": "So you were making double,\nlines of everything.",
+        "start": 269.072,
+        "duration": 2.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 272.102,
+        "duration": 0.42
+    },
+    {
+        "text": "So one, there are doubles of\neverything and two, there's no",
+        "start": 272.522,
+        "duration": 4.53
+    },
+    {
+        "text": "interaction between these two things.",
+        "start": 277.052,
+        "duration": 2.4
+    },
+    {
+        "text": "So blue and green don't really\ninteract at all within this column.",
+        "start": 279.452,
+        "duration": 3.69
+    },
+    {
+        "text": "But we talked about how they would Right.",
+        "start": 283.682,
+        "duration": 1.59
+    },
+    {
+        "text": "It wasn't like we, we thought they\nwould, all the interactions so far",
+        "start": 285.272,
+        "duration": 4.74
+    },
+    {
+        "text": "that we talked about were always\nbetween two hierarchically re-arranged.",
+        "start": 290.102,
+        "duration": 4.05
+    },
+    {
+        "text": "Oh, that's true.",
+        "start": 294.182,
+        "duration": 0.66
+    },
+    {
+        "text": "We tried to do originally within a column.",
+        "start": 295.472,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah.",
+        "start": 297.572,
+        "duration": 0.33
+    },
+    {
+        "text": "And then we said that's getting hard,\nso we said that's too hierarchically.",
+        "start": 297.902,
+        "duration": 3.21
+    },
+    {
+        "text": "Exactly.",
+        "start": 301.532,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 302.462,
+        "duration": 0.51
+    },
+    {
+        "text": "so yeah, for sure.",
+        "start": 303.752,
+        "duration": 0.93
+    },
+    {
+        "text": "We talked about a lot of different\ninteractions between behavior and",
+        "start": 304.682,
+        "duration": 3.18
+    },
+    {
+        "text": "morphology models and there need to\nbe some, but the kind of solutions",
+        "start": 307.862,
+        "duration": 4.32
+    },
+    {
+        "text": "we came up with so far were always\ntwo hierarchically arranged regions.",
+        "start": 312.182,
+        "duration": 4.47
+    },
+    {
+        "text": "And yeah, I guess the only one I can\nthink of that was, but it was a fairly",
+        "start": 316.652,
+        "duration": 5.13
+    },
+    {
+        "text": "weak one or not like one that's hard to\nreplicate, but just that a behavior can",
+        "start": 321.782,
+        "duration": 5.67
+    },
+    {
+        "text": "bias an ID recognition and vice versa.",
+        "start": 327.452,
+        "duration": 2.97
+    },
+    {
+        "text": "So I don't know, recognizing the\nbanana morphology will bias the banana",
+        "start": 331.172,
+        "duration": 5.55
+    },
+    {
+        "text": "peeling behavior and vice versa.",
+        "start": 336.722,
+        "duration": 2.28
+    },
+    {
+        "text": "But that's easy to do with\nvoting and stuff like that.",
+        "start": 339.002,
+        "duration": 2.85
+    },
+    {
+        "text": "So that, I don't think that's okay.",
+        "start": 341.852,
+        "duration": 1.435
+    },
+    {
+        "text": "Yeah, that would work the same\nway with voting across columns.",
+        "start": 343.287,
+        "duration": 3.215
+    },
+    {
+        "text": "I guess the general thing, what\nNiels just said is an issue.",
+        "start": 346.892,
+        "duration": 2.4
+    },
+    {
+        "text": "One, I think, is that sometimes behaviors\nare instantly associated with objects",
+        "start": 349.292,
+        "duration": 3.81
+    },
+    {
+        "text": "and they're not generally shared.",
+        "start": 353.102,
+        "duration": 1.2
+    },
+    {
+        "text": "In fact they start off being\nassociated with objects.",
+        "start": 355.652,
+        "duration": 2.4
+    },
+    {
+        "text": "So sharing behaviors, generalized\nin other objects is the, yeah.",
+        "start": 358.862,
+        "duration": 5.79
+    },
+    {
+        "text": "And we did also say that like you can\nhave a behavior at the lower level",
+        "start": 364.652,
+        "duration": 4.38
+    },
+    {
+        "text": "column and then associate the behavior\nID with a location on an object.",
+        "start": 369.032,
+        "duration": 4.41
+    },
+    {
+        "text": "So saying at this location that\nobject has a certain behavior, but",
+        "start": 373.442,
+        "duration": 5.16
+    },
+    {
+        "text": "that's, again, hierarchically that\nbehaviors in the lower common.",
+        "start": 378.602,
+        "duration": 3.42
+    },
+    {
+        "text": "but yeah, so the general proposal\nwould be to to just separate out the",
+        "start": 386.852,
+        "duration": 4.56
+    },
+    {
+        "text": "blue and the green, which would allow\nus to move, everything back into the",
+        "start": 391.472,
+        "duration": 5.94
+    },
+    {
+        "text": "original layer positioning so we don't\nhave to shift things around a bit to",
+        "start": 397.412,
+        "duration": 3.36
+    },
+    {
+        "text": "make space for more functionality.",
+        "start": 400.772,
+        "duration": 2.49
+    },
+    {
+        "text": "and then we could also generalize it a bit\nand say that this layer one input in the",
+        "start": 405.242,
+        "duration": 7.17
+    },
+    {
+        "text": "morphology object could be more something\nlike state, like for example, if an object",
+        "start": 412.472,
+        "duration": 5.16
+    },
+    {
+        "text": "can have multiple morphological states,\nthat could be a conditioning for that.",
+        "start": 417.632,
+        "duration": 4.77
+    },
+    {
+        "text": "or it could be like, what's whatever's\npassed down in the feedback connections.",
+        "start": 424.982,
+        "duration": 4.23
+    },
+    {
+        "text": "it, it seems to me that time is\nappropriate for both of these.",
+        "start": 430.202,
+        "duration": 2.7
+    },
+    {
+        "text": "yeah, maybe not, but so you don't\nhave, you don't have to separate out,",
+        "start": 434.702,
+        "duration": 3.81
+    },
+    {
+        "text": "you just say time is always there.",
+        "start": 438.602,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah.",
+        "start": 441.692,
+        "duration": 0.24
+    },
+    {
+        "text": "So it could be, I guess what I was\ngetting at is that this could generally",
+        "start": 441.932,
+        "duration": 4.2
+    },
+    {
+        "text": "be considered as something like context\nor state and context can be ti time in",
+        "start": 446.132,
+        "duration": 4.65
+    },
+    {
+        "text": "a sequence, or it can be a behavioral\nstate or an action condition state,",
+        "start": 450.782,
+        "duration": 5.82
+    },
+    {
+        "text": "or it could be, But there's different,\ncell populations to project this",
+        "start": 456.692,
+        "duration": 5.67
+    },
+    {
+        "text": "layer one, so it's not like one thing.",
+        "start": 462.422,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah.",
+        "start": 464.642,
+        "duration": 0.69
+    },
+    {
+        "text": "So time is a kind of a state and,\nyeah, maybe it would help to show,",
+        "start": 466.322,
+        "duration": 4.95
+    },
+    {
+        "text": "I guess like a, we almost need to\nadd a separate connection, which is",
+        "start": 472.697,
+        "duration": 3.015
+    },
+    {
+        "text": "the, what you call it, matrix cells.",
+        "start": 475.712,
+        "duration": 2.64
+    },
+    {
+        "text": "But, but yeah, but I like that, idea\nof, because yeah, it fits with kind",
+        "start": 479.132,
+        "duration": 5.67
+    },
+    {
+        "text": "of what is the, instead of behavior\nin, the morphological models, they're",
+        "start": 484.802,
+        "duration": 6.21
+    },
+    {
+        "text": "learning the different key frames\nthat when an object stops moving and",
+        "start": 491.012,
+        "duration": 4.74
+    },
+    {
+        "text": "those would have these different state\nvariables that, re recover them, yeah.",
+        "start": 495.752,
+        "duration": 7.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 505.682,
+        "duration": 0.45
+    },
+    {
+        "text": "So yeah, in a nutshell,\nthis is the proposal.",
+        "start": 507.122,
+        "duration": 2.67
+    },
+    {
+        "text": "Instead of having each learning\nmodule required to have two reference",
+        "start": 509.792,
+        "duration": 6.0
+    },
+    {
+        "text": "frames and the, all the machinery.",
+        "start": 515.792,
+        "duration": 2.73
+    },
+    {
+        "text": "Doubled up just having different learning\nmodules or different co columns that",
+        "start": 518.852,
+        "duration": 5.49
+    },
+    {
+        "text": "receive different types of input.",
+        "start": 524.342,
+        "duration": 1.44
+    },
+    {
+        "text": "So they might receive, like\nfeatures at look or orientations at",
+        "start": 525.782,
+        "duration": 4.98
+    },
+    {
+        "text": "locations for the morphology model.",
+        "start": 530.762,
+        "duration": 2.04
+    },
+    {
+        "text": "They would receive changes at\nlocations for the behavior model.",
+        "start": 533.252,
+        "duration": 3.42
+    },
+    {
+        "text": "And then the reason why I first thought of\nthis was actually because I was thinking",
+        "start": 537.062,
+        "duration": 3.96
+    },
+    {
+        "text": "about the feature model or like surface\nmodel of like basically this kind of 2D",
+        "start": 541.022,
+        "duration": 6.63
+    },
+    {
+        "text": "map that you can wrap around the surface\nof an object as like a general feature",
+        "start": 547.652,
+        "duration": 5.4
+    },
+    {
+        "text": "map, which could receive, features like\ncolors, but then 2D movement vectors",
+        "start": 553.052,
+        "duration": 6.63
+    },
+    {
+        "text": "along the surface of the object.",
+        "start": 559.682,
+        "duration": 1.74
+    },
+    {
+        "text": "So there might be other types.",
+        "start": 561.722,
+        "duration": 0.87
+    },
+    {
+        "text": "This is, a new idea that you're\njust throwing in here, right?",
+        "start": 563.672,
+        "duration": 2.28
+    },
+    {
+        "text": "oh, in sense.",
+        "start": 566.702,
+        "duration": 0.645
+    },
+    {
+        "text": "in sent, no, I showed this,\nI think some weeks ago.",
+        "start": 568.447,
+        "duration": 6.505
+    },
+    {
+        "text": "what I mean is today's topic,\nyou were saying let's take",
+        "start": 577.712,
+        "duration": 2.58
+    },
+    {
+        "text": "our jack of all trades column\nand break into the two parts.",
+        "start": 582.692,
+        "duration": 3.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 586.832,
+        "duration": 0.9
+    },
+    {
+        "text": "And now you're telling me you're\nbreaking into three parts, which is like.",
+        "start": 587.732,
+        "duration": 2.31
+    },
+    {
+        "text": "Mostly saying it for context, because\nthat's what's the reason why I thought",
+        "start": 591.272,
+        "duration": 3.6
+    },
+    {
+        "text": "of the idea, because I was thinking\nabout these surface models, or in",
+        "start": 594.872,
+        "duration": 4.29
+    },
+    {
+        "text": "the past we talked about there being\nthree types of models, morphology,",
+        "start": 599.162,
+        "duration": 3.18
+    },
+    {
+        "text": "behavior, and feature models.",
+        "start": 602.342,
+        "duration": 1.65
+    },
+    {
+        "text": "And the feature models seems to be\nmore like a two dimensional thing",
+        "start": 604.382,
+        "duration": 3.06
+    },
+    {
+        "text": "that can kinda wrap around an object.",
+        "start": 607.442,
+        "duration": 2.31
+    },
+    {
+        "text": "And that's, we, started talking\nabout that topic because we were",
+        "start": 609.752,
+        "duration": 3.45
+    },
+    {
+        "text": "talking about, object deformation.",
+        "start": 613.202,
+        "duration": 3.12
+    },
+    {
+        "text": "I think in my mind, I was, go ahead J\nI think we also wanted to learn like a",
+        "start": 616.322,
+        "duration": 6.24
+    },
+    {
+        "text": "general like class of morphologies that\nI think that's an idea that Jeff, you",
+        "start": 622.562,
+        "duration": 4.41
+    },
+    {
+        "text": "presented like again, like a month ago.",
+        "start": 627.032,
+        "duration": 2.19
+    },
+    {
+        "text": "Yeah.",
+        "start": 630.932,
+        "duration": 0.48
+    },
+    {
+        "text": "so we wanted to separate\nout like a, like classes.",
+        "start": 631.802,
+        "duration": 2.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 635.372,
+        "duration": 0.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 635.642,
+        "duration": 0.3
+    },
+    {
+        "text": "So we wanted to separate it out, like the\nmorphology portion from the features that",
+        "start": 635.942,
+        "duration": 4.47
+    },
+    {
+        "text": "are associated with the morphology and\nhence what this feature stream, separate",
+        "start": 640.412,
+        "duration": 5.1
+    },
+    {
+        "text": "thing came out from what I remember.",
+        "start": 645.602,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 647.587,
+        "duration": 0.1
+    },
+    {
+        "text": "And I remember, I think I posted this\nidea on Slack and then Jeff you said",
+        "start": 648.737,
+        "duration": 4.185
+    },
+    {
+        "text": "something like, it would be a bit\nmuch to expect of a mo of a column",
+        "start": 652.922,
+        "duration": 5.28
+    },
+    {
+        "text": "to have three reference frames now.",
+        "start": 658.202,
+        "duration": 2.43
+    },
+    {
+        "text": "To be able to present those three models.",
+        "start": 661.082,
+        "duration": 2.04
+    },
+    {
+        "text": "So then I thought, yeah, it\nwouldn't actually have to be in",
+        "start": 663.767,
+        "duration": 3.18
+    },
+    {
+        "text": "the same column in this case.",
+        "start": 666.947,
+        "duration": 1.41
+    },
+    {
+        "text": "And then I thought, oh, why\ndoes the behavior model even",
+        "start": 668.357,
+        "duration": 2.52
+    },
+    {
+        "text": "need to be in the same column?",
+        "start": 670.877,
+        "duration": 1.29
+    },
+    {
+        "text": "I guess I didn't absorb the\nidea or accept the idea that",
+        "start": 673.127,
+        "duration": 3.3
+    },
+    {
+        "text": "surface models and morphology\nmodels are two things in my mind.",
+        "start": 676.427,
+        "duration": 3.0
+    },
+    {
+        "text": "They're still, we're trying,\nI was still trying to assume",
+        "start": 679.427,
+        "duration": 2.28
+    },
+    {
+        "text": "they were in the same column.",
+        "start": 681.707,
+        "duration": 1.26
+    },
+    {
+        "text": "and you've gone one step further and\nYeah, I'm going, full Monty, yeah.",
+        "start": 684.587,
+        "duration": 5.4
+    },
+    {
+        "text": "of course this beg the question, the\nnext thing is where are these different",
+        "start": 690.557,
+        "duration": 3.81
+    },
+    {
+        "text": "modules and how do they relate?",
+        "start": 694.367,
+        "duration": 1.29
+    },
+    {
+        "text": "And, glad you asked.",
+        "start": 696.527,
+        "duration": 1.365
+    },
+    {
+        "text": "so I, yeah, this was all stuff I\nproposed before, but then last week I",
+        "start": 701.627,
+        "duration": 5.85
+    },
+    {
+        "text": "did a bit more of a, deep dive into the\nliterature of particularly where's kind",
+        "start": 707.477,
+        "duration": 7.35
+    },
+    {
+        "text": "of motion process in the visual, stream.",
+        "start": 714.827,
+        "duration": 3.99
+    },
+    {
+        "text": "And so the very first figure that I\nfound that was what I was looking for was",
+        "start": 719.357,
+        "duration": 6.78
+    },
+    {
+        "text": "actually this figure, which shows that.",
+        "start": 726.137,
+        "duration": 2.7
+    },
+    {
+        "text": "With just one, vertical\nelectrode penetration.",
+        "start": 729.437,
+        "duration": 4.77
+    },
+    {
+        "text": "So basically within the same column,\nthey find both direction selective",
+        "start": 734.237,
+        "duration": 6.39
+    },
+    {
+        "text": "cells and orientation selective\ncells of different, sizes of bars",
+        "start": 740.627,
+        "duration": 6.6
+    },
+    {
+        "text": "and non orientation selective cells.",
+        "start": 747.287,
+        "duration": 2.25
+    },
+    {
+        "text": "and I was thinking, oh no, I\njust made all of these slides and",
+        "start": 750.827,
+        "duration": 3.72
+    },
+    {
+        "text": "animations and this is not working.",
+        "start": 754.547,
+        "duration": 3.87
+    },
+    {
+        "text": "Because if this was the proposal,\nI wouldn't assume to find motion",
+        "start": 758.417,
+        "duration": 7.17
+    },
+    {
+        "text": "selective cells and, orientation\nselective cells in the same column.",
+        "start": 765.587,
+        "duration": 4.17
+    },
+    {
+        "text": "so you would expect, is\nthat the same column?",
+        "start": 772.877,
+        "duration": 4.68
+    },
+    {
+        "text": "Because it isn't, it doesn't look\nlike a perpendicular projection.",
+        "start": 777.557,
+        "duration": 3.18
+    },
+    {
+        "text": "yeah, it is.",
+        "start": 782.232,
+        "duration": 0.69
+    },
+    {
+        "text": "And also look as I dug deeper\nthere, like all these maps of",
+        "start": 783.347,
+        "duration": 4.56
+    },
+    {
+        "text": "response properties and everything\nin V one that I could show later.",
+        "start": 787.967,
+        "duration": 3.3
+    },
+    {
+        "text": "I have a bunch of like misc slides at\nthe end or whatever questions come up.",
+        "start": 791.267,
+        "duration": 4.56
+    },
+    {
+        "text": "But,",
+        "start": 795.827,
+        "duration": 0.27
+    },
+    {
+        "text": "basically this was the first thing\nI saw, but then I read further",
+        "start": 798.347,
+        "duration": 4.23
+    },
+    {
+        "text": "and within Can you go back?",
+        "start": 802.577,
+        "duration": 1.475
+    },
+    {
+        "text": "Yeah.",
+        "start": 804.242,
+        "duration": 0.29
+    },
+    {
+        "text": "Can you go back next just to correct\nme checking my understanding.",
+        "start": 804.537,
+        "duration": 3.74
+    },
+    {
+        "text": "Yeah.",
+        "start": 808.637,
+        "duration": 0.06
+    },
+    {
+        "text": "The problem here is the, little\nthing box name, level number one.",
+        "start": 808.697,
+        "duration": 3.33
+    },
+    {
+        "text": "we would expect to see, directional\nsensitive cells in layer six.",
+        "start": 813.437,
+        "duration": 5.16
+    },
+    {
+        "text": "For the morphology and\nthe, feature model, right?",
+        "start": 819.347,
+        "duration": 3.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 822.677,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 823.727,
+        "duration": 0.27
+    },
+    {
+        "text": "It's really this, those are down there.",
+        "start": 823.997,
+        "duration": 3.0
+    },
+    {
+        "text": "It's really just the\nupper ones of the problem.",
+        "start": 826.997,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah, exactly right.",
+        "start": 829.457,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 830.777,
+        "duration": 0.24
+    },
+    {
+        "text": "Sorry.",
+        "start": 831.017,
+        "duration": 0.36
+    },
+    {
+        "text": "so yeah, this is expected, you said,\nI'm just double checking, Mike.",
+        "start": 832.757,
+        "duration": 3.33
+    },
+    {
+        "text": "yeah.",
+        "start": 837.317,
+        "duration": 0.48
+    },
+    {
+        "text": "And so I read further in the\nsame paper and saw, okay,",
+        "start": 839.147,
+        "duration": 4.32
+    },
+    {
+        "text": "this is an interesting thing.",
+        "start": 844.427,
+        "duration": 1.56
+    },
+    {
+        "text": "the cells, the feedforward projections\nto mt, which is classically thought",
+        "start": 847.127,
+        "duration": 5.43
+    },
+    {
+        "text": "of as an area, responsible for\nmotion processing, they actually",
+        "start": 852.557,
+        "duration": 6.03
+    },
+    {
+        "text": "come from layer four B specifically.",
+        "start": 858.587,
+        "duration": 4.5
+    },
+    {
+        "text": "They come from layer four B and layer six,\nbut they don't come from layer two three,",
+        "start": 863.297,
+        "duration": 4.35
+    },
+    {
+        "text": "which is where usually the classical\nfeet forward projections come from.",
+        "start": 868.367,
+        "duration": 4.86
+    },
+    {
+        "text": "and the layer three outputs\nfrom V one go to, V two.",
+        "start": 874.847,
+        "duration": 4.68
+    },
+    {
+        "text": "And",
+        "start": 880.547,
+        "duration": 0.36
+    },
+    {
+        "text": "maybe I'll skip this\nbeautiful picture for now.",
+        "start": 883.097,
+        "duration": 2.55
+    },
+    {
+        "text": "We can get back to that.",
+        "start": 885.647,
+        "duration": 1.29
+    },
+    {
+        "text": "here's another kind of\nvisualization of that.",
+        "start": 887.687,
+        "duration": 2.19
+    },
+    {
+        "text": "That's, retrograde labeling of neurons\nin V one that basically they injected",
+        "start": 889.877,
+        "duration": 7.53
+    },
+    {
+        "text": "the dye in mt. And then these are\nthe neurons in V one that project to",
+        "start": 897.407,
+        "duration": 4.98
+    },
+    {
+        "text": "mt, and they're not in layer three.",
+        "start": 902.387,
+        "duration": 4.26
+    },
+    {
+        "text": "They are mostly in layer four B and some\nof them in layer six, in upper layer six.",
+        "start": 907.382,
+        "duration": 6.12
+    },
+    {
+        "text": "And they're about 10 times more\nin layer four B than in layer six.",
+        "start": 913.532,
+        "duration": 3.51
+    },
+    {
+        "text": "and most of them, like 80% of them\ntarget, excitatory cells in mt.",
+        "start": 918.692,
+        "duration": 6.75
+    },
+    {
+        "text": "and also independent\nof the blobs in V one.",
+        "start": 928.142,
+        "duration": 3.42
+    },
+    {
+        "text": "and so here these are just two diagrams\nfrom two different papers showing the",
+        "start": 935.462,
+        "duration": 6.54
+    },
+    {
+        "text": "same thing, the same anatomy, which\nis this projection from the spiny cell",
+        "start": 942.002,
+        "duration": 6.57
+    },
+    {
+        "text": "cells in V one going directly to mt.",
+        "start": 948.692,
+        "duration": 4.02
+    },
+    {
+        "text": "And also in, in layer four, this, the same\nerror here, layer four B going directly to",
+        "start": 953.342,
+        "duration": 8.94
+    },
+    {
+        "text": "mt, and then for B also projects to V two.",
+        "start": 962.282,
+        "duration": 4.98
+    },
+    {
+        "text": "But this is a different cell population.",
+        "start": 967.562,
+        "duration": 2.58
+    },
+    {
+        "text": "Those are mostly parametal cells.",
+        "start": 970.142,
+        "duration": 2.25
+    },
+    {
+        "text": "and we can come back to this, those\nfigures for more details in a bit,",
+        "start": 975.842,
+        "duration": 5.1
+    },
+    {
+        "text": "but maybe just to get to my main.",
+        "start": 981.062,
+        "duration": 3.18
+    },
+    {
+        "text": "Thought that I had when I saw this\nwas that V one is could be like",
+        "start": 984.992,
+        "duration": 5.76
+    },
+    {
+        "text": "a relay directly sending motion\ninformation to mt to be modeled",
+        "start": 990.752,
+        "duration": 4.8
+    },
+    {
+        "text": "there because it doesn't seem to be\nreally processed much more in V one.",
+        "start": 995.552,
+        "duration": 4.32
+    },
+    {
+        "text": "It, doesn't get pooled into a\nrepresentation in layer two,",
+        "start": 999.992,
+        "duration": 2.88
+    },
+    {
+        "text": "three and then send forward.",
+        "start": 1002.872,
+        "duration": 1.5
+    },
+    {
+        "text": "instead it goes, it enters from the\nmagnocellular pathway into layer",
+        "start": 1006.262,
+        "duration": 5.01
+    },
+    {
+        "text": "four B alpha goes up to four B, and\nthen gets projected to MT directly.",
+        "start": 1011.272,
+        "duration": 6.69
+    },
+    {
+        "text": "And then there's another pathway to mt,\nwhich is also, it's this other population",
+        "start": 1018.532,
+        "duration": 5.82
+    },
+    {
+        "text": "of parametal cells that projects to\nV two, the thick stripes in V two.",
+        "start": 1024.352,
+        "duration": 6.96
+    },
+    {
+        "text": "and on the other picture,\nit would be this arrow here.",
+        "start": 1033.472,
+        "duration": 3.3
+    },
+    {
+        "text": "and then from there, this actually\nprocess, there actually exits",
+        "start": 1038.752,
+        "duration": 6.12
+    },
+    {
+        "text": "in layer two three, and then\nprojects to MT and, from Viviane.",
+        "start": 1044.932,
+        "duration": 5.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 1050.842,
+        "duration": 0.3
+    },
+    {
+        "text": "do you have a, guess as to why\nor, thought as to why the, why you",
+        "start": 1053.092,
+        "duration": 6.18
+    },
+    {
+        "text": "have these extra layers in V one?",
+        "start": 1059.272,
+        "duration": 2.82
+    },
+    {
+        "text": "couldn't the, Magnus Cells\nproject directly to mt?",
+        "start": 1063.322,
+        "duration": 3.33
+    },
+    {
+        "text": "why do they have to go through this?",
+        "start": 1067.612,
+        "duration": 1.32
+    },
+    {
+        "text": "This.",
+        "start": 1069.892,
+        "duration": 0.54
+    },
+    {
+        "text": "So extra layers in V one, why don't\nthey just go right to mt. Yeah.",
+        "start": 1071.137,
+        "duration": 4.86
+    },
+    {
+        "text": "So that's what I was trying to get at Now.",
+        "start": 1075.997,
+        "duration": 3.12
+    },
+    {
+        "text": "So with the kind of second pathway through\nV two, the physiological studies show",
+        "start": 1079.267,
+        "duration": 6.6
+    },
+    {
+        "text": "that it seems like this input integrates\nmore three dimensional motion information.",
+        "start": 1085.867,
+        "duration": 5.49
+    },
+    {
+        "text": "So actually the disparity between the two\neyes, so it takes disparity into account",
+        "start": 1091.357,
+        "duration": 6.36
+    },
+    {
+        "text": "at the point in V two at this point.",
+        "start": 1097.927,
+        "duration": 2.55
+    },
+    {
+        "text": "So maybe V one also does some kind\nof processing to take depth or some",
+        "start": 1101.077,
+        "duration": 5.22
+    },
+    {
+        "text": "more global information into account\nto get kind of motion information in",
+        "start": 1106.297,
+        "duration": 6.36
+    },
+    {
+        "text": "world space instead of rational space.",
+        "start": 1112.657,
+        "duration": 2.22
+    },
+    {
+        "text": "that's what I was, I always\nhad that hypothesis, right?",
+        "start": 1116.497,
+        "duration": 3.21
+    },
+    {
+        "text": "I threw that out several times\nin the past, but it's somehow",
+        "start": 1119.947,
+        "duration": 2.91
+    },
+    {
+        "text": "dealing with the fact you're trying\nto get to a 3D representation.",
+        "start": 1122.887,
+        "duration": 3.51
+    },
+    {
+        "text": "Yeah, but still it doesn't, exp\ndoesn't tell me why couldn't,",
+        "start": 1126.877,
+        "duration": 3.21
+    },
+    {
+        "text": "that processing could be done?",
+        "start": 1130.087,
+        "duration": 1.35
+    },
+    {
+        "text": "couldn't this whole, everything can be\ndone just by having two separate pathways",
+        "start": 1131.917,
+        "duration": 3.75
+    },
+    {
+        "text": "coming up off the thalamus, like one\nprojects to MT and one projects to B one.",
+        "start": 1135.667,
+        "duration": 5.7
+    },
+    {
+        "text": "I don't think it's important.",
+        "start": 1142.302,
+        "duration": 1.495
+    },
+    {
+        "text": "I just didn't know if you had a thought\nabout the matter and if you Yeah.",
+        "start": 1143.797,
+        "duration": 3.0
+    },
+    {
+        "text": "So yeah, I don't have a clear\nanswer on, why there's this.",
+        "start": 1147.487,
+        "duration": 4.02
+    },
+    {
+        "text": "Here and what would be\nhappening in between those two?",
+        "start": 1152.347,
+        "duration": 2.55
+    },
+    {
+        "text": "Like why does it go through layer\nfour of V one and not directly",
+        "start": 1154.897,
+        "duration": 4.41
+    },
+    {
+        "text": "from the Magnus cell cells to mt?",
+        "start": 1159.307,
+        "duration": 2.16
+    },
+    {
+        "text": "I would guess there's, yeah, my\nguess would be that there's some",
+        "start": 1161.857,
+        "duration": 2.91
+    },
+    {
+        "text": "kind of local integration of\ninformation for getting from retinal",
+        "start": 1164.767,
+        "duration": 4.71
+    },
+    {
+        "text": "space to world space of movement.",
+        "start": 1169.477,
+        "duration": 3.87
+    },
+    {
+        "text": "Because, it seems like that's\nhappening in b2, right?",
+        "start": 1174.757,
+        "duration": 2.85
+    },
+    {
+        "text": "It seems like it is a total mystery to me.",
+        "start": 1177.607,
+        "duration": 1.68
+    },
+    {
+        "text": "So I just thought if you had\nsome insights, that'd be great.",
+        "start": 1179.377,
+        "duration": 2.67
+    },
+    {
+        "text": "okay.",
+        "start": 1185.047,
+        "duration": 0.27
+    },
+    {
+        "text": "It could also be just a,",
+        "start": 1185.827,
+        "duration": 2.13
+    },
+    {
+        "text": "accident of evolution, somehow.",
+        "start": 1190.987,
+        "duration": 3.03
+    },
+    {
+        "text": "Yeah.",
+        "start": 1195.007,
+        "duration": 0.51
+    },
+    {
+        "text": "Just because there are mammals that\ndon't have this dry eight V one, and they",
+        "start": 1196.572,
+        "duration": 5.605
+    },
+    {
+        "text": "don't have, they're missing something.",
+        "start": 1202.177,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 1203.767,
+        "duration": 0.21
+    },
+    {
+        "text": "I should mention everything\nI'm showing here is primates.",
+        "start": 1203.977,
+        "duration": 3.12
+    },
+    {
+        "text": "yeah.",
+        "start": 1207.422,
+        "duration": 0.29
+    },
+    {
+        "text": "but, and then the evolution\ncomes along and says, hey, we're",
+        "start": 1208.867,
+        "duration": 3.96
+    },
+    {
+        "text": "gonna discover something new.",
+        "start": 1212.827,
+        "duration": 1.2
+    },
+    {
+        "text": "It's easier just to change a few\ncells in existing places than to add",
+        "start": 1214.027,
+        "duration": 3.51
+    },
+    {
+        "text": "a whole nother structure, or, Yeah.",
+        "start": 1217.537,
+        "duration": 2.7
+    },
+    {
+        "text": "It could be just an ac an accent of\nevolution, so it can't be, but, okay.",
+        "start": 1220.237,
+        "duration": 3.81
+    },
+    {
+        "text": "I'll keep going.",
+        "start": 1224.557,
+        "duration": 0.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 1226.027,
+        "duration": 0.24
+    },
+    {
+        "text": "And I, saw this paper\nhere, which I thought was,",
+        "start": 1226.267,
+        "duration": 2.97
+    },
+    {
+        "text": "meshed well with what I was thinking.",
+        "start": 1231.337,
+        "duration": 2.76
+    },
+    {
+        "text": "I can just read out the marked parts.",
+        "start": 1234.427,
+        "duration": 2.19
+    },
+    {
+        "text": "first of all, just to give some context.",
+        "start": 1237.277,
+        "duration": 1.77
+    },
+    {
+        "text": "What the paper's about.",
+        "start": 1239.632,
+        "duration": 0.93
+    },
+    {
+        "text": "They say some neuron neurons in extra\nstride area MT are capable of signaling",
+        "start": 1240.562,
+        "duration": 4.68
+    },
+    {
+        "text": "the global motion of complex patterns.",
+        "start": 1245.272,
+        "duration": 2.34
+    },
+    {
+        "text": "Neurons randomly sampled from V one\non the other hand, respond only to the",
+        "start": 1248.422,
+        "duration": 4.17
+    },
+    {
+        "text": "motion of individual oriented components.",
+        "start": 1252.592,
+        "duration": 3.18
+    },
+    {
+        "text": "The neurons that project from V one to\nMT were directionally selective, and like",
+        "start": 1257.032,
+        "duration": 5.25
+    },
+    {
+        "text": "other V one neurons responded only to the\nmotion of components of complex patterns.",
+        "start": 1262.282,
+        "duration": 5.1
+    },
+    {
+        "text": "So this, maybe that's another hint of\nwhat is happening in, V one, that it",
+        "start": 1268.432,
+        "duration": 6.24
+    },
+    {
+        "text": "makes sure that the motion is associated\nwith, one object or something like that.",
+        "start": 1274.942,
+        "duration": 5.31
+    },
+    {
+        "text": "and then, yeah, the projection\nneurons were predominantly special,",
+        "start": 1282.142,
+        "duration": 3.6
+    },
+    {
+        "text": "complex, responsive to a broad range\nof spatial and temporal frequencies.",
+        "start": 1285.742,
+        "duration": 4.56
+    },
+    {
+        "text": "And then here's the interpretation,\nthat, consistent with the notion that",
+        "start": 1290.902,
+        "duration": 6.63
+    },
+    {
+        "text": "we, one acts as a clearinghouse of\nbasic visual measurements, distributing",
+        "start": 1297.532,
+        "duration": 4.74
+    },
+    {
+        "text": "information appropriately to higher\ncortical areas for specialized analysis.",
+        "start": 1302.272,
+        "duration": 4.56
+    },
+    {
+        "text": "So that,",
+        "start": 1307.522,
+        "duration": 0.57
+    },
+    {
+        "text": "potentially yeah, we want as a,\nspecial region in, that sense in, in",
+        "start": 1310.672,
+        "duration": 5.82
+    },
+    {
+        "text": "that it maybe sorts this information\npartially it, it might still do",
+        "start": 1316.492,
+        "duration": 5.16
+    },
+    {
+        "text": "modeling there as well, but at least\nlayer four B might be sorting out.",
+        "start": 1321.982,
+        "duration": 5.19
+    },
+    {
+        "text": "Some of the change information just\nfeed forwarded to a column in MT where",
+        "start": 1327.592,
+        "duration": 6.78
+    },
+    {
+        "text": "it then learns the behavior model.",
+        "start": 1334.372,
+        "duration": 1.95
+    },
+    {
+        "text": "so yeah, this is my interpretation\nmapped onto this figure.",
+        "start": 1341.032,
+        "duration": 5.61
+    },
+    {
+        "text": "Plus adding some columns here where,\npurple is the behavior model pathway and",
+        "start": 1346.642,
+        "duration": 8.43
+    },
+    {
+        "text": "blue morphology and feature model pathway.",
+        "start": 1355.132,
+        "duration": 2.67
+    },
+    {
+        "text": "So the pargo cell input goes into\nlayer four C beta, and then it gets",
+        "start": 1358.162,
+        "duration": 5.79
+    },
+    {
+        "text": "pooled up into layer two three.",
+        "start": 1364.312,
+        "duration": 2.1
+    },
+    {
+        "text": "And then depending on whether it's\nblob or inter blob, it goes to",
+        "start": 1366.652,
+        "duration": 3.69
+    },
+    {
+        "text": "the thin uphill stripes in V two\nand then from there to V four.",
+        "start": 1370.342,
+        "duration": 5.73
+    },
+    {
+        "text": "And then for the behavior models,\nthere's a magnocellular pathway",
+        "start": 1376.972,
+        "duration": 3.99
+    },
+    {
+        "text": "input that then goes to layer four\nB, and from there directly into mt.",
+        "start": 1380.962,
+        "duration": 7.2
+    },
+    {
+        "text": "those cells are highly directly selective.",
+        "start": 1391.342,
+        "duration": 2.22
+    },
+    {
+        "text": "The idea is you're saying MT has\nthe behavioral model, is that right?",
+        "start": 1394.012,
+        "duration": 3.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 1398.632,
+        "duration": 0.69
+    },
+    {
+        "text": "yeah, I'll show that\non, yeah, just a second.",
+        "start": 1400.222,
+        "duration": 2.46
+    },
+    {
+        "text": "and at basically this kind of pathway\nthrough V two would extract some more",
+        "start": 1403.672,
+        "duration": 4.41
+    },
+    {
+        "text": "three dimensional motion information\nthat then also gets, input to mt.",
+        "start": 1408.082,
+        "duration": 5.07
+    },
+    {
+        "text": "And there's also feedback,\nconnectivity between MT and V one.",
+        "start": 1415.537,
+        "duration": 5.46
+    },
+    {
+        "text": "And the interesting thing is that\nconnectivity is also a bit atypical in",
+        "start": 1421.027,
+        "duration": 4.77
+    },
+    {
+        "text": "that those feedback connections, they\nmostly come from layer six and then",
+        "start": 1425.797,
+        "duration": 5.13
+    },
+    {
+        "text": "they mostly terminate in layer six,\nbut also in layer four B, which is not",
+        "start": 1430.927,
+        "duration": 6.57
+    },
+    {
+        "text": "usual for the feedback connections.",
+        "start": 1437.557,
+        "duration": 1.86
+    },
+    {
+        "text": "Some of them terminate in layer one,\nbut only at high eccentricities,",
+        "start": 1440.107,
+        "duration": 4.44
+    },
+    {
+        "text": "which kind of makes sense.",
+        "start": 1445.477,
+        "duration": 1.2
+    },
+    {
+        "text": "If you would think that this is a behavior\nmodel, it wouldn't tell you much about",
+        "start": 1446.677,
+        "duration": 4.89
+    },
+    {
+        "text": "an object ID in B one, I would assume.",
+        "start": 1451.627,
+        "duration": 4.26
+    },
+    {
+        "text": "and so yeah, I thought that was\njust another interesting thing.",
+        "start": 1458.587,
+        "duration": 5.13
+    },
+    {
+        "text": "and so on a high level, my rough idea\nwas that potentially the ventral stream,",
+        "start": 1464.857,
+        "duration": 6.27
+    },
+    {
+        "text": "could contain the feature and morphology\nmodels starting in V one, then V two V",
+        "start": 1472.207,
+        "duration": 5.55
+    },
+    {
+        "text": "four and the dorsal stream to MT would\npotentially contain behavior models.",
+        "start": 1477.757,
+        "duration": 6.9
+    },
+    {
+        "text": "and the kind of pathway through V one and\nV two would be responsible for some motion",
+        "start": 1486.757,
+        "duration": 4.65
+    },
+    {
+        "text": "processing, like incorporating disparity.",
+        "start": 1491.407,
+        "duration": 3.3
+    },
+    {
+        "text": "there's also some direction\nselect directionally sensitive.",
+        "start": 1497.257,
+        "duration": 4.62
+    },
+    {
+        "text": "Information going to V two and V four,\nbut people have proposed that might be",
+        "start": 1502.687,
+        "duration": 6.87
+    },
+    {
+        "text": "more from motion based shape processing,\nso like figure ground segmentation or",
+        "start": 1509.557,
+        "duration": 4.92
+    },
+    {
+        "text": "mo detecting motion borders of objects.",
+        "start": 1515.227,
+        "duration": 2.67
+    },
+    {
+        "text": "and then lastly, this is a bit more vague.",
+        "start": 1520.747,
+        "duration": 2.94
+    },
+    {
+        "text": "It could be that if we do have like\nfeature and morphology models, it could",
+        "start": 1524.482,
+        "duration": 3.885
+    },
+    {
+        "text": "be that morphology models are the inter\nblobs which are labeled form here, and the",
+        "start": 1528.367,
+        "duration": 5.37
+    },
+    {
+        "text": "pale stripes and feature models could be\nthe blobs, which is why you detect, the",
+        "start": 1534.217,
+        "duration": 8.7
+    },
+    {
+        "text": "two three and people assign color to that.",
+        "start": 1542.977,
+        "duration": 4.35
+    },
+    {
+        "text": "That could be blobs and the thin stripes.",
+        "start": 1547.927,
+        "duration": 3.99
+    },
+    {
+        "text": "But yeah, that's a bit more\nout there of a proposal.",
+        "start": 1551.947,
+        "duration": 3.12
+    },
+    {
+        "text": "I guess",
+        "start": 1555.097,
+        "duration": 0.45
+    },
+    {
+        "text": "that's that I have a bunch more\nlike just random evidence and fun",
+        "start": 1560.197,
+        "duration": 3.63
+    },
+    {
+        "text": "facts about visual processing.",
+        "start": 1563.827,
+        "duration": 2.04
+    },
+    {
+        "text": "So would you say that the relationship\nbetween the three streams, morphology,",
+        "start": 1566.137,
+        "duration": 3.84
+    },
+    {
+        "text": "features, behavior, morphology and\nfeatures are like horizontally in the",
+        "start": 1569.977,
+        "duration": 6.24
+    },
+    {
+        "text": "same level while the behaviors one on top?",
+        "start": 1576.217,
+        "duration": 3.57
+    },
+    {
+        "text": "I guess I'm trying to understand\nlike how these three, different",
+        "start": 1581.647,
+        "duration": 6.24
+    },
+    {
+        "text": "kinds of alums could be.",
+        "start": 1587.887,
+        "duration": 1.74
+    },
+    {
+        "text": "That's a unit or maybe\nwe don't have to do that.",
+        "start": 1591.322,
+        "duration": 1.89
+    },
+    {
+        "text": "I guess in Monte I feel like\nthey would be basically the same.",
+        "start": 1596.272,
+        "duration": 3.93
+    },
+    {
+        "text": "It's not like they would\nhave different hierarchical",
+        "start": 1600.202,
+        "duration": 2.07
+    },
+    {
+        "text": "relationships or anything and Okay.",
+        "start": 1602.272,
+        "duration": 2.52
+    },
+    {
+        "text": "Oh, I was thinking of it as\nthat the brain just it separates",
+        "start": 1605.812,
+        "duration": 4.2
+    },
+    {
+        "text": "everything in different ways.",
+        "start": 1610.012,
+        "duration": 2.01
+    },
+    {
+        "text": "So like it clusters different orientation\npreferences and then direction preferences",
+        "start": 1612.022,
+        "duration": 7.71
+    },
+    {
+        "text": "and ocular dominance columns and all that.",
+        "start": 1619.732,
+        "duration": 2.7
+    },
+    {
+        "text": "It separates all these\ndifferent properties out.",
+        "start": 1622.432,
+        "duration": 3.15
+    },
+    {
+        "text": "And so it could separate out the behavior\nmodels as well and the morphology",
+        "start": 1625.642,
+        "duration": 4.5
+    },
+    {
+        "text": "models and the, feature models in,\nblobs, but not necessarily making any",
+        "start": 1630.352,
+        "duration": 7.41
+    },
+    {
+        "text": "of them more or less important or, okay.",
+        "start": 1637.762,
+        "duration": 4.32
+    },
+    {
+        "text": "Lower level.",
+        "start": 1642.082,
+        "duration": 0.6
+    },
+    {
+        "text": "Okay.",
+        "start": 1643.577,
+        "duration": 0.29
+    },
+    {
+        "text": "Okay.",
+        "start": 1643.977,
+        "duration": 0.29
+    },
+    {
+        "text": "and the, or the color blobs,\ndown within one column.",
+        "start": 1646.372,
+        "duration": 4.65
+    },
+    {
+        "text": "as in we're separating out the feature\nand the morphology, like the morphology",
+        "start": 1652.252,
+        "duration": 5.46
+    },
+    {
+        "text": "being like the inter blob area, but\nwithin a column, my understanding was that",
+        "start": 1657.712,
+        "duration": 7.68
+    },
+    {
+        "text": "there's both, which kind of goes back.",
+        "start": 1665.392,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 1668.452,
+        "duration": 0.33
+    },
+    {
+        "text": "I like the separation idea,\nbut I guess it's just like a",
+        "start": 1670.342,
+        "duration": 2.1
+    },
+    {
+        "text": "devil's advocate for, okay.",
+        "start": 1672.442,
+        "duration": 2.04
+    },
+    {
+        "text": "I think pubs at inter blocks happen one.",
+        "start": 1674.482,
+        "duration": 2.58
+    },
+    {
+        "text": "Call 'em.",
+        "start": 1677.062,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 1677.847,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah, that is definitely,\nan argument against it.",
+        "start": 1681.202,
+        "duration": 5.4
+    },
+    {
+        "text": "I'm not sure it was the most\nreasonable thing that currently",
+        "start": 1687.892,
+        "duration": 3.09
+    },
+    {
+        "text": "makes sense for me because those\nare just in layer two, three.",
+        "start": 1690.982,
+        "duration": 2.88
+    },
+    {
+        "text": "And if you would imagine having a model\nof the surface of an object and how",
+        "start": 1693.862,
+        "duration": 4.74
+    },
+    {
+        "text": "color and stuff is mapped onto that.",
+        "start": 1698.992,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah, I would, that, I would expect\nthose to change the activation in",
+        "start": 1701.517,
+        "duration": 5.815
+    },
+    {
+        "text": "layer two three in a consistent\nway, which might look like.",
+        "start": 1707.332,
+        "duration": 3.3
+    },
+    {
+        "text": "But,",
+        "start": 1712.312,
+        "duration": 0.39
+    },
+    {
+        "text": "or we, in, in implementation we can\nmake them separate, but somehow,",
+        "start": 1715.552,
+        "duration": 4.41
+    },
+    {
+        "text": "like these are more intimately\nconnected in the sense that okay, it",
+        "start": 1719.962,
+        "duration": 4.92
+    },
+    {
+        "text": "must be like laterally, connected.",
+        "start": 1724.882,
+        "duration": 3.48
+    },
+    {
+        "text": "we, can like strictly follow the\nbiology, like they must be in one",
+        "start": 1731.752,
+        "duration": 5.73
+    },
+    {
+        "text": "or, represent that in a different\nway, but, meaning the same, would",
+        "start": 1737.482,
+        "duration": 5.88
+    },
+    {
+        "text": "be a very important point Yeah.",
+        "start": 1743.362,
+        "duration": 3.66
+    },
+    {
+        "text": "Right now.",
+        "start": 1747.112,
+        "duration": 0.51
+    },
+    {
+        "text": "Nice.",
+        "start": 1750.322,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 1750.622,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 1751.012,
+        "duration": 0.01
+    },
+    {
+        "text": "Oh, go ahead.",
+        "start": 1751.672,
+        "duration": 1.11
+    },
+    {
+        "text": "That was really nice.",
+        "start": 1752.782,
+        "duration": 0.605
+    },
+    {
+        "text": "Yeah, I was just gonna say, yeah,\nthanks for the nice overview.",
+        "start": 1753.622,
+        "duration": 2.43
+    },
+    {
+        "text": "yeah, I definitely still\nthink this is interesting.",
+        "start": 1756.592,
+        "duration": 1.65
+    },
+    {
+        "text": "and yeah, it's crazy how complex the\nconnectivity of V one actually is.",
+        "start": 1759.592,
+        "duration": 6.0
+    },
+    {
+        "text": "The, yeah, I was curious, did you have\na chance to look much at like how V",
+        "start": 1767.452,
+        "duration": 4.68
+    },
+    {
+        "text": "four and MT are connected and stuff,\nand like how that might fit with kind of",
+        "start": 1772.132,
+        "duration": 4.53
+    },
+    {
+        "text": "the old ways of what you call it, like\nhow behavior would map, or, kinda like",
+        "start": 1776.692,
+        "duration": 8.01
+    },
+    {
+        "text": "change predictions of a morphology model?",
+        "start": 1785.422,
+        "duration": 1.83
+    },
+    {
+        "text": "like what connections\ncould help with that?",
+        "start": 1788.902,
+        "duration": 1.71
+    },
+    {
+        "text": "yeah.",
+        "start": 1792.292,
+        "duration": 0.54
+    },
+    {
+        "text": "I didn't look at V four.",
+        "start": 1792.832,
+        "duration": 2.67
+    },
+    {
+        "text": "I looked at V two and V one\nconnectivity to mt. Yeah.",
+        "start": 1795.502,
+        "duration": 4.92
+    },
+    {
+        "text": "V two, the forward projections to mt.\nA layer three to layer three and four.",
+        "start": 1801.232,
+        "duration": 7.11
+    },
+    {
+        "text": "And then the backward projections from\nMT two V two are from layer three A and",
+        "start": 1809.182,
+        "duration": 8.01
+    },
+    {
+        "text": "mostly layer six to layer one and six.",
+        "start": 1817.282,
+        "duration": 4.32
+    },
+    {
+        "text": "so that's yeah.",
+        "start": 1823.017,
+        "duration": 1.375
+    },
+    {
+        "text": "So as if MT is hierarchically above, yeah.",
+        "start": 1824.392,
+        "duration": 5.19
+    },
+    {
+        "text": "Which I think fits with, I think,\nyeah, that's why I'd be curious with",
+        "start": 1830.572,
+        "duration": 3.39
+    },
+    {
+        "text": "before, 'cause I think MT is often\nalongside, but I guess it's a hierarchy",
+        "start": 1833.962,
+        "duration": 5.49
+    },
+    {
+        "text": "so you, you can slice it many ways.",
+        "start": 1839.452,
+        "duration": 2.73
+    },
+    {
+        "text": "I don't know.",
+        "start": 1842.242,
+        "duration": 0.42
+    },
+    {
+        "text": "yeah.",
+        "start": 1844.012,
+        "duration": 0.6
+    },
+    {
+        "text": "And then V one, it's a bit atypical.",
+        "start": 1846.952,
+        "duration": 3.06
+    },
+    {
+        "text": "So feet forward comes from layer four B\nand layer six, not from layer two three,",
+        "start": 1850.582,
+        "duration": 6.75
+    },
+    {
+        "text": "and it goes into layer four and six and\nmt. Then feedback connections come from",
+        "start": 1857.872,
+        "duration": 5.94
+    },
+    {
+        "text": "layer three A and six, same as two V two,\nand then end in layer four B and six.",
+        "start": 1863.812,
+        "duration": 7.14
+    },
+    {
+        "text": "yeah.",
+        "start": 1871.407,
+        "duration": 0.23
+    },
+    {
+        "text": "And that was the one I guess\nyou were talking about.",
+        "start": 1871.637,
+        "duration": 1.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 1873.862,
+        "duration": 0.48
+    },
+    {
+        "text": "That's really interesting.",
+        "start": 1874.912,
+        "duration": 0.99
+    },
+    {
+        "text": "So I, okay, so I, could you go back\na few slides where you had the flow",
+        "start": 1876.937,
+        "duration": 4.065
+    },
+    {
+        "text": "chart of V one going to T or the 3D?",
+        "start": 1881.002,
+        "duration": 5.46
+    },
+    {
+        "text": "Yeah, this one.",
+        "start": 1886.492,
+        "duration": 0.75
+    },
+    {
+        "text": "Yeah, I guess I just don't know the\nanatomy like very well about how close",
+        "start": 1887.812,
+        "duration": 6.09
+    },
+    {
+        "text": "empty is to the one, but like the,\nfact that the spiny salads, which",
+        "start": 1893.902,
+        "duration": 5.7
+    },
+    {
+        "text": "in my mind what they look like are\nbasically parametal, but shorter.",
+        "start": 1899.782,
+        "duration": 3.12
+    },
+    {
+        "text": "and so like the parmal cells without\nthe apical dendrite, yeah, it's, I",
+        "start": 1905.242,
+        "duration": 5.005
+    },
+    {
+        "text": "think they can still have long axons.",
+        "start": 1910.247,
+        "duration": 1.805
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 1912.862,
+        "duration": 0.3
+    },
+    {
+        "text": "So they can still object to, I think\nthe ar the argument was they're",
+        "start": 1913.162,
+        "duration": 3.21
+    },
+    {
+        "text": "exactly the same as parmal cells,\nminus the apical dendrite, okay.",
+        "start": 1916.372,
+        "duration": 3.93
+    },
+    {
+        "text": "that's the, that's the\ninterpretation I adopted.",
+        "start": 1920.547,
+        "duration": 3.325
+    },
+    {
+        "text": "That was proposed by someone.",
+        "start": 1924.262,
+        "duration": 1.08
+    },
+    {
+        "text": "Okay.",
+        "start": 1925.457,
+        "duration": 0.29
+    },
+    {
+        "text": "Okay.",
+        "start": 1926.212,
+        "duration": 0.21
+    },
+    {
+        "text": "But they can still connect to\nMTV because I guess a lot of the.",
+        "start": 1926.422,
+        "duration": 5.01
+    },
+    {
+        "text": "I guess I, I thought that's, were mostly\nfor connections within like a lawyer,",
+        "start": 1932.377,
+        "duration": 4.32
+    },
+    {
+        "text": "so No, they have long range projections.",
+        "start": 1936.697,
+        "duration": 2.16
+    },
+    {
+        "text": "Okay.",
+        "start": 1939.427,
+        "duration": 0.36
+    },
+    {
+        "text": "and the other I, this is a minor,\nquestion, but I, know somebody did",
+        "start": 1941.677,
+        "duration": 4.53
+    },
+    {
+        "text": "like research into the, third books.",
+        "start": 1946.207,
+        "duration": 3.51
+    },
+    {
+        "text": "I forget the main, the, one\nthat's K, yeah, The commiss.",
+        "start": 1949.747,
+        "duration": 4.685
+    },
+    {
+        "text": "Yeah.",
+        "start": 1955.477,
+        "duration": 0.45
+    },
+    {
+        "text": "Okay.",
+        "start": 1956.167,
+        "duration": 0.18
+    },
+    {
+        "text": "So I'm saying, right?",
+        "start": 1956.347,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 1957.337,
+        "duration": 0.24
+    },
+    {
+        "text": "yeah, Do we figure out more about,\nI just don't remember like what we",
+        "start": 1960.977,
+        "duration": 5.9
+    },
+    {
+        "text": "decided about or find out about it.",
+        "start": 1966.877,
+        "duration": 3.63
+    },
+    {
+        "text": "I, can just look up in Google Docs.",
+        "start": 1970.622,
+        "duration": 1.715
+    },
+    {
+        "text": "I don't think we reach any conclusions.",
+        "start": 1972.397,
+        "duration": 1.77
+    },
+    {
+        "text": "I don't think.",
+        "start": 1974.557,
+        "duration": 0.18
+    },
+    {
+        "text": "Yeah.",
+        "start": 1974.887,
+        "duration": 0.51
+    },
+    {
+        "text": "The only extra image I have on them\nis, this review study that looked at",
+        "start": 1975.787,
+        "duration": 5.16
+    },
+    {
+        "text": "like over a hundred of studies and that\nshows this very, this connectivity of",
+        "start": 1980.947,
+        "duration": 7.2
+    },
+    {
+        "text": "coronary cell and put two layer 1, 2, 3.",
+        "start": 1988.147,
+        "duration": 3.24
+    },
+    {
+        "text": "Okay.",
+        "start": 1992.377,
+        "duration": 0.06
+    },
+    {
+        "text": "but yeah, I'm not sure I remember\nwasn't there some kind of",
+        "start": 1994.207,
+        "duration": 2.79
+    },
+    {
+        "text": "overlap with the matrix cells?",
+        "start": 1997.327,
+        "duration": 1.68
+    },
+    {
+        "text": "maybe I'm misremembering, but,",
+        "start": 2001.167,
+        "duration": 1.59
+    },
+    {
+        "text": "yeah, that would match\nwith this, I guess maybe.",
+        "start": 2004.887,
+        "duration": 2.49
+    },
+    {
+        "text": "But, yeah, I think one of my favorite\nthings about this still is just, yeah, the",
+        "start": 2008.877,
+        "duration": 5.64
+    },
+    {
+        "text": "idea of simplifying each learning module.",
+        "start": 2014.517,
+        "duration": 1.83
+    },
+    {
+        "text": "Like I think that is\nreally nice 'cause Oh.",
+        "start": 2016.347,
+        "duration": 3.21
+    },
+    {
+        "text": "Yeah, I forgot my, main slide.",
+        "start": 2020.487,
+        "duration": 3.06
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 2024.177,
+        "duration": 0.54
+    },
+    {
+        "text": "Nice.",
+        "start": 2024.717,
+        "duration": 0.24
+    },
+    {
+        "text": "It's not the main slide I guess, but,\nbenefits, it's a relatively simple change.",
+        "start": 2024.957,
+        "duration": 5.58
+    },
+    {
+        "text": "And then the evolutionary argument\nis environments usually don't have",
+        "start": 2030.537,
+        "duration": 5.43
+    },
+    {
+        "text": "behaviors, so this might have been\na capability that near to evolve in",
+        "start": 2035.967,
+        "duration": 4.65
+    },
+    {
+        "text": "the near cortex to model objects.",
+        "start": 2040.617,
+        "duration": 2.13
+    },
+    {
+        "text": "And so it seems like the quote\nunquote kind pre-processing before",
+        "start": 2043.347,
+        "duration": 3.72
+    },
+    {
+        "text": "getting to MT columns may be reason,\na reasonable small addition that",
+        "start": 2047.067,
+        "duration": 5.85
+    },
+    {
+        "text": "doesn't require a whole other set of\nconnections for behavior models within",
+        "start": 2053.067,
+        "duration": 4.59
+    },
+    {
+        "text": "a column, and would make that much\neasier to just add that capability.",
+        "start": 2057.657,
+        "duration": 6.09
+    },
+    {
+        "text": "Yeah, that's interesting.",
+        "start": 2065.637,
+        "duration": 1.02
+    },
+    {
+        "text": "It reminds me, I think in,",
+        "start": 2066.687,
+        "duration": 2.4
+    },
+    {
+        "text": "the, I think there's some mammals or,\nmaybe it's, marsupials or something",
+        "start": 2071.127,
+        "duration": 5.22
+    },
+    {
+        "text": "that they don't have motor cortex,\nbut they also, they don't have as like",
+        "start": 2076.347,
+        "duration": 5.4
+    },
+    {
+        "text": "fine-grained, kind of dexterity as, for\nexample, primates and, stuff like that.",
+        "start": 2081.747,
+        "duration": 5.49
+    },
+    {
+        "text": "But it, I just feel like it fits with\nbehavior in cortex being a, like a",
+        "start": 2087.807,
+        "duration": 7.53
+    },
+    {
+        "text": "special thing rather than something\nthat's represented everywhere.",
+        "start": 2095.337,
+        "duration": 2.7
+    },
+    {
+        "text": "because, that, comes to mind is\neverything has bodies, so surely",
+        "start": 2099.837,
+        "duration": 3.795
+    },
+    {
+        "text": "everything needs to be able to model\nthe behaviors of their own body.",
+        "start": 2103.632,
+        "duration": 3.63
+    },
+    {
+        "text": "But I think the point is actually\na lot of animals don't, and that's",
+        "start": 2107.952,
+        "duration": 3.18
+    },
+    {
+        "text": "why they have more simplistic,",
+        "start": 2111.132,
+        "duration": 2.19
+    },
+    {
+        "text": "behavioral, models.",
+        "start": 2115.392,
+        "duration": 2.07
+    },
+    {
+        "text": "or, like they, they're may\nbe all model free kind of.",
+        "start": 2118.392,
+        "duration": 2.67
+    },
+    {
+        "text": "that's interesting.",
+        "start": 2123.852,
+        "duration": 0.96
+    },
+    {
+        "text": "Yeah.",
+        "start": 2124.947,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 2125.622,
+        "duration": 0.18
+    },
+    {
+        "text": "I can look up again which animals\nit is that, that, that applies to.",
+        "start": 2126.012,
+        "duration": 4.05
+    },
+    {
+        "text": "but it's, basically some animals that\nhave cortex don't have modal cortex,",
+        "start": 2131.142,
+        "duration": 2.7
+    },
+    {
+        "text": "but it does generally come with a more\nlimited, kind of dexterity in some,",
+        "start": 2133.842,
+        "duration": 5.565
+    },
+    {
+        "text": "I think, have you thought about, how,\nor then how do we connect motor models",
+        "start": 2139.487,
+        "duration": 5.365
+    },
+    {
+        "text": "with or behavioral models with objects?",
+        "start": 2144.852,
+        "duration": 1.95
+    },
+    {
+        "text": "Yeah, so what I was thinking\nwas that we could basically",
+        "start": 2150.672,
+        "duration": 6.72
+    },
+    {
+        "text": "use the feedback connections,",
+        "start": 2157.392,
+        "duration": 2.76
+    },
+    {
+        "text": "which go both to V one and V two.",
+        "start": 2162.462,
+        "duration": 3.06
+    },
+    {
+        "text": "I'm not sure.",
+        "start": 2165.972,
+        "duration": 0.78
+    },
+    {
+        "text": "I would have to look up the MT two.",
+        "start": 2167.942,
+        "duration": 2.11
+    },
+    {
+        "text": "I just, just think about it in terms\nof Monty, for example, let's say we,",
+        "start": 2170.172,
+        "duration": 3.63
+    },
+    {
+        "text": "we are modeling bunch of learning\nmodels that are learning behaviors.",
+        "start": 2173.802,
+        "duration": 3.51
+    },
+    {
+        "text": "those behaviors have to be learned in the\ncontext of specific objects and We wanna",
+        "start": 2180.732,
+        "duration": 8.385
+    },
+    {
+        "text": "associate those with those objects, but\nthen we wanna apply 'em to other objects.",
+        "start": 2189.117,
+        "duration": 3.24
+    },
+    {
+        "text": "I just, didn't, instead of a\nhigh level block diagram, how",
+        "start": 2193.497,
+        "duration": 4.14
+    },
+    {
+        "text": "would those connections be made?",
+        "start": 2197.637,
+        "duration": 1.38
+    },
+    {
+        "text": "how would, is there topology\nassociated there or not?",
+        "start": 2200.907,
+        "duration": 2.79
+    },
+    {
+        "text": "I guess not.",
+        "start": 2203.697,
+        "duration": 0.63
+    },
+    {
+        "text": "it's like mechanics.",
+        "start": 2206.607,
+        "duration": 1.14
+    },
+    {
+        "text": "I'm trying to imagine the mechanics of,",
+        "start": 2207.747,
+        "duration": 3.595
+    },
+    {
+        "text": "it might work out fine.",
+        "start": 2214.677,
+        "duration": 0.99
+    },
+    {
+        "text": "I just didn't know if\nyou thought about it.",
+        "start": 2215.667,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah, I, haven't had the time to\nthink a lot more about how we would",
+        "start": 2218.457,
+        "duration": 6.3
+    },
+    {
+        "text": "apply a behavior to a morphology.",
+        "start": 2224.757,
+        "duration": 2.07
+    },
+    {
+        "text": "Now I think it, it would still be the\nsame mechanism because nothing really",
+        "start": 2226.827,
+        "duration": 5.13
+    },
+    {
+        "text": "changes in the requirements if we\nseparate the behavior and morphology",
+        "start": 2233.217,
+        "duration": 3.27
+    },
+    {
+        "text": "models out there, just physically\nmaybe more apart from each other.",
+        "start": 2236.487,
+        "duration": 3.99
+    },
+    {
+        "text": "but since we, I think, yeah, since\nbefore we assumed to use backward",
+        "start": 2242.817,
+        "duration": 5.79
+    },
+    {
+        "text": "con feedback, connections basically\nfrom V two to V one, for example.",
+        "start": 2248.607,
+        "duration": 4.2
+    },
+    {
+        "text": "I would assume the same thing could\nstill be happening from MT to V one.",
+        "start": 2253.077,
+        "duration": 3.72
+    },
+    {
+        "text": "Yeah.",
+        "start": 2258.867,
+        "duration": 0.24
+    },
+    {
+        "text": "And, just some kind of colocalization\nin inputs, which kind of fits with the",
+        "start": 2259.347,
+        "duration": 5.64
+    },
+    {
+        "text": "idea that you would learn this behavior\nat the same time as this morphology,",
+        "start": 2264.987,
+        "duration": 4.02
+    },
+    {
+        "text": "if they were looking at the same thing.",
+        "start": 2269.157,
+        "duration": 2.16
+    },
+    {
+        "text": "it, since they, they der from the same.",
+        "start": 2272.037,
+        "duration": 1.835
+    },
+    {
+        "text": "Map.",
+        "start": 2275.772,
+        "duration": 0.51
+    },
+    {
+        "text": "So I suppose if I see a behavior in a new,",
+        "start": 2276.282,
+        "duration": 2.82
+    },
+    {
+        "text": "it just might work out,\nit might work out fine.",
+        "start": 2281.682,
+        "duration": 2.04
+    },
+    {
+        "text": "I'm just thinking, Yeah.",
+        "start": 2283.722,
+        "duration": 2.04
+    },
+    {
+        "text": "And MT is also rettino\ntopically organized.",
+        "start": 2285.912,
+        "duration": 2.67
+    },
+    {
+        "text": "I, have, if we're running outta\ntime, I have a, general proposal",
+        "start": 2290.622,
+        "duration": 4.8
+    },
+    {
+        "text": "just, and it may not, it's consistent\nwith things I've said in the past.",
+        "start": 2295.422,
+        "duration": 3.0
+    },
+    {
+        "text": "yeah.",
+        "start": 2299.657,
+        "duration": 0.16
+    },
+    {
+        "text": "Do you want me to stop sharing?",
+        "start": 2299.817,
+        "duration": 1.455
+    },
+    {
+        "text": "No, it doesn't matter.",
+        "start": 2301.692,
+        "duration": 0.87
+    },
+    {
+        "text": "I can see you all if you wanna\nstop was useful to keep up.",
+        "start": 2302.682,
+        "duration": 2.94
+    },
+    {
+        "text": "yeah, you might wanna leave it up.",
+        "start": 2306.072,
+        "duration": 1.47
+    },
+    {
+        "text": "Doesn't matter.",
+        "start": 2307.542,
+        "duration": 0.57
+    },
+    {
+        "text": "there's, Monty is not a\nbrain simulator, right?",
+        "start": 2311.622,
+        "duration": 3.6
+    },
+    {
+        "text": "It's an AI system.",
+        "start": 2315.342,
+        "duration": 1.38
+    },
+    {
+        "text": "It's a, and we, and the trick all\nalong has been to figure out what",
+        "start": 2317.382,
+        "duration": 6.96
+    },
+    {
+        "text": "parts of the brain we need to pay\nattention to, which parts of the brains",
+        "start": 2324.342,
+        "duration": 2.97
+    },
+    {
+        "text": "we don't need to pay attention to.",
+        "start": 2327.312,
+        "duration": 1.08
+    },
+    {
+        "text": "And in some ways, that is the entire,\nthat's the most difficult exercise",
+        "start": 2329.202,
+        "duration": 4.77
+    },
+    {
+        "text": "for anyone who wants to build a\nneural computer, is to, have one part.",
+        "start": 2333.972,
+        "duration": 4.05
+    },
+    {
+        "text": "You have to pay attention\nwhich parts you don't.",
+        "start": 2338.022,
+        "duration": 1.65
+    },
+    {
+        "text": "And so I think we've been\nparticularly good at that in the past.",
+        "start": 2340.362,
+        "duration": 2.94
+    },
+    {
+        "text": "and there's no spikes here.",
+        "start": 2344.982,
+        "duration": 2.58
+    },
+    {
+        "text": "There's a lot of stuff we're gonna ignore.",
+        "start": 2347.562,
+        "duration": 1.05
+    },
+    {
+        "text": "I think some of these details we're\ntalking about, right on this picture right",
+        "start": 2349.752,
+        "duration": 2.49
+    },
+    {
+        "text": "here are details, which we probably in the\nend could be inspired by, but really don't",
+        "start": 2352.242,
+        "duration": 4.65
+    },
+    {
+        "text": "have to think about emulating at all.",
+        "start": 2356.892,
+        "duration": 1.59
+    },
+    {
+        "text": "To me, Monty's already progressed\nenough that we need to.",
+        "start": 2359.052,
+        "duration": 3.75
+    },
+    {
+        "text": "We're moving less and less, relying\nless and less on the neuroscience and",
+        "start": 2363.837,
+        "duration": 3.27
+    },
+    {
+        "text": "more and more on machine learning ideas.",
+        "start": 2367.107,
+        "duration": 1.56
+    },
+    {
+        "text": "'cause as long as we don't abandon\nsensorimotor learning and a, repetitive,",
+        "start": 2368.727,
+        "duration": 4.11
+    },
+    {
+        "text": "common algorithm, we can't go too wrong.",
+        "start": 2373.287,
+        "duration": 2.85
+    },
+    {
+        "text": "though, so I just think we shouldn't\nspend too much time on these details.",
+        "start": 2377.667,
+        "duration": 4.98
+    },
+    {
+        "text": "So I'm, already saying, okay, you've\nproposed a major architectural change",
+        "start": 2382.647,
+        "duration": 3.66
+    },
+    {
+        "text": "to Monty, which is to separate out\nlearning modules that are specifically",
+        "start": 2386.787,
+        "duration": 3.69
+    },
+    {
+        "text": "for, behavioral learning behaviors.",
+        "start": 2390.477,
+        "duration": 2.82
+    },
+    {
+        "text": "So that's a great idea.",
+        "start": 2394.317,
+        "duration": 0.93
+    },
+    {
+        "text": "And so I think at some point quickly\nwe should think about, oh, how",
+        "start": 2395.547,
+        "duration": 4.56
+    },
+    {
+        "text": "would we implement that in Monty?",
+        "start": 2400.107,
+        "duration": 2.19
+    },
+    {
+        "text": "And I don't think looking at all these\nthings going on in these layer fours",
+        "start": 2402.627,
+        "duration": 3.54
+    },
+    {
+        "text": "and, these stuff makes a lot of sense.",
+        "start": 2406.167,
+        "duration": 3.12
+    },
+    {
+        "text": "yeah.",
+        "start": 2410.277,
+        "duration": 0.33
+    },
+    {
+        "text": "I do think,",
+        "start": 2411.987,
+        "duration": 0.6
+    },
+    {
+        "text": "okay.",
+        "start": 2414.687,
+        "duration": 0.45
+    },
+    {
+        "text": "Do you want me to stop?",
+        "start": 2417.657,
+        "duration": 0.72
+    },
+    {
+        "text": "I can stop if you want, but I, may\ntell you what some of my concerns are.",
+        "start": 2419.367,
+        "duration": 3.9
+    },
+    {
+        "text": "I've always reserved\nsort of the MT as this.",
+        "start": 2423.567,
+        "duration": 2.01
+    },
+    {
+        "text": "Okay.",
+        "start": 2425.607,
+        "duration": 0.48
+    },
+    {
+        "text": "This is a pretty major thing in the brain.",
+        "start": 2426.087,
+        "duration": 1.65
+    },
+    {
+        "text": "I always felt that it was modeling,\negocentric spaces and that, and",
+        "start": 2428.187,
+        "duration": 5.73
+    },
+    {
+        "text": "so we model both behaviors and\nob arrangements in egocentric.",
+        "start": 2433.917,
+        "duration": 5.37
+    },
+    {
+        "text": "And now if you are gonna make mt do\nsomething else, then I then ask myself,",
+        "start": 2440.472,
+        "duration": 4.83
+    },
+    {
+        "text": "oh, okay, do we still need to model\negocentric spaces and, arrangements",
+        "start": 2445.302,
+        "duration": 4.38
+    },
+    {
+        "text": "of things in egocentric spaces?",
+        "start": 2449.682,
+        "duration": 1.29
+    },
+    {
+        "text": "And, if not, Mt. Where, so\nthat's a concern of mine.",
+        "start": 2451.422,
+        "duration": 4.23
+    },
+    {
+        "text": "That's a pretty high level thing.",
+        "start": 2455.892,
+        "duration": 1.5
+    },
+    {
+        "text": "It's more it's neuroscience,\nbut it's also okay.",
+        "start": 2457.392,
+        "duration": 3.63
+    },
+    {
+        "text": "It's, a big idea.",
+        "start": 2461.172,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 2462.552,
+        "duration": 0.3
+    },
+    {
+        "text": "I guess that ties in a bit with the\nvoting question we discussed earlier",
+        "start": 2462.852,
+        "duration": 4.56
+    },
+    {
+        "text": "that in, at the moment, basically all\nof the learning modules have access",
+        "start": 2467.862,
+        "duration": 4.11
+    },
+    {
+        "text": "to egocentric location information.",
+        "start": 2471.972,
+        "duration": 2.25
+    },
+    {
+        "text": "and I guess we could continue to\nlet all of them have that kind of",
+        "start": 2477.402,
+        "duration": 4.56
+    },
+    {
+        "text": "information if we find it practical, but,",
+        "start": 2481.962,
+        "duration": 2.76
+    },
+    {
+        "text": "and at some point it doesn't matter\nif it's the way the brain's doing it.",
+        "start": 2487.152,
+        "duration": 2.25
+    },
+    {
+        "text": "And I think when, Niels and\nViviane started this project,",
+        "start": 2489.552,
+        "duration": 4.02
+    },
+    {
+        "text": "we talked about the essential\nelements that have to be in Monty.",
+        "start": 2494.112,
+        "duration": 3.63
+    },
+    {
+        "text": "the things are the core\nprinciples that we cannot violate.",
+        "start": 2498.852,
+        "duration": 3.57
+    },
+    {
+        "text": "And those include the distributed,\nlearning system, integration",
+        "start": 2502.722,
+        "duration": 4.17
+    },
+    {
+        "text": "of Sensorimotor integration.",
+        "start": 2506.892,
+        "duration": 1.35
+    },
+    {
+        "text": "and as I said a moment ago,\nthere's a lot of variation",
+        "start": 2510.192,
+        "duration": 3.33
+    },
+    {
+        "text": "and that we could around that.",
+        "start": 2513.522,
+        "duration": 2.25
+    },
+    {
+        "text": "and I think you guys have already\ndone an amazing job of doing that.",
+        "start": 2516.462,
+        "duration": 2.31
+    },
+    {
+        "text": "Monte isn't a neural simulator.",
+        "start": 2519.012,
+        "duration": 1.59
+    },
+    {
+        "text": "It does its own things and it has its\nown ways of doing stuff, which is fine.",
+        "start": 2521.082,
+        "duration": 3.93
+    },
+    {
+        "text": "I think it's great.",
+        "start": 2525.012,
+        "duration": 0.6
+    },
+    {
+        "text": "In fact, it should be that way.",
+        "start": 2525.612,
+        "duration": 1.32
+    },
+    {
+        "text": "So I, guess I'm just pointing out that.",
+        "start": 2527.502,
+        "duration": 1.92
+    },
+    {
+        "text": "This is a major change you're proposing.",
+        "start": 2530.337,
+        "duration": 1.89
+    },
+    {
+        "text": "I think we need to think through the\nimplications for Monty and not worry",
+        "start": 2532.227,
+        "duration": 3.66
+    },
+    {
+        "text": "about too much about the implication,\nalthough it may, this is what",
+        "start": 2535.887,
+        "duration": 2.19
+    },
+    {
+        "text": "you're gonna say Viviane, but Yeah.",
+        "start": 2538.077,
+        "duration": 1.41
+    },
+    {
+        "text": "it's actually maybe a simpler Yeah.",
+        "start": 2540.027,
+        "duration": 2.7
+    },
+    {
+        "text": "So the ma, one of the reasons why I like\nthis proposal so much is that it changes",
+        "start": 2542.727,
+        "duration": 7.47
+    },
+    {
+        "text": "behavior models from a major architectural\nchange to a pre minor change.",
+        "start": 2550.197,
+        "duration": 4.89
+    },
+    {
+        "text": "So to add, if we do allow behavior models\nto be in separate learning modules from",
+        "start": 2555.987,
+        "duration": 6.6
+    },
+    {
+        "text": "morphology models, then the main thing\nwe need is just a different sensorimotor",
+        "start": 2562.587,
+        "duration": 5.19
+    },
+    {
+        "text": "module that outputs changes and directions\ninstead of, orientations and features.",
+        "start": 2567.777,
+        "duration": 6.96
+    },
+    {
+        "text": "and just plug that into the\nexisting learning module.",
+        "start": 2576.387,
+        "duration": 3.63
+    },
+    {
+        "text": "Otherwise, we would have to rewrite our\nlearning modules to have basically two",
+        "start": 2580.317,
+        "duration": 4.35
+    },
+    {
+        "text": "mod, two models at the same time and\ntest both of those at the same time.",
+        "start": 2584.667,
+        "duration": 4.38
+    },
+    {
+        "text": "So it actually makes the change simpler.",
+        "start": 2589.467,
+        "duration": 2.43
+    },
+    {
+        "text": "So I, agree.",
+        "start": 2594.597,
+        "duration": 1.11
+    },
+    {
+        "text": "So that's the beauty of it.",
+        "start": 2595.917,
+        "duration": 0.96
+    },
+    {
+        "text": "and then, so anyway.",
+        "start": 2599.457,
+        "duration": 0.705
+    },
+    {
+        "text": "Just to highlight that it's not the\nonly thing that would be needed, but,",
+        "start": 2601.197,
+        "duration": 3.72
+    },
+    {
+        "text": "the biggest change that's necessary\nin either solution is to give learning",
+        "start": 2605.097,
+        "duration": 5.13
+    },
+    {
+        "text": "modules stability to state condition.",
+        "start": 2610.227,
+        "duration": 2.34
+    },
+    {
+        "text": "Its models.",
+        "start": 2612.567,
+        "duration": 0.87
+    },
+    {
+        "text": "So depending on the coming context,\nlike time or, state, expect different",
+        "start": 2613.707,
+        "duration": 5.7
+    },
+    {
+        "text": "features to different locations and we\nwould need that capability either way.",
+        "start": 2619.407,
+        "duration": 4.56
+    },
+    {
+        "text": "But, that's, the biggest change.",
+        "start": 2623.967,
+        "duration": 3.12
+    },
+    {
+        "text": "And it also feels yeah, a nice feature\nto have for the morphology models.",
+        "start": 2627.087,
+        "duration": 4.26
+    },
+    {
+        "text": "Like it feels like it gets\ntowards, I don't know, some of",
+        "start": 2631.737,
+        "duration": 3.69
+    },
+    {
+        "text": "this kinda deformation Yeah.",
+        "start": 2635.427,
+        "duration": 1.59
+    },
+    {
+        "text": "Key frame kind of stuff.",
+        "start": 2637.047,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 2638.757,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 2639.687,
+        "duration": 0.24
+    },
+    {
+        "text": "And so in like very concrete Monte\nterms, this would be like key frames",
+        "start": 2639.927,
+        "duration": 5.64
+    },
+    {
+        "text": "or multiple graphs for each object\nthat lead to the same object label.",
+        "start": 2645.567,
+        "duration": 4.74
+    },
+    {
+        "text": "And yeah, the state could also become\npart of the output of each learning",
+        "start": 2651.417,
+        "duration": 4.53
+    },
+    {
+        "text": "module, like something that infers,\nand it can inform other learning",
+        "start": 2655.947,
+        "duration": 4.2
+    },
+    {
+        "text": "modules on, on what state to expect.",
+        "start": 2660.147,
+        "duration": 2.31
+    },
+    {
+        "text": "like a state in a behavior model\ninforms which state in morphology",
+        "start": 2663.087,
+        "duration": 3.69
+    },
+    {
+        "text": "to expect and voting can happen\non stage to quickly inform.",
+        "start": 2666.777,
+        "duration": 4.5
+    },
+    {
+        "text": "We talked about all this\nback in January, didn't we?",
+        "start": 2671.877,
+        "duration": 1.98
+    },
+    {
+        "text": "this is stuff we, yeah.",
+        "start": 2674.187,
+        "duration": 2.16
+    },
+    {
+        "text": "I think we can, we were\ndiscussing back then.",
+        "start": 2676.912,
+        "duration": 1.925
+    },
+    {
+        "text": "Yeah.",
+        "start": 2679.917,
+        "duration": 0.3
+    },
+    {
+        "text": "So that's not really a change\nas much as it's still there.",
+        "start": 2680.247,
+        "duration": 3.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 2684.267,
+        "duration": 0.33
+    },
+    {
+        "text": "It's more like an elaboration of\nthis, it is more what Monty needs.",
+        "start": 2684.597,
+        "duration": 4.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 2688.707,
+        "duration": 0.06
+    },
+    {
+        "text": "Because Monty does not Right.",
+        "start": 2688.767,
+        "duration": 0.96
+    },
+    {
+        "text": "This is stuff that's not in Monty\nright now, but it's not, it.",
+        "start": 2690.777,
+        "duration": 3.48
+    },
+    {
+        "text": "We was, before we even proposed separating\nout learning modules, a separate,",
+        "start": 2694.257,
+        "duration": 3.99
+    },
+    {
+        "text": "the behavioral models separately,\nwe identified the need for this.",
+        "start": 2698.787,
+        "duration": 3.66
+    },
+    {
+        "text": "So yeah, it is not a new requirement.",
+        "start": 2702.567,
+        "duration": 2.67
+    },
+    {
+        "text": "You're just reminding us that we\nhave, we still have to do this.",
+        "start": 2705.237,
+        "duration": 2.04
+    },
+    {
+        "text": "It's stuff, right?",
+        "start": 2707.367,
+        "duration": 0.75
+    },
+    {
+        "text": "So yeah, I'm just saying,",
+        "start": 2708.117,
+        "duration": 1.29
+    },
+    {
+        "text": "e no matter how we implement\nbehaviors, we need this.",
+        "start": 2711.867,
+        "duration": 4.23
+    },
+    {
+        "text": "And yeah, this is basically, if I were to\nimplement behaviors today in Monty, these",
+        "start": 2716.097,
+        "duration": 5.28
+    },
+    {
+        "text": "would be the three steps I would take.",
+        "start": 2721.377,
+        "duration": 2.46
+    },
+    {
+        "text": "Make a new sensorimotor module,\ngive learning module, stability",
+        "start": 2724.287,
+        "duration": 3.15
+    },
+    {
+        "text": "to state condition, its models.",
+        "start": 2727.437,
+        "duration": 1.71
+    },
+    {
+        "text": "And then third would be to, give a\nlearning module, the ability to, for the",
+        "start": 2729.537,
+        "duration": 6.24
+    },
+    {
+        "text": "behavior to apply movement to another\nlearning modules, movement input, which",
+        "start": 2735.897,
+        "duration": 4.08
+    },
+    {
+        "text": "is the one that's still the most unclear\nin my head of how it would happen in",
+        "start": 2740.037,
+        "duration": 4.35
+    },
+    {
+        "text": "the neocortex and how it would happen\nin, Monty, but basically like, how do we",
+        "start": 2744.417,
+        "duration": 5.1
+    },
+    {
+        "text": "apply a behavior to a morphology, this\nkind of idea of applying movement to",
+        "start": 2749.517,
+        "duration": 6.87
+    },
+    {
+        "text": "the morphology models reference frame.",
+        "start": 2756.387,
+        "duration": 2.34
+    },
+    {
+        "text": "Yeah.",
+        "start": 2759.567,
+        "duration": 0.33
+    },
+    {
+        "text": "yeah.",
+        "start": 2763.497,
+        "duration": 0.39
+    },
+    {
+        "text": "And yeah, it does, I hope this maybe\nmakes the proposal more concrete for",
+        "start": 2764.157,
+        "duration": 4.41
+    },
+    {
+        "text": "people who are more thinking In terms\nof Monty, I was mostly going deeper into",
+        "start": 2768.597,
+        "duration": 5.01
+    },
+    {
+        "text": "the literature because I, it was really\ninteresting and also I, wanted to see if.",
+        "start": 2773.607,
+        "duration": 5.94
+    },
+    {
+        "text": "It's a realistic thing to think about\nthat they could be separated physically.",
+        "start": 2780.102,
+        "duration": 4.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 2785.472,
+        "duration": 0.39
+    },
+    {
+        "text": "I think the thing I would look for there\nis I look for physiological studies",
+        "start": 2787.092,
+        "duration": 4.23
+    },
+    {
+        "text": "of mt. what do they know that MT does?",
+        "start": 2791.322,
+        "duration": 2.76
+    },
+    {
+        "text": "that's the kind of thing I look for.",
+        "start": 2796.062,
+        "duration": 1.41
+    },
+    {
+        "text": "But I, regardless, I know when, we\nstart getting to those TRI eight V one",
+        "start": 2798.012,
+        "duration": 4.26
+    },
+    {
+        "text": "connections, it's just a huge morass\nof data and it can be very, confusing.",
+        "start": 2802.272,
+        "duration": 5.7
+    },
+    {
+        "text": "and so I, sometimes I worry about\neveryone on the call through, look at",
+        "start": 2809.172,
+        "duration": 4.08
+    },
+    {
+        "text": "this guy, what the hell are we doing?",
+        "start": 2813.252,
+        "duration": 1.26
+    },
+    {
+        "text": "it's it's so complex.",
+        "start": 2814.927,
+        "duration": 1.505
+    },
+    {
+        "text": "but we don't have to do that, right?",
+        "start": 2817.782,
+        "duration": 1.5
+    },
+    {
+        "text": "It's just our reliance on neuroscience\nwill go down over the years,",
+        "start": 2819.432,
+        "duration": 4.35
+    },
+    {
+        "text": "and pretty rapidly.",
+        "start": 2826.092,
+        "duration": 0.675
+    },
+    {
+        "text": "Yeah.",
+        "start": 2826.767,
+        "duration": 0.24
+    },
+    {
+        "text": "I looked at some MT reviews and studies.",
+        "start": 2827.007,
+        "duration": 2.115
+    },
+    {
+        "text": "you anticipating every\none of my questions here?",
+        "start": 2830.112,
+        "duration": 1.92
+    },
+    {
+        "text": "Oh, sorry.",
+        "start": 2833.802,
+        "duration": 0.78
+    },
+    {
+        "text": "You you anticipate every one\nof my questions, here's fine.",
+        "start": 2835.122,
+        "duration": 3.21
+    },
+    {
+        "text": "No, it was more like I really had\na lot of fun getting to read some",
+        "start": 2838.842,
+        "duration": 4.56
+    },
+    {
+        "text": "neuroscience papers again, so I did a\nlot more of it than I was planning to.",
+        "start": 2843.402,
+        "duration": 3.54
+    },
+    {
+        "text": "Yeah, but you had the slide right here.",
+        "start": 2847.087,
+        "duration": 1.505
+    },
+    {
+        "text": "It's available right?",
+        "start": 2848.742,
+        "duration": 0.785
+    },
+    {
+        "text": "Right here.",
+        "start": 2849.642,
+        "duration": 0.3
+    },
+    {
+        "text": "Okay.",
+        "start": 2850.002,
+        "duration": 0.03
+    },
+    {
+        "text": "Yeah.",
+        "start": 2851.652,
+        "duration": 0.21
+    },
+    {
+        "text": "But I, read this, mt review paper\nand it had talked about all the",
+        "start": 2851.892,
+        "duration": 6.48
+    },
+    {
+        "text": "connectivity, but it didn't even\nmention feedback connections.",
+        "start": 2858.372,
+        "duration": 2.52
+    },
+    {
+        "text": "Like it was all just about\nfeedforward processing.",
+        "start": 2860.892,
+        "duration": 3.21
+    },
+    {
+        "text": "but yeah.",
+        "start": 2865.872,
+        "duration": 0.96
+    },
+    {
+        "text": "I think it's hard with the response\nproperties in MT because the experiments",
+        "start": 2867.762,
+        "duration": 5.07
+    },
+    {
+        "text": "are so simplistic, if you like, it's hard\nto find a paper that would actually detect",
+        "start": 2872.832,
+        "duration": 5.58
+    },
+    {
+        "text": "that it's modeling and object behavior.",
+        "start": 2878.412,
+        "duration": 2.61
+    },
+    {
+        "text": "So I can only find some general things\nlike orientation tuning and binocular",
+        "start": 2883.032,
+        "duration": 7.26
+    },
+    {
+        "text": "disparity, tuning directional selectivity.",
+        "start": 2890.292,
+        "duration": 2.43
+    },
+    {
+        "text": "Yeah.",
+        "start": 2892.722,
+        "duration": 0.06
+    },
+    {
+        "text": "And yeah, they say, quite complex though.",
+        "start": 2893.322,
+        "duration": 2.61
+    },
+    {
+        "text": "There could be some sort of,\nstudies where they disable MT and",
+        "start": 2895.932,
+        "duration": 3.51
+    },
+    {
+        "text": "an animal doing a high level task\nand, yeah, see what the deficit is.",
+        "start": 2899.442,
+        "duration": 5.28
+    },
+    {
+        "text": "that's the classic example.",
+        "start": 2906.702,
+        "duration": 1.29
+    },
+    {
+        "text": "We've talked a lot about, you, de\ndeactivate mt. And, now you, the",
+        "start": 2907.992,
+        "duration": 6.66
+    },
+    {
+        "text": "person can recognize an object, but\nthey can't reach for it type of thing.",
+        "start": 2914.652,
+        "duration": 3.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 2919.062,
+        "duration": 0.54
+    },
+    {
+        "text": "I did see, which I was, I, which I\nalways felt like that's indicative",
+        "start": 2919.602,
+        "duration": 3.39
+    },
+    {
+        "text": "of its egocentric space modeling.",
+        "start": 2922.992,
+        "duration": 2.13
+    },
+    {
+        "text": "Yeah.",
+        "start": 2927.132,
+        "duration": 0.36
+    },
+    {
+        "text": "I'm not sure which.",
+        "start": 2927.492,
+        "duration": 0.93
+    },
+    {
+        "text": "I saw some papers on that, but\nI think they  didn't have nice",
+        "start": 2929.382,
+        "duration": 2.4
+    },
+    {
+        "text": "figures to put on a slide.",
+        "start": 2931.782,
+        "duration": 1.89
+    },
+    {
+        "text": "but yeah,",
+        "start": 2938.367,
+        "duration": 0.82
+    },
+    {
+        "text": "I think this was the review paper.",
+        "start": 2942.227,
+        "duration": 2.575
+    },
+    {
+        "text": "I one of t's main functions, above\nand beyond what is done in V one",
+        "start": 2944.892,
+        "duration": 5.73
+    },
+    {
+        "text": "concerns integration and segmentation.",
+        "start": 2950.622,
+        "duration": 2.37
+    },
+    {
+        "text": "MT appears to have built-in\nmechanisms to deal with this.",
+        "start": 2954.837,
+        "duration": 2.94
+    },
+    {
+        "text": "Oh.",
+        "start": 2957.867,
+        "duration": 0.33
+    },
+    {
+        "text": "Deal with, inappropriate merging\nof independently moving objects.",
+        "start": 2958.257,
+        "duration": 4.08
+    },
+    {
+        "text": "for example, poncy has a\ndisparity constraint and possibly",
+        "start": 2963.537,
+        "duration": 3.9
+    },
+    {
+        "text": "other constraints to limit\nintegration to a particular depth.",
+        "start": 2967.437,
+        "duration": 3.42
+    },
+    {
+        "text": "neurons tend to segment\nmotion from its background.",
+        "start": 2973.587,
+        "duration": 2.94
+    },
+    {
+        "text": "MT is involved in the\ncomputation of structure.",
+        "start": 2977.547,
+        "duration": 2.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 2981.117,
+        "duration": 0.21
+    },
+    {
+        "text": "It's all oh, here, you apply the\nanything MT responses and the perception",
+        "start": 2981.927,
+        "duration": 6.93
+    },
+    {
+        "text": "of 3D cylinders, the remarkable\nintegration of direction, speed,",
+        "start": 2988.857,
+        "duration": 4.44
+    },
+    {
+        "text": "and disparity gradients all make a\ncompelling case that MT is processing",
+        "start": 2993.297,
+        "duration": 4.17
+    },
+    {
+        "text": "motion, but doing more than computing\nthe direction of speed and motion.",
+        "start": 2997.467,
+        "duration": 3.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 3002.927,
+        "duration": 0.24
+    },
+    {
+        "text": "That would be behaviors.",
+        "start": 3003.167,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 3004.577,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 3007.067,
+        "duration": 0.21
+    },
+    {
+        "text": "And I was just trying to pull up something\nfrom Joshua Tenenbaum's group and stuff",
+        "start": 3007.282,
+        "duration": 4.945
+    },
+    {
+        "text": "on, 'cause they do a lot about like\nintuitive physics and stuff, and they",
+        "start": 3012.227,
+        "duration": 5.55
+    },
+    {
+        "text": "do definitely talk about the dorsal\nstream being more implicated in that.",
+        "start": 3017.777,
+        "duration": 4.65
+    },
+    {
+        "text": "I think.",
+        "start": 3022.427,
+        "duration": 0.42
+    },
+    {
+        "text": "yeah.",
+        "start": 3024.347,
+        "duration": 0.3
+    },
+    {
+        "text": "I was just thinking this morning\nbefore our meeting, I was like,",
+        "start": 3025.277,
+        "duration": 2.22
+    },
+    {
+        "text": "going back to this list of basic\ntopics I presented a few weeks ago",
+        "start": 3027.497,
+        "duration": 3.57
+    },
+    {
+        "text": "and I was thinking like, all right.",
+        "start": 3031.667,
+        "duration": 1.65
+    },
+    {
+        "text": "Let's, tackle something basic,\nrecognize an object that go out and",
+        "start": 3034.682,
+        "duration": 3.69
+    },
+    {
+        "text": "pick it up, and bring it into some\npose, some, how do I do that, right?",
+        "start": 3038.372,
+        "duration": 4.65
+    },
+    {
+        "text": "How do we take these ideas and,\nimplement that, that's the,",
+        "start": 3043.262,
+        "duration": 4.77
+    },
+    {
+        "text": "that's the test here in the end.",
+        "start": 3048.092,
+        "duration": 1.65
+    },
+    {
+        "text": "Okay, great.",
+        "start": 3049.832,
+        "duration": 0.57
+    },
+    {
+        "text": "We're modeling behaviors\nseparately from this and that.",
+        "start": 3050.402,
+        "duration": 1.83
+    },
+    {
+        "text": "okay, how do we do\nsomething basic with it?",
+        "start": 3052.412,
+        "duration": 2.91
+    },
+    {
+        "text": "But yeah, what I think is cool is,\nyeah, like you're proposing Viviane,",
+        "start": 3057.962,
+        "duration": 5.16
+    },
+    {
+        "text": "like if we were gonna implement this\nin the grand scheme of things, it",
+        "start": 3063.122,
+        "duration": 2.61
+    },
+    {
+        "text": "would be a pretty straightforward\nthing to add relative to at least some",
+        "start": 3065.732,
+        "duration": 4.41
+    },
+    {
+        "text": "changes you can imagine for behaviors.",
+        "start": 3070.352,
+        "duration": 2.13
+    },
+    {
+        "text": "And so it might not be that long\nbefore we can just start testing",
+        "start": 3073.082,
+        "duration": 3.81
+    },
+    {
+        "text": "it and seeing how it works and, And\nlike you can almost imagine, let's",
+        "start": 3076.892,
+        "duration": 5.19
+    },
+    {
+        "text": "say we do revert back at some point\nto behaviors, meaning every column.",
+        "start": 3082.082,
+        "duration": 3.03
+    },
+    {
+        "text": "I feel like what would be implemented\nthe code for this separate one",
+        "start": 3085.592,
+        "duration": 3.72
+    },
+    {
+        "text": "would probably be how you'd want\nto encapsulate it, for it to be a",
+        "start": 3089.822,
+        "duration": 3.33
+    },
+    {
+        "text": "component in a learning module anyways.",
+        "start": 3093.152,
+        "duration": 2.91
+    },
+    {
+        "text": "So yeah.",
+        "start": 3096.781,
+        "duration": 1.981
+    },
+    {
+        "text": "If it feels unlikely that we would be\nwasting time by trying this and seeing",
+        "start": 3098.762,
+        "duration": 5.58
+    },
+    {
+        "text": "how it, how it works, no, it seems like\na reasonable assumption to go forward on.",
+        "start": 3104.342,
+        "duration": 5.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 3110.552,
+        "duration": 0.48
+    },
+    {
+        "text": "And actually I was just thinking we could.",
+        "start": 3111.032,
+        "duration": 2.575
+    },
+    {
+        "text": "Start with one and two, while three's\nnot completely figured out yet.",
+        "start": 3114.602,
+        "duration": 3.96
+    },
+    {
+        "text": "Like just testing how, what do we learn\nif we connect a sensorimotor module?",
+        "start": 3118.592,
+        "duration": 5.52
+    },
+    {
+        "text": "That sense changes to learning module.",
+        "start": 3124.112,
+        "duration": 2.49
+    },
+    {
+        "text": "does it learn a behavior?",
+        "start": 3127.472,
+        "duration": 1.02
+    },
+    {
+        "text": "Can it recognize a behavior?",
+        "start": 3128.492,
+        "duration": 1.56
+    },
+    {
+        "text": "And then also, adding the capability\nfor learning modules to model time or",
+        "start": 3130.502,
+        "duration": 5.19
+    },
+    {
+        "text": "different states generally a useful\nthing that we will need either way.",
+        "start": 3135.842,
+        "duration": 4.56
+    },
+    {
+        "text": "and then both of those should\ngive us really interesting results",
+        "start": 3141.482,
+        "duration": 4.23
+    },
+    {
+        "text": "and capabilities on their own,\neven without being able to apply",
+        "start": 3145.712,
+        "duration": 3.42
+    },
+    {
+        "text": "a behavior to a morphology yet.",
+        "start": 3149.132,
+        "duration": 2.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 3155.762,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 3156.872,
+        "duration": 0.27
+    },
+    {
+        "text": "Sounds good.",
+        "start": 3157.142,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 3158.462,
+        "duration": 0.45
+    },
+    {
+        "text": "So can I ask my question?",
+        "start": 3159.542,
+        "duration": 1.2
+    },
+    {
+        "text": "So I've always, from the very, very\nbeginning of my interest in brains,",
+        "start": 3160.922,
+        "duration": 2.61
+    },
+    {
+        "text": "I've always thought about  music, right?",
+        "start": 3163.532,
+        "duration": 1.89
+    },
+    {
+        "text": "would this suggest that learning a\nmelody, that the actual melody itself",
+        "start": 3167.282,
+        "duration": 4.86
+    },
+    {
+        "text": "is in the behavioral model and that the,\ninstance of that melody, the key and the",
+        "start": 3172.142,
+        "duration": 5.67
+    },
+    {
+        "text": "instrumentation and specifics are in beha,\nthe morphology model, the feature model?",
+        "start": 3177.812,
+        "duration": 6.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 3186.392,
+        "duration": 0.45
+    },
+    {
+        "text": "I, guess you could think of the\nintervals as changes in, frequency, and",
+        "start": 3187.052,
+        "duration": 6.96
+    },
+    {
+        "text": "then that would be a behavior model.",
+        "start": 3194.012,
+        "duration": 2.43
+    },
+    {
+        "text": "But then the specific key it's\nin, I guess those are features.",
+        "start": 3196.982,
+        "duration": 5.28
+    },
+    {
+        "text": "You're applying to that.",
+        "start": 3203.792,
+        "duration": 0.75
+    },
+    {
+        "text": "You're applying it.",
+        "start": 3204.597,
+        "duration": 0.52
+    },
+    {
+        "text": "So one of the problems I had when\nwe did, the behavioral model back in",
+        "start": 3205.497,
+        "duration": 3.635
+    },
+    {
+        "text": "January at our offsite, I said, wow, this\ncould solve the, this could solve the,",
+        "start": 3209.132,
+        "duration": 5.22
+    },
+    {
+        "text": "the melody problem, which is,\nrecognizing melody in different keys.",
+        "start": 3216.572,
+        "duration": 3.12
+    },
+    {
+        "text": "And, but I couldn't, but it, if when\nit was in a single column, I couldn't",
+        "start": 3220.262,
+        "duration": 3.57
+    },
+    {
+        "text": "work because I said, a single column\ngenerally represents a certain set",
+        "start": 3223.832,
+        "duration": 4.11
+    },
+    {
+        "text": "of frequencies or responds best.",
+        "start": 3227.942,
+        "duration": 1.8
+    },
+    {
+        "text": "And I started reading the literature\nabout brains representation of sound.",
+        "start": 3229.742,
+        "duration": 5.7
+    },
+    {
+        "text": "But the problem was that by having\nthem co-located in the same column, it",
+        "start": 3235.712,
+        "duration": 3.75
+    },
+    {
+        "text": "was hard for me to apply the melody,\nwhich is a behavior to a completely",
+        "start": 3239.462,
+        "duration": 5.4
+    },
+    {
+        "text": "different space in, in the feature\nspace, which is the actual key.",
+        "start": 3244.862,
+        "duration": 4.35
+    },
+    {
+        "text": "it just didn't work.",
+        "start": 3251.252,
+        "duration": 0.9
+    },
+    {
+        "text": "And, how could you, I have to\napply this behavior melody to some",
+        "start": 3252.602,
+        "duration": 4.98
+    },
+    {
+        "text": "other part of the cortex, which is\nrepresenting different frequencies.",
+        "start": 3257.582,
+        "duration": 2.67
+    },
+    {
+        "text": "but now by separating 'em out, I, still\nhave the, I at least have the, I have",
+        "start": 3261.152,
+        "duration": 5.13
+    },
+    {
+        "text": "the, ability to apply a behavior model\nin, in quote, the behavioral model space",
+        "start": 3266.852,
+        "duration": 5.97
+    },
+    {
+        "text": "to, I should be able to apply to any\nplace else in the morphology model space.",
+        "start": 3273.212,
+        "duration": 4.32
+    },
+    {
+        "text": "Right?",
+        "start": 3277.652,
+        "duration": 0.27
+    },
+    {
+        "text": "And the me, the mechanism for those\nto communicate should be somehow more",
+        "start": 3278.522,
+        "duration": 3.69
+    },
+    {
+        "text": "flexible enough to accommodate that.",
+        "start": 3282.212,
+        "duration": 1.53
+    },
+    {
+        "text": "I could take this key, this melody\nand apply it to different keys,",
+        "start": 3284.687,
+        "duration": 2.67
+    },
+    {
+        "text": "which are represented different\nplaces in the, auditory cortex.",
+        "start": 3287.357,
+        "duration": 5.25
+    },
+    {
+        "text": "I guess it's a, yeah.",
+        "start": 3294.077,
+        "duration": 1.8
+    },
+    {
+        "text": "It's interesting to think about.",
+        "start": 3295.877,
+        "duration": 0.9
+    },
+    {
+        "text": "Yeah.",
+        "start": 3296.902,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 3297.377,
+        "duration": 0.06
+    },
+    {
+        "text": "Because we've talked a few times about\nYeah, the connection of like displacement",
+        "start": 3297.437,
+        "duration": 2.97
+    },
+    {
+        "text": "to in variance and song recognition stuff.",
+        "start": 3300.407,
+        "duration": 2.55
+    },
+    {
+        "text": "But I agree it's clear with them\nseparate with the melody though.",
+        "start": 3303.857,
+        "duration": 4.14
+    },
+    {
+        "text": "Aren't you just, aren't you\nrecognizing the intervals between",
+        "start": 3307.997,
+        "duration": 2.28
+    },
+    {
+        "text": "the notes and other notes themselves?",
+        "start": 3310.277,
+        "duration": 1.29
+    },
+    {
+        "text": "That's the displacement.",
+        "start": 3313.127,
+        "duration": 0.93
+    },
+    {
+        "text": "Yeah.",
+        "start": 3314.057,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 3314.777,
+        "duration": 0.3
+    },
+    {
+        "text": "That's the displacement.",
+        "start": 3315.077,
+        "duration": 0.78
+    },
+    {
+        "text": "And and that's the problem, right?",
+        "start": 3316.157,
+        "duration": 3.51
+    },
+    {
+        "text": "Because you, it turns out you can\nreadily, there's a lot of details to that.",
+        "start": 3319.667,
+        "duration": 5.85
+    },
+    {
+        "text": "first of all, you actually do,\nmost people do know the key.",
+        "start": 3326.447,
+        "duration": 3.6
+    },
+    {
+        "text": "They learned their song in, they\nthink they don't, but they do.",
+        "start": 3330.047,
+        "duration": 2.88
+    },
+    {
+        "text": "so when you hear Paul McCartney\nsinging, yest yesterday or the song",
+        "start": 3334.037,
+        "duration": 4.92
+    },
+    {
+        "text": "yesterday, the key actually, if you\nthink you don't, but you can hear",
+        "start": 3339.167,
+        "duration": 4.17
+    },
+    {
+        "text": "that's melody playing any key, and it\nsounds just as good as any other key.",
+        "start": 3343.457,
+        "duration": 3.0
+    },
+    {
+        "text": "It's like there's, no\npreference in some sense.",
+        "start": 3346.457,
+        "duration": 2.04
+    },
+    {
+        "text": "It's",
+        "start": 3348.557,
+        "duration": 0.12
+    },
+    {
+        "text": "anyway, there's a,",
+        "start": 3351.617,
+        "duration": 0.72
+    },
+    {
+        "text": "yeah.",
+        "start": 3355.067,
+        "duration": 0.21
+    },
+    {
+        "text": "It is the interval.",
+        "start": 3355.277,
+        "duration": 0.66
+    },
+    {
+        "text": "that's the, trick anyway.",
+        "start": 3356.987,
+        "duration": 2.46
+    },
+    {
+        "text": "I think the behavioral model has the\nability to capture the intervals.",
+        "start": 3359.477,
+        "duration": 3.09
+    },
+    {
+        "text": "Make that more concrete, Yeah, it's\nbasically like the same way, like a feet,",
+        "start": 3365.312,
+        "duration": 4.05
+    },
+    {
+        "text": "like diagonal bars or whatever moving.",
+        "start": 3369.512,
+        "duration": 1.95
+    },
+    {
+        "text": "That's like the movement\nin the frequency space.",
+        "start": 3371.732,
+        "duration": 2.76
+    },
+    {
+        "text": "Yeah.",
+        "start": 3375.962,
+        "duration": 0.27
+    },
+    {
+        "text": "I can't remember when we talked\nabout in January, it seemed like",
+        "start": 3376.292,
+        "duration": 2.58
+    },
+    {
+        "text": "it was gonna solve that problem.",
+        "start": 3378.872,
+        "duration": 1.08
+    },
+    {
+        "text": "I don't remember how, but somehow,",
+        "start": 3379.952,
+        "duration": 1.53
+    },
+    {
+        "text": "I think part of it was also the matrix\ncell stuff that you're bringing in",
+        "start": 3383.792,
+        "duration": 2.94
+    },
+    {
+        "text": "and stuff, but yeah, that's the matrix\ncell is just purely the timing and",
+        "start": 3386.732,
+        "duration": 4.05
+    },
+    {
+        "text": "I think I've had that all along.",
+        "start": 3390.782,
+        "duration": 1.26
+    },
+    {
+        "text": "So anyway, that's great.",
+        "start": 3392.852,
+        "duration": 1.68
+    },
+    {
+        "text": "I, think,",
+        "start": 3394.952,
+        "duration": 0.57
+    },
+    {
+        "text": "it's a pretty major addition to Monty,\nbut not a lot of, not a lot of work, Yeah.",
+        "start": 3397.712,
+        "duration": 6.33
+    },
+    {
+        "text": "yeah, it'll probably be more work than it\nlooks like on the slide now, but, yeah.",
+        "start": 3406.562,
+        "duration": 7.05
+    },
+    {
+        "text": "I at least have a pretty concrete\nidea now of how it would get started",
+        "start": 3413.672,
+        "duration": 3.24
+    },
+    {
+        "text": "implementing a behavior in Monty.",
+        "start": 3416.912,
+        "duration": 2.97
+    },
+    {
+        "text": "So I guess in summary in January we\ncame up the general idea of how to",
+        "start": 3421.112,
+        "duration": 3.9
+    },
+    {
+        "text": "model behaviors, but we need, we,\nwe assumed it was gonna happen in",
+        "start": 3425.012,
+        "duration": 4.02
+    },
+    {
+        "text": "the same learning modules as the\nmorphology models, and now we said,",
+        "start": 3429.032,
+        "duration": 4.38
+    },
+    {
+        "text": "oh no, it's really a separate one.",
+        "start": 3433.412,
+        "duration": 1.65
+    },
+    {
+        "text": "And so this is completing the\npicture or going onto the next",
+        "start": 3435.842,
+        "duration": 3.45
+    },
+    {
+        "text": "stage in the evolution of behaviors",
+        "start": 3439.292,
+        "duration": 2.28
+    },
+    {
+        "text": "that, is that a good summary?",
+        "start": 3443.612,
+        "duration": 1.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 3445.982,
+        "duration": 0.42
+    },
+    {
+        "text": "if you're all on board with this,\nseparating them out, then yeah.",
+        "start": 3446.642,
+        "duration": 4.02
+    },
+    {
+        "text": "Does wanna argue against it.",
+        "start": 3450.662,
+        "duration": 1.23
+    },
+    {
+        "text": "No, I think it's definitely something\nto Yeah, I think unless we have a really",
+        "start": 3454.817,
+        "duration": 3.75
+    },
+    {
+        "text": "good reason to reverse it, which we\ndon't, and I think, yeah, the story",
+        "start": 3458.567,
+        "duration": 4.95
+    },
+    {
+        "text": "you've presented is pretty compelling.",
+        "start": 3463.517,
+        "duration": 1.74
+    },
+    {
+        "text": "Like we were like, oh,\nwe need reference frames.",
+        "start": 3465.257,
+        "duration": 2.25
+    },
+    {
+        "text": "And it's oh, we need this\ntransformation, then we need this.",
+        "start": 3467.507,
+        "duration": 3.15
+    },
+    {
+        "text": "It's oh yeah, wait, we've,\neverything's been doubled.",
+        "start": 3470.657,
+        "duration": 2.07
+    },
+    {
+        "text": "And thing that bother, that's because\nit's just another learning module.",
+        "start": 3474.107,
+        "duration": 3.81
+    },
+    {
+        "text": "The thing that bothered me is it\nrequired a whole nother set of grid cell",
+        "start": 3478.127,
+        "duration": 2.85
+    },
+    {
+        "text": "equivalents that were driven by the same\nmotion vectors, but anchored differently.",
+        "start": 3480.977,
+        "duration": 5.37
+    },
+    {
+        "text": "I was like, yeah, could do it.",
+        "start": 3488.297,
+        "duration": 1.44
+    },
+    {
+        "text": "that's a lot there.",
+        "start": 3492.857,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 3493.547,
+        "duration": 0.18
+    },
+    {
+        "text": "I think this is much neater.",
+        "start": 3493.727,
+        "duration": 1.53
+    },
+    {
+        "text": "That's a lot to ask for a column.",
+        "start": 3495.562,
+        "duration": 2.005
+    },
+    {
+        "text": "Yeah.",
+        "start": 3498.227,
+        "duration": 0.42
+    },
+    {
+        "text": "A lot of modules to fit into.",
+        "start": 3498.647,
+        "duration": 2.04
+    },
+    {
+        "text": "We have trouble fitting one\nset in there, a little and two.",
+        "start": 3501.767,
+        "duration": 4.2
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 3508.122,
+        "duration": 0.725
+    },
+    {
+        "text": "That's all right.",
+        "start": 3508.937,
+        "duration": 0.99
+    },
+    {
+        "text": "Exciting.",
+        "start": 3510.047,
+        "duration": 0.6
+    },
+    {
+        "text": "I'm happy.",
+        "start": 3511.217,
+        "duration": 0.33
+    }
+]

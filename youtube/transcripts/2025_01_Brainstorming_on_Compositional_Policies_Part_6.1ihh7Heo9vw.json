@@ -1,0 +1,5982 @@
+[
+    {
+        "text": "I have some slides I can go through on,\nobject behaviors and ideas around that.",
+        "start": 8.749,
+        "duration": 5.0
+    },
+    {
+        "text": "And then, yeah, Viviane, you\nmentioned if there was time,",
+        "start": 13.749,
+        "duration": 1.71
+    },
+    {
+        "text": "then, Get some stuff, maybe.",
+        "start": 15.979,
+        "duration": 2.66
+    },
+    {
+        "text": "yeah, just very short, but, no\nworries if we don't have time.",
+        "start": 20.529,
+        "duration": 3.65
+    },
+    {
+        "text": "I don't have any slides, but I've\nbeen working on object behaviors a",
+        "start": 26.749,
+        "duration": 2.13
+    },
+    {
+        "text": "lot, so I have a lot of interesting\nobservations, Oh, okay, nice.",
+        "start": 28.879,
+        "duration": 3.96
+    },
+    {
+        "text": "I don't know if I should interrupt and\nsay, hey, I was thinking about this and",
+        "start": 33.089,
+        "duration": 2.49
+    },
+    {
+        "text": "that, or just let you go through it,\nbut, Yeah, no, I think interrupt as much",
+        "start": 35.609,
+        "duration": 6.23
+    },
+    {
+        "text": "as possible, and then I guess we can\nalways, Sometimes you do brainstorming.",
+        "start": 42.349,
+        "duration": 4.055
+    },
+    {
+        "text": "It's too slow.",
+        "start": 46.594,
+        "duration": 0.4
+    },
+    {
+        "text": "Sometimes it's it's brainstorming\nand sometimes you don't even",
+        "start": 47.004,
+        "duration": 2.25
+    },
+    {
+        "text": "want to get some material out.",
+        "start": 49.254,
+        "duration": 0.85
+    },
+    {
+        "text": "Anyway.",
+        "start": 50.454,
+        "duration": 0.46
+    },
+    {
+        "text": "Yeah, so I guess",
+        "start": 52.514,
+        "duration": 3.55
+    },
+    {
+        "text": "this is just an attempt at bringing\ntogether some different thoughts",
+        "start": 58.324,
+        "duration": 4.28
+    },
+    {
+        "text": "about graphs and sequences and how\nthis relates to object behaviors.",
+        "start": 62.634,
+        "duration": 4.13
+    },
+    {
+        "text": "It's nothing really new.",
+        "start": 67.314,
+        "duration": 1.33
+    },
+    {
+        "text": "It's more just trying to like summarize a\nlot of the things Stuff we've discussed,",
+        "start": 68.644,
+        "duration": 4.185
+    },
+    {
+        "text": "and reframe it in a way that's hopefully\nuseful, and in particular, how are we",
+        "start": 73.599,
+        "duration": 6.76
+    },
+    {
+        "text": "going to actually represent behaviors,\nin Monty or how they're represented",
+        "start": 80.359,
+        "duration": 4.45
+    },
+    {
+        "text": "in the brain, and part of this will\ntouch on kind of, yeah, maybe just",
+        "start": 84.809,
+        "duration": 6.59
+    },
+    {
+        "text": "like how far we can get with, sequences\nand how universal they might be.",
+        "start": 91.399,
+        "duration": 3.92
+    },
+    {
+        "text": "So I guess, Yeah, after, for example,\nwhat you shared, Jeff, about how we can",
+        "start": 97.009,
+        "duration": 4.74
+    },
+    {
+        "text": "attend to changes, it feels like things\nlike how we learn the object behaviors",
+        "start": 101.749,
+        "duration": 3.69
+    },
+    {
+        "text": "is a bit clear, but the sort of substrate\nthat's actually representing object states",
+        "start": 105.449,
+        "duration": 4.9
+    },
+    {
+        "text": "is something we still need to clarify.",
+        "start": 111.559,
+        "duration": 2.13
+    },
+    {
+        "text": "And in discussing this, I'm also going\nto touch on how we represent kind of",
+        "start": 116.059,
+        "duration": 5.89
+    },
+    {
+        "text": "reference frames, morphology, the path\nintegration space, whatever you want to",
+        "start": 121.949,
+        "duration": 3.62
+    },
+    {
+        "text": "call it, that also have, so, you have\nthe series of, states, the, behavior,",
+        "start": 125.569,
+        "duration": 8.17
+    },
+    {
+        "text": "at any given time, there's some kind of\nmorphology that you are able to predict",
+        "start": 134.579,
+        "duration": 3.71
+    },
+    {
+        "text": "what you're going to see if you move\nsomewhere on the object, and so how",
+        "start": 138.509,
+        "duration": 3.98
+    },
+    {
+        "text": "that might tie in with this as well.",
+        "start": 142.489,
+        "duration": 1.5
+    },
+    {
+        "text": "and yeah, as alluded to before, I guess\nit's just a start of thinking about",
+        "start": 147.339,
+        "duration": 6.57
+    },
+    {
+        "text": "how kind of sequences might be useful,\nfor a lot of different parts of this.",
+        "start": 153.909,
+        "duration": 4.04
+    },
+    {
+        "text": "Thanks.",
+        "start": 157.949,
+        "duration": 0.07
+    },
+    {
+        "text": "Can you, are you going to explain that?",
+        "start": 158.019,
+        "duration": 2.56
+    },
+    {
+        "text": "Yeah, by double, triple roles, I just\nmean like lots of different things.",
+        "start": 162.439,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah, you're going to walk through,\nyou're going to walk through",
+        "start": 165.549,
+        "duration": 2.2
+    },
+    {
+        "text": "a bunch of things, but, okay.",
+        "start": 167.749,
+        "duration": 1.53
+    },
+    {
+        "text": "And then one other kind of related\ngoal, is just there's lots of different,",
+        "start": 170.059,
+        "duration": 4.42
+    },
+    {
+        "text": "interesting work out there on how you\nrepresent, structures, everything from",
+        "start": 174.809,
+        "duration": 6.7
+    },
+    {
+        "text": "graph networks to hierarchical temporal\nmemory and for sequences and all these",
+        "start": 181.899,
+        "duration": 4.4
+    },
+    {
+        "text": "kinds of different things and You don't\nneed to have come across all these",
+        "start": 186.299,
+        "duration": 4.165
+    },
+    {
+        "text": "terms, whatever, but I just thought if\nthese are things you've come across,",
+        "start": 190.514,
+        "duration": 2.86
+    },
+    {
+        "text": "at least I found it confusing, like,\nhow do these all relate to each other?",
+        "start": 193.964,
+        "duration": 3.0
+    },
+    {
+        "text": "and so I'm just trying to maybe\nput a bit of structure, to that.",
+        "start": 197.874,
+        "duration": 4.14
+    },
+    {
+        "text": "and in particular, really look at the big\nideas of kind of graphs and sequences,",
+        "start": 203.184,
+        "duration": 4.66
+    },
+    {
+        "text": "how these are related to one another,\nand then how these relate to representing",
+        "start": 208.884,
+        "duration": 4.57
+    },
+    {
+        "text": "states and representing space.",
+        "start": 213.464,
+        "duration": 1.79
+    },
+    {
+        "text": "Thanks.",
+        "start": 215.254,
+        "duration": 0.04
+    },
+    {
+        "text": "That was a kind of preamble.",
+        "start": 218.124,
+        "duration": 1.2
+    },
+    {
+        "text": "and yeah, hopefully I've not assumed too\nmuch that like part of the issue is like",
+        "start": 221.434,
+        "duration": 5.75
+    },
+    {
+        "text": "we've done kind of similar brainstorming\nsessions, many times over the years.",
+        "start": 227.544,
+        "duration": 3.91
+    },
+    {
+        "text": "And so I may assume, that you are fairly\nfamiliar with hierarchical temporal",
+        "start": 231.454,
+        "duration": 4.53
+    },
+    {
+        "text": "memory or, some of these other things.",
+        "start": 235.984,
+        "duration": 2.26
+    },
+    {
+        "text": "So definitely stop me if,\nif I can clarify anything.",
+        "start": 238.534,
+        "duration": 3.35
+    },
+    {
+        "text": "so in terms of like how we might represent\nobject behavior, I think, one way you",
+        "start": 245.374,
+        "duration": 5.785
+    },
+    {
+        "text": "could frame it is this sort of graph view\nwhere we have a more logical model of",
+        "start": 251.159,
+        "duration": 6.79
+    },
+    {
+        "text": "an object, which is a series of nodes.",
+        "start": 257.949,
+        "duration": 2.37
+    },
+    {
+        "text": "and are, those, nodes?",
+        "start": 261.719,
+        "duration": 1.47
+    },
+    {
+        "text": "The, are locations and yeah.",
+        "start": 263.189,
+        "duration": 3.21
+    },
+    {
+        "text": "So those are our locations, yeah.",
+        "start": 266.399,
+        "duration": 1.71
+    },
+    {
+        "text": "Okay.",
+        "start": 268.139,
+        "duration": 0.3
+    },
+    {
+        "text": "Because they're not like features.",
+        "start": 268.799,
+        "duration": 1.98
+    },
+    {
+        "text": "It's a, continuous space.",
+        "start": 271.589,
+        "duration": 1.38
+    },
+    {
+        "text": "So it's not like the\nthree nodes or something.",
+        "start": 273.209,
+        "duration": 1.8
+    },
+    {
+        "text": "it's.",
+        "start": 275.339,
+        "duration": 0.27
+    },
+    {
+        "text": "Yeah, although, we don't represent\nit in a totally continuous space,",
+        "start": 276.144,
+        "duration": 4.72
+    },
+    {
+        "text": "and we've also talked about how,\nas we get more hierarchy, we would",
+        "start": 280.864,
+        "duration": 4.11
+    },
+    {
+        "text": "expect this to be more, sparse.",
+        "start": 284.974,
+        "duration": 2.8
+    },
+    {
+        "text": "Maybe, but it's the space\nitself that's continuous.",
+        "start": 288.759,
+        "duration": 2.41
+    },
+    {
+        "text": "That it's embedded in, is in continuous.",
+        "start": 291.239,
+        "duration": 1.36
+    },
+    {
+        "text": "There's a space in which we have, we've\nlocated features at different locations",
+        "start": 293.549,
+        "duration": 4.33
+    },
+    {
+        "text": "in that space and other points in that\nspace, so we don't, we don't see anything.",
+        "start": 297.899,
+        "duration": 3.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 302.239,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 302.909,
+        "duration": 0.23
+    },
+    {
+        "text": "Okay.",
+        "start": 303.149,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 303.879,
+        "duration": 0.45
+    },
+    {
+        "text": "and then, if you wanted to encode\nbehavior with a graph, you could",
+        "start": 307.429,
+        "duration": 7.3
+    },
+    {
+        "text": "lay down edges that, connect nodes,\nnot necessarily all the nodes.",
+        "start": 314.729,
+        "duration": 4.51
+    },
+    {
+        "text": "so that's just showing an example\nhere where there's edges between",
+        "start": 320.584,
+        "duration": 2.43
+    },
+    {
+        "text": "these and edges between these.",
+        "start": 323.014,
+        "duration": 2.09
+    },
+    {
+        "text": "and then the behavior of the system\ncould then follow this where, the state",
+        "start": 328.474,
+        "duration": 6.73
+    },
+    {
+        "text": "of a given node, a given location,\nat a time point is going to depend on",
+        "start": 335.214,
+        "duration": 6.96
+    },
+    {
+        "text": "a series of things can be summarized\nas the, state of the connected nodes.",
+        "start": 342.224,
+        "duration": 5.25
+    },
+    {
+        "text": "Based on incoming edges, so that's\ninformation from neighbors that's",
+        "start": 347.864,
+        "duration": 4.14
+    },
+    {
+        "text": "transformed by an edge affecting\nthis node, some like local actions.",
+        "start": 352.014,
+        "duration": 5.88
+    },
+    {
+        "text": "So this is additional\ninfluence in the system.",
+        "start": 358.004,
+        "duration": 2.47
+    },
+    {
+        "text": "So for example, someone pushing and\nthen, and oh, and I should say for the",
+        "start": 360.514,
+        "duration": 5.61
+    },
+    {
+        "text": "edges that includes like a self edge,\nand then it's not necessary, but it's",
+        "start": 366.124,
+        "duration": 5.33
+    },
+    {
+        "text": "potential that you could have some\nglobal state, like maybe some pooled",
+        "start": 371.574,
+        "duration": 3.38
+    },
+    {
+        "text": "state, that's describing the object.",
+        "start": 374.954,
+        "duration": 2.79
+    },
+    {
+        "text": "maybe it's hot, maybe it's cold, whatever,\nand that kind of influences, at a more",
+        "start": 378.224,
+        "duration": 6.18
+    },
+    {
+        "text": "kind of global level, all of the, nodes.",
+        "start": 384.404,
+        "duration": 2.37
+    },
+    {
+        "text": "I'm not claiming that this is the way we\nshould do it, I'm just trying to describe,",
+        "start": 389.624,
+        "duration": 3.32
+    },
+    {
+        "text": "like, how, one way you could frame it.",
+        "start": 392.944,
+        "duration": 2.12
+    },
+    {
+        "text": "is A represent a node?",
+        "start": 397.019,
+        "duration": 2.59
+    },
+    {
+        "text": "is it?",
+        "start": 400.309,
+        "duration": 0.55
+    },
+    {
+        "text": "It's like a, yeah, it's\nthe top of the stapler.",
+        "start": 400.859,
+        "duration": 3.51
+    },
+    {
+        "text": "Okay, but so it's not a location.",
+        "start": 404.779,
+        "duration": 1.5
+    },
+    {
+        "text": "It's a, this is what I was\ngetting back to earlier.",
+        "start": 406.319,
+        "duration": 3.21
+    },
+    {
+        "text": "I kind of view like, a model of\nan object is a bunch of space,",
+        "start": 409.529,
+        "duration": 3.36
+    },
+    {
+        "text": "and then we assign features at\ndifferent locations in that space.",
+        "start": 413.429,
+        "duration": 2.6
+    },
+    {
+        "text": "and so you could, I could say,\noh, the point in space is a",
+        "start": 417.419,
+        "duration": 2.35
+    },
+    {
+        "text": "node, but that's not what it is.",
+        "start": 419.769,
+        "duration": 1.28
+    },
+    {
+        "text": "You're saying the point, in this\ncase, the A is like a feature.",
+        "start": 421.049,
+        "duration": 2.9
+    },
+    {
+        "text": "That is located at some space,\nlocation, but that feature can move,",
+        "start": 424.594,
+        "duration": 4.17
+    },
+    {
+        "text": "so it's I've always had trouble,",
+        "start": 429.954,
+        "duration": 2.38
+    },
+    {
+        "text": "trying to think about the brain as it's\nthese, graphs like this, because they",
+        "start": 434.574,
+        "duration": 5.48
+    },
+    {
+        "text": "have, there's language that we use for\ngraphs, That, that don't, it's hard",
+        "start": 440.054,
+        "duration": 3.81
+    },
+    {
+        "text": "to fit on top of this idea of location\nspaces and features that location.",
+        "start": 443.864,
+        "duration": 3.93
+    },
+    {
+        "text": "So I'm just confused what a is.",
+        "start": 447.794,
+        "duration": 2.13
+    },
+    {
+        "text": "I can understand what a\nnote and a graph is, right?",
+        "start": 450.464,
+        "duration": 3.29
+    },
+    {
+        "text": "but it, that's why my first question\nwas, is it a location, is it a",
+        "start": 454.474,
+        "duration": 3.96
+    },
+    {
+        "text": "feature , or is it a note on a graph?",
+        "start": 458.434,
+        "duration": 2.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 460.684,
+        "duration": 0.06
+    },
+    {
+        "text": "so I, would say it's, it's a feature\nthat's currently associated with a",
+        "start": 461.734,
+        "duration": 5.87
+    },
+    {
+        "text": "location, but that location can change.",
+        "start": 467.604,
+        "duration": 2.8
+    },
+    {
+        "text": "Okay, so that to me is, we can call\nthat a node, but it's really, but if",
+        "start": 471.594,
+        "duration": 8.31
+    },
+    {
+        "text": "it's a feature, I wouldn't normally\ntypically think of that as a node.",
+        "start": 479.904,
+        "duration": 3.01
+    },
+    {
+        "text": "I typically think of a node as\na point in some sort of node.",
+        "start": 483.364,
+        "duration": 3.59
+    },
+    {
+        "text": "A space, right?",
+        "start": 487.754,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah, it's all the things\nassociated with that point.",
+        "start": 489.014,
+        "duration": 2.22
+    },
+    {
+        "text": "So it's not just like a feature.",
+        "start": 491.234,
+        "duration": 1.63
+    },
+    {
+        "text": "but if it's moving,",
+        "start": 494.384,
+        "duration": 1.11
+    },
+    {
+        "text": "then all those things move together.",
+        "start": 498.324,
+        "duration": 1.44
+    },
+    {
+        "text": "Yeah.",
+        "start": 500.064,
+        "duration": 0.43
+    },
+    {
+        "text": "Again, the language of nodes\nand graphs is, it's just hard.",
+        "start": 500.784,
+        "duration": 3.79
+    },
+    {
+        "text": "Like maybe, one way, I don't know\nif this helps is thinking about it",
+        "start": 504.574,
+        "duration": 4.88
+    },
+    {
+        "text": "is it's almost like a place cell.",
+        "start": 509.454,
+        "duration": 1.63
+    },
+    {
+        "text": "So it's bound a bunch of information\nto it, but the mapping between",
+        "start": 511.374,
+        "duration": 6.15
+    },
+    {
+        "text": "the place cell and the grid cell.",
+        "start": 517.524,
+        "duration": 1.68
+    },
+    {
+        "text": "maybe that could change so that where\nthe play cell actually is changes.",
+        "start": 520.034,
+        "duration": 4.73
+    },
+    {
+        "text": "But we don't see that, right?",
+        "start": 525.444,
+        "duration": 1.25
+    },
+    {
+        "text": "We don't see that.",
+        "start": 526.724,
+        "duration": 0.54
+    },
+    {
+        "text": "play cells represent a\nlocation, in a space.",
+        "start": 527.784,
+        "duration": 4.45
+    },
+    {
+        "text": "grid cells, but they're different,\nbut it does represent a location.",
+        "start": 533.229,
+        "duration": 3.48
+    },
+    {
+        "text": "So you don't, you typically\ndon't see a place they'll move.",
+        "start": 536.709,
+        "duration": 2.86
+    },
+    {
+        "text": "It's, it can represent, an individual\ncell can be far in different",
+        "start": 539.609,
+        "duration": 3.9
+    },
+    {
+        "text": "locations, but but it doesn't.",
+        "start": 543.509,
+        "duration": 1.807
+    },
+    {
+        "text": "It can remap though, can it?",
+        "start": 545.316,
+        "duration": 1.653
+    },
+    {
+        "text": "Yeah, not, it remaps.",
+        "start": 547.589,
+        "duration": 2.4
+    },
+    {
+        "text": "I'm not sure about that.",
+        "start": 550.049,
+        "duration": 0.88
+    },
+    {
+        "text": "Does it remap in the same environment?",
+        "start": 550.929,
+        "duration": 1.47
+    },
+    {
+        "text": "I think.",
+        "start": 552.399,
+        "duration": 0.38
+    },
+    {
+        "text": "I'm not aware of that.",
+        "start": 553.429,
+        "duration": 0.77
+    },
+    {
+        "text": "that's the thing, if we're changing the\nenvironment, that's what's happening.",
+        "start": 554.309,
+        "duration": 2.82
+    },
+    {
+        "text": "Yeah, the individual cells.",
+        "start": 557.129,
+        "duration": 1.71
+    },
+    {
+        "text": "So the question is what's happening\nwhen we change the state of an object?",
+        "start": 558.869,
+        "duration": 3.5
+    },
+    {
+        "text": "is that like changing the environment?",
+        "start": 562.509,
+        "duration": 1.78
+    },
+    {
+        "text": "Because I think there's things like,\nif you, start moving the, walls of",
+        "start": 564.299,
+        "duration": 3.86
+    },
+    {
+        "text": "the environment and things like that.",
+        "start": 568.159,
+        "duration": 1.33
+    },
+    {
+        "text": "on this case.",
+        "start": 570.329,
+        "duration": 0.51
+    },
+    {
+        "text": "Touch on this a little bit, but\nthen, definitely the grid cells,",
+        "start": 570.839,
+        "duration": 2.65
+    },
+    {
+        "text": "and I think the place cells also,\nlike distort and things like that.",
+        "start": 573.489,
+        "duration": 2.526
+    },
+    {
+        "text": "So I've argued earlier that, That, when\nthe stapler moves, it's the same object",
+        "start": 576.015,
+        "duration": 5.379
+    },
+    {
+        "text": "and therefore it is the same, space.",
+        "start": 581.394,
+        "duration": 3.46
+    },
+    {
+        "text": "if it, if the, if we switch to a new\nspace, then all the learning about",
+        "start": 586.474,
+        "duration": 3.81
+    },
+    {
+        "text": "the, stapler would, be forgotten.",
+        "start": 590.494,
+        "duration": 1.98
+    },
+    {
+        "text": "And so if you have an object and\na little model of the object, and",
+        "start": 593.154,
+        "duration": 3.27
+    },
+    {
+        "text": "then some part of the model changes.",
+        "start": 596.424,
+        "duration": 1.5
+    },
+    {
+        "text": "I have to be able to represent\nthat change, but I don't want",
+        "start": 598.729,
+        "duration": 2.03
+    },
+    {
+        "text": "to forget everything else.",
+        "start": 600.759,
+        "duration": 0.96
+    },
+    {
+        "text": "Yeah, I agree.",
+        "start": 602.499,
+        "duration": 0.88
+    },
+    {
+        "text": "It's yeah, I don't look at it and\ngo, oh, that's not a stapler anymore.",
+        "start": 603.379,
+        "duration": 2.94
+    },
+    {
+        "text": "It's it's just changed.",
+        "start": 606.749,
+        "duration": 2.18
+    },
+    {
+        "text": "Yeah, no, I definitely agree.",
+        "start": 609.809,
+        "duration": 0.94
+    },
+    {
+        "text": "Yeah, and I guess I'll talk later\nabout, The kind of the space element,",
+        "start": 610.819,
+        "duration": 6.19
+    },
+    {
+        "text": "and maybe that'll help in terms of I\njust, I do see there's a, in my mind,",
+        "start": 617.289,
+        "duration": 6.15
+    },
+    {
+        "text": "it just could be I'm stupid, but in\nmy mind, there's a fundamental sort of",
+        "start": 623.759,
+        "duration": 4.34
+    },
+    {
+        "text": "impedance mismatch between talking about\nmodels based on locations and features",
+        "start": 628.699,
+        "duration": 6.19
+    },
+    {
+        "text": "and models based on nodes and edges.",
+        "start": 634.889,
+        "duration": 3.19
+    },
+    {
+        "text": "And I don't know how to, I don't\nknow how to bridge those two.",
+        "start": 638.079,
+        "duration": 2.97
+    },
+    {
+        "text": "Yeah, I feel, it feels to me\nlike part of the issue is just.",
+        "start": 642.349,
+        "duration": 2.42
+    },
+    {
+        "text": "it was easier to use the language of\nfeatures at locations because we were",
+        "start": 645.744,
+        "duration": 4.33
+    },
+    {
+        "text": "always talking about static objects.",
+        "start": 650.074,
+        "duration": 1.74
+    },
+    {
+        "text": "whereas it feels like, yeah, maybe,\nIt almost needs some new language",
+        "start": 654.054,
+        "duration": 4.63
+    },
+    {
+        "text": "now that, I think we've Maybe.",
+        "start": 658.724,
+        "duration": 1.48
+    },
+    {
+        "text": "That's right, because I\ntake the opposite approach.",
+        "start": 660.204,
+        "duration": 1.69
+    },
+    {
+        "text": "To me, is, it's okay,\nthat language is great.",
+        "start": 662.454,
+        "duration": 2.92
+    },
+    {
+        "text": "It really works super well.",
+        "start": 665.404,
+        "duration": 1.42
+    },
+    {
+        "text": "How do I, explain behaviors\nwithin that language?",
+        "start": 667.754,
+        "duration": 2.67
+    },
+    {
+        "text": "And that's how I'm approaching it.",
+        "start": 671.054,
+        "duration": 1.5
+    },
+    {
+        "text": "I'm making, I think I'm\nmaking good progress on it.",
+        "start": 672.584,
+        "duration": 1.88
+    },
+    {
+        "text": "I'm open to other ideas, but it's\ngoing to be hard for me to, going",
+        "start": 675.664,
+        "duration": 4.33
+    },
+    {
+        "text": "different directions here and are\nthinking at the moment, but I'll,",
+        "start": 679.994,
+        "duration": 2.19
+    },
+    {
+        "text": "maybe I'll shut up for a while.",
+        "start": 682.614,
+        "duration": 0.88
+    },
+    {
+        "text": "Let you keep going.",
+        "start": 683.494,
+        "duration": 0.44
+    },
+    {
+        "text": "See when you can pick it up.",
+        "start": 683.934,
+        "duration": 1.66
+    },
+    {
+        "text": "That's right.",
+        "start": 685.594,
+        "duration": 0.455
+    },
+    {
+        "text": "I'm just, trying to really understand,\nokay, what is A and B exactly,",
+        "start": 686.709,
+        "duration": 3.1
+    },
+    {
+        "text": "I understand notes in the graph.",
+        "start": 690.329,
+        "duration": 1.483
+    },
+    {
+        "text": "Hopefully that clarified\nit a little bit, at least.",
+        "start": 691.812,
+        "duration": 2.417
+    },
+    {
+        "text": "Not really.",
+        "start": 694.229,
+        "duration": 0.537
+    },
+    {
+        "text": "Yeah, I understand it's hard to map, okay.",
+        "start": 694.766,
+        "duration": 2.543
+    },
+    {
+        "text": "It'd be hard to map onto\nthe real science, but.",
+        "start": 697.759,
+        "duration": 1.508
+    },
+    {
+        "text": "It didn't really clarify it.",
+        "start": 699.267,
+        "duration": 0.994
+    },
+    {
+        "text": "Okay, do you mind if I give\nan explanation if that's, I'm",
+        "start": 700.261,
+        "duration": 3.518
+    },
+    {
+        "text": "just trying to find, the zoom.",
+        "start": 703.779,
+        "duration": 1.59
+    },
+    {
+        "text": "Whatever I can draw,",
+        "start": 705.809,
+        "duration": 1.18
+    },
+    {
+        "text": "to explain it, but\nwhere's the zoom controls?",
+        "start": 710.389,
+        "duration": 2.74
+    },
+    {
+        "text": "I'm sorry.",
+        "start": 713.179,
+        "duration": 0.73
+    },
+    {
+        "text": "I think if you hover above the\ntop, at least I have an annotate.",
+        "start": 713.909,
+        "duration": 4.46
+    },
+    {
+        "text": "I don't know if you see one.",
+        "start": 718.369,
+        "duration": 1.11
+    },
+    {
+        "text": "Yeah.",
+        "start": 719.979,
+        "duration": 0.19
+    },
+    {
+        "text": "Nice.",
+        "start": 720.169,
+        "duration": 0.17
+    },
+    {
+        "text": "Okay.",
+        "start": 721.199,
+        "duration": 0.4
+    },
+    {
+        "text": "Oh, thank you, Will.",
+        "start": 721.599,
+        "duration": 0.83
+    },
+    {
+        "text": "Hi.",
+        "start": 722.439,
+        "duration": 0.27
+    },
+    {
+        "text": "Oh, you want to, draw something?",
+        "start": 723.309,
+        "duration": 1.39
+    },
+    {
+        "text": "I see.",
+        "start": 724.789,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 725.129,
+        "duration": 0.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 725.399,
+        "duration": 0.54
+    },
+    {
+        "text": "so let's say instead of a stapler,\nwe have image like a, grid.",
+        "start": 726.619,
+        "duration": 8.0
+    },
+    {
+        "text": "Okay.",
+        "start": 734.619,
+        "duration": 0.06
+    },
+    {
+        "text": "so like a, let's say a 10 by 10 image,\nand we can think about this as a graph",
+        "start": 735.339,
+        "duration": 5.57
+    },
+    {
+        "text": "where each pixel is a node, right?",
+        "start": 740.919,
+        "duration": 3.15
+    },
+    {
+        "text": "Can you think of image as like a So\nis, this is not an object, this is",
+        "start": 744.369,
+        "duration": 4.29
+    },
+    {
+        "text": "just, a pixel, a pixelated display?",
+        "start": 748.659,
+        "duration": 2.88
+    },
+    {
+        "text": "Is that what you're saying?",
+        "start": 751.539,
+        "duration": 0.4
+    },
+    {
+        "text": "yeah, instead of a stapler\nobject, I have an image object,",
+        "start": 753.279,
+        "duration": 2.8
+    },
+    {
+        "text": "a picture, let's say a picture.",
+        "start": 756.079,
+        "duration": 2.73
+    },
+    {
+        "text": "Okay, I'm trying to say, is that, is\nthe object this grid or is the grid",
+        "start": 759.559,
+        "duration": 3.23
+    },
+    {
+        "text": "represent where I represent the object?",
+        "start": 762.799,
+        "duration": 2.76
+    },
+    {
+        "text": "are we actually recognizing a grid or\ndoes the grid represent a pixelated yeah.",
+        "start": 767.714,
+        "duration": 5.125
+    },
+    {
+        "text": "The, latter.",
+        "start": 772.999,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 773.429,
+        "duration": 0.29
+    },
+    {
+        "text": "I think for what it's worth, like\nI think Jeff, as he was say, like",
+        "start": 773.724,
+        "duration": 3.23
+    },
+    {
+        "text": "he, he understands the concept\nof the graph and, what a node and",
+        "start": 777.019,
+        "duration": 3.085
+    },
+    {
+        "text": "a graph is and things like that.",
+        "start": 780.104,
+        "duration": 1.11
+    },
+    {
+        "text": "I think it's more, it is this tricky thing\nof like, how do you, map that onto Yeah.",
+        "start": 781.564,
+        "duration": 4.565
+    },
+    {
+        "text": "I'm trying to get there.",
+        "start": 786.204,
+        "duration": 0.69
+    },
+    {
+        "text": "I haven't got, okay.",
+        "start": 787.199,
+        "duration": 1.0
+    },
+    {
+        "text": "I just wanted Hoja.",
+        "start": 788.199,
+        "duration": 0.96
+    },
+    {
+        "text": "I just wanted to clarify 'cause\nyou said we have, okay, so let's",
+        "start": 789.204,
+        "duration": 2.37
+    },
+    {
+        "text": "say we have a, like a physical\npicture, like from a four paper.",
+        "start": 791.574,
+        "duration": 3.84
+    },
+    {
+        "text": "And I cut them up into little pieces, and\nso each, piece is a node, so does that,",
+        "start": 795.939,
+        "duration": 7.38
+    },
+    {
+        "text": "make sense, for now, can we imagine that?",
+        "start": 803.319,
+        "duration": 2.94
+    },
+    {
+        "text": "Do you want to define it that way?",
+        "start": 806.259,
+        "duration": 0.89
+    },
+    {
+        "text": "Sure.",
+        "start": 807.149,
+        "duration": 0.34
+    },
+    {
+        "text": "Sure, okay, so then each pixel, can have\neach of those little cuts, let's say we",
+        "start": 808.029,
+        "duration": 5.22
+    },
+    {
+        "text": "cut it very small enough, so that node,\nthat small piece of paper after we cut up",
+        "start": 813.249,
+        "duration": 7.62
+    },
+    {
+        "text": "the, picture, we can think about it as a,",
+        "start": 820.869,
+        "duration": 5.06
+    },
+    {
+        "text": "as like a set or vector that contains\nthe RGB value, for example, because",
+        "start": 829.694,
+        "duration": 5.0
+    },
+    {
+        "text": "it's coming from a picture, and also the\nXY location from where that came from,",
+        "start": 834.694,
+        "duration": 4.15
+    },
+    {
+        "text": "and that is representing that node.",
+        "start": 839.704,
+        "duration": 1.68
+    },
+    {
+        "text": "Yeah, but that, that,\nthat's just a purely,",
+        "start": 841.384,
+        "duration": 5.7
+    },
+    {
+        "text": "there's, that's just\ndescribing, an image array.",
+        "start": 851.854,
+        "duration": 4.94
+    },
+    {
+        "text": "It's, it, there's no object there, there's\nno learning there, there's no model there.",
+        "start": 856.804,
+        "duration": 3.31
+    },
+    {
+        "text": "Thank you.",
+        "start": 860.124,
+        "duration": 0.06
+    },
+    {
+        "text": "there, we need, these things that we're,\nthat are moving on the stapler are not",
+        "start": 862.524,
+        "duration": 4.6
+    },
+    {
+        "text": "just pixels, they're objects, they're\nlike, there's, features that, there's",
+        "start": 867.134,
+        "duration": 5.08
+    },
+    {
+        "text": "a model of the stapler, and, it's not\njust an image, and so Yeah, node A, when",
+        "start": 872.214,
+        "duration": 7.69
+    },
+    {
+        "text": "we learn features at locations, we do\nlearn some kind of color, HSV, principle.",
+        "start": 879.904,
+        "duration": 5.32
+    },
+    {
+        "text": "Yeah, but I think, I I'm assuming\nthat Neil's presenting a is not just",
+        "start": 886.274,
+        "duration": 4.61
+    },
+    {
+        "text": "some un undescribed pixel block.",
+        "start": 890.884,
+        "duration": 3.15
+    },
+    {
+        "text": "It's the top of the stapler.",
+        "start": 894.064,
+        "duration": 1.526
+    },
+    {
+        "text": "This would be associated with an,\nyeah, this would be associated",
+        "start": 895.59,
+        "duration": 2.284
+    },
+    {
+        "text": "with an object in, the lower level.",
+        "start": 897.874,
+        "duration": 1.56
+    },
+    {
+        "text": "I think the thing that, yeah, that\nyou're stuck on, Jeff, which I think",
+        "start": 900.419,
+        "duration": 3.145
+    },
+    {
+        "text": "is a reasonable concern or like\nthing we, need to understand is.",
+        "start": 903.564,
+        "duration": 3.225
+    },
+    {
+        "text": "Yeah, we've always described like\nfeatures at locations, which assumes",
+        "start": 908.484,
+        "duration": 3.21
+    },
+    {
+        "text": "or frames it as like the location\nis in some sense, like static.",
+        "start": 912.014,
+        "duration": 3.39
+    },
+    {
+        "text": "and then here it's there's\nthe reference frame.",
+        "start": 916.764,
+        "duration": 3.81
+    },
+    {
+        "text": "At least what I'm, the way I'm thinking\nabout this is there's the, this graph",
+        "start": 920.794,
+        "duration": 3.65
+    },
+    {
+        "text": "that's embedded in the reference frame.",
+        "start": 924.444,
+        "duration": 1.87
+    },
+    {
+        "text": "but where the kind of, elements\nof the graph are relative to",
+        "start": 928.194,
+        "duration": 7.029
+    },
+    {
+        "text": "one another, takes a change.",
+        "start": 935.223,
+        "duration": 1.265
+    },
+    {
+        "text": "It's a stretchy graph, right?",
+        "start": 936.488,
+        "duration": 2.856
+    },
+    {
+        "text": "It's a stretchy graph.",
+        "start": 939.344,
+        "duration": 0.546
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 939.89,
+        "duration": 0.192
+    },
+    {
+        "text": "It's a stretchy graph.",
+        "start": 940.082,
+        "duration": 1.062
+    },
+    {
+        "text": "The problem here, there's two ways.",
+        "start": 941.504,
+        "duration": 1.96
+    },
+    {
+        "text": "Either the graph could stretch, Four\nthings could be nudged around in",
+        "start": 944.624,
+        "duration": 4.79
+    },
+    {
+        "text": "it as a function of some, time or,",
+        "start": 949.414,
+        "duration": 3.67
+    },
+    {
+        "text": "so there's two ways you\ncould do this, right?",
+        "start": 955.114,
+        "duration": 1.54
+    },
+    {
+        "text": "You could, modify the reference frame.",
+        "start": 957.064,
+        "duration": 1.79
+    },
+    {
+        "text": "And every time I thought about\nthat, it's and I know in grid",
+        "start": 959.454,
+        "duration": 2.95
+    },
+    {
+        "text": "cells, they do get distorted.",
+        "start": 962.404,
+        "duration": 1.85
+    },
+    {
+        "text": "They're not really, but not, a lot.",
+        "start": 964.264,
+        "duration": 1.96
+    },
+    {
+        "text": "It doesn't explain this.",
+        "start": 966.274,
+        "duration": 1.35
+    },
+    {
+        "text": "That's this mechanism stuff.",
+        "start": 967.654,
+        "duration": 1.41
+    },
+    {
+        "text": "but the problem is, as soon as you start\nmodifying the reference frame, It's",
+        "start": 970.634,
+        "duration": 3.12
+    },
+    {
+        "text": "very, difficult to do path integration.",
+        "start": 973.954,
+        "duration": 3.12
+    },
+    {
+        "text": "It's difficult to, do metrics, between\ntwo locations, two arbitrary locations.",
+        "start": 977.094,
+        "duration": 7.27
+    },
+    {
+        "text": "And",
+        "start": 984.804,
+        "duration": 0.17
+    },
+    {
+        "text": "I just, think it's the wrong place to go.",
+        "start": 987.644,
+        "duration": 2.06
+    },
+    {
+        "text": "You just, You just gotta assume the\nreference frame is a reference frame,",
+        "start": 989.704,
+        "duration": 2.875
+    },
+    {
+        "text": "that's why it's called a reference frame,\nit's not a flexible, graph, it's but we",
+        "start": 992.579,
+        "duration": 7.12
+    },
+    {
+        "text": "can consider this possibility, but I've\nalways, I've taken a sort of baseline",
+        "start": 999.699,
+        "duration": 4.76
+    },
+    {
+        "text": "that the reference frame is a reference\nframe and it can't get distorted, because",
+        "start": 1004.459,
+        "duration": 5.2
+    },
+    {
+        "text": "then you lose these desirable properties.",
+        "start": 1009.659,
+        "duration": 2.03
+    },
+    {
+        "text": "And somehow we have to Yeah,\nI think that's why Yeah, it'll",
+        "start": 1012.479,
+        "duration": 3.42
+    },
+    {
+        "text": "be interesting discussing.",
+        "start": 1015.899,
+        "duration": 0.96
+    },
+    {
+        "text": "'cause one of the things that I'm,\nI think it might connect to is with",
+        "start": 1016.889,
+        "duration": 5.48
+    },
+    {
+        "text": "abstract spaces, by definition,\ngenerally they're distorted.",
+        "start": 1022.369,
+        "duration": 3.99
+    },
+    {
+        "text": "like they're generally not gonna\njust follow kind of CLE space.",
+        "start": 1027.479,
+        "duration": 3.06
+    },
+    {
+        "text": "And so like maybe these distortions\nare maybe continuum, maybe I, that's",
+        "start": 1030.539,
+        "duration": 4.31
+    },
+    {
+        "text": "a good hypothesis, but I don't,\nI'm not willing to say that yet.",
+        "start": 1034.849,
+        "duration": 2.97
+    },
+    {
+        "text": "I'm, I say I don't under, I'm,\nwhat I'm willing to say is I don't",
+        "start": 1038.469,
+        "duration": 2.52
+    },
+    {
+        "text": "understand AppSec basis well enough\nto make any conclusions about it yet.",
+        "start": 1040.989,
+        "duration": 3.24
+    },
+    {
+        "text": "and I am saying, look, I do know\nthat it's very likely the neural",
+        "start": 1045.329,
+        "duration": 3.79
+    },
+    {
+        "text": "mechanism is going to be the same.",
+        "start": 1049.139,
+        "duration": 1.27
+    },
+    {
+        "text": "So if I'm dealing with physical objects\nand I have a fixed reference frame, I'm",
+        "start": 1050.409,
+        "duration": 5.88
+    },
+    {
+        "text": "going to start with that assumption for\nabstract spaces, I just don't know yet.",
+        "start": 1056.289,
+        "duration": 3.895
+    },
+    {
+        "text": "I just don't have a good sense yet for\nabstract stuff to make a conclusion.",
+        "start": 1060.574,
+        "duration": 4.59
+    },
+    {
+        "text": "my intuition might say, Oh,\nyeah, things are moving around.",
+        "start": 1065.444,
+        "duration": 2.37
+    },
+    {
+        "text": "But I don't trust them.",
+        "start": 1068.414,
+        "duration": 2.04
+    },
+    {
+        "text": "I don't trust that.",
+        "start": 1070.454,
+        "duration": 0.63
+    },
+    {
+        "text": "Intuition is not really any\nkind of evidence for that.",
+        "start": 1073.354,
+        "duration": 2.14
+    },
+    {
+        "text": "so I'm not, I don't want to, I\ndon't want to reach that conclusion.",
+        "start": 1076.874,
+        "duration": 2.68
+    },
+    {
+        "text": "but you could, No, that's fair.",
+        "start": 1080.064,
+        "duration": 3.53
+    },
+    {
+        "text": "I think, you said there are two\noptions, and then I think you didn't",
+        "start": 1084.534,
+        "duration": 3.55
+    },
+    {
+        "text": "go into the second one, but I think\nthe second one is actually how a lot",
+        "start": 1088.084,
+        "duration": 4.18
+    },
+    {
+        "text": "of the graph neural networks work.",
+        "start": 1092.264,
+        "duration": 1.57
+    },
+    {
+        "text": "would model things where, basically,\nwe're not distorting the reference frame",
+        "start": 1094.529,
+        "duration": 5.08
+    },
+    {
+        "text": "itself, like locations are still in a\nEuclidean space relative to a common",
+        "start": 1099.609,
+        "duration": 4.56
+    },
+    {
+        "text": "point, but instead, depending on the\nstate of the entire graph, you would",
+        "start": 1104.169,
+        "duration": 4.6
+    },
+    {
+        "text": "expect each node to be in a different\nlocation in that reference frame.",
+        "start": 1108.769,
+        "duration": 4.4
+    },
+    {
+        "text": "then, a node is a feature of the\nobject, and then basically I can say",
+        "start": 1114.884,
+        "duration": 3.814
+    },
+    {
+        "text": "the features of the object can move.",
+        "start": 1118.698,
+        "duration": 2.121
+    },
+    {
+        "text": "In fact, I was typing it up just before we\ngot here, this, the things that can, I've",
+        "start": 1121.989,
+        "duration": 4.59
+    },
+    {
+        "text": "said this before, but I'll say it again.",
+        "start": 1126.579,
+        "duration": 1.43
+    },
+    {
+        "text": "All, every single possible object\nbehavior can be expressed as features",
+        "start": 1128.499,
+        "duration": 3.86
+    },
+    {
+        "text": "moving locations, features changing\norientation, features changing ID,",
+        "start": 1132.379,
+        "duration": 5.94
+    },
+    {
+        "text": "and or, and this can happen at one\nor more locations independently or",
+        "start": 1139.669,
+        "duration": 2.995
+    },
+    {
+        "text": "simultaneously, causally related.",
+        "start": 1142.664,
+        "duration": 2.825
+    },
+    {
+        "text": "And that explains everything.",
+        "start": 1146.049,
+        "duration": 1.13
+    },
+    {
+        "text": "every, kind of transition I can possibly\nimagine, even ones that aren't continuous,",
+        "start": 1148.589,
+        "duration": 3.68
+    },
+    {
+        "text": "even ones with whole object changes,\nbut all of them basically say that,",
+        "start": 1152.269,
+        "duration": 3.33
+    },
+    {
+        "text": "the, that you're remapping the model.",
+        "start": 1156.219,
+        "duration": 3.41
+    },
+    {
+        "text": "And those are the things that\ntypically, like in the stapler,",
+        "start": 1159.789,
+        "duration": 2.46
+    },
+    {
+        "text": "the features are moving.",
+        "start": 1162.279,
+        "duration": 0.99
+    },
+    {
+        "text": "And they're moving locations and changing\norientation, where something with a",
+        "start": 1163.804,
+        "duration": 5.28
+    },
+    {
+        "text": "light, for example, the light turns on\nand off, that's a feature changing, it's",
+        "start": 1169.084,
+        "duration": 4.51
+    },
+    {
+        "text": "a feature changing but it's not moving.",
+        "start": 1173.594,
+        "duration": 1.68
+    },
+    {
+        "text": "anyway, so all possible behaviors\ncan be represented by the idea that",
+        "start": 1176.294,
+        "duration": 4.27
+    },
+    {
+        "text": "the graph elements, the features,\nmove, change, and change orientation.",
+        "start": 1180.574,
+        "duration": 5.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 1188.034,
+        "duration": 0.21
+    },
+    {
+        "text": "That's how I can think about it.",
+        "start": 1188.244,
+        "duration": 1.21
+    },
+    {
+        "text": "I have a quick Okay, because that\nwould actually be my preferred way",
+        "start": 1190.184,
+        "duration": 3.02
+    },
+    {
+        "text": "of doing this, but I thought there\nwas some concern around the feature,",
+        "start": 1193.204,
+        "duration": 3.98
+    },
+    {
+        "text": "but Will, you go ahead first.",
+        "start": 1197.204,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah, it was just, there was one\nthing that confused me, Jeff.",
+        "start": 1198.894,
+        "duration": 2.18
+    },
+    {
+        "text": "You said that a feature can change its ID.",
+        "start": 1201.124,
+        "duration": 2.5
+    },
+    {
+        "text": "I didn't, understand that.",
+        "start": 1204.084,
+        "duration": 0.83
+    },
+    {
+        "text": "What does that mean?",
+        "start": 1205.044,
+        "duration": 0.38
+    },
+    {
+        "text": "for example, It's,",
+        "start": 1206.444,
+        "duration": 1.805
+    },
+    {
+        "text": "let's see if I can make a good example.",
+        "start": 1213.209,
+        "duration": 1.77
+    },
+    {
+        "text": "I can make up a fanciful example.",
+        "start": 1214.989,
+        "duration": 2.04
+    },
+    {
+        "text": "I'm trying to get a real world one.",
+        "start": 1217.029,
+        "duration": 1.35
+    },
+    {
+        "text": "if you have Would it help if you said the\nnode can change the ID associated with it?",
+        "start": 1219.219,
+        "duration": 4.95
+    },
+    {
+        "text": "Here we go.",
+        "start": 1224.989,
+        "duration": 0.07
+    },
+    {
+        "text": "Let's take, for example, I have,\nI'm looking at a screen and there's",
+        "start": 1225.089,
+        "duration": 2.62
+    },
+    {
+        "text": "a letter on the screen, and then\nI push a button and the letter",
+        "start": 1227.709,
+        "duration": 3.48
+    },
+    {
+        "text": "changes to a different letter.",
+        "start": 1231.189,
+        "duration": 1.07
+    },
+    {
+        "text": "Same location, same orientation.",
+        "start": 1233.349,
+        "duration": 1.89
+    },
+    {
+        "text": "It's now instead of A, it's B. The feature\nhas changed from an A to a B. It hasn't",
+        "start": 1235.919,
+        "duration": 5.31
+    },
+    {
+        "text": "changed location, orientation, or scale.",
+        "start": 1241.229,
+        "duration": 1.64
+    },
+    {
+        "text": "or I could push a button and the letter A\ncould move to the right, or I could push",
+        "start": 1243.799,
+        "duration": 3.77
+    },
+    {
+        "text": "a button and the letter A could rotate.",
+        "start": 1247.569,
+        "duration": 1.48
+    },
+    {
+        "text": "I can push a button and a bunch\nof things happen simultaneously,",
+        "start": 1250.679,
+        "duration": 2.61
+    },
+    {
+        "text": "or one at a time independently.",
+        "start": 1253.299,
+        "duration": 1.85
+    },
+    {
+        "text": "that's what I, that's an example\nof a, very simple example of",
+        "start": 1256.309,
+        "duration": 2.79
+    },
+    {
+        "text": "a feature changing its ID.",
+        "start": 1259.099,
+        "duration": 1.545
+    },
+    {
+        "text": "So yeah, I guess I feel like that's why\nthe, I mean it doesn't have to be the",
+        "start": 1261.894,
+        "duration": 2.99
+    },
+    {
+        "text": "word node, but I feel like some sort\nof terminology to capture the idea that",
+        "start": 1264.884,
+        "duration": 3.39
+    },
+    {
+        "text": "there's a binding element, something\nthat's gathering information, and that can",
+        "start": 1268.274,
+        "duration": 7.0
+    },
+    {
+        "text": "both move, and the attributes associated\nwith it, like feature ID can change.",
+        "start": 1275.274,
+        "duration": 4.8
+    },
+    {
+        "text": "that's why I just, that's why my very\nfirst question to you is A feature?",
+        "start": 1280.554,
+        "duration": 3.36
+    },
+    {
+        "text": "If A is a feature, then I'm with you.",
+        "start": 1283.924,
+        "duration": 1.29
+    },
+    {
+        "text": "Okay, but, I think that was what\nis confusing as you, if what",
+        "start": 1286.764,
+        "duration": 4.38
+    },
+    {
+        "text": "you're saying, or like asking\nabout Will is if, that feature can",
+        "start": 1291.144,
+        "duration": 3.31
+    },
+    {
+        "text": "change, is it the same feature?",
+        "start": 1294.454,
+        "duration": 1.56
+    },
+    {
+        "text": "So I guess the, it's\nlike, it's the same node.",
+        "start": 1296.414,
+        "duration": 2.74
+    },
+    {
+        "text": "Even if the feature changes.",
+        "start": 1299.574,
+        "duration": 1.25
+    },
+    {
+        "text": "now you switched the\nnode to mean location.",
+        "start": 1301.194,
+        "duration": 2.07
+    },
+    {
+        "text": "So but what if both are happening?",
+        "start": 1303.434,
+        "duration": 2.66
+    },
+    {
+        "text": "what if you had, almost like a button\nthat displays a letter on it, and",
+        "start": 1306.274,
+        "duration": 4.61
+    },
+    {
+        "text": "that button can move around, but the\nletter that's on the button can change?",
+        "start": 1310.884,
+        "duration": 3.16
+    },
+    {
+        "text": "As I said earlier, You take, let's\nsay you have a model, you've learned",
+        "start": 1314.214,
+        "duration": 4.64
+    },
+    {
+        "text": "a model in our classic way with\na reference frame and features.",
+        "start": 1318.854,
+        "duration": 2.88
+    },
+    {
+        "text": "each feature has an ID, each feature\nhas an orientation and a location.",
+        "start": 1323.114,
+        "duration": 3.79
+    },
+    {
+        "text": "And that defines a model, right?",
+        "start": 1327.564,
+        "duration": 1.59
+    },
+    {
+        "text": "Any one of those components can change,\nand I can come up with examples,",
+        "start": 1329.594,
+        "duration": 3.7
+    },
+    {
+        "text": "for each one or any combination.",
+        "start": 1334.614,
+        "duration": 1.85
+    },
+    {
+        "text": "So it's possible that the feature\ncan move and change orientation.",
+        "start": 1336.854,
+        "duration": 4.28
+    },
+    {
+        "text": "It's possible the feature can move\nand change orientation and change ID.",
+        "start": 1341.134,
+        "duration": 3.19
+    },
+    {
+        "text": "or any combination of those things.",
+        "start": 1346.809,
+        "duration": 2.31
+    },
+    {
+        "text": "It's basically Yeah I think that's pretty\nconsistent with this, graph terminology,",
+        "start": 1349.729,
+        "duration": 6.585
+    },
+    {
+        "text": "at least how it's used in that.",
+        "start": 1356.314,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 1358.734,
+        "duration": 0.09
+    },
+    {
+        "text": "Is that a, like the node A can both\nchange the features associated with",
+        "start": 1358.914,
+        "duration": 5.1
+    },
+    {
+        "text": "it, but it can also move in space?",
+        "start": 1364.014,
+        "duration": 2.49
+    },
+    {
+        "text": "Like without distorting the reference\nframe, it can just have a new location?",
+        "start": 1366.774,
+        "duration": 3.48
+    },
+    {
+        "text": "I think that's what makes it,\nwhy, what, why is it a node?",
+        "start": 1371.549,
+        "duration": 2.855
+    },
+    {
+        "text": "what makes a node,",
+        "start": 1375.364,
+        "duration": 1.11
+    },
+    {
+        "text": "what's a node in that case?",
+        "start": 1379.994,
+        "duration": 1.11
+    },
+    {
+        "text": "I guess it's a collection of\ninformation, how it's connected",
+        "start": 1381.594,
+        "duration": 4.03
+    },
+    {
+        "text": "by edges to other nodes.",
+        "start": 1385.764,
+        "duration": 1.85
+    },
+    {
+        "text": "you can say, in this case, this tape\nis a staple, you can say, oh, yeah,",
+        "start": 1387.964,
+        "duration": 3.01
+    },
+    {
+        "text": "they're all connected to the hinge at B.",
+        "start": 1390.974,
+        "duration": 1.71
+    },
+    {
+        "text": "But I came up with lots of examples where\nthere's, no obvious connections at all.",
+        "start": 1393.129,
+        "duration": 4.02
+    },
+    {
+        "text": "it doesn't have to be\na physical connection.",
+        "start": 1401.099,
+        "duration": 1.82
+    },
+    {
+        "text": "It can also be a causal connection.",
+        "start": 1402.919,
+        "duration": 2.21
+    },
+    {
+        "text": "but in this case, it's not clear\nthat, the A and the B, it's, really,",
+        "start": 1406.309,
+        "duration": 5.21
+    },
+    {
+        "text": "it looks very physical in this case.",
+        "start": 1411.609,
+        "duration": 1.77
+    },
+    {
+        "text": "but, there doesn't even have\nto be a causal connection.",
+        "start": 1414.744,
+        "duration": 2.52
+    },
+    {
+        "text": "I could just have a feature that changes\non its own, just, whatever it wants to.",
+        "start": 1417.264,
+        "duration": 5.67
+    },
+    {
+        "text": "maybe I have an object that\nrandomly changes its color from,",
+        "start": 1424.334,
+        "duration": 3.52
+    },
+    {
+        "text": "at some location from green to red.",
+        "start": 1428.084,
+        "duration": 1.94
+    },
+    {
+        "text": "And, it's not moving, it's changing.",
+        "start": 1430.764,
+        "duration": 4.23
+    },
+    {
+        "text": "I, I just, I think there's so much\nlanguage associated with nodes, maybe",
+        "start": 1435.714,
+        "duration": 3.55
+    },
+    {
+        "text": "it's just me, but, that we start using\nthat language, all, you just slide",
+        "start": 1439.264,
+        "duration": 4.6
+    },
+    {
+        "text": "into this thinking about graphs, and\nI'm trying to say, okay, given I have",
+        "start": 1443.864,
+        "duration": 4.08
+    },
+    {
+        "text": "a reference frame and features, where\nis the graph you're talking about?",
+        "start": 1447.944,
+        "duration": 2.58
+    },
+    {
+        "text": "A could be a feature.",
+        "start": 1452.064,
+        "duration": 1.18
+    },
+    {
+        "text": "Yeah, I think it's, Like a proposed\nnew language, from my view, it seems to",
+        "start": 1454.534,
+        "duration": 6.07
+    },
+    {
+        "text": "fit pretty well what you're describing,\nbut, I haven't heard that yet.",
+        "start": 1460.604,
+        "duration": 5.16
+    },
+    {
+        "text": "I want to believe that, right?",
+        "start": 1466.524,
+        "duration": 1.12
+    },
+    {
+        "text": "I do.",
+        "start": 1467.684,
+        "duration": 0.38
+    },
+    {
+        "text": "I can say it's a feature, but\nyou're not willing to say that.",
+        "start": 1469.444,
+        "duration": 2.72
+    },
+    {
+        "text": "what if we say it's an object?",
+        "start": 1473.504,
+        "duration": 1.28
+    },
+    {
+        "text": "So the ID of the object can change,\nthe location of the object can",
+        "start": 1476.549,
+        "duration": 2.95
+    },
+    {
+        "text": "change, the name of the sub object,\nwhich we do often call a feature.",
+        "start": 1479.499,
+        "duration": 4.27
+    },
+    {
+        "text": "Can I try one definition?",
+        "start": 1484.149,
+        "duration": 0.94
+    },
+    {
+        "text": "What about defining a node as its\nfeature at location that has edges?",
+        "start": 1487.239,
+        "duration": 4.92
+    },
+    {
+        "text": "to other nodes.",
+        "start": 1492.724,
+        "duration": 0.83
+    },
+    {
+        "text": "it seems to me that node is defined\nbecause of edges, because edges exist.",
+        "start": 1494.634,
+        "duration": 3.79
+    },
+    {
+        "text": "If you don't have edges,\nyou don't need nodes.",
+        "start": 1498.424,
+        "duration": 1.62
+    },
+    {
+        "text": "You just have features at locations.",
+        "start": 1500.554,
+        "duration": 1.56
+    },
+    {
+        "text": "So what makes it a node is, and there's,\nthese features at locations have edges.",
+        "start": 1502.444,
+        "duration": 5.0
+    },
+    {
+        "text": "all right, you could say that, but\nwhat, I'm in trouble with that too,",
+        "start": 1508.454,
+        "duration": 3.08
+    },
+    {
+        "text": "because what does the edge represent?",
+        "start": 1511.764,
+        "duration": 1.95
+    },
+    {
+        "text": "I could say there's two things that\nchange that are causally related.",
+        "start": 1515.009,
+        "duration": 2.95
+    },
+    {
+        "text": "I get that.",
+        "start": 1517.989,
+        "duration": 0.63
+    },
+    {
+        "text": "That's good.",
+        "start": 1518.839,
+        "duration": 0.6
+    },
+    {
+        "text": "if I just said the edge is a causal\nrelationship, then I can see that",
+        "start": 1521.069,
+        "duration": 4.18
+    },
+    {
+        "text": "maybe A and B are changing, and\nthey're changing in a causal way.",
+        "start": 1525.249,
+        "duration": 4.33
+    },
+    {
+        "text": "But I could still have a node A,\nwhich is just a feature at some",
+        "start": 1529.989,
+        "duration": 2.91
+    },
+    {
+        "text": "location, and it has no edges.",
+        "start": 1532.899,
+        "duration": 1.53
+    },
+    {
+        "text": "It's just basically, it's\nat the edges, it's location.",
+        "start": 1534.429,
+        "duration": 3.29
+    },
+    {
+        "text": "That's what it is.",
+        "start": 1537.729,
+        "duration": 0.72
+    },
+    {
+        "text": "it's located relative to\neverything else based on where",
+        "start": 1540.119,
+        "duration": 2.22
+    },
+    {
+        "text": "it is in the reference frame.",
+        "start": 1542.339,
+        "duration": 0.96
+    },
+    {
+        "text": "Yeah, maybe feature is a\nsufficient description.",
+        "start": 1544.289,
+        "duration": 5.03
+    },
+    {
+        "text": "I think it's just, it maybe is confusing\nto others in terms of Or at least to",
+        "start": 1549.319,
+        "duration": 5.795
+    },
+    {
+        "text": "me, in that, sometimes when you say\nfeature, that just makes you think of,",
+        "start": 1555.114,
+        "duration": 4.36
+    },
+    {
+        "text": "oh, it's just, the colors that are there.",
+        "start": 1559.704,
+        "duration": 2.13
+    },
+    {
+        "text": "No, to me, a feature is whatever, I\nhave a cortical column, and whatever bit",
+        "start": 1562.894,
+        "duration": 5.85
+    },
+    {
+        "text": "pattern that's coming in that's going to\nlayer four, I have no idea what it means.",
+        "start": 1568.744,
+        "duration": 5.44
+    },
+    {
+        "text": "It's just, someone's telling me this thing\nexists at whatever location you're at.",
+        "start": 1574.424,
+        "duration": 4.72
+    },
+    {
+        "text": "and that thing could be an entire object.",
+        "start": 1581.319,
+        "duration": 2.16
+    },
+    {
+        "text": "It could be, an edge on V1.",
+        "start": 1583.509,
+        "duration": 2.9
+    },
+    {
+        "text": "It might be just a simple\nthing on the retina.",
+        "start": 1586.409,
+        "duration": 2.57
+    },
+    {
+        "text": "but it could be an entire feature, that,\nthat was represented hierarchically.",
+        "start": 1589.939,
+        "duration": 4.83
+    },
+    {
+        "text": "But I guess the reason To move\nfrom feature to node is because",
+        "start": 1596.079,
+        "duration": 4.405
+    },
+    {
+        "text": "now we want this thing to actually\nalso be able to change location.",
+        "start": 1600.534,
+        "duration": 3.13
+    },
+    {
+        "text": "So it's not just a feature, it's like a\nfeature and location which can change.",
+        "start": 1603.664,
+        "duration": 7.22
+    },
+    {
+        "text": "So if I have a pendulum, whatever is on\nthe bottom of the pendulum is, it's a",
+        "start": 1610.884,
+        "duration": 5.29
+    },
+    {
+        "text": "feature, but it's that can change location\nand the node that's connected to the",
+        "start": 1616.174,
+        "duration": 6.375
+    },
+    {
+        "text": "top of the pendulum and okay so so the\nlanguage i'm using exploits all those",
+        "start": 1622.549,
+        "duration": 7.34
+    },
+    {
+        "text": "things but it doesn't assume there's a\nphysical connection to anything there",
+        "start": 1629.889,
+        "duration": 3.21
+    },
+    {
+        "text": "might be but it doesn't assume it I mean,\nthe language I've said is that you have",
+        "start": 1633.099,
+        "duration": 3.41
+    },
+    {
+        "text": "a reference frame and features, and those\nfeatures can change, they can move, they",
+        "start": 1636.509,
+        "duration": 4.38
+    },
+    {
+        "text": "can change orientation, they can come,\nthey can disappear, a new one can appear,",
+        "start": 1640.889,
+        "duration": 3.88
+    },
+    {
+        "text": "that explains, that describes every single\npossible object behavior you can imagine.",
+        "start": 1644.789,
+        "duration": 4.16
+    },
+    {
+        "text": "And there is, there's nothing, it's\ncomplete, it's a complete basis of object",
+        "start": 1650.639,
+        "duration": 4.91
+    },
+    {
+        "text": "behaviors, you can't, there's nothing\nelse that could happen to an object.",
+        "start": 1655.549,
+        "duration": 2.66
+    },
+    {
+        "text": "So I like that, from that\npoint of view, I don't make any",
+        "start": 1658.859,
+        "duration": 2.81
+    },
+    {
+        "text": "assumptions about anything else?",
+        "start": 1661.669,
+        "duration": 2.795
+    },
+    {
+        "text": "just to clarify, so you would\nsuggest instead of calling it a",
+        "start": 1665.534,
+        "duration": 3.25
+    },
+    {
+        "text": "node, you would call it a feature?",
+        "start": 1668.784,
+        "duration": 1.82
+    },
+    {
+        "text": "But I don't mind calling, I don't\nmind any language, but typically",
+        "start": 1670.874,
+        "duration": 4.81
+    },
+    {
+        "text": "the word node means something else.",
+        "start": 1675.684,
+        "duration": 1.46
+    },
+    {
+        "text": "and so it leads to lots of confusion.",
+        "start": 1678.584,
+        "duration": 1.93
+    },
+    {
+        "text": "To me, a feature is nothing, I can't,\ndon't try to picture what it is.",
+        "start": 1681.344,
+        "duration": 4.08
+    },
+    {
+        "text": "it's just whatever is located at\nsome location, and, it could be",
+        "start": 1686.344,
+        "duration": 3.98
+    },
+    {
+        "text": "an entire object, it could be,",
+        "start": 1690.324,
+        "duration": 1.76
+    },
+    {
+        "text": "it could be anything, it's just, in our\nmodels we have locations and, things at",
+        "start": 1694.494,
+        "duration": 7.08
+    },
+    {
+        "text": "those locations, we've decided to call\nthe things at those locations features.",
+        "start": 1701.574,
+        "duration": 3.2
+    },
+    {
+        "text": "that's all it is, there's\nnothing else to it.",
+        "start": 1706.294,
+        "duration": 2.51
+    },
+    {
+        "text": "Yeah, all right, maybe I'll, is it all\nright if I move on and then, yeah, I just,",
+        "start": 1710.214,
+        "duration": 4.84
+    },
+    {
+        "text": "I just know, I think it's going to happen.",
+        "start": 1716.104,
+        "duration": 1.86
+    },
+    {
+        "text": "it's, I'm just going to get lost on this\nand I'm not going to, it's not going",
+        "start": 1718.304,
+        "duration": 3.08
+    },
+    {
+        "text": "to be meaningful to me, but I'll try.",
+        "start": 1721.384,
+        "duration": 1.33
+    },
+    {
+        "text": "Yeah, let's keep going on.",
+        "start": 1724.054,
+        "duration": 1.33
+    },
+    {
+        "text": "yeah, we can maybe come back if it's,",
+        "start": 1728.544,
+        "duration": 1.7
+    },
+    {
+        "text": "yeah, an issue, but yeah, so I guess\none of the, the key kind of challenge to",
+        "start": 1732.394,
+        "duration": 3.91
+    },
+    {
+        "text": "representing behaviors, is learning the\nproperties of edges, for example, like a",
+        "start": 1736.324,
+        "duration": 6.05
+    },
+    {
+        "text": "kind of rigid relation or, something more.",
+        "start": 1742.424,
+        "duration": 2.29
+    },
+    {
+        "text": "Interesting.",
+        "start": 1745.264,
+        "duration": 0.6
+    },
+    {
+        "text": "for example, with a hinge joint, I\nthink that, some through kind of serial",
+        "start": 1747.344,
+        "duration": 5.33
+    },
+    {
+        "text": "attention and knowledge of, what the\nclose stapler would look like and",
+        "start": 1752.674,
+        "duration": 5.39
+    },
+    {
+        "text": "attending to kind of movement at A,\nit would be reasonable to argue that,",
+        "start": 1758.124,
+        "duration": 4.37
+    },
+    {
+        "text": "you're observing a single learning\nmodule is observing movement at A. It",
+        "start": 1763.004,
+        "duration": 4.0
+    },
+    {
+        "text": "had some expectation about where B is.",
+        "start": 1767.014,
+        "duration": 2.72
+    },
+    {
+        "text": "And because of the movement of A, there's\nnow, a fixed distance, but a change",
+        "start": 1770.234,
+        "duration": 5.09
+    },
+    {
+        "text": "in orientation relative to B. whereas\nversus C, it's, just moving, it's just,",
+        "start": 1775.324,
+        "duration": 8.525
+    },
+    {
+        "text": "the displacement is continuing to grow.",
+        "start": 1783.979,
+        "duration": 1.7
+    },
+    {
+        "text": "I'm not saying this is some sufficient\nor elegant way to learn it, but,",
+        "start": 1786.609,
+        "duration": 5.94
+    },
+    {
+        "text": "hopefully this kind of captures just\nthe, kind of basic idea that just,",
+        "start": 1792.559,
+        "duration": 3.26
+    },
+    {
+        "text": "through the information that we're\nobserving at a node and what we know",
+        "start": 1797.239,
+        "duration": 3.37
+    },
+    {
+        "text": "about other nodes, or what we believe\nwe know about other nodes, You might",
+        "start": 1800.609,
+        "duration": 3.98
+    },
+    {
+        "text": "be able to infer some kind of relations\nor some of those edges, basically.",
+        "start": 1804.589,
+        "duration": 3.51
+    },
+    {
+        "text": "and I guess just, yeah.",
+        "start": 1813.259,
+        "duration": 1.02
+    },
+    {
+        "text": "Oh, sorry, go ahead.",
+        "start": 1814.769,
+        "duration": 0.6
+    },
+    {
+        "text": "Bringing back what we, I think,\ndiscussed like two years ago.",
+        "start": 1818.414,
+        "duration": 2.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 1821.984,
+        "duration": 0.51
+    },
+    {
+        "text": "The thing about this is that it,\nallows very fast generalization.",
+        "start": 1822.614,
+        "duration": 4.41
+    },
+    {
+        "text": "if we learned an edge type before we\ncan apply it to all kinds of other",
+        "start": 1827.374,
+        "duration": 4.45
+    },
+    {
+        "text": "objects, where that type of edge exists,\nlike a rigid relationships or a spring",
+        "start": 1831.824,
+        "duration": 5.9
+    },
+    {
+        "text": "relationship, something like that.",
+        "start": 1837.734,
+        "duration": 1.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 1839.384,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 1840.104,
+        "duration": 0.34
+    },
+    {
+        "text": "I think there's another way to do that.",
+        "start": 1840.734,
+        "duration": 1.45
+    },
+    {
+        "text": "Same learning.",
+        "start": 1842.194,
+        "duration": 0.77
+    },
+    {
+        "text": "but, I'll leave that for another day.",
+        "start": 1844.314,
+        "duration": 2.14
+    },
+    {
+        "text": "Yeah, no, sounds exciting.",
+        "start": 1847.154,
+        "duration": 2.72
+    },
+    {
+        "text": "but yeah, if it's necessary, just like\nanother example with, like a hinge joint",
+        "start": 1851.524,
+        "duration": 4.33
+    },
+    {
+        "text": "with a spring that's constantly trying\nto close the stapler, and again, A is",
+        "start": 1855.854,
+        "duration": 6.98
+    },
+    {
+        "text": "moving, but this time on its own, and so\nthere's a rigid relation still with B,",
+        "start": 1862.834,
+        "duration": 5.0
+    },
+    {
+        "text": "but also some kind of closing relation,\nwhatever's learning this doesn't need,",
+        "start": 1867.874,
+        "duration": 4.5
+    },
+    {
+        "text": "whether it's a child or whatever, doesn't\nneed to have some concept of spring.",
+        "start": 1872.614,
+        "duration": 2.75
+    },
+    {
+        "text": "They just see that this kind of\nbehavior happens again and again where",
+        "start": 1876.089,
+        "duration": 4.89
+    },
+    {
+        "text": "the kind of hinges is closing itself.",
+        "start": 1880.979,
+        "duration": 2.19
+    },
+    {
+        "text": "yeah, okay, let me clarify this.",
+        "start": 1888.069,
+        "duration": 3.53
+    },
+    {
+        "text": "Yeah, deforms is a function of, or,\nyeah, features, nodes move in the,",
+        "start": 1891.669,
+        "duration": 8.35
+    },
+    {
+        "text": "which I'll get back to in a minute.",
+        "start": 1903.309,
+        "duration": 2.89
+    },
+    {
+        "text": "But I just wanted to quickly contrast\nthis with, oh yeah, and then one",
+        "start": 1907.119,
+        "duration": 4.93
+    },
+    {
+        "text": "last kind of thing on like language\nthat people may have come across.",
+        "start": 1912.049,
+        "duration": 2.54
+    },
+    {
+        "text": "yeah.",
+        "start": 1914.609,
+        "duration": 0.17
+    },
+    {
+        "text": "so in the sort of like graph\nnetworks, graph neural networks,",
+        "start": 1916.129,
+        "duration": 3.02
+    },
+    {
+        "text": "literature, you'd often talk about message\npassing, and that's the dependence of",
+        "start": 1922.049,
+        "duration": 4.28
+    },
+    {
+        "text": "one node at a time on the states of its\nneighbors from a previous time step.",
+        "start": 1926.329,
+        "duration": 4.98
+    },
+    {
+        "text": "and you can iteratively pass\nthese messages and see how the",
+        "start": 1932.569,
+        "duration": 3.83
+    },
+    {
+        "text": "state of the network evolves.",
+        "start": 1936.399,
+        "duration": 1.11
+    },
+    {
+        "text": "And then I think, an interesting thing\njust to think about is, hypernetwork,",
+        "start": 1938.999,
+        "duration": 4.02
+    },
+    {
+        "text": "So a hypernetwork is a network that\ngenerates weights for another network.",
+        "start": 1943.649,
+        "duration": 3.05
+    },
+    {
+        "text": "But so you can imagine how, as Viviane was\njust saying Weights, weights being what?",
+        "start": 1947.689,
+        "duration": 5.25
+    },
+    {
+        "text": "Weights being like weights\nin a normal network?",
+        "start": 1952.939,
+        "duration": 1.72
+    },
+    {
+        "text": "if, yeah, so if you assume that, what\nyou call it, the way that this edge is",
+        "start": 1954.929,
+        "duration": 5.83
+    },
+    {
+        "text": "encoded, like the way this, the influence\nof this, And the last feature, on this",
+        "start": 1960.759,
+        "duration": 4.962
+    },
+    {
+        "text": "feature, takes place is via some weights.",
+        "start": 1965.721,
+        "duration": 2.128
+    },
+    {
+        "text": "Those might not be A neural network.",
+        "start": 1968.719,
+        "duration": 1.56
+    },
+    {
+        "text": "A neural network.",
+        "start": 1970.339,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah, like a neural network.",
+        "start": 1971.009,
+        "duration": 0.96
+    },
+    {
+        "text": "Okay.",
+        "start": 1972.169,
+        "duration": 0.28
+    },
+    {
+        "text": "Those might not be always the same.",
+        "start": 1972.469,
+        "duration": 2.26
+    },
+    {
+        "text": "they might change.",
+        "start": 1975.299,
+        "duration": 1.31
+    },
+    {
+        "text": "And one way to change them\nin a deep learning setting is",
+        "start": 1976.629,
+        "duration": 3.51
+    },
+    {
+        "text": "to generate a set of weights.",
+        "start": 1980.139,
+        "duration": 1.59
+    },
+    {
+        "text": "But I'll touch on later how this,\nmight connect to more SDR style HTML.",
+        "start": 1982.439,
+        "duration": 4.95
+    },
+    {
+        "text": "weights.",
+        "start": 1988.689,
+        "duration": 0.4
+    },
+    {
+        "text": "and then, but yeah, but just contrasting\nthis kind of graph view with a kind",
+        "start": 1995.489,
+        "duration": 4.52
+    },
+    {
+        "text": "of global sequence view of behavior,\nwhich, if, I think we've discounted now,",
+        "start": 2000.009,
+        "duration": 7.57
+    },
+    {
+        "text": "but that isn't to say that sequences\naren't going to be, useful, and I'll",
+        "start": 2008.059,
+        "duration": 4.33
+    },
+    {
+        "text": "come back to that, but so I think this\nis how we sometimes would talk about,",
+        "start": 2012.389,
+        "duration": 3.2
+    },
+    {
+        "text": "behavior before, where you have a storage\nsequence of full object morphologies.",
+        "start": 2015.959,
+        "duration": 4.85
+    },
+    {
+        "text": "So you have a morphology of time equals\nt, zero, and then, a hundred others",
+        "start": 2021.939,
+        "duration": 4.64
+    },
+    {
+        "text": "or whatever, and then time equals\nt, but, that's lots of information",
+        "start": 2026.579,
+        "duration": 5.31
+    },
+    {
+        "text": "to store that the amount explodes\nwith the degrees of freedom of,",
+        "start": 2031.889,
+        "duration": 3.61
+    },
+    {
+        "text": "the behavior, and it's, I think, to\nthe points you had raised on Slack",
+        "start": 2035.499,
+        "duration": 5.03
+    },
+    {
+        "text": "recently, Jeff, it's hard if, because\nthe single LM generally only observes",
+        "start": 2040.529,
+        "duration": 4.43
+    },
+    {
+        "text": "part of an object at a point in time,",
+        "start": 2044.959,
+        "duration": 1.49
+    },
+    {
+        "text": "I also felt that objects\nhave, don't have a global,",
+        "start": 2050.594,
+        "duration": 3.22
+    },
+    {
+        "text": "state.",
+        "start": 2056.044,
+        "duration": 0.43
+    },
+    {
+        "text": "Yeah, or at least not one that\nConstraints that is so specific, like",
+        "start": 2057.164,
+        "duration": 4.77
+    },
+    {
+        "text": "this one is it's a, fully defined state\nwith all the features and everything.",
+        "start": 2061.934,
+        "duration": 6.63
+    },
+    {
+        "text": "I agree, even this one was not fully\ndefined, it's a poor example, but I",
+        "start": 2068.994,
+        "duration": 4.21
+    },
+    {
+        "text": "talked about the deflection plate at\nthe bottom there, and there's a state",
+        "start": 2073.204,
+        "duration": 3.28
+    },
+    {
+        "text": "of that deflection plate, it can be, in\none of two positions, or it can be in",
+        "start": 2076.484,
+        "duration": 3.24
+    },
+    {
+        "text": "the process of rotating between those\npositions, and that deflection plate, It's",
+        "start": 2079.724,
+        "duration": 4.385
+    },
+    {
+        "text": "completely independent, it's behavior is\ncompletely independent of the stapler top.",
+        "start": 2084.109,
+        "duration": 4.17
+    },
+    {
+        "text": "There's also typically a staple, have\na way of removing the staples, which",
+        "start": 2089.089,
+        "duration": 2.98
+    },
+    {
+        "text": "is, it's sometimes it's a spring at\nthe back, sometimes it's in the top,",
+        "start": 2092.069,
+        "duration": 3.33
+    },
+    {
+        "text": "but that's also somewhat independent.",
+        "start": 2095.409,
+        "duration": 1.74
+    },
+    {
+        "text": "and I can come up with lots of\nexamples where objects have lots of",
+        "start": 2099.199,
+        "duration": 2.82
+    },
+    {
+        "text": "independent parts moving in a car.",
+        "start": 2102.029,
+        "duration": 2.15
+    },
+    {
+        "text": "The doors are open, the hood's\nopen, the windows are down.",
+        "start": 2104.629,
+        "duration": 2.27
+    },
+    {
+        "text": "these are all.",
+        "start": 2107.179,
+        "duration": 0.56
+    },
+    {
+        "text": "The car has like a zillion\npossible objects and parts of",
+        "start": 2108.094,
+        "duration": 3.43
+    },
+    {
+        "text": "it that are in different states.",
+        "start": 2111.524,
+        "duration": 0.98
+    },
+    {
+        "text": "So there is no global state for a car,",
+        "start": 2112.514,
+        "duration": 2.54
+    },
+    {
+        "text": "or state.",
+        "start": 2117.264,
+        "duration": 0.42
+    },
+    {
+        "text": "So that tells you, you have to\nhave the state for individual",
+        "start": 2118.244,
+        "duration": 3.87
+    },
+    {
+        "text": "features or components.",
+        "start": 2122.484,
+        "duration": 1.33
+    },
+    {
+        "text": "and it has to be on a\nlocation by location basis.",
+        "start": 2125.434,
+        "duration": 2.1
+    },
+    {
+        "text": "Yeah.",
+        "start": 2129.874,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 2130.554,
+        "duration": 0.23
+    },
+    {
+        "text": "And yeah, I definitely also\nwould agree that a state like",
+        "start": 2130.784,
+        "duration": 3.37
+    },
+    {
+        "text": "this isn't, what we want.",
+        "start": 2134.154,
+        "duration": 2.42
+    },
+    {
+        "text": "but yeah, okay.",
+        "start": 2138.504,
+        "duration": 0.8
+    },
+    {
+        "text": "So that was brief discussion of\nbehavior, sequence of states.",
+        "start": 2139.304,
+        "duration": 3.94
+    },
+    {
+        "text": "What about space?",
+        "start": 2143.734,
+        "duration": 1.08
+    },
+    {
+        "text": "and so one way we can think about kind\nof reference frames and how morphology",
+        "start": 2147.894,
+        "duration": 4.83
+    },
+    {
+        "text": "is represented is what I'm going to\ntentatively call an embedded graph.",
+        "start": 2152.724,
+        "duration": 5.27
+    },
+    {
+        "text": "So features at locations in a\nreference frame, where this is",
+        "start": 2158.044,
+        "duration": 6.29
+    },
+    {
+        "text": "embedded in, some defined space\nlike Cartesian space or grid cells.",
+        "start": 2164.334,
+        "duration": 4.41
+    },
+    {
+        "text": "and this is what we're currently\ndoing with features at locations.",
+        "start": 2170.644,
+        "duration": 2.41
+    },
+    {
+        "text": "And, but yeah, as discussed\nearlier, you could have the features",
+        "start": 2175.829,
+        "duration": 4.01
+    },
+    {
+        "text": "change as a function of time or,\nsomeone pushing in or whatever,",
+        "start": 2179.859,
+        "duration": 5.07
+    },
+    {
+        "text": "their location in this, embedding.",
+        "start": 2185.429,
+        "duration": 2.21
+    },
+    {
+        "text": "and, yeah, this is the advantage that,\nyou can generalize to novel displacements.",
+        "start": 2190.219,
+        "duration": 6.37
+    },
+    {
+        "text": "So it's You don't have to do the exact\nsame displacement as you've done before,",
+        "start": 2196.599,
+        "duration": 3.97
+    },
+    {
+        "text": "if you just type out certain things.",
+        "start": 2200.679,
+        "duration": 1.24
+    },
+    {
+        "text": "I don't understand that, generally,\nit's a novel displacement, what",
+        "start": 2202.479,
+        "duration": 3.71
+    },
+    {
+        "text": "is, with the position of the,\nwhat do you mean by displacement?",
+        "start": 2206.189,
+        "duration": 4.28
+    },
+    {
+        "text": "So now I'm just talking about, if\nyou forget about behavior for a",
+        "start": 2211.129,
+        "duration": 3.49
+    },
+    {
+        "text": "moment, just thinking about how\nyou path integrate over the object.",
+        "start": 2214.619,
+        "duration": 4.16
+    },
+    {
+        "text": "Okay, what's the word displacement\nreferring to in this case?",
+        "start": 2220.739,
+        "duration": 2.79
+    },
+    {
+        "text": "So you can take a movement of.",
+        "start": 2224.399,
+        "duration": 3.18
+    },
+    {
+        "text": "a larger or smaller amount, for\nexample, than you have previously.",
+        "start": 2228.594,
+        "duration": 4.51
+    },
+    {
+        "text": "Is this displacement the angle of the top?",
+        "start": 2233.104,
+        "duration": 2.14
+    },
+    {
+        "text": "Is that what displacement is representing?",
+        "start": 2235.274,
+        "duration": 1.46
+    },
+    {
+        "text": "No, the displacement is\nthe movement of the sensor.",
+        "start": 2238.534,
+        "duration": 1.95
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 2241.934,
+        "duration": 0.59
+    },
+    {
+        "text": "That's what I mean.",
+        "start": 2242.524,
+        "duration": 0.4
+    },
+    {
+        "text": "This is now nothing to do with behavior.",
+        "start": 2243.164,
+        "duration": 1.26
+    },
+    {
+        "text": "This is now a sensor\nmoving over the object.",
+        "start": 2244.424,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay.",
+        "start": 2246.014,
+        "duration": 0.28
+    },
+    {
+        "text": "All right.",
+        "start": 2246.294,
+        "duration": 0.34
+    },
+    {
+        "text": "All right.",
+        "start": 2246.744,
+        "duration": 0.29
+    },
+    {
+        "text": "you're showing the state plane.",
+        "start": 2247.284,
+        "duration": 0.85
+    },
+    {
+        "text": "okay.",
+        "start": 2248.584,
+        "duration": 0.34
+    },
+    {
+        "text": "the general advantage of grid cells is\nthey pass, integrate, and you can do that",
+        "start": 2249.384,
+        "duration": 6.52
+    },
+    {
+        "text": "in novel directions, novel displacements.",
+        "start": 2255.904,
+        "duration": 1.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 2257.714,
+        "duration": 0.42
+    },
+    {
+        "text": "Okay.",
+        "start": 2258.544,
+        "duration": 0.41
+    },
+    {
+        "text": "Adi\u00f3s.",
+        "start": 2258.954,
+        "duration": 0.11
+    },
+    {
+        "text": "Yeah, sorry, I did think about\nchanging the object to something",
+        "start": 2259.524,
+        "duration": 2.35
+    },
+    {
+        "text": "that didn't have a clear behavior,\nsince we're just talking about path",
+        "start": 2261.874,
+        "duration": 3.54
+    },
+    {
+        "text": "integration here, but then, anyways.",
+        "start": 2265.454,
+        "duration": 1.48
+    },
+    {
+        "text": "I just, I don't often use the word\ndisplacement, so I'll just say,",
+        "start": 2268.064,
+        "duration": 4.39
+    },
+    {
+        "text": "movements, path integration movements.",
+        "start": 2273.734,
+        "duration": 3.54
+    },
+    {
+        "text": "Yeah, okay.",
+        "start": 2277.754,
+        "duration": 0.66
+    },
+    {
+        "text": "Question?",
+        "start": 2281.324,
+        "duration": 0.35
+    },
+    {
+        "text": "But, yeah, sure.",
+        "start": 2282.184,
+        "duration": 1.4
+    },
+    {
+        "text": "And we're still talking about space\nreference frame per object, right?",
+        "start": 2283.744,
+        "duration": 4.63
+    },
+    {
+        "text": "So it's not luminiferous ether out there\nthat everything is in, it's Cartesian",
+        "start": 2288.394,
+        "duration": 5.95
+    },
+    {
+        "text": "space per object, it's grid cell\nspace reference frame per object, yes?",
+        "start": 2294.344,
+        "duration": 4.35
+    },
+    {
+        "text": "So yeah, so I guess for us,\nwe're currently representing, I",
+        "start": 2301.564,
+        "duration": 4.15
+    },
+    {
+        "text": "guess it's, yeah, it's a unique\nCartesian space per object.",
+        "start": 2305.714,
+        "duration": 2.39
+    },
+    {
+        "text": "In the brain, you'd the grid cells would,",
+        "start": 2308.304,
+        "duration": 2.46
+    },
+    {
+        "text": "encode multiple objects in\ntheir kind of distributed code.",
+        "start": 2313.009,
+        "duration": 3.61
+    },
+    {
+        "text": "this stuff probably would work.",
+        "start": 2317.739,
+        "duration": 1.18
+    },
+    {
+        "text": "Be careful because It, we've done the\nsame thing in two different ways here.",
+        "start": 2319.449,
+        "duration": 6.22
+    },
+    {
+        "text": "the way we've done it, if I understand\nit in our code today, is we've just",
+        "start": 2327.169,
+        "duration": 3.32
+    },
+    {
+        "text": "picked different places in a very\ninfinite space, and we've said, oh,",
+        "start": 2330.519,
+        "duration": 4.17
+    },
+    {
+        "text": "over here is where we're going to\nrepresent staplers, and then over here",
+        "start": 2334.689,
+        "duration": 2.8
+    },
+    {
+        "text": "is going to represent something else.",
+        "start": 2337.489,
+        "duration": 1.36
+    },
+    {
+        "text": "And so these, they're in some sense\nin the same universal space, but",
+        "start": 2338.849,
+        "duration": 4.37
+    },
+    {
+        "text": "they're so far apart that there's\nno interaction between them, right?",
+        "start": 2343.219,
+        "duration": 2.43
+    },
+    {
+        "text": "So if I know my location,\nI know what object I'm on.",
+        "start": 2345.649,
+        "duration": 2.44
+    },
+    {
+        "text": "And grid cells achieve the same\nresult, but in a very different way.",
+        "start": 2348.939,
+        "duration": 3.3
+    },
+    {
+        "text": "and if you don't know it, I'm not going\nto be able to describe it right now,",
+        "start": 2353.734,
+        "duration": 2.29
+    },
+    {
+        "text": "but you have the same set of cells,\nbut, but the combinations are that",
+        "start": 2357.014,
+        "duration": 6.69
+    },
+    {
+        "text": "once you've locked onto an object, the\npatterns you'll see in those cells are",
+        "start": 2363.714,
+        "duration": 4.99
+    },
+    {
+        "text": "unique for that object and you won't see\nthe same pattern on any other object.",
+        "start": 2368.704,
+        "duration": 3.3
+    },
+    {
+        "text": "So it achieves the same\nresult in a different way.",
+        "start": 2374.254,
+        "duration": 1.84
+    },
+    {
+        "text": "But they're both achieving, essentially\nsaying you have a, in some sense,",
+        "start": 2377.714,
+        "duration": 3.47
+    },
+    {
+        "text": "a universal way of representing\nspace, it's a finite set of resources",
+        "start": 2381.194,
+        "duration": 4.11
+    },
+    {
+        "text": "to represent space, but when you\nactually represent an object.",
+        "start": 2385.304,
+        "duration": 2.53
+    },
+    {
+        "text": "You've, locked into a particular part\nof that large space that, that, only",
+        "start": 2388.884,
+        "duration": 5.65
+    },
+    {
+        "text": "exists for that particular object",
+        "start": 2394.554,
+        "duration": 1.39
+    },
+    {
+        "text": "in both grid cells.",
+        "start": 2398.074,
+        "duration": 0.5
+    },
+    {
+        "text": "Yeah, was your question, Do you\nhave a concern, Tristan, or, No,",
+        "start": 2398.574,
+        "duration": 7.815
+    },
+    {
+        "text": "just checking, just wondering.",
+        "start": 2406.389,
+        "duration": 1.38
+    },
+    {
+        "text": "Okay, yeah,",
+        "start": 2408.579,
+        "duration": 0.46
+    },
+    {
+        "text": "It's very different than what\nwe typically think of Cartesian.",
+        "start": 2411.939,
+        "duration": 2.72
+    },
+    {
+        "text": "This is really a really important\npoint, Tristan, so I want to",
+        "start": 2414.699,
+        "duration": 2.15
+    },
+    {
+        "text": "make sure everyone gets it.",
+        "start": 2416.849,
+        "duration": 0.89
+    },
+    {
+        "text": "It's not oh, here's, we have some\nthree dimensional space, and we're",
+        "start": 2418.459,
+        "duration": 3.7
+    },
+    {
+        "text": "going to represent an object in\none moment and another object",
+        "start": 2422.159,
+        "duration": 2.22
+    },
+    {
+        "text": "in that space, another moment.",
+        "start": 2424.379,
+        "duration": 0.8
+    },
+    {
+        "text": "It's like the objects are so far apart,\nand that you'll never get between them.",
+        "start": 2425.579,
+        "duration": 4.585
+    },
+    {
+        "text": "it's technically you could, but\nit's infinite almost, you can't.",
+        "start": 2431.364,
+        "duration": 7.18
+    },
+    {
+        "text": "so they're like completely\ndifferent spaces.",
+        "start": 2440.804,
+        "duration": 1.75
+    },
+    {
+        "text": "I hope that makes sense.",
+        "start": 2446.364,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah, I guess just in case, to match\nit exactly with the code, it's not",
+        "start": 2447.384,
+        "duration": 6.4
+    },
+    {
+        "text": "like in the code we move them at like\nfar away distances in the same space.",
+        "start": 2453.824,
+        "duration": 5.11
+    },
+    {
+        "text": "The objects are actually all represented\naround like a 0, 0, 0 location.",
+        "start": 2458.964,
+        "duration": 4.76
+    },
+    {
+        "text": "I thought, you told me, I'm sorry, I\nthought you told me that, I thought you",
+        "start": 2464.154,
+        "duration": 4.45
+    },
+    {
+        "text": "said no, the points are totally unique.",
+        "start": 2468.604,
+        "duration": 3.13
+    },
+    {
+        "text": "We could do it that way.",
+        "start": 2472.579,
+        "duration": 1.27
+    },
+    {
+        "text": "It's like mathematically equivalent.",
+        "start": 2473.919,
+        "duration": 1.63
+    },
+    {
+        "text": "Each of them are\nbasically their own space.",
+        "start": 2476.589,
+        "duration": 2.3
+    },
+    {
+        "text": "So it's basically like that reference\nframe has a unique prefix and you",
+        "start": 2478.899,
+        "duration": 4.83
+    },
+    {
+        "text": "would only index that reference frame\nif you're looking at this object.",
+        "start": 2483.729,
+        "duration": 4.07
+    },
+    {
+        "text": "So like we could ever move like\na large distance and accidentally",
+        "start": 2487.809,
+        "duration": 4.86
+    },
+    {
+        "text": "get into a different objects area.",
+        "start": 2492.679,
+        "duration": 1.92
+    },
+    {
+        "text": "I see.",
+        "start": 2494.649,
+        "duration": 0.53
+    },
+    {
+        "text": "I see.",
+        "start": 2495.239,
+        "duration": 0.47
+    },
+    {
+        "text": "That's not as powerful\nas I thought it was.",
+        "start": 2495.759,
+        "duration": 1.68
+    },
+    {
+        "text": "You're basically using the\nobject idea as an index.",
+        "start": 2498.379,
+        "duration": 2.41
+    },
+    {
+        "text": "to, say, okay, now this reference\nspace is representing object",
+        "start": 2501.869,
+        "duration": 2.98
+    },
+    {
+        "text": "A, is that what you're doing?",
+        "start": 2504.849,
+        "duration": 1.81
+    },
+    {
+        "text": "if I understand you yes, but it, it,\nwould be pretty much equivalent to",
+        "start": 2510.219,
+        "duration": 6.02
+    },
+    {
+        "text": "putting them at very far distances.",
+        "start": 2516.309,
+        "duration": 1.84
+    },
+    {
+        "text": "Like we couldn't put them\nat very far distances.",
+        "start": 2518.159,
+        "duration": 2.05
+    },
+    {
+        "text": "It's basically, we have these different\nhypotheses of where we could be, and",
+        "start": 2520.209,
+        "duration": 4.25
+    },
+    {
+        "text": "either we put the hypothesis of being\nlike at very far away distances in",
+        "start": 2524.489,
+        "duration": 4.9
+    },
+    {
+        "text": "the same space, or say, we could be.",
+        "start": 2529.389,
+        "duration": 3.33
+    },
+    {
+        "text": "at this location, in this\nreference frame, or at that",
+        "start": 2533.764,
+        "duration": 3.21
+    },
+    {
+        "text": "location, in this reference frame.",
+        "start": 2536.974,
+        "duration": 2.02
+    },
+    {
+        "text": "so if I want to predict what\nfeature I should expect to see, I",
+        "start": 2541.684,
+        "duration": 3.04
+    },
+    {
+        "text": "just can't look at the location.",
+        "start": 2544.764,
+        "duration": 1.6
+    },
+    {
+        "text": "Is that right?",
+        "start": 2547.784,
+        "duration": 0.59
+    },
+    {
+        "text": "Yeah, you could.",
+        "start": 2549.784,
+        "duration": 1.14
+    },
+    {
+        "text": "it's How?",
+        "start": 2551.674,
+        "duration": 1.57
+    },
+    {
+        "text": "Basically, if you would imagine,\neach of the locations Having a unique",
+        "start": 2553.944,
+        "duration": 6.11
+    },
+    {
+        "text": "prefix depending on what object it is.",
+        "start": 2560.064,
+        "duration": 1.92
+    },
+    {
+        "text": "So you're basically using an object ID to,\nsay what, how do I interpret this space?",
+        "start": 2562.854,
+        "duration": 6.2
+    },
+    {
+        "text": "Okay, I get it.",
+        "start": 2570.534,
+        "duration": 0.87
+    },
+    {
+        "text": "That's not what I thought you were doing.",
+        "start": 2571.434,
+        "duration": 1.18
+    },
+    {
+        "text": "But it's almost like a fourth dimension\nthat we move along, or I don't know.",
+        "start": 2574.034,
+        "duration": 3.65
+    },
+    {
+        "text": "I, it's not.",
+        "start": 2578.479,
+        "duration": 0.915
+    },
+    {
+        "text": "But yeah, it does feel like it would\nbe equivalent, except for the slight",
+        "start": 2579.394,
+        "duration": 4.268
+    },
+    {
+        "text": "risk of interference that we don't.",
+        "start": 2583.662,
+        "duration": 1.829
+    },
+    {
+        "text": "No, I'm not sure it is, maybe it isn't,\nbut one of the things that neurons do",
+        "start": 2585.491,
+        "duration": 7.243
+    },
+    {
+        "text": "is they, I mean in some sense you need\nto know that prefix to do anything,",
+        "start": 2592.734,
+        "duration": 3.61
+    },
+    {
+        "text": "and that prefix is, I assume, a hard\ncoded prefix, it means that you have",
+        "start": 2597.244,
+        "duration": 4.43
+    },
+    {
+        "text": "a prefix that represents cups and\na prefix that represents staplers.",
+        "start": 2601.674,
+        "duration": 3.62
+    },
+    {
+        "text": "Is that correct?",
+        "start": 2606.164,
+        "duration": 0.7
+    },
+    {
+        "text": "But you don't need to know it, you can\ntest different ones at the same time.",
+        "start": 2607.924,
+        "duration": 4.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 2612.564,
+        "duration": 0.45
+    },
+    {
+        "text": "I thought it would be equivalent because\nif we place them very far apart, we could",
+        "start": 2613.014,
+        "duration": 5.01
+    },
+    {
+        "text": "do it exactly with a prefix, like adding\nwhatever large number in front of it.",
+        "start": 2618.034,
+        "duration": 5.74
+    },
+    {
+        "text": "Maybe, This, and I don't understand the\nneurons well enough in this case, but.",
+        "start": 2625.204,
+        "duration": 4.49
+    },
+    {
+        "text": "when we're trying to do inference,\nit might make a difference",
+        "start": 2631.639,
+        "duration": 3.75
+    },
+    {
+        "text": "under certain circumstances.",
+        "start": 2635.489,
+        "duration": 1.61
+    },
+    {
+        "text": "I, didn't catch, I see what you're\nsaying, Viviane, how you think of",
+        "start": 2638.449,
+        "duration": 3.13
+    },
+    {
+        "text": "prefixes just like more bits in space.",
+        "start": 2641.579,
+        "duration": 2.65
+    },
+    {
+        "text": "it's not clear to me whether\nthat's equivalent or not.",
+        "start": 2646.039,
+        "duration": 2.77
+    },
+    {
+        "text": "I'm not going to accept that yet.",
+        "start": 2649.279,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay, I'll let that go.",
+        "start": 2652.579,
+        "duration": 2.0
+    },
+    {
+        "text": "so yeah, so just the last thing to say\nwith these kind of embedded graphs is.",
+        "start": 2657.529,
+        "duration": 3.08
+    },
+    {
+        "text": "like this works really well with kind\nof 3D Euclidean space, but it's a bit",
+        "start": 2661.864,
+        "duration": 6.09
+    },
+    {
+        "text": "more confusing how we would, embed\nabstract or arbitrary, spaces into",
+        "start": 2667.954,
+        "duration": 7.51
+    },
+    {
+        "text": "this, like a family tree or whatever,\nif this is substrate that we're,",
+        "start": 2675.464,
+        "duration": 4.87
+    },
+    {
+        "text": "using, like, how do you understand that\ncertain parts of space connect you to",
+        "start": 2680.334,
+        "duration": 5.71
+    },
+    {
+        "text": "other parts in space, but others don't?",
+        "start": 2686.044,
+        "duration": 1.72
+    },
+    {
+        "text": "and yeah, I won't go into this too much,\nbut yeah, just that there's some evidence",
+        "start": 2691.099,
+        "duration": 6.17
+    },
+    {
+        "text": "that these grid cells can distort, but\nI think it's a fair point, Jeff, that",
+        "start": 2697.269,
+        "duration": 2.53
+    },
+    {
+        "text": "this is generally not, very significant.",
+        "start": 2700.249,
+        "duration": 2.1
+    },
+    {
+        "text": "I do think a better way of, doing\nwhat we were talking about before is",
+        "start": 2703.369,
+        "duration": 3.21
+    },
+    {
+        "text": "just having that, features basically\ncan move in this, kind of space.",
+        "start": 2706.579,
+        "duration": 5.22
+    },
+    {
+        "text": "but then the other kind\nof way of, conceptualizing",
+        "start": 2716.089,
+        "duration": 4.92
+    },
+    {
+        "text": "space is graphs as sequences.",
+        "start": 2721.019,
+        "duration": 2.13
+    },
+    {
+        "text": "and this is actually quite related to\nwhat we tried for a bit, in Monty in",
+        "start": 2724.219,
+        "duration": 4.64
+    },
+    {
+        "text": "before many people joined, in fact,\nbefore I joined, which was, features of",
+        "start": 2729.369,
+        "duration": 3.78
+    },
+    {
+        "text": "displacements, where you learn space as\na sequence and build a graph, from that,",
+        "start": 2733.149,
+        "duration": 6.45
+    },
+    {
+        "text": "and this has the kind of advantage that\nyou can, like in, in, normal kind of",
+        "start": 2742.189,
+        "duration": 8.08
+    },
+    {
+        "text": "3D space in the real world, generally\nthose, displacements or kind of movements",
+        "start": 2750.569,
+        "duration": 5.93
+    },
+    {
+        "text": "are very simple and follow, the same\nbehavior you'd expect here, but you",
+        "start": 2756.499,
+        "duration": 6.06
+    },
+    {
+        "text": "can imagine in some more complex or\nmore abstract spaces, sometimes you",
+        "start": 2762.559,
+        "duration": 4.6
+    },
+    {
+        "text": "can move between, points and sometimes\nyou can't, and so that will those",
+        "start": 2767.159,
+        "duration": 4.76
+    },
+    {
+        "text": "displacements will carve out the space.",
+        "start": 2771.929,
+        "duration": 1.79
+    },
+    {
+        "text": "this potentially, yeah, abstract graph\nlike structure, and it's important to",
+        "start": 2775.019,
+        "duration": 5.03
+    },
+    {
+        "text": "note here the, these kind of green arrows,\nthese aren't the same kind of edges that",
+        "start": 2780.049,
+        "duration": 5.59
+    },
+    {
+        "text": "were in the earlier plot, like the earlier\nedges were about how one feature at a",
+        "start": 2785.639,
+        "duration": 5.15
+    },
+    {
+        "text": "point in time influences other features,\nneighboring features at a point in",
+        "start": 2790.789,
+        "duration": 2.95
+    },
+    {
+        "text": "time, so that's like a causal relation.",
+        "start": 2793.749,
+        "duration": 2.3
+    },
+    {
+        "text": "This is a, connection in movement, like\nthis is the fact that you can move between",
+        "start": 2796.709,
+        "duration": 6.54
+    },
+    {
+        "text": "one of these to the other by following.",
+        "start": 2803.249,
+        "duration": 1.82
+    },
+    {
+        "text": "this displacement,",
+        "start": 2805.789,
+        "duration": 0.79
+    },
+    {
+        "text": "but what we found with the, when we\ntried to do this with the features",
+        "start": 2809.989,
+        "duration": 3.13
+    },
+    {
+        "text": "of displacements learning modules\nwas that this kind of, this tends to",
+        "start": 2813.119,
+        "duration": 4.24
+    },
+    {
+        "text": "struggle with, novel displacements, in\nthe sense that you, end up trying to",
+        "start": 2817.359,
+        "duration": 6.02
+    },
+    {
+        "text": "match these movements exactly, which is\nfine if you're operating in a discrete",
+        "start": 2823.379,
+        "duration": 6.57
+    },
+    {
+        "text": "grid world where you're always going\nlike up one, right one, whatever,",
+        "start": 2830.079,
+        "duration": 3.48
+    },
+    {
+        "text": "but you can imagine if you move only.",
+        "start": 2833.969,
+        "duration": 1.76
+    },
+    {
+        "text": "One centimetre or 1.",
+        "start": 2836.184,
+        "duration": 1.12
+    },
+    {
+        "text": "5 centimetres instead of the three or\ntwo centimetres you did when learning.",
+        "start": 2837.304,
+        "duration": 4.27
+    },
+    {
+        "text": "it can be hard to, match these.",
+        "start": 2842.694,
+        "duration": 1.94
+    },
+    {
+        "text": "yeah, I've been trying to think\nabout some sort of like hybrid stuff",
+        "start": 2847.024,
+        "duration": 3.61
+    },
+    {
+        "text": "that might address a bit of this.",
+        "start": 2850.634,
+        "duration": 2.58
+    },
+    {
+        "text": "But, but yeah, I didn't make\nas much progress as I wanted.",
+        "start": 2853.404,
+        "duration": 3.08
+    },
+    {
+        "text": "So I'll talk about that another time.",
+        "start": 2856.484,
+        "duration": 1.63
+    },
+    {
+        "text": "This could be, this could be\nvery confusing for people who",
+        "start": 2862.664,
+        "duration": 2.64
+    },
+    {
+        "text": "haven't been here in the past.",
+        "start": 2865.304,
+        "duration": 0.85
+    },
+    {
+        "text": "Basically, we were trying\nto represent models.",
+        "start": 2866.914,
+        "duration": 2.71
+    },
+    {
+        "text": "And there's two ways,\nbasic ways, you can do it.",
+        "start": 2870.054,
+        "duration": 1.91
+    },
+    {
+        "text": "You can say these features are at some\nlocation in some reference frame, or",
+        "start": 2872.014,
+        "duration": 4.18
+    },
+    {
+        "text": "you could say these features are at\nsome displacement from each other.",
+        "start": 2876.194,
+        "duration": 3.08
+    },
+    {
+        "text": "Of course, if you're trying to figure\nout, physical displacement, like Niels",
+        "start": 2879.854,
+        "duration": 3.23
+    },
+    {
+        "text": "was saying, some direction, distance,\nand there's a real power in doing",
+        "start": 2883.854,
+        "duration": 4.15
+    },
+    {
+        "text": "physical displacements, but there's a\ncombinatorial problem of, obviously if",
+        "start": 2888.014,
+        "duration": 4.71
+    },
+    {
+        "text": "you have a lot of features, the trying\nto represent the displacements between",
+        "start": 2892.724,
+        "duration": 3.14
+    },
+    {
+        "text": "all of them is impossible to learn.",
+        "start": 2895.864,
+        "duration": 1.98
+    },
+    {
+        "text": "It takes too much memory.",
+        "start": 2897.844,
+        "duration": 1.02
+    },
+    {
+        "text": "And so there was a, we were\nstruggling, what is the basic",
+        "start": 2899.669,
+        "duration": 3.08
+    },
+    {
+        "text": "representation of an object?",
+        "start": 2902.749,
+        "duration": 1.8
+    },
+    {
+        "text": "yeah, these are the two\noptions we were looking at.",
+        "start": 2906.599,
+        "duration": 2.46
+    },
+    {
+        "text": "Yeah, and this was actually\nthe very first learning module",
+        "start": 2910.519,
+        "duration": 2.81
+    },
+    {
+        "text": "that was implemented in Monty.",
+        "start": 2913.339,
+        "duration": 1.54
+    },
+    {
+        "text": "And it had some really nice properties,\ndoing it this way, we can actually",
+        "start": 2915.409,
+        "duration": 5.89
+    },
+    {
+        "text": "represent displacements in a rotation\ninvariant way, We could recognize objects",
+        "start": 2921.309,
+        "duration": 5.22
+    },
+    {
+        "text": "in any rotation without test, specifically\ntesting rotation hypotheses and like",
+        "start": 2926.529,
+        "duration": 5.7
+    },
+    {
+        "text": "going through the different options.",
+        "start": 2932.269,
+        "duration": 1.58
+    },
+    {
+        "text": "there were some nice properties of it,\nbut yeah, like Niels and Jeff said, the",
+        "start": 2935.459,
+        "duration": 4.28
+    },
+    {
+        "text": "issue was it's not really integratable.",
+        "start": 2939.739,
+        "duration": 2.38
+    },
+    {
+        "text": "We couldn't take new movements\nthat weren't stored in the graph.",
+        "start": 2942.119,
+        "duration": 3.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 2949.079,
+        "duration": 0.39
+    },
+    {
+        "text": "And that, I guess for what it's worth,\nif you are operating in a discrete",
+        "start": 2949.779,
+        "duration": 4.13
+    },
+    {
+        "text": "kind of grid world where, you know,\nsomething like this, where You can only",
+        "start": 2954.109,
+        "duration": 4.175
+    },
+    {
+        "text": "move up by one, left by one, so forth.",
+        "start": 2958.284,
+        "duration": 2.72
+    },
+    {
+        "text": "That, those kind of issues go away.",
+        "start": 2961.644,
+        "duration": 1.9
+    },
+    {
+        "text": "and so this, kind of approach has been\nused a lot, for example, in Duleek",
+        "start": 2964.024,
+        "duration": 4.77
+    },
+    {
+        "text": "George's work, this close, oh, I was\nabout to say, clone, structured cognitive",
+        "start": 2968.794,
+        "duration": 5.38
+    },
+    {
+        "text": "graphs, and the Tolman Eckenbaum machine,\nwhich are ways of showing that, if you",
+        "start": 2974.194,
+        "duration": 5.64
+    },
+    {
+        "text": "visit all of these edges, Even if it's\na kind of complex graph, you, can build",
+        "start": 2979.834,
+        "duration": 5.635
+    },
+    {
+        "text": "this representation and, then you can path\nintegrate on this and, you can follow,",
+        "start": 2985.469,
+        "duration": 3.95
+    },
+    {
+        "text": "not even though you visited every edge,\nyou can follow an entirely novel path.",
+        "start": 2989.419,
+        "duration": 4.06
+    },
+    {
+        "text": "but the, for example, in this one, the way\nit's being learned is actually with this",
+        "start": 2995.959,
+        "duration": 5.04
+    },
+    {
+        "text": "kind of, sequence memory that's definitely\nhas similarities to, hierarchical",
+        "start": 3001.029,
+        "duration": 5.66
+    },
+    {
+        "text": "temporal memory in that, although it's,\nthis doesn't look like a sequence, If",
+        "start": 3006.689,
+        "duration": 5.38
+    },
+    {
+        "text": "you basically follow a sequence, you\ncan build up all of these edges and",
+        "start": 3012.069,
+        "duration": 3.67
+    },
+    {
+        "text": "that forms like a graphical structure.",
+        "start": 3015.929,
+        "duration": 1.73
+    },
+    {
+        "text": "then going back to behavior,",
+        "start": 3024.959,
+        "duration": 1.61
+    },
+    {
+        "text": "and trying to bring this together.",
+        "start": 3030.949,
+        "duration": 1.09
+    },
+    {
+        "text": "now if we're looking at this,\nmodel again where, okay, now the",
+        "start": 3032.339,
+        "duration": 4.03
+    },
+    {
+        "text": "edges are representing more causal\nrelations doing these features,",
+        "start": 3036.369,
+        "duration": 4.28
+    },
+    {
+        "text": "the kind of local states associated\nwith a feature, or a node are",
+        "start": 3042.949,
+        "duration": 4.96
+    },
+    {
+        "text": "gonna follow a sequence like this.",
+        "start": 3047.909,
+        "duration": 1.6
+    },
+    {
+        "text": "Over time, and that's going to\ndepend on, as things we talked",
+        "start": 3049.799,
+        "duration": 4.03
+    },
+    {
+        "text": "about earlier, like the local\nactions, incoming states and edges,",
+        "start": 3053.829,
+        "duration": 2.73
+    },
+    {
+        "text": "and then I do think it, it still\nmakes sense that there's some",
+        "start": 3059.339,
+        "duration": 3.69
+    },
+    {
+        "text": "global states that's pooled\nfrom all of the local states.",
+        "start": 3063.029,
+        "duration": 4.2
+    },
+    {
+        "text": "So it has some information, but it's,\nnot like a one to one mapping between",
+        "start": 3067.679,
+        "duration": 4.92
+    },
+    {
+        "text": "yeah, this base plate or whatever.",
+        "start": 3073.269,
+        "duration": 1.47
+    },
+    {
+        "text": "What's your argument for that?",
+        "start": 3074.899,
+        "duration": 1.29
+    },
+    {
+        "text": "Why do you think there's a global\nI guess the main thing is to pass",
+        "start": 3076.789,
+        "duration": 3.31
+    },
+    {
+        "text": "that information up the hierarchy.",
+        "start": 3080.099,
+        "duration": 1.51
+    },
+    {
+        "text": "Because in the same way that this\nstate is, the state of the learning",
+        "start": 3082.454,
+        "duration": 4.5
+    },
+    {
+        "text": "module lower down in the hierarchy,",
+        "start": 3086.954,
+        "duration": 1.66
+    },
+    {
+        "text": "so to summarize that the stapler\nis closed is useful information",
+        "start": 3091.244,
+        "duration": 4.18
+    },
+    {
+        "text": "when I'm looking at my office desk.",
+        "start": 3095.424,
+        "duration": 1.32
+    },
+    {
+        "text": "Although, as I said before,",
+        "start": 3098.059,
+        "duration": 1.92
+    },
+    {
+        "text": "this is problematic because\nthere isn't a global state.",
+        "start": 3102.299,
+        "duration": 2.53
+    },
+    {
+        "text": "And I can imagine an object that has\nmultiple different types of states.",
+        "start": 3104.829,
+        "duration": 5.86
+    },
+    {
+        "text": "And in one context, one of those\nstates is important to pass up.",
+        "start": 3110.839,
+        "duration": 3.69
+    },
+    {
+        "text": "In another context, a different\nstate is important to pass up.",
+        "start": 3114.529,
+        "duration": 2.21
+    },
+    {
+        "text": "and, I don't have a solution to\nthat, but there isn't a global state.",
+        "start": 3119.389,
+        "duration": 5.78
+    },
+    {
+        "text": "I guess I feel like it's like object ID.",
+        "start": 3127.189,
+        "duration": 1.81
+    },
+    {
+        "text": "So I put together a slide for this point,\nwhich, you know, just in terms of you",
+        "start": 3129.924,
+        "duration": 7.92
+    },
+    {
+        "text": "can have changes, subtle changes in\nmorphology and, but the, kind of object",
+        "start": 3137.844,
+        "duration": 5.26
+    },
+    {
+        "text": "is still going to be the same object.",
+        "start": 3143.104,
+        "duration": 1.69
+    },
+    {
+        "text": "it's still a mug.",
+        "start": 3145.574,
+        "duration": 0.88
+    },
+    {
+        "text": "and so forth, and knowing it's a\nmug does not tell you exactly where",
+        "start": 3147.114,
+        "duration": 4.12
+    },
+    {
+        "text": "every feature is on, in space, in\nthe same way that knowing the, global",
+        "start": 3151.234,
+        "duration": 5.28
+    },
+    {
+        "text": "pooled state doesn't tell you the\nstate of every local element, Yeah, I",
+        "start": 3156.544,
+        "duration": 5.82
+    },
+    {
+        "text": "think the answer to this question is",
+        "start": 3162.364,
+        "duration": 1.79
+    },
+    {
+        "text": "the, whole trick for compositional\nstructure was that even though we do,",
+        "start": 3166.629,
+        "duration": 5.18
+    },
+    {
+        "text": "we, we can pass up, an idea of the\nfeature, this is a, there's a, logo",
+        "start": 3172.849,
+        "duration": 7.16
+    },
+    {
+        "text": "at this location on the cup, but,",
+        "start": 3180.009,
+        "duration": 2.15
+    },
+    {
+        "text": "but it's actually the pairing\nis done by location basis.",
+        "start": 3185.019,
+        "duration": 3.33
+    },
+    {
+        "text": "So on the back path, the downward\npath, we associate the location of",
+        "start": 3189.239,
+        "duration": 4.84
+    },
+    {
+        "text": "the parent object with a specific\nlocation on the child object.",
+        "start": 3194.079,
+        "duration": 2.98
+    },
+    {
+        "text": "Therefore we'd be associating, in this\ncase, we'd have to be associating a",
+        "start": 3197.584,
+        "duration": 2.79
+    },
+    {
+        "text": "specific state, a lo, a state of a\nparticular location on the child object.",
+        "start": 3200.374,
+        "duration": 4.23
+    },
+    {
+        "text": "So it's, not clear to me.",
+        "start": 3205.474,
+        "duration": 1.86
+    },
+    {
+        "text": "I have to pass up, the state of the\nobject to the parent, and maybe I",
+        "start": 3207.334,
+        "duration": 6.12
+    },
+    {
+        "text": "do, but it's, but it by passing, by\npairing the location on the parent",
+        "start": 3213.454,
+        "duration": 4.44
+    },
+    {
+        "text": "with the location on the child.",
+        "start": 3217.894,
+        "duration": 1.29
+    },
+    {
+        "text": "I, now basically can specify the\nlocal state of the child, object.",
+        "start": 3220.504,
+        "duration": 8.22
+    },
+    {
+        "text": "I can follow that.",
+        "start": 3229.124,
+        "duration": 0.6
+    },
+    {
+        "text": "actually, I think that's useful.",
+        "start": 3230.034,
+        "duration": 1.23
+    },
+    {
+        "text": "again, in the same way that it's\nuseful with the object ID and",
+        "start": 3232.834,
+        "duration": 3.52
+    },
+    {
+        "text": "morphology, like it's useful to know\nthe overall object ID and it's useful",
+        "start": 3236.354,
+        "duration": 3.31
+    },
+    {
+        "text": "to know where you are on the object.",
+        "start": 3239.664,
+        "duration": 1.54
+    },
+    {
+        "text": "Not just useful, it's essential.",
+        "start": 3241.204,
+        "duration": 1.28
+    },
+    {
+        "text": "If I'm going to make a prediction\nabout something, it's, if I'm going to",
+        "start": 3242.484,
+        "duration": 4.6
+    },
+    {
+        "text": "make a prediction, I have to do that.",
+        "start": 3247.084,
+        "duration": 1.88
+    },
+    {
+        "text": "Yeah, that was a whole\ncompositional object struggle.",
+        "start": 3249.644,
+        "duration": 2.68
+    },
+    {
+        "text": "But yeah, I guess to me, it's still,\nit feels like, yeah, that providing",
+        "start": 3252.354,
+        "duration": 3.38
+    },
+    {
+        "text": "that information like L2, L3 or\nsomething so that Like it is just, yeah.",
+        "start": 3255.734,
+        "duration": 5.82
+    },
+    {
+        "text": "I important for, oh, I, I think,\nthe answer's gonna be different.",
+        "start": 3262.034,
+        "duration": 2.58
+    },
+    {
+        "text": "yeah.",
+        "start": 3265.584,
+        "duration": 0.3
+    },
+    {
+        "text": "I think the answer's gonna be, 'cause\nthis is what the surprise of the",
+        "start": 3266.244,
+        "duration": 2.97
+    },
+    {
+        "text": "composition structure was, is, that\nI don't pass up the state to the",
+        "start": 3269.214,
+        "duration": 7.98
+    },
+    {
+        "text": "parent, but the parent associates its\nlocation with the state of the child.",
+        "start": 3277.514,
+        "duration": 4.05
+    },
+    {
+        "text": "the, I'm not, I can't say of certain\nyet, but that would be the, yeah,",
+        "start": 3284.034,
+        "duration": 3.48
+    },
+    {
+        "text": "my guess that's what's gonna happen.",
+        "start": 3287.544,
+        "duration": 1.71
+    },
+    {
+        "text": "Yeah, I guess it'll be clear when\nwe get back to the, motor policy.",
+        "start": 3291.244,
+        "duration": 3.07
+    },
+    {
+        "text": "Just remember the state, again, if\nyou accept the fact that there are",
+        "start": 3294.314,
+        "duration": 3.09
+    },
+    {
+        "text": "different states for the state, but\nthey're not all tied together, and many",
+        "start": 3297.404,
+        "duration": 2.96
+    },
+    {
+        "text": "objects have lots of states, a car,",
+        "start": 3300.364,
+        "duration": 1.49
+    },
+    {
+        "text": "I can, and, the parent object\ncan't know what those states mean.",
+        "start": 3304.864,
+        "duration": 4.27
+    },
+    {
+        "text": "That's the whole point of it.",
+        "start": 3309.714,
+        "duration": 0.8
+    },
+    {
+        "text": "The parent object can't, if I'm, a car,\nif I'm representing a car, I, can't",
+        "start": 3310.524,
+        "duration": 3.96
+    },
+    {
+        "text": "represent The window at the same time,\nand whether the window is up or down,",
+        "start": 3314.494,
+        "duration": 3.865
+    },
+    {
+        "text": "or whether the door is open or closed.",
+        "start": 3318.359,
+        "duration": 1.46
+    },
+    {
+        "text": "You might represent, the car's on, or",
+        "start": 3320.429,
+        "duration": 1.91
+    },
+    {
+        "text": "there are things that I\nwould know about the car, but",
+        "start": 3324.699,
+        "duration": 3.15
+    },
+    {
+        "text": "I can't accept all the individual\nstates of the features of the car.",
+        "start": 3329.889,
+        "duration": 4.3
+    },
+    {
+        "text": "I have no way of interpreting them.",
+        "start": 3334.339,
+        "duration": 1.69
+    },
+    {
+        "text": "I don't want to store them.",
+        "start": 3336.029,
+        "duration": 0.87
+    },
+    {
+        "text": "The whole point is I can't\nstore everything everywhere.",
+        "start": 3336.899,
+        "duration": 2.35
+    },
+    {
+        "text": "So I think No, I agree with that.",
+        "start": 3339.919,
+        "duration": 1.59
+    },
+    {
+        "text": "I was started where you were in Neil.",
+        "start": 3342.859,
+        "duration": 1.38
+    },
+    {
+        "text": "I was originally think, oh,\nwe have to pass up the state.",
+        "start": 3344.359,
+        "duration": 2.16
+    },
+    {
+        "text": "I'm not so certain of that now.",
+        "start": 3347.899,
+        "duration": 1.38
+    },
+    {
+        "text": "And, yeah, and I, think I, I'm\nactually working on the assumption",
+        "start": 3349.279,
+        "duration": 4.32
+    },
+    {
+        "text": "I don't have pass up the state.",
+        "start": 3353.599,
+        "duration": 1.38
+    },
+    {
+        "text": "so if we have a. more global state.",
+        "start": 3356.139,
+        "duration": 3.53
+    },
+    {
+        "text": "How would like more, broader\nstate information spread?",
+        "start": 3360.329,
+        "duration": 5.82
+    },
+    {
+        "text": "So for example, if I touch an object\nand I recognize its temperature, like",
+        "start": 3366.159,
+        "duration": 4.36
+    },
+    {
+        "text": "I have a coffee cup and I notice it's\nwarm just from touching a small part of",
+        "start": 3370.519,
+        "duration": 4.05
+    },
+    {
+        "text": "it, I immediately know that the whole\ncircumference of the cup will be warm.",
+        "start": 3374.569,
+        "duration": 4.55
+    },
+    {
+        "text": "let's, take a more, I think that's a\nlittle bit more, it's an example of",
+        "start": 3379.949,
+        "duration": 4.94
+    },
+    {
+        "text": "one that's, I can come up with a simple\nexample that has the same problem.",
+        "start": 3384.889,
+        "duration": 2.75
+    },
+    {
+        "text": "How do I associate?",
+        "start": 3388.309,
+        "duration": 1.15
+    },
+    {
+        "text": "of some observed feature or change\nin feature, let's, say with, a change",
+        "start": 3392.514,
+        "duration": 7.04
+    },
+    {
+        "text": "in, a feature in another modality\nor on another part of the object,",
+        "start": 3400.564,
+        "duration": 3.85
+    },
+    {
+        "text": "it gets back to the lamp, right?",
+        "start": 3404.444,
+        "duration": 1.97
+    },
+    {
+        "text": "I press a button on the lamp, how do I\nassociate that with the light turning on?",
+        "start": 3406.704,
+        "duration": 4.44
+    },
+    {
+        "text": "They're in different locations.",
+        "start": 3411.524,
+        "duration": 1.0
+    },
+    {
+        "text": "In fact, I might press a button and\nthe light turns on in the next room.",
+        "start": 3412.704,
+        "duration": 2.79
+    },
+    {
+        "text": "I have to be able to associate\nthese, these changes, and I",
+        "start": 3418.184,
+        "duration": 4.54
+    },
+    {
+        "text": "can do it across modalities.",
+        "start": 3422.724,
+        "duration": 1.33
+    },
+    {
+        "text": "I think that's a broad, I'm trying to,\nI think that's the same question you're,",
+        "start": 3426.234,
+        "duration": 3.24
+    },
+    {
+        "text": "it's actually the answer is the same, I'd\nsay, what you were suggesting, Viviane.",
+        "start": 3429.904,
+        "duration": 3.03
+    },
+    {
+        "text": "which is I touch it, warm, how do I know\nit's warm everywhere, type of thing.",
+        "start": 3433.424,
+        "duration": 2.85
+    },
+    {
+        "text": "we have to learn these things.",
+        "start": 3438.954,
+        "duration": 1.33
+    },
+    {
+        "text": "anyway, that's what I'm working\non right now, and I think you",
+        "start": 3442.674,
+        "duration": 2.85
+    },
+    {
+        "text": "can put some parameters on it.",
+        "start": 3445.524,
+        "duration": 1.41
+    },
+    {
+        "text": "So I think, you know what,\nimagine a, whole bunch of columns",
+        "start": 3447.554,
+        "duration": 4.48
+    },
+    {
+        "text": "and some of them are observing\nchanges at this moment in time.",
+        "start": 3452.844,
+        "duration": 4.01
+    },
+    {
+        "text": "Things are changing, what they're\nobserving and some are not.",
+        "start": 3457.644,
+        "duration": 3.93
+    },
+    {
+        "text": "let's say, we have a voting mechanism.",
+        "start": 3465.414,
+        "duration": 3.8
+    },
+    {
+        "text": "It's not, a, voting's not the right word.",
+        "start": 3469.214,
+        "duration": 1.53
+    },
+    {
+        "text": "We have a, long distance connections.",
+        "start": 3471.374,
+        "duration": 1.62
+    },
+    {
+        "text": "And if two columns, no matter\nwhere they are, if their state is",
+        "start": 3473.529,
+        "duration": 4.74
+    },
+    {
+        "text": "changing, at the same time or in\nclose proximity in time, `we would, we",
+        "start": 3478.269,
+        "duration": 5.76
+    },
+    {
+        "text": "might want to just associate the two.",
+        "start": 3484.039,
+        "duration": 1.8
+    },
+    {
+        "text": "Let's say, hey, when this, these\ntwo changes occur at the same time,",
+        "start": 3486.029,
+        "duration": 3.28
+    },
+    {
+        "text": "and, and they could be in the same\nmodality, in different modalities,",
+        "start": 3491.429,
+        "duration": 4.32
+    },
+    {
+        "text": "one could proceed, the other could\nfollow, there could be a slight delay",
+        "start": 3496.499,
+        "duration": 4.16
+    },
+    {
+        "text": "between them, if there's a bigger\ndelay then you wouldn't catch it, you",
+        "start": 3500.659,
+        "duration": 3.05
+    },
+    {
+        "text": "wouldn't catch the causality there.",
+        "start": 3503.709,
+        "duration": 1.22
+    },
+    {
+        "text": "I think there's a general question\nis, if a column observes a change,",
+        "start": 3506.249,
+        "duration": 3.1
+    },
+    {
+        "text": "how is it associated with other\nchanges in other columns, whether",
+        "start": 3509.909,
+        "duration": 3.4
+    },
+    {
+        "text": "they're nearby or far away?",
+        "start": 3513.309,
+        "duration": 1.22
+    },
+    {
+        "text": "And that's a pretty\nsimple mechanism to do.",
+        "start": 3515.059,
+        "duration": 1.64
+    },
+    {
+        "text": "I'm working on that hypothesis right now.",
+        "start": 3518.649,
+        "duration": 1.94
+    },
+    {
+        "text": "And then you can learn sequences\nof those as well, using the",
+        "start": 3520.849,
+        "duration": 2.9
+    },
+    {
+        "text": "sequence memory we have.",
+        "start": 3523.749,
+        "duration": 0.89
+    },
+    {
+        "text": "So I could say A follows B follows\nC and so on, in different locations",
+        "start": 3525.409,
+        "duration": 3.95
+    },
+    {
+        "text": "or in different modalities.",
+        "start": 3529.359,
+        "duration": 0.99
+    },
+    {
+        "text": "it's a very different language than you're\ntalking about here with graphs and so on.",
+        "start": 3535.179,
+        "duration": 3.81
+    },
+    {
+        "text": "Just, at least I think about it.",
+        "start": 3539.159,
+        "duration": 1.03
+    },
+    {
+        "text": "Yeah.",
+        "start": 3540.469,
+        "duration": 0.52
+    },
+    {
+        "text": "Yeah, unless you wanted to ask more\nabout that, Viviane, I've just got",
+        "start": 3541.429,
+        "duration": 3.59
+    },
+    {
+        "text": "a few more slides I can just finish.",
+        "start": 3545.019,
+        "duration": 1.45
+    },
+    {
+        "text": "Yeah, go ahead.",
+        "start": 3548.409,
+        "duration": 0.765
+    },
+    {
+        "text": "I don't know if we were talking\nabout the same thing or not.",
+        "start": 3549.174,
+        "duration": 5.073
+    },
+    {
+        "text": "yeah, anyways, global states may\nor may not exist, but anyways, if",
+        "start": 3554.664,
+        "duration": 5.92
+    },
+    {
+        "text": "they do exist, they could follow\nsome sort of sequence over time.",
+        "start": 3560.584,
+        "duration": 4.31
+    },
+    {
+        "text": "And then, yeah, the morphology, as\nsaid, or how, a movement is going to",
+        "start": 3566.434,
+        "duration": 7.76
+    },
+    {
+        "text": "map onto where, what you're going to\nobserve, is going to be influenced by",
+        "start": 3574.194,
+        "duration": 5.45
+    },
+    {
+        "text": "It is going to change as a function\nof the local state, so as in, as this",
+        "start": 3580.359,
+        "duration": 3.54
+    },
+    {
+        "text": "moves, if you're on B and you move up\nhere, you're going to predict something",
+        "start": 3583.899,
+        "duration": 3.95
+    },
+    {
+        "text": "different versus if this hasn't moved.",
+        "start": 3587.849,
+        "duration": 1.6
+    },
+    {
+        "text": "and maybe that's changes in or to\nthe graph space, or maybe that's",
+        "start": 3590.569,
+        "duration": 4.72
+    },
+    {
+        "text": "related to changes in the sequence\ndescribing the space, like this kind",
+        "start": 3596.359,
+        "duration": 3.34
+    },
+    {
+        "text": "of, this more kind of view of space.",
+        "start": 3599.699,
+        "duration": 2.89
+    },
+    {
+        "text": "so it just felt like thinking through this\nthat, a lot of things, in bold here can",
+        "start": 3606.219,
+        "duration": 7.64
+    },
+    {
+        "text": "potentially just come down to sequences.",
+        "start": 3613.859,
+        "duration": 2.39
+    },
+    {
+        "text": "and I guess this was interesting for me\nbecause often when I was thinking about",
+        "start": 3617.579,
+        "duration": 4.42
+    },
+    {
+        "text": "this kind of more graphical representation\nof object behavior, I was still thinking",
+        "start": 3622.079,
+        "duration": 6.12
+    },
+    {
+        "text": "a lot of it about in the, kind of sense of\nnodes interacting and, that sort of thing.",
+        "start": 3629.449,
+        "duration": 6.32
+    },
+    {
+        "text": "Like in a graph neural network, I\nwasn't really thinking about it as",
+        "start": 3636.104,
+        "duration": 3.31
+    },
+    {
+        "text": "sequences, but it feels like it could\ngenerally all be framed as sequences,",
+        "start": 3639.484,
+        "duration": 6.12
+    },
+    {
+        "text": "but it's just important that there's\nlocal sequences and these sequences",
+        "start": 3646.454,
+        "duration": 4.09
+    },
+    {
+        "text": "are dependent on one another.",
+        "start": 3650.714,
+        "duration": 1.81
+    },
+    {
+        "text": "If, by sequence we mean, time\nbased, one follows the other, Is",
+        "start": 3654.264,
+        "duration": 6.83
+    },
+    {
+        "text": "that what you mean by sequence?",
+        "start": 3661.094,
+        "duration": 1.06
+    },
+    {
+        "text": "Yeah, but also conditional\non other things.",
+        "start": 3662.224,
+        "duration": 2.39
+    },
+    {
+        "text": "So, the sequence transition.",
+        "start": 3665.034,
+        "duration": 3.28
+    },
+    {
+        "text": "Yeah, couldn't be\nconditioned on an action.",
+        "start": 3668.969,
+        "duration": 2.09
+    },
+    {
+        "text": "I conditioned the state of neighbors.",
+        "start": 3671.059,
+        "duration": 1.53
+    },
+    {
+        "text": "there's lots of ways, yes, but so\nthe way I've been working on this and",
+        "start": 3674.414,
+        "duration": 4.21
+    },
+    {
+        "text": "thinking about it is that sequences\nsometimes occur, and temporal",
+        "start": 3678.624,
+        "duration": 3.69
+    },
+    {
+        "text": "sequences occur, and we have to be\nable to learn them, but often, state",
+        "start": 3682.324,
+        "duration": 3.76
+    },
+    {
+        "text": "changes, are not temporal sequences.",
+        "start": 3686.084,
+        "duration": 2.76
+    },
+    {
+        "text": "Things can happen simultaneously and\nchange all at once, and that's it.",
+        "start": 3688.854,
+        "duration": 3.58
+    },
+    {
+        "text": "There's no sequence.",
+        "start": 3692.444,
+        "duration": 0.9
+    },
+    {
+        "text": "There's no time involved.",
+        "start": 3693.354,
+        "duration": 0.97
+    },
+    {
+        "text": "The features of an object can\nchange, and then it stops.",
+        "start": 3695.364,
+        "duration": 3.82
+    },
+    {
+        "text": "And, but sometimes those things\nYeah, so I guess it's not always like",
+        "start": 3700.864,
+        "duration": 4.04
+    },
+    {
+        "text": "time, but, something has to change.",
+        "start": 3704.944,
+        "duration": 2.06
+    },
+    {
+        "text": "but it could, but it, there's basically\ncausality in space and causality in time.",
+        "start": 3707.764,
+        "duration": 8.24
+    },
+    {
+        "text": "And both of those can\noccur in any combination.",
+        "start": 3716.244,
+        "duration": 2.33
+    },
+    {
+        "text": "several things can change all at once.",
+        "start": 3720.684,
+        "duration": 1.49
+    },
+    {
+        "text": "And I say, oh, they're correlated because\nthey consistently change all at once.",
+        "start": 3722.174,
+        "duration": 3.21
+    },
+    {
+        "text": "Or I could say these\nthings change in sequence.",
+        "start": 3725.784,
+        "duration": 2.15
+    },
+    {
+        "text": "And therefore, they're a sequence, but,\nbut I don't think everything's a sequence.",
+        "start": 3728.834,
+        "duration": 6.6
+    },
+    {
+        "text": "That's why I said, are you\nmeant by sequence time?",
+        "start": 3735.854,
+        "duration": 2.16
+    },
+    {
+        "text": "I think not all, lots of examples,\nI'm, I can come up with examples",
+        "start": 3738.274,
+        "duration": 4.39
+    },
+    {
+        "text": "where time is not involved.",
+        "start": 3742.664,
+        "duration": 1.12
+    },
+    {
+        "text": "but sequence is in a state\nchanging from, to another state.",
+        "start": 3745.334,
+        "duration": 4.77
+    },
+    {
+        "text": "that's why I asked you\nif it was time involved.",
+        "start": 3750.994,
+        "duration": 1.74
+    },
+    {
+        "text": "Okay, sorry, I, when it So changing to\nanother state I answered that incorrectly.",
+        "start": 3753.284,
+        "duration": 4.21
+    },
+    {
+        "text": "One says that actually time\nhas expired, and just one says",
+        "start": 3759.184,
+        "duration": 3.76
+    },
+    {
+        "text": "things change simultaneously.",
+        "start": 3762.954,
+        "duration": 1.55
+    },
+    {
+        "text": "you call it, to me the word\nsequence implies more than",
+        "start": 3767.514,
+        "duration": 3.14
+    },
+    {
+        "text": "one element changing, right?",
+        "start": 3770.654,
+        "duration": 2.07
+    },
+    {
+        "text": "You've got a series of things.",
+        "start": 3772.724,
+        "duration": 1.45
+    },
+    {
+        "text": "but there are behaviors where\nthere is no time involved.",
+        "start": 3775.549,
+        "duration": 4.45
+    },
+    {
+        "text": "you're just saying, then I\nwouldn't use the word sequence.",
+        "start": 3780.979,
+        "duration": 2.19
+    },
+    {
+        "text": "That's, at least it's confusing to\nme to use the word sequence for that.",
+        "start": 3783.689,
+        "duration": 3.2
+    },
+    {
+        "text": "Interesting.",
+        "start": 3787.609,
+        "duration": 0.41
+    },
+    {
+        "text": "Okay.",
+        "start": 3788.119,
+        "duration": 0.37
+    },
+    {
+        "text": "that's why I said, is time involved?",
+        "start": 3789.994,
+        "duration": 1.63
+    },
+    {
+        "text": "Is there a sequence of elements?",
+        "start": 3791.984,
+        "duration": 1.34
+    },
+    {
+        "text": "Is it some time expire?",
+        "start": 3793.324,
+        "duration": 1.65
+    },
+    {
+        "text": "Not necessarily.",
+        "start": 3795.704,
+        "duration": 0.9
+    },
+    {
+        "text": "yeah.",
+        "start": 3797.254,
+        "duration": 0.27
+    },
+    {
+        "text": "Okay, but that's why I asked, because I\nsaid, that's how I interpret sequence.",
+        "start": 3797.524,
+        "duration": 3.17
+    },
+    {
+        "text": "I guess time is always involved in the\nsense that, nothing can change without",
+        "start": 3800.694,
+        "duration": 5.92
+    },
+    {
+        "text": "some infinitesimal small amount of time.",
+        "start": 3806.614,
+        "duration": 3.56
+    },
+    {
+        "text": "yes, time is involved in that sense,\nbut it's not, like A sequence of oh,",
+        "start": 3811.084,
+        "duration": 4.22
+    },
+    {
+        "text": "every one second something happens.",
+        "start": 3815.304,
+        "duration": 2.09
+    },
+    {
+        "text": "All right, often things are like that.",
+        "start": 3817.554,
+        "duration": 1.46
+    },
+    {
+        "text": "The stapler opening is a sequence.",
+        "start": 3819.014,
+        "duration": 1.61
+    },
+    {
+        "text": "They can be, but I'm saying that's\nnot what I'm saying all sequences are.",
+        "start": 3820.634,
+        "duration": 4.79
+    },
+    {
+        "text": "I've learned over the years that I have to\nchallenge every word because I know often",
+        "start": 3825.784,
+        "duration": 4.89
+    },
+    {
+        "text": "we use the same word for different things.",
+        "start": 3830.674,
+        "duration": 1.64
+    },
+    {
+        "text": "And that was the very first, you\nused the word sequence, I said,",
+        "start": 3832.814,
+        "duration": 2.31
+    },
+    {
+        "text": "what did you mean by sequence?",
+        "start": 3835.154,
+        "duration": 1.3
+    },
+    {
+        "text": "Is it a mean?",
+        "start": 3836.874,
+        "duration": 0.66
+    },
+    {
+        "text": "I meant, does it mean a time sequence?",
+        "start": 3837.974,
+        "duration": 1.94
+    },
+    {
+        "text": "and, because there are lots of\nexamples, we can't rely on that.",
+        "start": 3840.234,
+        "duration": 2.81
+    },
+    {
+        "text": "there are many examples where\nthere is not a time sequence.",
+        "start": 3843.694,
+        "duration": 2.14
+    },
+    {
+        "text": "Yes, obviously time has expired, but\nIt's not like a series of elements",
+        "start": 3845.834,
+        "duration": 3.965
+    },
+    {
+        "text": "over time, like the stapler top.",
+        "start": 3849.839,
+        "duration": 2.55
+    },
+    {
+        "text": "many things are like that, but there are\nexamples where things aren't like that.",
+        "start": 3853.209,
+        "duration": 2.72
+    },
+    {
+        "text": "So I guess just one thought, irrespective\nof whether time is involved or not.",
+        "start": 3858.089,
+        "duration": 4.43
+    },
+    {
+        "text": "one thing that I always worry about a\nbit with representing your sequences, but",
+        "start": 3864.409,
+        "duration": 4.89
+    },
+    {
+        "text": "I think I already mentioned in, when I\npresented some slides before, it might not",
+        "start": 3870.889,
+        "duration": 4.19
+    },
+    {
+        "text": "be a problem actually, is that sequences\nare a bit similar to displacements.",
+        "start": 3875.079,
+        "duration": 4.92
+    },
+    {
+        "text": "So if you have just a, just one\ndegree of freedom where you have the",
+        "start": 3880.539,
+        "duration": 5.32
+    },
+    {
+        "text": "stapler opening and closing, it's\neasy to imagine it as a sequence.",
+        "start": 3885.859,
+        "duration": 3.61
+    },
+    {
+        "text": "But if you have more than one degree\nof freedom, like a joystick that",
+        "start": 3889.469,
+        "duration": 2.85
+    },
+    {
+        "text": "can move in all directions, it's\na bit harder to imagine how that's",
+        "start": 3892.319,
+        "duration": 3.98
+    },
+    {
+        "text": "modeled with discrete sequences.",
+        "start": 3896.659,
+        "duration": 1.97
+    },
+    {
+        "text": "But then one thought I had was like\na lot of these things, we might",
+        "start": 3900.324,
+        "duration": 5.76
+    },
+    {
+        "text": "actually be able to learn all the\ndifferent sequences and we could have",
+        "start": 3906.094,
+        "duration": 3.17
+    },
+    {
+        "text": "like small sub sequences like moving\nleft to right, to left, up to down.",
+        "start": 3909.294,
+        "duration": 3.98
+    },
+    {
+        "text": "Exactly.",
+        "start": 3913.464,
+        "duration": 0.4
+    },
+    {
+        "text": "To all the joint type sequences.",
+        "start": 3915.474,
+        "duration": 2.32
+    },
+    {
+        "text": "Objects.",
+        "start": 3918.309,
+        "duration": 0.78
+    },
+    {
+        "text": "So I think it's practicality.",
+        "start": 3919.679,
+        "duration": 2.32
+    },
+    {
+        "text": "I think that's what I mentioned before\nis I couldn't think of an example",
+        "start": 3922.419,
+        "duration": 3.02
+    },
+    {
+        "text": "where we would encounter a completely\nnew behavior where we couldn't have",
+        "start": 3925.439,
+        "duration": 5.24
+    },
+    {
+        "text": "learned all the possible sub sequences.",
+        "start": 3930.679,
+        "duration": 2.39
+    },
+    {
+        "text": "Maybe that's not an issue, but just to\nthrow it in there, that with sequences,",
+        "start": 3936.129,
+        "duration": 4.4
+    },
+    {
+        "text": "it seems like we would have to at\nleast once observe all the possible",
+        "start": 3941.089,
+        "duration": 5.73
+    },
+    {
+        "text": "sequences to be able to path integrate.",
+        "start": 3946.839,
+        "duration": 2.76
+    },
+    {
+        "text": "Yeah, and it basically, it's similar to\nobserving all the edges in this sense, but",
+        "start": 3949.719,
+        "duration": 5.77
+    },
+    {
+        "text": "if you just do that in a local one, and\nthere's some way you can generalize that.",
+        "start": 3955.769,
+        "duration": 3.94
+    },
+    {
+        "text": "to, to broader spaces than it's less\nof an issue, because yeah, I agree.",
+        "start": 3961.424,
+        "duration": 4.07
+    },
+    {
+        "text": "Otherwise it's, way too\nmany states to learn.",
+        "start": 3965.744,
+        "duration": 3.6
+    },
+    {
+        "text": "one of the nice things about\nthe, HTM sequence memory is that,",
+        "start": 3971.014,
+        "duration": 2.98
+    },
+    {
+        "text": "it, it always tried to learn,\nindefinitely long sequences, but",
+        "start": 3978.744,
+        "duration": 6.44
+    },
+    {
+        "text": "if it doesn't get exposed to,\nit, it'll learn shorter segments.",
+        "start": 3985.184,
+        "duration": 3.77
+    },
+    {
+        "text": "you might say, start off by saying,\nhey, I'm, I'm learning how this",
+        "start": 3990.439,
+        "duration": 3.51
+    },
+    {
+        "text": "joystick moves through some space.",
+        "start": 3993.949,
+        "duration": 1.65
+    },
+    {
+        "text": "But it doesn't repeat, and the only\nparts that repeat are local actions.",
+        "start": 3995.969,
+        "duration": 4.0
+    },
+    {
+        "text": "and so it just picks that up\nautomatically, you don't have to, that",
+        "start": 4001.169,
+        "duration": 3.46
+    },
+    {
+        "text": "was one, I'm just pointing out that it's\na natural property of the network, it,",
+        "start": 4004.629,
+        "duration": 3.55
+    },
+    {
+        "text": "figures how much it can learn, and, and,\nit'll expand beyond that if, there's",
+        "start": 4008.179,
+        "duration": 5.8
+    },
+    {
+        "text": "some long sequence, that you repeat\nover and over again, it'll learn it,",
+        "start": 4013.979,
+        "duration": 3.9
+    },
+    {
+        "text": "but mostly it'll just learn the short\nsubsets that it sees often enough, so",
+        "start": 4017.879,
+        "duration": 5.52
+    },
+    {
+        "text": "it just handles that problem nicely.",
+        "start": 4023.409,
+        "duration": 2.16
+    },
+    {
+        "text": "Yeah.",
+        "start": 4025.639,
+        "duration": 0.43
+    },
+    {
+        "text": "Yeah, and I guess on the HTM stuff,\nit's definitely not a developed thought,",
+        "start": 4027.249,
+        "duration": 4.81
+    },
+    {
+        "text": "but just By the way, what I want to\nthink more about is Can I, ask a favor?",
+        "start": 4032.079,
+        "duration": 6.33
+    },
+    {
+        "text": "when you say HTM, it doesn't mean\nanything to me at this point in time.",
+        "start": 4040.239,
+        "duration": 2.74
+    },
+    {
+        "text": "So we have the sequence memory,\nwe have the neuron model, on its",
+        "start": 4043.649,
+        "duration": 4.19
+    },
+    {
+        "text": "own, it doesn't mean anything.",
+        "start": 4047.869,
+        "duration": 1.04
+    },
+    {
+        "text": "So if you want to say the HTM sequence\nmemory, I know what that means.",
+        "start": 4048.909,
+        "duration": 2.23
+    },
+    {
+        "text": "If you want to say the HTM neuron\nmodel, I know what that means.",
+        "start": 4051.309,
+        "duration": 3.243
+    },
+    {
+        "text": "But HTM is a thing, it\ndoesn't mean anything to me.",
+        "start": 4054.552,
+        "duration": 2.647
+    },
+    {
+        "text": "overloaded, yeah.",
+        "start": 4057.559,
+        "duration": 0.74
+    },
+    {
+        "text": "the sequence memory.",
+        "start": 4059.074,
+        "duration": 0.79
+    },
+    {
+        "text": "Okay, so we need to say But in, in the\nway that could be like conditioned on",
+        "start": 4060.594,
+        "duration": 5.55
+    },
+    {
+        "text": "object ID, it just seems like that kind\nof conditioning, which was implemented",
+        "start": 4066.164,
+        "duration": 7.49
+    },
+    {
+        "text": "via the dendritic prediction and stuff,",
+        "start": 4073.654,
+        "duration": 2.25
+    },
+    {
+        "text": "could naturally be useful for things\nlike conditioning on, states of",
+        "start": 4079.054,
+        "duration": 3.3
+    },
+    {
+        "text": "neighbors, conditioning on actions.",
+        "start": 4082.354,
+        "duration": 1.6
+    },
+    {
+        "text": "conditioning on global state.",
+        "start": 4084.434,
+        "duration": 1.28
+    },
+    {
+        "text": "Basically, I look at it a\ndifferent way than you, okay?",
+        "start": 4086.784,
+        "duration": 2.57
+    },
+    {
+        "text": "I just look at it as if I have a\nneural representation of something",
+        "start": 4089.384,
+        "duration": 2.63
+    },
+    {
+        "text": "and it changes in a consistent, in\na repeatable way, it'll learn that.",
+        "start": 4092.724,
+        "duration": 4.43
+    },
+    {
+        "text": "So anything that transitions over\ntime and repeats, it'll learn it.",
+        "start": 4098.384,
+        "duration": 4.8
+    },
+    {
+        "text": "you know what, you can put like global\nstate or actions, I don't know, are",
+        "start": 4104.484,
+        "duration": 4.15
+    },
+    {
+        "text": "these things changing over time?",
+        "start": 4108.634,
+        "duration": 1.29
+    },
+    {
+        "text": "If they're changing over\ntime, it'll learn it.",
+        "start": 4110.164,
+        "duration": 1.42
+    },
+    {
+        "text": "if it's repeatable.",
+        "start": 4112.309,
+        "duration": 0.93
+    },
+    {
+        "text": "I'm just saying,",
+        "start": 4113.239,
+        "duration": 1.265
+    },
+    {
+        "text": "you and I have very different\nmental pictures in our head",
+        "start": 4116.829,
+        "duration": 2.02
+    },
+    {
+        "text": "when we use these words.",
+        "start": 4118.849,
+        "duration": 0.94
+    },
+    {
+        "text": "I can tell that.",
+        "start": 4120.489,
+        "duration": 0.58
+    },
+    {
+        "text": "and, and, I'm just, it's hard for\nme because I have this picture in my",
+        "start": 4122.219,
+        "duration": 5.66
+    },
+    {
+        "text": "head and you're putting these words\nout there and I'm like, oh, do those",
+        "start": 4127.879,
+        "duration": 2.33
+    },
+    {
+        "text": "words represent what I'm thinking?",
+        "start": 4130.229,
+        "duration": 1.19
+    },
+    {
+        "text": "I don't know.",
+        "start": 4131.419,
+        "duration": 0.49
+    },
+    {
+        "text": "yeah, I guess what I'm trying\nto in, in the original temporal,",
+        "start": 4134.029,
+        "duration": 5.91
+    },
+    {
+        "text": "sequence memory, you had the kind of.",
+        "start": 4140.419,
+        "duration": 1.65
+    },
+    {
+        "text": "L3 layer with the object ID, and\nthen you were going through different",
+        "start": 4142.674,
+        "duration": 4.23
+    },
+    {
+        "text": "features, and depending on which\nobject it was predicting via the",
+        "start": 4146.914,
+        "duration": 4.05
+    },
+    {
+        "text": "8th as I remember, different,\ndifferent, SDRs for those features.",
+        "start": 4150.974,
+        "duration": 6.43
+    },
+    {
+        "text": "and that was, the kind of unique, unique,\nfingerprint for the different, It's the",
+        "start": 4159.079,
+        "duration": 7.56
+    },
+    {
+        "text": "same, the, sequence memory is exactly the\nsame as the using the reference frames",
+        "start": 4166.639,
+        "duration": 5.02
+    },
+    {
+        "text": "and the features of reference frames.",
+        "start": 4171.659,
+        "duration": 1.25
+    },
+    {
+        "text": "You have a series of SDRs that\nall represent the same object.",
+        "start": 4173.339,
+        "duration": 4.79
+    },
+    {
+        "text": "And then you do temporal pooling,\nsaying, okay, these all have",
+        "start": 4178.144,
+        "duration": 4.52
+    },
+    {
+        "text": "to map to some constant ID.",
+        "start": 4182.664,
+        "duration": 1.75
+    },
+    {
+        "text": "So whether it's, whether the sequence\nis determined by movement of the",
+        "start": 4185.854,
+        "duration": 4.51
+    },
+    {
+        "text": "sensor and what you sense, or\nwhether it's determined by time, it",
+        "start": 4190.374,
+        "duration": 5.06
+    },
+    {
+        "text": "really doesn't make any difference.",
+        "start": 4195.434,
+        "duration": 1.01
+    },
+    {
+        "text": "It's a sequence of SDRs that\nget pooled to the same ID.",
+        "start": 4196.444,
+        "duration": 3.05
+    },
+    {
+        "text": "So it's really the, it just says\nthere's two ways you can, you can",
+        "start": 4200.064,
+        "duration": 4.515
+    },
+    {
+        "text": "represent a unique, you can find out\na unique representation of a point in",
+        "start": 4204.579,
+        "duration": 5.76
+    },
+    {
+        "text": "space and that's one through time and\none through movement of the sensor",
+        "start": 4210.389,
+        "duration": 3.72
+    },
+    {
+        "text": "and keeping track of the location.",
+        "start": 4214.119,
+        "duration": 1.49
+    },
+    {
+        "text": "Yeah, maybe it'll be helpful at some\npoint, I can put together a slide actually",
+        "start": 4217.499,
+        "duration": 4.27
+    },
+    {
+        "text": "showing diagrammatically what I mean.",
+        "start": 4222.539,
+        "duration": 1.5
+    },
+    {
+        "text": "I just want to make sure that's also\nimportant for the new people here.",
+        "start": 4226.599,
+        "duration": 2.57
+    },
+    {
+        "text": "It's",
+        "start": 4229.169,
+        "duration": 0.12
+    },
+    {
+        "text": "the sequence memory in our, memory\nreference frame are really just",
+        "start": 4232.024,
+        "duration": 5.715
+    },
+    {
+        "text": "two flavors of the same thing.",
+        "start": 4237.739,
+        "duration": 1.17
+    },
+    {
+        "text": "They're just really not\nfundamentally different.",
+        "start": 4239.619,
+        "duration": 2.17
+    },
+    {
+        "text": "In fact, Subutai wrote a\npaper on that, I think.",
+        "start": 4241.959,
+        "duration": 2.97
+    },
+    {
+        "text": "How you can mix and match them, they\njust naturally combine together.",
+        "start": 4247.299,
+        "duration": 3.19
+    },
+    {
+        "text": "So for example, imagine I move\nmy finger over an object in",
+        "start": 4254.489,
+        "duration": 2.55
+    },
+    {
+        "text": "the exact same order every day.",
+        "start": 4257.049,
+        "duration": 1.43
+    },
+    {
+        "text": "it'll learn that.",
+        "start": 4259.374,
+        "duration": 0.71
+    },
+    {
+        "text": "It'll learn that as a\nsequence, like a melody.",
+        "start": 4260.534,
+        "duration": 2.07
+    },
+    {
+        "text": "but the first time I\ndidn't have to do that.",
+        "start": 4263.684,
+        "duration": 1.26
+    },
+    {
+        "text": "I could have put my\nfinger in random order.",
+        "start": 4264.944,
+        "duration": 1.31
+    },
+    {
+        "text": "It's all, it just all\nchanges the same result.",
+        "start": 4267.884,
+        "duration": 2.02
+    },
+    {
+        "text": "That may not help.",
+        "start": 4271.784,
+        "duration": 0.59
+    },
+    {
+        "text": "Okay.",
+        "start": 4274.544,
+        "duration": 0.37
+    },
+    {
+        "text": "That was, that was\neverything I had, though.",
+        "start": 4276.674,
+        "duration": 1.7
+    },
+    {
+        "text": "yeah, I'm just trying to find the\npaper, but, we can do that another time.",
+        "start": 4278.854,
+        "duration": 3.54
+    },
+    {
+        "text": "I want to try to reconcile what you're\npresenting with how I'm thinking about",
+        "start": 4283.674,
+        "duration": 4.25
+    },
+    {
+        "text": "this, and, and I think I need to do a\nsimilar presentation to what you did, and",
+        "start": 4287.924,
+        "duration": 6.66
+    },
+    {
+        "text": "I need to say, here's how I'm thinking\nabout these same issues, and see if",
+        "start": 4294.584,
+        "duration": 4.0
+    },
+    {
+        "text": "we can come to some agreement on them.",
+        "start": 4298.644,
+        "duration": 1.59
+    },
+    {
+        "text": "I'm working on that.",
+        "start": 4303.724,
+        "duration": 0.98
+    },
+    {
+        "text": "I wasn't working on the presentation,\nbut I'm working on the ideas, so",
+        "start": 4305.779,
+        "duration": 3.01
+    },
+    {
+        "text": "maybe, I can present that next week.",
+        "start": 4309.819,
+        "duration": 1.87
+    },
+    {
+        "text": "Is that okay?",
+        "start": 4311.689,
+        "duration": 0.72
+    },
+    {
+        "text": "Yeah, that's good.",
+        "start": 4314.494,
+        "duration": 1.02
+    },
+    {
+        "text": "My presentation won't be\nnearly as nice as yours.",
+        "start": 4316.214,
+        "duration": 2.15
+    },
+    {
+        "text": "probably just, words, but, but maybe\nI'll throw a few images in there.",
+        "start": 4320.014,
+        "duration": 3.94
+    },
+    {
+        "text": "I think, during today's conversation,\nI threw a lot of the ideas out",
+        "start": 4327.644,
+        "duration": 3.45
+    },
+    {
+        "text": "there because I'm trying to match\nthem up to what you're presenting.",
+        "start": 4331.094,
+        "duration": 3.71
+    },
+    {
+        "text": "I want to come to, reach\na consensus on this.",
+        "start": 4335.954,
+        "duration": 4.46
+    },
+    {
+        "text": "okay.",
+        "start": 4343.204,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 4343.994,
+        "duration": 0.44
+    },
+    {
+        "text": "Yeah, I'm just thinking.",
+        "start": 4346.514,
+        "duration": 1.53
+    },
+    {
+        "text": "Yeah, I hope, Yeah, I hope I didn't assume\ntoo much in terms of, HTM and stuff.",
+        "start": 4348.144,
+        "duration": 6.66
+    },
+    {
+        "text": "I didn't, it's helpful.",
+        "start": 4354.804,
+        "duration": 2.15
+    },
+    {
+        "text": "I just thought we could\nlook briefly at, at this.",
+        "start": 4357.934,
+        "duration": 3.56
+    },
+    {
+        "text": "Helpful for who?",
+        "start": 4361.974,
+        "duration": 0.69
+    },
+    {
+        "text": "I made this figure, so it's not going to\nbe helpful for me, but maybe other people.",
+        "start": 4362.664,
+        "duration": 7.032
+    },
+    {
+        "text": "Yeah, I'm also reminding myself, but,",
+        "start": 4369.696,
+        "duration": 2.408
+    },
+    {
+        "text": "Yeah, maybe this is better\nfor another, meeting.",
+        "start": 4374.379,
+        "duration": 3.64
+    },
+    {
+        "text": "I'll just, I'll try to do a recap of HDM\nsequence memory and then how it might be",
+        "start": 4378.019,
+        "duration": 5.69
+    },
+    {
+        "text": "related to, sequences of behavior states.",
+        "start": 4383.719,
+        "duration": 3.42
+    },
+    {
+        "text": "Again, I'll say it again, just maybe\nrepetition might help, I don't know,",
+        "start": 4388.234,
+        "duration": 3.73
+    },
+    {
+        "text": "you got a layer of neurons that are\nrepresenting something in a sparse way,",
+        "start": 4393.704,
+        "duration": 3.82
+    },
+    {
+        "text": "and, and the sequence, the HCM sequence\nmemory was basically explaining how you",
+        "start": 4398.114,
+        "duration": 8.04
+    },
+    {
+        "text": "might come up with a sparse representation\nand what would happen if, you went",
+        "start": 4406.154,
+        "duration": 4.26
+    },
+    {
+        "text": "through a series of these SDRs in the\nsame set of neurons, and they could learn",
+        "start": 4410.414,
+        "duration": 5.16
+    },
+    {
+        "text": "arbitrarily long, high, order sequences",
+        "start": 4415.584,
+        "duration": 2.89
+    },
+    {
+        "text": "in a very powerful way,\nand make predictions about",
+        "start": 4421.224,
+        "duration": 2.74
+    },
+    {
+        "text": "what's going to happen next.",
+        "start": 4423.964,
+        "duration": 0.9
+    },
+    {
+        "text": "and it does it in a very simple way\nthat matches biology beautifully",
+        "start": 4427.304,
+        "duration": 2.65
+    },
+    {
+        "text": "and explains a whole bunch of\nstuff that no one explained before.",
+        "start": 4429.954,
+        "duration": 2.09
+    },
+    {
+        "text": "that's all it does.",
+        "start": 4433.544,
+        "duration": 0.79
+    },
+    {
+        "text": "And so I'm constantly thinking oh,\nI got to know, if I have a variable,",
+        "start": 4434.404,
+        "duration": 3.07
+    },
+    {
+        "text": "a state variable, that's, changing,\nthat, that, state variable is",
+        "start": 4437.474,
+        "duration": 5.44
+    },
+    {
+        "text": "going to be on a location basis.",
+        "start": 4442.944,
+        "duration": 1.79
+    },
+    {
+        "text": "Thank you.",
+        "start": 4444.734,
+        "duration": 0.06
+    },
+    {
+        "text": "Or it can change on a\nlocation by location basis.",
+        "start": 4445.479,
+        "duration": 2.11
+    },
+    {
+        "text": "And that state variable now is, is\nalso changing for whatever reason,",
+        "start": 4447.879,
+        "duration": 4.28
+    },
+    {
+        "text": "then I can learn sequences, if\nit changes in a consistent way.",
+        "start": 4452.169,
+        "duration": 4.22
+    },
+    {
+        "text": "and if it's not consistent,\nthen I wouldn't learn sequences.",
+        "start": 4458.289,
+        "duration": 2.07
+    },
+    {
+        "text": "So that's how I'm thinking about,\nlearning behaviors and learning",
+        "start": 4461.379,
+        "duration": 5.09
+    },
+    {
+        "text": "causal relationships behaviors and\nall this stuff in the back of my mind.",
+        "start": 4466.469,
+        "duration": 2.61
+    },
+    {
+        "text": "Oh gosh, that's, this stuff is hard.",
+        "start": 4471.799,
+        "duration": 1.76
+    }
+]

@@ -1,0 +1,2367 @@
+[
+    {
+        "text": "Okay, everybody see this?",
+        "start": 8.884,
+        "duration": 1.29
+    },
+    {
+        "text": "All right, hi, we're team.",
+        "start": 10.174,
+        "duration": 1.44
+    },
+    {
+        "text": "Everything is awesome, Rami and myself.",
+        "start": 11.614,
+        "duration": 2.94
+    },
+    {
+        "text": "there we go.",
+        "start": 18.694,
+        "duration": 0.57
+    },
+    {
+        "text": "Explain the team's origin please.",
+        "start": 20.464,
+        "duration": 1.53
+    },
+    {
+        "text": "so in the beginning, we got some Legos.",
+        "start": 23.284,
+        "duration": 3.03
+    },
+    {
+        "text": "we bought a bunch of stuff, started\nassembling it into a platform, and then",
+        "start": 27.154,
+        "duration": 5.07
+    },
+    {
+        "text": "this is the platform actually running.",
+        "start": 32.224,
+        "duration": 2.67
+    },
+    {
+        "text": "So this is our, robot assembly,\nso that's one of our motors and",
+        "start": 34.894,
+        "duration": 4.35
+    },
+    {
+        "text": "our part of our motor system.",
+        "start": 39.244,
+        "duration": 1.5
+    },
+    {
+        "text": "And then we were calibrating it\nvery scientifically of seeing",
+        "start": 42.004,
+        "duration": 4.5
+    },
+    {
+        "text": "how fast the thing can go",
+        "start": 46.504,
+        "duration": 2.25
+    },
+    {
+        "text": "unfor you.",
+        "start": 50.974,
+        "duration": 0.42
+    },
+    {
+        "text": "So we calibrated it well.",
+        "start": 51.574,
+        "duration": 1.86
+    },
+    {
+        "text": "then we're also, so the other part of\nthe robot is a sensorimotor module.",
+        "start": 55.234,
+        "duration": 3.96
+    },
+    {
+        "text": "This is the elevator\nthat goes up and down.",
+        "start": 59.674,
+        "duration": 2.52
+    },
+    {
+        "text": "And in the background there, you can\nsee the, this is the sensorimotor with",
+        "start": 63.334,
+        "duration": 4.5
+    },
+    {
+        "text": "the camera and the depth with the RGB\ncamera on it and the depth camera on it.",
+        "start": 67.834,
+        "duration": 5.04
+    },
+    {
+        "text": "and that's what the robot looks like.",
+        "start": 73.354,
+        "duration": 1.71
+    },
+    {
+        "text": "Combined.",
+        "start": 75.154,
+        "duration": 0.66
+    },
+    {
+        "text": "We did a bunch of debugging.",
+        "start": 78.004,
+        "duration": 2.19
+    },
+    {
+        "text": "This is an example of, debugging\nthe depth sensorimotor.",
+        "start": 80.224,
+        "duration": 4.47
+    },
+    {
+        "text": "there's interest, like you can\nsee different depth resolution",
+        "start": 86.224,
+        "duration": 2.79
+    },
+    {
+        "text": "versus RGB resolution.",
+        "start": 89.014,
+        "duration": 1.65
+    },
+    {
+        "text": "So every dark point is an RGB\npoint, and the depth sensors",
+        "start": 90.664,
+        "duration": 4.29
+    },
+    {
+        "text": "were like more pixelated, worse.",
+        "start": 94.954,
+        "duration": 2.04
+    },
+    {
+        "text": "Some of the lessons learned, early\non we were just trying to remind",
+        "start": 98.014,
+        "duration": 4.68
+    },
+    {
+        "text": "each other not to eat the data set.",
+        "start": 102.694,
+        "duration": 1.83
+    },
+    {
+        "text": "This is since some of it was edible\nand it was in the kitchen, so we just",
+        "start": 104.644,
+        "duration": 3.66
+    },
+    {
+        "text": "finally separated out of the rest of\nthe food that we planned on eating.",
+        "start": 108.994,
+        "duration": 4.23
+    },
+    {
+        "text": "the other, another lesson learned\nwas it was really great, I think",
+        "start": 114.964,
+        "duration": 3.93
+    },
+    {
+        "text": "everybody was mentioning this, building\nsomething with Monty end to end, so",
+        "start": 118.894,
+        "duration": 4.65
+    },
+    {
+        "text": "that we had to write and understand\nevery single part of the Monty system.",
+        "start": 123.544,
+        "duration": 4.98
+    },
+    {
+        "text": "Like I know Ramy and I are\nway more familiar with how",
+        "start": 128.584,
+        "duration": 4.02
+    },
+    {
+        "text": "the whole system works now.",
+        "start": 132.604,
+        "duration": 1.35
+    },
+    {
+        "text": "of course, IANS",
+        "start": 134.914,
+        "duration": 1.29
+    },
+    {
+        "text": "we, I understood, TER for a little bit.",
+        "start": 138.214,
+        "duration": 3.6
+    },
+    {
+        "text": "so that was great.",
+        "start": 142.234,
+        "duration": 0.96
+    },
+    {
+        "text": "And I think I still remember them.",
+        "start": 143.494,
+        "duration": 2.7
+    },
+    {
+        "text": "There's a resource, that really\nhelped, with the intuition.",
+        "start": 146.704,
+        "duration": 3.75
+    },
+    {
+        "text": "some of the Monty framework thing,\nthings, there's some ideas for action",
+        "start": 152.164,
+        "duration": 4.92
+    },
+    {
+        "text": "refactor that I wanna do after we're done.",
+        "start": 157.204,
+        "duration": 1.98
+    },
+    {
+        "text": "noticing too many resets\nhappening before an episode.",
+        "start": 160.414,
+        "duration": 2.94
+    },
+    {
+        "text": "if you're running a simulation, you\nnever notice it, but if you have a",
+        "start": 164.044,
+        "duration": 3.39
+    },
+    {
+        "text": "robot that's like, why is it doing the\nresets so many times before it starts?",
+        "start": 167.434,
+        "duration": 4.77
+    },
+    {
+        "text": "So that was a neat finding.",
+        "start": 172.204,
+        "duration": 2.49
+    },
+    {
+        "text": "Yeah, we ran into the same problem,\nspent way too much time on it, and",
+        "start": 175.654,
+        "duration": 3.12
+    },
+    {
+        "text": "then decided that we'll just always\nhave to press the button twice",
+        "start": 178.774,
+        "duration": 3.27
+    },
+    {
+        "text": "before we start the experiment.",
+        "start": 182.044,
+        "duration": 1.35
+    },
+    {
+        "text": "We had to do the same, like we had\nto take two pictures that, because",
+        "start": 184.139,
+        "duration": 2.585
+    },
+    {
+        "text": "the first picture would always\nbe black for whatever reason.",
+        "start": 186.724,
+        "duration": 2.67
+    },
+    {
+        "text": "Nice.",
+        "start": 189.604,
+        "duration": 0.54
+    },
+    {
+        "text": "I removed the extra reset, so that was my,\nbecause our, coding approach was to, we",
+        "start": 190.774,
+        "duration": 5.4
+    },
+    {
+        "text": "just forked the entire Monty repository\nand we just hacked whatever we needed to.",
+        "start": 196.174,
+        "duration": 4.35
+    },
+    {
+        "text": "So that, that was convenient.",
+        "start": 201.154,
+        "duration": 1.35
+    },
+    {
+        "text": "That was also a convenient\napproach to the hackathon for us.",
+        "start": 202.504,
+        "duration": 2.73
+    },
+    {
+        "text": "Yeah.",
+        "start": 205.354,
+        "duration": 0.06
+    },
+    {
+        "text": "picking coordinates that\nmake the problem easy.",
+        "start": 206.344,
+        "duration": 2.52
+    },
+    {
+        "text": "As you saw, our robot has a\ncentral platform that rotates and",
+        "start": 209.044,
+        "duration": 3.15
+    },
+    {
+        "text": "a thing that goes up and down.",
+        "start": 212.194,
+        "duration": 1.41
+    },
+    {
+        "text": "So we're like, our units are the\nrobot radius and we are on the",
+        "start": 213.904,
+        "duration": 4.11
+    },
+    {
+        "text": "unit circle, and that simplified\na lot of things immediately.",
+        "start": 218.014,
+        "duration": 4.02
+    },
+    {
+        "text": "so that was super helpful.",
+        "start": 222.724,
+        "duration": 1.38
+    },
+    {
+        "text": "Next on debugging and visualizations.",
+        "start": 225.394,
+        "duration": 2.19
+    },
+    {
+        "text": "Yeah.",
+        "start": 227.644,
+        "duration": 0.45
+    },
+    {
+        "text": "I think to me, I feel like having a,\nvery good, this is what I figured out",
+        "start": 228.364,
+        "duration": 5.88
+    },
+    {
+        "text": "early on, that if you have very good\nvisualizations and a bugging that will",
+        "start": 234.244,
+        "duration": 3.27
+    },
+    {
+        "text": "go, a long way in, in something like this.",
+        "start": 237.514,
+        "duration": 3.06
+    },
+    {
+        "text": "so yeah, we started working\non some, nice visualizations.",
+        "start": 242.494,
+        "duration": 4.17
+    },
+    {
+        "text": "You'll see that in the next, few slides,\nbut, basically we are able to see the",
+        "start": 246.664,
+        "duration": 5.58
+    },
+    {
+        "text": "sensors positions live as it's basically\nmaking movements and basically also what",
+        "start": 252.274,
+        "duration": 5.28
+    },
+    {
+        "text": "like the current MLH is or like what\nMonty thinks is happening and what the",
+        "start": 257.644,
+        "duration": 4.68
+    },
+    {
+        "text": "rotations are and all of that stuff.",
+        "start": 262.354,
+        "duration": 1.56
+    },
+    {
+        "text": "we had some, trouble with,\nthe coordinate systems.",
+        "start": 265.084,
+        "duration": 4.53
+    },
+    {
+        "text": "So we, we started using, so for\nthe get state of the agent so",
+        "start": 269.674,
+        "duration": 4.5
+    },
+    {
+        "text": "that we know where the agent is.",
+        "start": 274.174,
+        "duration": 1.35
+    },
+    {
+        "text": "We're using a different coordinate\nsystem that wasn't Monty and we",
+        "start": 275.704,
+        "duration": 2.76
+    },
+    {
+        "text": "figured, it will still work fine.",
+        "start": 278.464,
+        "duration": 2.16
+    },
+    {
+        "text": "but then the, it does not plug\nwell with the depth to 3D.",
+        "start": 281.374,
+        "duration": 3.69
+    },
+    {
+        "text": "So we ended up changing all\nof my, our computations for",
+        "start": 285.064,
+        "duration": 3.27
+    },
+    {
+        "text": "the, get state of the agent.",
+        "start": 288.334,
+        "duration": 3.27
+    },
+    {
+        "text": "And that's where, learning\nthe co also that's where we",
+        "start": 291.634,
+        "duration": 4.17
+    },
+    {
+        "text": "started looking into cos too.",
+        "start": 295.804,
+        "duration": 1.53
+    },
+    {
+        "text": "the, and then we tried\nto do model scaling.",
+        "start": 299.284,
+        "duration": 3.33
+    },
+    {
+        "text": "basically we're using different,",
+        "start": 304.324,
+        "duration": 1.71
+    },
+    {
+        "text": "like different, a different\nscale, than what is in the dataset",
+        "start": 308.344,
+        "duration": 3.66
+    },
+    {
+        "text": "that was provided to us before.",
+        "start": 312.004,
+        "duration": 1.53
+    },
+    {
+        "text": "So that did not work very well, and I'm\nnot really, sure why, but, so we, have,",
+        "start": 313.984,
+        "duration": 6.93
+    },
+    {
+        "text": "we added some code into the grid object\nmodel that will basically, you can just",
+        "start": 321.064,
+        "duration": 3.09
+    },
+    {
+        "text": "say, scale this model by this scale\nfactor and we'll just scale the mesh and",
+        "start": 324.154,
+        "duration": 5.04
+    },
+    {
+        "text": "recalculate the KT three and everything.",
+        "start": 329.254,
+        "duration": 1.68
+    },
+    {
+        "text": "but that still did not help very well.",
+        "start": 331.744,
+        "duration": 2.22
+    },
+    {
+        "text": "what we ended up doing is that we\nbasically trained our models, but then the",
+        "start": 335.704,
+        "duration": 3.66
+    },
+    {
+        "text": "models that we trained are, very sparse.",
+        "start": 339.424,
+        "duration": 2.91
+    },
+    {
+        "text": "they may not work very well, but\nthe idea is that if we train a",
+        "start": 344.134,
+        "duration": 3.33
+    },
+    {
+        "text": "dense model, it'll work, better.",
+        "start": 347.464,
+        "duration": 1.95
+    },
+    {
+        "text": "but you'll see that we still have some\nperformance, A reasonable performance.",
+        "start": 349.864,
+        "duration": 4.86
+    },
+    {
+        "text": "and early on we, like in the first day,\nwe had some, a lot of networking issues.",
+        "start": 355.684,
+        "duration": 4.17
+    },
+    {
+        "text": "And, it basically, the reason is\nthey have multiple sources of, like",
+        "start": 359.944,
+        "duration": 7.29
+    },
+    {
+        "text": "they have multiple routers, and if\nyou have the different clients are",
+        "start": 367.444,
+        "duration": 3.69
+    },
+    {
+        "text": "connected to different routers, they'll\nnot be able to talk to each other.",
+        "start": 371.134,
+        "duration": 2.4
+    },
+    {
+        "text": "So what we ended up doing is that we\nneeded a router, but then, we could not",
+        "start": 373.864,
+        "duration": 4.83
+    },
+    {
+        "text": "make that router connect to the internet\nexcept through a hacky solution where we",
+        "start": 378.784,
+        "duration": 4.2
+    },
+    {
+        "text": "plug it into a wifi extender and that wifi\nextender gives the internet to the router,",
+        "start": 383.014,
+        "duration": 4.23
+    },
+    {
+        "text": "and then we can connect to the router.",
+        "start": 387.634,
+        "duration": 1.29
+    },
+    {
+        "text": "but the, the cool thing about what we\nbuilt is that we could actually like",
+        "start": 391.084,
+        "duration": 4.95
+    },
+    {
+        "text": "decouple the simulator from, Monty itself.",
+        "start": 396.034,
+        "duration": 3.84
+    },
+    {
+        "text": "So we, what we tried is, running two\ndifferent mons on the same hardware.",
+        "start": 399.874,
+        "duration": 4.95
+    },
+    {
+        "text": "So basically, Tristan, and I, we\nwere running experiments at the same",
+        "start": 404.824,
+        "duration": 3.93
+    },
+    {
+        "text": "time and we were fighting for the\nhardware, which was very cool to see.",
+        "start": 408.754,
+        "duration": 3.27
+    },
+    {
+        "text": "Basically like the, sensors moving, like\nI, I give it a command to move somewhere",
+        "start": 412.024,
+        "duration": 4.65
+    },
+    {
+        "text": "and then Tristan just moves it somewhere\nelse, and then we start arguing about,",
+        "start": 416.674,
+        "duration": 3.75
+    },
+    {
+        "text": "and need the resources and, all of that.",
+        "start": 422.614,
+        "duration": 1.86
+    },
+    {
+        "text": "yeah, and a lot more stuff that\nwe, the death camera was like",
+        "start": 425.494,
+        "duration": 4.08
+    },
+    {
+        "text": "giving us a lot of trouble.",
+        "start": 429.574,
+        "duration": 1.02
+    },
+    {
+        "text": "yeah, too much troubleshooting\nand debugging that went there.",
+        "start": 432.064,
+        "duration": 2.52
+    },
+    {
+        "text": "And yeah, like I said,\ndebugging setup goes a long way.",
+        "start": 434.584,
+        "duration": 3.06
+    },
+    {
+        "text": "yeah.",
+        "start": 439.624,
+        "duration": 0.15
+    },
+    {
+        "text": "Okay,",
+        "start": 439.804,
+        "duration": 0.39
+    },
+    {
+        "text": "we did some, so with troubles,\nwith changing the scale of the",
+        "start": 443.314,
+        "duration": 5.7
+    },
+    {
+        "text": "existing dataset, we ended up\ntraining on the dataset ourselves.",
+        "start": 449.014,
+        "duration": 4.89
+    },
+    {
+        "text": "So if you don't recognize\nit, but that is a cup.",
+        "start": 454.414,
+        "duration": 3.57
+    },
+    {
+        "text": "All right.",
+        "start": 459.514,
+        "duration": 0.36
+    },
+    {
+        "text": "And so we, this is\ntraining sped up 40 times.",
+        "start": 459.934,
+        "duration": 4.14
+    },
+    {
+        "text": "So on the left you see the visualization\nbeing built and on the right you see",
+        "start": 464.494,
+        "duration": 3.27
+    },
+    {
+        "text": "the robot, using a, training policy\nwas essentially orbit around the object",
+        "start": 467.764,
+        "duration": 6.0
+    },
+    {
+        "text": "from the bottom up and just scan it.",
+        "start": 473.764,
+        "duration": 2.34
+    },
+    {
+        "text": "And so that was the, that's\nthe idea behind that.",
+        "start": 476.824,
+        "duration": 2.22
+    },
+    {
+        "text": "this is what, the final\nscan for the cup look like.",
+        "start": 481.174,
+        "duration": 3.99
+    },
+    {
+        "text": "So it does end up looking like a cup.",
+        "start": 485.344,
+        "duration": 2.7
+    },
+    {
+        "text": "It looks like a cup, but the handle\nis, yeah, I think we, we have some",
+        "start": 488.254,
+        "duration": 3.57
+    },
+    {
+        "text": "trouble with the depth information and\nmaybe the focal point of the, like the,",
+        "start": 491.824,
+        "duration": 4.95
+    },
+    {
+        "text": "field of view and all of that stuff.",
+        "start": 496.834,
+        "duration": 1.47
+    },
+    {
+        "text": "So it, looked, it's a perfect circle\nand everything, but the, the handle",
+        "start": 498.724,
+        "duration": 4.89
+    },
+    {
+        "text": "is a little, detached from, the cup.",
+        "start": 503.614,
+        "duration": 2.34
+    },
+    {
+        "text": "and this is why this, oh, I see.",
+        "start": 507.514,
+        "duration": 2.88
+    },
+    {
+        "text": "Our evaluation works fine\nwith the trained models.",
+        "start": 510.424,
+        "duration": 3.36
+    },
+    {
+        "text": "but then maybe this is why scaling\nthe meshes didn't work very",
+        "start": 514.204,
+        "duration": 2.88
+    },
+    {
+        "text": "well because, they're different,\nduring inference we can see that,",
+        "start": 517.084,
+        "duration": 5.97
+    },
+    {
+        "text": "so this is, a different kind of\nvisualization where it's basically,",
+        "start": 525.394,
+        "duration": 2.88
+    },
+    {
+        "text": "I'm plotting the current MLH.",
+        "start": 528.574,
+        "duration": 2.04
+    },
+    {
+        "text": "in, in real time.",
+        "start": 532.114,
+        "duration": 1.11
+    },
+    {
+        "text": "it's basically if you can figure\nout the rotation, the rotation, this",
+        "start": 534.424,
+        "duration": 4.62
+    },
+    {
+        "text": "little.is a sensorimotor, basically,\nthis is where thinks the sensorimotor",
+        "start": 539.044,
+        "duration": 3.03
+    },
+    {
+        "text": "is compared to where the mug is.",
+        "start": 542.074,
+        "duration": 2.28
+    },
+    {
+        "text": "and it was able to figure out that\nthe cup was, right side up, but it",
+        "start": 545.494,
+        "duration": 5.64
+    },
+    {
+        "text": "could not figure out the rotation,\nlike basically the rotation on the",
+        "start": 551.134,
+        "duration": 2.85
+    },
+    {
+        "text": "y axis or like where the handle is.",
+        "start": 553.984,
+        "duration": 2.28
+    },
+    {
+        "text": "but it could separate it from all\nthe other objects in the dataset.",
+        "start": 558.274,
+        "duration": 2.91
+    },
+    {
+        "text": "that's also good.",
+        "start": 562.384,
+        "duration": 0.75
+    },
+    {
+        "text": "and we were using, and essentially we\nuse based policy, just random actions.",
+        "start": 564.964,
+        "duration": 4.05
+    },
+    {
+        "text": "we had to rewrite it a little bit to,\nyou use our actions, but it was, but as",
+        "start": 569.974,
+        "duration": 4.56
+    },
+    {
+        "text": "you can see in the video, those actions\nare just purely random, the up, down",
+        "start": 574.564,
+        "duration": 4.41
+    },
+    {
+        "text": "and ro and rotating around the object.",
+        "start": 578.974,
+        "duration": 2.07
+    },
+    {
+        "text": "But the sensor's always guaranteed\nto be on the object in these cases.",
+        "start": 581.599,
+        "duration": 2.46
+    },
+    {
+        "text": "No, How do you move back?",
+        "start": 584.519,
+        "duration": 1.805
+    },
+    {
+        "text": "It is random.",
+        "start": 587.724,
+        "duration": 0.82
+    },
+    {
+        "text": "It's built in.",
+        "start": 588.634,
+        "duration": 0.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 589.429,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 589.864,
+        "duration": 0.24
+    },
+    {
+        "text": "So if you're off object, how do,\nhow does it know that it's off",
+        "start": 590.104,
+        "duration": 2.28
+    },
+    {
+        "text": "object, I guess is my question?",
+        "start": 592.384,
+        "duration": 1.32
+    },
+    {
+        "text": "there's a, the, transform, right?",
+        "start": 594.124,
+        "duration": 2.43
+    },
+    {
+        "text": "So based on the depth, it\nknows that the depth see, yeah.",
+        "start": 596.554,
+        "duration": 3.57
+    },
+    {
+        "text": "So the depth is like too far,\nthen you're not an object.",
+        "start": 600.124,
+        "duration": 2.91
+    },
+    {
+        "text": "Okay.",
+        "start": 603.034,
+        "duration": 0.03
+    },
+    {
+        "text": "So we go through the building, the\nsemantic, labels based on the depth.",
+        "start": 603.094,
+        "duration": 6.51
+    },
+    {
+        "text": "Okay.",
+        "start": 609.814,
+        "duration": 0.39
+    },
+    {
+        "text": "I have more questions.",
+        "start": 611.704,
+        "duration": 0.96
+    },
+    {
+        "text": "Okay.",
+        "start": 612.874,
+        "duration": 0.21
+    },
+    {
+        "text": "We can get into, is this the\ntime for live demo or do they",
+        "start": 613.144,
+        "duration": 5.13
+    },
+    {
+        "text": "come after all the presentations?",
+        "start": 618.274,
+        "duration": 1.5
+    },
+    {
+        "text": "maybe we wait until after the\npresentations and we pick one",
+        "start": 623.554,
+        "duration": 2.73
+    },
+    {
+        "text": "object that we all demo on.",
+        "start": 626.284,
+        "duration": 1.44
+    },
+    {
+        "text": "Okay.",
+        "start": 628.714,
+        "duration": 0.48
+    },
+    {
+        "text": "Sounds good.",
+        "start": 629.404,
+        "duration": 0.54
+    },
+    {
+        "text": "that's it.",
+        "start": 630.574,
+        "duration": 0.57
+    },
+    {
+        "text": "Nice.",
+        "start": 632.464,
+        "duration": 0.48
+    },
+    {
+        "text": "Great job.",
+        "start": 632.944,
+        "duration": 0.69
+    },
+    {
+        "text": "Looks really cool.",
+        "start": 633.814,
+        "duration": 0.9
+    },
+    {
+        "text": "Yeah.",
+        "start": 635.464,
+        "duration": 0.12
+    },
+    {
+        "text": "So can I ask those same two questions with\nregards to Yeah, could you ask them again?",
+        "start": 636.094,
+        "duration": 8.58
+    },
+    {
+        "text": "Yeah, I gotta bring 'em up.",
+        "start": 645.424,
+        "duration": 2.28
+    },
+    {
+        "text": "Okay.",
+        "start": 648.124,
+        "duration": 0.48
+    },
+    {
+        "text": "how did your project, demonstrate\nMonty's capabilities and, how does,",
+        "start": 650.344,
+        "duration": 6.12
+    },
+    {
+        "text": "what, how do you see Monty, what the\napplication you're doing, for the future?",
+        "start": 656.674,
+        "duration": 6.54
+    },
+    {
+        "text": "Yeah, demonstrating Monty's capabilities,\nI think this would count as, the,",
+        "start": 664.984,
+        "duration": 6.84
+    },
+    {
+        "text": "probably, I don't know, I'm not\nsure, but this is probably the first",
+        "start": 672.514,
+        "duration": 2.37
+    },
+    {
+        "text": "system that has, actual movements\nin the world, basically instead",
+        "start": 674.884,
+        "duration": 5.52
+    },
+    {
+        "text": "of, like circadian over an image.",
+        "start": 680.404,
+        "duration": 2.16
+    },
+    {
+        "text": "So it is, not like we're\ntaking an image and then we're",
+        "start": 682.714,
+        "duration": 2.52
+    },
+    {
+        "text": "moving a patch over the image.",
+        "start": 685.234,
+        "duration": 1.95
+    },
+    {
+        "text": "it's actually the patch itself\nis moving through the world,",
+        "start": 688.114,
+        "duration": 3.66
+    },
+    {
+        "text": "which is in my opinion, is very\ndifferent from, what we had before.",
+        "start": 692.284,
+        "duration": 3.66
+    },
+    {
+        "text": "so it's demonstrating a different\nside of Monty's capabilities",
+        "start": 697.924,
+        "duration": 3.36
+    },
+    {
+        "text": "with an actual, motor basically.",
+        "start": 701.674,
+        "duration": 2.4
+    },
+    {
+        "text": "Is that, that this thing works.",
+        "start": 704.074,
+        "duration": 1.86
+    },
+    {
+        "text": "As a sensorimotor.",
+        "start": 706.819,
+        "duration": 0.93
+    },
+    {
+        "text": "Okay.",
+        "start": 708.019,
+        "duration": 0.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 708.529,
+        "duration": 0.12
+    },
+    {
+        "text": "Can I throw in there, so just one\npoint about the patch, like in the",
+        "start": 708.649,
+        "duration": 3.51
+    },
+    {
+        "text": "previous presentations you saw like\na full image of every, being taken.",
+        "start": 712.159,
+        "duration": 4.5
+    },
+    {
+        "text": "Literally, Monty only sees those dots.",
+        "start": 716.989,
+        "duration": 2.85
+    },
+    {
+        "text": "there's nothing else, there's no\nimage of the cup, there's nothing.",
+        "start": 720.439,
+        "duration": 3.18
+    },
+    {
+        "text": "Monty learns just those dots on the left.",
+        "start": 723.649,
+        "duration": 2.55
+    },
+    {
+        "text": "And based on that, it\nlearns to recognize objects.",
+        "start": 726.589,
+        "duration": 2.61
+    },
+    {
+        "text": "There's no full picture\ngiven to Monty at any point.",
+        "start": 729.199,
+        "duration": 3.03
+    },
+    {
+        "text": "Go ahead.",
+        "start": 733.909,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 734.929,
+        "duration": 0.36
+    },
+    {
+        "text": "and then in terms of, future,\ncapabilities, I think that, so this",
+        "start": 737.869,
+        "duration": 5.85
+    },
+    {
+        "text": "is a first step, in my opinion.",
+        "start": 743.719,
+        "duration": 2.01
+    },
+    {
+        "text": "There's, just like with the drone\nteam as well, there would be,",
+        "start": 745.729,
+        "duration": 3.6
+    },
+    {
+        "text": "opportunities there to explore boating,\nwhich I think is very important.",
+        "start": 750.739,
+        "duration": 3.33
+    },
+    {
+        "text": "it's easy.",
+        "start": 755.749,
+        "duration": 0.81
+    },
+    {
+        "text": "Now, we're building this\nwith Lego, so it's easy.",
+        "start": 756.589,
+        "duration": 2.16
+    },
+    {
+        "text": "Like we could, add a different\nsensorimotor and add that through a",
+        "start": 758.749,
+        "duration": 2.34
+    },
+    {
+        "text": "different angle, and then we can just\nmove it, we can move it independently",
+        "start": 761.089,
+        "duration": 4.98
+    },
+    {
+        "text": "or we can move them together as, part\nof one agent, so they can move, like two",
+        "start": 766.069,
+        "duration": 5.43
+    },
+    {
+        "text": "sensorimotor patches on a finger together.",
+        "start": 771.499,
+        "duration": 1.8
+    },
+    {
+        "text": "Or they can move as like different\nhands and then they like look at",
+        "start": 773.299,
+        "duration": 4.26
+    },
+    {
+        "text": "different parts of the, of the mug.",
+        "start": 777.559,
+        "duration": 1.92
+    },
+    {
+        "text": "And so basically it's very,\nextendable, the way that we set it up.",
+        "start": 779.479,
+        "duration": 4.53
+    },
+    {
+        "text": "so yeah, if that answers\nyour question, I'm not sure.",
+        "start": 785.629,
+        "duration": 3.27
+    },
+    {
+        "text": "Yeah, I think it's this,\nit's a great point.",
+        "start": 790.009,
+        "duration": 2.79
+    },
+    {
+        "text": "It's the very first time that Monty is\nworking with a motor in the real world.",
+        "start": 794.149,
+        "duration": 4.41
+    },
+    {
+        "text": "It's a, huge thing.",
+        "start": 799.039,
+        "duration": 1.02
+    },
+    {
+        "text": "And then I guess just for us,\nit'll be a great setup to have",
+        "start": 800.119,
+        "duration": 3.42
+    },
+    {
+        "text": "to test Monty in the real world.",
+        "start": 803.539,
+        "duration": 1.5
+    },
+    {
+        "text": "Right now, we basically, everything that's\na bit more complex, anything that involves",
+        "start": 805.039,
+        "duration": 3.96
+    },
+    {
+        "text": "movement, we have to test in simulation.",
+        "start": 808.999,
+        "duration": 1.92
+    },
+    {
+        "text": "So now we have a test bed in\nthe real world, and we could",
+        "start": 811.159,
+        "duration": 2.46
+    },
+    {
+        "text": "give it any kind of object.",
+        "start": 813.979,
+        "duration": 1.29
+    },
+    {
+        "text": "We don't have to create like a\nsimulated object data set or anything.",
+        "start": 815.269,
+        "duration": 4.11
+    },
+    {
+        "text": "We can pick something from the\nkitchen and put it on the platform.",
+        "start": 819.379,
+        "duration": 2.94
+    },
+    {
+        "text": "See what Mon Monty does.",
+        "start": 822.499,
+        "duration": 1.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 825.829,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 826.729,
+        "duration": 0.24
+    },
+    {
+        "text": "it, yeah, it also scans very nicely.",
+        "start": 828.319,
+        "duration": 2.97
+    },
+    {
+        "text": "it, it scans very fast, but\nthen, the, it's still sparse,",
+        "start": 832.084,
+        "duration": 6.255
+    },
+    {
+        "text": "compared to what, I would expect.",
+        "start": 838.699,
+        "duration": 1.86
+    },
+    {
+        "text": "Like I looked at the measures\nthat, you gave us, and they're",
+        "start": 840.559,
+        "duration": 3.51
+    },
+    {
+        "text": "very nice, but like very dense.",
+        "start": 844.069,
+        "duration": 2.1
+    },
+    {
+        "text": "So this is sparse, but the fact\nthat it still works even with those",
+        "start": 846.409,
+        "duration": 4.2
+    },
+    {
+        "text": "sparse models is, mind blowing to me.",
+        "start": 850.609,
+        "duration": 2.67
+    },
+    {
+        "text": "So",
+        "start": 853.909,
+        "duration": 0.57
+    },
+    {
+        "text": "does it work, at any speed?",
+        "start": 857.479,
+        "duration": 0.84
+    },
+    {
+        "text": "Does, if the, if you slow down\nthe motor or speed it up, does",
+        "start": 858.319,
+        "duration": 5.25
+    },
+    {
+        "text": "it still have the same results?",
+        "start": 863.569,
+        "duration": 1.5
+    },
+    {
+        "text": "slowing it down is always easier.",
+        "start": 866.119,
+        "duration": 1.53
+    },
+    {
+        "text": "speeding it up.",
+        "start": 867.979,
+        "duration": 0.96
+    },
+    {
+        "text": "We are, we're basically, we're running\nat a, at a high speed actually.",
+        "start": 868.939,
+        "duration": 3.93
+    },
+    {
+        "text": "And, but we're limited by how, like\nhow far, how, how much time it takes to",
+        "start": 872.869,
+        "duration": 5.31
+    },
+    {
+        "text": "transfer the image from like wirelessly,\nfrom the sensors to the computer.",
+        "start": 878.179,
+        "duration": 4.29
+    },
+    {
+        "text": "And process them.",
+        "start": 882.814,
+        "duration": 0.81
+    },
+    {
+        "text": "I, this is actually the bottleneck\nwith one of the challenges was I was",
+        "start": 884.524,
+        "duration": 4.26
+    },
+    {
+        "text": "sending a bigger, so that to be able to\nstitch the, depth camera with the RGBI",
+        "start": 888.784,
+        "duration": 5.34
+    },
+    {
+        "text": "was sending both like bigger images\nfrom the Raspberry Pi, from the, from",
+        "start": 894.124,
+        "duration": 4.83
+    },
+    {
+        "text": "Monty, from the, robot to the computer.",
+        "start": 898.954,
+        "duration": 3.33
+    },
+    {
+        "text": "and then stitching those.",
+        "start": 903.304,
+        "duration": 1.2
+    },
+    {
+        "text": "But then, we found out that if we just\nsend the patches and do the competitions",
+        "start": 904.774,
+        "duration": 4.98
+    },
+    {
+        "text": "for which patch we want, which is\nbasically sends smaller images across",
+        "start": 909.934,
+        "duration": 4.47
+    },
+    {
+        "text": "the network, it goes, much faster.",
+        "start": 914.404,
+        "duration": 2.01
+    },
+    {
+        "text": "so Monty doesn't have a problem.",
+        "start": 917.554,
+        "duration": 1.2
+    },
+    {
+        "text": "Actually, Monty is much faster than,\nthe bottleneck of sending, okay.",
+        "start": 918.754,
+        "duration": 4.825
+    },
+    {
+        "text": "Images.",
+        "start": 923.579,
+        "duration": 0.28
+    },
+    {
+        "text": "So yeah, it works fine with\nhigh speeds, Short answer.",
+        "start": 924.694,
+        "duration": 4.92
+    },
+    {
+        "text": "And yet to Monty it doesn't matter\nhow fast you move or in what pattern",
+        "start": 930.244,
+        "duration": 3.66
+    },
+    {
+        "text": "you move over the object, it's not\nlike you need to have seen that",
+        "start": 933.904,
+        "duration": 2.76
+    },
+    {
+        "text": "pattern before during training.",
+        "start": 936.814,
+        "duration": 1.56
+    },
+    {
+        "text": "You can generalize to any speed\nof movement as long as what Rami",
+        "start": 938.584,
+        "duration": 4.14
+    },
+    {
+        "text": "says, the transfers fast enough.",
+        "start": 942.724,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 945.244,
+        "duration": 0.21
+    },
+    {
+        "text": "And you can increase.",
+        "start": 945.519,
+        "duration": 0.9
+    },
+    {
+        "text": "You're muted.",
+        "start": 950.069,
+        "duration": 0.66
+    },
+    {
+        "text": "Muted.",
+        "start": 950.859,
+        "duration": 0.35
+    },
+    {
+        "text": "And we can have, and you can\nspeed up the inference, by having",
+        "start": 951.754,
+        "duration": 3.6
+    },
+    {
+        "text": "Monty have multiple sensors.",
+        "start": 955.384,
+        "duration": 1.44
+    },
+    {
+        "text": "So I have thousand sensors\nlooking at something.",
+        "start": 956.824,
+        "duration": 3.12
+    },
+    {
+        "text": "You can recognize it instantaneously\nrather than having to move",
+        "start": 959.944,
+        "duration": 2.46
+    },
+    {
+        "text": "or you can move it once.",
+        "start": 962.434,
+        "duration": 0.93
+    },
+    {
+        "text": "so yeah, you can, once we put this in\nhardware, this could go very, fast.",
+        "start": 964.174,
+        "duration": 4.71
+    },
+    {
+        "text": "And another thing about the future\ndemonstrating future capabilities",
+        "start": 970.084,
+        "duration": 4.08
+    },
+    {
+        "text": "is we have zero precise movement.",
+        "start": 974.734,
+        "duration": 2.61
+    },
+    {
+        "text": "So when the elevator goes up, we ask\nit to go a certain distance, but it",
+        "start": 977.674,
+        "duration": 4.17
+    },
+    {
+        "text": "goes whatever distance it manages.",
+        "start": 981.844,
+        "duration": 2.01
+    },
+    {
+        "text": "there's minimal distance when it\nrotates, we're like, rotate by seven",
+        "start": 984.094,
+        "duration": 4.5
+    },
+    {
+        "text": "degrees, it's gonna do whatever it wants.",
+        "start": 988.594,
+        "duration": 2.46
+    },
+    {
+        "text": "but we, but as a result, we, but we\nare able to, work on proprioception",
+        "start": 991.624,
+        "duration": 6.51
+    },
+    {
+        "text": "and make sure that Monty was still\nprocessing where the thing actually was.",
+        "start": 998.134,
+        "duration": 5.4
+    },
+    {
+        "text": "So there's no, so what we also\ndemonstrating is you don't need any",
+        "start": 1003.534,
+        "duration": 3.54
+    },
+    {
+        "text": "sort of precise movement as long\nas you figure out where you end up.",
+        "start": 1007.074,
+        "duration": 4.11
+    },
+    {
+        "text": "And the policies still seem to work Okay.",
+        "start": 1011.394,
+        "duration": 2.58
+    },
+    {
+        "text": "And still infer and train objects, even\nwith imprecise motor control, which is a",
+        "start": 1013.974,
+        "duration": 7.77
+    },
+    {
+        "text": "new demonstration outside of simulation.",
+        "start": 1022.374,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 1025.884,
+        "duration": 0.27
+    },
+    {
+        "text": "Actually there were some times\nwhere the, the ro the, rotation",
+        "start": 1026.154,
+        "duration": 4.95
+    },
+    {
+        "text": "robot, that one that rotates the\nplatform, it was not even moving.",
+        "start": 1031.104,
+        "duration": 3.36
+    },
+    {
+        "text": "Like it, it tries to move, but it\nlooks like it doesn't have enough",
+        "start": 1034.464,
+        "duration": 2.52
+    },
+    {
+        "text": "power or we're just doing small steps.",
+        "start": 1036.984,
+        "duration": 2.58
+    },
+    {
+        "text": "but the, basically because we're using\npro price entry, set, we're getting the,",
+        "start": 1040.734,
+        "duration": 7.38
+    },
+    {
+        "text": "position of the agent, it doesn't matter.",
+        "start": 1048.114,
+        "duration": 2.37
+    },
+    {
+        "text": "So basically it would just add.",
+        "start": 1050.694,
+        "duration": 1.23
+    },
+    {
+        "text": "Points at that same location or\ndepending on how the, object is built",
+        "start": 1052.284,
+        "duration": 3.99
+    },
+    {
+        "text": "doesn't need to add these points.",
+        "start": 1056.394,
+        "duration": 1.5
+    },
+    {
+        "text": "So the lesson learned is that, just being\nable to get an accurate, position of the",
+        "start": 1058.314,
+        "duration": 7.98
+    },
+    {
+        "text": "agent is more important than moving the\nagents, moving the, agent somewhere or, or",
+        "start": 1066.294,
+        "duration": 6.84
+    },
+    {
+        "text": "trying to move it to somewhere accurately.",
+        "start": 1073.134,
+        "duration": 1.83
+    },
+    {
+        "text": "It doesn't matter as long\nyou're, as you're able to",
+        "start": 1075.114,
+        "duration": 1.68
+    },
+    {
+        "text": "get the position accurately.",
+        "start": 1076.794,
+        "duration": 1.11
+    },
+    {
+        "text": "that was helpful.",
+        "start": 1080.604,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 1086.004,
+        "duration": 0.12
+    },
+    {
+        "text": "Awesome.",
+        "start": 1086.189,
+        "duration": 0.32
+    },
+    {
+        "text": "Looks great.",
+        "start": 1087.869,
+        "duration": 0.63
+    },
+    {
+        "text": "That's how they got their name.",
+        "start": 1090.509,
+        "duration": 1.435
+    },
+    {
+        "text": "Yeah, everything's awesome.",
+        "start": 1093.114,
+        "duration": 1.2
+    },
+    {
+        "text": "That was Tristan's idea.",
+        "start": 1096.054,
+        "duration": 1.11
+    },
+    {
+        "text": "what you're observing now\nis, it's end, it's resetting",
+        "start": 1099.898,
+        "duration": 3.15
+    },
+    {
+        "text": "into that starting position.",
+        "start": 1103.048,
+        "duration": 1.44
+    },
+    {
+        "text": "Cool.",
+        "start": 1109.918,
+        "duration": 0.24
+    },
+    {
+        "text": "Oh, wow.",
+        "start": 1123.568,
+        "duration": 0.42
+    },
+    {
+        "text": "Already hot sauce, most likely hypothesis",
+        "start": 1123.988,
+        "duration": 2.67
+    },
+    {
+        "text": "things that might be Monty's heart.",
+        "start": 1129.658,
+        "duration": 1.35
+    },
+    {
+        "text": "So I don't know.",
+        "start": 1131.098,
+        "duration": 0.99
+    },
+    {
+        "text": "Oh, it can I, oh, it's\nneck and neck, yeah.",
+        "start": 1133.123,
+        "duration": 3.225
+    },
+    {
+        "text": "And back,",
+        "start": 1138.088,
+        "duration": 0.93
+    },
+    {
+        "text": "neck, and neck with what?",
+        "start": 1142.018,
+        "duration": 0.87
+    },
+    {
+        "text": "I can't see the.",
+        "start": 1142.888,
+        "duration": 0.72
+    },
+    {
+        "text": "No.",
+        "start": 1144.583,
+        "duration": 0.18
+    },
+    {
+        "text": "Now hot Sauce is a clear lead,\nbut there was Monty's heart",
+        "start": 1144.763,
+        "duration": 2.79
+    },
+    {
+        "text": "as well there for a few steps.",
+        "start": 1147.583,
+        "duration": 1.35
+    },
+    {
+        "text": "Monty's what?",
+        "start": 1150.883,
+        "duration": 0.69
+    },
+    {
+        "text": "Oh, detective Hot Sauce.",
+        "start": 1152.208,
+        "duration": 1.26
+    },
+    {
+        "text": "Oh wow.",
+        "start": 1154.183,
+        "duration": 0.75
+    },
+    {
+        "text": "Good job.",
+        "start": 1154.933,
+        "duration": 0.6
+    },
+    {
+        "text": "That's pretty awesome.",
+        "start": 1155.833,
+        "duration": 0.27
+    },
+    {
+        "text": "Nice.",
+        "start": 1156.103,
+        "duration": 0.63
+    },
+    {
+        "text": "Nice.",
+        "start": 1156.883,
+        "duration": 0.6
+    },
+    {
+        "text": "Wow.",
+        "start": 1157.963,
+        "duration": 0.06
+    },
+    {
+        "text": "let me share my entire screen actually.",
+        "start": 1158.893,
+        "duration": 2.55
+    },
+    {
+        "text": "'cause that will be, better.",
+        "start": 1161.473,
+        "duration": 2.34
+    },
+    {
+        "text": "so pick an, pick another one.",
+        "start": 1166.243,
+        "duration": 4.14
+    },
+    {
+        "text": "Can you do the mug?",
+        "start": 1170.893,
+        "duration": 1.05
+    },
+    {
+        "text": "Yeah,",
+        "start": 1173.263,
+        "duration": 0.6
+    },
+    {
+        "text": "they already did the mug.",
+        "start": 1176.443,
+        "duration": 0.81
+    },
+    {
+        "text": "Let's do something different.",
+        "start": 1177.253,
+        "duration": 1.26
+    },
+    {
+        "text": "Okay.",
+        "start": 1179.173,
+        "duration": 0.39
+    },
+    {
+        "text": "Spam.",
+        "start": 1180.253,
+        "duration": 0.3
+    },
+    {
+        "text": "We can do something.",
+        "start": 1180.553,
+        "duration": 1.765
+    },
+    {
+        "text": "Yeah, do the, you can do the spam.",
+        "start": 1182.788,
+        "duration": 2.37
+    },
+    {
+        "text": "Ours are pretty quick.",
+        "start": 1186.283,
+        "duration": 1.11
+    },
+    {
+        "text": "hold on.",
+        "start": 1189.343,
+        "duration": 0.3
+    },
+    {
+        "text": "Let me just turn off the,\nI wanted to share because I",
+        "start": 1189.643,
+        "duration": 2.19
+    },
+    {
+        "text": "wanted also e See, there we go.",
+        "start": 1191.833,
+        "duration": 2.88
+    },
+    {
+        "text": "All right.",
+        "start": 1194.803,
+        "duration": 0.33
+    },
+    {
+        "text": "What's on the, okay.",
+        "start": 1195.853,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 1197.863,
+        "duration": 0.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 1198.613,
+        "duration": 0.3
+    },
+    {
+        "text": "It's still, all Here we go",
+        "start": 1198.913,
+        "duration": 2.31
+    },
+    {
+        "text": "again.",
+        "start": 1209.713,
+        "duration": 0.24
+    },
+    {
+        "text": "It's resetting.",
+        "start": 1209.953,
+        "duration": 0.69
+    },
+    {
+        "text": "oh.",
+        "start": 1222.313,
+        "duration": 0.24
+    },
+    {
+        "text": "Terry, by the way, the spam\ncan here is called potted meat.",
+        "start": 1222.553,
+        "duration": 2.82
+    },
+    {
+        "text": "Can Oh, really?",
+        "start": 1225.373,
+        "duration": 2.79
+    },
+    {
+        "text": "Full name in the dataset.",
+        "start": 1228.613,
+        "duration": 1.35
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 1230.773,
+        "duration": 1.11
+    },
+    {
+        "text": "No product placement.",
+        "start": 1232.603,
+        "duration": 1.2
+    },
+    {
+        "text": "And by the way, you can see\nthe models in the upper right",
+        "start": 1242.743,
+        "duration": 2.01
+    },
+    {
+        "text": "corner of the visualization.",
+        "start": 1244.753,
+        "duration": 1.95
+    },
+    {
+        "text": "that's, all that Monty knows.",
+        "start": 1247.693,
+        "duration": 1.47
+    },
+    {
+        "text": "That's cool.",
+        "start": 1250.093,
+        "duration": 0.39
+    },
+    {
+        "text": "interesting.",
+        "start": 1252.433,
+        "duration": 0.42
+    },
+    {
+        "text": "That sparse.",
+        "start": 1252.853,
+        "duration": 0.93
+    },
+    {
+        "text": "Okay.",
+        "start": 1256.768,
+        "duration": 0.29
+    },
+    {
+        "text": "it's between the two",
+        "start": 1257.338,
+        "duration": 0.68
+    },
+    {
+        "text": "visual visualizer, it keeps saying\nglobal matching Step three three.",
+        "start": 1262.898,
+        "duration": 3.365
+    },
+    {
+        "text": "Oh, we didn't debug those logs.",
+        "start": 1267.978,
+        "duration": 4.405
+    },
+    {
+        "text": "Maybe it's, what's happening is the camera\nis above the object, so it wasn't getting",
+        "start": 1273.343,
+        "duration": 6.81
+    },
+    {
+        "text": "any sensorimotor input, so it was just\nbypassing the learning module off object.",
+        "start": 1280.843,
+        "duration": 5.49
+    },
+    {
+        "text": "Oh, nice.",
+        "start": 1286.723,
+        "duration": 0.39
+    },
+    {
+        "text": "There you go.",
+        "start": 1287.113,
+        "duration": 0.48
+    },
+    {
+        "text": "Whoa.",
+        "start": 1287.893,
+        "duration": 0.45
+    },
+    {
+        "text": "Boom.",
+        "start": 1288.403,
+        "duration": 0.45
+    },
+    {
+        "text": "Wow.",
+        "start": 1289.663,
+        "duration": 0.63
+    },
+    {
+        "text": "What else you wanna identify?",
+        "start": 1290.893,
+        "duration": 1.92
+    },
+    {
+        "text": "how about the Numenta brain?",
+        "start": 1294.493,
+        "duration": 2.7
+    },
+    {
+        "text": "All right.",
+        "start": 1297.973,
+        "duration": 0.48
+    },
+    {
+        "text": "This one is a little different setup.",
+        "start": 1298.453,
+        "duration": 1.8
+    },
+    {
+        "text": "You have the platform.",
+        "start": 1300.403,
+        "duration": 1.11
+    },
+    {
+        "text": "I don't think this one works very well.",
+        "start": 1302.323,
+        "duration": 1.26
+    },
+    {
+        "text": "Do you have the platform?",
+        "start": 1303.853,
+        "duration": 0.81
+    },
+    {
+        "text": "Okay.",
+        "start": 1307.903,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 1308.473,
+        "duration": 0.18
+    },
+    {
+        "text": "It's, it is the top platform, right?",
+        "start": 1308.653,
+        "duration": 2.43
+    },
+    {
+        "text": "I don't remember on, yeah,\njust put it on top platform.",
+        "start": 1311.713,
+        "duration": 3.03
+    },
+    {
+        "text": "Okay.",
+        "start": 1315.103,
+        "duration": 0.24
+    },
+    {
+        "text": "So we, we have an extra platform for\nthis one because our sensorimotor",
+        "start": 1316.633,
+        "duration": 3.48
+    },
+    {
+        "text": "didn't go far enough to see it\non the platform that we built.",
+        "start": 1320.113,
+        "duration": 2.55
+    },
+    {
+        "text": "and we also, presumably the platform\nis kind of part of the model.",
+        "start": 1324.703,
+        "duration": 3.12
+    },
+    {
+        "text": "yeah.",
+        "start": 1329.053,
+        "duration": 0.39
+    },
+    {
+        "text": "Although, we're not sure if\nthis is the platform we use or",
+        "start": 1329.443,
+        "duration": 3.15
+    },
+    {
+        "text": "if we use the different ones.",
+        "start": 1332.713,
+        "duration": 1.02
+    },
+    {
+        "text": "So we'll find.",
+        "start": 1333.733,
+        "duration": 0.66
+    },
+    {
+        "text": "Okay.",
+        "start": 1334.393,
+        "duration": 0.06
+    },
+    {
+        "text": "Cool.",
+        "start": 1334.873,
+        "duration": 0.33
+    },
+    {
+        "text": "testing robustness.",
+        "start": 1338.593,
+        "duration": 0.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 1340.243,
+        "duration": 0.24
+    },
+    {
+        "text": "So here you go.",
+        "start": 1340.513,
+        "duration": 0.6
+    },
+    {
+        "text": "This subject is also very small,\nbut the patch is sometimes just",
+        "start": 1341.803,
+        "duration": 3.87
+    },
+    {
+        "text": "off the object a lot and that,",
+        "start": 1345.883,
+        "duration": 1.86
+    },
+    {
+        "text": "some, way though it doesn't\nwork for that reason.",
+        "start": 1350.263,
+        "duration": 2.37
+    },
+    {
+        "text": "And hopefully it will not fling the\nbrain off of the platform either.",
+        "start": 1353.293,
+        "duration": 3.36
+    },
+    {
+        "text": "it's pretty light.",
+        "start": 1357.823,
+        "duration": 0.78
+    },
+    {
+        "text": "We don't have many\ntolerances built in here.",
+        "start": 1360.403,
+        "duration": 2.28
+    },
+    {
+        "text": "A flying brain.",
+        "start": 1363.883,
+        "duration": 0.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 1365.178,
+        "duration": 0.29
+    },
+    {
+        "text": "Oh, don't see Monty's\nbrain in hypothesis space.",
+        "start": 1377.598,
+        "duration": 2.755
+    },
+    {
+        "text": "Yeah.",
+        "start": 1381.643,
+        "duration": 0.36
+    },
+    {
+        "text": "This one might not work.",
+        "start": 1382.573,
+        "duration": 0.78
+    },
+    {
+        "text": "We'll see.",
+        "start": 1384.193,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 1385.723,
+        "duration": 0.12
+    },
+    {
+        "text": "Right now the sensorimotor is above.",
+        "start": 1385.843,
+        "duration": 1.38
+    },
+    {
+        "text": "So when you're seeing stuff like\nthis, it's just not getting any data.",
+        "start": 1387.223,
+        "duration": 2.64
+    },
+    {
+        "text": "'cause the, again, our policy\nis just purely random movements.",
+        "start": 1389.893,
+        "duration": 3.3
+    },
+    {
+        "text": "Also, the time flight Sensorimotor works\nbest with shiny objects and, Objects",
+        "start": 1398.443,
+        "duration": 5.715
+    },
+    {
+        "text": "that are not like metallic or whatever,\nthey don't really give good data.",
+        "start": 1404.158,
+        "duration": 3.27
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 1410.548,
+        "duration": 0.39
+    },
+    {
+        "text": "Sorry.",
+        "start": 1410.938,
+        "duration": 0.42
+    },
+    {
+        "text": "Visualization.",
+        "start": 1411.478,
+        "duration": 0.9
+    },
+    {
+        "text": "Yeah, I thinks it's a tuna soup.",
+        "start": 1416.548,
+        "duration": 1.53
+    },
+    {
+        "text": "Can, this is why it's tuna soup.",
+        "start": 1418.078,
+        "duration": 2.22
+    },
+    {
+        "text": "Can wait tomato soup or\ntuna can tomato soup.",
+        "start": 1420.298,
+        "duration": 4.98
+    },
+    {
+        "text": "Sorry.",
+        "start": 1425.578,
+        "duration": 0.3
+    },
+    {
+        "text": "Tomato soup probably.",
+        "start": 1425.938,
+        "duration": 1.175
+    },
+    {
+        "text": "I guess that probably.",
+        "start": 1427.753,
+        "duration": 1.96
+    },
+    {
+        "text": "Okay.",
+        "start": 1429.823,
+        "duration": 0.29
+    },
+    {
+        "text": "you got an example of a failure\nmode That's not bad for three.",
+        "start": 1430.828,
+        "duration": 4.255
+    },
+    {
+        "text": "Yeah's.",
+        "start": 1435.823,
+        "duration": 0.42
+    },
+    {
+        "text": "Awesome.",
+        "start": 1436.243,
+        "duration": 0.04
+    },
+    {
+        "text": "Do we get a second try on the path?",
+        "start": 1436.283,
+        "duration": 1.475
+    },
+    {
+        "text": "Yeah.",
+        "start": 1438.388,
+        "duration": 0.12
+    },
+    {
+        "text": "What if we get the brain?",
+        "start": 1438.508,
+        "duration": 1.11
+    },
+    {
+        "text": "No, it's actually pretty\ngood about the brain.",
+        "start": 1439.678,
+        "duration": 3.75
+    },
+    {
+        "text": "We just put it on the bottom, right?",
+        "start": 1444.658,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 1445.918,
+        "duration": 0.3
+    },
+    {
+        "text": "Just normally.",
+        "start": 1446.248,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 1447.538,
+        "duration": 0.18
+    },
+    {
+        "text": "the heart.",
+        "start": 1447.958,
+        "duration": 0.39
+    },
+    {
+        "text": "The heart, sorry.",
+        "start": 1449.278,
+        "duration": 0.72
+    },
+    {
+        "text": "Yeah.",
+        "start": 1450.058,
+        "duration": 0.3
+    },
+    {
+        "text": "So it's pretty good recognizing\nMonty's heart and you can see the",
+        "start": 1451.078,
+        "duration": 2.97
+    },
+    {
+        "text": "image of that's its Model of the Heart.",
+        "start": 1454.048,
+        "duration": 2.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 1457.048,
+        "duration": 0.18
+    },
+    {
+        "text": "Wow.",
+        "start": 1457.228,
+        "duration": 0.42
+    },
+    {
+        "text": "That's pretty cool.",
+        "start": 1457.858,
+        "duration": 0.75
+    },
+    {
+        "text": "Yeah.",
+        "start": 1460.168,
+        "duration": 0.09
+    },
+    {
+        "text": "Do you wanna try the spam can again?",
+        "start": 1460.258,
+        "duration": 1.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 1461.728,
+        "duration": 0.21
+    },
+    {
+        "text": "Should we try one more just to you,\nyou change, hopefully have us, yeah.",
+        "start": 1461.938,
+        "duration": 5.19
+    },
+    {
+        "text": "Okay.",
+        "start": 1467.248,
+        "duration": 0.3
+    },
+    {
+        "text": "The checklist.",
+        "start": 1468.688,
+        "duration": 0.87
+    },
+    {
+        "text": "Yeah.",
+        "start": 1470.278,
+        "duration": 0.48
+    },
+    {
+        "text": "I would say the price for our highest,\nactually definitely it goes to you guys,",
+        "start": 1471.448,
+        "duration": 3.45
+    },
+    {
+        "text": "but, wanna have, a little bit of success.",
+        "start": 1475.258,
+        "duration": 4.56
+    },
+    {
+        "text": "Sounds good.",
+        "start": 1480.568,
+        "duration": 0.45
+    },
+    {
+        "text": "Okay.",
+        "start": 1481.708,
+        "duration": 0.12
+    },
+    {
+        "text": "I'll stop sharing as\nsoon as this completes.",
+        "start": 1482.698,
+        "duration": 1.83
+    },
+    {
+        "text": "So are you, like in monthly\nwhen you rotate, is it moving",
+        "start": 1486.508,
+        "duration": 4.29
+    },
+    {
+        "text": "the agent around the circle?",
+        "start": 1490.798,
+        "duration": 1.14
+    },
+    {
+        "text": "Yes.",
+        "start": 1491.938,
+        "duration": 0.39
+    },
+    {
+        "text": "it's, we are faking it.",
+        "start": 1492.988,
+        "duration": 1.35
+    },
+    {
+        "text": "Orbiting an object.",
+        "start": 1494.338,
+        "duration": 1.38
+    },
+    {
+        "text": "There we go.",
+        "start": 1499.498,
+        "duration": 0.39
+    },
+    {
+        "text": "Monty's heart, Monty heart.",
+        "start": 1499.938,
+        "duration": 0.73
+    }
+]

@@ -1,0 +1,4722 @@
+[
+    {
+        "text": "so.",
+        "start": 498.478,
+        "duration": 0.27
+    },
+    {
+        "text": "There are several things I can, Go\nover one is, I guess the figures",
+        "start": 498.748,
+        "duration": 6.795
+    },
+    {
+        "text": "and stuff in the white paper.",
+        "start": 505.543,
+        "duration": 1.62
+    },
+    {
+        "text": "everyone of the research team should be\nvery familiar with them and how it works.",
+        "start": 508.483,
+        "duration": 5.13
+    },
+    {
+        "text": "So if that would be helpful, I\ncan go over them so you know how",
+        "start": 513.613,
+        "duration": 4.56
+    },
+    {
+        "text": "to explain them to someone else.",
+        "start": 518.173,
+        "duration": 1.98
+    },
+    {
+        "text": "To, another thing I thought would be cool\nto start off with is a bit of a history,",
+        "start": 520.153,
+        "duration": 4.74
+    },
+    {
+        "text": "lesson on the, graph learning module.",
+        "start": 525.313,
+        "duration": 3.81
+    },
+    {
+        "text": "'cause I feel like it gives some of the\nbackground that you wouldn't usually",
+        "start": 529.393,
+        "duration": 2.79
+    },
+    {
+        "text": "get, but it helps frame some of the\ndiscussions we often have, go the",
+        "start": 532.183,
+        "duration": 5.58
+    },
+    {
+        "text": "displacement matching versus feature\nset location matching kind of question.",
+        "start": 537.763,
+        "duration": 4.35
+    },
+    {
+        "text": "so I might actually start with this\none if, no one has an objection.",
+        "start": 543.073,
+        "duration": 4.02
+    },
+    {
+        "text": "And then the last thing, I think\nthat's a good idea actually.",
+        "start": 547.753,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 550.693,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 551.083,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 551.443,
+        "duration": 0.18
+    },
+    {
+        "text": "Also, 'cause the code, that's how\nit evolved and yeah, in general",
+        "start": 551.923,
+        "duration": 5.43
+    },
+    {
+        "text": "I think that's useful context.",
+        "start": 557.473,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah, and you'll come across stuff from\nall of them, when you go through the code.",
+        "start": 560.008,
+        "duration": 4.17
+    },
+    {
+        "text": "and then, yeah, lastly, definitely wanna\ngo over like the evidence graph, LM code,",
+        "start": 565.078,
+        "duration": 6.3
+    },
+    {
+        "text": "at least like this part of what attributes\nwe have and how they actually interact",
+        "start": 571.378,
+        "duration": 5.82
+    },
+    {
+        "text": "with each other and, effect matching.",
+        "start": 577.198,
+        "duration": 2.88
+    },
+    {
+        "text": "So yeah, I started like a blank X\ncalendar draw just in case people wanna,",
+        "start": 580.498,
+        "duration": 5.37
+    },
+    {
+        "text": "ask questions on the whiteboard\nor I need to draw something.",
+        "start": 588.298,
+        "duration": 2.82
+    },
+    {
+        "text": "So I'm just gonna share the link\nin the Slack coding channel if",
+        "start": 591.118,
+        "duration": 4.08
+    },
+    {
+        "text": "someone wants to join there.",
+        "start": 595.198,
+        "duration": 1.56
+    },
+    {
+        "text": "so yeah, let me start with a brief\nhistory of graph matching in Monty.",
+        "start": 600.298,
+        "duration": 5.85
+    },
+    {
+        "text": "so this is a writeup.",
+        "start": 608.278,
+        "duration": 1.89
+    },
+    {
+        "text": "it's on old Leaf, but also the\nPDF is in our Google Drive.",
+        "start": 611.188,
+        "duration": 3.45
+    },
+    {
+        "text": "Basically we have three types of\nlearning modules in Monte at the moment.",
+        "start": 618.493,
+        "duration": 5.49
+    },
+    {
+        "text": "We have the displacement lm,\nwe have the feature LM and the",
+        "start": 624.493,
+        "duration": 5.61
+    },
+    {
+        "text": "evidence, lm. So displacement\ngraph LM uses edges in the graph.",
+        "start": 630.103,
+        "duration": 7.92
+    },
+    {
+        "text": "Hang on, let me",
+        "start": 638.233,
+        "duration": 0.78
+    },
+    {
+        "text": "see if you have the graph picture in here.",
+        "start": 646.813,
+        "duration": 2.37
+    },
+    {
+        "text": "Here we go.",
+        "start": 650.233,
+        "duration": 0.6
+    },
+    {
+        "text": "So this is a graph, I think\nyou're all familiar with this.",
+        "start": 651.913,
+        "duration": 3.03
+    },
+    {
+        "text": "in Monty we define graph\nas nodes at locations.",
+        "start": 655.783,
+        "duration": 6.0
+    },
+    {
+        "text": "nodes have features stored at\nthem, which can be like point",
+        "start": 662.053,
+        "duration": 4.23
+    },
+    {
+        "text": "normals and curvature directions.",
+        "start": 666.283,
+        "duration": 1.62
+    },
+    {
+        "text": "Those define the pose of that node,\nso like the point normal and the two",
+        "start": 667.903,
+        "duration": 5.07
+    },
+    {
+        "text": "ortho normal, orthogonal, curvature\ndirections basically span up a local",
+        "start": 673.123,
+        "duration": 4.92
+    },
+    {
+        "text": "reference frame for that point and thereby\ndefine the orientation of that point.",
+        "start": 678.043,
+        "duration": 4.14
+    },
+    {
+        "text": "and then they can also store other\nfeatures like color or curvature amounts.",
+        "start": 684.283,
+        "duration": 7.23
+    },
+    {
+        "text": "And then we can have edges in\nthe graph, which are basically",
+        "start": 691.723,
+        "duration": 3.6
+    },
+    {
+        "text": "connections between the nodes, edges.",
+        "start": 695.353,
+        "duration": 4.05
+    },
+    {
+        "text": "and we go some older plots.",
+        "start": 701.563,
+        "duration": 3.6
+    },
+    {
+        "text": "Edges can be up in, in different ways.",
+        "start": 706.273,
+        "duration": 3.09
+    },
+    {
+        "text": "you can either lay them down as you're\nsensing, so they are put down in",
+        "start": 711.073,
+        "duration": 5.4
+    },
+    {
+        "text": "the path that you're going over the\nmug or the kind of default behavior",
+        "start": 716.473,
+        "duration": 4.71
+    },
+    {
+        "text": "you had was, nearest neighbors.",
+        "start": 721.603,
+        "duration": 2.07
+    },
+    {
+        "text": "So each node would connect\nedges to its nearest neighbors",
+        "start": 723.673,
+        "duration": 3.39
+    },
+    {
+        "text": "when we add a graft to memory.",
+        "start": 727.603,
+        "duration": 1.44
+    },
+    {
+        "text": "and so when we do matching, we get,\nwe always get a sensation and then a",
+        "start": 732.913,
+        "duration": 6.57
+    },
+    {
+        "text": "movement and the next sensation and a\nmovement and the next sensation, and",
+        "start": 739.483,
+        "duration": 4.62
+    },
+    {
+        "text": "we get those relative to the body.",
+        "start": 744.103,
+        "duration": 2.01
+    },
+    {
+        "text": "So we get a location relative to the\nbody movement, next location, relative",
+        "start": 746.413,
+        "duration": 5.58
+    },
+    {
+        "text": "to the body movement and so on.",
+        "start": 751.993,
+        "duration": 2.37
+    },
+    {
+        "text": "And so when we try to recognize an\nobject, we can either take these",
+        "start": 754.963,
+        "duration": 5.73
+    },
+    {
+        "text": "movements and try to match them\nto the edges stored in the graph.",
+        "start": 760.693,
+        "duration": 4.38
+    },
+    {
+        "text": "Or which is what the\ndisplacement graph LM does.",
+        "start": 766.318,
+        "duration": 4.14
+    },
+    {
+        "text": "Or we can take our nodes in the graph\nas initial hypotheses and then test the",
+        "start": 771.298,
+        "duration": 8.04
+    },
+    {
+        "text": "movements as hypotheses and then look\nat the location where we end up at.",
+        "start": 779.338,
+        "duration": 4.71
+    },
+    {
+        "text": "dunno if that was the\nclearest explanation.",
+        "start": 786.388,
+        "duration": 2.31
+    },
+    {
+        "text": "maybe it's worth describing that,\npoint pair feature thing that was",
+        "start": 790.918,
+        "duration": 5.37
+    },
+    {
+        "text": "used for the displacement because,\nyeah, let me draw on the, because the",
+        "start": 796.288,
+        "duration": 6.06
+    },
+    {
+        "text": "displacement weren't, you might think\nof displacement as like just a vector.",
+        "start": 802.348,
+        "duration": 4.77
+    },
+    {
+        "text": "And so it's oh, you're just matching\nthis movement vector to any one of",
+        "start": 808.258,
+        "duration": 4.38
+    },
+    {
+        "text": "these edges, which is just a vector.",
+        "start": 812.638,
+        "duration": 1.86
+    },
+    {
+        "text": "But, but they were more\nspecific than that.",
+        "start": 815.398,
+        "duration": 2.7
+    },
+    {
+        "text": "The displacement were",
+        "start": 818.098,
+        "duration": 1.32
+    },
+    {
+        "text": "basically a line connecting to.",
+        "start": 821.728,
+        "duration": 3.03
+    },
+    {
+        "text": "Reference frames, and that was this,",
+        "start": 825.358,
+        "duration": 3.39
+    },
+    {
+        "text": "kind of rotation invariant structure.",
+        "start": 830.758,
+        "duration": 2.52
+    },
+    {
+        "text": "That's the displacement.",
+        "start": 833.698,
+        "duration": 0.9
+    },
+    {
+        "text": "So it's a lot more,",
+        "start": 834.598,
+        "duration": 0.96
+    },
+    {
+        "text": "specific than just like a random\nor than just like a movement.",
+        "start": 837.958,
+        "duration": 3.15
+    },
+    {
+        "text": "yeah.",
+        "start": 843.063,
+        "duration": 0.19
+    },
+    {
+        "text": "Yeah.",
+        "start": 845.098,
+        "duration": 0.3
+    },
+    {
+        "text": "Let me, and so if you, see PPF in the code\npoint pair feature, that's what that's",
+        "start": 845.398,
+        "duration": 3.93
+    },
+    {
+        "text": "referring to, that kind of 3D structure.",
+        "start": 849.328,
+        "duration": 2.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 853.258,
+        "duration": 0.66
+    },
+    {
+        "text": "So basically, let's\nsay we're in the world.",
+        "start": 854.668,
+        "duration": 5.01
+    },
+    {
+        "text": "We have this blue cylinder.",
+        "start": 859.678,
+        "duration": 1.89
+    },
+    {
+        "text": "can you guys see what I'm drawing on?",
+        "start": 862.768,
+        "duration": 1.5
+    },
+    {
+        "text": "Xra?",
+        "start": 864.268,
+        "duration": 0.75
+    },
+    {
+        "text": "I should probably, oh, I can't\neven see what I'm drawing.",
+        "start": 865.078,
+        "duration": 4.41
+    },
+    {
+        "text": "Oh, here we go.",
+        "start": 869.698,
+        "duration": 0.54
+    },
+    {
+        "text": "Maybe I'll share it like this.",
+        "start": 873.058,
+        "duration": 1.17
+    },
+    {
+        "text": "So we're seeing this blue cylinder,\nour sensors, let's say here, and",
+        "start": 876.298,
+        "duration": 5.34
+    },
+    {
+        "text": "then our sensorimotor moves to here.",
+        "start": 881.638,
+        "duration": 2.58
+    },
+    {
+        "text": "So now we have two locations and we have a\ndisplacement between these two locations.",
+        "start": 884.878,
+        "duration": 6.48
+    },
+    {
+        "text": "so now how do we use these two locations\nthat are relative to the body in order",
+        "start": 895.018,
+        "duration": 5.49
+    },
+    {
+        "text": "to recognize this object, which is\nstored in the models reference frame?",
+        "start": 900.508,
+        "duration": 4.41
+    },
+    {
+        "text": "One option, which is the displacement\nmatching alarm, is we take this",
+        "start": 905.908,
+        "duration": 3.96
+    },
+    {
+        "text": "displacement that we observed and\nwe try to compare it with all of",
+        "start": 909.868,
+        "duration": 4.77
+    },
+    {
+        "text": "the edges that are in the mark.",
+        "start": 914.638,
+        "duration": 2.22
+    },
+    {
+        "text": "So it might be this one, it\nmight be the other way around.",
+        "start": 916.858,
+        "duration": 3.75
+    },
+    {
+        "text": "It might be here, it like it could\nbe this way, flipped around this way,",
+        "start": 920.608,
+        "duration": 5.52
+    },
+    {
+        "text": "so we can compare it to all of these\nedges that we have stored in the graph.",
+        "start": 926.698,
+        "duration": 3.18
+    },
+    {
+        "text": "And then over time we sample more and more\ndisplacement like a chain of displacement",
+        "start": 930.463,
+        "duration": 4.86
+    },
+    {
+        "text": "and it becomes more and more unique\nof where on the object we might be.",
+        "start": 935.623,
+        "duration": 3.57
+    },
+    {
+        "text": "And like Niels mentioned, this\nhas a really nice property.",
+        "start": 939.823,
+        "duration": 4.29
+    },
+    {
+        "text": "because as we found out is, if we\ncan rec, if our points in the graph",
+        "start": 945.463,
+        "duration": 8.1
+    },
+    {
+        "text": "have orientations, like this, and\nwe have a displacement between",
+        "start": 953.563,
+        "duration": 7.14
+    },
+    {
+        "text": "these two points, we can represent\nthis displacement in an orientation",
+        "start": 960.703,
+        "duration": 6.15
+    },
+    {
+        "text": "invariant way using point pair features.",
+        "start": 966.853,
+        "duration": 3.63
+    },
+    {
+        "text": "So basically we can have a unique\ndescription of this displacement that",
+        "start": 972.163,
+        "duration": 4.77
+    },
+    {
+        "text": "is independent of its orientation.",
+        "start": 976.933,
+        "duration": 3.06
+    },
+    {
+        "text": "So if this displacement is observed.",
+        "start": 979.993,
+        "duration": 2.34
+    },
+    {
+        "text": "Anywhere in the world, at any orientation,\nit will have the exact same values.",
+        "start": 984.088,
+        "duration": 4.5
+    },
+    {
+        "text": "It's basically the length of the\ndisplacement and then the angle,",
+        "start": 988.858,
+        "duration": 4.08
+    },
+    {
+        "text": "the, so it's the length and then the\nangles between, I think some of these",
+        "start": 993.058,
+        "duration": 4.95
+    },
+    {
+        "text": "points here, I forget which exactly.",
+        "start": 999.088,
+        "duration": 3.09
+    },
+    {
+        "text": "it's described in this, paper.",
+        "start": 1004.008,
+        "duration": 2.4
+    },
+    {
+        "text": "I think, and just to remind myself,\nI guess this assumes that the,",
+        "start": 1006.678,
+        "duration": 5.01
+    },
+    {
+        "text": "reference frames for the local points\nthat either said are unique, as",
+        "start": 1013.128,
+        "duration": 3.54
+    },
+    {
+        "text": "in if they were ambiguous about a\ncertain axis or something, you would",
+        "start": 1016.668,
+        "duration": 5.52
+    },
+    {
+        "text": "still need to like sample multiple\nhypotheses for different rotations.",
+        "start": 1022.188,
+        "duration": 6.42
+    },
+    {
+        "text": "no, you never have to sample\na rotation hypotheses.",
+        "start": 1032.328,
+        "duration": 3.03
+    },
+    {
+        "text": "But, what if you, it's like not d like.",
+        "start": 1038.508,
+        "duration": 2.04
+    },
+    {
+        "text": "What if it's symmetric?",
+        "start": 1041.178,
+        "duration": 1.14
+    },
+    {
+        "text": "Like often we don't actually know, if\nit's based on principle curvature or",
+        "start": 1042.318,
+        "duration": 4.95
+    },
+    {
+        "text": "if there is no principle curvature then\nand you just have the point normal.",
+        "start": 1047.268,
+        "duration": 3.6
+    },
+    {
+        "text": "Oh yeah.",
+        "start": 1052.428,
+        "duration": 0.3
+    },
+    {
+        "text": "If the principle curvatures are not\ndefined, then yeah, you can't uniquely",
+        "start": 1052.728,
+        "duration": 3.6
+    },
+    {
+        "text": "define the point pair feature.",
+        "start": 1056.328,
+        "duration": 1.47
+    },
+    {
+        "text": "or even when they are defined in their\nsymmetric, like their mirror symmetric,",
+        "start": 1059.148,
+        "duration": 3.6
+    },
+    {
+        "text": "then they would almost be two point\npair features, either two point pair",
+        "start": 1062.748,
+        "duration": 3.93
+    },
+    {
+        "text": "features stored, or you would test\nthem under those two hypotheses.",
+        "start": 1066.678,
+        "duration": 5.01
+    },
+    {
+        "text": "Yeah, so I guess it, it reduces the\nspace, but it, in practically it",
+        "start": 1073.098,
+        "duration": 5.16
+    },
+    {
+        "text": "cannot totally eliminate the need to\ntest multiple hypotheses of, rotation.",
+        "start": 1078.258,
+        "duration": 4.17
+    },
+    {
+        "text": "But",
+        "start": 1082.788,
+        "duration": 0.09
+    },
+    {
+        "text": "you would basically just store two edges\nin the graph if you have a, if you have,",
+        "start": 1085.788,
+        "duration": 6.39
+    },
+    {
+        "text": "since we can't, uniquely define\nthe curvature directions.",
+        "start": 1094.578,
+        "duration": 6.0
+    },
+    {
+        "text": "We would just store two point\npair features for every edge.",
+        "start": 1101.613,
+        "duration": 3.69
+    },
+    {
+        "text": "Or if there's, if you we're on a\nflat surface and we have no principal",
+        "start": 1105.513,
+        "duration": 4.8
+    },
+    {
+        "text": "co, like principal curvatures are\nequal, we would just define eight",
+        "start": 1110.313,
+        "duration": 5.04
+    },
+    {
+        "text": "or 10 pair features for that edge.",
+        "start": 1115.353,
+        "duration": 2.46
+    },
+    {
+        "text": "But then at recognition time, we don't\nhave to cycle through hypotheses,",
+        "start": 1118.563,
+        "duration": 4.83
+    },
+    {
+        "text": "we just have to compare to more\npoint pair features in the graph.",
+        "start": 1123.393,
+        "duration": 3.27
+    },
+    {
+        "text": "Okay.",
+        "start": 1127.713,
+        "duration": 0.42
+    },
+    {
+        "text": "So we've kinda stored all\npossible hypotheses in the graph.",
+        "start": 1128.133,
+        "duration": 3.24
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 1134.523,
+        "duration": 0.87
+    },
+    {
+        "text": "Anyways, sorry, it's a bit of an\naside, but, so while we're Yeah.",
+        "start": 1135.393,
+        "duration": 3.721
+    },
+    {
+        "text": "Talking about, yeah.",
+        "start": 1139.119,
+        "duration": 2.919
+    },
+    {
+        "text": "So this approach, that's a really nice\nfeature because we could recognize objects",
+        "start": 1142.038,
+        "duration": 5.205
+    },
+    {
+        "text": "independent of location, orientation\nat scale, without cycling through",
+        "start": 1147.243,
+        "duration": 7.11
+    },
+    {
+        "text": "hypotheses, which we have to do at the,\nwith the current solution that we have.",
+        "start": 1154.353,
+        "duration": 5.31
+    },
+    {
+        "text": "So the current solution that we\nhave is features at locations.",
+        "start": 1160.533,
+        "duration": 3.51
+    },
+    {
+        "text": "where basically we start out with\nsaying, okay, I could be here, or I",
+        "start": 1166.233,
+        "duration": 4.11
+    },
+    {
+        "text": "could be here, or I could be here.",
+        "start": 1170.343,
+        "duration": 1.89
+    },
+    {
+        "text": "All of these become hypothesis.",
+        "start": 1172.713,
+        "duration": 1.89
+    },
+    {
+        "text": "actually we would probably not say\nthese three because there we would",
+        "start": 1175.773,
+        "duration": 6.3
+    },
+    {
+        "text": "detect like an edge as a curvature.",
+        "start": 1182.073,
+        "duration": 1.83
+    },
+    {
+        "text": "So since we're also detecting\nfeatures, we only look at the ones",
+        "start": 1184.203,
+        "duration": 3.3
+    },
+    {
+        "text": "that are consistent with features.",
+        "start": 1187.503,
+        "duration": 1.41
+    },
+    {
+        "text": "So we might say we are\nanywhere around the cylinder.",
+        "start": 1188.913,
+        "duration": 3.36
+    },
+    {
+        "text": "oh, as if a delay.",
+        "start": 1196.503,
+        "duration": 1.745
+    },
+    {
+        "text": "Okay.",
+        "start": 1198.783,
+        "duration": 0.36
+    },
+    {
+        "text": "And then we take the displacement\nthat we sensed and we start at the",
+        "start": 1200.493,
+        "duration": 6.63
+    },
+    {
+        "text": "point where the hypothesized location\nwould be and apply that displacement.",
+        "start": 1207.123,
+        "duration": 6.21
+    },
+    {
+        "text": "and then that becomes the search location.",
+        "start": 1216.318,
+        "duration": 3.27
+    },
+    {
+        "text": "We look at the search\nlocation, in a certain radius",
+        "start": 1220.308,
+        "duration": 4.05
+    },
+    {
+        "text": "around that search location.",
+        "start": 1224.358,
+        "duration": 1.5
+    },
+    {
+        "text": "We find, the points stored in the\ngraph and we clear the features",
+        "start": 1225.948,
+        "duration": 4.41
+    },
+    {
+        "text": "that are stored at these points.",
+        "start": 1230.358,
+        "duration": 1.59
+    },
+    {
+        "text": "And we will do this for any of these\ntype, for these hypothesized locations.",
+        "start": 1232.818,
+        "duration": 4.41
+    },
+    {
+        "text": "And for each location, we have\nsome hypothesis orientations too.",
+        "start": 1237.228,
+        "duration": 3.27
+    },
+    {
+        "text": "So here we might say, okay,\nlet's look here, but also let's",
+        "start": 1240.948,
+        "duration": 3.84
+    },
+    {
+        "text": "look in the other direct here.",
+        "start": 1244.788,
+        "duration": 1.77
+    },
+    {
+        "text": "And some of them might end up totally\noff the object and some of them might.",
+        "start": 1247.368,
+        "duration": 6.24
+    },
+    {
+        "text": "and hopefully the correct ones would\nalways end up on the object and you",
+        "start": 1256.158,
+        "duration": 4.14
+    },
+    {
+        "text": "would observe matching features there.",
+        "start": 1260.298,
+        "duration": 2.31
+    },
+    {
+        "text": "The displacement one, you\nsaid, it's agnostic to scale.",
+        "start": 1267.228,
+        "duration": 3.87
+    },
+    {
+        "text": "I didn't get that because I think\nyou, you also mentioned that the",
+        "start": 1272.808,
+        "duration": 3.27
+    },
+    {
+        "text": "displacement, like the length of\nthe displacement is important.",
+        "start": 1276.138,
+        "duration": 2.55
+    },
+    {
+        "text": "So if it was like at a different\nscale then like how, I think that",
+        "start": 1278.688,
+        "duration": 5.55
+    },
+    {
+        "text": "the length would be different or no?",
+        "start": 1284.298,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 1287.568,
+        "duration": 0.42
+    },
+    {
+        "text": "So basically how we did\nthe, in that case, I know.",
+        "start": 1287.988,
+        "duration": 3.48
+    },
+    {
+        "text": "So I will get to the big drawback of\nthis and given that drawback you, like",
+        "start": 1291.528,
+        "duration": 5.49
+    },
+    {
+        "text": "probably when I explained this solution,\nyou'll see the big drawback already.",
+        "start": 1297.438,
+        "duration": 3.0
+    },
+    {
+        "text": "But basically what we would do is we\nhave a bunch of displacement stored",
+        "start": 1300.438,
+        "duration": 5.13
+    },
+    {
+        "text": "in the graph, and then we get, some\nof them might be longer, some of them",
+        "start": 1305.568,
+        "duration": 4.14
+    },
+    {
+        "text": "might be shorter, and then we get an\nincoming displacement and we would just",
+        "start": 1309.708,
+        "duration": 5.4
+    },
+    {
+        "text": "scale it to the length of each of these.",
+        "start": 1315.108,
+        "duration": 3.39
+    },
+    {
+        "text": "Like I. Each of those edge hypotheses\nwould have a different scale factor.",
+        "start": 1319.218,
+        "duration": 4.995
+    },
+    {
+        "text": "And then when we get the next\nhypothesis, we would apply that",
+        "start": 1324.873,
+        "duration": 3.36
+    },
+    {
+        "text": "initial scale factor to it.",
+        "start": 1328.263,
+        "duration": 1.62
+    },
+    {
+        "text": "if we started with this one and the\nnext one would be like super scaled over",
+        "start": 1331.413,
+        "duration": 4.02
+    },
+    {
+        "text": "here and it would not match this short\nedge here anymore, you're making use of",
+        "start": 1335.433,
+        "duration": 4.92
+    },
+    {
+        "text": "the fact that they're all scaled by the\nsame parameter, which is Yeah, exactly.",
+        "start": 1340.353,
+        "duration": 4.53
+    },
+    {
+        "text": "We all get scaled the same way.",
+        "start": 1345.243,
+        "duration": 1.065
+    },
+    {
+        "text": "Cool.",
+        "start": 1346.618,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 1347.463,
+        "duration": 0.33
+    },
+    {
+        "text": "yeah, so it's not the same orientation\nwhere the representation we use for",
+        "start": 1351.783,
+        "duration": 5.28
+    },
+    {
+        "text": "it is just in variant orientation, but\nbasically we can just have one scale",
+        "start": 1357.063,
+        "duration": 4.47
+    },
+    {
+        "text": "factor for each edge and keep applying\nthat for all, subsequent displacement.",
+        "start": 1361.533,
+        "duration": 6.51
+    },
+    {
+        "text": "Okay.",
+        "start": 1372.003,
+        "duration": 0.57
+    },
+    {
+        "text": "The last iteration, the evidence-based\nLM is very similar to the feature at",
+        "start": 1374.808,
+        "duration": 4.05
+    },
+    {
+        "text": "location lm. The main difference is with\nthe feature at location lm we would like,",
+        "start": 1378.858,
+        "duration": 5.73
+    },
+    {
+        "text": "if we test the hypothesis and then like we\nlook here and there's no feature observed,",
+        "start": 1384.588,
+        "duration": 6.57
+    },
+    {
+        "text": "we would then eliminate that hypothesis\nfrom the possible hypothesis,",
+        "start": 1393.168,
+        "duration": 3.93
+    },
+    {
+        "text": "and that was brittle with noise.",
+        "start": 1397.578,
+        "duration": 2.04
+    },
+    {
+        "text": "so we transitioned to the evidence based\nL where instead of just eliminating a",
+        "start": 1400.488,
+        "duration": 4.35
+    },
+    {
+        "text": "hypothesis, when we get one inconsistent\nobservation, we instead keep like an",
+        "start": 1404.838,
+        "duration": 6.57
+    },
+    {
+        "text": "evidence count for each hypothesis.",
+        "start": 1411.408,
+        "duration": 2.22
+    },
+    {
+        "text": "And we increment that evidence\ncount with every step.",
+        "start": 1413.628,
+        "duration": 2.82
+    },
+    {
+        "text": "And then there were saturations\non the evidence lm, where we",
+        "start": 1419.808,
+        "duration": 4.83
+    },
+    {
+        "text": "made it just a lot more efficient\nand added extra features to it.",
+        "start": 1424.638,
+        "duration": 4.02
+    },
+    {
+        "text": "Like in the beginning, we would\ntest every hypothesis at every",
+        "start": 1429.228,
+        "duration": 4.17
+    },
+    {
+        "text": "step in a giant four loop, and it\nwould take 10 hours to run, like an",
+        "start": 1433.398,
+        "duration": 6.96
+    },
+    {
+        "text": "experiment filled with four objects.",
+        "start": 1440.358,
+        "duration": 1.95
+    },
+    {
+        "text": "then we, vectorized everything.",
+        "start": 1445.008,
+        "duration": 2.25
+    },
+    {
+        "text": "Now it's all, matrix multiplications,\nand we only update the top 20% of",
+        "start": 1447.318,
+        "duration": 8.07
+    },
+    {
+        "text": "hypotheses at every step or top 80%.",
+        "start": 1455.388,
+        "duration": 2.94
+    },
+    {
+        "text": "yeah, those are some bigger\nupdates to the evidence matching.",
+        "start": 1461.778,
+        "duration": 4.5
+    },
+    {
+        "text": "And yeah, and I think that top 80%\nhad probably a pretty big, like",
+        "start": 1466.338,
+        "duration": 6.15
+    },
+    {
+        "text": "I remember you found it had a big\nimpact on the flow, like the runtime.",
+        "start": 1472.608,
+        "duration": 4.05
+    },
+    {
+        "text": "And it's again, I think, what\nwe were talking about earlier,",
+        "start": 1477.258,
+        "duration": 2.52
+    },
+    {
+        "text": "because it's not, fixed.",
+        "start": 1480.048,
+        "duration": 1.8
+    },
+    {
+        "text": "It's not, it doesn't mean that 80% of\npossible points are always gonna be",
+        "start": 1481.848,
+        "duration": 4.38
+    },
+    {
+        "text": "tested, in which case, by definition, it's\nonly gonna reduce the compute by a fifth.",
+        "start": 1486.228,
+        "duration": 6.36
+    },
+    {
+        "text": "It's like anything that's within 80%\nof the max, which might only be 10% of",
+        "start": 1493.458,
+        "duration": 4.62
+    },
+    {
+        "text": "points, it might only be two points on\nan object that are that close to the max.",
+        "start": 1498.078,
+        "duration": 4.47
+    },
+    {
+        "text": "And anyways, yeah.",
+        "start": 1503.088,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 1505.158,
+        "duration": 0.3
+    },
+    {
+        "text": "Just in case it wasn't clear to anyone\nhow that, it feels like at the beginning",
+        "start": 1505.518,
+        "duration": 5.79
+    },
+    {
+        "text": "of it, it will be, those points that will\nbe tested will be a lot, and as, oh yeah.",
+        "start": 1511.308,
+        "duration": 4.59
+    },
+    {
+        "text": "All, points will be tested basically.",
+        "start": 1516.258,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 1517.458,
+        "duration": 0.06
+    },
+    {
+        "text": "And then as you narrow\ndown, it becomes, yeah.",
+        "start": 1518.238,
+        "duration": 3.36
+    },
+    {
+        "text": "It gets fast very quickly.",
+        "start": 1521.598,
+        "duration": 1.8
+    },
+    {
+        "text": "The first step is still\nquite slow, usually.",
+        "start": 1523.488,
+        "duration": 2.37
+    },
+    {
+        "text": "have a question.",
+        "start": 1528.558,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 1529.188,
+        "duration": 0.15
+    },
+    {
+        "text": "sorry.",
+        "start": 1530.568,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah, go ahead.",
+        "start": 1530.898,
+        "duration": 0.69
+    },
+    {
+        "text": "Just targeting some of the\ncode bits specifically.",
+        "start": 1532.908,
+        "duration": 3.87
+    },
+    {
+        "text": "It, seems like in the code that the\nrotation for each location doesn't change.",
+        "start": 1537.078,
+        "duration": 4.77
+    },
+    {
+        "text": "Am I wrong about that?",
+        "start": 1542.928,
+        "duration": 1.02
+    },
+    {
+        "text": "what do you mean?",
+        "start": 1547.188,
+        "duration": 0.57
+    },
+    {
+        "text": "The rotation for each location?",
+        "start": 1547.758,
+        "duration": 1.32
+    },
+    {
+        "text": "So there's a field for like locations,\na field for lo sorry, locations,",
+        "start": 1549.078,
+        "duration": 6.51
+    },
+    {
+        "text": "rotations, evidences and things like\nthat we save with the detailed logger.",
+        "start": 1555.588,
+        "duration": 4.8
+    },
+    {
+        "text": "And when you save at the end of\nepisode, you get, an evidence count",
+        "start": 1561.168,
+        "duration": 5.64
+    },
+    {
+        "text": "for every per location, per step.",
+        "start": 1566.808,
+        "duration": 2.31
+    },
+    {
+        "text": "You get locations per location per step,\nbut we're only seeing one rotation per",
+        "start": 1569.148,
+        "duration": 5.97
+    },
+    {
+        "text": "location and it's not on a per step basis.",
+        "start": 1575.118,
+        "duration": 3.87
+    },
+    {
+        "text": "Yeah.",
+        "start": 1578.993,
+        "duration": 0.22
+    },
+    {
+        "text": "So, that's because our hypothesis\nis always talking about the",
+        "start": 1580.463,
+        "duration": 5.365
+    },
+    {
+        "text": "orientation of the object.",
+        "start": 1585.948,
+        "duration": 1.65
+    },
+    {
+        "text": "So basically.",
+        "start": 1588.048,
+        "duration": 1.05
+    },
+    {
+        "text": "we have, maybe not green.",
+        "start": 1589.803,
+        "duration": 2.13
+    },
+    {
+        "text": "Let me,",
+        "start": 1591.933,
+        "duration": 0.33
+    },
+    {
+        "text": "so we have our hypothesis,",
+        "start": 1594.513,
+        "duration": 3.03
+    },
+    {
+        "text": "and there we have, location\non object, orientation",
+        "start": 1602.613,
+        "duration": 6.84
+    },
+    {
+        "text": "of object and evidence.",
+        "start": 1613.023,
+        "duration": 3.15
+    },
+    {
+        "text": "And so then we have like tons\nof hypotheses we might say.",
+        "start": 1619.353,
+        "duration": 4.2
+    },
+    {
+        "text": "Okay.",
+        "start": 1623.643,
+        "duration": 0.57
+    },
+    {
+        "text": "Just, I could maybe just, sorry, I\nscroll down slightly on your computer.",
+        "start": 1624.213,
+        "duration": 3.72
+    },
+    {
+        "text": "Oh, sorry.",
+        "start": 1628.083,
+        "duration": 0.24
+    },
+    {
+        "text": "If people are watching on here.",
+        "start": 1628.323,
+        "duration": 1.32
+    },
+    {
+        "text": "Nice.",
+        "start": 1630.303,
+        "duration": 0.27
+    },
+    {
+        "text": "So for example, for the location, it\nmight say, okay, I might be here or",
+        "start": 1640.908,
+        "duration": 4.95
+    },
+    {
+        "text": "I might be here or I might be here.",
+        "start": 1645.858,
+        "duration": 2.34
+    },
+    {
+        "text": "And then for the orientation it's global.",
+        "start": 1648.528,
+        "duration": 3.15
+    },
+    {
+        "text": "For the whole object, it might say,\nI think the cylinder is upright, or I",
+        "start": 1651.678,
+        "duration": 3.45
+    },
+    {
+        "text": "think the cylinder is 45 degree oriented.",
+        "start": 1655.128,
+        "duration": 2.43
+    },
+    {
+        "text": "Or I think the cylinders\nlike 90% oriented.",
+        "start": 1657.558,
+        "duration": 3.75
+    },
+    {
+        "text": "so as we move over the object,\nthe location where we hypothesize",
+        "start": 1662.598,
+        "duration": 4.17
+    },
+    {
+        "text": "we are on the object will change,\nwhich is why this changes over time.",
+        "start": 1666.768,
+        "duration": 4.2
+    },
+    {
+        "text": "But the hypothesis orientation\nof the object is not changing.",
+        "start": 1671.538,
+        "duration": 3.78
+    },
+    {
+        "text": "because if the sensors moving over the\nobject, we still assume the object has",
+        "start": 1676.368,
+        "duration": 4.11
+    },
+    {
+        "text": "the same orientation no matter where\nwe put our sensorimotor on there.",
+        "start": 1680.478,
+        "duration": 3.27
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 1684.768,
+        "duration": 0.75
+    },
+    {
+        "text": "I think so,",
+        "start": 1685.998,
+        "duration": 0.51
+    },
+    {
+        "text": "yeah.",
+        "start": 1688.698,
+        "duration": 0.21
+    },
+    {
+        "text": "So like it's not an\norientation of that feature.",
+        "start": 1688.913,
+        "duration": 3.475
+    },
+    {
+        "text": "Or yeah, it's an orientation\nthat impacts that feature, like",
+        "start": 1693.543,
+        "duration": 5.16
+    },
+    {
+        "text": "that point normal, for example.",
+        "start": 1698.943,
+        "duration": 1.65
+    },
+    {
+        "text": "But it's not like specific\nto that particular feature",
+        "start": 1700.983,
+        "duration": 3.81
+    },
+    {
+        "text": "that's being sent there.",
+        "start": 1704.793,
+        "duration": 0.78
+    },
+    {
+        "text": "It's not like we're trying many\norientations at each time step, or are",
+        "start": 1705.573,
+        "duration": 3.18
+    },
+    {
+        "text": "we are in parallel because you'll\nhave all these different hypotheses,",
+        "start": 1711.003,
+        "duration": 4.83
+    },
+    {
+        "text": "initialized, and you're like, assuming\nyou're maintaining all the hypotheses and",
+        "start": 1715.833,
+        "duration": 4.02
+    },
+    {
+        "text": "you're not like eliminating them through\nlike that evidence percent threshold",
+        "start": 1719.853,
+        "duration": 4.38
+    },
+    {
+        "text": "or whatever, like the whole episode,\nyou're gonna be like, I have that one",
+        "start": 1724.233,
+        "duration": 5.19
+    },
+    {
+        "text": "hypothesis that the mug is upside down.",
+        "start": 1729.423,
+        "duration": 1.95
+    },
+    {
+        "text": "I'm gonna move all locations.",
+        "start": 1731.613,
+        "duration": 1.32
+    },
+    {
+        "text": "How does that fit with\nthat kind of hypothesis?",
+        "start": 1732.933,
+        "duration": 1.59
+    },
+    {
+        "text": "How does other hypothesis at this\nangle, how and integrating over that.",
+        "start": 1734.793,
+        "duration": 4.95
+    },
+    {
+        "text": "okay.",
+        "start": 1742.293,
+        "duration": 0.36
+    },
+    {
+        "text": "And then, yeah, and so they're basically,\nand, that's the issue that Ramy's Kind of",
+        "start": 1743.493,
+        "duration": 5.85
+    },
+    {
+        "text": "identified and is, working on, is the\nfact that that makes our post hypotheses",
+        "start": 1752.028,
+        "duration": 6.42
+    },
+    {
+        "text": "very dependent on the first sensation\nbecause, if we sense a surface, and we",
+        "start": 1758.748,
+        "duration": 8.1
+    },
+    {
+        "text": "know a surface can be oriented a, certain\nnumber of ways with the object model we",
+        "start": 1766.848,
+        "duration": 6.06
+    },
+    {
+        "text": "have, but like one way if I'm sensing a\nsurface here, one of my hypotheses is not",
+        "start": 1772.908,
+        "duration": 6.33
+    },
+    {
+        "text": "that the object is like here or whatever,\nit might be like rotated about this axis.",
+        "start": 1779.298,
+        "duration": 5.73
+    },
+    {
+        "text": "And, that's what kind of\ndetermines the initial hypothesis.",
+        "start": 1786.348,
+        "duration": 2.1
+    },
+    {
+        "text": "I see.",
+        "start": 1789.708,
+        "duration": 0.42
+    },
+    {
+        "text": "I think I understand.",
+        "start": 1790.218,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 1791.028,
+        "duration": 0.09
+    },
+    {
+        "text": "But this is where we sample eight\naround a rotation and we try to select,",
+        "start": 1791.208,
+        "duration": 4.71
+    },
+    {
+        "text": "which one of these is most exactly\naligned with the first observation.",
+        "start": 1796.158,
+        "duration": 4.02
+    },
+    {
+        "text": "Exactly.",
+        "start": 1800.808,
+        "duration": 0.57
+    },
+    {
+        "text": "And so in most of the cases,\nlike with the can here.",
+        "start": 1802.668,
+        "duration": 2.79
+    },
+    {
+        "text": "we would, be sensing, we'd have the\nfirst sensation, which has a pose, to",
+        "start": 1808.008,
+        "duration": 5.61
+    },
+    {
+        "text": "defined by the point normally curvatures.",
+        "start": 1813.678,
+        "duration": 2.07
+    },
+    {
+        "text": "And that pose gives us usually\ntwo possible orientations.",
+        "start": 1815.808,
+        "duration": 5.13
+    },
+    {
+        "text": "Basically saying, if I'm on this\nlocation, on the can, and I'm sensing",
+        "start": 1821.088,
+        "duration": 4.83
+    },
+    {
+        "text": "this curvature, the can is either\nupright or it's upside down because",
+        "start": 1825.918,
+        "duration": 5.67
+    },
+    {
+        "text": "I'm sensing this curved surface.",
+        "start": 1832.338,
+        "duration": 2.43
+    },
+    {
+        "text": "and there's no other way I could sense\nthat on this location of the cup.",
+        "start": 1835.608,
+        "duration": 4.41
+    },
+    {
+        "text": "if the can was turned 90 degrees\nthan the first principle, curvature",
+        "start": 1840.528,
+        "duration": 5.01
+    },
+    {
+        "text": "would also be rotated 90 degrees.",
+        "start": 1845.568,
+        "duration": 2.25
+    },
+    {
+        "text": "and so yeah, the only exception to that\nis, like Neil mentioned, if we're on",
+        "start": 1850.038,
+        "duration": 3.72
+    },
+    {
+        "text": "a flat surface or a circular surface,\nthen the principle curvatures are equal.",
+        "start": 1853.758,
+        "duration": 6.66
+    },
+    {
+        "text": "So they don't tell us anything about\nthe directions in which they point.",
+        "start": 1860.928,
+        "duration": 4.08
+    },
+    {
+        "text": "Okay.",
+        "start": 1865.998,
+        "duration": 0.36
+    },
+    {
+        "text": "And, then the nice thing is even then\nwe don't like uniformly sample all",
+        "start": 1867.498,
+        "duration": 5.04
+    },
+    {
+        "text": "possible rotations of the object.",
+        "start": 1872.568,
+        "duration": 2.58
+    },
+    {
+        "text": "if I'm sensing this, although it could\nbe rotated about the Axi, I don't",
+        "start": 1877.338,
+        "duration": 4.65
+    },
+    {
+        "text": "sample, this is a possible hypothesis,\nthis is a possible, blah, blah, blah.",
+        "start": 1881.988,
+        "duration": 2.94
+    },
+    {
+        "text": "That, that is something you can\ndo in the code, which I think is",
+        "start": 1885.348,
+        "duration": 2.79
+    },
+    {
+        "text": "called uniform hypothesis sampling.",
+        "start": 1888.138,
+        "duration": 2.37
+    },
+    {
+        "text": "yeah.",
+        "start": 1891.648,
+        "duration": 0.36
+    },
+    {
+        "text": "But even then, in order to make\nthat tractable, it does it at",
+        "start": 1892.068,
+        "duration": 3.36
+    },
+    {
+        "text": "increments of 30 degree orientations.",
+        "start": 1895.428,
+        "duration": 3.0
+    },
+    {
+        "text": "Or something like that.",
+        "start": 1899.358,
+        "duration": 0.6
+    },
+    {
+        "text": "So in practice it doesn't really\ndo a great job as well as being",
+        "start": 1899.958,
+        "duration": 4.74
+    },
+    {
+        "text": "computationally expensive.",
+        "start": 1904.818,
+        "duration": 0.99
+    },
+    {
+        "text": "Got it.",
+        "start": 1906.438,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 1907.128,
+        "duration": 0.3
+    },
+    {
+        "text": "You always have a point normal.",
+        "start": 1907.518,
+        "duration": 1.59
+    },
+    {
+        "text": "So that already tells you a lot about\nthe potential orientations of the object.",
+        "start": 1909.108,
+        "duration": 4.38
+    },
+    {
+        "text": "Okay.",
+        "start": 1924.483,
+        "duration": 0.45
+    },
+    {
+        "text": "So yeah, we have a bunch of\nhypotheses and we can update all of",
+        "start": 1925.173,
+        "duration": 3.42
+    },
+    {
+        "text": "them at the set, at each time step.",
+        "start": 1928.593,
+        "duration": 3.24
+    },
+    {
+        "text": "And we can do all of that as like\none large matrix multiplication.",
+        "start": 1931.833,
+        "duration": 3.75
+    },
+    {
+        "text": "which, what do we do at the moment?",
+        "start": 1939.123,
+        "duration": 1.41
+    },
+    {
+        "text": "hypothesis by default, sampled as all of\nthe points on the, in the graph, or are",
+        "start": 1943.233,
+        "duration": 4.83
+    },
+    {
+        "text": "we sampling from the points on the graph?",
+        "start": 1948.063,
+        "duration": 1.65
+    },
+    {
+        "text": "yeah.",
+        "start": 1951.723,
+        "duration": 0.27
+    },
+    {
+        "text": "So right now the way we initialize\nthis hypothesis basis, we add one",
+        "start": 1951.993,
+        "duration": 5.82
+    },
+    {
+        "text": "hypothesis for the location, for\neach of the points in the graph.",
+        "start": 1957.993,
+        "duration": 4.44
+    },
+    {
+        "text": "Okay.",
+        "start": 1963.273,
+        "duration": 0.09
+    },
+    {
+        "text": "And then for each of these locations,\nwe add either two or I think eight,",
+        "start": 1963.363,
+        "duration": 5.34
+    },
+    {
+        "text": "possible orientations depending on how\nthe pr principal curvatures are defined.",
+        "start": 1969.603,
+        "duration": 4.98
+    },
+    {
+        "text": "Okay.",
+        "start": 1976.218,
+        "duration": 0.29
+    },
+    {
+        "text": "So if the, graph is too dense,\nwe'll have too many hypotheses.",
+        "start": 1978.258,
+        "duration": 4.77
+    },
+    {
+        "text": "And if it's too spar.",
+        "start": 1983.028,
+        "duration": 1.175
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 1986.193,
+        "duration": 0.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 1986.993,
+        "duration": 0.29
+    },
+    {
+        "text": "And, I guess, yeah, it's worth mentioning\nthat, yeah, when the hypotheses",
+        "start": 1988.278,
+        "duration": 2.94
+    },
+    {
+        "text": "are initialized for that reason,\nthey're on the nodes in the graph.",
+        "start": 1991.218,
+        "duration": 3.33
+    },
+    {
+        "text": "But once we start moving, of course\nthere's no guarantee that we're",
+        "start": 1995.328,
+        "duration": 3.27
+    },
+    {
+        "text": "gonna be on top of exact exactly\nwhere a node in the graph is, and",
+        "start": 1998.598,
+        "duration": 4.98
+    },
+    {
+        "text": "that's where the kind of nearest\nneighbor matching starts coming in.",
+        "start": 2003.578,
+        "duration": 3.09
+    },
+    {
+        "text": "yeah, and one thing that I guess,\nyeah, we talked about a long time",
+        "start": 2009.938,
+        "duration": 4.44
+    },
+    {
+        "text": "ago is to re-anchor hypothesis.",
+        "start": 2014.378,
+        "duration": 3.51
+    },
+    {
+        "text": "So basically, like you say, right\nnow, if the graph is too dense,",
+        "start": 2017.978,
+        "duration": 5.04
+    },
+    {
+        "text": "you have way too many hypotheses.",
+        "start": 2023.018,
+        "duration": 1.2
+    },
+    {
+        "text": "But also if the graph is too sparse.",
+        "start": 2024.218,
+        "duration": 2.04
+    },
+    {
+        "text": "You have too few hypotheses.",
+        "start": 2026.618,
+        "duration": 1.5
+    },
+    {
+        "text": "Like what Neil said, if I'm only starting\nwith, these points, these few points",
+        "start": 2028.118,
+        "duration": 4.68
+    },
+    {
+        "text": "that I drew in this illustrative graph,\nbut actually my sensorimotor first",
+        "start": 2032.798,
+        "duration": 4.83
+    },
+    {
+        "text": "sense down here, I'm drawing Green\nPoint, but it's taking time to show up.",
+        "start": 2037.628,
+        "duration": 5.04
+    },
+    {
+        "text": "I'm sensing down here, like far away from\nthese other points and then I'm moving.",
+        "start": 2043.298,
+        "duration": 5.13
+    },
+    {
+        "text": "it, I'll have a harder time\nrecognizing that object.",
+        "start": 2050.468,
+        "duration": 3.84
+    },
+    {
+        "text": "So one thing that could be done is, like\nwhen you sense very distinct features on",
+        "start": 2055.028,
+        "duration": 7.44
+    },
+    {
+        "text": "an object, like the point where the handle\nmeets the cup or I don't know, some other",
+        "start": 2062.468,
+        "duration": 6.63
+    },
+    {
+        "text": "distinct features, you could re-anchor\ntwo distinct features stored in the cup.",
+        "start": 2069.098,
+        "duration": 5.67
+    },
+    {
+        "text": "and that could help with that.",
+        "start": 2075.968,
+        "duration": 0.96
+    },
+    {
+        "text": "But yeah, we, haven't really\ngotten, very deep into that idea.",
+        "start": 2076.928,
+        "duration": 4.14
+    },
+    {
+        "text": "just to wrap it up on the displacement\nmatching, problem, I don't know if",
+        "start": 2086.948,
+        "duration": 4.89
+    },
+    {
+        "text": "everyone is already aware of it.",
+        "start": 2091.838,
+        "duration": 1.59
+    },
+    {
+        "text": "but basically the issue is in\norder to recognize this object,",
+        "start": 2094.838,
+        "duration": 5.01
+    },
+    {
+        "text": "you have to sample the displacement\nthat are stored in the cup.",
+        "start": 2100.238,
+        "duration": 3.57
+    },
+    {
+        "text": "You can't sample other displacement.",
+        "start": 2104.168,
+        "duration": 1.83
+    },
+    {
+        "text": "So if I sample this green\npoint, there's already no chance",
+        "start": 2106.148,
+        "duration": 4.41
+    },
+    {
+        "text": "for me to recognize this cup.",
+        "start": 2110.558,
+        "duration": 1.8
+    },
+    {
+        "text": "Basically, if I move like over here and\nthen over here, like there are just no",
+        "start": 2112.358,
+        "duration": 5.22
+    },
+    {
+        "text": "displacements that match in the graph.",
+        "start": 2117.578,
+        "duration": 2.67
+    },
+    {
+        "text": "So I would just not be able\nto recognize this object.",
+        "start": 2120.248,
+        "duration": 3.51
+    },
+    {
+        "text": "and that's a pretty big limitation\nbecause in order to deal with that, we",
+        "start": 2125.828,
+        "duration": 5.13
+    },
+    {
+        "text": "would have to have a very dense graph\nwith an all to all sampling of edges,",
+        "start": 2130.958,
+        "duration": 5.4
+    },
+    {
+        "text": "which is just a combinatorial explosion.",
+        "start": 2137.138,
+        "duration": 2.1
+    },
+    {
+        "text": "And yeah, just, it just\ndidn't seem tractable.",
+        "start": 2140.513,
+        "duration": 3.18
+    },
+    {
+        "text": "one thing we talked about is what\nwe thought about is maybe at some",
+        "start": 2146.873,
+        "duration": 5.46
+    },
+    {
+        "text": "point having a hybrid approach\nwhere we store like significant",
+        "start": 2152.333,
+        "duration": 4.86
+    },
+    {
+        "text": "displacement in the graph.",
+        "start": 2157.193,
+        "duration": 1.41
+    },
+    {
+        "text": "Like a face you would store\nlike displacement between eyes",
+        "start": 2158.603,
+        "duration": 4.11
+    },
+    {
+        "text": "and the nose and the mouth.",
+        "start": 2162.713,
+        "duration": 1.26
+    },
+    {
+        "text": "and then you store features at locations.",
+        "start": 2164.963,
+        "duration": 2.43
+    },
+    {
+        "text": "And that way you could very rapidly\nmake a general inference of the",
+        "start": 2167.633,
+        "duration": 4.41
+    },
+    {
+        "text": "object, like quickly in, for a phase.",
+        "start": 2172.043,
+        "duration": 3.175
+    },
+    {
+        "text": "If you move from eye to nose, you could\nhave action policies that are aimed for",
+        "start": 2175.373,
+        "duration": 5.25
+    },
+    {
+        "text": "sampling these specific displacement.",
+        "start": 2180.623,
+        "duration": 2.16
+    },
+    {
+        "text": "but you could still recognize\nthe face if you made a different",
+        "start": 2183.833,
+        "duration": 3.36
+    },
+    {
+        "text": "series of displacements, using\nthe feature location approach.",
+        "start": 2187.193,
+        "duration": 5.31
+    },
+    {
+        "text": "But yeah, that's where\nthis idea got killed,",
+        "start": 2193.853,
+        "duration": 4.2
+    },
+    {
+        "text": "so yeah, here's the comparison.",
+        "start": 2203.753,
+        "duration": 2.22
+    },
+    {
+        "text": "So basically all of the three\napproaches are location, variant.",
+        "start": 2206.453,
+        "duration": 3.87
+    },
+    {
+        "text": "All of them are rotation invariant.",
+        "start": 2210.323,
+        "duration": 1.84
+    },
+    {
+        "text": "Although features at locations need to\nexplicitly test different rotations.",
+        "start": 2212.183,
+        "duration": 5.1
+    },
+    {
+        "text": "only the space model is scaling varying,\nwith these, I guess we could explicitly",
+        "start": 2218.933,
+        "duration": 7.35
+    },
+    {
+        "text": "just scale as well as a hypothesis,\nbut we've never tried that and it,",
+        "start": 2226.313,
+        "duration": 4.71
+    },
+    {
+        "text": "would add a lot more computations,\nlike it would scale linearly.",
+        "start": 2231.413,
+        "duration": 4.14
+    },
+    {
+        "text": "we can't sample new\ndisplacement with this one.",
+        "start": 2238.823,
+        "duration": 2.85
+    },
+    {
+        "text": "We can do that with, the features\nat locations approach because we",
+        "start": 2241.823,
+        "duration": 3.75
+    },
+    {
+        "text": "have a reference frame of locations\nthat we can interpolate between, we",
+        "start": 2245.573,
+        "duration": 6.09
+    },
+    {
+        "text": "can sample new locations as well.",
+        "start": 2251.663,
+        "duration": 2.28
+    },
+    {
+        "text": "We don't have to sample the exact\nnodes stored in the graph, we",
+        "start": 2254.453,
+        "duration": 2.91
+    },
+    {
+        "text": "can sample any on the object.",
+        "start": 2257.363,
+        "duration": 1.71
+    },
+    {
+        "text": "dealing with noise was only really\npossible with the evidence-based approach.",
+        "start": 2261.023,
+        "duration": 3.84
+    },
+    {
+        "text": "and another nice advantage of\nthe evidence-based approach",
+        "start": 2266.363,
+        "duration": 3.3
+    },
+    {
+        "text": "is that can give you a most\nlikely hypothesis at every step.",
+        "start": 2269.663,
+        "duration": 3.63
+    },
+    {
+        "text": "So with the other two approaches,\nwhich are I guess maybe a bit more",
+        "start": 2273.893,
+        "duration": 4.35
+    },
+    {
+        "text": "like HTM, you have a union of possible,\nmatches at every step like this.",
+        "start": 2278.243,
+        "duration": 8.4
+    },
+    {
+        "text": "All that's possible.",
+        "start": 2286.643,
+        "duration": 0.96
+    },
+    {
+        "text": "And then if you get an inconsistent\nobservation, that gets removed",
+        "start": 2287.603,
+        "duration": 2.97
+    },
+    {
+        "text": "from the Union of Possibilities.",
+        "start": 2290.573,
+        "duration": 1.89
+    },
+    {
+        "text": "But with the evidence-based approach,\nyou always have a most likely hypothesis.",
+        "start": 2293.063,
+        "duration": 3.72
+    },
+    {
+        "text": "Even if you're not sure what\nyou're sensing yet, you can start",
+        "start": 2296.843,
+        "duration": 3.81
+    },
+    {
+        "text": "making, like model-based, actions\non test hypothesis for instance.",
+        "start": 2300.653,
+        "duration": 6.63
+    },
+    {
+        "text": "Does",
+        "start": 2307.498,
+        "duration": 0.29
+    },
+    {
+        "text": "that make sense?",
+        "start": 2311.633,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah, maybe it's worth, yeah,\nit was really nice overview.",
+        "start": 2316.103,
+        "duration": 4.17
+    },
+    {
+        "text": "Maybe it's worth talking a bit about\nthe, transformation of information",
+        "start": 2320.333,
+        "duration": 6.42
+    },
+    {
+        "text": "coming in because that also relates\nto the thalamus stuff we were",
+        "start": 2326.753,
+        "duration": 3.72
+    },
+    {
+        "text": "talking about last, brainstorming.",
+        "start": 2330.473,
+        "duration": 2.49
+    },
+    {
+        "text": "And I think that's something\nthat, that can be confusing in",
+        "start": 2334.703,
+        "duration": 3.69
+    },
+    {
+        "text": "the code is like these kinds of\ntransformations of features and stuff.",
+        "start": 2338.393,
+        "duration": 4.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 2344.783,
+        "duration": 0.6
+    },
+    {
+        "text": "maybe I'll just drop here.",
+        "start": 2349.343,
+        "duration": 1.44
+    },
+    {
+        "text": "How to best explain, because I guess the\nthing that we were talking about just now,",
+        "start": 2353.483,
+        "duration": 5.61
+    },
+    {
+        "text": "we have this kind of global hypothesis\nfor the rotation of the whole object that",
+        "start": 2359.093,
+        "duration": 4.71
+    },
+    {
+        "text": "each hypothesis you can think of as a\ndifferent, that's like a reference frame.",
+        "start": 2363.803,
+        "duration": 4.17
+    },
+    {
+        "text": "We have an orientation for the\nobject and we're moving through that.",
+        "start": 2368.183,
+        "duration": 2.43
+    },
+    {
+        "text": "We're getting these features that\noppose coming in, but those are",
+        "start": 2371.138,
+        "duration": 4.83
+    },
+    {
+        "text": "initially in a sensors reference frame.",
+        "start": 2376.778,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 2381.398,
+        "duration": 0.18
+    },
+    {
+        "text": "let me ma make the nerve\nanalogy real quick first",
+        "start": 2385.208,
+        "duration": 4.11
+    },
+    {
+        "text": "and the thalamus, 'cause we mentioned it.",
+        "start": 2393.248,
+        "duration": 1.92
+    },
+    {
+        "text": "so we have incoming\nlocation and orientation",
+        "start": 2398.228,
+        "duration": 6.72
+    },
+    {
+        "text": "relative to the body.",
+        "start": 2407.348,
+        "duration": 1.23
+    },
+    {
+        "text": "and in layer six we would have\na hypothesis of the objects,",
+        "start": 2416.888,
+        "duration": 7.05
+    },
+    {
+        "text": "location and orientation.",
+        "start": 2425.618,
+        "duration": 1.29
+    },
+    {
+        "text": "So that would be hypothesis of\nwhere we are on the object and how",
+        "start": 2436.463,
+        "duration": 3.57
+    },
+    {
+        "text": "the object is oriented relative to\nthe internal model of the object.",
+        "start": 2440.033,
+        "duration": 5.94
+    },
+    {
+        "text": "And so that hypothesis, we have the\nbackward portion from layer six to",
+        "start": 2446.753,
+        "duration": 4.44
+    },
+    {
+        "text": "the, and the, theory is that backward\nprojection can modify the input that goes",
+        "start": 2451.193,
+        "duration": 9.51
+    },
+    {
+        "text": "to the relay cells and then rotate that\ninput that then goes into layer four,",
+        "start": 2460.703,
+        "duration": 7.8
+    },
+    {
+        "text": "and other layers.",
+        "start": 2471.623,
+        "duration": 1.02
+    },
+    {
+        "text": "so basically this is where the\ntransformation would happen",
+        "start": 2476.933,
+        "duration": 4.05
+    },
+    {
+        "text": "between the objects reference\nframe and the body reference frame.",
+        "start": 2480.983,
+        "duration": 5.01
+    },
+    {
+        "text": "So now where does this happen in Monty?",
+        "start": 2487.808,
+        "duration": 2.91
+    },
+    {
+        "text": "maybe I should, show this in the\ncode in a moment, but, yeah, basic,",
+        "start": 2496.358,
+        "duration": 4.92
+    },
+    {
+        "text": "I guess we get to your point, Neil,\nabout having different rotations and",
+        "start": 2503.048,
+        "duration": 3.66
+    },
+    {
+        "text": "orientation hypotheses of each object.",
+        "start": 2506.708,
+        "duration": 2.22
+    },
+    {
+        "text": "can I copy something on Ali drawing?",
+        "start": 2514.088,
+        "duration": 2.4
+    },
+    {
+        "text": "Yes.",
+        "start": 2526.413,
+        "duration": 0.22
+    },
+    {
+        "text": "Awesome.",
+        "start": 2526.983,
+        "duration": 0.49
+    },
+    {
+        "text": "Okay.",
+        "start": 2529.303,
+        "duration": 0.29
+    },
+    {
+        "text": "So we have all these hypotheses.",
+        "start": 2529.593,
+        "duration": 1.835
+    },
+    {
+        "text": "we have, the incoming\nlocation and orientation.",
+        "start": 2534.608,
+        "duration": 7.08
+    },
+    {
+        "text": "technically in Monty we have\nthe buffer, which calculates",
+        "start": 2545.138,
+        "duration": 3.66
+    },
+    {
+        "text": "the displacement, in the cortex.",
+        "start": 2548.798,
+        "duration": 3.09
+    },
+    {
+        "text": "We might just get the\ndisplacement as input.",
+        "start": 2551.888,
+        "duration": 2.31
+    },
+    {
+        "text": "but",
+        "start": 2556.208,
+        "duration": 0.27
+    },
+    {
+        "text": "yeah, for a moment, let's just talk\nabout location orientation that comes in.",
+        "start": 2558.878,
+        "duration": 4.5
+    },
+    {
+        "text": "so I'm waiting for my iPad to update",
+        "start": 2568.328,
+        "duration": 1.86
+    },
+    {
+        "text": "the, drawing.",
+        "start": 2572.318,
+        "duration": 0.6
+    },
+    {
+        "text": "but, so basically we have one\nsensation, it's in body centric",
+        "start": 2574.568,
+        "duration": 5.37
+    },
+    {
+        "text": "reference frame, and we have all of\nthe hypotheses that we wanna test.",
+        "start": 2579.938,
+        "duration": 3.78
+    },
+    {
+        "text": "and what we basically do is we take\nthis one sensation, we multiply it with",
+        "start": 2586.028,
+        "duration": 4.62
+    },
+    {
+        "text": "this large hypothesis matrix, and we\nget an output of all the new hypothesis.",
+        "start": 2590.648,
+        "duration": 8.76
+    },
+    {
+        "text": "this might not be so easy to draw.",
+        "start": 2602.153,
+        "duration": 1.83
+    },
+    {
+        "text": "Maybe I'll just go to the code for it.",
+        "start": 2604.283,
+        "duration": 1.86
+    },
+    {
+        "text": "yeah, and I don't know if it would\nbe helpful if, we can make it more",
+        "start": 2608.603,
+        "duration": 3.84
+    },
+    {
+        "text": "concrete in terms of say the, yeah.",
+        "start": 2612.443,
+        "duration": 2.46
+    },
+    {
+        "text": "With the sensorimotor module,",
+        "start": 2614.903,
+        "duration": 1.14
+    },
+    {
+        "text": "it's getting a, depth map and then it's\nextracting this point cloud and then from",
+        "start": 2618.533,
+        "duration": 4.38
+    },
+    {
+        "text": "the point cloud and it's extracting point\nnormal and principle curve directions.",
+        "start": 2622.913,
+        "duration": 3.06
+    },
+    {
+        "text": "So that's gonna be a location\nand like a, mini reference frame.",
+        "start": 2627.113,
+        "duration": 3.06
+    },
+    {
+        "text": "but then we're combining that\nwith information from Habitat",
+        "start": 2632.513,
+        "duration": 5.34
+    },
+    {
+        "text": "about where the sensor is.",
+        "start": 2637.853,
+        "duration": 1.5
+    },
+    {
+        "text": "that's the sort of body centric,",
+        "start": 2641.513,
+        "duration": 1.8
+    },
+    {
+        "text": "location.",
+        "start": 2645.773,
+        "duration": 0.78
+    },
+    {
+        "text": "I believe that we start with",
+        "start": 2648.143,
+        "duration": 1.83
+    },
+    {
+        "text": "to get the, body centric location.",
+        "start": 2653.483,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 2658.928,
+        "duration": 0.63
+    },
+    {
+        "text": "As in like the, what we do, the transform\nthe location that's actually passed in.",
+        "start": 2659.558,
+        "duration": 4.2
+    },
+    {
+        "text": "y you mean what we do in the transform?",
+        "start": 2666.698,
+        "duration": 1.74
+    },
+    {
+        "text": "Yeah.",
+        "start": 2669.698,
+        "duration": 0.51
+    },
+    {
+        "text": "That to 3D location form.",
+        "start": 2670.868,
+        "duration": 2.835
+    },
+    {
+        "text": "Yeah.",
+        "start": 2675.788,
+        "duration": 0.21
+    },
+    {
+        "text": "Like the coordinate system.",
+        "start": 2675.998,
+        "duration": 1.26
+    },
+    {
+        "text": "When we say that's body centric, I\nthink it's really habitat centric or",
+        "start": 2679.238,
+        "duration": 5.73
+    },
+    {
+        "text": "Yeah, I think, yeah, in this case it's\nrelative to the origin of habitat.",
+        "start": 2687.548,
+        "duration": 5.4
+    },
+    {
+        "text": "Of habitat.",
+        "start": 2693.518,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 2694.958,
+        "duration": 0.3
+    },
+    {
+        "text": "It's like a, it's an external kind\nof coordinate system, but in a robot",
+        "start": 2695.258,
+        "duration": 5.25
+    },
+    {
+        "text": "it would, be relative to, the torso\nor the hand or something like that.",
+        "start": 2701.528,
+        "duration": 5.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 2708.428,
+        "duration": 0.39
+    },
+    {
+        "text": "So we, there's this variable\ncalled world coordinates and",
+        "start": 2708.818,
+        "duration": 4.5
+    },
+    {
+        "text": "you can turn it off and on.",
+        "start": 2713.318,
+        "duration": 1.47
+    },
+    {
+        "text": "yeah, whether you want it to be\nin world coordinates or, not.",
+        "start": 2719.048,
+        "duration": 4.86
+    },
+    {
+        "text": "and basically what it does, if it\nisn't world coordinates, it takes",
+        "start": 2725.108,
+        "duration": 3.12
+    },
+    {
+        "text": "into account the, it gets the sensor\nlocations and orientations and agent",
+        "start": 2728.228,
+        "duration": 7.23
+    },
+    {
+        "text": "location orientations in the world,\nand then applies those transformations,",
+        "start": 2735.458,
+        "duration": 5.82
+    },
+    {
+        "text": "to the point cloud that we're\nsensing, to turn them into world",
+        "start": 2743.978,
+        "duration": 6.6
+    },
+    {
+        "text": "coordinates or like basically to\ncalculate out the sensorimotor and",
+        "start": 2750.998,
+        "duration": 4.74
+    },
+    {
+        "text": "agent movement from the point cloud\nthat the camera image is getting.",
+        "start": 2755.738,
+        "duration": 4.59
+    },
+    {
+        "text": "Because from the camera image Yeah.",
+        "start": 2764.678,
+        "duration": 3.145
+    },
+    {
+        "text": "That image.",
+        "start": 2768.333,
+        "duration": 0.785
+    },
+    {
+        "text": "And that doesn't tell us where\nin the world it is at all.",
+        "start": 2769.628,
+        "duration": 2.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 2774.638,
+        "duration": 0.3
+    },
+    {
+        "text": "And then, but then I guess the nice\nthing about Monty, because it's using",
+        "start": 2774.938,
+        "duration": 2.76
+    },
+    {
+        "text": "an object centric, recognition system\nwith movement, we don't need to do that.",
+        "start": 2777.698,
+        "duration": 6.45
+    },
+    {
+        "text": "You could just have the\nlocation could literally be",
+        "start": 2784.988,
+        "duration": 5.43
+    },
+    {
+        "text": "in like the coordinate system.",
+        "start": 2790.418,
+        "duration": 4.8
+    },
+    {
+        "text": "Like it just needs to be\nconsistent across movements.",
+        "start": 2795.728,
+        "duration": 2.52
+    },
+    {
+        "text": "that we know the orient orientation\nof the sensorimotor and that we",
+        "start": 2800.138,
+        "duration": 6.21
+    },
+    {
+        "text": "have the movement information.",
+        "start": 2806.408,
+        "duration": 1.8
+    },
+    {
+        "text": "if, my incoming location is if, my\nlocation and orientation is relative",
+        "start": 2812.468,
+        "duration": 5.4
+    },
+    {
+        "text": "to my fingertip, I feel something here.",
+        "start": 2817.868,
+        "duration": 3.06
+    },
+    {
+        "text": "As long as I have a movement, the\nlocation doesn't really matter, but the",
+        "start": 2821.768,
+        "duration": 5.28
+    },
+    {
+        "text": "orientation is what needs to be tracked.",
+        "start": 2827.738,
+        "duration": 3.24
+    },
+    {
+        "text": "because we're gonna integrate it in,",
+        "start": 2834.218,
+        "duration": 2.04
+    },
+    {
+        "text": "in an internal,",
+        "start": 2838.628,
+        "duration": 1.05
+    },
+    {
+        "text": "reference frame.",
+        "start": 2841.838,
+        "duration": 0.78
+    },
+    {
+        "text": "You mean you're talking about it's\nnot to just send displacement.",
+        "start": 2845.138,
+        "duration": 3.93
+    },
+    {
+        "text": "Yeah.",
+        "start": 2852.128,
+        "duration": 0.33
+    },
+    {
+        "text": "Displacement and, orientations.",
+        "start": 2852.458,
+        "duration": 4.41
+    },
+    {
+        "text": "But it's, not displacement.",
+        "start": 2857.678,
+        "duration": 1.59
+    },
+    {
+        "text": "It's like movements.",
+        "start": 2859.268,
+        "duration": 0.72
+    },
+    {
+        "text": "It's not like a displacement,\nlike we're matching an edge.",
+        "start": 2859.988,
+        "duration": 2.28
+    },
+    {
+        "text": "It's just like we've moved through, space.",
+        "start": 2862.838,
+        "duration": 3.36
+    },
+    {
+        "text": "placement to me always includes\nlocation and orientation changes.",
+        "start": 2866.468,
+        "duration": 4.8
+    },
+    {
+        "text": "yeah.",
+        "start": 2872.558,
+        "duration": 0.33
+    },
+    {
+        "text": "So if I'm just talking about\nlocation changes, I'm talk,",
+        "start": 2874.448,
+        "duration": 3.6
+    },
+    {
+        "text": "I would say translation.",
+        "start": 2878.258,
+        "duration": 1.62
+    },
+    {
+        "text": "but displacement, already\nincludes an orientation change.",
+        "start": 2881.318,
+        "duration": 3.84
+    },
+    {
+        "text": "if I rotated my finger and moved it that\nwould be included in the displacement.",
+        "start": 2885.338,
+        "duration": 4.555
+    },
+    {
+        "text": "But yeah, we talked about before\nwhether we can just, just communicate",
+        "start": 2890.918,
+        "duration": 7.35
+    },
+    {
+        "text": "placements instead of locations\nin a common reference frame.",
+        "start": 2898.448,
+        "duration": 3.09
+    },
+    {
+        "text": "And I, there are these issues with it\nwhere like it'll make interaction with",
+        "start": 2901.538,
+        "duration": 7.26
+    },
+    {
+        "text": "the environment very difficult, right.",
+        "start": 2908.798,
+        "duration": 2.4
+    },
+    {
+        "text": "Because you don't know\nwhere in the world you are.",
+        "start": 2911.198,
+        "duration": 2.25
+    },
+    {
+        "text": "yeah, and like voting and stuff like that.",
+        "start": 2916.058,
+        "duration": 1.47
+    },
+    {
+        "text": "No, that's true.",
+        "start": 2918.248,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 2918.878,
+        "duration": 0.57
+    },
+    {
+        "text": "But yeah, I think that's more on\nthe like sensorimotor module stuff.",
+        "start": 2921.248,
+        "duration": 3.36
+    },
+    {
+        "text": "so",
+        "start": 2925.898,
+        "duration": 0.9
+    },
+    {
+        "text": "yeah, maybe I'll focus on the evidence\nmodule for now and then we can,",
+        "start": 2928.898,
+        "duration": 4.02
+    },
+    {
+        "text": "get back to that, sometime.",
+        "start": 2935.438,
+        "duration": 1.59
+    },
+    {
+        "text": "But yeah, I think we talked about it\nbefore also in the sense of whether that's",
+        "start": 2937.028,
+        "duration": 4.02
+    },
+    {
+        "text": "maybe a difference between the where and\nthe what pathway that The what pathway",
+        "start": 2941.048,
+        "duration": 5.19
+    },
+    {
+        "text": "does access to, body centric coordinates.",
+        "start": 2946.238,
+        "duration": 3.51
+    },
+    {
+        "text": "For common coordinates.",
+        "start": 2950.618,
+        "duration": 1.08
+    },
+    {
+        "text": "It just gets displacement maybe.",
+        "start": 2951.698,
+        "duration": 2.25
+    },
+    {
+        "text": "But yeah, I don't know.",
+        "start": 2954.098,
+        "duration": 0.75
+    },
+    {
+        "text": "That's very speculative.",
+        "start": 2954.848,
+        "duration": 1.23
+    },
+    {
+        "text": "But yeah.",
+        "start": 2959.858,
+        "duration": 0.3
+    },
+    {
+        "text": "So I guess in terms of the code in\ngeneral, it's this world coordinate thing,",
+        "start": 2960.158,
+        "duration": 3.21
+    },
+    {
+        "text": "which is just like common reference frame.",
+        "start": 2963.488,
+        "duration": 2.79
+    },
+    {
+        "text": "Yeah.",
+        "start": 2968.468,
+        "duration": 0.27
+    },
+    {
+        "text": "so yeah, we get these locations in\na common reference frame and then",
+        "start": 2971.498,
+        "duration": 5.07
+    },
+    {
+        "text": "we call update possible matches,\nwhich loops over, objects in memory.",
+        "start": 2976.568,
+        "duration": 7.41
+    },
+    {
+        "text": "we use multithreading\nfor this in most cases.",
+        "start": 2984.428,
+        "duration": 2.94
+    },
+    {
+        "text": "since we can update the evidence for each\nobject in parallel or total independent.",
+        "start": 2989.018,
+        "duration": 4.32
+    },
+    {
+        "text": "The brain could do this in parallel too.",
+        "start": 2994.478,
+        "duration": 1.98
+    },
+    {
+        "text": "and we call update evidence.",
+        "start": 2997.568,
+        "duration": 1.68
+    },
+    {
+        "text": "the dark string, helps\nexplain everything a bit.",
+        "start": 3000.643,
+        "duration": 3.09
+    },
+    {
+        "text": "I would basically start with zero\nevidence for all of the hypotheses.",
+        "start": 3004.513,
+        "duration": 2.88
+    },
+    {
+        "text": "So a flat prior could be\ndifferent in the future.",
+        "start": 3007.393,
+        "duration": 3.51
+    },
+    {
+        "text": "if I'm in the kitchen, I have some priors\nthat I will see certain things there,",
+        "start": 3011.293,
+        "duration": 5.01
+    },
+    {
+        "text": "and won't see certain other things.",
+        "start": 3018.403,
+        "duration": 2.13
+    },
+    {
+        "text": "but we start with zero evidence\nfor anything, for everything.",
+        "start": 3022.783,
+        "duration": 3.6
+    },
+    {
+        "text": "and then the features and displacement\neither add or subtract evidence.",
+        "start": 3028.213,
+        "duration": 5.43
+    },
+    {
+        "text": "I think this should say pose features.",
+        "start": 3038.053,
+        "duration": 2.28
+    },
+    {
+        "text": "and then features like\ncolor can only add evidence.",
+        "start": 3043.843,
+        "duration": 3.3
+    },
+    {
+        "text": "They can subtract evidence.",
+        "start": 3047.143,
+        "duration": 1.53
+    },
+    {
+        "text": "That way we can recognize the same\nmorphology in different colors,",
+        "start": 3049.003,
+        "duration": 3.9
+    },
+    {
+        "text": "and then.",
+        "start": 3056.533,
+        "duration": 0.72
+    },
+    {
+        "text": "Evidence is weighed by the distance of\nhypotheses to the point in the model.",
+        "start": 3057.973,
+        "duration": 4.29
+    },
+    {
+        "text": "there are also votes which\nare handled somewhere else.",
+        "start": 3064.213,
+        "duration": 2.67
+    },
+    {
+        "text": "And here, this is the point of maybe at\nsome point we do a hybrid approach where",
+        "start": 3068.293,
+        "duration": 4.23
+    },
+    {
+        "text": "we can also use displacement to, infer\nlike an objects orientation more rapidly.",
+        "start": 3072.523,
+        "duration": 5.7
+    },
+    {
+        "text": "if we're on the step, we initialize the\nhypothesis space, and initialize the",
+        "start": 3080.413,
+        "duration": 7.5
+    },
+    {
+        "text": "evidence using the first observed feature.",
+        "start": 3087.913,
+        "duration": 2.7
+    },
+    {
+        "text": "otherwise we update the hypothesis.",
+        "start": 3091.333,
+        "duration": 2.4
+    },
+    {
+        "text": "So that's what we, do here.",
+        "start": 3094.573,
+        "duration": 2.1
+    },
+    {
+        "text": "So if the displacement is none, so\nwe have not moved yet, we basically",
+        "start": 3096.673,
+        "duration": 4.92
+    },
+    {
+        "text": "call, get initial hypothesis space.",
+        "start": 3101.593,
+        "duration": 2.19
+    },
+    {
+        "text": "to get that we use the fe features\nthat we observe, which are like the",
+        "start": 3104.953,
+        "duration": 5.28
+    },
+    {
+        "text": "point, normal and curvature direction.",
+        "start": 3110.233,
+        "duration": 1.68
+    },
+    {
+        "text": "And we update the first evidence for it.",
+        "start": 3115.663,
+        "duration": 3.15
+    },
+    {
+        "text": "the more interesting part, what we mostly\ndo, we have actually moved already.",
+        "start": 3120.043,
+        "duration": 4.41
+    },
+    {
+        "text": "So now,",
+        "start": 3125.653,
+        "duration": 0.93
+    },
+    {
+        "text": "we go here, we have a displacement,",
+        "start": 3129.403,
+        "duration": 2.19
+    },
+    {
+        "text": "and we do a couple of, yeah.",
+        "start": 3134.353,
+        "duration": 2.79
+    },
+    {
+        "text": "Alright, so we,",
+        "start": 3137.233,
+        "duration": 0.78
+    },
+    {
+        "text": "this is a bit detailed on like the\ndifferent channel input channels.",
+        "start": 3142.003,
+        "duration": 4.47
+    },
+    {
+        "text": "but basically this is\nthe interesting part.",
+        "start": 3149.083,
+        "duration": 2.64
+    },
+    {
+        "text": "We have all of these possible\nposes, which are orientations.",
+        "start": 3152.683,
+        "duration": 4.53
+    },
+    {
+        "text": "and in order to test this displacement,\nwe have to rotate the displacement.",
+        "start": 3158.983,
+        "duration": 7.05
+    },
+    {
+        "text": "By each of the rotation hypotheses.",
+        "start": 3166.573,
+        "duration": 2.91
+    },
+    {
+        "text": "So basically this is a matrix\nof different rotation matrices.",
+        "start": 3169.903,
+        "duration": 4.59
+    },
+    {
+        "text": "and we multiply, like we take the dot\nproduct of these rotation matrices",
+        "start": 3176.533,
+        "duration": 4.2
+    },
+    {
+        "text": "and the incoming displacement, and\nthen we have to calculate the search",
+        "start": 3181.123,
+        "duration": 4.83
+    },
+    {
+        "text": "locations, which is where in the graph\ndo we wanna check the stored features?",
+        "start": 3185.953,
+        "duration": 4.23
+    },
+    {
+        "text": "Where might we be after this displacement?",
+        "start": 3190.633,
+        "duration": 2.43
+    },
+    {
+        "text": "in, in order to get those search\nlocations, we take a location hypothesis,",
+        "start": 3194.023,
+        "duration": 5.64
+    },
+    {
+        "text": "and we add the rotator displacement to it.",
+        "start": 3201.193,
+        "duration": 3.24
+    },
+    {
+        "text": "so yeah, let me draw this real quick.",
+        "start": 3207.583,
+        "duration": 3.45
+    },
+    {
+        "text": "And maybe I can just\nfind it on the screen.",
+        "start": 3213.913,
+        "duration": 2.16
+    },
+    {
+        "text": "so hang on.",
+        "start": 3217.723,
+        "duration": 2.585
+    },
+    {
+        "text": "I think there was also, yeah, I was\ngonna say there was some figures in",
+        "start": 3220.633,
+        "duration": 2.76
+    },
+    {
+        "text": "the paper that might be worth using.",
+        "start": 3223.393,
+        "duration": 1.56
+    },
+    {
+        "text": "Yeah.",
+        "start": 3226.138,
+        "duration": 0.36
+    },
+    {
+        "text": "So that list of possible\nposes that is changing right.",
+        "start": 3229.018,
+        "duration": 3.15
+    },
+    {
+        "text": "On each time step and, no possible\nposes stay the same at every time step.",
+        "start": 3232.408,
+        "duration": 7.83
+    },
+    {
+        "text": "Only the evidence for them changes.",
+        "start": 3240.238,
+        "duration": 1.92
+    },
+    {
+        "text": "Okay.",
+        "start": 3242.578,
+        "duration": 0.33
+    },
+    {
+        "text": "But possible locations update.",
+        "start": 3243.688,
+        "duration": 2.94
+    },
+    {
+        "text": "So basically,",
+        "start": 3246.688,
+        "duration": 1.05
+    },
+    {
+        "text": "possible pose is just used to get\na list of rotated displacement.",
+        "start": 3250.138,
+        "duration": 5.01
+    },
+    {
+        "text": "That's like a temporary variable\nthat we only use in this step.",
+        "start": 3255.868,
+        "duration": 3.03
+    },
+    {
+        "text": "self thought possible\nposes is not modified.",
+        "start": 3260.308,
+        "duration": 2.13
+    },
+    {
+        "text": "And then we calculate search locations\nby taking the possible locations and",
+        "start": 3264.358,
+        "duration": 4.59
+    },
+    {
+        "text": "adding the rotated displacement on them.",
+        "start": 3268.948,
+        "duration": 2.67
+    },
+    {
+        "text": "So basically we have an observation\nhere, this pose and a displacement.",
+        "start": 3272.158,
+        "duration": 6.63
+    },
+    {
+        "text": "And we have all of these possible\nlocations on the cylinder that we could",
+        "start": 3280.378,
+        "duration": 4.41
+    },
+    {
+        "text": "be at, and we take this displacement\nand we rotate it by the post",
+        "start": 3284.788,
+        "duration": 5.1
+    },
+    {
+        "text": "hypotheses and add it to that location.",
+        "start": 3289.888,
+        "duration": 2.88
+    },
+    {
+        "text": "hang on.",
+        "start": 3298.438,
+        "duration": 0.205
+    },
+    {
+        "text": "This is the first step.",
+        "start": 3298.643,
+        "duration": 1.04
+    },
+    {
+        "text": "So this's just initializing it\nas show the search location.",
+        "start": 3299.683,
+        "duration": 2.775
+    },
+    {
+        "text": "But then we have these, like for e\nwe have initialized post hypothesis",
+        "start": 3302.668,
+        "duration": 5.49
+    },
+    {
+        "text": "for every location on the object, or\nseveral of them, this point has two",
+        "start": 3308.158,
+        "duration": 4.59
+    },
+    {
+        "text": "possible orientations of the object.",
+        "start": 3312.748,
+        "duration": 1.95
+    },
+    {
+        "text": "If I'm at this location and the\ncylinder, it's either, upside,",
+        "start": 3315.328,
+        "duration": 3.93
+    },
+    {
+        "text": "right side up or upside down.",
+        "start": 3319.438,
+        "duration": 1.5
+    },
+    {
+        "text": "and then we get the displacement, use\nthe displacement to rotate, use the post",
+        "start": 3322.228,
+        "duration": 5.64
+    },
+    {
+        "text": "hypothesis to rotate the displacement.",
+        "start": 3327.868,
+        "duration": 2.37
+    },
+    {
+        "text": "We add the displacement to the hypothesis\nlocation, and that's the search location.",
+        "start": 3330.778,
+        "duration": 4.95
+    },
+    {
+        "text": "So you can see here.",
+        "start": 3335.728,
+        "duration": 1.08
+    },
+    {
+        "text": "if I was at this location here,\nI hope you can see my pointer.",
+        "start": 3339.193,
+        "duration": 3.93
+    },
+    {
+        "text": "If I was at this location here, I might\nnow either be up here or down here.",
+        "start": 3343.633,
+        "duration": 4.26
+    },
+    {
+        "text": "And if I was at the top of the\ncylinder, there are more hypotheses.",
+        "start": 3348.253,
+        "duration": 3.54
+    },
+    {
+        "text": "So there we have this, these kind of\ncircles of where we might be next.",
+        "start": 3351.793,
+        "duration": 4.29
+    },
+    {
+        "text": "And that's why in like these\nanimations, the search locations or",
+        "start": 3356.593,
+        "duration": 4.35
+    },
+    {
+        "text": "the hypothesis can go off the object\nbecause a lot of them will be wrong.",
+        "start": 3360.943,
+        "duration": 4.86
+    },
+    {
+        "text": "And a lot of them, when we\nactually apply, the displacement",
+        "start": 3366.223,
+        "duration": 3.0
+    },
+    {
+        "text": "will end up off of the object.",
+        "start": 3369.223,
+        "duration": 1.92
+    },
+    {
+        "text": "and then we look at the features stored\nat these posts, at these search locations.",
+        "start": 3374.263,
+        "duration": 6.33
+    },
+    {
+        "text": "And for instance, if they're actually off\nof the object, that's negative evidence,",
+        "start": 3380.593,
+        "duration": 4.89
+    },
+    {
+        "text": "low likelihood, if the feature doesn't\nmatch, that's like the color's wrong.",
+        "start": 3385.783,
+        "duration": 5.1
+    },
+    {
+        "text": "That's.",
+        "start": 3390.883,
+        "duration": 0.12
+    },
+    {
+        "text": "No evidence for that.",
+        "start": 3391.678,
+        "duration": 1.53
+    },
+    {
+        "text": "If the color is right and the features\nare right, that's high evidence like here.",
+        "start": 3393.958,
+        "duration": 4.83
+    },
+    {
+        "text": "and then we do the same thing.",
+        "start": 3400.018,
+        "duration": 1.38
+    },
+    {
+        "text": "So now we moved actually like sideways.",
+        "start": 3401.398,
+        "duration": 3.06
+    },
+    {
+        "text": "So again, we have all of these\ndifferent hypotheses of where we might",
+        "start": 3405.718,
+        "duration": 4.26
+    },
+    {
+        "text": "be and what the rotation would be.",
+        "start": 3409.978,
+        "duration": 2.61
+    },
+    {
+        "text": "we apply the rotation to the\ndisplacement, draw a line here,",
+        "start": 3413.818,
+        "duration": 4.17
+    },
+    {
+        "text": "give us the search locations.",
+        "start": 3418.378,
+        "duration": 1.8
+    },
+    {
+        "text": "At each of these points,\nwe look in the graph.",
+        "start": 3420.688,
+        "duration": 2.64
+    },
+    {
+        "text": "How do the points store nearby in the\ngraph compare to the observed features?",
+        "start": 3424.288,
+        "duration": 4.05
+    },
+    {
+        "text": "And we use that to update the evidence.",
+        "start": 3428.338,
+        "duration": 3.45
+    },
+    {
+        "text": "Do we compare to the average of\nthese points, the closest KS or do",
+        "start": 3433.228,
+        "duration": 5.01
+    },
+    {
+        "text": "we compare it to just the, best one?",
+        "start": 3438.238,
+        "duration": 1.74
+    },
+    {
+        "text": "Yes.",
+        "start": 3441.598,
+        "duration": 0.72
+    },
+    {
+        "text": "Good question.",
+        "start": 3442.318,
+        "duration": 0.75
+    },
+    {
+        "text": "So basically, we have a search radius.",
+        "start": 3444.088,
+        "duration": 3.24
+    },
+    {
+        "text": "So here's the example of, Hypothesis\nthat we're at this location,",
+        "start": 3447.988,
+        "duration": 4.92
+    },
+    {
+        "text": "there are two orientations.",
+        "start": 3453.328,
+        "duration": 1.23
+    },
+    {
+        "text": "We have this displacement.",
+        "start": 3454.558,
+        "duration": 1.26
+    },
+    {
+        "text": "We rotate the displacement\nby the post hypotheses.",
+        "start": 3456.808,
+        "duration": 2.94
+    },
+    {
+        "text": "We get two possible locations, and\nfor each location we look in a certain",
+        "start": 3461.518,
+        "duration": 6.09
+    },
+    {
+        "text": "search radios, we look at all the points\nin the radio and update the evidence.",
+        "start": 3467.608,
+        "duration": 8.22
+    },
+    {
+        "text": "Like we calculate the distance one\nbetween the search location and the",
+        "start": 3476.368,
+        "duration": 4.65
+    },
+    {
+        "text": "point in the graph, and also the feature\ndifference between the points in that.",
+        "start": 3481.018,
+        "duration": 7.5
+    },
+    {
+        "text": "And that gives us kind of\nan evidence value for each",
+        "start": 3488.848,
+        "duration": 2.76
+    },
+    {
+        "text": "of the points in the radius.",
+        "start": 3491.608,
+        "duration": 1.59
+    },
+    {
+        "text": "And then we take the\nbest match within that.",
+        "start": 3493.198,
+        "duration": 2.43
+    },
+    {
+        "text": "So the maximum value Okay.",
+        "start": 3496.138,
+        "duration": 2.91
+    },
+    {
+        "text": "is it do any better if we do, with\nthe average or, like no, it does worse",
+        "start": 3499.658,
+        "duration": 6.68
+    },
+    {
+        "text": "with the average because, the find us.",
+        "start": 3506.338,
+        "duration": 3.03
+    },
+    {
+        "text": "Like you might be in an area on the\nobject where features change quickly,",
+        "start": 3509.743,
+        "duration": 4.62
+    },
+    {
+        "text": "like right before the edge of the mug.",
+        "start": 3514.693,
+        "duration": 1.8
+    },
+    {
+        "text": "So you would actually get quite\nnegative evidence if you compare it",
+        "start": 3516.943,
+        "duration": 2.76
+    },
+    {
+        "text": "to the, points in the graph up there.",
+        "start": 3521.533,
+        "duration": 1.74
+    },
+    {
+        "text": "Or if you have a very flip object, you\nmight actually have point normal set",
+        "start": 3523.933,
+        "duration": 4.2
+    },
+    {
+        "text": "are opposite, storage in that search\nradios, you don't wanna, you don't",
+        "start": 3528.133,
+        "duration": 5.7
+    },
+    {
+        "text": "want that to drag down your evidence\nif there's something that matches",
+        "start": 3533.833,
+        "duration": 3.15
+    },
+    {
+        "text": "your observation in that radios,\nthat's evidence for this object.",
+        "start": 3536.983,
+        "duration": 4.2
+    },
+    {
+        "text": "Okay, that makes sense.",
+        "start": 3542.568,
+        "duration": 1.375
+    },
+    {
+        "text": "and so when there's some, so when you\ndo find that you've done a displacement,",
+        "start": 3547.758,
+        "duration": 5.605
+    },
+    {
+        "text": "you find a point that matches nicely,\nwhich location has its evidence updated?",
+        "start": 3553.873,
+        "duration": 5.64
+    },
+    {
+        "text": "The one you left from, or\nthe one you arrived at?",
+        "start": 3561.463,
+        "duration": 2.64
+    },
+    {
+        "text": "evidence.",
+        "start": 3567.058,
+        "duration": 0.08
+    },
+    {
+        "text": "Yeah.",
+        "start": 3567.168,
+        "duration": 0.29
+    },
+    {
+        "text": "So ba location basis, right?",
+        "start": 3567.463,
+        "duration": 2.1
+    },
+    {
+        "text": "So yeah, so basically, this row here in\nthe hypothesis, the possible locations",
+        "start": 3569.563,
+        "duration": 8.85
+    },
+    {
+        "text": "on the object gets updated at every step.",
+        "start": 3578.413,
+        "duration": 2.97
+    },
+    {
+        "text": "So with every displacement we update\nwhere we might be on the object.",
+        "start": 3581.383,
+        "duration": 4.32
+    },
+    {
+        "text": "so basically this evidence keeps\ncount of like basically evidence",
+        "start": 3588.043,
+        "duration": 5.79
+    },
+    {
+        "text": "for path that we took on the object.",
+        "start": 3593.833,
+        "duration": 1.95
+    },
+    {
+        "text": "or yeah, to answer a question,\nit would be the evidence for the",
+        "start": 3597.823,
+        "duration": 5.58
+    },
+    {
+        "text": "location that we ended up at.",
+        "start": 3603.403,
+        "duration": 1.56
+    },
+    {
+        "text": "Okay.",
+        "start": 3605.743,
+        "duration": 0.15
+    },
+    {
+        "text": "So the evidence for that, we actually are\nat that search location that we tested.",
+        "start": 3605.893,
+        "duration": 3.99
+    },
+    {
+        "text": "And if we did something like\nre-anchoring, it might be changing",
+        "start": 3612.283,
+        "duration": 5.67
+    },
+    {
+        "text": "the location to the point where\nwe get the maximum feature match.",
+        "start": 3617.953,
+        "duration": 4.02
+    },
+    {
+        "text": "Exactly.",
+        "start": 3623.368,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 3623.973,
+        "duration": 0.18
+    },
+    {
+        "text": "Yeah.",
+        "start": 3624.748,
+        "duration": 0.15
+    },
+    {
+        "text": "Rather than rather our location being\nlike the point somewhere in space that",
+        "start": 3624.898,
+        "duration": 5.91
+    },
+    {
+        "text": "we think we are after path integration.",
+        "start": 3630.808,
+        "duration": 2.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 3634.558,
+        "duration": 0.45
+    },
+    {
+        "text": "there some more detailed things I think.",
+        "start": 3638.938,
+        "duration": 5.37
+    },
+    {
+        "text": "Yeah, it's in the documentation\nbut not in the paper.",
+        "start": 3644.308,
+        "duration": 2.82
+    },
+    {
+        "text": "But basically the search radios can\nbe informed by the sensed curvature.",
+        "start": 3647.818,
+        "duration": 4.26
+    },
+    {
+        "text": "So if we have a very flat surface that\nwe're sensing, we don't really need",
+        "start": 3652.888,
+        "duration": 5.19
+    },
+    {
+        "text": "to sample points in a circle sphere.",
+        "start": 3658.078,
+        "duration": 2.91
+    },
+    {
+        "text": "We can sample points along the surface,\nonly so we can use the, point normal that",
+        "start": 3660.988,
+        "duration": 7.8
+    },
+    {
+        "text": "we are sensing to inform whether like we,\nwe can use the point normal to squish.",
+        "start": 3668.803,
+        "duration": 6.945
+    },
+    {
+        "text": "The search radios from a, circle\ninto a sphere that is like going",
+        "start": 3676.408,
+        "duration": 4.8
+    },
+    {
+        "text": "along the surface of the object.",
+        "start": 3681.208,
+        "duration": 1.59
+    },
+    {
+        "text": "if that makes sense.",
+        "start": 3685.138,
+        "duration": 0.81
+    },
+    {
+        "text": "So basically we're like, how we do\nit on a technical level is we adjust",
+        "start": 3688.078,
+        "duration": 6.87
+    },
+    {
+        "text": "like our distant distance measure.",
+        "start": 3695.248,
+        "duration": 2.79
+    },
+    {
+        "text": "like the way we weigh the distance,\nthe search point to other points",
+        "start": 3699.238,
+        "duration": 4.08
+    },
+    {
+        "text": "in the graph is, being squished\nby, the point normal direction.",
+        "start": 3703.318,
+        "duration": 6.78
+    },
+    {
+        "text": "Okay.",
+        "start": 3711.478,
+        "duration": 0.27
+    },
+    {
+        "text": "so here we threshold, like on\nthe flat surface, we would get,",
+        "start": 3712.078,
+        "duration": 5.37
+    },
+    {
+        "text": "only points in the graph that are\nactually on a, on the surface.",
+        "start": 3717.448,
+        "duration": 3.45
+    },
+    {
+        "text": "And then if it's, like a round curvature,\nthen we do it more of a circular search.",
+        "start": 3720.898,
+        "duration": 4.53
+    },
+    {
+        "text": "So then we have all of\nthe search locations.",
+        "start": 3736.438,
+        "duration": 3.0
+    },
+    {
+        "text": "Then this is where we\ndo the evidence update.",
+        "start": 3740.248,
+        "duration": 2.58
+    },
+    {
+        "text": "Thresholding.",
+        "start": 3742.828,
+        "duration": 0.9
+    },
+    {
+        "text": "That's the part that's for\nefficiency, that we don't need",
+        "start": 3744.058,
+        "duration": 2.91
+    },
+    {
+        "text": "to actually update all of the\nhypothesis, only the most likely ones.",
+        "start": 3746.968,
+        "duration": 3.66
+    },
+    {
+        "text": "so get a threshold, this where\nwas, we get hypothesis IDs to test.",
+        "start": 3751.888,
+        "duration": 6.33
+    },
+    {
+        "text": "and then yeah, if there actually\nare hypothesis to test, which",
+        "start": 3760.258,
+        "duration": 4.23
+    },
+    {
+        "text": "might always be the case, if it's\nan object that's already very",
+        "start": 3764.488,
+        "duration": 3.21
+    },
+    {
+        "text": "impossible, we will not test anything.",
+        "start": 3767.698,
+        "duration": 2.58
+    },
+    {
+        "text": "we will then get the search\nlocations that we wanna test.",
+        "start": 3773.218,
+        "duration": 3.0
+    },
+    {
+        "text": "and yeah, we calculate the evidence\nfor these search locations using",
+        "start": 3777.448,
+        "duration": 7.02
+    },
+    {
+        "text": "the features that were observed,",
+        "start": 3785.158,
+        "duration": 1.59
+    },
+    {
+        "text": "and give those evidence.",
+        "start": 3789.663,
+        "duration": 1.675
+    },
+    {
+        "text": "We clip that evidence\nto not be small or zero.",
+        "start": 3791.713,
+        "duration": 3.72
+    },
+    {
+        "text": "and yeah, basically add the\nevidence to the existing evidence,",
+        "start": 3798.553,
+        "duration": 5.46
+    },
+    {
+        "text": "and weigh it by like the past\nweight and the present weight.",
+        "start": 3805.063,
+        "duration": 3.33
+    },
+    {
+        "text": "and that's the part Ramy that,\nyou played around with, last week.",
+        "start": 3812.803,
+        "duration": 4.32
+    },
+    {
+        "text": "Basically, if past weight and\npresent weight add up to one,",
+        "start": 3817.903,
+        "duration": 3.78
+    },
+    {
+        "text": "then the evidence is bounded.",
+        "start": 3822.463,
+        "duration": 2.25
+    },
+    {
+        "text": "It will never go outside of\nthe range minus one and two.",
+        "start": 3824.773,
+        "duration": 3.81
+    },
+    {
+        "text": "If past and present weight add up\nto more than one, it's unbounded",
+        "start": 3829.513,
+        "duration": 4.56
+    },
+    {
+        "text": "in the current default setup.",
+        "start": 3834.493,
+        "duration": 1.53
+    },
+    {
+        "text": "Both are set to one,\nso they add up to two.",
+        "start": 3836.533,
+        "duration": 2.58
+    },
+    {
+        "text": "So evidence can grow infinitely\nhigh in theory, which I. Basically,",
+        "start": 3839.683,
+        "duration": 7.905
+    },
+    {
+        "text": "if we, bind the evidence values,\nwe have a finite memory horizon.",
+        "start": 3848.908,
+        "duration": 4.89
+    },
+    {
+        "text": "And with the current action policies,\nthat doesn't work so well because",
+        "start": 3854.368,
+        "duration": 4.56
+    },
+    {
+        "text": "basically the memory horizon is too\nshort to actually explore a large",
+        "start": 3859.108,
+        "duration": 3.6
+    },
+    {
+        "text": "part of the object or to actually\nsense the whole shape of the object.",
+        "start": 3862.708,
+        "duration": 3.69
+    },
+    {
+        "text": "but eventually I think this is\nthe more elegant solution, and",
+        "start": 3867.808,
+        "duration": 6.33
+    },
+    {
+        "text": "how the brain must be doing this.",
+        "start": 3874.138,
+        "duration": 2.13
+    },
+    {
+        "text": "'cause yeah, neurons can't\nfire infinitely much,",
+        "start": 3876.298,
+        "duration": 3.69
+    },
+    {
+        "text": "or like you have like hysteresis,\nwhich is bounded, I would say.",
+        "start": 3882.598,
+        "duration": 6.15
+    },
+    {
+        "text": "but yeah, I think this, only a bounded\nevidence values only really work well",
+        "start": 3891.178,
+        "duration": 4.71
+    },
+    {
+        "text": "if you have either a very efficient,\naction policy or some kind of replay of.",
+        "start": 3895.888,
+        "duration": 7.65
+    },
+    {
+        "text": "past significant features\nor something like that.",
+        "start": 3904.633,
+        "duration": 2.73
+    },
+    {
+        "text": "Yeah.",
+        "start": 3908.833,
+        "duration": 0.18
+    },
+    {
+        "text": "And maybe with like hierarchy as\nwell and more unique features, that",
+        "start": 3909.013,
+        "duration": 4.65
+    },
+    {
+        "text": "would help as well, because yeah,\nright now everything is sensing point",
+        "start": 3913.663,
+        "duration": 4.71
+    },
+    {
+        "text": "normals, in kind of local surfaces.",
+        "start": 3918.373,
+        "duration": 3.9
+    },
+    {
+        "text": "And",
+        "start": 3922.273,
+        "duration": 0.09
+    },
+    {
+        "text": "yeah, even if you jump to the\nother side of an object, you're",
+        "start": 3924.763,
+        "duration": 6.12
+    },
+    {
+        "text": "still gonna feel a point normal.",
+        "start": 3930.913,
+        "duration": 1.14
+    },
+    {
+        "text": "Like it's a, the displacement will be\ndifferent for different objects and stuff",
+        "start": 3932.053,
+        "duration": 4.38
+    },
+    {
+        "text": "like that, but it's still not that unique.",
+        "start": 3936.433,
+        "duration": 1.35
+    },
+    {
+        "text": "It's not like you move somewhere\nand it's oh, this is a handle",
+        "start": 3937.783,
+        "duration": 2.43
+    },
+    {
+        "text": "and something very, yeah.",
+        "start": 3941.053,
+        "duration": 2.55
+    },
+    {
+        "text": "Yeah.",
+        "start": 3945.348,
+        "duration": 0.29
+    },
+    {
+        "text": "In general, it, it fits well with,\nWill's strategy during the TBP Olympics",
+        "start": 3948.163,
+        "duration": 6.72
+    },
+    {
+        "text": "that you want to, if, if you're not\ngetting very good features coming in.",
+        "start": 3955.723,
+        "duration": 4.89
+    },
+    {
+        "text": "That's right.",
+        "start": 3962.878,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 3963.568,
+        "duration": 0.27
+    },
+    {
+        "text": "so yeah, I feel like there's a lot\nmore to cover, but I've already been",
+        "start": 3967.648,
+        "duration": 2.79
+    },
+    {
+        "text": "talking for about an hour or so.",
+        "start": 3970.438,
+        "duration": 1.74
+    },
+    {
+        "text": "I don't know if we should take a\nbreak at some point and keep going",
+        "start": 3972.958,
+        "duration": 4.14
+    },
+    {
+        "text": "at some other point, or if you\nwanna ask some specific questions.",
+        "start": 3977.098,
+        "duration": 3.66
+    },
+    {
+        "text": "yeah.",
+        "start": 3983.008,
+        "duration": 0.36
+    },
+    {
+        "text": "Does it ever happen that the search\nradiuss, doesn't have any points to test?",
+        "start": 3985.403,
+        "duration": 5.195
+    },
+    {
+        "text": "And then how does, how do you handle that?",
+        "start": 3991.168,
+        "duration": 1.59
+    },
+    {
+        "text": "yeah, it doesn't,",
+        "start": 3995.023,
+        "duration": 0.48
+    },
+    {
+        "text": "just don't, yeah.",
+        "start": 3997.743,
+        "duration": 0.451
+    },
+    {
+        "text": "It's basically if you, yeah, if you end\nup off of the object, there'll be nothing",
+        "start": 3998.194,
+        "duration": 5.274
+    },
+    {
+        "text": "in there and you get minus one evidence.",
+        "start": 4003.468,
+        "duration": 2.43
+    },
+    {
+        "text": "but you could be a very course\nmodel and you're not off the",
+        "start": 4008.778,
+        "duration": 5.7
+    },
+    {
+        "text": "object, but you're, on the surface.",
+        "start": 4014.478,
+        "duration": 1.77
+    },
+    {
+        "text": "But the model is to course.",
+        "start": 4016.248,
+        "duration": 2.04
+    },
+    {
+        "text": "yeah, so that's why you have to set that.",
+        "start": 4021.158,
+        "duration": 3.535
+    },
+    {
+        "text": "so we have this parameter called max\nmatch distance, and that's basically",
+        "start": 4026.043,
+        "duration": 8.82
+    },
+    {
+        "text": "like the radius of the search thing.",
+        "start": 4034.863,
+        "duration": 3.42
+    },
+    {
+        "text": "And it is usually set pretty large, like\nfor the coffee mug, I think it's like a",
+        "start": 4038.823,
+        "duration": 5.79
+    },
+    {
+        "text": "fifth or something between a fifth and\na 10th of the height of the coffee mug.",
+        "start": 4044.613,
+        "duration": 4.14
+    },
+    {
+        "text": "as far as I remember.",
+        "start": 4049.983,
+        "duration": 1.14
+    },
+    {
+        "text": "So it's like definitely way bigger than\nthe distance between points in the graph.",
+        "start": 4051.783,
+        "duration": 4.47
+    },
+    {
+        "text": "if you set that too small then,\nthat problem, can definitely happen.",
+        "start": 4057.603,
+        "duration": 4.62
+    },
+    {
+        "text": "But, so basically as you make the, graph\nmore sparse, you would have to, if you",
+        "start": 4062.673,
+        "duration": 4.89
+    },
+    {
+        "text": "make it too sparse, you would have to\nincrease the max match distance, but you",
+        "start": 4067.563,
+        "duration": 3.18
+    },
+    {
+        "text": "would have to make it bearish for that.",
+        "start": 4070.743,
+        "duration": 1.56
+    },
+    {
+        "text": "So ideally, we would wanna make it,\nas a function of the ness or the",
+        "start": 4073.923,
+        "duration": 5.73
+    },
+    {
+        "text": "sparsity of the points in the graph.",
+        "start": 4079.803,
+        "duration": 1.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 4083.588,
+        "duration": 0.29
+    },
+    {
+        "text": "That could be idea.",
+        "start": 4083.878,
+        "duration": 1.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 4085.068,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah, that's actually a great idea.",
+        "start": 4088.593,
+        "duration": 1.44
+    },
+    {
+        "text": "I've, been trying to start thinking about\nif we build a platform for this, we don't",
+        "start": 4090.753,
+        "duration": 6.42
+    },
+    {
+        "text": "want people to have to adjust all of\nthese different parameters and understand",
+        "start": 4097.173,
+        "duration": 3.36
+    },
+    {
+        "text": "them and do we simplify this thing?",
+        "start": 4100.533,
+        "duration": 2.28
+    },
+    {
+        "text": "So yeah, making the max match distance\njust a function of sparseness of",
+        "start": 4102.933,
+        "duration": 5.01
+    },
+    {
+        "text": "the graph or this distance between\npoints in the graph that, that would",
+        "start": 4107.943,
+        "duration": 5.4
+    },
+    {
+        "text": "be, I think that would work well.",
+        "start": 4113.343,
+        "duration": 1.98
+    },
+    {
+        "text": "it also could be a learned thing, right?",
+        "start": 4127.288,
+        "duration": 3.095
+    },
+    {
+        "text": "Because.",
+        "start": 4130.383,
+        "duration": 0.57
+    },
+    {
+        "text": "each object could come\nwith its own distance.",
+        "start": 4132.093,
+        "duration": 3.27
+    },
+    {
+        "text": "'cause depends because you're\nonly matching what you learned.",
+        "start": 4135.963,
+        "duration": 3.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 4139.503,
+        "duration": 0.06
+    },
+    {
+        "text": "So once you learned and determined\nat that point you determine what the",
+        "start": 4140.433,
+        "duration": 3.45
+    },
+    {
+        "text": "distance is and that for you always\nuse that distance for that object.",
+        "start": 4143.883,
+        "duration": 3.51
+    },
+    {
+        "text": "I, right?",
+        "start": 4147.393,
+        "duration": 2.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 4149.733,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 4150.903,
+        "duration": 0.36
+    },
+    {
+        "text": "So yeah, I think it would make\nsense to have that, like an object",
+        "start": 4151.263,
+        "duration": 3.63
+    },
+    {
+        "text": "specific parameter probably.",
+        "start": 4154.893,
+        "duration": 1.71
+    },
+    {
+        "text": "Or at least",
+        "start": 4156.603,
+        "duration": 1.86
+    },
+    {
+        "text": "yeah, something from the\nobject model function.",
+        "start": 4161.583,
+        "duration": 2.46
+    },
+    {
+        "text": "one topic I didn't get into at all is\nlike the object models and constraint",
+        "start": 4165.333,
+        "duration": 5.43
+    },
+    {
+        "text": "graphs versus unconstrained graphs.",
+        "start": 4170.763,
+        "duration": 1.95
+    },
+    {
+        "text": "but that's another topic.",
+        "start": 4174.093,
+        "duration": 1.83
+    },
+    {
+        "text": "But basically we have already\nother parameters for graphs.",
+        "start": 4175.923,
+        "duration": 4.35
+    },
+    {
+        "text": "Like how large can that size wise,\nhow, many points can they have at max?",
+        "start": 4180.273,
+        "duration": 6.66
+    },
+    {
+        "text": "and.",
+        "start": 4188.823,
+        "duration": 0.81
+    },
+    {
+        "text": "What else?",
+        "start": 4191.178,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 4191.808,
+        "duration": 0.45
+    },
+    {
+        "text": "How much spatial resolution\ncan they have at max?",
+        "start": 4193.038,
+        "duration": 3.15
+    },
+    {
+        "text": "So the max match distance could be,\nbased on one of these parameters as well.",
+        "start": 4196.698,
+        "duration": 5.34
+    },
+    {
+        "text": "one more question.",
+        "start": 4209.303,
+        "duration": 0.78
+    },
+    {
+        "text": "I, noticed that the evidence is\nsplit, it's split by the graph IDs",
+        "start": 4210.603,
+        "duration": 4.155
+    },
+    {
+        "text": "and that results in the need for\nthis, for loop over the objects.",
+        "start": 4214.788,
+        "duration": 4.11
+    },
+    {
+        "text": "And I'm wondering if it's more efficient\nto vectorize everything and have something",
+        "start": 4219.468,
+        "duration": 4.47
+    },
+    {
+        "text": "similar to the channel mapping hypothesis,\nwhatever, just to know where, which,",
+        "start": 4223.938,
+        "duration": 6.0
+    },
+    {
+        "text": "which hypothesis are, for this graph Id\nmake something separate and basically",
+        "start": 4230.778,
+        "duration": 5.4
+    },
+    {
+        "text": "just have vectorize all of the evidences.",
+        "start": 4236.178,
+        "duration": 2.64
+    },
+    {
+        "text": "would that make it more efficient or\nwhat would be the problems in doing that?",
+        "start": 4239.538,
+        "duration": 4.02
+    },
+    {
+        "text": "yeah, that's an interesting question.",
+        "start": 4247.038,
+        "duration": 1.26
+    },
+    {
+        "text": "off the top of my head, I don't\nsee an issue with doing that.",
+        "start": 4252.138,
+        "duration": 3.3
+    },
+    {
+        "text": "I'm sorry, Ramy, can\nyou repeat the question?",
+        "start": 4257.208,
+        "duration": 1.68
+    },
+    {
+        "text": "Vectorize the evidences,\nfor, yeah, that part.",
+        "start": 4258.888,
+        "duration": 5.04
+    },
+    {
+        "text": "So now we have to do this for loop over\nall of the evidences and then we are",
+        "start": 4264.558,
+        "duration": 3.48
+    },
+    {
+        "text": "just updating a graph ID by graph id.",
+        "start": 4268.038,
+        "duration": 2.7
+    },
+    {
+        "text": "I think we're doing it parallel, but\nit seems like it'll be more efficient",
+        "start": 4272.298,
+        "duration": 5.28
+    },
+    {
+        "text": "to have all of the evidences in one\nvector and then we can just apply.",
+        "start": 4277.578,
+        "duration": 3.33
+    },
+    {
+        "text": "So basically when we think about\nhypothesis, you'll only be in one vector",
+        "start": 4281.388,
+        "duration": 4.05
+    },
+    {
+        "text": "instead of separated by the graph ID so\nthat we don't have to loop over them.",
+        "start": 4285.438,
+        "duration": 3.87
+    },
+    {
+        "text": "it's the same, same efficiency, step that\nViviane took to go, to basically high.",
+        "start": 4290.568,
+        "duration": 6.99
+    },
+    {
+        "text": "She went one step into, grouping\nall these hypothesis together and",
+        "start": 4299.163,
+        "duration": 3.48
+    },
+    {
+        "text": "making them one vector and then\napplying the transformations on that",
+        "start": 4302.643,
+        "duration": 3.39
+    },
+    {
+        "text": "one vector instead of a for loop.",
+        "start": 4306.033,
+        "duration": 1.26
+    },
+    {
+        "text": "But now we're doing it another\nstep where we would have all of",
+        "start": 4307.533,
+        "duration": 3.72
+    },
+    {
+        "text": "the graph ID hypothesis together,\nin one vector, and then we could",
+        "start": 4311.253,
+        "duration": 4.59
+    },
+    {
+        "text": "just apply one transformation.",
+        "start": 4315.843,
+        "duration": 1.32
+    },
+    {
+        "text": "We're have to do this\nfor, loop, for the graphs.",
+        "start": 4317.163,
+        "duration": 2.31
+    },
+    {
+        "text": "It'll be especially helpful when we have\na lot more, objects we won't have to look.",
+        "start": 4319.503,
+        "duration": 6.03
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 4326.013,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 4327.273,
+        "duration": 0.18
+    },
+    {
+        "text": "I guess in gen, the, what if\nthe number of objects changes?",
+        "start": 4327.813,
+        "duration": 5.52
+    },
+    {
+        "text": "I guess it, would it still work then?",
+        "start": 4333.753,
+        "duration": 1.83
+    },
+    {
+        "text": "If so, then I think it makes sense.",
+        "start": 4335.613,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah, it's basically the same\ncases for the input channels.",
+        "start": 4338.853,
+        "duration": 4.35
+    },
+    {
+        "text": "I never noticed the parallels\nbecause I did those things",
+        "start": 4344.733,
+        "duration": 2.94
+    },
+    {
+        "text": "at totally different times.",
+        "start": 4347.673,
+        "duration": 1.29
+    },
+    {
+        "text": "but yeah, like Ramy says, for the\ninput channels, we, basically put up",
+        "start": 4350.523,
+        "duration": 5.13
+    },
+    {
+        "text": "possible location and orientations for\nthe channels into one large vector.",
+        "start": 4355.803,
+        "duration": 5.82
+    },
+    {
+        "text": "And we just store the mapping\nbetween them, like which IDs",
+        "start": 4361.683,
+        "duration": 3.9
+    },
+    {
+        "text": "correspond to which channel.",
+        "start": 4365.583,
+        "duration": 1.5
+    },
+    {
+        "text": "and if we add another input channel,\nthe case that we mentioned, that Ra",
+        "start": 4367.953,
+        "duration": 6.18
+    },
+    {
+        "text": "Ramy mentioned earlier, where we add\na hypothesis to the hypothesis space",
+        "start": 4374.283,
+        "duration": 4.26
+    },
+    {
+        "text": "or a input channel, we just append to\nall these lists, to the mapping and",
+        "start": 4378.543,
+        "duration": 5.22
+    },
+    {
+        "text": "to those, and we could do the same\nthing, for over graph IDs as well.",
+        "start": 4383.763,
+        "duration": 7.11
+    },
+    {
+        "text": "I don't know if at some point, like\nhardware wise, you run into some limits.",
+        "start": 4393.153,
+        "duration": 3.99
+    },
+    {
+        "text": "You don't wanna do the\nmatrix multiplication that",
+        "start": 4397.143,
+        "duration": 3.3
+    },
+    {
+        "text": "large anymore, but Yeah.",
+        "start": 4400.443,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 4404.193,
+        "duration": 0.18
+    },
+    {
+        "text": "I don't know.",
+        "start": 4404.373,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah, I think, especially if\nwe're using GPUs at some point,",
+        "start": 4404.913,
+        "duration": 3.87
+    },
+    {
+        "text": "then probably the bigger the\nmatrices the better up to a limit.",
+        "start": 4408.783,
+        "duration": 4.11
+    },
+    {
+        "text": "and, yeah, I guess question\nwhat that limit would be.",
+        "start": 4415.863,
+        "duration": 2.505
+    },
+    {
+        "text": "Yeah.",
+        "start": 4419.373,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 4420.513,
+        "duration": 0.21
+    },
+    {
+        "text": "And in general, I think resizing,\ntensors is, not as trivial as",
+        "start": 4420.723,
+        "duration": 4.92
+    },
+    {
+        "text": "like appending to lists 'cause\nit needs to reallocate, memory.",
+        "start": 4425.643,
+        "duration": 6.03
+    },
+    {
+        "text": "But, actually, I don't know.",
+        "start": 4431.733,
+        "duration": 3.3
+    },
+    {
+        "text": "Maybe it's, fine.",
+        "start": 4436.263,
+        "duration": 0.63
+    },
+    {
+        "text": "but yeah.",
+        "start": 4441.093,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah, I think we could definitely\nexplore something like that at one",
+        "start": 4442.083,
+        "duration": 2.7
+    },
+    {
+        "text": "point to accelerate it further.",
+        "start": 4444.783,
+        "duration": 2.46
+    },
+    {
+        "text": "Yeah, then we could do multi threading\nover learning modules instead.",
+        "start": 4449.298,
+        "duration": 4.23
+    },
+    {
+        "text": "Interesting idea.",
+        "start": 4461.538,
+        "duration": 0.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 4462.648,
+        "duration": 0.27
+    },
+    {
+        "text": "It would be a two level, mapping, instead\nof that, so we'd have to the graph ID and",
+        "start": 4463.518,
+        "duration": 5.82
+    },
+    {
+        "text": "then from the graph ID to the channels or,\nI could we just have two separate mapping.",
+        "start": 4469.338,
+        "duration": 4.38
+    },
+    {
+        "text": "yeah.",
+        "start": 4475.518,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 4486.018,
+        "duration": 0.21
+    },
+    {
+        "text": "And I guess right now with the,",
+        "start": 4486.228,
+        "duration": 3.84
+    },
+    {
+        "text": "only testing some of the hypotheses that\nkind of, dynamically builds smaller,",
+        "start": 4493.398,
+        "duration": 8.31
+    },
+    {
+        "text": "vectors, right?",
+        "start": 4507.363,
+        "duration": 0.93
+    },
+    {
+        "text": "That we then, update,",
+        "start": 4510.273,
+        "duration": 1.77
+    },
+    {
+        "text": "yeah, basically we have the evidence\nthreshold, which gives us hypothesis IDs",
+        "start": 4514.263,
+        "duration": 5.97
+    },
+    {
+        "text": "to test, and then we index with these IDs\nto get a new list of search locations.",
+        "start": 4520.233,
+        "duration": 7.68
+    },
+    {
+        "text": "Create a new, yeah.",
+        "start": 4528.753,
+        "duration": 0.48
+    },
+    {
+        "text": "I guess that would be\na bit prob problematic.",
+        "start": 4529.953,
+        "duration": 3.09
+    },
+    {
+        "text": "We would then, if we do it for all of\nthe objects in the same thing, we would",
+        "start": 4534.213,
+        "duration": 3.705
+    },
+    {
+        "text": "then have to separate out the search\nlocations into the differents reference",
+        "start": 4537.923,
+        "duration": 4.39
+    },
+    {
+        "text": "frames to test them, or we would, yeah.",
+        "start": 4542.403,
+        "duration": 3.715
+    },
+    {
+        "text": "So we don't have a ragged\nlist, a ragged array,",
+        "start": 4546.118,
+        "duration": 2.855
+    },
+    {
+        "text": "because each one have a\ndifferent number of locations.",
+        "start": 4553.263,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah, we would have to separate them into\nseparate arrays, so maybe at that point",
+        "start": 4560.013,
+        "duration": 6.27
+    },
+    {
+        "text": "it wouldn't be more efficient anymore.",
+        "start": 4566.283,
+        "duration": 2.31
+    },
+    {
+        "text": "alternatively we could do the kind\nof biological whatever where, we have",
+        "start": 4570.123,
+        "duration": 5.94
+    },
+    {
+        "text": "one giant reference frame and there\nat very far locations from each other.",
+        "start": 4576.063,
+        "duration": 4.755
+    },
+    {
+        "text": "Yeah.",
+        "start": 4583.353,
+        "duration": 0.39
+    },
+    {
+        "text": "In a fixed capacity almost, or, yeah,",
+        "start": 4583.743,
+        "duration": 3.39
+    },
+    {
+        "text": "yeah.",
+        "start": 4591.033,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 4591.483,
+        "duration": 0.27
+    },
+    {
+        "text": "I think it would be a bit more\ninvolved than just applying the same",
+        "start": 4591.753,
+        "duration": 2.73
+    },
+    {
+        "text": "mechanism as to the input channels.",
+        "start": 4594.483,
+        "duration": 2.37
+    }
+]

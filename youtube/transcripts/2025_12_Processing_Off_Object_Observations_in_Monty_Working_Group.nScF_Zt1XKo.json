@@ -1,0 +1,6977 @@
+[
+    {
+        "text": "Jason Carver: So yeah, so luckily,\nI do have some familiarity",
+        "start": 8.248,
+        "duration": 3.21
+    },
+    {
+        "text": "with, particle filters.",
+        "start": 11.458,
+        "duration": 1.35
+    },
+    {
+        "text": "I haven't, implemented it in 20\nyears, but I did implement it once.",
+        "start": 13.508,
+        "duration": 4.41
+    },
+    {
+        "text": "It was one of my, actually, a paper\nI really liked, the Thrun paper from",
+        "start": 17.918,
+        "duration": 3.93
+    },
+    {
+        "text": "2001 that MixedRMCL was, like\u2026 I\nwas really pleased to just see it by",
+        "start": 21.858,
+        "duration": 4.85
+    },
+    {
+        "text": "chance in the\u2026 in the Thousand Brains.",
+        "start": 26.718,
+        "duration": 2.0
+    },
+    {
+        "text": "Project paper.",
+        "start": 29.318,
+        "duration": 0.95
+    },
+    {
+        "text": "But it was\u2026 it was a fun connection.",
+        "start": 30.988,
+        "duration": 1.63
+    },
+    {
+        "text": "Yeah,",
+        "start": 32.628,
+        "duration": 0.02
+    },
+    {
+        "text": "there's always the details of, like,\nhow do you actually use the sensor",
+        "start": 34.988,
+        "duration": 4.13
+    },
+    {
+        "text": "data to update the observation?",
+        "start": 39.248,
+        "duration": 2.15
+    },
+    {
+        "text": "And I think one place that\nI was getting stuck was",
+        "start": 41.608,
+        "duration": 3.04
+    },
+    {
+        "text": "trying to apply the sensor data\nto all the observations, or",
+        "start": 46.238,
+        "duration": 3.92
+    },
+    {
+        "text": "to all the hypotheses at once.",
+        "start": 50.158,
+        "duration": 1.62
+    },
+    {
+        "text": "I think that's what I was\u2026 I was\ntrying to do it, in one fell swoop.",
+        "start": 51.898,
+        "duration": 4.05
+    },
+    {
+        "text": "Rather than it's oh, yeah, if you're just\nlooking at one hypothesis at a time, it's",
+        "start": 56.268,
+        "duration": 4.14
+    },
+    {
+        "text": "almost trivial to update that hypothesis\nwith the off objects, yeah, observation.",
+        "start": 60.998,
+        "duration": 6.32
+    },
+    {
+        "text": "Niels Leadholm: Yeah, so I guess\nit's Yeah, basically, they'll all",
+        "start": 67.908,
+        "duration": 4.17
+    },
+    {
+        "text": "be integrating movement, and They'll\nall think they're, somewhere in",
+        "start": 72.088,
+        "duration": 4.54
+    },
+    {
+        "text": "that object's reference frame.",
+        "start": 76.628,
+        "duration": 1.34
+    },
+    {
+        "text": "And then they're just going\nto get that sensor data.",
+        "start": 79.148,
+        "duration": 1.79
+    },
+    {
+        "text": "So if a hypothesis is being updated,\nit's going to get the sensory data",
+        "start": 80.948,
+        "duration": 4.6
+    },
+    {
+        "text": "Which may or may not match what\nwas learned at nearby points.",
+        "start": 86.818,
+        "duration": 4.21
+    },
+    {
+        "text": "And so once a, a hypothesis\nmoves through space.",
+        "start": 91.538,
+        "duration": 2.77
+    },
+    {
+        "text": "In this kind of reference frame,\nand then it's receiving sensory",
+        "start": 95.278,
+        "duration": 3.58
+    },
+    {
+        "text": "data, and it's basically gonna look\nat its kind of learned neighbors",
+        "start": 98.858,
+        "duration": 3.62
+    },
+    {
+        "text": "To see, does anyone\nmatch what I'm getting?",
+        "start": 103.648,
+        "duration": 2.96
+    },
+    {
+        "text": "But",
+        "start": 107.228,
+        "duration": 0.03
+    },
+    {
+        "text": "if the\u2026 if it's nowhere near anyone,\nthen that's this out-of-model",
+        "start": 109.538,
+        "duration": 6.46
+    },
+    {
+        "text": "situation, where it's like the\npoint has moved, super far away.",
+        "start": 116.348,
+        "duration": 2.72
+    },
+    {
+        "text": "And then if it's the\u2026",
+        "start": 119.788,
+        "duration": 1.38
+    },
+    {
+        "text": "more, strictly just off-object,\nthat, implies that, okay, it's moved,",
+        "start": 121.888,
+        "duration": 5.45
+    },
+    {
+        "text": "there's some learned points nearby.",
+        "start": 127.638,
+        "duration": 1.82
+    },
+    {
+        "text": "But it's getting this observation\nthat's, saying, oh, I'm sensing nothing.",
+        "start": 130.028,
+        "duration": 4.29
+    },
+    {
+        "text": "And that's where we want\nthis high prediction error.",
+        "start": 135.068,
+        "duration": 2.14
+    },
+    {
+        "text": "But I guess what\u2026",
+        "start": 137.218,
+        "duration": 2.37
+    },
+    {
+        "text": "in some ways it's good, in some\nways maybe you could say it's,",
+        "start": 141.498,
+        "duration": 2.78
+    },
+    {
+        "text": "computationally expensive, but, As\nlong as the hypothesis is considered,",
+        "start": 144.908,
+        "duration": 3.47
+    },
+    {
+        "text": "Good enough to continue updating.",
+        "start": 149.448,
+        "duration": 1.73
+    },
+    {
+        "text": "We're gonna move it with, the\nincoming kind of movement data.",
+        "start": 151.838,
+        "duration": 4.0
+    },
+    {
+        "text": "And then, yeah, pass\nthat sensory information.",
+        "start": 156.988,
+        "duration": 2.01
+    },
+    {
+        "text": "So we\u2026 we don't need to work out,\nwhat is the correspondence between",
+        "start": 158.998,
+        "duration": 5.18
+    },
+    {
+        "text": "The hypotheses that are being\nupdated, and something like, a ray of\u2026",
+        "start": 164.788,
+        "duration": 4.09
+    },
+    {
+        "text": "Of, vision or anything\nlike that, if, that helps.",
+        "start": 170.828,
+        "duration": 3.61
+    },
+    {
+        "text": "So it's\u2026 Yeah.",
+        "start": 174.438,
+        "duration": 2.91
+    },
+    {
+        "text": "Jason Carver: Yeah, I think\u2026 I think,",
+        "start": 177.858,
+        "duration": 1.5
+    },
+    {
+        "text": "When you move\u2026 so when you move\nthe sensor on the\u2026 on a single",
+        "start": 181.498,
+        "duration": 4.99
+    },
+    {
+        "text": "hypothesized\u2026 a single model.",
+        "start": 186.508,
+        "duration": 2.13
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 189.128,
+        "duration": 0.29
+    },
+    {
+        "text": "Jason Carver: And let's talk about\ndistance sensors, because I think a touch",
+        "start": 190.408,
+        "duration": 2.1
+    },
+    {
+        "text": "sensor is, even more trivial, right?",
+        "start": 192.718,
+        "duration": 2.86
+    },
+    {
+        "text": "a distance sensor, you move it, and\u2026 and\u2026",
+        "start": 196.418,
+        "duration": 3.41
+    },
+    {
+        "text": "obviously, the depth of the\nmodel is different in different",
+        "start": 200.408,
+        "duration": 2.58
+    },
+    {
+        "text": "places, moving the eye, right?",
+        "start": 202.988,
+        "duration": 2.22
+    },
+    {
+        "text": "That's the process where I was like,\noh, you have to find where the,",
+        "start": 205.538,
+        "duration": 3.43
+    },
+    {
+        "text": "like, where it lands on the model.",
+        "start": 209.168,
+        "duration": 4.63
+    },
+    {
+        "text": "Yes, you're right.",
+        "start": 213.798,
+        "duration": 0.082
+    },
+    {
+        "text": "that I had in my head of\nthe rays deciding where",
+        "start": 213.88,
+        "duration": 1.118
+    },
+    {
+        "text": "the sensor is landing on the model.",
+        "start": 218.078,
+        "duration": 2.75
+    },
+    {
+        "text": "Niels Leadholm: right now is we have\nthe depth information, which, together",
+        "start": 222.038,
+        "duration": 3.02
+    },
+    {
+        "text": "with the location of the sensor, we\nhave the location that's being sensed.",
+        "start": 225.068,
+        "duration": 3.84
+    },
+    {
+        "text": "Jason Carver: I'm talking\nabout just in the model.",
+        "start": 230.458,
+        "duration": 1.08
+    },
+    {
+        "text": "Niels Leadholm: Without recognizing\nthe model, we have a location, a",
+        "start": 231.708,
+        "duration": 4.17
+    },
+    {
+        "text": "new location, and then we have the\nprevious location, and then that's",
+        "start": 235.878,
+        "duration": 2.79
+    },
+    {
+        "text": "that displacement in the world space.",
+        "start": 238.868,
+        "duration": 2.65
+    },
+    {
+        "text": "Viviane Clay: yeah, basically the\nwhole taking account dev already",
+        "start": 243.558,
+        "duration": 3.17
+    },
+    {
+        "text": "happens in the sensor module.",
+        "start": 246.728,
+        "duration": 1.57
+    },
+    {
+        "text": "we're actually already in the transform\nbefore it gets to the sensor module.",
+        "start": 250.298,
+        "duration": 3.27
+    },
+    {
+        "text": "So I\u2026 actually, I think maybe\nit's useful if we use a, just",
+        "start": 253.778,
+        "duration": 5.3
+    },
+    {
+        "text": "a whiteboard for some of the.",
+        "start": 259.078,
+        "duration": 1.48
+    },
+    {
+        "text": "Niels Leadholm: Sounds good, yeah.",
+        "start": 260.558,
+        "duration": 0.72
+    },
+    {
+        "text": "Viviane Clay: Do you mind if I make\nthis offer object out of model one,",
+        "start": 261.548,
+        "duration": 3.73
+    },
+    {
+        "text": "Niels Leadholm: No, yeah, please.",
+        "start": 266.408,
+        "duration": 1.12
+    },
+    {
+        "text": "Viviane Clay: Okay.",
+        "start": 267.628,
+        "duration": 0.25
+    },
+    {
+        "text": "Okay, I'll just post this\nlink in the Zoom channel.",
+        "start": 271.278,
+        "duration": 3.91
+    },
+    {
+        "text": "Jason Carver: Okay, so you're not\u2026\nyou're not predicting where the",
+        "start": 275.888,
+        "duration": 4.13
+    },
+    {
+        "text": "sensor would land on the model, you're\nlooking at where the sensor actually",
+        "start": 280.018,
+        "duration": 4.21
+    },
+    {
+        "text": "landed, and then figuring out\u2026 Yeah.",
+        "start": 284.228,
+        "duration": 1.72
+    },
+    {
+        "text": "Niels Leadholm: between\nthose two points, okay.",
+        "start": 287.688,
+        "duration": 1.06
+    },
+    {
+        "text": "Yeah, so it assumes that\nthere is depth information.",
+        "start": 288.758,
+        "duration": 3.81
+    },
+    {
+        "text": "And then, of course, it\u2026 it benefits\nfrom, at the moment, that\u2026 all",
+        "start": 293.098,
+        "duration": 3.48
+    },
+    {
+        "text": "the kind of path integration.",
+        "start": 296.588,
+        "duration": 1.1
+    },
+    {
+        "text": "So that's both, accounting for how\nmuch the move\u2026 the sensor moved, and",
+        "start": 297.848,
+        "duration": 4.49
+    },
+    {
+        "text": "also what is the new depth estimate.",
+        "start": 302.338,
+        "duration": 1.56
+    },
+    {
+        "text": "obviously the more noiseless\nthat is, the better.",
+        "start": 305.328,
+        "duration": 2.68
+    },
+    {
+        "text": "But, basically, that's gonna\njust give us a new location.",
+        "start": 309.598,
+        "duration": 2.41
+    },
+    {
+        "text": "And then\u2026 that we're sensing at.",
+        "start": 312.678,
+        "duration": 2.63
+    },
+    {
+        "text": "that's basically\u2026 that's, the location\nof the feature that's being sensed.",
+        "start": 315.878,
+        "duration": 3.9
+    },
+    {
+        "text": "And but in that sense, it's not\nthat different, from the finger.",
+        "start": 320.488,
+        "duration": 2.95
+    },
+    {
+        "text": "Because it's whether we're\nphysically touching it, or",
+        "start": 324.668,
+        "duration": 2.82
+    },
+    {
+        "text": "we're seeing it a distance.",
+        "start": 327.488,
+        "duration": 1.25
+    },
+    {
+        "text": "the kind of location of the feature\nis\u2026 is out there in the world.",
+        "start": 329.808,
+        "duration": 4.42
+    },
+    {
+        "text": "It's It's not, I don't know.",
+        "start": 334.268,
+        "duration": 2.12
+    },
+    {
+        "text": "in the retina space,\nor something like that.",
+        "start": 337.718,
+        "duration": 1.96
+    },
+    {
+        "text": "it's And then that means\u2026 oh, yeah.",
+        "start": 339.928,
+        "duration": 0.004
+    },
+    {
+        "text": "I was just gonna say,\nand then, yeah, so if",
+        "start": 339.933,
+        "duration": 0.135
+    },
+    {
+        "text": "we have an old observation like\nthat, and then a new one, then we",
+        "start": 346.708,
+        "duration": 3.63
+    },
+    {
+        "text": "can do that, calculate that kind\nof displacement in world space.",
+        "start": 350.338,
+        "duration": 4.25
+    },
+    {
+        "text": "Or it could be, egocentric space\nrelative to the robot or something.",
+        "start": 355.988,
+        "duration": 3.62
+    },
+    {
+        "text": "But anyways, we have that kind\nof displacement, and then\u2026",
+        "start": 360.288,
+        "duration": 2.26
+    },
+    {
+        "text": "The learning module has a hypothesis\nabout the orientation of the object.",
+        "start": 363.528,
+        "duration": 3.07
+    },
+    {
+        "text": "And then it can use that to transform",
+        "start": 367.658,
+        "duration": 1.83
+    },
+    {
+        "text": "That displacement, based\non different hypotheses.",
+        "start": 370.128,
+        "duration": 2.08
+    },
+    {
+        "text": "And so different hypotheses are going\nto move in different ways on the object,",
+        "start": 373.768,
+        "duration": 3.46
+    },
+    {
+        "text": "based on different hypotheses about\nhow the object's actually oriented.",
+        "start": 377.268,
+        "duration": 3.4
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 382.288,
+        "duration": 0.2
+    },
+    {
+        "text": "Can I\u2026 this\u2026 this is a question to make\nsure I'm understanding what you're saying.",
+        "start": 383.758,
+        "duration": 5.22
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 388.988,
+        "duration": 0.4
+    },
+    {
+        "text": "Jason Carver: Which is\u2026 if I\u2026 if\nI have a model of these glasses\u2026",
+        "start": 389.448,
+        "duration": 4.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 394.428,
+        "duration": 0.43
+    },
+    {
+        "text": "and I move my eye\u2026 my distance\nsensor to the\u2026 To the\u2026 the side here.",
+        "start": 396.218,
+        "duration": 7.03
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 403.758,
+        "duration": 0.41
+    },
+    {
+        "text": "Jason Carver: And let's say there\nare two different models, one with",
+        "start": 404.468,
+        "duration": 2.92
+    },
+    {
+        "text": "only one of these, and one with both.",
+        "start": 407.398,
+        "duration": 3.1
+    },
+    {
+        "text": "I\u2026 I look at\u2026 I look at the glasses\nat the side here, and one of them is\u2026",
+        "start": 412.948,
+        "duration": 7.0
+    },
+    {
+        "text": "is missing, or is folded, or whatever.",
+        "start": 420.008,
+        "duration": 2.35
+    },
+    {
+        "text": "And so my distance sensor lands\non the further of the two.",
+        "start": 422.998,
+        "duration": 4.42
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 427.938,
+        "duration": 0.48
+    },
+    {
+        "text": "Jason Carver: So\u2026 that is what gets\nsent in to the hypotheses, and that's",
+        "start": 429.268,
+        "duration": 4.33
+    },
+    {
+        "text": "actually going to end up matching\nboth models, the one with and without",
+        "start": 433.628,
+        "duration": 4.05
+    },
+    {
+        "text": "The\u2026 the hook that's\non\u2026 that's closer to me.",
+        "start": 438.238,
+        "duration": 3.71
+    },
+    {
+        "text": "Even though my mental model of the\nglasses would tell me that the one with",
+        "start": 444.208,
+        "duration": 3.35
+    },
+    {
+        "text": "the hook closer to me should actually\u2026",
+        "start": 447.558,
+        "duration": 2.41
+    },
+    {
+        "text": "Niels Leadholm: There should be, like, a.",
+        "start": 452.048,
+        "duration": 0.95
+    },
+    {
+        "text": "Jason Carver: There's something\nscary, your vision yeah.",
+        "start": 453.008,
+        "duration": 2.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 455.308,
+        "duration": 0.52
+    },
+    {
+        "text": "So\u2026 we're\u2026 so the fact that we're using\nwhere the sensor actually lands, and",
+        "start": 457.178,
+        "duration": 3.42
+    },
+    {
+        "text": "then just moving to there in the model\nignores the fact that there's an obscuring",
+        "start": 460.598,
+        "duration": 4.05
+    },
+    {
+        "text": "feature in front of it in the other model.",
+        "start": 464.658,
+        "duration": 2.64
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 467.578,
+        "duration": 0.54
+    },
+    {
+        "text": "Jason Carver: Okay, but that's how it\nworks right now, and that's\u2026 that's fine,",
+        "start": 469.028,
+        "duration": 3.18
+    },
+    {
+        "text": "I just want to make sure I understand how.",
+        "start": 472.228,
+        "duration": 1.32
+    },
+    {
+        "text": "Niels Leadholm: No, that is a good,\nit's a good example to yeah, exactly.",
+        "start": 473.758,
+        "duration": 4.41
+    },
+    {
+        "text": "yeah, there's no\u2026 yeah, basically\nthere's no way of accounting for",
+        "start": 478.778,
+        "duration": 3.86
+    },
+    {
+        "text": "this kind of ray of vision and\u2026",
+        "start": 482.638,
+        "duration": 1.85
+    },
+    {
+        "text": "that's come up, I don't think we've\nreally discussed it in this kind of",
+        "start": 485.648,
+        "duration": 3.81
+    },
+    {
+        "text": "exact, setting like you described,\nbut it's come up in terms of, Say you",
+        "start": 490.798,
+        "duration": 4.29
+    },
+    {
+        "text": "want to test a point now, you may have\nseen we have, a policy that kind of",
+        "start": 495.088,
+        "duration": 4.76
+    },
+    {
+        "text": "suggest, oh, I should move to\nthe handle, things like that.",
+        "start": 500.398,
+        "duration": 2.65
+    },
+    {
+        "text": "But we've thought, okay, depending\non where we are on the object, you",
+        "start": 504.138,
+        "duration": 5.14
+    },
+    {
+        "text": "would have to move in different\nways in order to actually see it.",
+        "start": 509.278,
+        "duration": 2.57
+    },
+    {
+        "text": "sometimes there might be\nsome self-occlusion, and",
+        "start": 512.028,
+        "duration": 2.49
+    },
+    {
+        "text": "sometimes there might not be.",
+        "start": 514.518,
+        "duration": 1.39
+    },
+    {
+        "text": "And where is that kind of\nknowledge stored that, okay,",
+        "start": 516.568,
+        "duration": 4.38
+    },
+    {
+        "text": "and, yeah\u2026",
+        "start": 523.478,
+        "duration": 1.07
+    },
+    {
+        "text": "It could be maybe anything from more\nlike a scene-level representation",
+        "start": 525.558,
+        "duration": 3.13
+    },
+    {
+        "text": "that's accounting for both",
+        "start": 528.688,
+        "duration": 2.38
+    },
+    {
+        "text": "models over\u2026 about your sensors, maybe\nyou have, models of how your eyes work,",
+        "start": 532.128,
+        "duration": 6.23
+    },
+    {
+        "text": "and how they, sense and understand this\nkind of concept of self-occlusion, or,",
+        "start": 538.358,
+        "duration": 4.64
+    },
+    {
+        "text": "Yeah, things like that, but\u2026 Because\nI guess we don't want to wrap up",
+        "start": 544.098,
+        "duration": 3.95
+    },
+    {
+        "text": "It might be too much to try and wrap\nthat up into kind of a single learning",
+        "start": 548.678,
+        "duration": 2.99
+    },
+    {
+        "text": "module, but it that, for some reason,\nthat, a distant learning module",
+        "start": 551.898,
+        "duration": 4.16
+    },
+    {
+        "text": "has this, sense of, if I view from\ncertain directions, it'll be obscured.",
+        "start": 556.068,
+        "duration": 4.96
+    },
+    {
+        "text": "But anyway, so we\u2026 we don't have,\nI guess this is the short answer, a",
+        "start": 561.048,
+        "duration": 4.61
+    },
+    {
+        "text": "way of dealing with that, but, yeah.",
+        "start": 565.728,
+        "duration": 1.48
+    },
+    {
+        "text": "Viviane Clay: the main thing is that the\ncortical messaging protocol, so whatever",
+        "start": 568.018,
+        "duration": 3.96
+    },
+    {
+        "text": "learning module expects, is basically\njust a 3D location and orientation in",
+        "start": 572.008,
+        "duration": 5.54
+    },
+    {
+        "text": "space of where the sensor is sensing",
+        "start": 577.548,
+        "duration": 2.95
+    },
+    {
+        "text": "And it doesn't expect where the\nagent is that the sensor is attached",
+        "start": 581.188,
+        "duration": 7.72
+    },
+    {
+        "text": "to, but it expects the location\nof where the sensor is sensing.",
+        "start": 588.918,
+        "duration": 3.8
+    },
+    {
+        "text": "for example, I think in monkeys,\nthere are these, what's it",
+        "start": 593.508,
+        "duration": 4.55
+    },
+    {
+        "text": "called, spatial view cells?",
+        "start": 598.078,
+        "duration": 1.58
+    },
+    {
+        "text": "They basically fire whenever the\nmonkey looks at a specific location",
+        "start": 600.648,
+        "duration": 3.92
+    },
+    {
+        "text": "in the room, and it doesn't matter\nfrom where the monkey is in the room,",
+        "start": 604.588,
+        "duration": 4.61
+    },
+    {
+        "text": "or, like, where the eyes are in the\nsockets or anything, it just matters",
+        "start": 610.058,
+        "duration": 3.51
+    },
+    {
+        "text": "where in the room, what location in\nthe room the monkey's looking at.",
+        "start": 613.598,
+        "duration": 2.92
+    },
+    {
+        "text": "And that's what we expect as the\ninput for the learning modules.",
+        "start": 616.878,
+        "duration": 4.12
+    },
+    {
+        "text": "try to make a very brief diagram of what\nkind of info is available at what point.",
+        "start": 622.058,
+        "duration": 5.14
+    },
+    {
+        "text": "So basically, we have the environment\nwhere we have the entire object, and",
+        "start": 627.198,
+        "duration": 3.98
+    },
+    {
+        "text": "then we have the sensor, so a little\ncamera patch, for example, that sees",
+        "start": 631.178,
+        "duration": 5.57
+    },
+    {
+        "text": "a small part of the environment.",
+        "start": 636.748,
+        "duration": 2.04
+    },
+    {
+        "text": "And in most of our experiments, we\nbasically get an RGBD camera image.",
+        "start": 639.428,
+        "duration": 5.99
+    },
+    {
+        "text": "And a location of the\u2026 of the sensor.",
+        "start": 646.028,
+        "duration": 4.13
+    },
+    {
+        "text": "So that's, the sensor location is,",
+        "start": 652.298,
+        "duration": 2.27
+    },
+    {
+        "text": "It's actually the thing of, The\ncamera that's up here and looking at\u2026",
+        "start": 655.548,
+        "duration": 4.57
+    },
+    {
+        "text": "At this location.",
+        "start": 661.318,
+        "duration": 0.95
+    },
+    {
+        "text": "So that would be the location of\nthis here, plus the RGBD image.",
+        "start": 662.308,
+        "duration": 4.16
+    },
+    {
+        "text": "And then we apply a transform, and the\nplan is to eventually wrap this transform",
+        "start": 667.228,
+        "duration": 4.25
+    },
+    {
+        "text": "into the sensor module, actually,\nbut this is how it looks right now.",
+        "start": 671.488,
+        "duration": 2.78
+    },
+    {
+        "text": "But, so basically the transform\ntakes this, depth image and the",
+        "start": 676.138,
+        "duration": 4.845
+    },
+    {
+        "text": "sensor's location and uses\u2026 combines\nthe two to basically calculate an",
+        "start": 681.278,
+        "duration": 4.87
+    },
+    {
+        "text": "array of 3D locations, basically\nsaying where in space is each pixel?",
+        "start": 686.468,
+        "duration": 4.68
+    },
+    {
+        "text": "So basically adding the depth values\ntogether with the sensor location.",
+        "start": 693.118,
+        "duration": 5.01
+    },
+    {
+        "text": "So then we have, an array of each\npixel where it is, basically hitting",
+        "start": 698.968,
+        "duration": 5.96
+    },
+    {
+        "text": "the object in space, and that gets\nsent to the sensor module, and then",
+        "start": 704.928,
+        "duration": 3.115
+    },
+    {
+        "text": "the sensor module turns it into a\ncritical messaging protocol, which is\u2026",
+        "start": 708.048,
+        "duration": 4.8
+    },
+    {
+        "text": "it basically takes the location that's\nstored at the center pixel of the patch.",
+        "start": 713.368,
+        "duration": 4.73
+    },
+    {
+        "text": "And then it uses the rest of the pixel\nlocations to calculate the surface",
+        "start": 718.908,
+        "duration": 4.03
+    },
+    {
+        "text": "normal and curvature directions, to\ndefine the kind of orientation in space.",
+        "start": 722.938,
+        "duration": 6.68
+    },
+    {
+        "text": "And then it takes, the color at the\ncenter pixel, too, and some features.",
+        "start": 730.508,
+        "duration": 4.29
+    },
+    {
+        "text": "Niels Leadholm: and so to maybe rephrase\nwhat you were saying earlier, Vivian, and",
+        "start": 736.058,
+        "duration": 3.94
+    },
+    {
+        "text": "relevant to the glasses example, is If\nthe learning module is sensing this mug.",
+        "start": 740.168,
+        "duration": 4.08
+    },
+    {
+        "text": "and it senses this inside, wall.",
+        "start": 744.818,
+        "duration": 2.888
+    },
+    {
+        "text": "It doesn't know if it's up here,\nand that's why it's sensing it.",
+        "start": 748.318,
+        "duration": 3.62
+    },
+    {
+        "text": "or that it's here, and there's, a hole\nin it, and that's why it's sensing it.",
+        "start": 752.598,
+        "duration": 5.25
+    },
+    {
+        "text": "it just knows, okay, I'm\u2026",
+        "start": 758.468,
+        "duration": 1.51
+    },
+    {
+        "text": "I'm getting, something at\nthis location, And\u2026 yeah.",
+        "start": 760.758,
+        "duration": 5.53
+    },
+    {
+        "text": "And at least I think our intuition\nright now is\u2026 is that would",
+        "start": 768.948,
+        "duration": 4.35
+    },
+    {
+        "text": "almost be, like, another learning\nmodule's, job, is to learn",
+        "start": 773.538,
+        "duration": 4.62
+    },
+    {
+        "text": "This idea of, occlusion and what that\nmeans for particular sensors, but\u2026",
+        "start": 779.328,
+        "duration": 3.83
+    },
+    {
+        "text": "Yeah, I think it's an\ninteresting question, though.",
+        "start": 784.378,
+        "duration": 1.85
+    },
+    {
+        "text": "Jason Carver: Yeah,",
+        "start": 786.408,
+        "duration": 0.02
+    },
+    {
+        "text": "I guess it's similar to having a\ndifferent object occlude yours and",
+        "start": 789.568,
+        "duration": 4.42
+    },
+    {
+        "text": "keeping in your mind that there is\nanother object behind it, like\u2026 yeah.",
+        "start": 793.988,
+        "duration": 5.38
+    },
+    {
+        "text": "Viviane Clay: Yeah, it's\nit's not something we would",
+        "start": 799.628,
+        "duration": 2.01
+    },
+    {
+        "text": "represent in the input level.",
+        "start": 801.638,
+        "duration": 1.64
+    },
+    {
+        "text": "But at the, you might have a\nhigher-level learning module that",
+        "start": 804.328,
+        "duration": 2.46
+    },
+    {
+        "text": "has, a scene representation of where\u2026\nthat there is something behind it.",
+        "start": 806.918,
+        "duration": 3.86
+    },
+    {
+        "text": "Because it has seen it\npreviously at that location.",
+        "start": 811.898,
+        "duration": 2.81
+    },
+    {
+        "text": "And then, yeah, like Nios mentioned,\nmaybe at the output level,",
+        "start": 815.788,
+        "duration": 3.39
+    },
+    {
+        "text": "when you calculate an action.",
+        "start": 819.238,
+        "duration": 1.6
+    },
+    {
+        "text": "You might use that kind of scene\nmodel to calculate that you need to",
+        "start": 821.448,
+        "duration": 4.99
+    },
+    {
+        "text": "go around, or something like that.",
+        "start": 826.438,
+        "duration": 1.75
+    },
+    {
+        "text": "But at the input level,\nit doesn't really matter.",
+        "start": 830.348,
+        "duration": 2.49
+    },
+    {
+        "text": "Jason Carver: Yeah, I guess it could\neven help build intuition about, like,",
+        "start": 836.118,
+        "duration": 2.3
+    },
+    {
+        "text": "where the hierarchy should break down.",
+        "start": 838.428,
+        "duration": 2.32
+    },
+    {
+        "text": "if something can include another thing,\nthen maybe it should actually be different",
+        "start": 840.968,
+        "duration": 3.76
+    },
+    {
+        "text": "sub-objects that are built together.",
+        "start": 844.838,
+        "duration": 2.23
+    },
+    {
+        "text": "I don't\u2026 I shouldn't do too much\nspeculation, because I have no",
+        "start": 847.678,
+        "duration": 3.64
+    },
+    {
+        "text": "idea what I'm talking about.",
+        "start": 853.708,
+        "duration": 1.533
+    },
+    {
+        "text": "Oh, okay, and there was one kind of maybe\ntangent, I couldn't find\u2026 I think it was,",
+        "start": 855.398,
+        "duration": 8.18
+    },
+    {
+        "text": "Niels, that you said something about\u2026",
+        "start": 863.588,
+        "duration": 2.84
+    },
+    {
+        "text": "This problem is solved already in a\nmulti-object scene, if you go on to a.",
+        "start": 867.138,
+        "duration": 5.31
+    },
+    {
+        "text": "Niels Leadholm: Yes.",
+        "start": 872.538,
+        "duration": 0.27
+    },
+    {
+        "text": "Jason Carver: subject and come back.",
+        "start": 872.958,
+        "duration": 1.4
+    },
+    {
+        "text": "I didn't\u2026 I guess the first\u2026 my\nfirst thought in response to that is\u2026",
+        "start": 876.138,
+        "duration": 5.62
+    },
+    {
+        "text": "can't\u2026 if we just treat off object as\na\u2026 as, a distant wall or something,",
+        "start": 882.518,
+        "duration": 6.86
+    },
+    {
+        "text": "which I think you've also brought up.",
+        "start": 889.388,
+        "duration": 1.2
+    },
+    {
+        "text": "Does that mean everything's already\nsolved if we just actually\u2026 if we just",
+        "start": 892.108,
+        "duration": 5.01
+    },
+    {
+        "text": "feed in a different wall with, say,\na surface normal pointing at us, and\u2026",
+        "start": 897.118,
+        "duration": 5.04
+    },
+    {
+        "text": "does that mean this is already solved and\nwe don't have to do anything special here?",
+        "start": 904.348,
+        "duration": 3.44
+    },
+    {
+        "text": "I guess that's always a question\nto ask at the beginning, is are we",
+        "start": 909.058,
+        "duration": 2.38
+    },
+    {
+        "text": "doing a special case for something\nthat doesn't need a special case?",
+        "start": 911.438,
+        "duration": 2.41
+    },
+    {
+        "text": "Niels Leadholm: Yeah, I guess\nit's\u2026 it's just for example,",
+        "start": 914.278,
+        "duration": 1.93
+    },
+    {
+        "text": "with the surface agent, then\u2026",
+        "start": 916.218,
+        "duration": 2.23
+    },
+    {
+        "text": "It may be relatively close to the\nobject, and it's sensing nothing.",
+        "start": 919.048,
+        "duration": 4.64
+    },
+    {
+        "text": "So it's not always\u2026 because it\u2026 part of\nthat kind of already working relies on",
+        "start": 924.348,
+        "duration": 5.27
+    },
+    {
+        "text": "the fact that it's, it's really far away.",
+        "start": 929.618,
+        "duration": 1.71
+    },
+    {
+        "text": "And\u2026 But then I guess\nthe other thing is just,",
+        "start": 933.028,
+        "duration": 2.63
+    },
+    {
+        "text": "yeah,",
+        "start": 935.668,
+        "duration": 0.02
+    },
+    {
+        "text": "it fits with the feeling that, okay,\nyeah, there are no morphological features.",
+        "start": 938.178,
+        "duration": 3.15
+    },
+    {
+        "text": "Like, when I look at, at least\nI don't get a sense of a surface",
+        "start": 941.328,
+        "duration": 4.03
+    },
+    {
+        "text": "when I look at the sky, maybe?",
+        "start": 945.358,
+        "duration": 1.1
+    },
+    {
+        "text": "Maybe there's something,\nor in a kind of black well.",
+        "start": 946.998,
+        "duration": 2.53
+    },
+    {
+        "text": "But, and certainly when my finger's\njust, covering in space, I don't have",
+        "start": 950.018,
+        "duration": 3.19
+    },
+    {
+        "text": "a sense that there's, a surface there.",
+        "start": 953.208,
+        "duration": 1.31
+    },
+    {
+        "text": "But I think it points to\nthat, at a certain level, the",
+        "start": 956.098,
+        "duration": 3.43
+    },
+    {
+        "text": "change is relatively small.",
+        "start": 959.528,
+        "duration": 1.3
+    },
+    {
+        "text": "That, We just need this kind of special,\noh, it's none for morphological features.",
+        "start": 961.668,
+        "duration": 7.61
+    },
+    {
+        "text": "And then a lot of the kind of stuff\nthat's already there in terms of,",
+        "start": 969.838,
+        "duration": 2.78
+    },
+    {
+        "text": "feature matching and updating the\nlocation and stuff like that, yeah,",
+        "start": 972.828,
+        "duration": 3.73
+    },
+    {
+        "text": "updating the location, it's oh, okay.",
+        "start": 976.558,
+        "duration": 1.61
+    },
+    {
+        "text": "I sense nothing at a distance, now\nmy sensor has moved super far, okay,",
+        "start": 979.048,
+        "duration": 3.45
+    },
+    {
+        "text": "now I'm way out of reference frame.",
+        "start": 982.498,
+        "duration": 1.44
+    },
+    {
+        "text": "Right now, that's gonna get negative,\nevidence, and things like that.",
+        "start": 984.308,
+        "duration": 3.52
+    },
+    {
+        "text": "I think we do still need to change it,\nbut I think it, yeah, it points to that.",
+        "start": 990.618,
+        "duration": 3.25
+    },
+    {
+        "text": "It's\u2026",
+        "start": 993.928,
+        "duration": 0.35
+    },
+    {
+        "text": "At that level, it's not that big a change.",
+        "start": 995.328,
+        "duration": 2.62
+    },
+    {
+        "text": "It's more just that it has all\nthese kind of knock-on effects,",
+        "start": 997.958,
+        "duration": 2.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 1000.648,
+        "duration": 0.02
+    },
+    {
+        "text": "Jason Carver: Okay, yeah.",
+        "start": 1004.388,
+        "duration": 1.08
+    },
+    {
+        "text": "Huh.",
+        "start": 1005.468,
+        "duration": 0.175
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 1005.643,
+        "duration": 0.175
+    },
+    {
+        "text": "But no,",
+        "start": 1005.818,
+        "duration": 0.58
+    },
+    {
+        "text": "yeah, these are, yeah, great questions.",
+        "start": 1010.958,
+        "duration": 2.4
+    },
+    {
+        "text": "I think you definitely, yeah,\nunderstood the\u2026 the problem well, Oh.",
+        "start": 1013.358,
+        "duration": 5.39
+    },
+    {
+        "text": "Jason Carver: There was,",
+        "start": 1021.508,
+        "duration": 1.02
+    },
+    {
+        "text": "there were maybe some slight\ndifferences\u2026 I guess I wanted to go\u2026",
+        "start": 1024.928,
+        "duration": 5.49
+    },
+    {
+        "text": "Over the, the high-level plan\u2026",
+        "start": 1031.078,
+        "duration": 3.17
+    },
+    {
+        "text": "This is almost more of, a\nprocess project engineering\u2026",
+        "start": 1035.548,
+        "duration": 3.77
+    },
+    {
+        "text": "view of it, of, what are\nthe steps that we do, and",
+        "start": 1040.058,
+        "duration": 4.8
+    },
+    {
+        "text": "Vivian did that first summary of, sending\nthe observations to the learning module,",
+        "start": 1046.918,
+        "duration": 5.07
+    },
+    {
+        "text": "even when you're off-object, and then\u2026",
+        "start": 1052.318,
+        "duration": 1.89
+    },
+    {
+        "text": "step two, in the learning module,\nprocess the empty observation,",
+        "start": 1054.868,
+        "duration": 3.57
+    },
+    {
+        "text": "whether you're in or out of model.",
+        "start": 1058.568,
+        "duration": 2.71
+    },
+    {
+        "text": "I wrote\u2026 I wrote that down in my\nnotes as, Phase 1 and Phase 2 A and B,",
+        "start": 1062.718,
+        "duration": 4.46
+    },
+    {
+        "text": "and I think, actually.",
+        "start": 1070.238,
+        "duration": 1.71
+    },
+    {
+        "text": "that sort of step one of sending the\nobservation to the learning module,",
+        "start": 1075.938,
+        "duration": 3.78
+    },
+    {
+        "text": "if you then cut it off at the learning\nmodule, then you can make all the changes",
+        "start": 1079.748,
+        "duration": 5.74
+    },
+    {
+        "text": "in a full\u2026 in a refactor that doesn't\u2026\nshouldn't actually change anything, right?",
+        "start": 1085.508,
+        "duration": 4.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 1091.018,
+        "duration": 0.23
+    },
+    {
+        "text": "that, that's, sometimes a nice,\nelement of, or feature of a big change.",
+        "start": 1091.798,
+        "duration": 6.51
+    },
+    {
+        "text": "It's nothing should actually\nchange, in the output behavior.",
+        "start": 1098.308,
+        "duration": 3.59
+    },
+    {
+        "text": "So I was imagining that for that, phase\none, and then Phase 2, and this maybe goes",
+        "start": 1104.518,
+        "duration": 5.77
+    },
+    {
+        "text": "a little bit different from then how you\nwrote it up, Niels, was I was thinking",
+        "start": 1110.318,
+        "duration": 4.63
+    },
+    {
+        "text": "of doing the out-of-model movement.",
+        "start": 1114.948,
+        "duration": 2.08
+    },
+    {
+        "text": "Where you just\u2026",
+        "start": 1118.858,
+        "duration": 1.86
+    },
+    {
+        "text": "So basically, ignore in-model movements,\nand just do the out-of-model movement,",
+        "start": 1121.558,
+        "duration": 4.28
+    },
+    {
+        "text": "where you do that job of keeping",
+        "start": 1125.838,
+        "duration": 2.12
+    },
+    {
+        "text": "Keeping the hypothesis around\nfor at least for a few steps.",
+        "start": 1128.538,
+        "duration": 3.22
+    },
+    {
+        "text": "Which again, I think should\nbasically\u2026 not affect\u2026",
+        "start": 1132.368,
+        "duration": 5.02
+    },
+    {
+        "text": "The behavior from how it was before.",
+        "start": 1138.058,
+        "duration": 2.6
+    },
+    {
+        "text": "Niels Leadholm: That one will, I think,\njust because, right now, that gives,",
+        "start": 1142.388,
+        "duration": 3.85
+    },
+    {
+        "text": "right now, there's negative evidence right\naway, as soon as you move out of model.",
+        "start": 1147.598,
+        "duration": 4.03
+    },
+    {
+        "text": "but, oh, okay.",
+        "start": 1154.638,
+        "duration": 1.55
+    },
+    {
+        "text": "And that's why we think it might\u2026\nI think that was a comment that it",
+        "start": 1158.178,
+        "duration": 3.53
+    },
+    {
+        "text": "might slow down inference a little.",
+        "start": 1161.708,
+        "duration": 2.16
+    },
+    {
+        "text": "Or, convergence, a\nlittle, because right now.",
+        "start": 1164.458,
+        "duration": 3.4
+    },
+    {
+        "text": "we yeah, if you're far from any learned\npoints, you immediately get, I think",
+        "start": 1168.688,
+        "duration": 4.76
+    },
+    {
+        "text": "it's actually the maximum negative\nevidence, minus 1 on that step.",
+        "start": 1173.448,
+        "duration": 2.85
+    },
+    {
+        "text": "Whereas here, there, yeah,\nbasically be this delay.",
+        "start": 1177.898,
+        "duration": 2.51
+    },
+    {
+        "text": "So that one\u2026",
+        "start": 1180.418,
+        "duration": 2.0
+    },
+    {
+        "text": "It could be\u2026 it could still be\ndone as a refactor, in that you",
+        "start": 1184.308,
+        "duration": 3.03
+    },
+    {
+        "text": "probably have a hyperparameter,\nwhich is, like, how many steps",
+        "start": 1187.338,
+        "duration": 2.84
+    },
+    {
+        "text": "Before the nevi\u2026 the, it becomes,\nDetracting, and if you basically set",
+        "start": 1190.658,
+        "duration": 6.97
+    },
+    {
+        "text": "that to, 0, or 1, or whatever, then\u2026\nthen it should give the same effect.",
+        "start": 1197.628,
+        "duration": 5.32
+    },
+    {
+        "text": "Would be one way to do\nit as a sort of refactor.",
+        "start": 1204.008,
+        "duration": 3.84
+    },
+    {
+        "text": "Jason Carver: And this shouldn't\nchange anything if you go out of",
+        "start": 1208.958,
+        "duration": 2.43
+    },
+    {
+        "text": "model, but the real observation\nis still on an object, right?",
+        "start": 1211.398,
+        "duration": 4.27
+    },
+    {
+        "text": "That's still the same.",
+        "start": 1215.978,
+        "duration": 1.33
+    },
+    {
+        "text": "We're only dealing with the case\nwhere both are true, you've gone",
+        "start": 1217.728,
+        "duration": 2.59
+    },
+    {
+        "text": "out of model and out of object.",
+        "start": 1220.358,
+        "duration": 1.87
+    },
+    {
+        "text": "Niels Leadholm: as in, it will\u2026\nit will change performance,",
+        "start": 1224.608,
+        "duration": 3.34
+    },
+    {
+        "text": "So",
+        "start": 1227.958,
+        "duration": 0.02
+    },
+    {
+        "text": "out of model is, in some sense\u2026\nyeah, this is why it's complex.",
+        "start": 1231.188,
+        "duration": 3.72
+    },
+    {
+        "text": "Out of model is, in some sense,\northogonal to off-object, in that\u2026",
+        "start": 1234.908,
+        "duration": 3.96
+    },
+    {
+        "text": "Jason Carver: it.",
+        "start": 1238.928,
+        "duration": 0.25
+    },
+    {
+        "text": "Niels Leadholm: It can be out of\nmodel whether it's off-object or not.",
+        "start": 1239.488,
+        "duration": 2.48
+    },
+    {
+        "text": "And in both cases, we would\nwant to\u2026 Clamp the evidence.",
+        "start": 1243.888,
+        "duration": 5.77
+    },
+    {
+        "text": "So whether it's\u2026 it's gone off\u2026",
+        "start": 1251.818,
+        "duration": 1.54
+    },
+    {
+        "text": "And it's looking at a distant, object.",
+        "start": 1253.928,
+        "duration": 3.22
+    },
+    {
+        "text": "Or it's, gone off and\nit's looking at a void.",
+        "start": 1257.978,
+        "duration": 2.67
+    },
+    {
+        "text": "We still want to clamp it for\nthose few steps, just to give",
+        "start": 1261.508,
+        "duration": 2.87
+    },
+    {
+        "text": "it a chance to move back.",
+        "start": 1264.378,
+        "duration": 1.44
+    },
+    {
+        "text": "Jason Carver: But if you go off-muddle,\nbut are on something at the same distance",
+        "start": 1268.658,
+        "duration": 5.32
+    },
+    {
+        "text": "as you were before, then you should\nstill do the negative evidence, right?",
+        "start": 1274.008,
+        "duration": 4.01
+    },
+    {
+        "text": "Niels Leadholm: No, cause,",
+        "start": 1281.058,
+        "duration": 0.99
+    },
+    {
+        "text": "No, not if you think you're off-model.",
+        "start": 1283.738,
+        "duration": 1.85
+    },
+    {
+        "text": "off-model, is basically saying, okay,\nwe can't say anything, because we don't\u2026",
+        "start": 1286.638,
+        "duration": 4.81
+    },
+    {
+        "text": "For that particular model,\nwe can't predict anything.",
+        "start": 1293.098,
+        "duration": 3.09
+    },
+    {
+        "text": "Okay.",
+        "start": 1296.928,
+        "duration": 0.03
+    },
+    {
+        "text": "And whether it's\u2026 whether we're\nsensing kind of something real, or,",
+        "start": 1298.228,
+        "duration": 5.72
+    },
+    {
+        "text": "Because, yeah, with the\u2026 and it's also\nyeah, I guess from a practical point",
+        "start": 1306.098,
+        "duration": 4.29
+    },
+    {
+        "text": "of view, that example of, the I and\nthe vertical line, or the 7 and the",
+        "start": 1310.388,
+        "duration": 5.57
+    },
+    {
+        "text": "1, I don't know if that was helpful,\nbut, There could be, different things",
+        "start": 1315.958,
+        "duration": 5.63
+    },
+    {
+        "text": "That we sense when we move to that\nspace where we're expecting something,",
+        "start": 1322.428,
+        "duration": 3.81
+    },
+    {
+        "text": "And,",
+        "start": 1328.268,
+        "duration": 0.42
+    },
+    {
+        "text": "Often",
+        "start": 1328.698,
+        "duration": 0.04
+    },
+    {
+        "text": "it won't be off-object.",
+        "start": 1331.058,
+        "duration": 1.46
+    },
+    {
+        "text": "often there will be something there.",
+        "start": 1334.638,
+        "duration": 1.38
+    },
+    {
+        "text": "I guess it is.",
+        "start": 1339.418,
+        "duration": 0.69
+    },
+    {
+        "text": "Jason Carver: The one model\nshould not get negative evidence",
+        "start": 1340.608,
+        "duration": 3.72
+    },
+    {
+        "text": "when you move to the 7 bar.",
+        "start": 1344.348,
+        "duration": 2.19
+    },
+    {
+        "text": "Niels Leadholm: Yeah, for\nthose, brief, yeah, that's",
+        "start": 1347.208,
+        "duration": 4.85
+    },
+    {
+        "text": "correct, and even if it was a 7.",
+        "start": 1352.058,
+        "duration": 1.88
+    },
+    {
+        "text": "Viviane Clay: Why wouldn't it?",
+        "start": 1354.448,
+        "duration": 0.81
+    },
+    {
+        "text": "Jason Carver: the real thing\nyou're looking at is a 7, you",
+        "start": 1355.708,
+        "duration": 1.61
+    },
+    {
+        "text": "have a model of a 1, and you move\nto the bar at the top of the 7.",
+        "start": 1357.318,
+        "duration": 4.65
+    },
+    {
+        "text": "Obviously, the 7 will improve, but you're\nsaying the 1 should just be on ice.",
+        "start": 1361.978,
+        "duration": 4.66
+    },
+    {
+        "text": "Niels Leadholm: Plamped briefly, yeah.",
+        "start": 1366.698,
+        "duration": 1.27
+    },
+    {
+        "text": "And then it'll start\ngetting negative evidence.",
+        "start": 1368.218,
+        "duration": 1.9
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 1371.138,
+        "duration": 0.34
+    },
+    {
+        "text": "Niels Leadholm: I think\nwe have to do it that way.",
+        "start": 1373.198,
+        "duration": 1.79
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 1375.938,
+        "duration": 0.21
+    },
+    {
+        "text": "Viviane Clay: Yeah, the one just doesn't\nhave a prediction about that location.",
+        "start": 1378.998,
+        "duration": 2.81
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 1381.888,
+        "duration": 0.49
+    },
+    {
+        "text": "But yeah, basically, I don't\nthink\u2026 I don't think we want the",
+        "start": 1382.848,
+        "duration": 2.45
+    },
+    {
+        "text": "intersection of off objects and out of\u2026",
+        "start": 1385.318,
+        "duration": 2.5
+    },
+    {
+        "text": "Model to be, like, an even\nmore special condition.",
+        "start": 1389.618,
+        "duration": 2.69
+    },
+    {
+        "text": "Yeah, and because it it relates to\u2026",
+        "start": 1393.888,
+        "duration": 2.42
+    },
+    {
+        "text": "This whole thing of, do you\nstore, that there's nothing there?",
+        "start": 1397.708,
+        "duration": 6.1
+    },
+    {
+        "text": "Like, how do you know whether to\npredict off-object or something else?",
+        "start": 1404.138,
+        "duration": 4.71
+    },
+    {
+        "text": "are we meant to be storing that,\noh, everything else is off-object,",
+        "start": 1409.498,
+        "duration": 3.36
+    },
+    {
+        "text": "but it's it might not be.",
+        "start": 1412.898,
+        "duration": 2.04
+    },
+    {
+        "text": "Yeah, there might just be something,\nI think that'll work, if we just,",
+        "start": 1415.638,
+        "duration": 4.18
+    },
+    {
+        "text": "Yeah, if we do it like that.",
+        "start": 1419.828,
+        "duration": 2.62
+    },
+    {
+        "text": "But it just means that,",
+        "start": 1422.628,
+        "duration": 1.01
+    },
+    {
+        "text": "Yeah, it's just the things, inference\nmight be a little slower at first, because",
+        "start": 1424.808,
+        "duration": 3.0
+    },
+    {
+        "text": "of the\u2026 kind of putting, as you say,\neverything on ice for a couple steps.",
+        "start": 1427.808,
+        "duration": 3.79
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 1431.608,
+        "duration": 0.03
+    },
+    {
+        "text": "Viviane Clay: And yeah, I just\nhad a look again at the code for",
+        "start": 1434.948,
+        "duration": 3.36
+    },
+    {
+        "text": "the sending, concretely sending\nthe\u2026 of object observations.",
+        "start": 1438.608,
+        "duration": 5.06
+    },
+    {
+        "text": "To the learning module.",
+        "start": 1444.418,
+        "duration": 1.17
+    },
+    {
+        "text": "And so what we currently have\u2026 Is,",
+        "start": 1446.518,
+        "duration": 3.39
+    },
+    {
+        "text": "So if we're not on the object,\nmorphological features will",
+        "start": 1452.068,
+        "duration": 4.66
+    },
+    {
+        "text": "be set to an empty list, And\u2026",
+        "start": 1456.728,
+        "duration": 2.55
+    },
+    {
+        "text": "When we construct this kind\nof state instance that's the",
+        "start": 1461.878,
+        "duration": 2.62
+    },
+    {
+        "text": "output of the sensor module.",
+        "start": 1464.498,
+        "duration": 1.88
+    },
+    {
+        "text": "We basically have morphological\nfeatures be an empty list, This might",
+        "start": 1467.288,
+        "duration": 4.75
+    },
+    {
+        "text": "actually have\u2026 This would\u2026 I\u2026 okay.",
+        "start": 1472.068,
+        "duration": 3.6
+    },
+    {
+        "text": "Niels Leadholm: Might\nalready be enough, yeah.",
+        "start": 1475.668,
+        "duration": 1.08
+    },
+    {
+        "text": "Viviane Clay: This\u2026 I'm just looking\nif features will be in there.",
+        "start": 1477.978,
+        "duration": 2.85
+    },
+    {
+        "text": "I think there might just be\u2026",
+        "start": 1481.628,
+        "duration": 1.41
+    },
+    {
+        "text": "this object coverage feature in there,\nbecause that's part of this if branch.",
+        "start": 1483.808,
+        "duration": 3.31
+    },
+    {
+        "text": "I think it wouldn't actually\ninclude color right now, not",
+        "start": 1489.718,
+        "duration": 3.31
+    },
+    {
+        "text": "sure if we want to add that.",
+        "start": 1493.028,
+        "duration": 1.24
+    },
+    {
+        "text": "But then useState will be set\nto false, because onObject is\u2026",
+        "start": 1495.728,
+        "duration": 4.39
+    },
+    {
+        "text": "False, and also invalid\nsignals is set to true.",
+        "start": 1501.298,
+        "duration": 3.72
+    },
+    {
+        "text": "And the sensor module",
+        "start": 1507.438,
+        "duration": 1.6
+    },
+    {
+        "text": "opposite this state, which,\nyeah, it will have a\u2026",
+        "start": 1509.878,
+        "duration": 3.2
+    },
+    {
+        "text": "Location, an empty list for morphological\nfeatures, which is what we want.",
+        "start": 1513.668,
+        "duration": 3.06
+    },
+    {
+        "text": "But then Monty, the kind of pair\u2026\nthe class that wraps around sensor",
+        "start": 1518.248,
+        "duration": 5.52
+    },
+    {
+        "text": "modules and learning modules\nand routes the information.",
+        "start": 1523.768,
+        "duration": 2.82
+    },
+    {
+        "text": "When it routes the information from\nthe sensor modules to the learning",
+        "start": 1527.278,
+        "duration": 2.64
+    },
+    {
+        "text": "modules, it looks at this useState\nflag, and if it's false, then it won't",
+        "start": 1529.928,
+        "duration": 5.38
+    },
+    {
+        "text": "Add this to the learning module inputs.",
+        "start": 1536.198,
+        "duration": 1.9
+    },
+    {
+        "text": "I think this will be the,\nfirst point of change to\u2026",
+        "start": 1539.538,
+        "duration": 4.11
+    },
+    {
+        "text": "yeah, basically remove this if\nstatement, and then that should make",
+        "start": 1544.998,
+        "duration": 5.58
+    },
+    {
+        "text": "Those, to be sent, to the\nlearning modules, although\u2026",
+        "start": 1551.078,
+        "duration": 6.8
+    },
+    {
+        "text": "This will also make other things be\nsent to the learning modules that",
+        "start": 1558.528,
+        "duration": 2.8
+    },
+    {
+        "text": "we still don't want to send there.",
+        "start": 1561.328,
+        "duration": 1.63
+    },
+    {
+        "text": "Jason Carver: What about that,\nbit where we set the flag?",
+        "start": 1564.208,
+        "duration": 3.05
+    },
+    {
+        "text": "Viviane Clay: Yeah, we could\nalso just set you stay to true",
+        "start": 1568.528,
+        "duration": 3.09
+    },
+    {
+        "text": "in that\u2026 we could just move\u2026",
+        "start": 1571.618,
+        "duration": 1.79
+    },
+    {
+        "text": "Just remove this part here.",
+        "start": 1574.568,
+        "duration": 1.49
+    },
+    {
+        "text": "I think that might be better.",
+        "start": 1576.128,
+        "duration": 1.36
+    },
+    {
+        "text": "Niels Leadholm: Yeah, and\nalso, the invalid signals,",
+        "start": 1578.838,
+        "duration": 2.15
+    },
+    {
+        "text": "what does that cover otherwise?",
+        "start": 1580.988,
+        "duration": 1.63
+    },
+    {
+        "text": "Viviane Clay: Sometimes\u2026",
+        "start": 1584.118,
+        "duration": 0.65
+    },
+    {
+        "text": "Niels Leadholm: Got multiple things?",
+        "start": 1584.808,
+        "duration": 0.87
+    },
+    {
+        "text": "Viviane Clay: Issues with\nextracting the surface novel.",
+        "start": 1586.238,
+        "duration": 2.26
+    },
+    {
+        "text": "Jason Carver: Yeah.",
+        "start": 1589.508,
+        "duration": 0.14
+    },
+    {
+        "text": "Viviane Clay: And, the feature\nchanges, M, I think, also sets your",
+        "start": 1590.558,
+        "duration": 4.98
+    },
+    {
+        "text": "state to false if there wasn't a\nsignificant change in features.",
+        "start": 1595.538,
+        "duration": 3.37
+    },
+    {
+        "text": "Niels Leadholm: Yeah, which\u2026 that\none is fine, so we don't want",
+        "start": 1604.278,
+        "duration": 3.33
+    },
+    {
+        "text": "to interfere with that one, the\nfeature change sensor module.",
+        "start": 1607.618,
+        "duration": 3.35
+    },
+    {
+        "text": "I'm just wondering whether\u2026\nWe could unify, If,",
+        "start": 1611.688,
+        "duration": 5.46
+    },
+    {
+        "text": "If the signal is so corrupt that",
+        "start": 1618.698,
+        "duration": 1.79
+    },
+    {
+        "text": "you can't really process\nmorphological features.",
+        "start": 1621.218,
+        "duration": 1.83
+    },
+    {
+        "text": "Maybe it's worth just treating\nthat as Op objects, or This kind",
+        "start": 1623.498,
+        "duration": 5.46
+    },
+    {
+        "text": "of null observation as well.",
+        "start": 1629.038,
+        "duration": 1.61
+    },
+    {
+        "text": "Jason Carver: Yeah,",
+        "start": 1631.658,
+        "duration": 0.21
+    },
+    {
+        "text": "Niels Leadholm: Do we still get that word?",
+        "start": 1632.308,
+        "duration": 1.25
+    },
+    {
+        "text": "Jason Carver: So when\u2026 like, when\nwould\u2026 when would that happen?",
+        "start": 1633.688,
+        "duration": 3.01
+    },
+    {
+        "text": "what's the\u2026 I guess it's\u2026 is it because\nthere's just, A weird distribution of",
+        "start": 1636.958,
+        "duration": 6.06
+    },
+    {
+        "text": "depth data in a single sensor patch.",
+        "start": 1643.098,
+        "duration": 2.44
+    },
+    {
+        "text": "Viviane Clay: Yeah, I think it's\nreally special cases, and I'm not",
+        "start": 1645.548,
+        "duration": 2.52
+    },
+    {
+        "text": "sure we would want to treat it\nas of object, because, yeah, I\u2026",
+        "start": 1648.068,
+        "duration": 4.1
+    },
+    {
+        "text": "I think it happens very rarely, but if\nI remember it right, it's something\u2026",
+        "start": 1652.168,
+        "duration": 5.41
+    },
+    {
+        "text": "if you look at the surface dead\non or something, and then the",
+        "start": 1659.138,
+        "duration": 3.56
+    },
+    {
+        "text": "matrix, there's some division\nof zero, or something like that.",
+        "start": 1662.698,
+        "duration": 6.38
+    },
+    {
+        "text": "Niels Leadholm: Okay.",
+        "start": 1669.178,
+        "duration": 0.44
+    },
+    {
+        "text": "Viviane Clay: It can, I think,\ncan happen both with surf",
+        "start": 1672.008,
+        "duration": 2.55
+    },
+    {
+        "text": "channels and principal curvature.",
+        "start": 1674.558,
+        "duration": 0.47
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 1676.318,
+        "duration": 0.43
+    },
+    {
+        "text": "Okay, so then I guess we just want to\nmake sure that is invalid, is not true,",
+        "start": 1676.988,
+        "duration": 4.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 1681.498,
+        "duration": 0.02
+    },
+    {
+        "text": "In the case of objects.",
+        "start": 1684.408,
+        "duration": 2.09
+    },
+    {
+        "text": "Viviane Clay: And, yeah.",
+        "start": 1686.858,
+        "duration": 0.52
+    },
+    {
+        "text": "Niels Leadholm: In the\u2026",
+        "start": 1688.138,
+        "duration": 0.62
+    },
+    {
+        "text": "Viviane Clay: Very ugly.",
+        "start": 1688.818,
+        "duration": 0.97
+    },
+    {
+        "text": "Not invalid.",
+        "start": 1690.388,
+        "duration": 0.99
+    },
+    {
+        "text": "Maybe something like that.",
+        "start": 1692.998,
+        "duration": 0.6
+    },
+    {
+        "text": "Niels Leadholm: Because are we,",
+        "start": 1693.598,
+        "duration": 1.43
+    },
+    {
+        "text": "with this, the logic above,\nthe if-else and stuff.",
+        "start": 1697.268,
+        "duration": 2.96
+    },
+    {
+        "text": "Did you say morphological features\nis being set as that empty dictionary",
+        "start": 1701.488,
+        "duration": 3.01
+    },
+    {
+        "text": "if, we are off-object.",
+        "start": 1706.558,
+        "duration": 1.65
+    },
+    {
+        "text": "Viviane Clay: Yeah,",
+        "start": 1708.508,
+        "duration": 0.64
+    },
+    {
+        "text": "Niels Leadholm: Okay, yeah, if on object,",
+        "start": 1709.438,
+        "duration": 1.31
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 1711.968,
+        "duration": 0.29
+    },
+    {
+        "text": "Niels Leadholm: But, so it\nalmost\u2026 so valid signals\u2026",
+        "start": 1712.298,
+        "duration": 2.48
+    },
+    {
+        "text": "Okay, but isn't this where the\ncheck happens for valid signals?",
+        "start": 1719.948,
+        "duration": 2.7
+    },
+    {
+        "text": "we maybe don't want to change that.",
+        "start": 1724.318,
+        "duration": 1.45
+    },
+    {
+        "text": "Or it feels like we need to catch\nthat separately, something like that.",
+        "start": 1727.198,
+        "duration": 4.5
+    },
+    {
+        "text": "But we can maybe just make a note\nfor it of this, we don't necessarily",
+        "start": 1731.698,
+        "duration": 2.66
+    },
+    {
+        "text": "need to figure it out right now.",
+        "start": 1734.548,
+        "duration": 0.71
+    },
+    {
+        "text": "But, it's right.",
+        "start": 1738.378,
+        "duration": 0.67
+    },
+    {
+        "text": "Viviane Clay: Wait, what?",
+        "start": 1741.448,
+        "duration": 0.54
+    },
+    {
+        "text": "I think.",
+        "start": 1746.468,
+        "duration": 0.27
+    },
+    {
+        "text": "Niels Leadholm: I'm just saying,\nI guess we, yeah, we want to catch",
+        "start": 1746.758,
+        "duration": 3.09
+    },
+    {
+        "text": "true, invalid signals, which is\nthe thing you were talking about,",
+        "start": 1750.108,
+        "duration": 2.64
+    },
+    {
+        "text": "the kind of weird depth data.",
+        "start": 1752.918,
+        "duration": 1.6
+    },
+    {
+        "text": "Viviane Clay: But then\u2026",
+        "start": 1755.268,
+        "duration": 0.53
+    },
+    {
+        "text": "Niels Leadholm: We don't\nwant to set is invalid.",
+        "start": 1756.158,
+        "duration": 2.03
+    },
+    {
+        "text": "for, if it's just off-object.",
+        "start": 1758.918,
+        "duration": 3.67
+    },
+    {
+        "text": "That's why I think.",
+        "start": 1763.408,
+        "duration": 0.64
+    },
+    {
+        "text": "Viviane Clay: I feel like\u2026",
+        "start": 1764.058,
+        "duration": 0.22
+    },
+    {
+        "text": "Niels Leadholm: We need, an\nadditional if, or something like that.",
+        "start": 1764.688,
+        "duration": 2.55
+    },
+    {
+        "text": "Viviane Clay: Oh, yeah.",
+        "start": 1767.748,
+        "duration": 1.92
+    },
+    {
+        "text": "we'd probably, yeah, not just want to set\nthis to false whenever an object is false,",
+        "start": 1770.848,
+        "duration": 5.24
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 1776.608,
+        "duration": 0.47
+    },
+    {
+        "text": "Viviane Clay: Yeah, we just want to\nset that to false if, object covers\u2026",
+        "start": 1778.928,
+        "duration": 4.117
+    },
+    {
+        "text": "Jason Carver: We actually\nwant it true there, right?",
+        "start": 1783.045,
+        "duration": 2.093
+    },
+    {
+        "text": "We want it\u2026 if we're off-object,\nit's a valid signal with just.",
+        "start": 1785.158,
+        "duration": 3.66
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 1788.828,
+        "duration": 0.31
+    },
+    {
+        "text": "Jason Carver: I think I'm making\nit a bit confusing now, because",
+        "start": 1790.268,
+        "duration": 1.67
+    },
+    {
+        "text": "I renamed it to Valid Signals.",
+        "start": 1791.938,
+        "duration": 1.44
+    },
+    {
+        "text": "Niels Leadholm: They're right.",
+        "start": 1794.348,
+        "duration": 0.13
+    },
+    {
+        "text": "Viviane Clay: on whether\nwe try and tricks.",
+        "start": 1795.988,
+        "duration": 0.534
+    },
+    {
+        "text": "Niels Leadholm: There's also\na lot of double negatives.",
+        "start": 1796.522,
+        "duration": 1.526
+    },
+    {
+        "text": "Not invalid.",
+        "start": 1798.068,
+        "duration": 1.01
+    },
+    {
+        "text": "Viviane Clay: Yeah, that's why I changed\nit, but if we rename that now, then we",
+        "start": 1799.378,
+        "duration": 3.692
+    },
+    {
+        "text": "have to rename it everywhere in this\nfunction and invert what it returns.",
+        "start": 1803.07,
+        "duration": 3.548
+    },
+    {
+        "text": "Not make it more confusing for now, but,\nyeah, basically what\u2026 we'd\u2026 want to do is\u2026",
+        "start": 1808.738,
+        "duration": 9.57
+    },
+    {
+        "text": "if this thing is true.",
+        "start": 1820.348,
+        "duration": 2.07
+    },
+    {
+        "text": "Then invalid signals is true.",
+        "start": 1826.338,
+        "duration": 2.95
+    },
+    {
+        "text": "And then, if on object, we do this,\notherwise we set morphological",
+        "start": 1833.268,
+        "duration": 5.92
+    },
+    {
+        "text": "features to an empty list, but\u2026",
+        "start": 1839.598,
+        "duration": 1.48
+    },
+    {
+        "text": "Invalid signals are still\u2026\nFalls, and in that case\u2026",
+        "start": 1842.258,
+        "duration": 4.84
+    },
+    {
+        "text": "Your state would only be false if\nthey're actually in odd signals.",
+        "start": 1848.118,
+        "duration": 3.67
+    },
+    {
+        "text": "Niels Leadholm: yeah, that looks right.",
+        "start": 1853.218,
+        "duration": 0.73
+    },
+    {
+        "text": "Viviane Clay: Then, there's\nanother\u2026 we could\u2026 it could also",
+        "start": 1855.878,
+        "duration": 3.24
+    },
+    {
+        "text": "be done within this function.",
+        "start": 1859.118,
+        "duration": 1.84
+    },
+    {
+        "text": "The unobject check.",
+        "start": 1861.598,
+        "duration": 1.18
+    },
+    {
+        "text": "And then that way, we could still return\ncolor, for example, we could still",
+        "start": 1863.328,
+        "duration": 3.92
+    },
+    {
+        "text": "return non-morphological features.",
+        "start": 1867.248,
+        "duration": 2.43
+    },
+    {
+        "text": "Niels Leadholm: Yeah, that\u2026 maybe\nthat's like a\u2026 Nice to have, but\u2026",
+        "start": 1871.078,
+        "duration": 3.95
+    },
+    {
+        "text": "Viviane Clay: Yeah, more",
+        "start": 1875.338,
+        "duration": 0.84
+    },
+    {
+        "text": "fun.",
+        "start": 1891.288,
+        "duration": 0.29
+    },
+    {
+        "text": "But yeah, there won't be as many, anyways,\nwe won't have curvature magnitude and",
+        "start": 1891.748,
+        "duration": 3.81
+    },
+    {
+        "text": "stuff like that if we're off-object, Yeah.",
+        "start": 1895.558,
+        "duration": 4.29
+    },
+    {
+        "text": "I think it's not that important for now.",
+        "start": 1899.908,
+        "duration": 2.17
+    },
+    {
+        "text": "But the important thing is we'll\nstill get XYZ locations, and we can\u2026",
+        "start": 1904.778,
+        "duration": 4.86
+    },
+    {
+        "text": "Then, if we set this flag to\ntrue, it will automatically be",
+        "start": 1910.398,
+        "duration": 4.69
+    },
+    {
+        "text": "routed to the learning modules.",
+        "start": 1915.088,
+        "duration": 1.87
+    },
+    {
+        "text": "Here.",
+        "start": 1918.588,
+        "duration": 0.55
+    },
+    {
+        "text": "And then\u2026",
+        "start": 1920.668,
+        "duration": 0.56
+    },
+    {
+        "text": "I'm not sure, this is so long ago, but\nit looks like we already have a lot of",
+        "start": 1921.958,
+        "duration": 5.16
+    },
+    {
+        "text": "code in the buffer to deal with incoming.",
+        "start": 1927.118,
+        "duration": 3.2
+    },
+    {
+        "text": "On object\u2026 off-object observations.",
+        "start": 1931.178,
+        "duration": 2.98
+    },
+    {
+        "text": "We already store the onObject\nvalue, which right now should",
+        "start": 1937.348,
+        "duration": 5.13
+    },
+    {
+        "text": "only be once, or only be truths.",
+        "start": 1942.498,
+        "duration": 2.52
+    },
+    {
+        "text": "But,",
+        "start": 1945.928,
+        "duration": 0.03
+    },
+    {
+        "text": "if\u2026 if\u2026 I don't know, the optimistic\nview would be that changing this\u2026",
+        "start": 1948.828,
+        "duration": 6.03
+    },
+    {
+        "text": "The buffer will already\u2026",
+        "start": 1955.538,
+        "duration": 1.32
+    },
+    {
+        "text": "deal with getting those,\nand we'll\u2026 oh, wrong file.",
+        "start": 1957.638,
+        "duration": 2.81
+    },
+    {
+        "text": "And we'll already store for each, step\nwhether we were on or off the object.",
+        "start": 1960.938,
+        "duration": 5.17
+    },
+    {
+        "text": "And then\u2026 Yeah.",
+        "start": 1966.798,
+        "duration": 0.73
+    },
+    {
+        "text": "It already, the\u2026",
+        "start": 1969.168,
+        "duration": 2.39
+    },
+    {
+        "text": "Oh, okay, this might have to be\u2026",
+        "start": 1972.688,
+        "duration": 1.76
+    },
+    {
+        "text": "Changed, I'm not sure if\nit filters by on object.",
+        "start": 1975.978,
+        "duration": 3.35
+    },
+    {
+        "text": "At.",
+        "start": 1982.978,
+        "duration": 0.25
+    },
+    {
+        "text": "Niels Leadholm: Yeah, that's one of the\u2026 I\nthink, the tricky things is\u2026 is all this.",
+        "start": 1983.658,
+        "duration": 3.92
+    },
+    {
+        "text": "Viviane Clay: Yeah, so it\nalready has functions like",
+        "start": 1988.488,
+        "duration": 1.97
+    },
+    {
+        "text": "get all locations on object.",
+        "start": 1990.458,
+        "duration": 1.88
+    },
+    {
+        "text": "Where it takes all the locations,\nand it filters it by whether",
+        "start": 1993.028,
+        "duration": 3.42
+    },
+    {
+        "text": "we were on the object or not.",
+        "start": 1996.448,
+        "duration": 1.57
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 1998.648,
+        "duration": 0.42
+    },
+    {
+        "text": "Viviane Clay: Which kind of\nconfuses me, why we wrote all",
+        "start": 1999.928,
+        "duration": 2.12
+    },
+    {
+        "text": "this, if we're\u2026 Not already.",
+        "start": 2002.048,
+        "duration": 2.19
+    },
+    {
+        "text": "Niels Leadholm: Yeah, I'm trying to\nremember if this stuff predates, if",
+        "start": 2004.248,
+        "duration": 3.01
+    },
+    {
+        "text": "there was\u2026 if there was a point at which\nwe did pass off object observations.",
+        "start": 2007.258,
+        "duration": 4.05
+    },
+    {
+        "text": "And then we found that\nwas causing an issue.",
+        "start": 2013.648,
+        "duration": 2.02
+    },
+    {
+        "text": "Or, is it because\u2026 does this\nbuffer also store sensor module?",
+        "start": 2021.188,
+        "duration": 3.45
+    },
+    {
+        "text": "If this buffer is\u2026",
+        "start": 2027.238,
+        "duration": 1.74
+    },
+    {
+        "text": "Yeah, it doesn't, right?",
+        "start": 2029.598,
+        "duration": 1.08
+    },
+    {
+        "text": "It should just be\u2026",
+        "start": 2030.678,
+        "duration": 0.89
+    },
+    {
+        "text": "Viviane Clay: couldn't.",
+        "start": 2031.918,
+        "duration": 0.37
+    },
+    {
+        "text": "Niels Leadholm: It's a bit mysterious.",
+        "start": 2034.678,
+        "duration": 0.92
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 2038.188,
+        "duration": 0.62
+    },
+    {
+        "text": "Something to uncover.",
+        "start": 2040.428,
+        "duration": 1.03
+    },
+    {
+        "text": "Niels Leadholm: Yes, but\u2026 Yeah,\nlike you say, maybe it will",
+        "start": 2042.128,
+        "duration": 5.43
+    },
+    {
+        "text": "already handle some of it, but\u2026",
+        "start": 2047.558,
+        "duration": 1.64
+    },
+    {
+        "text": "Because, yeah, I think at its\ncore, some of that was presumably",
+        "start": 2050.158,
+        "duration": 3.26
+    },
+    {
+        "text": "written for, filtering, logging,\nso that we could be, like.",
+        "start": 2053.418,
+        "duration": 3.26
+    },
+    {
+        "text": "Okay, we're just gonna observe\nwhat hypotheses changes happen when",
+        "start": 2057.418,
+        "duration": 4.47
+    },
+    {
+        "text": "we were on object and stuff like\nthat, but\u2026 but as you say, Vivian,",
+        "start": 2062.448,
+        "duration": 2.58
+    },
+    {
+        "text": "generally, we've never been past\u2026 or\u2026",
+        "start": 2065.028,
+        "duration": 2.12
+    },
+    {
+        "text": "In our memory, we've never been\npassing off-object observations,",
+        "start": 2067.898,
+        "duration": 3.83
+    },
+    {
+        "text": "so that's always a list of ones\nor TRUEs at\u2026 of the length of",
+        "start": 2071.738,
+        "duration": 5.74
+    },
+    {
+        "text": "steps, basically.",
+        "start": 2078.098,
+        "duration": 0.82
+    },
+    {
+        "text": "Jason Carver: The buffer\ndoesn't include things like",
+        "start": 2083.478,
+        "duration": 1.82
+    },
+    {
+        "text": "when you're moving the surface.",
+        "start": 2085.298,
+        "duration": 1.73
+    },
+    {
+        "text": "To the sensor, to the object, like\u2026",
+        "start": 2087.798,
+        "duration": 2.73
+    },
+    {
+        "text": "Because sometimes there are steps where\nyou're not doing any inference, right?",
+        "start": 2091.218,
+        "duration": 2.8
+    },
+    {
+        "text": "Niels Leadholm: It might be that it\nincludes\u2026 even if it doesn't include",
+        "start": 2096.718,
+        "duration": 2.26
+    },
+    {
+        "text": "sensor model stuff, it may include\u2026",
+        "start": 2098.978,
+        "duration": 1.73
+    },
+    {
+        "text": "basically every time\u2026 I think that's\nwhat it\u2026 maybe is that, every time",
+        "start": 2101.458,
+        "duration": 4.4
+    },
+    {
+        "text": "the learning module could be stepped.",
+        "start": 2105.858,
+        "duration": 1.68
+    },
+    {
+        "text": "Including when, it's off-object.",
+        "start": 2109.478,
+        "duration": 2.46
+    },
+    {
+        "text": "Viviane Clay: Yeah, maybe a good\nplace to start, debugging and testing",
+        "start": 2116.588,
+        "duration": 4.86
+    },
+    {
+        "text": "would actually be this unit test here,\ncalled TestMovingOff Object and Back.",
+        "start": 2121.918,
+        "duration": 4.79
+    },
+    {
+        "text": "Yeah, because that runs pretty\nfast, you don't have to run an",
+        "start": 2127.548,
+        "duration": 2.62
+    },
+    {
+        "text": "experiment or anything, and it,\nuses just fake data to move\u2026",
+        "start": 2130.168,
+        "duration": 5.68
+    },
+    {
+        "text": "Beyond object and off and back\non, and just seeing, what happens.",
+        "start": 2136.378,
+        "duration": 6.36
+    },
+    {
+        "text": "Jason Carver: Yeah,",
+        "start": 2142.748,
+        "duration": 0.02
+    },
+    {
+        "text": "that's great.",
+        "start": 2148.078,
+        "duration": 0.51
+    },
+    {
+        "text": "Viviane Clay: And yeah, it won't,\ncover if you make changes to what the",
+        "start": 2157.388,
+        "duration": 3.98
+    },
+    {
+        "text": "sensor module outputs, because here we\nare not using a sensor module, we're",
+        "start": 2161.368,
+        "duration": 3.152
+    },
+    {
+        "text": "just manually creating some fake,",
+        "start": 2164.708,
+        "duration": 2.82
+    },
+    {
+        "text": "messages and setting morphological\nfeatures to\u2026 on object to",
+        "start": 2169.568,
+        "duration": 4.01
+    },
+    {
+        "text": "zero and useState to false.",
+        "start": 2173.578,
+        "duration": 1.6
+    },
+    {
+        "text": "But, it might give some insights on what\nthe\u2026 Learning module does with that.",
+        "start": 2175.998,
+        "duration": 5.73
+    },
+    {
+        "text": "Oh, actually\u2026",
+        "start": 2187.828,
+        "duration": 1.52
+    },
+    {
+        "text": "Yeah, maybe it's not the best\nplace, because this doesn't even",
+        "start": 2192.428,
+        "duration": 3.6
+    },
+    {
+        "text": "invoke the multi-class, so it\ndoesn't include any filtering.",
+        "start": 2196.028,
+        "duration": 4.31
+    },
+    {
+        "text": "this one, we're just directly\nstepping the learning module and",
+        "start": 2201.338,
+        "duration": 2.94
+    },
+    {
+        "text": "actually giving it the information.",
+        "start": 2204.418,
+        "duration": 1.61
+    },
+    {
+        "text": "Maybe\u2026",
+        "start": 2209.268,
+        "duration": 0.84
+    },
+    {
+        "text": "It might still be a good test for\u2026\nfor very specific changes, but,",
+        "start": 2215.958,
+        "duration": 4.23
+    },
+    {
+        "text": "It wouldn't attest the kind of\nend-to-end pipeline of how Monty",
+        "start": 2221.648,
+        "duration": 3.59
+    },
+    {
+        "text": "passes the observations between\nsensor and learning modules.",
+        "start": 2225.238,
+        "duration": 3.79
+    },
+    {
+        "text": "Let's see\u2026",
+        "start": 2235.418,
+        "duration": 0.47
+    },
+    {
+        "text": "Niels Leadholm: What was the one where\nwe stepped through the learning modules?",
+        "start": 2238.378,
+        "duration": 3.05
+    },
+    {
+        "text": "That kind of, impasse the sensory.",
+        "start": 2242.828,
+        "duration": 2.51
+    },
+    {
+        "text": "I don't think it's in Monty Base.",
+        "start": 2245.338,
+        "duration": 3.78
+    },
+    {
+        "text": "Viviane Clay: Oh yeah, here, in\nEvidenceLM test, we have one, I",
+        "start": 2250.608,
+        "duration": 2.99
+    },
+    {
+        "text": "think, where we actually do a full\u2026",
+        "start": 2253.618,
+        "duration": 1.8
+    },
+    {
+        "text": "Niels Leadholm: experiment.",
+        "start": 2255.878,
+        "duration": 0.84
+    },
+    {
+        "text": "Viviane Clay: yeah, test moving off\nobjects is the name of the\u2026 Test.",
+        "start": 2258.778,
+        "duration": 3.79
+    },
+    {
+        "text": "And I think the way we do it there\nis that we run a full experiment.",
+        "start": 2263.588,
+        "duration": 4.85
+    },
+    {
+        "text": "But we pre-defined the actions that\nwill be taken, so that the actions just",
+        "start": 2269.258,
+        "duration": 5.137
+    },
+    {
+        "text": "take us straight off of the object.",
+        "start": 2274.608,
+        "duration": 1.6
+    },
+    {
+        "text": "Yeah\u2026",
+        "start": 2279.508,
+        "duration": 0.24
+    },
+    {
+        "text": "Yeah,",
+        "start": 2287.798,
+        "duration": 0.69
+    },
+    {
+        "text": "this is probably the\nbest test to start with.",
+        "start": 2300.158,
+        "duration": 3.47
+    },
+    {
+        "text": "Sorry,",
+        "start": 2310.678,
+        "duration": 0.34
+    },
+    {
+        "text": "it's, been\u2026 it's been a bit of a\nwhile since I looked into that.",
+        "start": 2313.278,
+        "duration": 2.54
+    },
+    {
+        "text": "Jason Carver: No, this is great.",
+        "start": 2317.158,
+        "duration": 0.46
+    },
+    {
+        "text": "this is still way faster\nthan if I was just\u2026",
+        "start": 2317.753,
+        "duration": 2.655
+    },
+    {
+        "text": "Swimming around trying to\nguess at it, so this is great.",
+        "start": 2322.378,
+        "duration": 2.5
+    },
+    {
+        "text": "I\u2026 I also, just as prep for this meeting,\nI did some, poking around and, found some",
+        "start": 2326.528,
+        "duration": 6.53
+    },
+    {
+        "text": "unexpected behavior, which is perfect,\nbecause I get to ask about it now.",
+        "start": 2333.408,
+        "duration": 3.17
+    },
+    {
+        "text": "I did,",
+        "start": 2338.738,
+        "duration": 0.66
+    },
+    {
+        "text": "What's the easiest way?",
+        "start": 2342.028,
+        "duration": 1.0
+    },
+    {
+        "text": "I guess I could share my screen.",
+        "start": 2343.288,
+        "duration": 1.59
+    },
+    {
+        "text": "But I did,",
+        "start": 2345.348,
+        "duration": 1.19
+    },
+    {
+        "text": "A change on handle failed jump?",
+        "start": 2348.138,
+        "duration": 3.01
+    },
+    {
+        "text": "Where, I just delayed the\u2026",
+        "start": 2352.388,
+        "duration": 6.06
+    },
+    {
+        "text": "the fail step.",
+        "start": 2359.468,
+        "duration": 1.37
+    },
+    {
+        "text": "I just treated\u2026 I just\u2026 I switched it to\njust always treat it as successful, and",
+        "start": 2360.898,
+        "duration": 4.57
+    },
+    {
+        "text": "then added this, cued action that happens\nat the beginning of that same function.",
+        "start": 2365.508,
+        "duration": 4.74
+    },
+    {
+        "text": "to, reorient it.",
+        "start": 2372.438,
+        "duration": 1.44
+    },
+    {
+        "text": "The idea being, like, oh, it'll reorient\nit at the beginning of the next step.",
+        "start": 2373.918,
+        "duration": 3.31
+    },
+    {
+        "text": "Niels Leadholm: Yeah, so you can\nget that off-object observation.",
+        "start": 2377.838,
+        "duration": 2.62
+    },
+    {
+        "text": "Yeah, Okay.",
+        "start": 2382.288,
+        "duration": 0.98
+    },
+    {
+        "text": "Jason Carver: Yeah, here,\nlet me\u2026 I can\u2026 maybe I can.",
+        "start": 2383.298,
+        "duration": 2.67
+    },
+    {
+        "text": "Niels Leadholm: Yeah, unfortunately,\nthe\u2026 Yeah, that whole\u2026",
+        "start": 2385.988,
+        "duration": 4.16
+    },
+    {
+        "text": "Policy is a bit of a\u2026 mess.",
+        "start": 2391.268,
+        "duration": 2.5
+    },
+    {
+        "text": "Jason Carver: so I just added\nthis, concept of acute action at",
+        "start": 2397.178,
+        "duration": 2.4
+    },
+    {
+        "text": "the beginning, and\u2026 this isn't how\nthe actual change would go, this",
+        "start": 2399.578,
+        "duration": 3.9
+    },
+    {
+        "text": "was just me trying to understand.",
+        "start": 2403.478,
+        "duration": 1.15
+    },
+    {
+        "text": "Niels Leadholm: No, I think it's a\u2026\nyeah, it's a nice way to test it, yeah.",
+        "start": 2404.628,
+        "duration": 2.72
+    },
+    {
+        "text": "Jason Carver: and the\nsurprise effect for me was,",
+        "start": 2410.268,
+        "duration": 3.6
+    },
+    {
+        "text": "it\u2026 so I got this new\u2026 I got the,",
+        "start": 2415.798,
+        "duration": 5.27
+    },
+    {
+        "text": "the log that says, there's no object\nvisible, and then the next log is",
+        "start": 2421.068,
+        "duration": 5.95
+    },
+    {
+        "text": "supposed to be, the one saying, okay,\nI'm moving\u2026 I'm now moving to the\u2026",
+        "start": 2427.028,
+        "duration": 4.95
+    },
+    {
+        "text": "To the object, but instead, it\nwas showing up with, a huge gap.",
+        "start": 2433.868,
+        "duration": 6.7
+    },
+    {
+        "text": "it would say, warning, no\nobject visible in step 7.",
+        "start": 2442.278,
+        "duration": 3.43
+    },
+    {
+        "text": "And then somewhere down in.",
+        "start": 2446.288,
+        "duration": 1.4
+    },
+    {
+        "text": "Niels Leadholm: Oh,\nafter a bunch of steps.",
+        "start": 2447.758,
+        "duration": 2.49
+    },
+    {
+        "text": "Jason Carver: then it was, like,\nreturning to the previous position.",
+        "start": 2450.248,
+        "duration": 2.03
+    },
+    {
+        "text": "So, I just, I don't understand\nsomething about, like, when this",
+        "start": 2452.848,
+        "duration": 2.67
+    },
+    {
+        "text": "code is triggered, basically.",
+        "start": 2455.518,
+        "duration": 1.56
+    },
+    {
+        "text": "Niels Leadholm: Yeah, what that probably\nis, yeah, the motor stuff is\u2026 is,",
+        "start": 2457.818,
+        "duration": 4.78
+    },
+    {
+        "text": "Yeah, it's really complex,\nand a bit of a mess.",
+        "start": 2464.158,
+        "duration": 3.55
+    },
+    {
+        "text": "It's\u2026 but basically, they're\u2026",
+        "start": 2467.718,
+        "duration": 1.96
+    },
+    {
+        "text": "There's different logic for\nhandling off-objects from a",
+        "start": 2470.238,
+        "duration": 3.18
+    },
+    {
+        "text": "motor system point of view,",
+        "start": 2473.418,
+        "duration": 1.24
+    },
+    {
+        "text": "to summarize them, the, distant agent",
+        "start": 2477.218,
+        "duration": 3.62
+    },
+    {
+        "text": "tends to, when it's, saccading around,\nin most versions, if it goes off",
+        "start": 2481.518,
+        "duration": 3.87
+    },
+    {
+        "text": "the object, then it moves back on.",
+        "start": 2485.388,
+        "duration": 2.2
+    },
+    {
+        "text": "It reverses the last action.",
+        "start": 2487.848,
+        "duration": 1.51
+    },
+    {
+        "text": "But that should be on the\nnext loop, and so it will\u2026",
+        "start": 2490.248,
+        "duration": 3.08
+    },
+    {
+        "text": "It should give it a chance to pass the\u2026",
+        "start": 2494.098,
+        "duration": 2.73
+    },
+    {
+        "text": "the observation.",
+        "start": 2497.808,
+        "duration": 0.98
+    },
+    {
+        "text": "And then, like you noted.",
+        "start": 2498.818,
+        "duration": 1.23
+    },
+    {
+        "text": "the fail, the, jump to goal state\nfail, That happens all within\u2026",
+        "start": 2500.588,
+        "duration": 6.34
+    },
+    {
+        "text": "the kind of environment, embodied\nenvironment, and so it doesn't give",
+        "start": 2507.478,
+        "duration": 3.52
+    },
+    {
+        "text": "a chance to pass out, which is why,\nyeah, you were making that change.",
+        "start": 2510.998,
+        "duration": 3.33
+    },
+    {
+        "text": "But then there's also\u2026",
+        "start": 2514.918,
+        "duration": 1.34
+    },
+    {
+        "text": "For the surface agent, if it's\noff object, it will try and look",
+        "start": 2516.988,
+        "duration": 3.99
+    },
+    {
+        "text": "for the off\u2026 for the object.",
+        "start": 2520.988,
+        "duration": 1.59
+    },
+    {
+        "text": "And in particular, the finger, you\ncan imagine it's shifts around.",
+        "start": 2523.628,
+        "duration": 5.23
+    },
+    {
+        "text": "Until it tries to bump into the object.",
+        "start": 2530.138,
+        "duration": 2.4
+    },
+    {
+        "text": "So what might be happening is that\nlogic is getting that's catching\u2026",
+        "start": 2532.878,
+        "duration": 4.07
+    },
+    {
+        "text": "Earlier than your, so you might\u2026",
+        "start": 2537.558,
+        "duration": 3.7
+    },
+    {
+        "text": "for the purpose of this kind of test,\nyou might need to move that even earlier.",
+        "start": 2541.968,
+        "duration": 2.9
+    },
+    {
+        "text": "So I think it's something\nlike, if the observation is",
+        "start": 2545.138,
+        "duration": 2.18
+    },
+    {
+        "text": "none, or something like that.",
+        "start": 2547.328,
+        "duration": 1.79
+    },
+    {
+        "text": "There's some sort of if\nstatement really early on.",
+        "start": 2550.388,
+        "duration": 1.92
+    },
+    {
+        "text": "And then I think that will trigger,\nIt's called something like.",
+        "start": 2553.828,
+        "duration": 4.18
+    },
+    {
+        "text": "Jason Carver: So this is the\u2026 so\nthis is the environment interface.",
+        "start": 2558.008,
+        "duration": 2.85
+    },
+    {
+        "text": "does the execute jump\nattempt pretty early.",
+        "start": 2562.778,
+        "duration": 4.08
+    },
+    {
+        "text": "I don't think the first step\nisn't triggering, right?",
+        "start": 2567.238,
+        "duration": 2.21
+    },
+    {
+        "text": "So this is pretty much right away.",
+        "start": 2569.528,
+        "duration": 1.73
+    },
+    {
+        "text": "And then this queued action's,\nright at the beginning of that.",
+        "start": 2572.058,
+        "duration": 2.57
+    },
+    {
+        "text": "I don't see\u2026 unless this\nmoves into, a different\u2026",
+        "start": 2575.758,
+        "duration": 3.58
+    },
+    {
+        "text": "class somewhere.",
+        "start": 2580.558,
+        "duration": 1.01
+    },
+    {
+        "text": "I don't see how I could\nmake it happen any earlier.",
+        "start": 2582.328,
+        "duration": 2.28
+    },
+    {
+        "text": "I don't understand how\nto make it happen any.",
+        "start": 2584.988,
+        "duration": 1.892
+    },
+    {
+        "text": "Viviane Clay: It might generally be\neasier to debug with the distant agent.",
+        "start": 2589.538,
+        "duration": 3.05
+    },
+    {
+        "text": "Because that one, more frequently\njust moves off the object, and",
+        "start": 2593.318,
+        "duration": 4.192
+    },
+    {
+        "text": "then we just revert its action.",
+        "start": 2597.51,
+        "duration": 1.588
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 2600.468,
+        "duration": 0.41
+    },
+    {
+        "text": "Viviane Clay: I think with\nthe Surface Agent, it's\u2026 But\u2026",
+        "start": 2600.888,
+        "duration": 3.77
+    },
+    {
+        "text": "More difficult, because whenever\nit's off the object, it's usually",
+        "start": 2605.528,
+        "duration": 3.2
+    },
+    {
+        "text": "that something went wrong.",
+        "start": 2608.728,
+        "duration": 1.19
+    },
+    {
+        "text": "it fell off or something.",
+        "start": 2610.768,
+        "duration": 2.32
+    },
+    {
+        "text": "So it happens less frequently, and\u2026",
+        "start": 2614.148,
+        "duration": 2.01
+    },
+    {
+        "text": "It usually happens in\nsome weird edge cases,",
+        "start": 2616.438,
+        "duration": 3.56
+    },
+    {
+        "text": "Niels Leadholm: Can I see the change\nin the code you made, by any chance?",
+        "start": 2621.888,
+        "duration": 2.45
+    },
+    {
+        "text": "Jason Carver: yeah.",
+        "start": 2625.308,
+        "duration": 0.2
+    },
+    {
+        "text": "This one?",
+        "start": 2626.088,
+        "duration": 0.4
+    },
+    {
+        "text": "Viviane Clay: Are you sharing a.",
+        "start": 2629.198,
+        "duration": 2.99
+    },
+    {
+        "text": "Niels Leadholm: We're seeing a terminal.",
+        "start": 2633.208,
+        "duration": 1.09
+    },
+    {
+        "text": "We're seeing, that's coming often.",
+        "start": 2640.318,
+        "duration": 1.19
+    },
+    {
+        "text": "Jason Carver: This is the patch.",
+        "start": 2641.508,
+        "duration": 1.15
+    },
+    {
+        "text": "The patch is showing in the\nterminal with the changes.",
+        "start": 2643.638,
+        "duration": 2.63
+    },
+    {
+        "text": "Niels Leadholm: Oh, okay,",
+        "start": 2646.588,
+        "duration": 0.64
+    },
+    {
+        "text": "which line.",
+        "start": 2651.658,
+        "duration": 0.73
+    },
+    {
+        "text": "Jason Carver: Did you want to see the\u2026\ndid you want to see the new code all",
+        "start": 2654.358,
+        "duration": 2.56
+    },
+    {
+        "text": "integrated, or just the changed lines?",
+        "start": 2656.938,
+        "duration": 1.91
+    },
+    {
+        "text": "Niels Leadholm: I don't mind, actually,\nthis is fine, but right now, the way I",
+        "start": 2660.948,
+        "duration": 4.24
+    },
+    {
+        "text": "see it, there's an added line on 755,",
+        "start": 2665.238,
+        "duration": 2.24
+    },
+    {
+        "text": "a change to the warning.",
+        "start": 2669.258,
+        "duration": 1.36
+    },
+    {
+        "text": "Jason Carver: Oh, yeah, sorry, you're\nright, I was\u2026 I was only looking at the\u2026",
+        "start": 2672.168,
+        "duration": 3.18
+    },
+    {
+        "text": "here, let me just do\u2026 let me just do this.",
+        "start": 2675.428,
+        "duration": 2.25
+    },
+    {
+        "text": "I'll show all the changes from\nmain, which includes others.",
+        "start": 2677.828,
+        "duration": 3.5
+    },
+    {
+        "text": "I was trying to isolate it a little bit,",
+        "start": 2681.378,
+        "duration": 1.91
+    },
+    {
+        "text": "Niels Leadholm: Yeah, no worries.",
+        "start": 2683.608,
+        "duration": 0.89
+    },
+    {
+        "text": "Jason Carver: Great.",
+        "start": 2685.398,
+        "duration": 0.063
+    },
+    {
+        "text": "Niels Leadholm: Okay, If\nself-queued action is not",
+        "start": 2685.461,
+        "duration": 0.441
+    },
+    {
+        "text": "known, so this is embodied data.",
+        "start": 2685.902,
+        "duration": 0.378
+    },
+    {
+        "text": "Yeah, I wonder if I'm",
+        "start": 2686.28,
+        "duration": 0.898
+    },
+    {
+        "text": "actually this.",
+        "start": 2691.458,
+        "duration": 0.15
+    },
+    {
+        "text": "So",
+        "start": 2691.618,
+        "duration": 0.56
+    },
+    {
+        "text": "that was within pre-episode.",
+        "start": 2694.612,
+        "duration": 1.29
+    },
+    {
+        "text": "Jason Carver: This is called\u2026",
+        "start": 2700.432,
+        "duration": 1.277
+    },
+    {
+        "text": "Niels Leadholm: Pre\u2026",
+        "start": 2701.709,
+        "duration": 0.443
+    },
+    {
+        "text": "Jason Carver: Hey, Al.",
+        "start": 2702.152,
+        "duration": 0.887
+    },
+    {
+        "text": "Niels Leadholm: pre-episode\u2026 So you'd\nwant it to be within the next call, I",
+        "start": 2703.482,
+        "duration": 4.57
+    },
+    {
+        "text": "think, if queued action is not none.",
+        "start": 2708.052,
+        "duration": 2.085
+    },
+    {
+        "text": "Rather than pre\u2026 Oh, no\u2026",
+        "start": 2711.432,
+        "duration": 1.34
+    },
+    {
+        "text": "Jason Carver: Cutex.",
+        "start": 2712.772,
+        "duration": 0.23
+    },
+    {
+        "text": "So let me.",
+        "start": 2714.342,
+        "duration": 0.31
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 2714.652,
+        "duration": 0.32
+    },
+    {
+        "text": "Jason Carver: pull this up.",
+        "start": 2715.102,
+        "duration": 0.8
+    },
+    {
+        "text": "execute jump attempt, is in the next\u2026",
+        "start": 2722.902,
+        "duration": 1.376
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 2724.278,
+        "duration": 0.009
+    },
+    {
+        "text": "Jason Carver: But then, at the beginning\nof execute jump attempt is the.",
+        "start": 2724.287,
+        "duration": 0.135
+    },
+    {
+        "text": "Niels Leadholm: Oh, this is\nwhere you're doing it, okay.",
+        "start": 2724.432,
+        "duration": 1.36
+    },
+    {
+        "text": "Jason Carver: Yeah.",
+        "start": 2726.292,
+        "duration": 0.36
+    },
+    {
+        "text": "Niels Leadholm: I don't think,",
+        "start": 2728.742,
+        "duration": 0.86
+    },
+    {
+        "text": "Q\u2026 I don't think execute Jump Attempt\nwill be executing again, On the next step.",
+        "start": 2731.102,
+        "duration": 5.9
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 2737.132,
+        "duration": 0.22
+    },
+    {
+        "text": "Niels Leadholm: So I\nthink what you want to do.",
+        "start": 2738.192,
+        "duration": 1.02
+    },
+    {
+        "text": "Jason Carver: take\u2026",
+        "start": 2739.512,
+        "duration": 0.04
+    },
+    {
+        "text": "Niels Leadholm: that\u2026 take that out,\nand\u2026 You can literally put it before the\u2026",
+        "start": 2739.602,
+        "duration": 4.795
+    },
+    {
+        "text": "Jason Carver: Way up here.",
+        "start": 2744.402,
+        "duration": 0.8
+    },
+    {
+        "text": "Niels Leadholm: Exactly,\nif you put it there.",
+        "start": 2745.542,
+        "duration": 1.46
+    },
+    {
+        "text": "Jason Carver: Yeah, cool.",
+        "start": 2747.062,
+        "duration": 0.45
+    },
+    {
+        "text": "Niels Leadholm: And I think\nyou'll catch it, yeah.",
+        "start": 2747.512,
+        "duration": 2.08
+    },
+    {
+        "text": "Jason Carver: Yeah, there\nwas something\u2026 there was,",
+        "start": 2751.052,
+        "duration": 1.77
+    },
+    {
+        "text": "Something about\u2026 yeah, the driving goal\nstate is probably set to none, right?",
+        "start": 2754.822,
+        "duration": 5.63
+    },
+    {
+        "text": "Niels Leadholm: Exactly, yeah, I think\nthe way it is, that once that's been",
+        "start": 2760.492,
+        "duration": 4.79
+    },
+    {
+        "text": "attempted, it releases that, or resets it,",
+        "start": 2765.282,
+        "duration": 3.48
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 2770.032,
+        "duration": 0.4
+    },
+    {
+        "text": "yeah, so then hopefully the warnings\nwill be back-to-back in the same steps.",
+        "start": 2774.882,
+        "duration": 6.64
+    },
+    {
+        "text": "This won't take\u2026",
+        "start": 2785.552,
+        "duration": 0.79
+    },
+    {
+        "text": "Cool.",
+        "start": 2788.372,
+        "duration": 0.03
+    },
+    {
+        "text": "Actually, I think I can pause it here.",
+        "start": 2790.102,
+        "duration": 1.91
+    },
+    {
+        "text": "Oh, that almost happened too fast.",
+        "start": 2793.952,
+        "duration": 2.28
+    },
+    {
+        "text": "Wait, let's see.",
+        "start": 2796.332,
+        "duration": 0.68
+    },
+    {
+        "text": "And",
+        "start": 2797.932,
+        "duration": 0.3
+    },
+    {
+        "text": "it appears\u2026 Wait, let's see\u2026",
+        "start": 2801.192,
+        "duration": 0.75
+    },
+    {
+        "text": "Because we want it to be in a\u2026 in the\nnext step, But now\u2026 Now it's happening\u2026",
+        "start": 2802.952,
+        "duration": 9.53
+    },
+    {
+        "text": "Returning to previous\nposition, it's happening\u2026",
+        "start": 2814.482,
+        "duration": 2.25
+    },
+    {
+        "text": "there's no step change\nbetween those two lines.",
+        "start": 2819.552,
+        "duration": 3.08
+    },
+    {
+        "text": "Niels Leadholm: So that's\nprobably a\u2026 just something about",
+        "start": 2823.152,
+        "duration": 2.47
+    },
+    {
+        "text": "the step counter or something.",
+        "start": 2825.622,
+        "duration": 1.53
+    },
+    {
+        "text": "Would be my guess.",
+        "start": 2828.012,
+        "duration": 0.85
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 2829.012,
+        "duration": 0.11
+    },
+    {
+        "text": "Niels Leadholm: It probably is\nthe next step, but\u2026 but somehow",
+        "start": 2829.402,
+        "duration": 2.36
+    },
+    {
+        "text": "the step counter's not being\niterated, or\u2026 I don't know, yeah.",
+        "start": 2831.802,
+        "duration": 2.99
+    },
+    {
+        "text": "Jason Carver: Open.",
+        "start": 2836.602,
+        "duration": 0.05
+    },
+    {
+        "text": "But I think it's a good idea.",
+        "start": 2836.812,
+        "duration": 1.35
+    },
+    {
+        "text": "Niels Leadholm: I think, like Vivian\nsays, Distant Agent's probably a good",
+        "start": 2838.992,
+        "duration": 2.12
+    },
+    {
+        "text": "place to start, just because it's a\nbit simpler, and then, but I think",
+        "start": 2841.302,
+        "duration": 4.37
+    },
+    {
+        "text": "this is a nice idea for testing with,",
+        "start": 2845.672,
+        "duration": 2.04
+    },
+    {
+        "text": "Yeah, the\u2026",
+        "start": 2849.082,
+        "duration": 0.73
+    },
+    {
+        "text": "basically passing the off object\nbetween these, goal state things,",
+        "start": 2851.472,
+        "duration": 3.37
+    },
+    {
+        "text": "which is what we eventually want to do.",
+        "start": 2854.842,
+        "duration": 1.16
+    },
+    {
+        "text": "The other thing is, parallel to this,\nbut probably won't happen anytime",
+        "start": 2856.622,
+        "duration": 3.33
+    },
+    {
+        "text": "soon, we are disentangling this so that",
+        "start": 2859.952,
+        "duration": 2.56
+    },
+    {
+        "text": "you actually have, a full loop.",
+        "start": 2863.312,
+        "duration": 1.61
+    },
+    {
+        "text": "So that, if we are going to have this kind\nof resetting, for example, like you've",
+        "start": 2865.412,
+        "duration": 4.43
+    },
+    {
+        "text": "done here, it would happen on the next",
+        "start": 2869.842,
+        "duration": 2.24
+    },
+    {
+        "text": "On the next step.",
+        "start": 2872.722,
+        "duration": 1.15
+    },
+    {
+        "text": "But, yeah.",
+        "start": 2875.222,
+        "duration": 0.41
+    },
+    {
+        "text": "I may have to run soon, unfortunately, but",
+        "start": 2876.832,
+        "duration": 3.07
+    },
+    {
+        "text": "But yeah, but was there\nany\u2026 Kind of other\u2026",
+        "start": 2881.182,
+        "duration": 3.42
+    },
+    {
+        "text": "Jason Carver: Yeah,",
+        "start": 2885.962,
+        "duration": 0.075
+    },
+    {
+        "text": "Niels Leadholm: we can definitely do\u2026",
+        "start": 2887.162,
+        "duration": 0.71
+    },
+    {
+        "text": "Jason Carver: Google a lot.",
+        "start": 2887.872,
+        "duration": 0.38
+    },
+    {
+        "text": "Niels Leadholm: Asynchronously as well,\nobviously feel free to post loads of\u2026",
+        "start": 2888.292,
+        "duration": 3.67
+    },
+    {
+        "text": "loads of questions and, or yeah, point\nout things that are doing weird stuff.",
+        "start": 2891.962,
+        "duration": 4.84
+    },
+    {
+        "text": "Jason Carver: Great,",
+        "start": 2898.062,
+        "duration": 0.41
+    },
+    {
+        "text": "yeah, there's questions about the\u2026",
+        "start": 2900.722,
+        "duration": 1.98
+    },
+    {
+        "text": "how the learning module knows if it's\nin a learning state, because you said",
+        "start": 2903.942,
+        "duration": 2.6
+    },
+    {
+        "text": "not to use this effect if it's learning.",
+        "start": 2906.552,
+        "duration": 3.15
+    },
+    {
+        "text": "Yeah.",
+        "start": 2911.572,
+        "duration": 0.54
+    },
+    {
+        "text": "So I guess I'll just give, previews of\nthings if there's not time to answer them.",
+        "start": 2912.152,
+        "duration": 3.33
+    },
+    {
+        "text": "There's\u2026 I can figure.",
+        "start": 2918.922,
+        "duration": 0.98
+    },
+    {
+        "text": "Niels Leadholm: That might be something,\njust, briefly on that one, so we",
+        "start": 2919.932,
+        "duration": 3.22
+    },
+    {
+        "text": "have a buffer that you save, and then\nwhen you are learning, at the end",
+        "start": 2923.372,
+        "duration": 5.03
+    },
+    {
+        "text": "of learning, you update the model.",
+        "start": 2928.402,
+        "duration": 2.26
+    },
+    {
+        "text": "But so that might just be a case\nof, anything that has this null",
+        "start": 2931.392,
+        "duration": 3.04
+    },
+    {
+        "text": "morphological feature doesn't get added.",
+        "start": 2934.482,
+        "duration": 1.99
+    },
+    {
+        "text": "Jason Carver: filtering it.",
+        "start": 2936.782,
+        "duration": 0.47
+    },
+    {
+        "text": "Niels Leadholm: That buffer, or\u2026 or we\nfilter it later at the point of kind of",
+        "start": 2937.272,
+        "duration": 4.02
+    },
+    {
+        "text": "updating the model, something like that.",
+        "start": 2941.312,
+        "duration": 1.42
+    },
+    {
+        "text": "Viviane Clay: Yeah, Niels, if\nyou want, I can stay on and",
+        "start": 2944.202,
+        "duration": 2.07
+    },
+    {
+        "text": "answer most of these questions.",
+        "start": 2946.272,
+        "duration": 1.89
+    },
+    {
+        "text": "Niels Leadholm: Are you okay?",
+        "start": 2948.432,
+        "duration": 1.02
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 2949.642,
+        "duration": 0.67
+    },
+    {
+        "text": "Niels Leadholm: Okay, cool.",
+        "start": 2950.712,
+        "duration": 0.59
+    },
+    {
+        "text": "Or yeah, just as much as\nyou have time for, and then.",
+        "start": 2951.962,
+        "duration": 1.97
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 2954.952,
+        "duration": 0.38
+    },
+    {
+        "text": "Niels Leadholm: Yeah, and\nthen, but also, yeah, happy to\u2026",
+        "start": 2955.382,
+        "duration": 3.39
+    },
+    {
+        "text": "Viviane Clay: But yeah, just to know how\u2026",
+        "start": 2959.362,
+        "duration": 1.84
+    },
+    {
+        "text": "Whether it's in learning or\ninference state, there should be",
+        "start": 2962.042,
+        "duration": 2.71
+    },
+    {
+        "text": "a flag for the learning module\nas well that tells it whether it",
+        "start": 2965.162,
+        "duration": 3.94
+    },
+    {
+        "text": "should update its models or not.",
+        "start": 2969.102,
+        "duration": 2.36
+    },
+    {
+        "text": "Let me just quickly look up the name of",
+        "start": 2973.232,
+        "duration": 1.72
+    },
+    {
+        "text": "it.",
+        "start": 2977.352,
+        "duration": 0.13
+    },
+    {
+        "text": "Models\u2026",
+        "start": 2979.902,
+        "duration": 1.81
+    },
+    {
+        "text": "Jason Carver: I had in my head that\u2026\nthat it was, like, agnostic to the idea",
+        "start": 2984.492,
+        "duration": 4.43
+    },
+    {
+        "text": "of being in a learning state or not.",
+        "start": 2988.922,
+        "duration": 2.39
+    },
+    {
+        "text": "Viviane Clay: Yeah, that\u2026",
+        "start": 2994.142,
+        "duration": 0.42
+    },
+    {
+        "text": "Jason Carver: From an experimental\npoint of view, there is some kind of\u2026",
+        "start": 2994.912,
+        "duration": 2.615
+    },
+    {
+        "text": "Viviane Clay: Yeah, so from an\nexperimental point of view, it is\u2026 let",
+        "start": 2997.712,
+        "duration": 2.85
+    },
+    {
+        "text": "me share my screen again, real quick.",
+        "start": 3000.562,
+        "duration": 1.94
+    },
+    {
+        "text": "Yeah.",
+        "start": 3002.882,
+        "duration": 0.25
+    },
+    {
+        "text": "So most of it is, yeah, pretty.",
+        "start": 3003.932,
+        "duration": 2.17
+    },
+    {
+        "text": "Niels Leadholm: I'll, yeah, I'll see\nyou guys later, but, yeah, really",
+        "start": 3006.112,
+        "duration": 2.41
+    },
+    {
+        "text": "nice meeting you, Carver, and yeah,\nI'm sure we'll touch base again soon.",
+        "start": 3008.522,
+        "duration": 3.56
+    },
+    {
+        "text": "Jason Carver: Sounds good.",
+        "start": 3013.732,
+        "duration": 0.49
+    },
+    {
+        "text": "Viviane Clay: Yeah, see later, nails.",
+        "start": 3015.012,
+        "duration": 1.42
+    },
+    {
+        "text": "Where's the\u2026 where's our\u2026\nNormal learning module code.",
+        "start": 3019.662,
+        "duration": 4.75
+    },
+    {
+        "text": "Here",
+        "start": 3024.852,
+        "duration": 0.19
+    },
+    {
+        "text": "we go.",
+        "start": 3027.092,
+        "duration": 0.04
+    },
+    {
+        "text": "let me just say\u2026",
+        "start": 3031.952,
+        "duration": 0.54
+    },
+    {
+        "text": "Add graph to memory, that should be it.",
+        "start": 3041.892,
+        "duration": 2.0
+    },
+    {
+        "text": "beer\u2026",
+        "start": 3046.582,
+        "duration": 0.09
+    },
+    {
+        "text": "Let's\u2026",
+        "start": 3053.252,
+        "duration": 0.2
+    },
+    {
+        "text": "No, this is just\u2026",
+        "start": 3057.682,
+        "duration": 1.42
+    },
+    {
+        "text": "Jason Carver: It wasn't\nthe\u2026 let's see, no.",
+        "start": 3063.732,
+        "duration": 2.39
+    },
+    {
+        "text": "Viviane Clay: Maybe build graph\nis the right place to start.",
+        "start": 3067.132,
+        "duration": 3.31
+    },
+    {
+        "text": "Build model\u2026",
+        "start": 3073.052,
+        "duration": 0.8
+    },
+    {
+        "text": "Sorry, this is a bit of a mess.",
+        "start": 3094.882,
+        "duration": 1.63
+    },
+    {
+        "text": "Update memory\u2026 Almost there.",
+        "start": 3102.632,
+        "duration": 4.1
+    },
+    {
+        "text": "Here we go.",
+        "start": 3107.932,
+        "duration": 0.52
+    },
+    {
+        "text": "in the post-episode function of learning\nmodule, so there's no difference, during,",
+        "start": 3110.622,
+        "duration": 5.27
+    },
+    {
+        "text": "matching inference, anything like that.",
+        "start": 3116.362,
+        "duration": 2.4
+    },
+    {
+        "text": "But in the post-episode call, we check if\nthe mode of the learning module is train,",
+        "start": 3119.642,
+        "duration": 6.44
+    },
+    {
+        "text": "and we have more than one observation, or\nmore than zero observations in the buffer.",
+        "start": 3126.472,
+        "duration": 3.85
+    },
+    {
+        "text": "Then we call, self.updateMemory.",
+        "start": 3131.782,
+        "duration": 1.63
+    },
+    {
+        "text": "And basically, the only difference\nbetween training and evaluation is",
+        "start": 3135.322,
+        "duration": 3.95
+    },
+    {
+        "text": "whether we call self.updateMemory\nat the end of an episode.",
+        "start": 3139.562,
+        "duration": 3.35
+    },
+    {
+        "text": "And then, if you go deep into the update\nmemory class, as I just went, out of\u2026",
+        "start": 3145.392,
+        "duration": 5.61
+    },
+    {
+        "text": "You should, at some point get\nto the place where the graph is\u2026",
+        "start": 3152.602,
+        "duration": 3.56
+    },
+    {
+        "text": "being built, yeah, somewhere here, get\ninfos for graph updates, and that then",
+        "start": 3156.732,
+        "duration": 4.2
+    },
+    {
+        "text": "calls get all locations on object.",
+        "start": 3160.932,
+        "duration": 2.33
+    },
+    {
+        "text": "And that's one of the buffer functions\nthat then, yeah, basically looks at the\u2026",
+        "start": 3164.012,
+        "duration": 6.59
+    },
+    {
+        "text": "which, IDs in the location array",
+        "start": 3171.782,
+        "duration": 3.26
+    },
+    {
+        "text": "Are actually on object, and returns those.",
+        "start": 3176.502,
+        "duration": 2.52
+    },
+    {
+        "text": "Jason Carver: Okay, so maybe\nthat also will work already,",
+        "start": 3180.512,
+        "duration": 2.92
+    },
+    {
+        "text": "it just needs to be verified.",
+        "start": 3183.432,
+        "duration": 1.3
+    },
+    {
+        "text": "Viviane Clay: It's already done.",
+        "start": 3185.782,
+        "duration": 0.084
+    },
+    {
+        "text": "Jason Carver: the filter, yeah.",
+        "start": 3185.872,
+        "duration": 1.02
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 3186.952,
+        "duration": 0.57
+    },
+    {
+        "text": "Hopefully, maybe, hopefully.",
+        "start": 3188.042,
+        "duration": 1.6
+    },
+    {
+        "text": "Jason Carver: Okay, cool.",
+        "start": 3192.702,
+        "duration": 0.75
+    },
+    {
+        "text": "So there's the feature change filter\nand, questions about what to do",
+        "start": 3197.472,
+        "duration": 6.93
+    },
+    {
+        "text": "when you go off object for that.",
+        "start": 3204.402,
+        "duration": 3.33
+    },
+    {
+        "text": "And whether you pass that in or not.",
+        "start": 3208.472,
+        "duration": 2.49
+    },
+    {
+        "text": "So the feature change filter\nis on the\u2026 sensor module side?",
+        "start": 3210.962,
+        "duration": 4.34
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 3215.592,
+        "duration": 0.65
+    },
+    {
+        "text": "Jason Carver: I guess my intuition is\nthe features changed a lot if you moved",
+        "start": 3222.222,
+        "duration": 3.77
+    },
+    {
+        "text": "off the object, but that's not based\non anything other than my intuition.",
+        "start": 3225.992,
+        "duration": 4.68
+    },
+    {
+        "text": "so do we send\u2026 do we then send the data\nif the feature\u2026 if you move off object?",
+        "start": 3231.702,
+        "duration": 4.94
+    },
+    {
+        "text": "or not.",
+        "start": 3238.162,
+        "duration": 0.69
+    },
+    {
+        "text": "And\u2026 I guess you don't have any\naccess to the model at that point.",
+        "start": 3239.592,
+        "duration": 3.13
+    },
+    {
+        "text": "This is Model 3, right?",
+        "start": 3242.882,
+        "duration": 1.39
+    },
+    {
+        "text": "Viviane Clay: Yeah, so we\ncheck the feature change in",
+        "start": 3244.822,
+        "duration": 2.76
+    },
+    {
+        "text": "the sensor module, and then if",
+        "start": 3247.582,
+        "duration": 2.34
+    },
+    {
+        "text": "There was a significant feature\nchange, we set useState to true.",
+        "start": 3251.332,
+        "duration": 4.51
+    },
+    {
+        "text": "And\u2026 I don't think we want to\nchange anything about that.",
+        "start": 3256.622,
+        "duration": 3.72
+    },
+    {
+        "text": "we still don't want to send observations\nup if there was no feature change.",
+        "start": 3261.232,
+        "duration": 4.35
+    },
+    {
+        "text": "And\u2026",
+        "start": 3266.552,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah, if there's a feature change, we\nwant to send it\u2026 let me just check if",
+        "start": 3269.552,
+        "duration": 3.87
+    },
+    {
+        "text": "we're actually looking at off-object here.",
+        "start": 3273.422,
+        "duration": 1.88
+    },
+    {
+        "text": "I think if we put it into\nthe\u2026 Delta thresholds, we",
+        "start": 3279.312,
+        "duration": 3.97
+    },
+    {
+        "text": "actually\u2026 Oh, here's a thing.",
+        "start": 3283.282,
+        "duration": 4.31
+    },
+    {
+        "text": "If we're not on the object.",
+        "start": 3289.182,
+        "duration": 2.0
+    },
+    {
+        "text": "Then it will automatically say false.",
+        "start": 3291.942,
+        "duration": 2.27
+    },
+    {
+        "text": "here.",
+        "start": 3295.032,
+        "duration": 0.69
+    },
+    {
+        "text": "Which is probably\u2026 Something\nthat needs to be changed.",
+        "start": 3297.622,
+        "duration": 4.71
+    },
+    {
+        "text": "Because\u2026 Otherwise\u2026 either you would\nhave to run all of the experiments",
+        "start": 3302.972,
+        "duration": 4.88
+    },
+    {
+        "text": "without the feature change filter.",
+        "start": 3307.852,
+        "duration": 2.67
+    },
+    {
+        "text": "Or otherwise, the feature change\nfilter will just, filter out.",
+        "start": 3311.622,
+        "duration": 3.36
+    },
+    {
+        "text": "All these observations, even if you set\nit to true in the other part of the code.",
+        "start": 3315.932,
+        "duration": 4.77
+    },
+    {
+        "text": "Jason Carver: Okay, and that's a filter\nthat's on a lot of ex\u2026 it's like a\u2026",
+        "start": 3322.912,
+        "duration": 3.36
+    },
+    {
+        "text": "it's like a default or modern filter,",
+        "start": 3326.462,
+        "duration": 2.09
+    },
+    {
+        "text": "Viviane Clay: Yeah, it's a default, yeah.",
+        "start": 3331.512,
+        "duration": 0.85
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 3332.422,
+        "duration": 0.28
+    },
+    {
+        "text": "Viviane Clay: and",
+        "start": 3335.162,
+        "duration": 0.2
+    },
+    {
+        "text": "Jason Carver: So it makes sense\nto say, oh, this is a feature\u2026",
+        "start": 3335.367,
+        "duration": 3.115
+    },
+    {
+        "text": "or to, run it through the normal\ndata pipeline if it's auth object.",
+        "start": 3338.642,
+        "duration": 4.62
+    },
+    {
+        "text": "Viviane Clay: Yeah, so one thing\nyou could do for a first kind of",
+        "start": 3343.712,
+        "duration": 3.51
+    },
+    {
+        "text": "testing is just set it to true here.",
+        "start": 3347.222,
+        "duration": 2.03
+    },
+    {
+        "text": "Jason Carver: That's the most basic\u2026",
+        "start": 3350.122,
+        "duration": 0.817
+    },
+    {
+        "text": "Viviane Clay: But then\u2026",
+        "start": 3351.232,
+        "duration": 0.61
+    },
+    {
+        "text": "Jason Carver: Great.",
+        "start": 3351.842,
+        "duration": 0.23
+    },
+    {
+        "text": "Viviane Clay: I think the\nnicer solution would be\u2026",
+        "start": 3352.302,
+        "duration": 2.23
+    },
+    {
+        "text": "To do the same thing\nwe do here, and see if\u2026",
+        "start": 3355.812,
+        "duration": 2.95
+    },
+    {
+        "text": "Jason Carver: Yeah.",
+        "start": 3358.842,
+        "duration": 0.29
+    },
+    {
+        "text": "Viviane Clay: If the last\nfeature was on object, then the",
+        "start": 3360.082,
+        "duration": 2.0
+    },
+    {
+        "text": "current one is off, return true.",
+        "start": 3362.082,
+        "duration": 2.03
+    },
+    {
+        "text": "If the\u2026 if basically if last and\ncurrent are different, then you",
+        "start": 3364.182,
+        "duration": 3.59
+    },
+    {
+        "text": "return true and otherwise false.",
+        "start": 3367.782,
+        "duration": 1.5
+    },
+    {
+        "text": "So if you're just moving an empty space\na bunch, you're not sending all of these.",
+        "start": 3369.282,
+        "duration": 4.34
+    },
+    {
+        "text": "You're really just sending when you\nmove off and when you move back on.",
+        "start": 3373.922,
+        "duration": 3.05
+    },
+    {
+        "text": "Jason Carver: Perfect.",
+        "start": 3379.662,
+        "duration": 0.54
+    },
+    {
+        "text": "Okay\u2026 And then there\nwas, Undo Last Action.",
+        "start": 3384.322,
+        "duration": 7.44
+    },
+    {
+        "text": "it was called Fix Me Undo Last\nAction in the Motor Policies.",
+        "start": 3395.693,
+        "duration": 3.84
+    },
+    {
+        "text": "to me, it looks like maybe this\nis\u2026 this doesn't need to change,",
+        "start": 3400.811,
+        "duration": 5.31
+    },
+    {
+        "text": "because I think it's saying\u2026",
+        "start": 3406.141,
+        "duration": 1.28
+    },
+    {
+        "text": "In the step we're in right now.",
+        "start": 3408.371,
+        "duration": 1.82
+    },
+    {
+        "text": "change the thing we did in the previous\nstep, which I think is what we want.",
+        "start": 3411.131,
+        "duration": 3.78
+    },
+    {
+        "text": "that's, that's fine, that's\u2026 that\nis what we want to do, right?",
+        "start": 3415.541,
+        "duration": 2.8
+    },
+    {
+        "text": "we went off before, and now we want\nto go back on object, and that's\u2026",
+        "start": 3418.761,
+        "duration": 3.99
+    },
+    {
+        "text": "that seems totally fine as a\u2026",
+        "start": 3422.951,
+        "duration": 1.73
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 3425.161,
+        "duration": 0.67
+    },
+    {
+        "text": "Yeah, and I think\u2026",
+        "start": 3427.291,
+        "duration": 1.01
+    },
+    {
+        "text": "Yeah, so I agree, I think\nwe can leave this how it is.",
+        "start": 3430.461,
+        "duration": 3.07
+    },
+    {
+        "text": "And then, yeah, that's also one of the\nreasons using the distant agent with",
+        "start": 3434.201,
+        "duration": 3.99
+    },
+    {
+        "text": "this kind of policy might be an easier\nway to debug, because this case happens",
+        "start": 3438.201,
+        "duration": 5.08
+    },
+    {
+        "text": "a lot more often, where we go, we turn\nthe camera off, too far off the object,",
+        "start": 3443.341,
+        "duration": 5.86
+    },
+    {
+        "text": "and then the next step it gets reversed.",
+        "start": 3449.211,
+        "duration": 1.98
+    },
+    {
+        "text": "Jason Carver: Okay?",
+        "start": 3452.331,
+        "duration": 0.18
+    },
+    {
+        "text": "Okay, yeah, I just\u2026 I guess I wanted\nto double check that I understood",
+        "start": 3455.541,
+        "duration": 2.81
+    },
+    {
+        "text": "that that it's not somehow\u2026",
+        "start": 3458.351,
+        "duration": 1.46
+    },
+    {
+        "text": "Doing that all within the same step.",
+        "start": 3460.491,
+        "duration": 2.02
+    },
+    {
+        "text": "Viviane Clay: Huh.",
+        "start": 3463.891,
+        "duration": 0.07
+    },
+    {
+        "text": "Yeah, no\u2026 It\u2026",
+        "start": 3465.801,
+        "duration": 3.18
+    },
+    {
+        "text": "I don't think so, I'm just\u2026\nThinking through it again.",
+        "start": 3481.221,
+        "duration": 3.72
+    },
+    {
+        "text": "we'll call this if the current\nobservation is not on the object.",
+        "start": 3485.891,
+        "duration": 4.09
+    },
+    {
+        "text": "It might be doing it in one step now.",
+        "start": 3507.391,
+        "duration": 3.64
+    },
+    {
+        "text": "No.",
+        "start": 3522.261,
+        "duration": 0.47
+    },
+    {
+        "text": "I\u2026 yeah, it should send us to\nthe learning module first, and",
+        "start": 3524.471,
+        "duration": 3.64
+    },
+    {
+        "text": "then\u2026 Under the last action.",
+        "start": 3528.111,
+        "duration": 2.51
+    },
+    {
+        "text": "But, yeah, maybe something to\nkeep in mind, to double-check.",
+        "start": 3531.661,
+        "duration": 4.87
+    },
+    {
+        "text": "Jason Carver: I'm not sure right now,",
+        "start": 3537.991,
+        "duration": 1.1
+    },
+    {
+        "text": "100%.",
+        "start": 3541.611,
+        "duration": 0.16
+    },
+    {
+        "text": "Sounds good.",
+        "start": 3541.771,
+        "duration": 0.31
+    },
+    {
+        "text": "And then the other things were I\ndidn't even really know enough to",
+        "start": 3544.511,
+        "duration": 5.02
+    },
+    {
+        "text": "know what to ask exactly, except\u2026 to,\nHelp me see and understand where the",
+        "start": 3549.531,
+        "duration": 7.55
+    },
+    {
+        "text": "evidence is applied to a hypothesis.",
+        "start": 3557.681,
+        "duration": 2.52
+    },
+    {
+        "text": "I probably could figure that out, but\nI think it would help to just, help.",
+        "start": 3561.071,
+        "duration": 4.6
+    },
+    {
+        "text": "Viviane Clay: Yeah, for sure.",
+        "start": 3566.431,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah, let me go there.",
+        "start": 3569.671,
+        "duration": 2.14
+    },
+    {
+        "text": "So if you go into Models and\nEvidence Matching, You'll",
+        "start": 3572.371,
+        "duration": 4.54
+    },
+    {
+        "text": "find the hypothesis Updater.",
+        "start": 3576.951,
+        "duration": 1.6
+    },
+    {
+        "text": "Jason Carver: Yeah, it's\nnamed in a way that\u2026 and now",
+        "start": 3580.211,
+        "duration": 2.24
+    },
+    {
+        "text": "I'm embarrassed that I asked.",
+        "start": 3582.451,
+        "duration": 1.03
+    },
+    {
+        "text": "Viviane Clay: Oh, no,\nit's, we're not there yet,",
+        "start": 3583.971,
+        "duration": 2.49
+    },
+    {
+        "text": "This is just the first\npart of how to get there.",
+        "start": 3589.231,
+        "duration": 2.48
+    },
+    {
+        "text": "So there's a function\ncalled updateHypotheses.",
+        "start": 3592.341,
+        "duration": 2.45
+    },
+    {
+        "text": "And that function\u2026",
+        "start": 3595.601,
+        "duration": 2.27
+    },
+    {
+        "text": "calls displaceHypotheses and compute\nevidence, which is a function",
+        "start": 3598.941,
+        "duration": 4.95
+    },
+    {
+        "text": "of the hypothesis displacer.",
+        "start": 3603.891,
+        "duration": 1.37
+    },
+    {
+        "text": "It's a file right above it here.",
+        "start": 3605.271,
+        "duration": 1.57
+    },
+    {
+        "text": "And if you got that function.",
+        "start": 3607.571,
+        "duration": 1.92
+    },
+    {
+        "text": "That's really the one that\ndoes all the heavy lifting.",
+        "start": 3610.881,
+        "duration": 2.58
+    },
+    {
+        "text": "And, yeah, I think we should\nprobably split it into two functions,",
+        "start": 3614.181,
+        "duration": 3.48
+    },
+    {
+        "text": "since having an AND inside of a\nfunction name is not a good sign.",
+        "start": 3617.671,
+        "duration": 4.19
+    },
+    {
+        "text": "Jason Carver: Good cue, yeah.",
+        "start": 3623.131,
+        "duration": 0.92
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 3624.381,
+        "duration": 0.33
+    },
+    {
+        "text": "But anyways, it does\nexactly those two things.",
+        "start": 3626.071,
+        "duration": 2.42
+    },
+    {
+        "text": "It takes\u2026",
+        "start": 3628.491,
+        "duration": 0.73
+    },
+    {
+        "text": "The",
+        "start": 3629.231,
+        "duration": 0.02
+    },
+    {
+        "text": "current hypotheses and rotates,\nor it takes the current,",
+        "start": 3631.781,
+        "duration": 4.33
+    },
+    {
+        "text": "amount that we moved, and the\ndirection we moved, and rotates",
+        "start": 3637.391,
+        "duration": 3.38
+    },
+    {
+        "text": "it by the pose hypotheses.",
+        "start": 3640.771,
+        "duration": 1.69
+    },
+    {
+        "text": "And then it takes the\u2026 the current\u2026",
+        "start": 3643.871,
+        "duration": 2.52
+    },
+    {
+        "text": "Hypothesis locations, and adds those\nrotated displacements to all of them.",
+        "start": 3646.991,
+        "duration": 4.31
+    },
+    {
+        "text": "And this is where we, update all the\nhypotheses in parallel, so those are,",
+        "start": 3652.141,
+        "duration": 3.515
+    },
+    {
+        "text": "like, two big matrix operations, to\nupdate all of them at the same time.",
+        "start": 3655.691,
+        "duration": 4.03
+    },
+    {
+        "text": "And so then we have an array of search\nlocations in the model's reference frame.",
+        "start": 3660.501,
+        "duration": 3.67
+    },
+    {
+        "text": "We filter them with the evidence\nupdate threshold right now for",
+        "start": 3667.151,
+        "duration": 3.81
+    },
+    {
+        "text": "computational efficiency, so we don't\u2026",
+        "start": 3671.021,
+        "duration": 1.97
+    },
+    {
+        "text": "Test all of them.",
+        "start": 3673.601,
+        "duration": 0.9
+    },
+    {
+        "text": "But, yeah, basically the next step\nis then to calculate the evidence",
+        "start": 3677.011,
+        "duration": 4.14
+    },
+    {
+        "text": "for each of these locations, and\nthat happens in this function.",
+        "start": 3681.161,
+        "duration": 2.77
+    },
+    {
+        "text": "And",
+        "start": 3684.921,
+        "duration": 0.03
+    },
+    {
+        "text": "for that, we basically\u2026 We also\nrotate the, post-dependent features",
+        "start": 3687.201,
+        "duration": 5.54
+    },
+    {
+        "text": "by the post hypotheses first.",
+        "start": 3692.761,
+        "duration": 1.85
+    },
+    {
+        "text": "And then we search for the nearest\nneighbors in the model's reference frame.",
+        "start": 3695.201,
+        "duration": 4.9
+    },
+    {
+        "text": "So that's\u2026 This is the, most\nexpensive operation in Monty.",
+        "start": 3700.711,
+        "duration": 4.88
+    },
+    {
+        "text": "I think\u2026",
+        "start": 3706.271,
+        "duration": 0.68
+    },
+    {
+        "text": "It basically takes all these search\nlocations of where we might be on the",
+        "start": 3708.031,
+        "duration": 3.52
+    },
+    {
+        "text": "object, and then for each location, it\nlooks in the object model, which points",
+        "start": 3711.551,
+        "duration": 5.15
+    },
+    {
+        "text": "in the model are nearby that location.",
+        "start": 3716.701,
+        "duration": 1.88
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 3720.281,
+        "duration": 0.64
+    },
+    {
+        "text": "Jason Carver: yeah, I think so.",
+        "start": 3722.681,
+        "duration": 0.66
+    },
+    {
+        "text": "for this off-object observation\u2026",
+        "start": 3723.921,
+        "duration": 2.72
+    },
+    {
+        "text": "that'll just be a special case, Because\nat first, I was thinking, oh, it's a",
+        "start": 3727.741,
+        "duration": 4.21
+    },
+    {
+        "text": "distant wall, Or maybe it won't be.",
+        "start": 3731.951,
+        "duration": 3.53
+    },
+    {
+        "text": "What?",
+        "start": 3736.231,
+        "duration": 0.38
+    },
+    {
+        "text": "No, it won't really be a split,\nbecause we'll still have the location.",
+        "start": 3737.661,
+        "duration": 2.72
+    },
+    {
+        "text": "So we'll\u2026 we'll still be doing\u2026\nwe'll still be searching for the\u2026",
+        "start": 3742.411,
+        "duration": 4.28
+    },
+    {
+        "text": "Viviane Clay: Yeah, so what'd be\u2026",
+        "start": 3750.751,
+        "duration": 1.097
+    },
+    {
+        "text": "Jason Carver: We're in a particular\nlocation in the hypothesis, but we're",
+        "start": 3752.041,
+        "duration": 2.61
+    },
+    {
+        "text": "looking for those previously saved\npoints that are somewhere nearby that",
+        "start": 3754.651,
+        "duration": 4.23
+    },
+    {
+        "text": "location in the hypothesis, right?",
+        "start": 3758.881,
+        "duration": 2.01
+    },
+    {
+        "text": "Viviane Clay: Yeah, so we basically.",
+        "start": 3761.321,
+        "duration": 1.35
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 3762.721,
+        "duration": 0.28
+    },
+    {
+        "text": "Viviane Clay: Here, the black dots are\nthe model, so we saved a bunch of points",
+        "start": 3763.221,
+        "duration": 3.87
+    },
+    {
+        "text": "of where this object exists in our model.",
+        "start": 3767.091,
+        "duration": 2.45
+    },
+    {
+        "text": "And then, we have a bunch of hypotheses\nin the beginning, we could be on any",
+        "start": 3770.221,
+        "duration": 3.73
+    },
+    {
+        "text": "of these locations on the object,\nin, two possible orientations.",
+        "start": 3773.951,
+        "duration": 4.22
+    },
+    {
+        "text": "And then the sensor moved, so we\napply that movement to each of those",
+        "start": 3778.901,
+        "duration": 4.24
+    },
+    {
+        "text": "gray hypotheses, so then we get a\nbunch of possible locations after the",
+        "start": 3783.171,
+        "duration": 5.22
+    },
+    {
+        "text": "movement, which are the gray dots here.",
+        "start": 3788.391,
+        "duration": 1.69
+    },
+    {
+        "text": "And then\u2026 Maybe the\nnext picture is useful,",
+        "start": 3792.591,
+        "duration": 3.14
+    },
+    {
+        "text": "This is just the example of one\nhypothesis, where we could be at",
+        "start": 3799.811,
+        "duration": 3.35
+    },
+    {
+        "text": "this location, and the cylinder might\neither be upside down or right side",
+        "start": 3803.161,
+        "duration": 3.94
+    },
+    {
+        "text": "up, the two possible orientations.",
+        "start": 3807.131,
+        "duration": 2.35
+    },
+    {
+        "text": "And then we move like that.",
+        "start": 3810.171,
+        "duration": 1.66
+    },
+    {
+        "text": "So we apply that movement in this\ndirection and in this direction, so there",
+        "start": 3812.241,
+        "duration": 3.38
+    },
+    {
+        "text": "are two possible locations we could be at.",
+        "start": 3815.621,
+        "duration": 2.07
+    },
+    {
+        "text": "And for each of these possible\u2026 they're\ncalled the search locations in the code.",
+        "start": 3818.401,
+        "duration": 4.36
+    },
+    {
+        "text": "that's what\u2026 that's what,",
+        "start": 3826.139,
+        "duration": 1.352
+    },
+    {
+        "text": "What was the output of that call\nbefore, and what we pass in here.",
+        "start": 3828.461,
+        "duration": 3.65
+    },
+    {
+        "text": "Jason Carver: And so for each\nof these locations, we basically",
+        "start": 3833.301,
+        "duration": 2.57
+    },
+    {
+        "text": "then search in a radius.",
+        "start": 3835.871,
+        "duration": 1.62
+    },
+    {
+        "text": "Viviane Clay: for the points, the nearest\npoints in that radius in the model.",
+        "start": 3838.211,
+        "duration": 4.11
+    },
+    {
+        "text": "So here we have these three points now.",
+        "start": 3842.581,
+        "duration": 2.08
+    },
+    {
+        "text": "And then for the three points in\nthat radius, we would calculate, one,",
+        "start": 3845.371,
+        "duration": 5.34
+    },
+    {
+        "text": "the physical distance between the\nsearch location and these points.",
+        "start": 3850.731,
+        "duration": 3.89
+    },
+    {
+        "text": "And the feature difference and\npose difference, so do those",
+        "start": 3855.411,
+        "duration": 3.96
+    },
+    {
+        "text": "points actually store the same\norientation, and the same color, and",
+        "start": 3859.391,
+        "duration": 3.76
+    },
+    {
+        "text": "whatever other features you have?",
+        "start": 3863.671,
+        "duration": 2.3
+    },
+    {
+        "text": "And then those get added up, and",
+        "start": 3867.261,
+        "duration": 1.98
+    },
+    {
+        "text": "the best match gets identified,\nso whichever one is closest and",
+        "start": 3871.291,
+        "duration": 3.89
+    },
+    {
+        "text": "has the best, feature match.",
+        "start": 3875.181,
+        "duration": 1.94
+    },
+    {
+        "text": "And, however close and\u2026 it\nmatches determines how much",
+        "start": 3879.541,
+        "duration": 5.74
+    },
+    {
+        "text": "evidence is being added.",
+        "start": 3885.311,
+        "duration": 1.07
+    },
+    {
+        "text": "Through this hypothesis.",
+        "start": 3886.581,
+        "duration": 1.77
+    },
+    {
+        "text": "Jason Carver: So this is a place where\nthe distance and surface sensors are",
+        "start": 3890.101,
+        "duration": 3.45
+    },
+    {
+        "text": "gonna be really different, right?",
+        "start": 3893.731,
+        "duration": 1.4
+    },
+    {
+        "text": "So the distance sensor is going to give\nus a location, really far off of our",
+        "start": 3895.141,
+        "duration": 4.147
+    },
+    {
+        "text": "model, probably, when it moves off object.",
+        "start": 3899.361,
+        "duration": 3.25
+    },
+    {
+        "text": "it'll\u2026 it'll be the location that the\u2026",
+        "start": 3905.111,
+        "duration": 3.52
+    },
+    {
+        "text": "Distance sensor gives us\nwill be, like, the horizon.",
+        "start": 3909.601,
+        "duration": 3.85
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 3913.961,
+        "duration": 0.82
+    },
+    {
+        "text": "Jason Carver: So that'll be,\nlike, very clearly\u2026 the search",
+        "start": 3916.101,
+        "duration": 2.46
+    },
+    {
+        "text": "radius will just give us nothing.",
+        "start": 3918.561,
+        "duration": 1.39
+    },
+    {
+        "text": "Viviane Clay: Exactly, yeah, it will\nbasically be, can I draw on this?",
+        "start": 3920.361,
+        "duration": 4.76
+    },
+    {
+        "text": "So yeah, if we moved off the object\nfrom here, it would be like that.",
+        "start": 3927.051,
+        "duration": 4.86
+    },
+    {
+        "text": "Oh, yellow is maybe the\nworst color to draw in.",
+        "start": 3932.951,
+        "duration": 2.31
+    },
+    {
+        "text": "It would be like this, and then\u2026",
+        "start": 3938.171,
+        "duration": 2.02
+    },
+    {
+        "text": "This would be a search location, there's\na radius around it, there's nothing in",
+        "start": 3940.971,
+        "duration": 3.99
+    },
+    {
+        "text": "the radius, so what would happen right\nnow is it gets a penalty of negative 1.",
+        "start": 3944.961,
+        "duration": 4.95
+    },
+    {
+        "text": "For the symposis.",
+        "start": 3951.711,
+        "duration": 0.99
+    },
+    {
+        "text": "Jason Carver: I don't think it will\nbe\u2026 What I'm saying is that the\u2026",
+        "start": 3955.231,
+        "duration": 2.92
+    },
+    {
+        "text": "Won't the depth be\u2026 like, the\u2026 with\na distance sensor, the depth of that",
+        "start": 3958.151,
+        "duration": 3.84
+    },
+    {
+        "text": "point will be probably far away, right?",
+        "start": 3962.171,
+        "duration": 2.63
+    },
+    {
+        "text": "So the translation won't just\nbe perpendicular to you, it'll",
+        "start": 3965.531,
+        "duration": 3.45
+    },
+    {
+        "text": "also be, like\u2026 Away from you.",
+        "start": 3968.981,
+        "duration": 2.21
+    },
+    {
+        "text": "Viviane Clay: Yeah, you mean it\nwould go, like, all the way back?",
+        "start": 3971.191,
+        "duration": 4.66
+    },
+    {
+        "text": "Jason Carver: Yeah\u2026",
+        "start": 3976.571,
+        "duration": 0.76
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 3977.911,
+        "duration": 0.45
+    },
+    {
+        "text": "Jason Carver: done soon.",
+        "start": 3978.421,
+        "duration": 0.2
+    },
+    {
+        "text": "Viviane Clay: Although,\nalso for the surface agent.",
+        "start": 3979.961,
+        "duration": 2.55
+    },
+    {
+        "text": "You might see a similar thing\u2026 if",
+        "start": 3983.221,
+        "duration": 0.89
+    },
+    {
+        "text": "the service agent",
+        "start": 3987.141,
+        "duration": 0.79
+    },
+    {
+        "text": "it has a kind of maximum depth it\ncan see, which is not very far.",
+        "start": 3990.451,
+        "duration": 3.59
+    },
+    {
+        "text": "It would just be that\nmaximum depth that it gets.",
+        "start": 3994.131,
+        "duration": 2.65
+    },
+    {
+        "text": "So yeah, it couldn't be, like, super out\nback in the distance, but it would still",
+        "start": 3996.791,
+        "duration": 4.67
+    },
+    {
+        "text": "be\u2026",
+        "start": 4003.881,
+        "duration": 0.02
+    },
+    {
+        "text": "Usually, it would still be off the\nobject, and you would still not",
+        "start": 4003.911,
+        "duration": 3.16
+    },
+    {
+        "text": "get any morphological features.",
+        "start": 4007.091,
+        "duration": 1.95
+    },
+    {
+        "text": "Jason Carver: Yeah, I guess what I'm\u2026 but\nthe location sent with the surface sensor\u2026",
+        "start": 4012.251,
+        "duration": 4.99
+    },
+    {
+        "text": "And the null morphology could be\u2026",
+        "start": 4017.891,
+        "duration": 3.2
+    },
+    {
+        "text": "right next to the surface, right?",
+        "start": 4021.751,
+        "duration": 2.27
+    },
+    {
+        "text": "You can move just off of that cylinder.",
+        "start": 4024.021,
+        "duration": 2.38
+    },
+    {
+        "text": "Viviane Clay: That's true.",
+        "start": 4028.051,
+        "duration": 0.39
+    },
+    {
+        "text": "Jason Carver: you're playing a game\nwith, is the search radius bigger?",
+        "start": 4029.051,
+        "duration": 4.62
+    },
+    {
+        "text": "Is\u2026 big enough\u2026",
+        "start": 4034.141,
+        "duration": 1.74
+    },
+    {
+        "text": "will the search radius catch",
+        "start": 4037.531,
+        "duration": 1.78
+    },
+    {
+        "text": "The edge of this object, even\nthough, it's not supposed to be",
+        "start": 4040.231,
+        "duration": 3.5
+    },
+    {
+        "text": "Even though you really are off of it.",
+        "start": 4044.751,
+        "duration": 1.62
+    },
+    {
+        "text": "Viviane Clay: yeah, that's\na\u2026 that's a good point.",
+        "start": 4047.721,
+        "duration": 1.53
+    },
+    {
+        "text": "Yeah, for the surface agent, it\nwould just be\u2026 yeah, it could be",
+        "start": 4049.251,
+        "duration": 4.2
+    },
+    {
+        "text": "a pretty small location change.",
+        "start": 4053.451,
+        "duration": 1.75
+    },
+    {
+        "text": "And then, yeah, there might still\nbe a point in the search radius.",
+        "start": 4056.221,
+        "duration": 4.16
+    },
+    {
+        "text": "Even though we're not getting\nmorphological features.",
+        "start": 4061.021,
+        "duration": 2.87
+    },
+    {
+        "text": "Jason Carver: Yeah, and we don't want\nto give it\u2026 A heavy penalty for that.",
+        "start": 4066.761,
+        "duration": 4.02
+    },
+    {
+        "text": "It looks like, oh, there should be a point\nthere, but there's not, which would nor\u2026",
+        "start": 4077.381,
+        "duration": 4.71
+    },
+    {
+        "text": "which, in these other examples, should be\nheavily penalized, but here seems like.",
+        "start": 4082.141,
+        "duration": 4.05
+    },
+    {
+        "text": "It shouldn't.",
+        "start": 4088.301,
+        "duration": 0.294
+    },
+    {
+        "text": "Viviane Clay: Yeah, that's the\u2026 what\nI think Neil's called the edge case.",
+        "start": 4088.741,
+        "duration": 3.91
+    },
+    {
+        "text": "Jason Carver: Okay, Yeah, we're\nnot sure yet how much of a",
+        "start": 4093.851,
+        "duration": 4.44
+    },
+    {
+        "text": "negative effect this will have.",
+        "start": 4098.291,
+        "duration": 1.4
+    },
+    {
+        "text": "Viviane Clay: On performance,\nbecause, yeah, like you say, you",
+        "start": 4101.621,
+        "duration": 2.79
+    },
+    {
+        "text": "wouldn't really want to penalize it\njust because the search radius is so",
+        "start": 4104.431,
+        "duration": 4.06
+    },
+    {
+        "text": "large that it still picks this up.",
+        "start": 4108.491,
+        "duration": 2.17
+    },
+    {
+        "text": "Jason Carver: The other thing, I\nguess if you want to get fancy, the",
+        "start": 4113.531,
+        "duration": 4.62
+    },
+    {
+        "text": "surface normal could tell you some\ninformation about how bad it is",
+        "start": 4118.491,
+        "duration": 5.69
+    },
+    {
+        "text": "that you're off-object,\nbut\u2026 but expect to be on it.",
+        "start": 4125.051,
+        "duration": 3.68
+    },
+    {
+        "text": "if the surface normal is pointing at\u2026",
+        "start": 4129.321,
+        "duration": 1.81
+    },
+    {
+        "text": "away from the sense\u2026 from the observation.",
+        "start": 4133.731,
+        "duration": 3.06
+    },
+    {
+        "text": "Yeah, that's actually\u2026",
+        "start": 4137.451,
+        "duration": 0.29
+    },
+    {
+        "text": "Viviane Clay: We have something\na little bit like that, and\u2026",
+        "start": 4137.971,
+        "duration": 2.59
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 4140.571,
+        "duration": 0.5
+    },
+    {
+        "text": "Viviane Clay: Been meaning to, try and\nthink about if we can improve this more.",
+        "start": 4141.231,
+        "duration": 3.23
+    },
+    {
+        "text": "But yeah, basically, when we do the search\nradius of the nearest neighbors, it's",
+        "start": 4145.221,
+        "duration": 4.78
+    },
+    {
+        "text": "usually not a perfect circle like this,\nbut instead, it's like a squashed sphere.",
+        "start": 4150.001,
+        "duration": 5.25
+    },
+    {
+        "text": "That goes\u2026",
+        "start": 4155.881,
+        "duration": 0.68
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 4156.561,
+        "duration": 0.3
+    },
+    {
+        "text": "Viviane Clay: along the sur- like,\nperpendicular to the, surface normal.",
+        "start": 4157.021,
+        "duration": 3.89
+    },
+    {
+        "text": "So if the surface normal is, this\u2026",
+        "start": 4161.341,
+        "duration": 2.32
+    },
+    {
+        "text": "Then the search radius would\nbe perpendicular to it, so",
+        "start": 4164.121,
+        "duration": 3.73
+    },
+    {
+        "text": "a sphere around the surface.",
+        "start": 4168.321,
+        "duration": 1.86
+    },
+    {
+        "text": "And\u2026",
+        "start": 4170.891,
+        "duration": 0.49
+    },
+    {
+        "text": "Jason Carver: But that's the surface\nnormal that you've sensed, right?",
+        "start": 4171.461,
+        "duration": 2.96
+    },
+    {
+        "text": "And our off object won't\nhave any surface normal.",
+        "start": 4175.071,
+        "duration": 2.67
+    },
+    {
+        "text": "We only get the surface normals\nfor the actual hypothesis, right?",
+        "start": 4177.921,
+        "duration": 4.28
+    },
+    {
+        "text": "Viviane Clay: yeah, so I guess one thing\u2026",
+        "start": 4183.141,
+        "duration": 1.9
+    },
+    {
+        "text": "One possible solution could be\u2026",
+        "start": 4187.671,
+        "duration": 2.22
+    },
+    {
+        "text": "That if there's no morphological\nfeature, so no surface normal.",
+        "start": 4191.141,
+        "duration": 4.5
+    },
+    {
+        "text": "The search radius becomes very small.",
+        "start": 4196.541,
+        "duration": 2.94
+    },
+    {
+        "text": "would that work?",
+        "start": 4202.371,
+        "duration": 0.8
+    },
+    {
+        "text": "Maybe you wouldn't.",
+        "start": 4207.621,
+        "duration": 0.89
+    },
+    {
+        "text": "Maybe that would\u2026",
+        "start": 4208.571,
+        "duration": 0.65
+    },
+    {
+        "text": "Maybe that would solve the edge\ncase, but, ruin all the other cases.",
+        "start": 4210.001,
+        "duration": 3.55
+    },
+    {
+        "text": "Once things get noisy\u2026",
+        "start": 4215.051,
+        "duration": 1.73
+    },
+    {
+        "text": "Jason Carver: Yeah, I can\nimagine it being a problem.",
+        "start": 4216.961,
+        "duration": 2.23
+    },
+    {
+        "text": "Viviane Clay: Yeah\u2026",
+        "start": 4220.411,
+        "duration": 0.76
+    },
+    {
+        "text": "Yeah, so I guess right now the\nidea would be to just see how",
+        "start": 4227.631,
+        "duration": 4.2
+    },
+    {
+        "text": "big of an effect that would have.",
+        "start": 4231.831,
+        "duration": 1.62
+    },
+    {
+        "text": "And then, if it is an issue, try and think\nabout ways we could\u2026 we could solve that.",
+        "start": 4234.151,
+        "duration": 5.0
+    },
+    {
+        "text": "But it might be more\nof a, yeah, edge case,",
+        "start": 4240.121,
+        "duration": 3.46
+    },
+    {
+        "text": "But yeah, does that kind of clarify\nwhere the evidence gets updated?",
+        "start": 4250.121,
+        "duration": 3.99
+    },
+    {
+        "text": "Jason Carver: Yeah, that was excellent.",
+        "start": 4254.111,
+        "duration": 2.28
+    },
+    {
+        "text": "Viviane Clay: Okay, yeah, I didn't\ngo further, yeah, basically just",
+        "start": 4257.001,
+        "duration": 3.24
+    },
+    {
+        "text": "the last step, once you have\nthe nodes in the search radius.",
+        "start": 4260.241,
+        "duration": 4.16
+    },
+    {
+        "text": "The next lines of the code will\ndo the, Finding the distance to",
+        "start": 4264.961,
+        "duration": 4.25
+    },
+    {
+        "text": "them, and calculating the feature\ndifference between them, and then",
+        "start": 4269.211,
+        "duration": 3.855
+    },
+    {
+        "text": "calculating the evidence from that.",
+        "start": 4273.301,
+        "duration": 1.38
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 4275.971,
+        "duration": 0.33
+    },
+    {
+        "text": "Viviane Clay: Okay.",
+        "start": 4280.281,
+        "duration": 0.29
+    },
+    {
+        "text": "And yeah, this is where\u2026",
+        "start": 4280.601,
+        "duration": 1.62
+    },
+    {
+        "text": "No points were found in the search radius.",
+        "start": 4283.761,
+        "duration": 2.65
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 4291.531,
+        "duration": 0.44
+    },
+    {
+        "text": "Cool.",
+        "start": 4297.741,
+        "duration": 0.3
+    },
+    {
+        "text": "And then\u2026",
+        "start": 4299.201,
+        "duration": 1.42
+    },
+    {
+        "text": "the\u2026 I guess the last thing was\nthat I still have kind of a vague",
+        "start": 4302.931,
+        "duration": 3.69
+    },
+    {
+        "text": "idea that we're stepping through\nthe environments, and then the\u2026",
+        "start": 4306.621,
+        "duration": 4.83
+    },
+    {
+        "text": "And then\u2026 no, Monty?",
+        "start": 4314.171,
+        "duration": 2.28
+    },
+    {
+        "text": "No, the experiment, Monty, and then the\nenvironment\u2026 this is the\u2026 There, there's",
+        "start": 4316.531,
+        "duration": 6.0
+    },
+    {
+        "text": "the, diagram that I can go look up,\nbut\u2026 but I don't\u2026 I don't feel like I\u2026",
+        "start": 4322.851,
+        "duration": 5.41
+    },
+    {
+        "text": "I wanted to be able to see in one\nplace where the whole\u2026 Flow is of\u2026",
+        "start": 4329.761,
+        "duration": 6.83
+    },
+    {
+        "text": "knowing that there's\u2026 because sometimes\nit seems like, for example, the sensor is",
+        "start": 4338.341,
+        "duration": 6.66
+    },
+    {
+        "text": "allowed to take multiple steps within a\u2026",
+        "start": 4345.001,
+        "duration": 2.63
+    },
+    {
+        "text": "within a single, step, Monty step,\nbecause I saw\u2026 I saw some code somewhere",
+        "start": 4350.721,
+        "duration": 8.11
+    },
+    {
+        "text": "where inside of the step, it, called\nthe next step inside of the sensor, and",
+        "start": 4358.831,
+        "duration": 3.76
+    },
+    {
+        "text": "so I\u2026 I was just trying to figure out,\nwhen\u2026 when is that allowed, or\u2026 or I was",
+        "start": 4362.601,
+        "duration": 6.81
+    },
+    {
+        "text": "just trying to wrap my head around the\u2026",
+        "start": 4369.431,
+        "duration": 1.47
+    },
+    {
+        "text": "The, flow, and even the ordering\nof things, is it always\u2026 so",
+        "start": 4371.851,
+        "duration": 3.3
+    },
+    {
+        "text": "it's always, policy, and then\u2026",
+        "start": 4375.151,
+        "duration": 2.18
+    },
+    {
+        "text": "Or, motor, and then sensor, and\nthen learning module within a",
+        "start": 4377.961,
+        "duration": 3.36
+    },
+    {
+        "text": "single step, or, that kind of thing.",
+        "start": 4381.321,
+        "duration": 2.04
+    },
+    {
+        "text": "Viviane Clay: Yeah, so maybe.",
+        "start": 4384.181,
+        "duration": 0.86
+    },
+    {
+        "text": "Jason Carver: sensor, and\nthen there's time motor?",
+        "start": 4385.211,
+        "duration": 2.15
+    },
+    {
+        "text": "Viviane Clay: There's\u2026 this is a\ndifferent view of this kind of class",
+        "start": 4390.351,
+        "duration": 2.86
+    },
+    {
+        "text": "diagram, which is really more about how\nthese classes are related to each other.",
+        "start": 4393.211,
+        "duration": 3.53
+    },
+    {
+        "text": "Jason Carver: Correct.",
+        "start": 4396.741,
+        "duration": 0.34
+    },
+    {
+        "text": "Viviane Clay: Flow of\ninformation through things.",
+        "start": 4397.571,
+        "duration": 1.61
+    },
+    {
+        "text": "I'll start here, maybe.",
+        "start": 4401.111,
+        "duration": 1.2
+    },
+    {
+        "text": "So we have the environment, which\nis, in this case, habitat, that",
+        "start": 4402.811,
+        "duration": 2.95
+    },
+    {
+        "text": "renders the objects, the simulator.",
+        "start": 4405.761,
+        "duration": 2.98
+    },
+    {
+        "text": "And then we have an environment\ninterface around that, which",
+        "start": 4409.271,
+        "duration": 3.18
+    },
+    {
+        "text": "basically controls the simulator.",
+        "start": 4412.451,
+        "duration": 2.54
+    },
+    {
+        "text": "there we specify things like,",
+        "start": 4416.201,
+        "duration": 2.31
+    },
+    {
+        "text": "Which object should you initialize in\nwhich episode, and what orientation",
+        "start": 4419.491,
+        "duration": 4.19
+    },
+    {
+        "text": "should it have, and delete the\nprevious object when the next",
+        "start": 4423.681,
+        "duration": 3.54
+    },
+    {
+        "text": "episode starts, kind of thing.",
+        "start": 4427.221,
+        "duration": 1.63
+    },
+    {
+        "text": "And then\u2026 That kind of also steps\nthe agent through the environment.",
+        "start": 4430.381,
+        "duration": 4.77
+    },
+    {
+        "text": "And when it gets an action from\nthe motor system, it steps the",
+        "start": 4436.151,
+        "duration": 3.66
+    },
+    {
+        "text": "environment, and it gets a new\nobservation from the environment.",
+        "start": 4439.811,
+        "duration": 3.35
+    },
+    {
+        "text": "And that observation gets\nsent to the sensor module.",
+        "start": 4443.671,
+        "duration": 2.66
+    },
+    {
+        "text": "And then the sensor module checks",
+        "start": 4447.101,
+        "duration": 2.74
+    },
+    {
+        "text": "it extracts features and poses, but it\nalso can do other things, like check if",
+        "start": 4451.081,
+        "duration": 4.19
+    },
+    {
+        "text": "there was significant feature change.",
+        "start": 4455.341,
+        "duration": 1.85
+    },
+    {
+        "text": "if there was no\nsignificant feature change.",
+        "start": 4459.581,
+        "duration": 2.59
+    },
+    {
+        "text": "for example, then it wouldn't\nbe sent to the learning module.",
+        "start": 4463.021,
+        "duration": 3.13
+    },
+    {
+        "text": "We would skip the step in the learning\nmodule and step the motor system",
+        "start": 4466.441,
+        "duration": 3.82
+    },
+    {
+        "text": "right away, send the next action.",
+        "start": 4470.261,
+        "duration": 1.49
+    },
+    {
+        "text": "Go here, but\u2026",
+        "start": 4472.911,
+        "duration": 0.77
+    },
+    {
+        "text": "If we are not looking at that, then\nusually the sensor module output",
+        "start": 4474.511,
+        "duration": 3.6
+    },
+    {
+        "text": "would go to the learning module.",
+        "start": 4478.111,
+        "duration": 0.107
+    },
+    {
+        "text": "The learning module would",
+        "start": 4478.218,
+        "duration": 0.103
+    },
+    {
+        "text": "use those features at locations to\nupdate its hypotheses, and then it might",
+        "start": 4480.871,
+        "duration": 6.56
+    },
+    {
+        "text": "output a suggested action to the motor\nsystem, and then the motor system ex\u2026",
+        "start": 4487.461,
+        "duration": 4.24
+    },
+    {
+        "text": "Translates\u2026 so the learning module\nwould output a target location in space.",
+        "start": 4492.821,
+        "duration": 4.05
+    },
+    {
+        "text": "And then the motor system would\ntranslate that into, whatever",
+        "start": 4497.551,
+        "duration": 3.4
+    },
+    {
+        "text": "the agent is capable of.",
+        "start": 4500.971,
+        "duration": 0.87
+    },
+    {
+        "text": "If it's a camera that can only tilt,\nor a touch sensor that can move along",
+        "start": 4502.571,
+        "duration": 4.05
+    },
+    {
+        "text": "the surface, it would translate that\nto the specific language of that",
+        "start": 4506.621,
+        "duration": 4.46
+    },
+    {
+        "text": "agent, and send it to the environment.",
+        "start": 4511.101,
+        "duration": 2.32
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 4515.291,
+        "duration": 0.45
+    },
+    {
+        "text": "And for, model-free movements,\nsometimes can the sensor module",
+        "start": 4516.171,
+        "duration": 4.315
+    },
+    {
+        "text": "can, do movements itself, or, send\u2026",
+        "start": 4520.721,
+        "duration": 2.85
+    },
+    {
+        "text": "Can you give one example where\nwe're skipping over to the model.",
+        "start": 4523.571,
+        "duration": 4.1
+    },
+    {
+        "text": "Viviane Clay: Yeah, so I think,",
+        "start": 4528.531,
+        "duration": 1.44
+    },
+    {
+        "text": "Let me see if I have a good diagram of\u2026\nBut\u2026 somewhere\u2026 No\u2026 yeah, maybe here.",
+        "start": 4536.311,
+        "duration": 9.33
+    },
+    {
+        "text": "This was a result of a brainstorming\nsession, so it's a bit\u2026",
+        "start": 4547.191,
+        "duration": 3.5
+    },
+    {
+        "text": "Jason Carver: Okay, yeah.",
+        "start": 4550.741,
+        "duration": 0.559
+    },
+    {
+        "text": "Viviane Clay: Yes, it's a bit\nolder, because we\u2026 then we still",
+        "start": 4551.3,
+        "duration": 2.321
+    },
+    {
+        "text": "had that data load and data set, now\nthat's the environment interface.",
+        "start": 4553.621,
+        "duration": 3.24
+    },
+    {
+        "text": "But maybe the sympathy.",
+        "start": 4557.471,
+        "duration": 1.59
+    },
+    {
+        "text": "Jason Carver: If I remember correctly.",
+        "start": 4559.071,
+        "duration": 1.45
+    },
+    {
+        "text": "Viviane Clay: Sorry?",
+        "start": 4561.841,
+        "duration": 0.45
+    },
+    {
+        "text": "Jason Carver: So thanks to\nAnna, if I remember correctly.",
+        "start": 4563.131,
+        "duration": 1.72
+    },
+    {
+        "text": "Viviane Clay: Yeah, exactly, yeah.",
+        "start": 4564.861,
+        "duration": 1.34
+    },
+    {
+        "text": "Very good.",
+        "start": 4567.481,
+        "duration": 0.37
+    },
+    {
+        "text": "So basically, we have three, action loops.",
+        "start": 4568.371,
+        "duration": 4.51
+    },
+    {
+        "text": "One is the reflex loop that goes directly\nfrom the environment to the motor system.",
+        "start": 4572.911,
+        "duration": 5.2
+    },
+    {
+        "text": "And\u2026",
+        "start": 4578.871,
+        "duration": 0.89
+    },
+    {
+        "text": "no kind of further information\nprocessing happens.",
+        "start": 4580.621,
+        "duration": 3.38
+    },
+    {
+        "text": "It's the\u2026 if you imagine a safety\nloop, where, if you touch something",
+        "start": 4584.111,
+        "duration": 3.79
+    },
+    {
+        "text": "really hot, it goes back, you don't\nneed to do any further processing.",
+        "start": 4587.901,
+        "duration": 3.13
+    },
+    {
+        "text": "But then the most interesting ones are\nthe model-free and model-based loops.",
+        "start": 4592.641,
+        "duration": 3.56
+    },
+    {
+        "text": "Model 3 is, you basically send\nthe sensor module output directly",
+        "start": 4598.121,
+        "duration": 3.43
+    },
+    {
+        "text": "to the motor system, and then the\nmotor system determines what to do.",
+        "start": 4601.551,
+        "duration": 3.27
+    },
+    {
+        "text": "And model-based, as it goes through\nthe learning module, and the learning",
+        "start": 4607.171,
+        "duration": 2.82
+    },
+    {
+        "text": "module figures out what to do next,\nand sends a goal to the motor system.",
+        "start": 4610.171,
+        "duration": 3.82
+    },
+    {
+        "text": "And just because you sent this, and\nthe motor\u2026 the next action is based on",
+        "start": 4614.791,
+        "duration": 4.81
+    },
+    {
+        "text": "sensor module information, doesn't mean\nit can't go to the learning module 2.",
+        "start": 4619.821,
+        "duration": 5.555
+    },
+    {
+        "text": "actually, most of the time, we\ndo model-free stuff, we move",
+        "start": 4626.321,
+        "duration": 3.2
+    },
+    {
+        "text": "along the direction of principal\ncurvature, or something like that.",
+        "start": 4629.531,
+        "duration": 2.95
+    },
+    {
+        "text": "along the rim of the cup and stuff\nlike that, and that only requires",
+        "start": 4634.421,
+        "duration": 4.12
+    },
+    {
+        "text": "knowing what the sensor's currently\nsensing, it doesn't need any models.",
+        "start": 4638.581,
+        "duration": 3.45
+    },
+    {
+        "text": "the motor system is basing its actions\non what the sensor module is sensing,",
+        "start": 4643.311,
+        "duration": 3.43
+    },
+    {
+        "text": "but we're still processing and updating\nhypotheses in the learning module.",
+        "start": 4647.061,
+        "duration": 3.06
+    },
+    {
+        "text": "Jason Carver: Okay.",
+        "start": 4653.281,
+        "duration": 0.23
+    },
+    {
+        "text": "Viviane Clay: Yard.",
+        "start": 4655.341,
+        "duration": 0.62
+    },
+    {
+        "text": "Jason Carver: Is, could you\u2026 yeah,\nit would, even, also, can you take",
+        "start": 4656.971,
+        "duration": 8.16
+    },
+    {
+        "text": "me to the code in Monty, where it's\u2026",
+        "start": 4665.131,
+        "duration": 2.86
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 4668.561,
+        "duration": 0.28
+    },
+    {
+        "text": "Jason Carver: House and Lucy.",
+        "start": 4668.841,
+        "duration": 0.75
+    },
+    {
+        "text": "Viviane Clay: Yeah, for sure.",
+        "start": 4670.521,
+        "duration": 0.95
+    },
+    {
+        "text": "the Monty class kind of\u2026\nHandles most of these things.",
+        "start": 4674.531,
+        "duration": 5.69
+    },
+    {
+        "text": "let's see\u2026",
+        "start": 4683.741,
+        "duration": 0.83
+    },
+    {
+        "text": "Where'd it go?",
+        "start": 4690.121,
+        "duration": 0.87
+    },
+    {
+        "text": "Jason Carver: That was interesting.",
+        "start": 4695.231,
+        "duration": 0.88
+    },
+    {
+        "text": "The step\u2026 it was like, the step is\u2026",
+        "start": 4696.121,
+        "duration": 2.02
+    },
+    {
+        "text": "there were different kinds of step.",
+        "start": 4698.881,
+        "duration": 1.46
+    },
+    {
+        "text": "That sucks.",
+        "start": 4706.541,
+        "duration": 0.14
+    },
+    {
+        "text": "Viviane Clay: Yeah\u2026",
+        "start": 4706.701,
+        "duration": 0.2
+    },
+    {
+        "text": "Yeah, I guess the most\u2026",
+        "start": 4711.761,
+        "duration": 1.69
+    },
+    {
+        "text": "High-level overview of the, order of\nthings is here in this, monthly class.",
+        "start": 4714.621,
+        "duration": 4.92
+    },
+    {
+        "text": "And basically, we\u2026",
+        "start": 4721.721,
+        "duration": 3.03
+    },
+    {
+        "text": "An unusual matching step, which is\nthe steps where we actually process",
+        "start": 4728.961,
+        "duration": 3.2
+    },
+    {
+        "text": "stuff in the learning module.",
+        "start": 4732.161,
+        "duration": 1.21
+    },
+    {
+        "text": "We would aggregate sensory input,\nso basically get the\u2026 whatever",
+        "start": 4734.221,
+        "duration": 4.99
+    },
+    {
+        "text": "Whatever raw observations we get\nfrom the environment, and then",
+        "start": 4746.141,
+        "duration": 2.95
+    },
+    {
+        "text": "pass that through the sensor",
+        "start": 4749.431,
+        "duration": 1.42
+    },
+    {
+        "text": "Modules.",
+        "start": 4751.521,
+        "duration": 0.73
+    },
+    {
+        "text": "Let me just double check if that's true.",
+        "start": 4752.251,
+        "duration": 1.62
+    },
+    {
+        "text": "Yeah,",
+        "start": 4753.881,
+        "duration": 0.02
+    },
+    {
+        "text": "so we\u2026 we basically get the\nobservation from the environment,",
+        "start": 4760.701,
+        "duration": 3.46
+    },
+    {
+        "text": "which is the RGBD camera image.",
+        "start": 4764.411,
+        "duration": 2.01
+    },
+    {
+        "text": "And then we loop over the sensor modules.",
+        "start": 4766.981,
+        "duration": 1.95
+    },
+    {
+        "text": "Get whatever observation\nis for that sensor module.",
+        "start": 4771.151,
+        "duration": 2.96
+    },
+    {
+        "text": "And, step the sensor module\nto get the processed output.",
+        "start": 4774.881,
+        "duration": 5.05
+    },
+    {
+        "text": "And then append that all into an\narray, which is then assigned to sensor",
+        "start": 4781.531,
+        "duration": 4.37
+    },
+    {
+        "text": "module outputs in the multi-class.",
+        "start": 4786.191,
+        "duration": 2.395
+    },
+    {
+        "text": "And\u2026 Interesting.",
+        "start": 4790.161,
+        "duration": 0.63
+    },
+    {
+        "text": "Jason Carver: It's also doing the\nlearning module outputs in here, too.",
+        "start": 4790.791,
+        "duration": 2.99
+    },
+    {
+        "text": "Viviane Clay: Yeah, so\nit's, if you think of\u2026",
+        "start": 4794.641,
+        "duration": 2.92
+    },
+    {
+        "text": "Monty as, a hierarchy of sensor\nmodules at the lowest level, and then",
+        "start": 4799.131,
+        "duration": 4.91
+    },
+    {
+        "text": "learning modules at all the levels.",
+        "start": 4804.041,
+        "duration": 1.59
+    },
+    {
+        "text": "It's not like to process at the\nhighest level of the hierarchy,",
+        "start": 4807.791,
+        "duration": 3.24
+    },
+    {
+        "text": "if the high-level learning module",
+        "start": 4811.031,
+        "duration": 1.98
+    },
+    {
+        "text": "It's not like the highest level learning\nmodule is only called, you have to",
+        "start": 4813.881,
+        "duration": 3.62
+    },
+    {
+        "text": "call them in succession of the level\nof hierarchy they're in, but instead,",
+        "start": 4817.931,
+        "duration": 4.34
+    },
+    {
+        "text": "all learning modules get stepped at\nthe same time, and it's just that",
+        "start": 4822.291,
+        "duration": 3.69
+    },
+    {
+        "text": "The highest level one might not get any\ninput for a couple of steps, because the\u2026",
+        "start": 4826.831,
+        "duration": 4.45
+    },
+    {
+        "text": "input needs to propagate\nthrough the hierarchy first,",
+        "start": 4831.991,
+        "duration": 2.21
+    },
+    {
+        "text": "but basically, this part here",
+        "start": 4834.201,
+        "duration": 3.46
+    },
+    {
+        "text": "Just looks at what is the current\nlearning module output from the",
+        "start": 4838.371,
+        "duration": 3.37
+    },
+    {
+        "text": "previous step, so that it can\nbecome the input for the next step.",
+        "start": 4841.741,
+        "duration": 3.59
+    },
+    {
+        "text": "And that's because in Monty, there\nisn't really a clear hierarchy.",
+        "start": 4846.301,
+        "duration": 3.25
+    },
+    {
+        "text": "You\u2026 learning module output can go to\nanother learning module's input, but it",
+        "start": 4850.831,
+        "duration": 4.89
+    },
+    {
+        "text": "could skip a level in the hierarchy, or\u2026",
+        "start": 4855.721,
+        "duration": 2.96
+    },
+    {
+        "text": "several levels in the\nhierarchy, it wouldn't mind.",
+        "start": 4858.701,
+        "duration": 2.54
+    },
+    {
+        "text": "So basically, what we do is collect\nall the outputs from the sensor",
+        "start": 4861.251,
+        "duration": 5.37
+    },
+    {
+        "text": "modules and learning modules from\nthe previous state that they were in.",
+        "start": 4866.621,
+        "duration": 3.8
+    },
+    {
+        "text": "And then put them as input.",
+        "start": 4870.991,
+        "duration": 1.67
+    },
+    {
+        "text": "To all of them at the same time, again.",
+        "start": 4873.631,
+        "duration": 1.69
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 4876.211,
+        "duration": 0.76
+    },
+    {
+        "text": "Jason Carver: Gotcha.",
+        "start": 4877.041,
+        "duration": 0.28
+    },
+    {
+        "text": "Yeah, totally.",
+        "start": 4877.921,
+        "duration": 0.9
+    },
+    {
+        "text": "Viviane Clay: Okay.",
+        "start": 4879.741,
+        "duration": 0.48
+    },
+    {
+        "text": "So yeah, like you said, we also loop up\nall the learning modules called getOutput.",
+        "start": 4881.011,
+        "duration": 5.79
+    },
+    {
+        "text": "And that depends on what\nstate they were in before.",
+        "start": 4887.371,
+        "duration": 3.01
+    },
+    {
+        "text": "At the very first step, that would\njust be nothing, or even at the first",
+        "start": 4890.831,
+        "duration": 5.39
+    },
+    {
+        "text": "I don't know, 10 or 20 steps,\nwhile the learning module doesn't",
+        "start": 4897.391,
+        "duration": 3.31
+    },
+    {
+        "text": "have a certain hypothesis yet,\nit won't produce an output.",
+        "start": 4900.891,
+        "duration": 3.09
+    },
+    {
+        "text": "And then, yeah, we have these two lists.",
+        "start": 4905.701,
+        "duration": 2.35
+    },
+    {
+        "text": "And then\u2026 Where was the\nabstract class for the overflow?",
+        "start": 4909.721,
+        "duration": 5.36
+    },
+    {
+        "text": "Then we would step the learning modules.",
+        "start": 4916.231,
+        "duration": 2.06
+    },
+    {
+        "text": "And\u2026",
+        "start": 4927.911,
+        "duration": 0.8
+    },
+    {
+        "text": "Yeah, that's a bit hard to\u2026 Yeah,",
+        "start": 4931.241,
+        "duration": 1.85
+    },
+    {
+        "text": "here.",
+        "start": 4935.541,
+        "duration": 0.27
+    },
+    {
+        "text": "So again, we loop over\nall the learning modules.",
+        "start": 4937.511,
+        "duration": 3.11
+    },
+    {
+        "text": "And we extract what inputs should\ngo to that learning module.",
+        "start": 4941.361,
+        "duration": 4.07
+    },
+    {
+        "text": "And then the important part\nis this one here, or this one.",
+        "start": 4946.211,
+        "duration": 3.7
+    },
+    {
+        "text": "We figure out which type of\nstep we want to do right now.",
+        "start": 4950.111,
+        "duration": 3.68
+    },
+    {
+        "text": "We have a matching step,\nan exploratory step.",
+        "start": 4954.081,
+        "duration": 3.3
+    },
+    {
+        "text": "And then we apply that to\u2026",
+        "start": 4958.091,
+        "duration": 1.81
+    },
+    {
+        "text": "The sensory inputs, where we do\nlearningmodule.step with, sensor inputs.",
+        "start": 4961.511,
+        "duration": 4.73
+    },
+    {
+        "text": "And then the rest is\njust, some logging stuff.",
+        "start": 4968.801,
+        "duration": 2.52
+    },
+    {
+        "text": "That's not that important.",
+        "start": 4972.081,
+        "duration": 1.24
+    },
+    {
+        "text": "And\u2026",
+        "start": 4974.501,
+        "duration": 0.6
+    },
+    {
+        "text": "yeah, so we pass the sensor stuff into\nthe learning module step, and that's",
+        "start": 4979.271,
+        "duration": 3.23
+    },
+    {
+        "text": "where all the hypothesis updates happen.",
+        "start": 4982.501,
+        "duration": 1.67
+    },
+    {
+        "text": "Where was the strict class again?",
+        "start": 4986.021,
+        "duration": 1.95
+    },
+    {
+        "text": "And then, after that, we vote.",
+        "start": 4988.801,
+        "duration": 1.7
+    },
+    {
+        "text": "after all the learning modules have\nupdated their hypotheses, we go and check",
+        "start": 4991.861,
+        "duration": 4.77
+    },
+    {
+        "text": "them all again, see, hey, what's your\ncurrent vote on what you're sensing?",
+        "start": 4996.631,
+        "duration": 5.11
+    },
+    {
+        "text": "And update them based on that.",
+        "start": 5004.101,
+        "duration": 3.67
+    },
+    {
+        "text": "And then we pass the goals, so then we\ngo back to all the learning modules and",
+        "start": 5008.991,
+        "duration": 3.59
+    },
+    {
+        "text": "say, hey, where do you want to move next?",
+        "start": 5012.581,
+        "duration": 2.58
+    },
+    {
+        "text": "And then\u2026 Each landing module\nproduces a target location in space.",
+        "start": 5016.351,
+        "duration": 4.08
+    },
+    {
+        "text": "Sensor modules can also do that.",
+        "start": 5021.231,
+        "duration": 1.7
+    },
+    {
+        "text": "And then we pass that to the motor\nsystem, and the motor system basically",
+        "start": 5023.861,
+        "duration": 3.46
+    },
+    {
+        "text": "resolves, okay, which one am I\ngonna execute, where am I gonna go?",
+        "start": 5027.321,
+        "duration": 3.18
+    },
+    {
+        "text": "And then outputs an\naction to the environment.",
+        "start": 5032.211,
+        "duration": 3.18
+    },
+    {
+        "text": "And yeah, this is just to check whether\nan episode should be done or not, if",
+        "start": 5037.371,
+        "duration": 4.97
+    },
+    {
+        "text": "Monty is confident in what it's sensing.",
+        "start": 5042.341,
+        "duration": 2.0
+    },
+    {
+        "text": "Jason Carver: yeah, this is great.",
+        "start": 5048.471,
+        "duration": 0.68
+    },
+    {
+        "text": "That's super helpful.",
+        "start": 5049.951,
+        "duration": 0.38
+    },
+    {
+        "text": "and then exploratory versus matching\u2026 is\u2026",
+        "start": 5051.221,
+        "duration": 4.64
+    },
+    {
+        "text": "We don't\u2026 we don't have to\u2026 I\ndon't need to step through the",
+        "start": 5056.591,
+        "duration": 2.28
+    },
+    {
+        "text": "exploratory, but just to understand\nthe difference at the high level.",
+        "start": 5058.871,
+        "duration": 2.59
+    },
+    {
+        "text": "Viviane Clay: Yeah, it's really not\nthat important, it's basically\u2026 we're",
+        "start": 5061.571,
+        "duration": 3.82
+    },
+    {
+        "text": "basically doing it to save compute.",
+        "start": 5065.391,
+        "duration": 1.81
+    },
+    {
+        "text": "essentially, after Monty\nhas recognized an object.",
+        "start": 5069.091,
+        "duration": 3.03
+    },
+    {
+        "text": "it wants to learn more about it.",
+        "start": 5073.461,
+        "duration": 2.47
+    },
+    {
+        "text": "if Monty is in training phase, so\nit actually is supposed to update",
+        "start": 5076.891,
+        "duration": 3.11
+    },
+    {
+        "text": "its models, it might recognize the\nmug after just moving a little bit.",
+        "start": 5080.001,
+        "duration": 4.44
+    },
+    {
+        "text": "It says, oh yeah, that's\nthe Thousand Brains mug.",
+        "start": 5084.451,
+        "duration": 2.8
+    },
+    {
+        "text": "let me update my model with\nsome new points that I just saw.",
+        "start": 5089.251,
+        "duration": 2.72
+    },
+    {
+        "text": "But since these new points were,\nlike, they were used to recognize it,",
+        "start": 5092.311,
+        "duration": 3.55
+    },
+    {
+        "text": "they're not gonna add a lot of extra\nnew information about the object, and",
+        "start": 5096.411,
+        "duration": 3.34
+    },
+    {
+        "text": "there are very few points, so it's\u2026 it\nwould be quite slow to learn that way.",
+        "start": 5099.751,
+        "duration": 3.42
+    },
+    {
+        "text": "So what we do is, after it's recognized,\nwe explore it a bit more, and\u2026",
+        "start": 5103.541,
+        "duration": 3.9
+    },
+    {
+        "text": "eventually, one of our goals is to\nhave some better exploratory policies,",
+        "start": 5108.751,
+        "duration": 3.57
+    },
+    {
+        "text": "that basically look at, okay,\nwhere is my model underrepresented?",
+        "start": 5112.851,
+        "duration": 3.55
+    },
+    {
+        "text": "Where do I have highest uncertainty?",
+        "start": 5116.781,
+        "duration": 1.53
+    },
+    {
+        "text": "So let's go there and learn a bit\nmore about this part of the mug.",
+        "start": 5118.351,
+        "duration": 2.76
+    },
+    {
+        "text": "We don't do that right now, we just\nmove randomly some more, collect more",
+        "start": 5121.911,
+        "duration": 3.32
+    },
+    {
+        "text": "points, and since we're just exploring,\nwe already recognize the object.",
+        "start": 5125.231,
+        "duration": 4.27
+    },
+    {
+        "text": "We don't really want to, spend\nevery step updating hypotheses",
+        "start": 5130.161,
+        "duration": 3.43
+    },
+    {
+        "text": "again, so that\u2026 we just clamp that\npart of the code to not update",
+        "start": 5134.111,
+        "duration": 5.2
+    },
+    {
+        "text": "hypotheses.",
+        "start": 5141.581,
+        "duration": 0.01
+    },
+    {
+        "text": "Eventually, We might wanna\u2026",
+        "start": 5141.591,
+        "duration": 2.84
+    },
+    {
+        "text": "keep doing that, because if we're in\nan environment with many objects, we",
+        "start": 5145.021,
+        "duration": 3.86
+    },
+    {
+        "text": "might move on to a different object,\nand we want to recognize that again, so",
+        "start": 5148.881,
+        "duration": 3.66
+    },
+    {
+        "text": "it might just be some kind of useful\u2026",
+        "start": 5152.881,
+        "duration": 2.12
+    },
+    {
+        "text": "thing we're using for the\ncurrent setup to save some time,",
+        "start": 5156.171,
+        "duration": 3.07
+    },
+    {
+        "text": "but\u2026 Conceptually, it's not\u2026",
+        "start": 5159.351,
+        "duration": 2.47
+    },
+    {
+        "text": "not that important.",
+        "start": 5163.401,
+        "duration": 0.92
+    },
+    {
+        "text": "It's not really an important\nconceptual feature of Monty, it's",
+        "start": 5164.441,
+        "duration": 3.05
+    },
+    {
+        "text": "more of a, let me run my experiments\na bit faster, kind of thing.",
+        "start": 5167.491,
+        "duration": 3.46
+    },
+    {
+        "text": "Jason Carver: Great.",
+        "start": 5172.731,
+        "duration": 0.23
+    },
+    {
+        "text": "Cool.",
+        "start": 5174.801,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah, this is all super\nhelpful, and\u2026 Yeah, I think\u2026",
+        "start": 5176.161,
+        "duration": 6.99
+    },
+    {
+        "text": "I think that's, covers my list",
+        "start": 5184.281,
+        "duration": 4.04
+    },
+    {
+        "text": "of, questions for now.",
+        "start": 5190.531,
+        "duration": 1.85
+    },
+    {
+        "text": "Yeah, like I said, thank you so much.",
+        "start": 5195.281,
+        "duration": 2.11
+    },
+    {
+        "text": "Really, valuable.",
+        "start": 5199.451,
+        "duration": 0.5
+    },
+    {
+        "text": "Viviane Clay: Yeah, for sure.",
+        "start": 5200.601,
+        "duration": 1.04
+    },
+    {
+        "text": "Yeah, thank you.",
+        "start": 5201.651,
+        "duration": 0.68
+    },
+    {
+        "text": "this is, it's a pretty steep\nlearning curve, I know.",
+        "start": 5202.861,
+        "duration": 3.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 5208.651,
+        "duration": 0.27
+    },
+    {
+        "text": "Definitely.",
+        "start": 5209.151,
+        "duration": 0.37
+    },
+    {
+        "text": "Cool that you're\u2026 you're up\nfor it, and diving deep in\u2026",
+        "start": 5210.291,
+        "duration": 4.41
+    },
+    {
+        "text": "Jason Carver: I liked it when you said,\nyou're, like, you wrote this down a few",
+        "start": 5214.701,
+        "duration": 3.11
+    },
+    {
+        "text": "years ago, oh yeah, this will be just,\na quick, to-do item to take care of",
+        "start": 5217.811,
+        "duration": 4.92
+    },
+    {
+        "text": "later, and then the more you look into\nit, oh, this\u2026 this'll take a little bit.",
+        "start": 5222.731,
+        "duration": 3.39
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 5226.701,
+        "duration": 0.35
+    },
+    {
+        "text": "Jason Carver: A little bit of thought.",
+        "start": 5227.331,
+        "duration": 0.96
+    },
+    {
+        "text": "Viviane Clay: And, yeah.",
+        "start": 5228.291,
+        "duration": 0.91
+    },
+    {
+        "text": "Yeah, it's probably one of the\nhardest items you could have picked.",
+        "start": 5229.861,
+        "duration": 3.07
+    },
+    {
+        "text": "One of the, I don't know, maybe not.",
+        "start": 5233.161,
+        "duration": 3.19
+    },
+    {
+        "text": "Maybe it turns out it just works,\nbut it feels like we came back to it",
+        "start": 5236.401,
+        "duration": 4.49
+    },
+    {
+        "text": "many times, it was always\u2026 we always\nconfused ourselves again, and then",
+        "start": 5240.891,
+        "duration": 4.13
+    },
+    {
+        "text": "decided, okay, let's hold off for now.",
+        "start": 5245.021,
+        "duration": 2.07
+    },
+    {
+        "text": "But, it would be really\ncool to have that, finally.",
+        "start": 5247.701,
+        "duration": 3.82
+    },
+    {
+        "text": "In the code,",
+        "start": 5251.801,
+        "duration": 2.11
+    },
+    {
+        "text": "Jason Carver: Yeah.",
+        "start": 5254.541,
+        "duration": 0.31
+    },
+    {
+        "text": "Yeah, I didn't even know I was jumping\nin the deep end, but here I am.",
+        "start": 5255.511,
+        "duration": 3.69
+    },
+    {
+        "text": "Viviane Clay: Yeah.",
+        "start": 5259.701,
+        "duration": 0.49
+    },
+    {
+        "text": "So yeah, definitely, feel free to write\nanytime you run into questions, and",
+        "start": 5261.361,
+        "duration": 5.39
+    },
+    {
+        "text": "we can also schedule a next meeting.",
+        "start": 5266.751,
+        "duration": 1.83
+    },
+    {
+        "text": "Maybe after the holidays, because,",
+        "start": 5270.071,
+        "duration": 1.6
+    },
+    {
+        "text": "Yeah, I'm taking some time off, too.",
+        "start": 5272.641,
+        "duration": 2.03
+    },
+    {
+        "text": "But, yeah, really cool that you're\u2026\nyou're up for this challenge.",
+        "start": 5276.011,
+        "duration": 4.36
+    }
+]

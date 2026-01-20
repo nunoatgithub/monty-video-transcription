@@ -1,0 +1,5672 @@
+[
+    {
+        "text": "Ramy Mounir: Yeah, so this is going to\nbe more of a high-level presentation,",
+        "start": 8.472,
+        "duration": 3.43
+    },
+    {
+        "text": "but I'm also going to go into details\nabout some of the, Tricks, just, the",
+        "start": 11.902,
+        "duration": 7.41
+    },
+    {
+        "text": "tricky parts, and how to come up,\nput together these visualizations",
+        "start": 19.312,
+        "duration": 4.09
+    },
+    {
+        "text": "together, and, use the widgets, and\u2026",
+        "start": 23.402,
+        "duration": 2.23
+    },
+    {
+        "text": "The widget updaters and all of that stuff.",
+        "start": 26.992,
+        "duration": 1.76
+    },
+    {
+        "text": "it will go into the PubSub, and\u2026",
+        "start": 29.762,
+        "duration": 3.77
+    },
+    {
+        "text": "Also, accessing data\nand all of that stuff.",
+        "start": 34.442,
+        "duration": 1.83
+    },
+    {
+        "text": "you've all seen some of these interactive\nvisualizations, how, basically using",
+        "start": 38.632,
+        "duration": 4.41
+    },
+    {
+        "text": "an episode, or using some widgets,\nyou're able to control other widgets.",
+        "start": 43.072,
+        "duration": 4.62
+    },
+    {
+        "text": "Some of these are\ninteractive, some of them",
+        "start": 48.982,
+        "duration": 1.86
+    },
+    {
+        "text": "control others and others, and some\nof them also only depend on others,",
+        "start": 51.732,
+        "duration": 4.05
+    },
+    {
+        "text": "and they don't control other widgets.",
+        "start": 55.812,
+        "duration": 1.68
+    },
+    {
+        "text": "So there's a\u2026 there's definitely\nsome communication going",
+        "start": 57.912,
+        "duration": 3.66
+    },
+    {
+        "text": "on between these widgets.",
+        "start": 61.572,
+        "duration": 1.11
+    },
+    {
+        "text": "And in the past, I've\u2026 I've\u2026",
+        "start": 64.392,
+        "duration": 2.32
+    },
+    {
+        "text": "when I started building these\nvisualizations, I had all of those",
+        "start": 67.472,
+        "duration": 4.37
+    },
+    {
+        "text": "especially the ones that depend on each\nother, or send messages to each other,",
+        "start": 72.592,
+        "duration": 3.79
+    },
+    {
+        "text": "they needed to be in the same class.",
+        "start": 76.422,
+        "duration": 2.02
+    },
+    {
+        "text": "Or at least they needed to\nhave some reference to be",
+        "start": 79.362,
+        "duration": 2.21
+    },
+    {
+        "text": "able to, talk to each other.",
+        "start": 81.572,
+        "duration": 2.59
+    },
+    {
+        "text": "for example.",
+        "start": 85.172,
+        "duration": 0.79
+    },
+    {
+        "text": "this is a subset of, the kind\nof messages that need to be",
+        "start": 86.982,
+        "duration": 3.05
+    },
+    {
+        "text": "sent, or, the dependency graph.",
+        "start": 90.032,
+        "duration": 1.8
+    },
+    {
+        "text": "Basically, the episode is going\nto control a lot of widgets.",
+        "start": 92.192,
+        "duration": 4.26
+    },
+    {
+        "text": "For example, the episode here controls\nthis ground truth mesh visualizer, it",
+        "start": 96.472,
+        "duration": 4.78
+    },
+    {
+        "text": "controls this figure, it controls the\u2026",
+        "start": 101.292,
+        "duration": 3.69
+    },
+    {
+        "text": "info widgets here, and a lot of others.",
+        "start": 105.392,
+        "duration": 3.76
+    },
+    {
+        "text": "what ends up happening is that\nyou end up creating a huge class",
+        "start": 110.342,
+        "duration": 4.94
+    },
+    {
+        "text": "with a lot of these widgets.",
+        "start": 115.312,
+        "duration": 1.32
+    },
+    {
+        "text": "Very tightly coupled, and if you want\nto extract some of this functionality",
+        "start": 117.622,
+        "duration": 4.52
+    },
+    {
+        "text": "and move it to another plot, it's\u2026\nit becomes, very difficult to do",
+        "start": 122.142,
+        "duration": 4.56
+    },
+    {
+        "text": "so.",
+        "start": 128.852,
+        "duration": 0.19
+    },
+    {
+        "text": "the idea here, with\nintroducing PubSub is that",
+        "start": 129.042,
+        "duration": 3.3
+    },
+    {
+        "text": "we can actually decouple\nall of those dependencies.",
+        "start": 133.362,
+        "duration": 4.36
+    },
+    {
+        "text": "So when the episode changes,\nwe don't define what happens",
+        "start": 137.732,
+        "duration": 4.15
+    },
+    {
+        "text": "when the episode changes.",
+        "start": 141.882,
+        "duration": 0.94
+    },
+    {
+        "text": "Instead, we just say, okay, the\nepisode's just going to publish",
+        "start": 142.842,
+        "duration": 2.94
+    },
+    {
+        "text": "a message on the topic episode number.",
+        "start": 146.322,
+        "duration": 2.03
+    },
+    {
+        "text": "And then any other widget can subscribe to\nthat topic, and say\u2026 and see, for example,",
+        "start": 148.722,
+        "duration": 4.77
+    },
+    {
+        "text": "that the episode has changed, and do stuff",
+        "start": 153.532,
+        "duration": 3.59
+    },
+    {
+        "text": "In their own class.",
+        "start": 158.252,
+        "duration": 1.26
+    },
+    {
+        "text": "we can now decouple all of",
+        "start": 160.232,
+        "duration": 1.66
+    },
+    {
+        "text": "that, communication.",
+        "start": 164.062,
+        "duration": 0.77
+    },
+    {
+        "text": "So again, here, with direct\ncommunication, basically.",
+        "start": 166.362,
+        "duration": 2.42
+    },
+    {
+        "text": "an episode directly\ncontrols other widgets.",
+        "start": 169.752,
+        "duration": 2.92
+    },
+    {
+        "text": "If you have widget 1 maybe as\nan episode slider, it directly",
+        "start": 173.482,
+        "duration": 2.99
+    },
+    {
+        "text": "controls some of these.",
+        "start": 176.472,
+        "duration": 1.15
+    },
+    {
+        "text": "if you want to add a new widget that\ndepends on widget 1, you'd have to",
+        "start": 178.712,
+        "duration": 4.9
+    },
+    {
+        "text": "go into the callback function of",
+        "start": 183.612,
+        "duration": 2.34
+    },
+    {
+        "text": "when the episode changes in widget\n1, and modify it so that it talks",
+        "start": 186.352,
+        "duration": 4.76
+    },
+    {
+        "text": "to Widget 5, or something like that.",
+        "start": 191.112,
+        "duration": 1.96
+    },
+    {
+        "text": "And this just makes it very difficult\nto add or remove any new widget,",
+        "start": 193.512,
+        "duration": 5.57
+    },
+    {
+        "text": "but also to extract functionality\nand reuse it somewhere else.",
+        "start": 200.062,
+        "duration": 2.97
+    },
+    {
+        "text": "That's what PubSub models give us.",
+        "start": 204.892,
+        "duration": 2.07
+    },
+    {
+        "text": "So basically, you can think\nof these as, the topics in the",
+        "start": 206.972,
+        "duration": 5.38
+    },
+    {
+        "text": "middle here as like a broker.",
+        "start": 212.352,
+        "duration": 1.53
+    },
+    {
+        "text": "It's\u2026 so you basically\u2026 the publisher,\nit only publishes\u2026 it only knows that",
+        "start": 214.792,
+        "duration": 5.63
+    },
+    {
+        "text": "its topic name is episode number,\nand it publishes it on the\u2026 on the\u2026",
+        "start": 220.602,
+        "duration": 4.05
+    },
+    {
+        "text": "event bus, or the broker, basically.",
+        "start": 225.142,
+        "duration": 2.33
+    },
+    {
+        "text": "And if you have any subscribers\nto that topic, the message",
+        "start": 227.962,
+        "duration": 3.08
+    },
+    {
+        "text": "will get relayed to them.",
+        "start": 231.042,
+        "duration": 0.98
+    },
+    {
+        "text": "If you don't have, then the\nmessage will be lost, basically.",
+        "start": 232.072,
+        "duration": 3.43
+    },
+    {
+        "text": "So that's the idea.",
+        "start": 236.712,
+        "duration": 0.79
+    },
+    {
+        "text": "So you can basically very easily add\na new subscriber and say, okay, I want",
+        "start": 237.512,
+        "duration": 5.03
+    },
+    {
+        "text": "this subscriber to depend on topic 2,\nor I want it to depend on topic 1 and",
+        "start": 242.542,
+        "duration": 4.5
+    },
+    {
+        "text": "2, and it just listens to those topics.",
+        "start": 247.042,
+        "duration": 1.87
+    },
+    {
+        "text": "And then you can take that subscriber and\nmove it to another plot, and as long as",
+        "start": 249.402,
+        "duration": 3.38
+    },
+    {
+        "text": "Someone is publishing those messages,\nthen it should be able to work fine.",
+        "start": 253.592,
+        "duration": 4.44
+    },
+    {
+        "text": "And these are all split into\ndifferent classes, so you could",
+        "start": 258.982,
+        "duration": 3.13
+    },
+    {
+        "text": "just copy that whole class, move it\nsomewhere else, and it will work.",
+        "start": 262.112,
+        "duration": 2.7
+    },
+    {
+        "text": "I'll show an example of this at the end.",
+        "start": 265.242,
+        "duration": 1.73
+    },
+    {
+        "text": "Niels Leadholm: Yeah, and maybe you'll\ncover this in a bit, but in terms of,",
+        "start": 267.862,
+        "duration": 2.41
+    },
+    {
+        "text": "the one-to-many Publisher to topic.",
+        "start": 270.472,
+        "duration": 3.11
+    },
+    {
+        "text": "arrows, so is that\u2026",
+        "start": 275.692,
+        "duration": 1.11
+    },
+    {
+        "text": "how complex can a topic be?",
+        "start": 279.332,
+        "duration": 1.66
+    },
+    {
+        "text": "Because naively, I would imagine\na topic is just one variable.",
+        "start": 281.002,
+        "duration": 4.24
+    },
+    {
+        "text": "And it's just passing\nit into this kind of\u2026",
+        "start": 286.432,
+        "duration": 2.34
+    },
+    {
+        "text": "Yeah, almost like a global namespace, but\u2026",
+        "start": 289.752,
+        "duration": 1.94
+    },
+    {
+        "text": "Ramy Mounir: You could publish\nmultiple things if you want,",
+        "start": 293.352,
+        "duration": 2.33
+    },
+    {
+        "text": "it's\u2026 usually what I've used it\nfor is just publishing one, on",
+        "start": 297.822,
+        "duration": 4.4
+    },
+    {
+        "text": "one topic, just to say, basically\nthe state of this widget is this.",
+        "start": 302.222,
+        "duration": 3.78
+    },
+    {
+        "text": "But you could\u2026 you could publish\nmultiple things on different topics.",
+        "start": 306.462,
+        "duration": 3.6
+    },
+    {
+        "text": "It depends on how you want\nthe, resolution or the\u2026 this\u2026",
+        "start": 310.212,
+        "duration": 4.04
+    },
+    {
+        "text": "for example, you could\npublish The, a hypothesis?",
+        "start": 315.462,
+        "duration": 6.21
+    },
+    {
+        "text": "on one topic, and just say this\nis the hypothesis, or you could",
+        "start": 322.402,
+        "duration": 2.95
+    },
+    {
+        "text": "publish it on multiple topics\nand say this is the hypothesis",
+        "start": 325.632,
+        "duration": 2.17
+    },
+    {
+        "text": "location, and this is the rotation.",
+        "start": 327.802,
+        "duration": 1.43
+    },
+    {
+        "text": "So that, if you have this\ngranularity, then you can have",
+        "start": 329.802,
+        "duration": 4.16
+    },
+    {
+        "text": "multiple widgets only using",
+        "start": 333.972,
+        "duration": 1.51
+    },
+    {
+        "text": "this part, only listening to\none topic and not the other.",
+        "start": 335.882,
+        "duration": 4.03
+    },
+    {
+        "text": "So it depends, really, on the\ngranularity that you want to have.",
+        "start": 341.392,
+        "duration": 2.29
+    },
+    {
+        "text": "Niels Leadholm: And I guess you could\nalso have, two publisher widgets that",
+        "start": 344.812,
+        "duration": 4.33
+    },
+    {
+        "text": "affect a particular topic in\nthe same\u2026 in different ways.",
+        "start": 350.192,
+        "duration": 2.54
+    },
+    {
+        "text": "I guess if the topic is, step number.",
+        "start": 353.372,
+        "duration": 2.16
+    },
+    {
+        "text": "then changing the step\nslider changes that.",
+        "start": 356.272,
+        "duration": 3.32
+    },
+    {
+        "text": "But also, if you change the episode,\npresumably that tends to change the",
+        "start": 360.132,
+        "duration": 3.89
+    },
+    {
+        "text": "step to zero, or something like that.",
+        "start": 364.022,
+        "duration": 2.02
+    },
+    {
+        "text": "Ramy Mounir: Yeah.",
+        "start": 366.362,
+        "duration": 0.45
+    },
+    {
+        "text": "So the way I do it is that I make the\nepisode change the step, and then the",
+        "start": 367.612,
+        "duration": 3.77
+    },
+    {
+        "text": "step publishes a step number again.",
+        "start": 371.382,
+        "duration": 1.61
+    },
+    {
+        "text": "it goes into this loop, but",
+        "start": 374.082,
+        "duration": 2.19
+    },
+    {
+        "text": ".\n Niels Leadholm: Oh, okay, so\nit\u2026 okay, because that does",
+        "start": 376.492,
+        "duration": 3.0
+    },
+    {
+        "text": "seem maybe a bit cleaner.",
+        "start": 379.492,
+        "duration": 1.03
+    },
+    {
+        "text": "So then it's\u2026 it's a published topic.",
+        "start": 380.522,
+        "duration": 2.72
+    },
+    {
+        "text": "subscriber, and then it has its\nown publish to change the step.",
+        "start": 384.162,
+        "duration": 3.85
+    },
+    {
+        "text": "So then it wouldn't really be\ntwo arrows like this, it would",
+        "start": 388.392,
+        "duration": 2.68
+    },
+    {
+        "text": "be, like you say, like a loop.",
+        "start": 391.082,
+        "duration": 1.29
+    },
+    {
+        "text": "Ramy Mounir: Yeah, The problem with\nthat is that it\u2026 it can sometimes\u2026",
+        "start": 393.512,
+        "duration": 4.18
+    },
+    {
+        "text": "because it's a loop, so the\u2026",
+        "start": 398.212,
+        "duration": 1.6
+    },
+    {
+        "text": "Yeah, it takes more time to get to the\nequilibrium, basically, because the\u2026 once",
+        "start": 401.912,
+        "duration": 4.27
+    },
+    {
+        "text": "you\u2026 if the publisher sends to the step\nnumber, and then the step number changes",
+        "start": 406.182,
+        "duration": 4.09
+    },
+    {
+        "text": "and publishes, that takes two steps.",
+        "start": 410.272,
+        "duration": 1.37
+    },
+    {
+        "text": "It's like message passing in graphs.",
+        "start": 411.642,
+        "duration": 1.52
+    },
+    {
+        "text": "Niels Leadholm: Yeah, okay.",
+        "start": 413.622,
+        "duration": 0.68
+    },
+    {
+        "text": "Okay, interesting.",
+        "start": 416.492,
+        "duration": 0.64
+    },
+    {
+        "text": "So is there almost, an upper bound\non the number of message passes?",
+        "start": 417.682,
+        "duration": 2.82
+    },
+    {
+        "text": "That are allowed before.",
+        "start": 421.112,
+        "duration": 1.13
+    },
+    {
+        "text": "Ramy Mounir: I don't have that,\nbut it's just\u2026 sometimes you'll",
+        "start": 423.362,
+        "duration": 2.22
+    },
+    {
+        "text": "see a lot of things changing, and\nthey'll just reach as equilibrium.",
+        "start": 425.582,
+        "duration": 2.64
+    },
+    {
+        "text": "That's when I know that, but we can have\ndebouncing to get rid of this as well.",
+        "start": 428.222,
+        "duration": 6.02
+    },
+    {
+        "text": "I've been thinking about it, but\nit's not really an issue so far.",
+        "start": 434.322,
+        "duration": 3.11
+    },
+    {
+        "text": "Niels Leadholm: Yet.",
+        "start": 437.822,
+        "duration": 0.38
+    },
+    {
+        "text": "No, that's interesting.",
+        "start": 439.082,
+        "duration": 0.51
+    },
+    {
+        "text": "Ramy Mounir: but there are actually\nsome, I can have multiple publishers",
+        "start": 441.342,
+        "duration": 4.06
+    },
+    {
+        "text": "or multiple widgets publishing the\nsame topic, just like here, for",
+        "start": 445.402,
+        "duration": 3.85
+    },
+    {
+        "text": "example, in here, I have these,",
+        "start": 449.252,
+        "duration": 2.46
+    },
+    {
+        "text": "the primary target, and then these arrows.",
+        "start": 452.892,
+        "duration": 2.26
+    },
+    {
+        "text": "These are 3 different widgets, these\nare 3 different buttons, but they're",
+        "start": 455.182,
+        "duration": 3.22
+    },
+    {
+        "text": "really changing something, that topic\ncalled current objects, which is, which",
+        "start": 458.442,
+        "duration": 4.36
+    },
+    {
+        "text": "hypothesis space are we looking at?",
+        "start": 462.802,
+        "duration": 1.46
+    },
+    {
+        "text": "Because you could be at an episode and\na step, but you want to change which",
+        "start": 465.292,
+        "duration": 5.88
+    },
+    {
+        "text": "hypothesis space you're inspecting.",
+        "start": 471.172,
+        "duration": 1.5
+    },
+    {
+        "text": "It could be you want the mug, or\nyou could want something else.",
+        "start": 472.712,
+        "duration": 2.67
+    },
+    {
+        "text": "the primary target always resets\nback to the\u2026 to the primary",
+        "start": 476.802,
+        "duration": 3.99
+    },
+    {
+        "text": "target of the\u2026 of this episode.",
+        "start": 480.792,
+        "duration": 1.76
+    },
+    {
+        "text": "And these can move, right and\nleft, so they cycle through the",
+        "start": 483.012,
+        "duration": 4.7
+    },
+    {
+        "text": "objects, the hypothesis spaces.",
+        "start": 488.032,
+        "duration": 1.84
+    },
+    {
+        "text": "So they all can publish to the\nsame, current object topic, so",
+        "start": 490.282,
+        "duration": 5.88
+    },
+    {
+        "text": "that is sometimes useful, right?",
+        "start": 496.682,
+        "duration": 1.8
+    },
+    {
+        "text": "But anyway, so we have these,",
+        "start": 502.082,
+        "duration": 2.32
+    },
+    {
+        "text": "So we can look at this here as\njust a collection of widgets, and",
+        "start": 504.712,
+        "duration": 5.74
+    },
+    {
+        "text": "these widgets, like I said, they're\nindependent, they only talk to each",
+        "start": 510.462,
+        "duration": 3.14
+    },
+    {
+        "text": "other only through the PubSub topics.",
+        "start": 513.602,
+        "duration": 2.62
+    },
+    {
+        "text": "So you can move them, take them\ninto a different plot, and\u2026",
+        "start": 517.002,
+        "duration": 3.28
+    },
+    {
+        "text": "re\u2026 reuse the functionality.",
+        "start": 521.502,
+        "duration": 1.54
+    },
+    {
+        "text": "So let's go through some examples\nbefore we go into the actual code.",
+        "start": 525.332,
+        "duration": 4.29
+    },
+    {
+        "text": "if we just look at the\nepisode, slider can\u2026",
+        "start": 530.562,
+        "duration": 3.86
+    },
+    {
+        "text": "in this case, we only wanted to\noutput an episode number, right?",
+        "start": 535.032,
+        "duration": 3.97
+    },
+    {
+        "text": "the way that I've defined this\nin code is using something",
+        "start": 540.582,
+        "duration": 2.58
+    },
+    {
+        "text": "called a state to messages.",
+        "start": 543.162,
+        "duration": 1.16
+    },
+    {
+        "text": "the widget class is going to call\nthese function names that I've defined.",
+        "start": 545.672,
+        "duration": 5.55
+    },
+    {
+        "text": "So this is the pattern that I'm using, but\nI'll go through that later, but the only",
+        "start": 551.562,
+        "duration": 4.08
+    },
+    {
+        "text": "thing that we need to know here is that",
+        "start": 555.642,
+        "duration": 1.41
+    },
+    {
+        "text": "this is like a payload function, so\nthat's where you define what topic",
+        "start": 557.692,
+        "duration": 5.62
+    },
+    {
+        "text": "is being published, and what is the\nvalue of that message on that topic.",
+        "start": 563.362,
+        "duration": 6.11
+    },
+    {
+        "text": "what message is being published,\nand what the value is.",
+        "start": 570.322,
+        "duration": 2.64
+    },
+    {
+        "text": "And we'll get more into\ndetails about this later.",
+        "start": 574.612,
+        "duration": 1.89
+    },
+    {
+        "text": "But the episode only publishes the episode\nnumber, and that's what we see here.",
+        "start": 577.032,
+        "duration": 5.69
+    },
+    {
+        "text": "It can publish multiple things,\nbut right now it just only",
+        "start": 582.822,
+        "duration": 3.22
+    },
+    {
+        "text": "publishes the episode number.",
+        "start": 586.042,
+        "duration": 1.2
+    },
+    {
+        "text": "If we go to the step, now the\nstep receives the episode number,",
+        "start": 588.012,
+        "duration": 3.33
+    },
+    {
+        "text": "and it publishes the step number.",
+        "start": 591.832,
+        "duration": 1.84
+    },
+    {
+        "text": "So publishing the step number\nis exactly the same way.",
+        "start": 594.282,
+        "duration": 2.71
+    },
+    {
+        "text": "I have the state two messages, and I'm\njust telling you to publish step number.",
+        "start": 597.032,
+        "duration": 3.63
+    },
+    {
+        "text": "But receiving is a little bit more\ncomplicated, because I wanted\u2026",
+        "start": 602.972,
+        "duration": 4.2
+    },
+    {
+        "text": "So I created these widget\nupdaters, and you can have",
+        "start": 609.262,
+        "duration": 3.42
+    },
+    {
+        "text": "multiple updaters, you can have\u2026",
+        "start": 612.682,
+        "duration": 1.49
+    },
+    {
+        "text": "There are very\u2026 there are a lot of\nscenarios where the widget can change",
+        "start": 614.602,
+        "duration": 4.89
+    },
+    {
+        "text": "based on what it's listening to, and\nsometimes you'll have multiple updaters,",
+        "start": 619.532,
+        "duration": 3.57
+    },
+    {
+        "text": "or you'll have one updater, you'll have",
+        "start": 624.872,
+        "duration": 0.87
+    },
+    {
+        "text": "Sometimes you have one updater that\nlistens to multiple messages or",
+        "start": 625.842,
+        "duration": 2.79
+    },
+    {
+        "text": "multiple topics, and when it has\nmessages, enough messages in all of",
+        "start": 628.722,
+        "duration": 4.83
+    },
+    {
+        "text": "them, it can update the step widget.",
+        "start": 633.552,
+        "duration": 2.24
+    },
+    {
+        "text": "In this scenario, we have one updater.",
+        "start": 637.732,
+        "duration": 2.655
+    },
+    {
+        "text": "What it's doing is it's\nlistening to episode number.",
+        "start": 640.762,
+        "duration": 2.62
+    },
+    {
+        "text": "And once it gets a message, or if the\nepisode number changes, it will call",
+        "start": 643.972,
+        "duration": 4.44
+    },
+    {
+        "text": "this callback function, which is, it's\ngoing to update the range, basically.",
+        "start": 648.442,
+        "duration": 5.48
+    },
+    {
+        "text": "because we have, episode 0 could have\n50 steps, episode 1 could have 20",
+        "start": 654.442,
+        "duration": 4.31
+    },
+    {
+        "text": "steps, or whatever, so we need to modify\nthe range of the\u2026 of the step slider.",
+        "start": 658.762,
+        "duration": 4.7
+    },
+    {
+        "text": "once the episode number changes,\nit calls this callback function.",
+        "start": 666.132,
+        "duration": 3.76
+    },
+    {
+        "text": "So that's a simple example here.",
+        "start": 670.882,
+        "duration": 1.61
+    },
+    {
+        "text": "Let's go to more complicated\nexamples, like this correlation",
+        "start": 673.032,
+        "duration": 3.78
+    },
+    {
+        "text": "plot, for example, here.",
+        "start": 676.812,
+        "duration": 1.05
+    },
+    {
+        "text": "What's happening here is that this\none is listening to four, topics.",
+        "start": 679.622,
+        "duration": 5.15
+    },
+    {
+        "text": "Episode number, step number, current\nobject, which is basically what\u2026",
+        "start": 685.482,
+        "duration": 4.31
+    },
+    {
+        "text": "which hypothesis space, and it's\ngetting those from the buttons",
+        "start": 689.812,
+        "duration": 3.38
+    },
+    {
+        "text": "and the arrows that we had before.",
+        "start": 693.192,
+        "duration": 2.33
+    },
+    {
+        "text": "But also age threshold.",
+        "start": 697.142,
+        "duration": 1.38
+    },
+    {
+        "text": "So",
+        "start": 698.532,
+        "duration": 0.02
+    },
+    {
+        "text": "it's listening to those four, and\nif any of those change, it will",
+        "start": 701.302,
+        "duration": 4.64
+    },
+    {
+        "text": "call the function, updatePlot.",
+        "start": 705.942,
+        "duration": 1.47
+    },
+    {
+        "text": "Which is going to modify this widget.",
+        "start": 709.392,
+        "duration": 2.167
+    },
+    {
+        "text": "This is why I call them widget updaters.",
+        "start": 711.559,
+        "duration": 1.283
+    },
+    {
+        "text": "The only way you can modify the\nwidget that you're on is through",
+        "start": 713.522,
+        "duration": 3.6
+    },
+    {
+        "text": "widget updaters, by listening to some",
+        "start": 717.132,
+        "duration": 2.27
+    },
+    {
+        "text": "Some topics, or some messages.",
+        "start": 721.172,
+        "duration": 1.48
+    },
+    {
+        "text": "Niels Leadholm: And.",
+        "start": 724.502,
+        "duration": 0.39
+    },
+    {
+        "text": "Ramy Mounir: go ahead.",
+        "start": 726.442,
+        "duration": 0.358
+    },
+    {
+        "text": "Niels Leadholm: And just to clarify,\nAnd each widget, would it always",
+        "start": 726.8,
+        "duration": 4.792
+    },
+    {
+        "text": "have one widget updater, or could\nit potentially have multiple?",
+        "start": 731.602,
+        "duration": 3.46
+    },
+    {
+        "text": "Ramy Mounir: It can have multiple.",
+        "start": 735.782,
+        "duration": 0.96
+    },
+    {
+        "text": "I have an example for that, but you can\nhave multiple updaters, or you can have",
+        "start": 737.552,
+        "duration": 6.02
+    },
+    {
+        "text": "no updaters if you\u2026 for example, you're\nnot listening to anything, but you're only",
+        "start": 743.572,
+        "duration": 4.0
+    },
+    {
+        "text": "publishing, just like the episode slider.",
+        "start": 747.582,
+        "duration": 2.875
+    },
+    {
+        "text": "It's not listening to anything,\nbut it's only publishing",
+        "start": 750.772,
+        "duration": 2.16
+    },
+    {
+        "text": "The\u2026 which episode you're on.",
+        "start": 753.492,
+        "duration": 1.73
+    },
+    {
+        "text": "Niels Leadholm: okay.",
+        "start": 757.332,
+        "duration": 0.39
+    },
+    {
+        "text": "And then,",
+        "start": 758.042,
+        "duration": 0.47
+    },
+    {
+        "text": "Yeah, maybe, again, it'll be an example\nof this, but I'm just curious now, so",
+        "start": 759.822,
+        "duration": 3.15
+    },
+    {
+        "text": "with the topic, so yeah, here is an\nexample where if you change any one",
+        "start": 762.972,
+        "duration": 4.8
+    },
+    {
+        "text": "of these that's listening, it will",
+        "start": 767.772,
+        "duration": 1.99
+    },
+    {
+        "text": "Call the\u2026 callback.",
+        "start": 770.352,
+        "duration": 1.57
+    },
+    {
+        "text": "Ramy Mounir: Yes.",
+        "start": 772.902,
+        "duration": 0.25
+    },
+    {
+        "text": "Niels Leadholm: Presumably\nthere's also a notation for if",
+        "start": 773.282,
+        "duration": 2.18
+    },
+    {
+        "text": "All four of these must change.",
+        "start": 776.092,
+        "duration": 1.82
+    },
+    {
+        "text": "In order to call the callback?",
+        "start": 779.052,
+        "duration": 2.19
+    },
+    {
+        "text": "Ramy Mounir: Yeah, or, multiple\u2026",
+        "start": 782.392,
+        "duration": 1.45
+    },
+    {
+        "text": "Niels Leadholm: Couple of.",
+        "start": 784.162,
+        "duration": 0.07
+    },
+    {
+        "text": "Ramy Mounir: required here, basically.",
+        "start": 784.852,
+        "duration": 2.78
+    },
+    {
+        "text": "if you list a topic, that means\nthat if any of these topics",
+        "start": 788.392,
+        "duration": 4.04
+    },
+    {
+        "text": "change, you will call the",
+        "start": 792.432,
+        "duration": 2.64
+    },
+    {
+        "text": "callback.",
+        "start": 797.082,
+        "duration": 0.32
+    },
+    {
+        "text": "Niels Leadholm: Okay.",
+        "start": 798.192,
+        "duration": 0.13
+    },
+    {
+        "text": "Ramy Mounir: Required means that the\u2026\nthis topic is not really required for",
+        "start": 798.482,
+        "duration": 7.01
+    },
+    {
+        "text": "UpdatePlot to\u2026 to call it Zoom, right?",
+        "start": 806.562,
+        "duration": 2.04
+    },
+    {
+        "text": "Sorry, did you hear that noise, please?",
+        "start": 810.112,
+        "duration": 1.66
+    },
+    {
+        "text": "Niels Leadholm: Yeah, I know.",
+        "start": 812.012,
+        "duration": 1.03
+    },
+    {
+        "text": "Ramy Mounir: So basically, so required\nis basically saying that, I need to",
+        "start": 813.722,
+        "duration": 6.62
+    },
+    {
+        "text": "have this topic in my\u2026 in the list of\nmessages that I send to update plot.",
+        "start": 820.342,
+        "duration": 5.43
+    },
+    {
+        "text": "So if you set it to required, then it's\nnot going to call update plot until",
+        "start": 826.312,
+        "duration": 4.57
+    },
+    {
+        "text": "all of these messages are available.",
+        "start": 831.162,
+        "duration": 1.34
+    },
+    {
+        "text": "But,",
+        "start": 833.692,
+        "duration": 0.03
+    },
+    {
+        "text": "if you\u2026 but just by listing them here,\nif anyone, if any one of those changes,",
+        "start": 835.912,
+        "duration": 4.87
+    },
+    {
+        "text": "that basically says, call update plot.",
+        "start": 840.792,
+        "duration": 2.2
+    },
+    {
+        "text": "It's a\u2026 it's a\u2026 it's a\ntiny detail, and it's\u2026",
+        "start": 843.472,
+        "duration": 2.59
+    },
+    {
+        "text": "In most cases, you only\nneed required to be true.",
+        "start": 846.402,
+        "duration": 2.66
+    },
+    {
+        "text": "I have\u2026 I only needed\nit for one case, but,",
+        "start": 850.372,
+        "duration": 2.9
+    },
+    {
+        "text": "Yeah, it's a\u2026 it's a\u2026 I don't think it's\nworth time going through it, because",
+        "start": 853.862,
+        "duration": 4.43
+    },
+    {
+        "text": "always required is true is usually,",
+        "start": 858.572,
+        "duration": 2.85
+    },
+    {
+        "text": "sufficient.",
+        "start": 862.502,
+        "duration": 0.63
+    },
+    {
+        "text": "Viviane Clay: Is there a difference\nbetween the variable changing",
+        "start": 863.932,
+        "duration": 3.65
+    },
+    {
+        "text": "versus the variable being available?",
+        "start": 867.592,
+        "duration": 2.41
+    },
+    {
+        "text": "I assume only one of these will\nchange at any one point in time, but",
+        "start": 870.892,
+        "duration": 3.31
+    },
+    {
+        "text": "you need all four of them to update.",
+        "start": 874.352,
+        "duration": 1.99
+    },
+    {
+        "text": "does it check\u2026",
+        "start": 878.972,
+        "duration": 0.86
+    },
+    {
+        "text": "Oh, is this value in the middle\ncircle right now available?",
+        "start": 880.422,
+        "duration": 3.55
+    },
+    {
+        "text": "And that's what the required\u2026",
+        "start": 884.532,
+        "duration": 1.33
+    },
+    {
+        "text": "Ramy Mounir: Yeah, so\u2026 the widget updater\nis going to keep an inbox of all of these.",
+        "start": 886.072,
+        "duration": 5.25
+    },
+    {
+        "text": "So it basically stores these messages,\nand only when all the required messages",
+        "start": 892.052,
+        "duration": 6.41
+    },
+    {
+        "text": "are available, it will update the plot.",
+        "start": 898.462,
+        "duration": 2.55
+    },
+    {
+        "text": "Sometimes you don't have,\nsometimes episode number is",
+        "start": 901.452,
+        "duration": 3.86
+    },
+    {
+        "text": "not\u2026 is not yet available in the\ninbox, but one of these change.",
+        "start": 905.312,
+        "duration": 4.69
+    },
+    {
+        "text": "And you still want to update the plot.",
+        "start": 910.462,
+        "duration": 1.69
+    },
+    {
+        "text": "that's the difference.",
+        "start": 913.942,
+        "duration": 0.84
+    },
+    {
+        "text": "sometimes you don't have episode\nnumber yet, and update plot",
+        "start": 915.782,
+        "duration": 3.66
+    },
+    {
+        "text": "doesn't really depend on it.",
+        "start": 919.442,
+        "duration": 1.2
+    },
+    {
+        "text": "you'd still send the message if\u2026\nStep number changes, for example.",
+        "start": 921.912,
+        "duration": 6.71
+    },
+    {
+        "text": "Viviane Clay: But if, all of them are\navailable, but none of them have changed.",
+        "start": 929.792,
+        "duration": 3.97
+    },
+    {
+        "text": "Ramy Mounir: Minimum.",
+        "start": 934.762,
+        "duration": 0.07
+    },
+    {
+        "text": "Viviane Clay: blood.",
+        "start": 934.832,
+        "duration": 0.3
+    },
+    {
+        "text": "Ramy Mounir: No.",
+        "start": 935.712,
+        "duration": 0.26
+    },
+    {
+        "text": "Viviane Clay: Okay.",
+        "start": 936.612,
+        "duration": 0.5
+    },
+    {
+        "text": "Ramy Mounir: Only when\u2026 only when\nit changes, because it's just going",
+        "start": 937.232,
+        "duration": 2.92
+    },
+    {
+        "text": "to be the same function being called\nagain and again, doesn't matter.",
+        "start": 940.152,
+        "duration": 2.8
+    },
+    {
+        "text": "It doesn't\u2026",
+        "start": 943.022,
+        "duration": 0.5
+    },
+    {
+        "text": "Niels Leadholm: And and then the\nlogic for all of them being required,",
+        "start": 945.662,
+        "duration": 2.54
+    },
+    {
+        "text": "that's specified in the inbox?",
+        "start": 948.212,
+        "duration": 3.15
+    },
+    {
+        "text": "If, if you\u2026 if you wanted\nthat to be the case.",
+        "start": 951.372,
+        "duration": 3.28
+    },
+    {
+        "text": "Ramy Mounir: yeah, so that's\u2026 the\nlogic for this, inbox stuff is in the",
+        "start": 957.242,
+        "duration": 4.87
+    },
+    {
+        "text": "class of the widget updaters, and\u2026",
+        "start": 962.172,
+        "duration": 1.96
+    },
+    {
+        "text": "You basically just set it to required\nequals true, and it will not send a",
+        "start": 966.382,
+        "duration": 5.05
+    },
+    {
+        "text": "message without all these four, basically.",
+        "start": 971.442,
+        "duration": 2.94
+    },
+    {
+        "text": "Niels Leadholm: Oh, okay.",
+        "start": 975.192,
+        "duration": 0.47
+    },
+    {
+        "text": "Ramy Mounir: Did I answer your question?",
+        "start": 975.662,
+        "duration": 1.26
+    },
+    {
+        "text": "Okay.",
+        "start": 977.022,
+        "duration": 0.23
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 977.372,
+        "duration": 0.44
+    },
+    {
+        "text": "Ramy Mounir: Now, the output, which\nis going to use, again, the state to",
+        "start": 980.172,
+        "duration": 3.98
+    },
+    {
+        "text": "messages, and again, you can really just,",
+        "start": 984.202,
+        "duration": 3.95
+    },
+    {
+        "text": "change, so you can customize\nthis as much as you want.",
+        "start": 990.122,
+        "duration": 3.77
+    },
+    {
+        "text": "So\u2026 here, I'm just\nsending out two messages.",
+        "start": 997.202,
+        "duration": 2.32
+    },
+    {
+        "text": "Sometimes, if I don't have a selected\nhypothesis, I send a message\u2026 I send",
+        "start": 999.532,
+        "duration": 3.57
+    },
+    {
+        "text": "a\u2026 on a topic called clear, selected\nhypothesis with a value of true.",
+        "start": 1003.102,
+        "duration": 3.23
+    },
+    {
+        "text": "You could\u2026 or you can just say selected\nhypothesis with a value of none.",
+        "start": 1007.492,
+        "duration": 3.43
+    },
+    {
+        "text": "It really depends on what\u2026\nwhat you want to send.",
+        "start": 1012.172,
+        "duration": 2.61
+    },
+    {
+        "text": "So this is, a payload\nfunction that can just\u2026",
+        "start": 1014.972,
+        "duration": 2.77
+    },
+    {
+        "text": "Take your\u2026 take the state of the\nwidget, and you can modify it, or",
+        "start": 1018.492,
+        "duration": 4.54
+    },
+    {
+        "text": "do anything to it, and then just\u2026",
+        "start": 1023.262,
+        "duration": 2.23
+    },
+    {
+        "text": "Send it.",
+        "start": 1025.582,
+        "duration": 0.45
+    },
+    {
+        "text": "Hojae Lee: Is the state to message\nsupposed to be, like, a protocol?",
+        "start": 1027.552,
+        "duration": 3.755
+    },
+    {
+        "text": "it must take in some\nstate, and it must return\u2026",
+        "start": 1031.772,
+        "duration": 2.89
+    },
+    {
+        "text": "Some iterable autonomic messages.",
+        "start": 1035.292,
+        "duration": 2.47
+    },
+    {
+        "text": "Ramy Mounir: You can't just\u2026",
+        "start": 1038.542,
+        "duration": 0.53
+    },
+    {
+        "text": "Hojae Lee: return at random.",
+        "start": 1039.072,
+        "duration": 0.93
+    },
+    {
+        "text": "things,",
+        "start": 1040.662,
+        "duration": 0.46
+    },
+    {
+        "text": "Ramy Mounir: Yeah, it has to\nreturn a list of topic messages.",
+        "start": 1042.402,
+        "duration": 3.38
+    },
+    {
+        "text": "Which is, because every one of these\ntopic messages, it's going to iterate",
+        "start": 1046.512,
+        "duration": 5.23
+    },
+    {
+        "text": "over them, and it's going to publish it.",
+        "start": 1051.762,
+        "duration": 1.53
+    },
+    {
+        "text": "That's in the widget\nclass, it's doing that.",
+        "start": 1053.322,
+        "duration": 2.09
+    },
+    {
+        "text": "Here, you're just defining the\npayload function, but when you return",
+        "start": 1055.992,
+        "duration": 3.27
+    },
+    {
+        "text": "those, it's going to go over those.",
+        "start": 1059.262,
+        "duration": 1.38
+    },
+    {
+        "text": "And then the state doesn't have to be\u2026",
+        "start": 1061.842,
+        "duration": 2.22
+    },
+    {
+        "text": "I have this notion of a widget\nand a state, and the state of",
+        "start": 1066.122,
+        "duration": 5.71
+    },
+    {
+        "text": "Some of those\u2026 it makes sense for\nsome of these widgets to have states,",
+        "start": 1072.252,
+        "duration": 3.93
+    },
+    {
+        "text": "for example, the slider, the state\nwould be the value of that, or the",
+        "start": 1076.812,
+        "duration": 3.17
+    },
+    {
+        "text": "button would be the value of that.",
+        "start": 1079.982,
+        "duration": 2.03
+    },
+    {
+        "text": "Some of those widgets, they don't\nnecessarily have a state, so it will\u2026",
+        "start": 1082.192,
+        "duration": 3.347
+    },
+    {
+        "text": "if it doesn't have a state, it will\nbasically return sometimes none.",
+        "start": 1085.539,
+        "duration": 2.923
+    },
+    {
+        "text": "Like this, and you just put\nwhatever state you want in",
+        "start": 1088.912,
+        "duration": 2.34
+    },
+    {
+        "text": "here, when you're defining that.",
+        "start": 1091.252,
+        "duration": 2.59
+    },
+    {
+        "text": "Hojae Lee: Okay, but it is, a very\nminimal contract that must return",
+        "start": 1095.332,
+        "duration": 4.12
+    },
+    {
+        "text": "some editables of topic messages.",
+        "start": 1099.522,
+        "duration": 1.95
+    },
+    {
+        "text": "Ramy Mounir: Yeah, because all these\nmessages are going to be published.",
+        "start": 1102.332,
+        "duration": 2.32
+    },
+    {
+        "text": "if you don't have any messages to\nsend, just return an empty list.",
+        "start": 1105.372,
+        "duration": 2.61
+    },
+    {
+        "text": "Hojae Lee: Okay.",
+        "start": 1108.982,
+        "duration": 0.26
+    },
+    {
+        "text": "Ramy Mounir: Or just don't\nhave state-to-messages at all.",
+        "start": 1109.752,
+        "duration": 2.25
+    },
+    {
+        "text": "Okay, here's another,\nslightly different example.",
+        "start": 1115.352,
+        "duration": 3.49
+    },
+    {
+        "text": "This one doesn't publish anything,\nso we don't have state-to-messages,",
+        "start": 1118.912,
+        "duration": 3.05
+    },
+    {
+        "text": "but we have updaters.",
+        "start": 1122.502,
+        "duration": 0.59
+    },
+    {
+        "text": "And this is one example where we\nactually need more than one updater.",
+        "start": 1124.242,
+        "duration": 4.3
+    },
+    {
+        "text": "And the reason is.",
+        "start": 1129.072,
+        "duration": 0.87
+    },
+    {
+        "text": "we need one updater that's going to\nupdate the mesh, and this one only",
+        "start": 1130.372,
+        "duration": 3.51
+    },
+    {
+        "text": "listens to episode number, this, because\nthis is the primary target mesh, so",
+        "start": 1133.882,
+        "duration": 4.77
+    },
+    {
+        "text": "it only changes with the episode.",
+        "start": 1138.652,
+        "duration": 1.35
+    },
+    {
+        "text": "if the episode changes, the primary\ntarget changes, and we want to",
+        "start": 1141.182,
+        "duration": 2.37
+    },
+    {
+        "text": "update the mesh to some other object.",
+        "start": 1143.552,
+        "duration": 3.95
+    },
+    {
+        "text": "But then, we also want to listen\nto episode number and step number,",
+        "start": 1148.982,
+        "duration": 4.02
+    },
+    {
+        "text": "so if any of those change, we want\nto update the sensor on the object.",
+        "start": 1153.002,
+        "duration": 3.73
+    },
+    {
+        "text": "we want to move the\nsensor to a new location.",
+        "start": 1157.272,
+        "duration": 3.26
+    },
+    {
+        "text": "And I do this because if the step\nnumber doesn't change, I don't",
+        "start": 1161.832,
+        "duration": 3.23
+    },
+    {
+        "text": "really need to update the mesh.",
+        "start": 1165.062,
+        "duration": 1.26
+    },
+    {
+        "text": "It just\u2026 it doesn't make sense to do that.",
+        "start": 1166.362,
+        "duration": 2.74
+    },
+    {
+        "text": "I have split the update mesh and\nupdate sensors, and I'm just defining",
+        "start": 1170.442,
+        "duration": 3.51
+    },
+    {
+        "text": "what topics they need to listen to.",
+        "start": 1174.022,
+        "duration": 1.99
+    },
+    {
+        "text": "Niels Leadholm: Yeah, nice.",
+        "start": 1178.682,
+        "duration": 0.53
+    },
+    {
+        "text": "Ramy Mounir: Okay, so\u2026 that's basically\na very high-level view, of, these, and\u2026",
+        "start": 1181.352,
+        "duration": 6.67
+    },
+    {
+        "text": "We can now go to, we can discuss more,\non, low-level details of these things.",
+        "start": 1188.882,
+        "duration": 5.98
+    },
+    {
+        "text": "These are the topics I plan on discussing.",
+        "start": 1196.002,
+        "duration": 2.1
+    },
+    {
+        "text": "The first thing is, it's not\nreally related to PubSub, but",
+        "start": 1199.562,
+        "duration": 3.07
+    },
+    {
+        "text": "it's more related to TBP plots, or",
+        "start": 1202.632,
+        "duration": 2.65
+    },
+    {
+        "text": "some helpers for accessing data, JSON\ndata, from the detailed run stats.",
+        "start": 1207.342,
+        "duration": 4.97
+    },
+    {
+        "text": "And then I'm going to talk about\nadding a plot into the registry.",
+        "start": 1213.142,
+        "duration": 5.12
+    },
+    {
+        "text": "How do you register that plot using the\nCLI interface, which is pretty cool.",
+        "start": 1218.292,
+        "duration": 5.63
+    },
+    {
+        "text": "And then creating widgets with\nwidget ops, this is more involved.",
+        "start": 1224.652,
+        "duration": 4.35
+    },
+    {
+        "text": "And then there are some tricks that\nI'm going to discuss about debouncing",
+        "start": 1229.182,
+        "duration": 5.72
+    },
+    {
+        "text": "and deduplicating events, because we\ndon't really\u2026 sometimes it becomes very,",
+        "start": 1234.992,
+        "duration": 4.55
+    },
+    {
+        "text": "Yeah, so if you're changing the slide\u2026\nthe slider, value, it\u2026 it can just keep",
+        "start": 1242.342,
+        "duration": 5.26
+    },
+    {
+        "text": "sending on messages, because every\u2026 every\nmovement is just changing the value.",
+        "start": 1247.602,
+        "duration": 5.47
+    },
+    {
+        "text": "So we don't want that, we want to\ngate, all of these outputs, and",
+        "start": 1253.482,
+        "duration": 4.1
+    },
+    {
+        "text": "only send messages when necessary.",
+        "start": 1257.632,
+        "duration": 1.99
+    },
+    {
+        "text": "That's\u2026 this here is\ngoing to touch on that.",
+        "start": 1261.422,
+        "duration": 1.72
+    },
+    {
+        "text": "Viviane Clay: Do all of the, it always\ndepends on JSON files being logged?",
+        "start": 1264.582,
+        "duration": 4.54
+    },
+    {
+        "text": "Ramy Mounir: Yes, right now it does,\nbut that's only part of it, so if you",
+        "start": 1271.032,
+        "duration": 3.75
+    },
+    {
+        "text": "have another way of loading the data, it\ndoesn't really need to depend on JSON.",
+        "start": 1274.782,
+        "duration": 3.65
+    },
+    {
+        "text": "you'll see I'm using something\ncalled Data Locator and data parser",
+        "start": 1280.642,
+        "duration": 1.943
+    },
+    {
+        "text": "to parse the JSON and locate data,",
+        "start": 1282.585,
+        "duration": 0.507
+    },
+    {
+        "text": "but if you are doing this\nonline, then you can just have a",
+        "start": 1287.632,
+        "duration": 4.33
+    },
+    {
+        "text": "different type of data locator.",
+        "start": 1291.982,
+        "duration": 1.48
+    },
+    {
+        "text": "Viviane Clay: Okay, cool.",
+        "start": 1294.772,
+        "duration": 1.23
+    },
+    {
+        "text": "Ramy Mounir: I've added a\ntutorial, for accessing data.",
+        "start": 1299.892,
+        "duration": 3.18
+    },
+    {
+        "text": "It's right here.",
+        "start": 1303.572,
+        "duration": 1.04
+    },
+    {
+        "text": "Which basically goes through this,\nthe same stuff, but I'm going to,",
+        "start": 1305.882,
+        "duration": 5.13
+    },
+    {
+        "text": "go through it again.",
+        "start": 1313.312,
+        "duration": 0.74
+    },
+    {
+        "text": "So basically, we have\na structure like this.",
+        "start": 1316.562,
+        "duration": 3.3
+    },
+    {
+        "text": "This is a very simple structure.",
+        "start": 1319.862,
+        "duration": 1.2
+    },
+    {
+        "text": "Usually, our JSONs are much\nbigger, and they're, like, I",
+        "start": 1321.092,
+        "duration": 4.64
+    },
+    {
+        "text": "don't know, 7, 8\u2026 the depth of",
+        "start": 1325.732,
+        "duration": 2.17
+    },
+    {
+        "text": "the structure is usually a lot more.",
+        "start": 1330.882,
+        "duration": 1.88
+    },
+    {
+        "text": "So this is why it's useful, but\nlet's take this example here,",
+        "start": 1333.522,
+        "duration": 4.0
+    },
+    {
+        "text": "a simple example.",
+        "start": 1340.362,
+        "duration": 0.72
+    },
+    {
+        "text": "We have just a simple example, we have\na dictionary, we have, one level here,",
+        "start": 1341.082,
+        "duration": 2.92
+    },
+    {
+        "text": "we have the episode numbers, and then\nfor every episode, we have a list of",
+        "start": 1344.002,
+        "duration": 5.15
+    },
+    {
+        "text": "Dictionaries.",
+        "start": 1350.522,
+        "duration": 0.62
+    },
+    {
+        "text": "second level is a list, and then the\nthird level is another dictionary.",
+        "start": 1351.712,
+        "duration": 2.7
+    },
+    {
+        "text": "if we want to access some data here\u2026",
+        "start": 1355.522,
+        "duration": 1.9
+    },
+    {
+        "text": "I def\u2026 so the way that I do it is I\ndefine a data locator, and in this data",
+        "start": 1360.192,
+        "duration": 3.69
+    },
+    {
+        "text": "locator, I define all of the steps that\nI need to reach some data somewhere.",
+        "start": 1364.072,
+        "duration": 7.2
+    },
+    {
+        "text": "So I say\u2026 so it's usually either\na key or an index, a key for",
+        "start": 1371.632,
+        "duration": 3.28
+    },
+    {
+        "text": "dictionary and an index for a list.",
+        "start": 1374.912,
+        "duration": 1.65
+    },
+    {
+        "text": "So I say, this data locator has a step\nthat is a key, and I'm gonna call it",
+        "start": 1377.052,
+        "duration": 5.95
+    },
+    {
+        "text": "episode, and I'm gonna give it a value\nof episode 2, and then the second",
+        "start": 1383.072,
+        "duration": 4.19
+    },
+    {
+        "text": "path step is index, it's going to be\nstep, and value of 3, and then key.",
+        "start": 1389.162,
+        "duration": 5.12
+    },
+    {
+        "text": "I'm gonna call it field, and\nI'm just going to get evidence.",
+        "start": 1394.662,
+        "duration": 2.74
+    },
+    {
+        "text": "So if I run this with the parser, and I\njust say extract, and I give it the data",
+        "start": 1397.962,
+        "duration": 5.16
+    },
+    {
+        "text": "locator, it's going to return the value.",
+        "start": 1403.122,
+        "duration": 1.81
+    },
+    {
+        "text": "Basically, 0.5, which is\u2026 where we are.",
+        "start": 1404.932,
+        "duration": 4.37
+    },
+    {
+        "text": "Now you can reuse that locator, but\nit's not really useful if you can't\u2026",
+        "start": 1410.002,
+        "duration": 3.63
+    },
+    {
+        "text": "Either quickly modify this data locator,\nor define it in a way where you can\u2026",
+        "start": 1415.682,
+        "duration": 5.87
+    },
+    {
+        "text": "where you know that you're\u2026 a lot\nof these are constants, and you just",
+        "start": 1421.972,
+        "duration": 3.24
+    },
+    {
+        "text": "want to define the missing values.",
+        "start": 1425.212,
+        "duration": 2.92
+    },
+    {
+        "text": "I rarely use a full locator\npath like this, because\u2026",
+        "start": 1430.502,
+        "duration": 3.92
+    },
+    {
+        "text": "every data\u2026 all the data that I'm\nextracting really depends on some slider",
+        "start": 1435.512,
+        "duration": 3.67
+    },
+    {
+        "text": "value, or some button, or some\u2026 something.",
+        "start": 1439.582,
+        "duration": 1.85
+    },
+    {
+        "text": "I don't know what the episode is until I\u2026\nI get the episode value from the slider.",
+        "start": 1442.282,
+        "duration": 5.74
+    },
+    {
+        "text": "So what I ended up doing is,\nyou can define the same locator,",
+        "start": 1449.392,
+        "duration": 4.775
+    },
+    {
+        "text": "but you\u2026 in a partial way.",
+        "start": 1454.532,
+        "duration": 1.55
+    },
+    {
+        "text": "This is inspired by partial\nfunctions from Python.",
+        "start": 1456.082,
+        "duration": 3.64
+    },
+    {
+        "text": "So basically, what you would do is\nyou would not specify a value here",
+        "start": 1460.382,
+        "duration": 4.76
+    },
+    {
+        "text": "for whatever step that you're missing.",
+        "start": 1465.152,
+        "duration": 3.14
+    },
+    {
+        "text": "So here, I don't know what the\nstep is, and I'm going to rely",
+        "start": 1468.862,
+        "duration": 3.17
+    },
+    {
+        "text": "on the slider later on to get it,\nso I can just keep that missing.",
+        "start": 1472.032,
+        "duration": 4.55
+    },
+    {
+        "text": "And I can call the same function,\nparser.extract, and I give",
+        "start": 1477.052,
+        "duration": 3.88
+    },
+    {
+        "text": "it the partial locator, and\u2026",
+        "start": 1480.932,
+        "duration": 2.26
+    },
+    {
+        "text": "And then now the step that I want.",
+        "start": 1484.172,
+        "duration": 1.54
+    },
+    {
+        "text": "So you don't have to specify all of these",
+        "start": 1486.032,
+        "duration": 2.05
+    },
+    {
+        "text": "steps again.",
+        "start": 1489.042,
+        "duration": 0.62
+    },
+    {
+        "text": "So that would be the idea.",
+        "start": 1490.312,
+        "duration": 1.21
+    },
+    {
+        "text": "And then, it returns\u2026 give it\n70, 1, 2, 3, whatever, it will",
+        "start": 1491.582,
+        "duration": 4.28
+    },
+    {
+        "text": "just return the right value.",
+        "start": 1495.962,
+        "duration": 1.63
+    },
+    {
+        "text": "The other cool thing that you\ncan do with this is that you can",
+        "start": 1499.522,
+        "duration": 2.92
+    },
+    {
+        "text": "query the available options here.",
+        "start": 1502.442,
+        "duration": 2.3
+    },
+    {
+        "text": "So instead of just having,",
+        "start": 1505.102,
+        "duration": 1.67
+    },
+    {
+        "text": "Instead of extracting data, you can query\nwhat available episodes are at this step.",
+        "start": 1508.062,
+        "duration": 5.91
+    },
+    {
+        "text": "The way this works is that you\nwould have missing values, when you",
+        "start": 1515.002,
+        "duration": 4.3
+    },
+    {
+        "text": "don't\u2026 you don't really know what\nthe value here for episode is, and",
+        "start": 1519.302,
+        "duration": 3.51
+    },
+    {
+        "text": "parser.query instead of parser.extract.",
+        "start": 1523.602,
+        "duration": 1.895
+    },
+    {
+        "text": "This one will just go through these\nsteps, and it will stop at the first",
+        "start": 1526.552,
+        "duration": 4.25
+    },
+    {
+        "text": "missing value, and it will tell you these\nare all the available options for you.",
+        "start": 1530.802,
+        "duration": 4.26
+    },
+    {
+        "text": "So you could use that to,",
+        "start": 1535.632,
+        "duration": 1.55
+    },
+    {
+        "text": "It's useful when you're deciding, what\nis the range of the slider, or if the",
+        "start": 1540.272,
+        "duration": 4.23
+    },
+    {
+        "text": "slider range changes based on\u2026 the step\nrange changes based on the episode.",
+        "start": 1544.562,
+        "duration": 3.99
+    },
+    {
+        "text": "You could use that to\u2026 to always\nquery how many steps you have, or",
+        "start": 1549.492,
+        "duration": 4.04
+    },
+    {
+        "text": "how many objects you have, what\nare the objects, stuff like that.",
+        "start": 1554.452,
+        "duration": 2.69
+    },
+    {
+        "text": "But if you give it\u2026 if you give it an\nepisode number, it will basically go to",
+        "start": 1558.562,
+        "duration": 4.46
+    },
+    {
+        "text": "the next missing step, and it will give\u2026\nwill return to you the available options.",
+        "start": 1563.022,
+        "duration": 5.3
+    },
+    {
+        "text": "for episode 1, we have\nthree steps, 0, 1, and 2.",
+        "start": 1569.582,
+        "duration": 2.94
+    },
+    {
+        "text": "For episode 2, we have\nfour steps, 0, 1, 2,",
+        "start": 1572.532,
+        "duration": 2.52
+    },
+    {
+        "text": "3.",
+        "start": 1578.562,
+        "duration": 0.01
+    },
+    {
+        "text": "Okay, I think this,",
+        "start": 1578.572,
+        "duration": 1.13
+    },
+    {
+        "text": "this first part, I\nthought instead of just,",
+        "start": 1581.472,
+        "duration": 2.72
+    },
+    {
+        "text": "going into the widget ops and all\nthat stuff, without an example, I",
+        "start": 1586.252,
+        "duration": 4.54
+    },
+    {
+        "text": "thought we could build this, make it\nas a tutorial and build this together.",
+        "start": 1590.822,
+        "duration": 4.08
+    },
+    {
+        "text": "so by the end of this, I think I have\n30 more minutes of\u2026 yeah, maybe in 20",
+        "start": 1597.162,
+        "duration": 5.88
+    },
+    {
+        "text": "minutes we'll be done, and we should\u2026",
+        "start": 1603.042,
+        "duration": 1.84
+    },
+    {
+        "text": "Have built something like this.",
+        "start": 1605.682,
+        "duration": 1.32
+    },
+    {
+        "text": "and then if I didn't have\nenough time to finish it, these",
+        "start": 1609.182,
+        "duration": 2.76
+    },
+    {
+        "text": "are\u2026 these are the commits.",
+        "start": 1611.942,
+        "duration": 1.24
+    },
+    {
+        "text": "So I basically,",
+        "start": 1613.352,
+        "duration": 1.09
+    },
+    {
+        "text": "I will share the slides, and you'll be\nable to, for every step, you'll be able",
+        "start": 1618.462,
+        "duration": 4.27
+    },
+    {
+        "text": "to go through\u2026 you'll be able to find\nthis commit and find the code for it.",
+        "start": 1622.732,
+        "duration": 4.37
+    },
+    {
+        "text": "But it's basically\u2026",
+        "start": 1627.602,
+        "duration": 1.09
+    },
+    {
+        "text": "the first commit is just an initial setup,\nwhere I just set up the renderers and",
+        "start": 1628.992,
+        "duration": 5.03
+    },
+    {
+        "text": "the CLI arguments and all that stuff, and\nthen each one of these later commits are",
+        "start": 1634.042,
+        "duration": 5.61
+    },
+    {
+        "text": "one for each widget.",
+        "start": 1640.622,
+        "duration": 0.88
+    },
+    {
+        "text": "So there's one for the episode,\none for the step, and one for",
+        "start": 1642.002,
+        "duration": 2.43
+    },
+    {
+        "text": "this visualizer, and one for that.",
+        "start": 1644.712,
+        "duration": 1.39
+    },
+    {
+        "text": "And you will see that,",
+        "start": 1646.712,
+        "duration": 0.94
+    },
+    {
+        "text": "the diffs will show you that\nI don't modify any of the",
+        "start": 1649.832,
+        "duration": 3.84
+    },
+    {
+        "text": "code of the previous commit.",
+        "start": 1653.672,
+        "duration": 3.31
+    },
+    {
+        "text": "if I want to add the step, I\ndon't modify the episode at all.",
+        "start": 1658.172,
+        "duration": 2.79
+    },
+    {
+        "text": "If I want to add this, I don't\nmodify any of the others.",
+        "start": 1660.972,
+        "duration": 2.29
+    },
+    {
+        "text": "I wanted to split them like\nthat so that you can see that",
+        "start": 1663.922,
+        "duration": 3.69
+    },
+    {
+        "text": "there's no dependency going on.",
+        "start": 1667.912,
+        "duration": 1.31
+    },
+    {
+        "text": "Cool, so let's start\nwith the initial setup.",
+        "start": 1672.762,
+        "duration": 1.91
+    },
+    {
+        "text": "renderers, so\u2026 this here, what we\nwant to set up is\u2026 I don't have any",
+        "start": 1678.792,
+        "duration": 4.57
+    },
+    {
+        "text": "widgets, I just have, three renderers.",
+        "start": 1683.372,
+        "duration": 3.0
+    },
+    {
+        "text": "There's the main renderer over here,\nand then we also have two more,",
+        "start": 1686.372,
+        "duration": 3.44
+    },
+    {
+        "text": "sub-renderers, or\u2026 they're also\u2026",
+        "start": 1690.752,
+        "duration": 1.98
+    },
+    {
+        "text": "renderers, they're just, in\ntotal, we have 3 renderers.",
+        "start": 1693.362,
+        "duration": 4.41
+    },
+    {
+        "text": "And you create a new renderer\nevery time you want to have a",
+        "start": 1698.282,
+        "duration": 3.1
+    },
+    {
+        "text": "different camera, basically.",
+        "start": 1701.452,
+        "duration": 1.39
+    },
+    {
+        "text": "if I want to have a different",
+        "start": 1703.012,
+        "duration": 1.09
+    },
+    {
+        "text": "camera for, this\u2026 for this sub-renderer.",
+        "start": 1704.942,
+        "duration": 3.81
+    },
+    {
+        "text": "I just basically have to create it as\na renderer, otherwise I won't have a",
+        "start": 1710.082,
+        "duration": 2.63
+    },
+    {
+        "text": "camera for it, and I can't move in this\nrender independently from the others.",
+        "start": 1712.712,
+        "duration": 4.46
+    },
+    {
+        "text": "So let's go to the setup for it.",
+        "start": 1718.412,
+        "duration": 2.55
+    },
+    {
+        "text": "the setup here is very simple.",
+        "start": 1726.252,
+        "duration": 1.47
+    },
+    {
+        "text": "In order to register a plot.",
+        "start": 1729.272,
+        "duration": 1.58
+    },
+    {
+        "text": "all you need to do is define this\u2026\nthere's any\u2026 a function, give it",
+        "start": 1732.162,
+        "duration": 3.71
+    },
+    {
+        "text": "any name, I call it main, and I just\nregister that plot with some\u2026 with this",
+        "start": 1735.992,
+        "duration": 5.15
+    },
+    {
+        "text": "decorator, the registered decorator.",
+        "start": 1741.202,
+        "duration": 2.0
+    },
+    {
+        "text": "And you just\u2026 this is the name\nof the plot, this is what you're",
+        "start": 1743.662,
+        "duration": 2.79
+    },
+    {
+        "text": "gonna use in CLI to, plot it.",
+        "start": 1746.452,
+        "duration": 3.61
+    },
+    {
+        "text": "And then a description, and this\ndescription is going to show,",
+        "start": 1750.732,
+        "duration": 2.57
+    },
+    {
+        "text": "when you query all the available\nplots, it's just going to tell",
+        "start": 1753.312,
+        "duration": 2.72
+    },
+    {
+        "text": "you this plot, and it does this",
+        "start": 1756.032,
+        "duration": 1.58
+    },
+    {
+        "text": "plot, it does this.",
+        "start": 1759.752,
+        "duration": 0.285
+    },
+    {
+        "text": "And then, if you have any arguments\nthat go into the main function, you can",
+        "start": 1760.037,
+        "duration": 3.965
+    },
+    {
+        "text": "define them here in a different function,\nand you have to decorate it with attach",
+        "start": 1765.662,
+        "duration": 5.39
+    },
+    {
+        "text": "args, and give it the same name of\nthe plot so it knows how to match it.",
+        "start": 1771.062,
+        "duration": 3.34
+    },
+    {
+        "text": "And then it basically just adds\nthese arguments, and the names of",
+        "start": 1776.182,
+        "duration": 3.29
+    },
+    {
+        "text": "the arguments have to match, right?",
+        "start": 1779.472,
+        "duration": 1.71
+    },
+    {
+        "text": "experiment logs there\nneeds to match here, and\u2026",
+        "start": 1781.532,
+        "duration": 3.31
+    },
+    {
+        "text": "You get the point.",
+        "start": 1785.752,
+        "duration": 0.68
+    },
+    {
+        "text": "All of the code needs to fit inside of\nthis main function, because this is the",
+        "start": 1788.842,
+        "duration": 3.77
+    },
+    {
+        "text": "only function that's going to run, and\nyou can dump all the code here, but I like",
+        "start": 1792.612,
+        "duration": 5.74
+    },
+    {
+        "text": "to create an interactive plot class and\nrun it\u2026 run the interactive plot class,",
+        "start": 1798.352,
+        "duration": 2.58
+    },
+    {
+        "text": "so everything runs in\nthe init of this class.",
+        "start": 1804.032,
+        "duration": 1.96
+    },
+    {
+        "text": "But if you're doing a, a\nmatplotlib or seaborne function,",
+        "start": 1807.702,
+        "duration": 3.64
+    },
+    {
+        "text": "you can just put this stuff here.",
+        "start": 1811.342,
+        "duration": 1.37
+    },
+    {
+        "text": "Doesn't matter.",
+        "start": 1813.892,
+        "duration": 0.47
+    },
+    {
+        "text": "So this is the interactive plot.",
+        "start": 1815.342,
+        "duration": 1.18
+    },
+    {
+        "text": "This is where I create the renderers.",
+        "start": 1816.562,
+        "duration": 2.84
+    },
+    {
+        "text": "For example, so I have, like\nI said, I have 3 renderers.",
+        "start": 1820.102,
+        "duration": 3.23
+    },
+    {
+        "text": "I learned this trick from Jose.",
+        "start": 1823.792,
+        "duration": 1.265
+    },
+    {
+        "text": "It's actually very nice to\nbe able to specify the render",
+        "start": 1825.352,
+        "duration": 3.64
+    },
+    {
+        "text": "shapes inside the plotter.",
+        "start": 1829.002,
+        "duration": 1.92
+    },
+    {
+        "text": "I used to do it because this\nshape here takes different",
+        "start": 1831.112,
+        "duration": 4.37
+    },
+    {
+        "text": "ways of defining the renderers.",
+        "start": 1835.482,
+        "duration": 2.02
+    },
+    {
+        "text": "You could do.",
+        "start": 1837.582,
+        "duration": 0.53
+    },
+    {
+        "text": "to\u2026",
+        "start": 1838.782,
+        "duration": 0.58
+    },
+    {
+        "text": "a forward slash 1, it will just give\nyou three renderers, it will split it",
+        "start": 1840.692,
+        "duration": 4.33
+    },
+    {
+        "text": "into three views, and then two on the\ntop and one at the bottom, or\u2026 there",
+        "start": 1845.102,
+        "duration": 6.06
+    },
+    {
+        "text": "are different ways you can specify the\nshapes, but this is actually very useful.",
+        "start": 1851.162,
+        "duration": 4.9
+    },
+    {
+        "text": "renderer areas, you can say,\nokay, my first render is the whole",
+        "start": 1858.512,
+        "duration": 4.49
+    },
+    {
+        "text": "screen, 00211, and then you can\nhave two more renderers, like this.",
+        "start": 1863.002,
+        "duration": 4.12
+    },
+    {
+        "text": "the things that I'm defining here,\nand I usually just define all of",
+        "start": 1869.162,
+        "duration": 3.11
+    },
+    {
+        "text": "them, except for maybe this one.",
+        "start": 1872.272,
+        "duration": 2.28
+    },
+    {
+        "text": "Which is the YCB mesh loader.",
+        "start": 1875.822,
+        "duration": 2.06
+    },
+    {
+        "text": "This is\u2026 I only use this when I want\nto load a YCB object from the dataset.",
+        "start": 1878.072,
+        "duration": 6.06
+    },
+    {
+        "text": "Not something that\u2026 not a Monty\nmodel, but rather a YCB object.",
+        "start": 1884.462,
+        "duration": 4.9
+    },
+    {
+        "text": "It's a class that makes it very easy.",
+        "start": 1890.752,
+        "duration": 1.79
+    },
+    {
+        "text": "You just give it the graph\nobject name, and it will just",
+        "start": 1892.542,
+        "duration": 2.74
+    },
+    {
+        "text": "return to you a video mesh.",
+        "start": 1895.442,
+        "duration": 1.52
+    },
+    {
+        "text": "Data parser, this takes a path to the\u2026\nto the log file, the JSON log file.",
+        "start": 1899.212,
+        "duration": 4.95
+    },
+    {
+        "text": "publisher, this is the PubSub\npublisher, and this will be shared",
+        "start": 1905.722,
+        "duration": 4.07
+    },
+    {
+        "text": "with all of the widgets later on,",
+        "start": 1909.792,
+        "duration": 1.34
+    },
+    {
+        "text": "that's how they communicate together.",
+        "start": 1913.602,
+        "duration": 1.41
+    },
+    {
+        "text": "They all have access to this event bus,\nthen they can all publish and subscribe",
+        "start": 1916.002,
+        "duration": 3.99
+    },
+    {
+        "text": "to the same topics and all of that.",
+        "start": 1919.992,
+        "duration": 1.37
+    },
+    {
+        "text": "the plotter is a veto plotter,\nthat takes the renderer areas.",
+        "start": 1922.672,
+        "duration": 4.35
+    },
+    {
+        "text": "The scheduler is, the debouncer, the",
+        "start": 1927.782,
+        "duration": 2.42
+    },
+    {
+        "text": "debounce, scheduler thing.",
+        "start": 1932.262,
+        "duration": 1.22
+    },
+    {
+        "text": "I will talk about it in a minute or so.",
+        "start": 1934.052,
+        "duration": 2.52
+    },
+    {
+        "text": "And then, after you define\nall of these, you want to show",
+        "start": 1939.012,
+        "duration": 3.65
+    },
+    {
+        "text": "the renderers that you have.",
+        "start": 1942.772,
+        "duration": 1.11
+    },
+    {
+        "text": "we've defined three renderers, so we\ncan go through them and show them.",
+        "start": 1944.632,
+        "duration": 3.11
+    },
+    {
+        "text": "These renderers, they take, options.",
+        "start": 1948.582,
+        "duration": 3.36
+    },
+    {
+        "text": "first of all, you can do, when\nyou do at 0 or add one, that",
+        "start": 1952.532,
+        "duration": 4.7
+    },
+    {
+        "text": "is basically saying, I want the first\nrender, I want the second render, and",
+        "start": 1957.772,
+        "duration": 3.11
+    },
+    {
+        "text": "In the same order that\nyou defined them here.",
+        "start": 1962.232,
+        "duration": 1.72
+    },
+    {
+        "text": "And then you need to show that",
+        "start": 1966.322,
+        "duration": 1.4
+    },
+    {
+        "text": "renderer,",
+        "start": 1969.922,
+        "duration": 0.01
+    },
+    {
+        "text": "And if you want to show\naxes like these ones.",
+        "start": 1970.252,
+        "duration": 4.07
+    },
+    {
+        "text": "Do you see my screen when I go\nbetween the PowerPoint and the\u2026",
+        "start": 1975.392,
+        "duration": 3.09
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 1979.092,
+        "duration": 0.37
+    },
+    {
+        "text": "Ramy Mounir: Okay, so if you want\nto show axes like these, you need to",
+        "start": 1979.832,
+        "duration": 3.46
+    },
+    {
+        "text": "provide that in the show function?",
+        "start": 1983.292,
+        "duration": 1.81
+    },
+    {
+        "text": "And you can actually show, you\ncan define the ranges for these,",
+        "start": 1986.632,
+        "duration": 4.05
+    },
+    {
+        "text": "like X range, Y range, and so on.",
+        "start": 1990.682,
+        "duration": 1.64
+    },
+    {
+        "text": "I usually put the Y range in between\n1.45 and 1.55, and you probably know why.",
+        "start": 1992.362,
+        "duration": 6.17
+    },
+    {
+        "text": "And basically.",
+        "start": 2000.452,
+        "duration": 1.61
+    },
+    {
+        "text": "You can define a camera as well,\nor you can set reset camera to",
+        "start": 2003.362,
+        "duration": 3.8
+    },
+    {
+        "text": "true, which is basically going to,",
+        "start": 2007.162,
+        "duration": 1.89
+    },
+    {
+        "text": "Reset the camera, and it will\nfind the objects, and it will",
+        "start": 2012.232,
+        "duration": 3.43
+    },
+    {
+        "text": "just reset the camera to a place\nwhere it can see all the objects.",
+        "start": 2015.662,
+        "duration": 2.81
+    },
+    {
+        "text": "I don't\u2026 I don't like to set it unless\nI\u2026 I don't have anything in there, and",
+        "start": 2019.702,
+        "duration": 4.29
+    },
+    {
+        "text": ".\n Niels Leadholm: Wait, the reset\ncamera, so is that something in",
+        "start": 2025.112,
+        "duration": 3.36
+    },
+    {
+        "text": "veto, or something you implemented?",
+        "start": 2028.472,
+        "duration": 2.11
+    },
+    {
+        "text": "Ramy Mounir: That's a veto thing.",
+        "start": 2032.112,
+        "duration": 0.88
+    },
+    {
+        "text": "Niels Leadholm: And did I\nunderstand that correctly?",
+        "start": 2033.602,
+        "duration": 1.47
+    },
+    {
+        "text": "You said it finds something it can see?",
+        "start": 2035.102,
+        "duration": 3.29
+    },
+    {
+        "text": "Ramy Mounir: Yeah, so it will reset\nthe camera to the objects in the",
+        "start": 2039.552,
+        "duration": 3.1
+    },
+    {
+        "text": "scene, or something like that.",
+        "start": 2042.652,
+        "duration": 2.04
+    },
+    {
+        "text": "Right now, we don't really have\nan object, so what it does is",
+        "start": 2045.062,
+        "duration": 4.67
+    },
+    {
+        "text": "just\u2026 it probably just goes to a\ndefault position and focal point.",
+        "start": 2049.732,
+        "duration": 5.8
+    },
+    {
+        "text": "Yeah, so the way that you define\nthose camera parameters is a",
+        "start": 2056.392,
+        "duration": 2.84
+    },
+    {
+        "text": "position and a focal point.",
+        "start": 2059.232,
+        "duration": 1.39
+    },
+    {
+        "text": "A focal point is basically\nwhere it's looking at, and",
+        "start": 2060.632,
+        "duration": 2.31
+    },
+    {
+        "text": "the position is where it is.",
+        "start": 2062.942,
+        "duration": 1.01
+    },
+    {
+        "text": "If there's nothing in there,\nit probably just goes to 000 or",
+        "start": 2064.972,
+        "duration": 2.85
+    },
+    {
+        "text": "001.",
+        "start": 2070.792,
+        "duration": 0.14
+    },
+    {
+        "text": "I like to, especially the main\nplotter, I like to know where it is,",
+        "start": 2070.972,
+        "duration": 4.26
+    },
+    {
+        "text": "so I define the camera, dictionary,\nand I set resetCamp to false.",
+        "start": 2075.332,
+        "duration": 6.35
+    },
+    {
+        "text": "Viviane Clay: For these\u2026",
+        "start": 2084.272,
+        "duration": 0.05
+    },
+    {
+        "text": "Ramy Mounir: is.",
+        "start": 2084.322,
+        "duration": 0.02
+    },
+    {
+        "text": "Viviane Clay: The first one, is that\nthe kind of white background, basically,",
+        "start": 2085.052,
+        "duration": 3.93
+    },
+    {
+        "text": "or what does that correspond to?",
+        "start": 2088.982,
+        "duration": 1.69
+    },
+    {
+        "text": "Hojae Lee: screen.",
+        "start": 2090.672,
+        "duration": 0.34
+    },
+    {
+        "text": "Ramy Mounir: Yeah, the main plotter, which\nis just basically 00211, the whole thing.",
+        "start": 2091.072,
+        "duration": 5.41
+    },
+    {
+        "text": "Viviane Clay: And is there any kind of\nnotion of that it's being nested with",
+        "start": 2097.012,
+        "duration": 3.82
+    },
+    {
+        "text": "the things that are plotted on top of\nit, or is there, no relationship of,",
+        "start": 2100.872,
+        "duration": 3.99
+    },
+    {
+        "text": "this is the parent-child kind of plot?",
+        "start": 2105.032,
+        "duration": 2.86
+    },
+    {
+        "text": "Ramy Mounir: I don't think there\nis a\u2026 I think, Vito treats all of",
+        "start": 2108.732,
+        "duration": 2.983
+    },
+    {
+        "text": "these renderers equal, equally,",
+        "start": 2111.715,
+        "duration": 2.317
+    },
+    {
+        "text": "Viviane Clay: There's just the order\nin which you add them in that order.",
+        "start": 2115.972,
+        "duration": 3.65
+    },
+    {
+        "text": "They are layered on top of each\nother, but there's no dependency on\u2026",
+        "start": 2119.692,
+        "duration": 3.31
+    },
+    {
+        "text": "How they can access each other's\ndata, or anything like that?",
+        "start": 2123.882,
+        "duration": 3.23
+    },
+    {
+        "text": "Ramy Mounir: No.",
+        "start": 2128.782,
+        "duration": 0.6
+    },
+    {
+        "text": "There is no, there's none.",
+        "start": 2129.662,
+        "duration": 1.09
+    },
+    {
+        "text": "Yeah, this is why\u2026 so basically,\nwhen you want to add an object to a",
+        "start": 2131.802,
+        "duration": 4.19
+    },
+    {
+        "text": "specific renderer, you would just say\nself.plotter.add.render, and then .add.",
+        "start": 2135.992,
+        "duration": 4.81
+    },
+    {
+        "text": "You basically\u2026 you're\u2026 you're finding that\nsub-renderer, and you're adding to it.",
+        "start": 2141.122,
+        "duration": 6.08
+    },
+    {
+        "text": "Viviane Clay: Yeah, and if you wouldn't\nadd the very first one, what would happen?",
+        "start": 2147.922,
+        "duration": 4.574
+    },
+    {
+        "text": "Would there just be\u2026",
+        "start": 2152.682,
+        "duration": 1.0
+    },
+    {
+        "text": "Ramy Mounir: It will probably go to the\nfirst renderer, so usually when you don't",
+        "start": 2155.172,
+        "duration": 3.49
+    },
+    {
+        "text": "do .add, I think it just goes to the\nzero, basically, so add zero by default.",
+        "start": 2158.692,
+        "duration": 5.62
+    },
+    {
+        "text": "Viviane Clay: Oh, no, if\nyou would not do the whole,",
+        "start": 2164.892,
+        "duration": 3.95
+    },
+    {
+        "text": "Nick, you don't do the 00211\u2026",
+        "start": 2170.302,
+        "duration": 2.53
+    },
+    {
+        "text": "plot, you only do the two axis windows.",
+        "start": 2173.452,
+        "duration": 3.01
+    },
+    {
+        "text": "do you always need the kind\nof full-screen background?",
+        "start": 2177.092,
+        "duration": 2.85
+    },
+    {
+        "text": "Ramy Mounir: Alright.",
+        "start": 2180.522,
+        "duration": 0.63
+    },
+    {
+        "text": "I don't really know what happens,",
+        "start": 2181.762,
+        "duration": 1.12
+    },
+    {
+        "text": "Yeah, I could try it.",
+        "start": 2183.692,
+        "duration": 1.88
+    },
+    {
+        "text": "I don't know.",
+        "start": 2185.702,
+        "duration": 0.6
+    },
+    {
+        "text": "Viviane Clay: No.",
+        "start": 2186.312,
+        "duration": 0.28
+    },
+    {
+        "text": "Ramy Mounir: Usually,\njust the final uploader.",
+        "start": 2186.982,
+        "duration": 1.62
+    },
+    {
+        "text": "I think it will just go to\u2026",
+        "start": 2188.932,
+        "duration": 1.42
+    },
+    {
+        "text": "It\u2026 you might not have access to, just\nadding objects in\u2026 in that background.",
+        "start": 2191.932,
+        "duration": 5.66
+    },
+    {
+        "text": "Hojae Lee: If you don't define anything,\nit's the full screen, naturally.",
+        "start": 2198.982,
+        "duration": 3.06
+    },
+    {
+        "text": "if you don't have any renderers, you would\nbe using all the defaults, I'm guessing.",
+        "start": 2202.532,
+        "duration": 4.23
+    },
+    {
+        "text": "And then, if you don't have",
+        "start": 2207.392,
+        "duration": 1.32
+    },
+    {
+        "text": "In the render areas, if you\ndon't have the first one, but",
+        "start": 2209.592,
+        "duration": 2.63
+    },
+    {
+        "text": "only have the small screens.",
+        "start": 2212.222,
+        "duration": 1.63
+    },
+    {
+        "text": "then you'll have, a main window\nwith only information on those small",
+        "start": 2214.572,
+        "duration": 4.7
+    },
+    {
+        "text": "screen areas, a little bit awkward.",
+        "start": 2219.272,
+        "duration": 2.54
+    },
+    {
+        "text": "Ramy Mounir: So you wouldn't be able\nto access that, the first plotter,",
+        "start": 2223.212,
+        "duration": 2.53
+    },
+    {
+        "text": "so you can't really add up to it.",
+        "start": 2226.022,
+        "duration": 1.985
+    },
+    {
+        "text": "Hojae Lee: These are just,\nwindows into, data, and they",
+        "start": 2228.192,
+        "duration": 3.15
+    },
+    {
+        "text": "don't have any, relationship\u2026\nit's, 3 computer screens showing.",
+        "start": 2231.342,
+        "duration": 3.68
+    },
+    {
+        "text": "And then you're saying, okay, in\nthe computer\u2026 in my\u2026 in computer",
+        "start": 2237.332,
+        "duration": 2.47
+    },
+    {
+        "text": "one, I want to show this, in\ncomputer 2, I want to show this.",
+        "start": 2239.802,
+        "duration": 2.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 2242.422,
+        "duration": 0.32
+    },
+    {
+        "text": "Viviane Clay: Yeah, okay, so\nthe first one is not treated any",
+        "start": 2243.062,
+        "duration": 3.23
+    },
+    {
+        "text": "different from the other ones.",
+        "start": 2246.292,
+        "duration": 1.38
+    },
+    {
+        "text": "Hojae Lee: Nope.",
+        "start": 2247.772,
+        "duration": 0.37
+    },
+    {
+        "text": "It just happens to be full\nscreen, but, you don't have to.",
+        "start": 2248.372,
+        "duration": 2.56
+    },
+    {
+        "text": "Viviane Clay: Yeah, okay.",
+        "start": 2251.042,
+        "duration": 0.344
+    },
+    {
+        "text": "Hojae Lee: it makes it so that you\ncan, it makes a, overlay feeling,",
+        "start": 2251.772,
+        "duration": 3.55
+    },
+    {
+        "text": "there's, you subdivided it up, but\nit's actually, covering, the second",
+        "start": 2256.192,
+        "duration": 5.97
+    },
+    {
+        "text": "and third one is actually covering from",
+        "start": 2262.162,
+        "duration": 1.75
+    },
+    {
+        "text": "the first one, so\u2026",
+        "start": 2266.182,
+        "duration": 0.704
+    },
+    {
+        "text": "you want to make sure that, like, when\nyou're plotting, it doesn't, But what?",
+        "start": 2266.886,
+        "duration": 3.826
+    },
+    {
+        "text": "paper.",
+        "start": 2271.822,
+        "duration": 0.21
+    },
+    {
+        "text": "Viviane Clay: Okay.",
+        "start": 2272.032,
+        "duration": 1.835
+    },
+    {
+        "text": "Ramy Mounir: Yeah, one other\nthing to, notice here is",
+        "start": 2275.702,
+        "duration": 2.43
+    },
+    {
+        "text": "that I'm setting interactive",
+        "start": 2278.142,
+        "duration": 1.86
+    },
+    {
+        "text": "So the interactive call, basically, once\nyou say that this show, is interactive.",
+        "start": 2281.052,
+        "duration": 7.58
+    },
+    {
+        "text": "it will stop, processing any code after\nthat, so basically any code after\u2026 any",
+        "start": 2289.362,
+        "duration": 6.36
+    },
+    {
+        "text": "changes to the UI is going to only depend\non the events, so if something changes,",
+        "start": 2295.722,
+        "duration": 4.23
+    },
+    {
+        "text": "if you interact with something, but it's,",
+        "start": 2299.952,
+        "duration": 2.4
+    },
+    {
+        "text": "You just basically\u2026 this would be the\nlast\u2026 when you set it to interact, this",
+        "start": 2304.502,
+        "duration": 3.01
+    },
+    {
+        "text": "would be the last statement here, where\nanything after that is not going to be,",
+        "start": 2307.512,
+        "duration": 4.99
+    },
+    {
+        "text": "Used for anything, because\nthe code really stops here.",
+        "start": 2314.232,
+        "duration": 2.49
+    },
+    {
+        "text": "This is why I'm making the\nfirst two not interactive, and",
+        "start": 2317.912,
+        "duration": 2.85
+    },
+    {
+        "text": "then the last one interactive.",
+        "start": 2320.842,
+        "duration": 1.11
+    },
+    {
+        "text": "any changes to the UI or anything\nlike that happens after this line",
+        "start": 2323.882,
+        "duration": 4.22
+    },
+    {
+        "text": "is going to be through the events.",
+        "start": 2328.152,
+        "duration": 1.83
+    },
+    {
+        "text": "a slider changed that calls a callback,\nand then something that changes, but",
+        "start": 2330.452,
+        "duration": 4.51
+    },
+    {
+        "text": "the interactive call\u2026 when you set this,\nmake sure this is the last statement.",
+        "start": 2335.012,
+        "duration": 5.4
+    },
+    {
+        "text": "Okay, so that's basically\nhow you get\u2026 This\u2026",
+        "start": 2343.552,
+        "duration": 4.4
+    },
+    {
+        "text": "the setup here.",
+        "start": 2348.572,
+        "duration": 0.88
+    },
+    {
+        "text": "You have one plotter, and then\nyou have two on top of that.",
+        "start": 2349.532,
+        "duration": 3.22
+    },
+    {
+        "text": "So let's start with creating\nthe first widget, which is a",
+        "start": 2355.132,
+        "duration": 3.55
+    },
+    {
+        "text": "slider, the episode slider.",
+        "start": 2358.682,
+        "duration": 1.18
+    },
+    {
+        "text": "I'm showing down here, this is a\nvideo showing the topics, I'm just,",
+        "start": 2361.042,
+        "duration": 5.95
+    },
+    {
+        "text": "for the sake of vlogging, I'm\njust showing the topics that get",
+        "start": 2368.192,
+        "duration": 2.49
+    },
+    {
+        "text": "published when I change the slider.",
+        "start": 2371.282,
+        "duration": 1.53
+    },
+    {
+        "text": "This is not what we eventually\nwant, but this is just a demo so",
+        "start": 2374.072,
+        "duration": 4.56
+    },
+    {
+        "text": "that I could show the benefits\nof debouncing and deduplicating.",
+        "start": 2378.632,
+        "duration": 3.78
+    },
+    {
+        "text": "But that's what ends up happening\nwhen you just define this widget.",
+        "start": 2382.932,
+        "duration": 3.3
+    },
+    {
+        "text": "So if we want to do this,\nlet's go to the commit.",
+        "start": 2387.362,
+        "duration": 2.61
+    },
+    {
+        "text": "For it.",
+        "start": 2390.982,
+        "duration": 0.46
+    },
+    {
+        "text": "From a very high level, you'll see that\nI have a class that I added, Episode",
+        "start": 2392.942,
+        "duration": 5.03
+    },
+    {
+        "text": "SliderWidgetOps.",
+        "start": 2399.992,
+        "duration": 0.29
+    },
+    {
+        "text": "You can name it whatever you want, but\nit's\u2026 it needs to have some functions.",
+        "start": 2400.282,
+        "duration": 3.73
+    },
+    {
+        "text": "And then I modified the interactive\nplot so that I could add this widget.",
+        "start": 2405.802,
+        "duration": 3.26
+    },
+    {
+        "text": "the way I do that is\u2026 the only\nthing I added here is, this\u2026",
+        "start": 2410.272,
+        "duration": 5.03
+    },
+    {
+        "text": "piece of code that\u2026 basically,\nI have a function that says",
+        "start": 2415.512,
+        "duration": 3.65
+    },
+    {
+        "text": "createWidgets, and I added the\nwidget here in this specific pattern.",
+        "start": 2419.202,
+        "duration": 5.43
+    },
+    {
+        "text": "We'll talk about it in a second.",
+        "start": 2424.932,
+        "duration": 2.13
+    },
+    {
+        "text": "But I also go through the\nwidgets, and I call the add",
+        "start": 2428.852,
+        "duration": 2.65
+    },
+    {
+        "text": "function on that widget class.",
+        "start": 2431.502,
+        "duration": 1.57
+    },
+    {
+        "text": "And if I want to set a state for that\nwidget, let's say I want to set the",
+        "start": 2435.242,
+        "duration": 3.36
+    },
+    {
+        "text": "episode slider to zero at the beginning\nof the code, I could do that here as well.",
+        "start": 2438.602,
+        "duration": 3.19
+    },
+    {
+        "text": "You can do whatever you\nwant, this isn't just my,",
+        "start": 2443.682,
+        "duration": 2.66
+    },
+    {
+        "text": "My way of doing it.",
+        "start": 2448.382,
+        "duration": 0.84
+    },
+    {
+        "text": "in the create widgets.",
+        "start": 2451.312,
+        "duration": 0.83
+    },
+    {
+        "text": "Every widget that we're gonna add is\njust going to be a block like this.",
+        "start": 2453.982,
+        "duration": 3.19
+    },
+    {
+        "text": "I am\u2026 there's a widget class.",
+        "start": 2457.222,
+        "duration": 1.83
+    },
+    {
+        "text": "Let me just zoom in.",
+        "start": 2459.332,
+        "duration": 1.29
+    },
+    {
+        "text": "There's a widget class.",
+        "start": 2461.972,
+        "duration": 1.16
+    },
+    {
+        "text": "These are types, we can\njust ignore them for now.",
+        "start": 2464.182,
+        "duration": 2.63
+    },
+    {
+        "text": "I'm saying that the widget is a slider,\nand that the state of this widget should",
+        "start": 2466.882,
+        "duration": 4.45
+    },
+    {
+        "text": "be an int, but we can ignore that for\nnow, it's just for type, matching.",
+        "start": 2471.342,
+        "duration": 4.94
+    },
+    {
+        "text": "So the widget class takes five things.",
+        "start": 2478.852,
+        "duration": 1.86
+    },
+    {
+        "text": "It takes a widget ops.",
+        "start": 2482.232,
+        "duration": 1.49
+    },
+    {
+        "text": "that's the most important\npart of the widget, really.",
+        "start": 2484.212,
+        "duration": 2.95
+    },
+    {
+        "text": "That is what customizes the widget.",
+        "start": 2488.022,
+        "duration": 1.67
+    },
+    {
+        "text": "It just basically\u2026 it says, this is\na slider, and this is how we add it,",
+        "start": 2489.692,
+        "duration": 5.394
+    },
+    {
+        "text": "this is how we remove it, this is\nhow we extract the state, or set its",
+        "start": 2495.086,
+        "duration": 3.776
+    },
+    {
+        "text": "state, and also these are the topics\nand everything, when you define the",
+        "start": 2498.872,
+        "duration": 5.211
+    },
+    {
+        "text": "widget ops, that's the only thing that\nreally makes this widget that widget.",
+        "start": 2504.083,
+        "duration": 0.004
+    },
+    {
+        "text": "This is, the brains of the widget.",
+        "start": 2504.087,
+        "duration": 0.005
+    },
+    {
+        "text": "And that is the class that we defined at",
+        "start": 2504.092,
+        "duration": 0.4
+    },
+    {
+        "text": "the top.",
+        "start": 2518.112,
+        "duration": 0.46
+    },
+    {
+        "text": "we'll get to that in a second.",
+        "start": 2520.362,
+        "duration": 1.1
+    },
+    {
+        "text": "But also, the widget class\ntakes the event bus, which is",
+        "start": 2521.832,
+        "duration": 3.07
+    },
+    {
+        "text": "the publisher and subscriber.",
+        "start": 2524.902,
+        "duration": 1.46
+    },
+    {
+        "text": "It also takes the scheduler for the\ndebouncing and the only debouncing.",
+        "start": 2526.372,
+        "duration": 6.47
+    },
+    {
+        "text": "And then some other, variables.",
+        "start": 2534.102,
+        "duration": 1.99
+    },
+    {
+        "text": "I'll talk about these in a second.",
+        "start": 2537.232,
+        "duration": 1.29
+    },
+    {
+        "text": "But let's visit this one, because this is\nthe most important part of the budget ops.",
+        "start": 2539.402,
+        "duration": 3.9
+    },
+    {
+        "text": "as the name suggests, this is\na widget operations, basically.",
+        "start": 2546.022,
+        "duration": 3.63
+    },
+    {
+        "text": "And, it's a class.",
+        "start": 2550.122,
+        "duration": 3.3
+    },
+    {
+        "text": "that's\u2026",
+        "start": 2554.802,
+        "duration": 0.75
+    },
+    {
+        "text": "So this class doesn't really need to have,",
+        "start": 2557.592,
+        "duration": 2.05
+    },
+    {
+        "text": "the way that I've created\nit, it doesn't really\u2026",
+        "start": 2561.602,
+        "duration": 2.48
+    },
+    {
+        "text": "Trying to find the\u2026",
+        "start": 2567.532,
+        "duration": 1.67
+    },
+    {
+        "text": "So, the widget ops doesn't\u2026 they\ndon't really have, any requirements,",
+        "start": 2576.422,
+        "duration": 4.31
+    },
+    {
+        "text": "in them, so you could actually\u2026 the\nprotocol for widget ops is empty.",
+        "start": 2581.122,
+        "duration": 3.77
+    },
+    {
+        "text": "So if you go to WidgetOps, you'll\nsee that the protocol is empty here.",
+        "start": 2585.052,
+        "duration": 5.84
+    },
+    {
+        "text": "But the reason I'm defining it this\nway is because I'm adding all the",
+        "start": 2590.892,
+        "duration": 4.25
+    },
+    {
+        "text": "other stuff as capabilities on top\nof that, because some would just\u2026",
+        "start": 2595.162,
+        "duration": 3.97
+    },
+    {
+        "text": "don't require you to\u2026 they\ndon't need to publish.",
+        "start": 2599.792,
+        "duration": 3.42
+    },
+    {
+        "text": "Other widgets, they need to\u2026\nthey need to publish, but they",
+        "start": 2603.262,
+        "duration": 3.08
+    },
+    {
+        "text": "don't need to listen to topics.",
+        "start": 2606.342,
+        "duration": 1.78
+    },
+    {
+        "text": "Some widgets, they don't\u2026 you don't\nneed to set state and extract state,",
+        "start": 2608.742,
+        "duration": 3.7
+    },
+    {
+        "text": "because they don't really have a state.",
+        "start": 2612.442,
+        "duration": 1.3
+    },
+    {
+        "text": "all of these are capabilities\nthat, if they exist\u2026 what",
+        "start": 2614.572,
+        "duration": 3.84
+    },
+    {
+        "text": "happens is that when we're,",
+        "start": 2618.422,
+        "duration": 1.41
+    },
+    {
+        "text": "type matching.",
+        "start": 2621.952,
+        "duration": 0.69
+    },
+    {
+        "text": "It will look for if this function is\navailable with this signature, and",
+        "start": 2623.062,
+        "duration": 4.31
+    },
+    {
+        "text": "if it does, then this widget ops is\nalso an instance of supports add.",
+        "start": 2627.372,
+        "duration": 4.76
+    },
+    {
+        "text": "And if that is the case, then\nit will do different stuff.",
+        "start": 2633.422,
+        "duration": 2.86
+    },
+    {
+        "text": "So if you have ads, then it will end up,",
+        "start": 2636.792,
+        "duration": 3.88
+    },
+    {
+        "text": "calling the add function\nand doing some stuff.",
+        "start": 2641.342,
+        "duration": 2.06
+    },
+    {
+        "text": "If you have, has\u2026 if you have\nstateToMessages function, it will",
+        "start": 2643.782,
+        "duration": 5.78
+    },
+    {
+        "text": "basically publish the messages that\nyou\u2026 that you put in state to messages.",
+        "start": 2649.572,
+        "duration": 4.41
+    },
+    {
+        "text": "Otherwise, it really\ndoesn't publish anything.",
+        "start": 2654.032,
+        "duration": 2.49
+    },
+    {
+        "text": "Let me go back here and\ngive you an example.",
+        "start": 2659.322,
+        "duration": 2.4
+    },
+    {
+        "text": "Niels Leadholm: And I guess, yeah, at\na high level, that\u2026 this is useful for,",
+        "start": 2661.992,
+        "duration": 4.59
+    },
+    {
+        "text": "Type checking.",
+        "start": 2669.162,
+        "duration": 0.08
+    },
+    {
+        "text": "Ramy Mounir: It is type checking, but I'm",
+        "start": 2669.242,
+        "duration": 3.88
+    },
+    {
+        "text": "using it as a way of,",
+        "start": 2675.532,
+        "duration": 2.41
+    },
+    {
+        "text": "So I'm using type checking to also dictate\nthe behavior of the widget, because if it",
+        "start": 2679.822,
+        "duration": 5.54
+    },
+    {
+        "text": "doesn't have\u2026 so here's how I'm doing it.",
+        "start": 2685.492,
+        "duration": 2.72
+    },
+    {
+        "text": "if it types\u2026 if it type checks against,\nfor example, if it\u2026 if it finds this",
+        "start": 2689.352,
+        "duration": 4.13
+    },
+    {
+        "text": "function in there, I can use\u2026 in the\nwidget class, I can say something like\u2026",
+        "start": 2693.482,
+        "duration": 4.81
+    },
+    {
+        "text": "If it's not an instance of hasUpdaters.",
+        "start": 2702.102,
+        "duration": 1.65
+    },
+    {
+        "text": "So if it type checks against\nhasUptators and successfully finds",
+        "start": 2704.582,
+        "duration": 3.51
+    },
+    {
+        "text": "that function, then it will do stuff.",
+        "start": 2708.092,
+        "duration": 1.62
+    },
+    {
+        "text": "If it can't find that function, it will\njust basically return an empty set.",
+        "start": 2709.732,
+        "duration": 2.95
+    },
+    {
+        "text": "So you can actually use\nthose, in the widget.",
+        "start": 2713.072,
+        "duration": 3.24
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 2716.872,
+        "duration": 0.38
+    },
+    {
+        "text": "Ramy Mounir: Yeah.",
+        "start": 2719.002,
+        "duration": 0.23
+    },
+    {
+        "text": "Niels Leadholm: Thanks.",
+        "start": 2719.732,
+        "duration": 0.37
+    },
+    {
+        "text": "Ramy Mounir: True.",
+        "start": 2721.712,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay, I think we'll just take some\ntime to go through the first one, and",
+        "start": 2723.632,
+        "duration": 4.81
+    },
+    {
+        "text": "then the next one is just going to be\u2026\nwe'll just go\u2026 we'll talk about the",
+        "start": 2728.442,
+        "duration": 4.08
+    },
+    {
+        "text": "modifications, the changes, basically, of,",
+        "start": 2732.532,
+        "duration": 2.0
+    },
+    {
+        "text": "What the step is, how the\nstep is different from the",
+        "start": 2735.762,
+        "duration": 2.64
+    },
+    {
+        "text": "episode, and all the other ones.",
+        "start": 2738.412,
+        "duration": 1.5
+    },
+    {
+        "text": "I create a function here, create locators,\nyou don't need that, you can create it",
+        "start": 2744.542,
+        "duration": 3.49
+    },
+    {
+        "text": "in it anywhere you\u2026 any way you like it.",
+        "start": 2748.312,
+        "duration": 3.51
+    },
+    {
+        "text": "So this is basically where\nI define the locators.",
+        "start": 2752.142,
+        "duration": 2.31
+    },
+    {
+        "text": "In this one, I only have\nonly a single locator.",
+        "start": 2756.482,
+        "duration": 3.29
+    },
+    {
+        "text": "that just has one path, one step, which is\nepisode, because I'm going to use that to",
+        "start": 2761.252,
+        "duration": 5.8
+    },
+    {
+        "text": "query how many episodes we have, so that\nI can define the episode, the range of the",
+        "start": 2767.052,
+        "duration": 5.66
+    },
+    {
+        "text": "slider.",
+        "start": 2775.442,
+        "duration": 0.01
+    },
+    {
+        "text": "So this is a locator, and it just\ngoes into self.underscore locators,",
+        "start": 2775.462,
+        "duration": 4.11
+    },
+    {
+        "text": "and it just stays there so that I\ncould use it throughout the code.",
+        "start": 2780.292,
+        "duration": 2.42
+    },
+    {
+        "text": "I have add.",
+        "start": 2785.112,
+        "duration": 1.16
+    },
+    {
+        "text": "and I have extract state, and I have\nsetState, and state to messages.",
+        "start": 2786.942,
+        "duration": 4.54
+    },
+    {
+        "text": "These are the main functions that I need.",
+        "start": 2791.632,
+        "duration": 2.36
+    },
+    {
+        "text": "Add is basically\u2026",
+        "start": 2795.432,
+        "duration": 1.54
+    },
+    {
+        "text": "this is where we add the\nwidget to the plotter, right?",
+        "start": 2797.702,
+        "duration": 4.51
+    },
+    {
+        "text": "If add exists, it's going to call\nthat function, and that only happens",
+        "start": 2802.992,
+        "duration": 4.95
+    },
+    {
+        "text": "at the beginning, when we do this.",
+        "start": 2807.942,
+        "duration": 3.82
+    },
+    {
+        "text": "So we call add, it's going\nto look for this function.",
+        "start": 2813.952,
+        "duration": 2.65
+    },
+    {
+        "text": "If it exists, it's going to call it.",
+        "start": 2816.632,
+        "duration": 1.96
+    },
+    {
+        "text": "And what ends up happening here is that\u2026\nand of course, every widget is different,",
+        "start": 2819.082,
+        "duration": 3.61
+    },
+    {
+        "text": "but the way that I wanted to do this\nis that I'm going to use the locator.",
+        "start": 2822.752,
+        "duration": 4.42
+    },
+    {
+        "text": "I'm going to get that locator for\nthe episode, and I'm going to query",
+        "start": 2829.702,
+        "duration": 3.19
+    },
+    {
+        "text": "basically how many episodes that we\nhave, and I can use that to modify",
+        "start": 2834.982,
+        "duration": 4.76
+    },
+    {
+        "text": "the X max for the range of the slider,\nand then I can use this VDO function",
+        "start": 2839.742,
+        "duration": 6.55
+    },
+    {
+        "text": "that adds a slider to this plotter.",
+        "start": 2846.292,
+        "duration": 2.08
+    },
+    {
+        "text": "I'm using plotter 0, because\nthis is where I want my",
+        "start": 2848.382,
+        "duration": 2.5
+    },
+    {
+        "text": "episode.",
+        "start": 2855.982,
+        "duration": 0.06
+    },
+    {
+        "text": "Addslider requires a callback function,\nbecause that's basically when the slider",
+        "start": 2856.162,
+        "duration": 4.294
+    },
+    {
+        "text": "changes, it's going to call this callback.",
+        "start": 2860.662,
+        "duration": 1.95
+    },
+    {
+        "text": "So my widget class\u2026",
+        "start": 2864.212,
+        "duration": 1.32
+    },
+    {
+        "text": "creates a callback for it, and\nalways you're going to have to\u2026 in",
+        "start": 2866.042,
+        "duration": 4.29
+    },
+    {
+        "text": "the add signature, it's just going\nto give you a callback function,",
+        "start": 2870.332,
+        "duration": 2.45
+    },
+    {
+        "text": "so you can directly pass it here.",
+        "start": 2872.782,
+        "duration": 1.44
+    },
+    {
+        "text": "What happens is that when the\u2026",
+        "start": 2874.702,
+        "duration": 1.86
+    },
+    {
+        "text": "when the slider changes, it's going\nto call this callback, and that",
+        "start": 2877.392,
+        "duration": 4.01
+    },
+    {
+        "text": "basically\u2026 the widget class now knows\nthat the slider value has changed,",
+        "start": 2881.402,
+        "duration": 3.44
+    },
+    {
+        "text": "and it will do stuff and publish\nstuff if it needs to, or whatever.",
+        "start": 2884.852,
+        "duration": 4.25
+    },
+    {
+        "text": "it just needs to go through this,",
+        "start": 2889.872,
+        "duration": 1.64
+    },
+    {
+        "text": "through my callback function that\nI'm defining in the widget class.",
+        "start": 2892.752,
+        "duration": 3.0
+    },
+    {
+        "text": "This is\u2026 so yeah, if you're just\ndefining a slider, you could just pass",
+        "start": 2897.482,
+        "duration": 4.02
+    },
+    {
+        "text": "this callback to the addSliderCallback\nfunction, and it will just work fine.",
+        "start": 2901.502,
+        "duration": 3.85
+    },
+    {
+        "text": "I have to do it this way, because\nI need to debounce those messages.",
+        "start": 2906.282,
+        "duration": 4.37
+    },
+    {
+        "text": "I will talk about that\nin a second, debouncing.",
+        "start": 2911.172,
+        "duration": 2.9
+    },
+    {
+        "text": "But yeah, so this is how you\nadd, and then you render.",
+        "start": 2917.382,
+        "duration": 2.53
+    },
+    {
+        "text": "If you're changing anything to the\nvisualization, you just need to",
+        "start": 2920.502,
+        "duration": 4.29
+    },
+    {
+        "text": "render at the end, of changing that.",
+        "start": 2924.792,
+        "duration": 2.0
+    },
+    {
+        "text": "So that is ads.",
+        "start": 2928.712,
+        "duration": 1.05
+    },
+    {
+        "text": "There's extract.",
+        "start": 2931.322,
+        "duration": 1.27
+    },
+    {
+        "text": "I have helper functions for the\nones that we use a lot, like",
+        "start": 2933.412,
+        "duration": 5.36
+    },
+    {
+        "text": "slider state, or\u2026 so setting slider\nstate, or extracting slider state.",
+        "start": 2941.082,
+        "duration": 1.9
+    },
+    {
+        "text": "I have helper functions for those,\nso you could just use those.",
+        "start": 2943.292,
+        "duration": 2.43
+    },
+    {
+        "text": "That basically just takes the\nwidget, and it knows how to use the",
+        "start": 2945.962,
+        "duration": 3.39
+    },
+    {
+        "text": "If it's a slider, it knows how to extract\nthe state from there, and if it's a\u2026",
+        "start": 2950.082,
+        "duration": 4.09
+    },
+    {
+        "text": "And then it also, for the\nsetSliderState, it takes a widget",
+        "start": 2954.882,
+        "duration": 4.01
+    },
+    {
+        "text": "and a value, and it knows how to,",
+        "start": 2958.952,
+        "duration": 1.89
+    },
+    {
+        "text": "set the slider state.",
+        "start": 2963.182,
+        "duration": 1.0
+    },
+    {
+        "text": "It's just a bunch of\nchecks and stuff like that.",
+        "start": 2964.522,
+        "duration": 2.92
+    },
+    {
+        "text": "And then the state to messages.",
+        "start": 2972.362,
+        "duration": 1.25
+    },
+    {
+        "text": "There's really nothing here.",
+        "start": 2973.712,
+        "duration": 1.3
+    },
+    {
+        "text": "if you're going to rely on the\nstate, then you need to tell it",
+        "start": 2975.792,
+        "duration": 2.47
+    },
+    {
+        "text": "how to extract the state, right?",
+        "start": 2978.372,
+        "duration": 2.36
+    },
+    {
+        "text": "if you're going to\u2026 if what you're going\nto publish relies on this state that",
+        "start": 2981.222,
+        "duration": 5.39
+    },
+    {
+        "text": "you're getting from the widget class.",
+        "start": 2986.612,
+        "duration": 1.49
+    },
+    {
+        "text": "then\u2026",
+        "start": 2988.682,
+        "duration": 0.61
+    },
+    {
+        "text": "You need to tell it, basically,\nhow to extract this state.",
+        "start": 2991.272,
+        "duration": 3.09
+    },
+    {
+        "text": "So you need to have an\nextractState function as well,",
+        "start": 2994.412,
+        "duration": 2.77
+    },
+    {
+        "text": "because that basically just",
+        "start": 2997.492,
+        "duration": 1.56
+    },
+    {
+        "text": "What happens here is that when it's\nready to publish, it will look\u2026 it",
+        "start": 2999.992,
+        "duration": 4.45
+    },
+    {
+        "text": "will extract the state using the\nextract state, and then it will send",
+        "start": 3004.442,
+        "duration": 3.02
+    },
+    {
+        "text": "you the state that it has extracted.",
+        "start": 3007.462,
+        "duration": 2.04
+    },
+    {
+        "text": "you could just\u2026 use that.",
+        "start": 3010.852,
+        "duration": 1.82
+    },
+    {
+        "text": "Or you could just have,",
+        "start": 3012.872,
+        "duration": 1.16
+    },
+    {
+        "text": "You can define this value\nhowever you want, really.",
+        "start": 3016.352,
+        "duration": 2.58
+    },
+    {
+        "text": "This is the way I'm doing\nit within the widget class.",
+        "start": 3019.742,
+        "duration": 1.77
+    },
+    {
+        "text": "Viviane Clay: When you\u2026 when should\nyou pass something in that state",
+        "start": 3022.982,
+        "duration": 2.82
+    },
+    {
+        "text": "variable versus just doing self.",
+        "start": 3025.922,
+        "duration": 1.95
+    },
+    {
+        "text": "Whatever on the class.",
+        "start": 3029.182,
+        "duration": 1.3
+    },
+    {
+        "text": "Ramy Mounir: I think that.",
+        "start": 3031.032,
+        "duration": 0.08
+    },
+    {
+        "text": "Viviane Clay: Some of your other\nexample code you did solve.",
+        "start": 3031.962,
+        "duration": 2.23
+    },
+    {
+        "text": "That episode or something?",
+        "start": 3034.702,
+        "duration": 1.0
+    },
+    {
+        "text": "Ramy Mounir: Yeah, if the\u2026\nif this widget has a state.",
+        "start": 3037.052,
+        "duration": 4.08
+    },
+    {
+        "text": "Sometimes widgets can have multiple\nstates, so I\u2026 I tried not to\u2026",
+        "start": 3042.092,
+        "duration": 4.57
+    },
+    {
+        "text": "So for simple widgets, like an episode,\nit's easy to just use this functionality.",
+        "start": 3048.432,
+        "duration": 4.78
+    },
+    {
+        "text": "It would extract state and define\nexactly how to extract the state",
+        "start": 3053.302,
+        "duration": 3.34
+    },
+    {
+        "text": "from the slider, and then it will\njust provide that state here.",
+        "start": 3056.642,
+        "duration": 3.19
+    },
+    {
+        "text": "Sometimes the state is a bit\nmore complicated than that.",
+        "start": 3060.632,
+        "duration": 2.15
+    },
+    {
+        "text": "Let's say you're passing a\u2026 you're\nselecting a hypothesis, and you're",
+        "start": 3062.982,
+        "duration": 4.41
+    },
+    {
+        "text": "sending a whole pandas data frame,\nor a series, or something like that.",
+        "start": 3067.392,
+        "duration": 5.11
+    },
+    {
+        "text": "then you can just ignore the state,\nand you can just pass in a state that",
+        "start": 3073.132,
+        "duration": 5.46
+    },
+    {
+        "text": "is defined within the widget ops.",
+        "start": 3078.592,
+        "duration": 1.55
+    },
+    {
+        "text": "So you can define your own states\nwithin widget ops, and you can say.",
+        "start": 3080.382,
+        "duration": 2.89
+    },
+    {
+        "text": "when I'm publishing, I just want\nto say, if that selection has been",
+        "start": 3084.252,
+        "duration": 5.52
+    },
+    {
+        "text": "made, just return self.thistate.",
+        "start": 3089.772,
+        "duration": 2.08
+    },
+    {
+        "text": "Whatever you put here in the\nvalue is the message that's",
+        "start": 3092.642,
+        "duration": 2.105
+    },
+    {
+        "text": "going to be sent, basically.",
+        "start": 3094.812,
+        "duration": 1.41
+    },
+    {
+        "text": "it could be the states, if\nyou're relying on the widget, to\u2026",
+        "start": 3097.752,
+        "duration": 3.57
+    },
+    {
+        "text": "extract that for you, or it\ncould be, something else.",
+        "start": 3102.212,
+        "duration": 3.74
+    },
+    {
+        "text": "You could put in true or\nfalse, whatever you want.",
+        "start": 3105.992,
+        "duration": 2.3
+    },
+    {
+        "text": "Viviane Clay: Crew.",
+        "start": 3109.122,
+        "duration": 0.34
+    },
+    {
+        "text": "Ramy Mounir: that's\nreally it for the episode.",
+        "start": 3112.092,
+        "duration": 1.66
+    },
+    {
+        "text": "We've edited here.",
+        "start": 3117.342,
+        "duration": 0.81
+    },
+    {
+        "text": "And we've defined the widget ops.",
+        "start": 3119.402,
+        "duration": 1.98
+    },
+    {
+        "text": "All of the other ones are going\nto be just this same pattern.",
+        "start": 3121.632,
+        "duration": 3.09
+    },
+    {
+        "text": "I'm going to add another widget here.",
+        "start": 3124.742,
+        "duration": 1.7
+    },
+    {
+        "text": "And I'm going to define it,\nit's widget ops, and that's it.",
+        "start": 3126.962,
+        "duration": 3.71
+    },
+    {
+        "text": "So if you want to extract some\nfunctionality, you can just take",
+        "start": 3130.832,
+        "duration": 2.36
+    },
+    {
+        "text": "this whole widget ops, move it\nto another plot, and that's it.",
+        "start": 3133.352,
+        "duration": 2.69
+    },
+    {
+        "text": "That's how I created\nthis tutorial, basically.",
+        "start": 3136.392,
+        "duration": 2.43
+    },
+    {
+        "text": "Okay, so let's go\u2026 yeah, so let me also\nexplain the debouncing a little bit.",
+        "start": 3142.072,
+        "duration": 4.6
+    },
+    {
+        "text": "deduplicating.",
+        "start": 3148.162,
+        "duration": 0.61
+    },
+    {
+        "text": "first, deduplicating.",
+        "start": 3149.022,
+        "duration": 1.03
+    },
+    {
+        "text": "the difference between this and what we\nhad before is that here, in the widget",
+        "start": 3152.582,
+        "duration": 4.6
+    },
+    {
+        "text": "class, I'm setting deduplicate to true,\nwhich means if the state is the same.",
+        "start": 3157.222,
+        "duration": 5.44
+    },
+    {
+        "text": "it just doesn't, send\na message again, right?",
+        "start": 3163.302,
+        "duration": 3.59
+    },
+    {
+        "text": "because,",
+        "start": 3167.252,
+        "duration": 0.46
+    },
+    {
+        "text": "That state can,",
+        "start": 3169.372,
+        "duration": 0.84
+    },
+    {
+        "text": "before, what was happening is, even\nthough we're moving it like this, the",
+        "start": 3172.232,
+        "duration": 5.6
+    },
+    {
+        "text": "state is the same, and it's still just\npublishing messages, and that if you",
+        "start": 3177.842,
+        "duration": 4.6
+    },
+    {
+        "text": "have an expensive callback function\nthat is triggered by this event.",
+        "start": 3182.442,
+        "duration": 4.28
+    },
+    {
+        "text": "Then it's going to become, non-responsive.",
+        "start": 3187.262,
+        "duration": 2.52
+    },
+    {
+        "text": "if you don't want that to happen,\nyou can set deduplicate to true.",
+        "start": 3191.932,
+        "duration": 3.11
+    },
+    {
+        "text": "And it will just only send a\nmessage after the state has changed.",
+        "start": 3195.922,
+        "duration": 4.04
+    },
+    {
+        "text": "Niels Leadholm: Yeah, I guess in\nthis case, because it's not that",
+        "start": 3200.772,
+        "duration": 3.83
+    },
+    {
+        "text": "clear in the video, the 0 to 1\nonly changes at the midpoint.",
+        "start": 3204.602,
+        "duration": 4.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 3208.892,
+        "duration": 0.11
+    },
+    {
+        "text": "Ramy Mounir: Yeah.",
+        "start": 3209.922,
+        "duration": 0.26
+    },
+    {
+        "text": "Niels Leadholm: So yeah, for the\nfirst half of the bar, it's all zero.",
+        "start": 3210.182,
+        "duration": 4.45
+    },
+    {
+        "text": "Ramy Mounir: Yep, but\u2026",
+        "start": 3214.982,
+        "duration": 0.78
+    },
+    {
+        "text": "Niels Leadholm: As you showed in the\nexample, it was just because the bar",
+        "start": 3216.052,
+        "duration": 2.64
+    },
+    {
+        "text": "was moving, it was publishing loads.",
+        "start": 3218.692,
+        "duration": 1.52
+    },
+    {
+        "text": "Ramy Mounir: Yep.",
+        "start": 3220.862,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 3221.232,
+        "duration": 0.02
+    },
+    {
+        "text": "Exactly.",
+        "start": 3223.352,
+        "duration": 0.37
+    },
+    {
+        "text": "But if we keep moving between 0\nand 1, it will still publish a",
+        "start": 3224.452,
+        "duration": 2.6
+    },
+    {
+        "text": "lot, and that's another thing.",
+        "start": 3227.052,
+        "duration": 2.81
+    },
+    {
+        "text": "let's say you have 50 episodes, and\nevery episode is just changing the mesh.",
+        "start": 3230.882,
+        "duration": 4.03
+    },
+    {
+        "text": "And changing the mesh is actually\nan expensive operation, so as you go",
+        "start": 3235.672,
+        "duration": 5.43
+    },
+    {
+        "text": "between them, it will very quickly become\nvery non-responsive, because you're",
+        "start": 3241.102,
+        "duration": 5.09
+    },
+    {
+        "text": "changing from 0 to 1 to 3 to 4, and\nthat's not a problem with deduplication.",
+        "start": 3246.322,
+        "duration": 4.21
+    },
+    {
+        "text": "The actual state is changing.",
+        "start": 3250.622,
+        "duration": 1.36
+    },
+    {
+        "text": "that's where\u2026 that's why I\nneed debounce, debouncing.",
+        "start": 3253.562,
+        "duration": 3.29
+    },
+    {
+        "text": "What debouncing is, it\u2026 it basically\u2026",
+        "start": 3257.172,
+        "duration": 2.73
+    },
+    {
+        "text": "Postpones the firing of the topic\nuntil\u2026 the firing of the message, until,",
+        "start": 3263.442,
+        "duration": 5.61
+    },
+    {
+        "text": "You become inactive, and, so\u2026\nbasically\u2026 here, let me show you.",
+        "start": 3270.882,
+        "duration": 5.27
+    },
+    {
+        "text": "So this is with debounce\nseconds greater than 0.",
+        "start": 3278.482,
+        "duration": 2.51
+    },
+    {
+        "text": "What happens is that I'm moving between\n0 and 1, and it just doesn't publish",
+        "start": 3281.882,
+        "duration": 3.29
+    },
+    {
+        "text": "until I stop moving for 0.3 seconds.",
+        "start": 3285.212,
+        "duration": 3.48
+    },
+    {
+        "text": "so it's like a throttle, but different\nin the way that the logic works.",
+        "start": 3289.872,
+        "duration": 7.67
+    },
+    {
+        "text": "yeah, I use this a lot because I don't\nwant to\u2026 I don't want to send a message",
+        "start": 3300.742,
+        "duration": 4.08
+    },
+    {
+        "text": "as I'm moving from episode 0 to episode 5.",
+        "start": 3305.242,
+        "duration": 2.7
+    },
+    {
+        "text": "I just\u2026 I want it to\nwait until I'm stopped.",
+        "start": 3307.942,
+        "duration": 1.74
+    },
+    {
+        "text": "Niels Leadholm: Yeah, I remember\nyou saying it was, like, lagging,",
+        "start": 3311.472,
+        "duration": 1.8
+    },
+    {
+        "text": "particularly with, point clouds\nand meshes and stuff, if, every\u2026",
+        "start": 3313.402,
+        "duration": 3.91
+    },
+    {
+        "text": "Time this, slider moved.",
+        "start": 3318.282,
+        "duration": 2.03
+    },
+    {
+        "text": "Ramy Mounir: It was lagging, and it also\nwould, depending on how expensive the call",
+        "start": 3320.802,
+        "duration": 3.58
+    },
+    {
+        "text": "is, it\u2026 it will\u2026 the way that this happens\nis that it will just do it recursively,",
+        "start": 3324.382,
+        "duration": 5.03
+    },
+    {
+        "text": "so if you just move quickly, very,\nquickly, it will basically just fail.",
+        "start": 3329.742,
+        "duration": 4.27
+    },
+    {
+        "text": "It will reach recursion maximum\ndepth, and it will just fail.",
+        "start": 3334.012,
+        "duration": 3.9
+    },
+    {
+        "text": "yeah, so this is, helpful.",
+        "start": 3339.182,
+        "duration": 1.39
+    },
+    {
+        "text": "Okay, let's, I don't know how\nmuch time I have, I think I",
+        "start": 3343.272,
+        "duration": 2.96
+    },
+    {
+        "text": "have, 2 minutes, but let's\u2026",
+        "start": 3346.342,
+        "duration": 1.57
+    },
+    {
+        "text": "Niels Leadholm: Yeah, no\nworries if you go a bit over.",
+        "start": 3348.322,
+        "duration": 2.23
+    },
+    {
+        "text": "Ramy Mounir: Okay, so maybe\nit's just 10 more minutes,",
+        "start": 3350.842,
+        "duration": 2.31
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 3354.382,
+        "duration": 0.37
+    },
+    {
+        "text": "Ramy Mounir: let's add a new,\nepisode, a new slider here, this step.",
+        "start": 3357.012,
+        "duration": 3.9
+    },
+    {
+        "text": "Now, these are going to go quicker,\nbecause we already know the",
+        "start": 3360.992,
+        "duration": 2.57
+    },
+    {
+        "text": "pattern, so let's go to the commit.",
+        "start": 3363.562,
+        "duration": 2.45
+    },
+    {
+        "text": "And the only thing I added\nhere was this, widget ops for",
+        "start": 3368.332,
+        "duration": 4.15
+    },
+    {
+        "text": "the step slider, and I added\u2026",
+        "start": 3372.482,
+        "duration": 2.05
+    },
+    {
+        "text": "a new widget class for it.",
+        "start": 3375.552,
+        "duration": 1.9
+    },
+    {
+        "text": "I'm just giving it this new class\nfor the widget ops, and I'm saying I",
+        "start": 3379.592,
+        "duration": 3.96
+    },
+    {
+        "text": "wanted to debounce with 0.3 seconds,\nI want it to deduplicate true.",
+        "start": 3383.702,
+        "duration": 5.39
+    },
+    {
+        "text": "That's the only change here.",
+        "start": 3389.572,
+        "duration": 1.96
+    },
+    {
+        "text": "Now here, we have a difference.",
+        "start": 3392.152,
+        "duration": 4.38
+    },
+    {
+        "text": "The difference is that we have\nwidget updaters, and this is",
+        "start": 3396.622,
+        "duration": 3.47
+    },
+    {
+        "text": "something that we didn't have before.",
+        "start": 3400.092,
+        "duration": 1.24
+    },
+    {
+        "text": "So the widget updaters for this step is\nbasically\u2026 it's very simple here, it's",
+        "start": 3401.762,
+        "duration": 3.87
+    },
+    {
+        "text": "just saying I'm going to listen to the\nepisode number, and if that changes, I'm",
+        "start": 3405.632,
+        "duration": 4.927
+    },
+    {
+        "text": "going to call this callback function.",
+        "start": 3410.559,
+        "duration": 2.103
+    },
+    {
+        "text": "And the callback, I'm defining\nthat here as one of the\u2026",
+        "start": 3413.342,
+        "duration": 3.77
+    },
+    {
+        "text": "Here, let's update slider range.",
+        "start": 3418.022,
+        "duration": 1.59
+    },
+    {
+        "text": "I'm just passing this callback.",
+        "start": 3419.642,
+        "duration": 1.28
+    },
+    {
+        "text": "So updaters work with also\na very specific signature.",
+        "start": 3422.082,
+        "duration": 4.39
+    },
+    {
+        "text": "The way that I thought about it is that",
+        "start": 3427.562,
+        "duration": 1.72
+    },
+    {
+        "text": "updaters, they\u2026",
+        "start": 3430.032,
+        "duration": 1.2
+    },
+    {
+        "text": "when you call an update or callback,\nyou want to modify the widget,",
+        "start": 3433.012,
+        "duration": 5.035
+    },
+    {
+        "text": "so what you give it is the widget\nitself, so you can modify it.",
+        "start": 3438.382,
+        "duration": 3.81
+    },
+    {
+        "text": "And you give it a list of the\nmessages that you received.",
+        "start": 3443.022,
+        "duration": 2.84
+    },
+    {
+        "text": "all of the ones that you\nwere listening to here.",
+        "start": 3446.472,
+        "duration": 1.96
+    },
+    {
+        "text": "all the required ones\nare going to be sent.",
+        "start": 3449.722,
+        "duration": 2.36
+    },
+    {
+        "text": "So this one.",
+        "start": 3452.082,
+        "duration": 0.62
+    },
+    {
+        "text": "Right now, we only have one, so\nthis list is just only going to",
+        "start": 3453.162,
+        "duration": 3.27
+    },
+    {
+        "text": "contain that same message, basically.",
+        "start": 3456.432,
+        "duration": 1.78
+    },
+    {
+        "text": "So all of the updated messages,\nyou're gonna get them here, and",
+        "start": 3459.122,
+        "duration": 3.25
+    },
+    {
+        "text": "you're gonna get the widgets.",
+        "start": 3462.372,
+        "duration": 0.86
+    },
+    {
+        "text": "You define what happens to the widget\nbased on these messages, basically.",
+        "start": 3463.262,
+        "duration": 3.04
+    },
+    {
+        "text": "I\u2026 we got the episode number\nin here, so I'm going to decode",
+        "start": 3468.532,
+        "duration": 3.87
+    },
+    {
+        "text": "these messages, I'm just\u2026",
+        "start": 3472.402,
+        "duration": 1.44
+    },
+    {
+        "text": "I'm just decoding it from the\ntopic message into a dictionary.",
+        "start": 3474.992,
+        "duration": 3.43
+    },
+    {
+        "text": "I just found it easier\nsometimes to do that.",
+        "start": 3478.422,
+        "duration": 2.5
+    },
+    {
+        "text": "And, I'm going to change the widget range.",
+        "start": 3481.672,
+        "duration": 4.28
+    },
+    {
+        "text": "From, it's now going to start at 0,\nand it's going to end at, this value.",
+        "start": 3486.432,
+        "duration": 7.6
+    },
+    {
+        "text": "Now, this value, I'm using the\ndataparser.query to get, basically,",
+        "start": 3495.022,
+        "duration": 4.69
+    },
+    {
+        "text": "how many steps we have, right?",
+        "start": 3499.712,
+        "duration": 1.9
+    },
+    {
+        "text": "We went over queries before, but\u2026",
+        "start": 3501.902,
+        "duration": 2.52
+    },
+    {
+        "text": "This is my data parser.",
+        "start": 3504.992,
+        "duration": 1.34
+    },
+    {
+        "text": "I'm in the data parser\u2026",
+        "start": 3507.112,
+        "duration": 1.92
+    },
+    {
+        "text": "for step, just doesn't have,\nepisode number, because I",
+        "start": 3509.042,
+        "duration": 3.33
+    },
+    {
+        "text": "don't know what the episode is.",
+        "start": 3512.412,
+        "duration": 1.23
+    },
+    {
+        "text": "And what I'm looking to get is the step.",
+        "start": 3514.292,
+        "duration": 2.01
+    },
+    {
+        "text": "so I'm going to query this by giving\nit the episode number that I receive.",
+        "start": 3517.262,
+        "duration": 4.42
+    },
+    {
+        "text": "And these are constants, so I'm\nproviding those, and it will just give",
+        "start": 3523.202,
+        "duration": 4.47
+    },
+    {
+        "text": "me how many steps that I have here.",
+        "start": 3527.672,
+        "duration": 0.893
+    },
+    {
+        "text": "And once I get\u2026 once I do",
+        "start": 3528.565,
+        "duration": 0.018
+    },
+    {
+        "text": "that, I'm just setting the range,\nthe widget range, to that, and",
+        "start": 3531.402,
+        "duration": 4.75
+    },
+    {
+        "text": "I am, setting the state of the widget\nback to zero, because we don't\u2026",
+        "start": 3538.672,
+        "duration": 5.67
+    },
+    {
+        "text": "yeah, once the episode changes,\nI want to send it back to zero.",
+        "start": 3544.342,
+        "duration": 2.98
+    },
+    {
+        "text": "And I surrender, that's all.",
+        "start": 3548.492,
+        "duration": 1.83
+    },
+    {
+        "text": "I return back the widget, I always\nreturn back the widget, because",
+        "start": 3551.792,
+        "duration": 2.86
+    },
+    {
+        "text": "this is the modified widget.",
+        "start": 3554.652,
+        "duration": 1.43
+    },
+    {
+        "text": "it's basically, I get a widget,\nI modify it, I send it back.",
+        "start": 3557.612,
+        "duration": 2.86
+    },
+    {
+        "text": "That's\u2026 that's the\u2026",
+        "start": 3560.842,
+        "duration": 1.03
+    },
+    {
+        "text": "That's the pattern for\nall of these, callbacks.",
+        "start": 3562.682,
+        "duration": 1.66
+    },
+    {
+        "text": "And I also send back a true or false.",
+        "start": 3566.582,
+        "duration": 2.51
+    },
+    {
+        "text": "when I send back true, it\npublishes the new state.",
+        "start": 3569.542,
+        "duration": 2.7
+    },
+    {
+        "text": "When I send back false,\nit just doesn't publish.",
+        "start": 3572.242,
+        "duration": 1.88
+    },
+    {
+        "text": "That's\u2026 this is the whole pattern.",
+        "start": 3574.362,
+        "duration": 1.19
+    },
+    {
+        "text": "Viviane Clay: And, maybe\nI missed this, but\u2026",
+        "start": 3576.692,
+        "duration": 1.96
+    },
+    {
+        "text": "Why are you\u2026 why are\nplotter.add calling to 0?",
+        "start": 3579.362,
+        "duration": 3.79
+    },
+    {
+        "text": "I thought 0 was the, blank screen.",
+        "start": 3583.402,
+        "duration": 2.49
+    },
+    {
+        "text": "Ramy Mounir: Yes, because this,\nslider is on the\u2026 is on the first\u2026 Oh,",
+        "start": 3587.042,
+        "duration": 4.565
+    },
+    {
+        "text": "okay, that's on the background, okay.",
+        "start": 3591.892,
+        "duration": 2.11
+    },
+    {
+        "text": "Yep.",
+        "start": 3594.162,
+        "duration": 0.2
+    },
+    {
+        "text": "For the next two objects, we're\ngoing to call plotter.add1 and 2.",
+        "start": 3595.232,
+        "duration": 4.01
+    },
+    {
+        "text": "This\u2026 the slider is on",
+        "start": 3599.242,
+        "duration": 0.69
+    },
+    {
+        "text": "the background.",
+        "start": 3602.132,
+        "duration": 0.53
+    },
+    {
+        "text": "Niels Leadholm: Just out of interest, how\nclever is Vito about, positioning those?",
+        "start": 3603.592,
+        "duration": 4.5
+    },
+    {
+        "text": "Does that take a lot of\ntweaking in practice to\u2026",
+        "start": 3609.672,
+        "duration": 2.18
+    },
+    {
+        "text": "Ramy Mounir: no, so when you\u2026 I\nthink it is actually very smart",
+        "start": 3613.972,
+        "duration": 2.88
+    },
+    {
+        "text": "in terms of, so if you are\u2026",
+        "start": 3616.852,
+        "duration": 2.61
+    },
+    {
+        "text": "So these numbers, like 0.12, so here.",
+        "start": 3620.432,
+        "duration": 2.84
+    },
+    {
+        "text": "when I say 0.1, so this is\nthe position of the slider.",
+        "start": 3624.112,
+        "duration": 3.24
+    },
+    {
+        "text": "When I say 0.1 on the X to 0.9,\nI think it scales with the size",
+        "start": 3627.352,
+        "duration": 7.67
+    },
+    {
+        "text": "of the renderer, so it's nicer.",
+        "start": 3635.032,
+        "duration": 2.77
+    },
+    {
+        "text": "You can take this whole thing and you\njust move it in a sub-renderer, and",
+        "start": 3637.802,
+        "duration": 3.56
+    },
+    {
+        "text": "it will just scale and work nicely.",
+        "start": 3641.362,
+        "duration": 1.76
+    },
+    {
+        "text": "So it is smart in that respect, but\u2026",
+        "start": 3644.762,
+        "duration": 1.88
+    },
+    {
+        "text": "Niels Leadholm: Yeah.",
+        "start": 3646.792,
+        "duration": 0.47
+    },
+    {
+        "text": "Okay, cool, thanks.",
+        "start": 3648.582,
+        "duration": 0.76
+    },
+    {
+        "text": "Ramy Mounir: Sure.",
+        "start": 3650.322,
+        "duration": 0.37
+    },
+    {
+        "text": "Yeah, so that's it.",
+        "start": 3651.642,
+        "duration": 1.39
+    },
+    {
+        "text": "This is it for the slider.",
+        "start": 3653.032,
+        "duration": 1.3
+    },
+    {
+        "text": "if this works, we should\nhave something like this.",
+        "start": 3655.142,
+        "duration": 2.32
+    },
+    {
+        "text": "Basically, when you\nchange the episode number.",
+        "start": 3657.762,
+        "duration": 3.66
+    },
+    {
+        "text": "for example, episode 0, we have 27 steps.",
+        "start": 3663.212,
+        "duration": 2.66
+    },
+    {
+        "text": "And if you change the episode number,\nit will set\u2026 go back to zero, and",
+        "start": 3667.612,
+        "duration": 3.69
+    },
+    {
+        "text": "when you check, it will have 30 steps.",
+        "start": 3671.302,
+        "duration": 1.93
+    },
+    {
+        "text": "So it's already updating the step,\nbecause it's listening to that topic.",
+        "start": 3673.832,
+        "duration": 2.957
+    },
+    {
+        "text": "Okay,",
+        "start": 3677.032,
+        "duration": 0.12
+    },
+    {
+        "text": "let's go to the.",
+        "start": 3679.412,
+        "duration": 1.71
+    },
+    {
+        "text": "Hojae Lee: just about the,",
+        "start": 3681.972,
+        "duration": 1.23
+    },
+    {
+        "text": "smart thing, the\u2026 the\u2026 yeah, the positions\nof the sliders can be smart, but, little",
+        "start": 3685.532,
+        "duration": 4.98
+    },
+    {
+        "text": "things, for example, the numbers, you\ncan make the numbers show up or hide it.",
+        "start": 3690.532,
+        "duration": 4.58
+    },
+    {
+        "text": "I found that out, but then you can't\nreally, control where the number is",
+        "start": 3695.392,
+        "duration": 4.19
+    },
+    {
+        "text": "place, you can't put it on the bottom,\nor you can't change the spacing.",
+        "start": 3700.112,
+        "duration": 3.51
+    },
+    {
+        "text": "I had a situation where there was a\nnumber, but then I had a button on top of",
+        "start": 3704.612,
+        "duration": 3.24
+    },
+    {
+        "text": "it, so it was hiding the number, occluding\nthe number a little bit, so I had to",
+        "start": 3707.852,
+        "duration": 4.79
+    },
+    {
+        "text": "manually, increase the, button a little\nbit higher, yadda I guess typical plotting",
+        "start": 3712.642,
+        "duration": 7.53
+    },
+    {
+        "text": "problems, but yeah, You don't have full\ncontrol over, every aspect, just FYI.",
+        "start": 3720.172,
+        "duration": 6.64
+    },
+    {
+        "text": "Ramy Mounir: Yeah, dates,",
+        "start": 3727.792,
+        "duration": 1.16
+    },
+    {
+        "text": "So if you want to have more control,\nso this is, like I said, this is",
+        "start": 3730.672,
+        "duration": 2.69
+    },
+    {
+        "text": "a\u2026 I may have not mentioned it,\nbut this is a wrapper over VTK.",
+        "start": 3733.362,
+        "duration": 3.12
+    },
+    {
+        "text": "VTK is created by Kitware,\nand it's very good.",
+        "start": 3737.412,
+        "duration": 4.89
+    },
+    {
+        "text": "It's just\u2026 it's so much of a\u2026",
+        "start": 3742.312,
+        "duration": 3.45
+    },
+    {
+        "text": "a learning rate that, it's not very\neasy to learn VTK, but I suggest",
+        "start": 3746.372,
+        "duration": 5.86
+    },
+    {
+        "text": "if you just want to customize this\nmore, then VTK is the way to go.",
+        "start": 3752.232,
+        "duration": 4.92
+    },
+    {
+        "text": "Okay.",
+        "start": 3760.592,
+        "duration": 0.41
+    },
+    {
+        "text": "So let's create this here.",
+        "start": 3763.462,
+        "duration": 2.39
+    },
+    {
+        "text": "So this is the\u2026 Flutter\n1, basically, index 1.",
+        "start": 3765.882,
+        "duration": 3.94
+    },
+    {
+        "text": "And",
+        "start": 3769.972,
+        "duration": 0.11
+    },
+    {
+        "text": "what we want to have is, as we\nchange the episode, it changes the",
+        "start": 3772.152,
+        "duration": 5.4
+    },
+    {
+        "text": "object, the mesh, the primary target,\nand as we move the step slider,",
+        "start": 3777.572,
+        "duration": 4.37
+    },
+    {
+        "text": "it changes the sensor position.",
+        "start": 3782.162,
+        "duration": 1.88
+    },
+    {
+        "text": "And we're going to query that stuff\nfrom the data parser and display it.",
+        "start": 3784.262,
+        "duration": 4.64
+    },
+    {
+        "text": "Okay.",
+        "start": 3790.282,
+        "duration": 0.37
+    },
+    {
+        "text": "Again, it's the same, exact, pattern,\nwhich is I added a class for the",
+        "start": 3794.142,
+        "duration": 5.15
+    },
+    {
+        "text": "ground truth mesh widget, ops, and\nwe added that down there for the\u2026",
+        "start": 3799.292,
+        "duration": 5.17
+    },
+    {
+        "text": "For the widgets.",
+        "start": 3805.572,
+        "duration": 1.19
+    },
+    {
+        "text": "And\u2026 so what we're listening to here\nis we have updators, and what we're",
+        "start": 3807.332,
+        "duration": 4.29
+    },
+    {
+        "text": "listening to is the\u2026 we have two\nupdaters, one that will update the mesh.",
+        "start": 3811.782,
+        "duration": 5.06
+    },
+    {
+        "text": "I may have mentioned this before\nalready, so one will update the mesh.",
+        "start": 3817.682,
+        "duration": 2.96
+    },
+    {
+        "text": "And it listens to the episode number, and\nthis is just updating the primary target.",
+        "start": 3820.982,
+        "duration": 3.89
+    },
+    {
+        "text": "And another one is going to listen to both\nof these, the step number and the episode",
+        "start": 3825.552,
+        "duration": 3.46
+    },
+    {
+        "text": "number, and it will update the sensor.",
+        "start": 3829.012,
+        "duration": 1.86
+    },
+    {
+        "text": "Now, this is the moving sensor.",
+        "start": 3830.982,
+        "duration": 1.88
+    },
+    {
+        "text": "The locators are a bit more involved, but\nagain, this just shows how easy it is to",
+        "start": 3834.782,
+        "duration": 4.92
+    },
+    {
+        "text": "get data.",
+        "start": 3840.562,
+        "duration": 0.74
+    },
+    {
+        "text": "So I've created 4",
+        "start": 3842.822,
+        "duration": 0.97
+    },
+    {
+        "text": "locators.",
+        "start": 3846.232,
+        "duration": 0.01
+    },
+    {
+        "text": "The target, which is here, this\nonly is missing the episode.",
+        "start": 3846.302,
+        "duration": 3.66
+    },
+    {
+        "text": "the steps mask, I need that to\nprocess the sensor locations, because",
+        "start": 3851.972,
+        "duration": 4.46
+    },
+    {
+        "text": "these are, when I get the sensor\nlocation, I'm getting it from the,",
+        "start": 3856.442,
+        "duration": 4.67
+    },
+    {
+        "text": "SM steps, so I need to also know\nwhich ones have been processed,",
+        "start": 3861.162,
+        "duration": 5.57
+    },
+    {
+        "text": "so I get that from the steps mask.",
+        "start": 3866.742,
+        "duration": 2.47
+    },
+    {
+        "text": "The missing value here is also episode.",
+        "start": 3871.542,
+        "duration": 1.72
+    },
+    {
+        "text": "Here, I have the missing value\nis episode and the SMStep.",
+        "start": 3873.832,
+        "duration": 2.92
+    },
+    {
+        "text": "So when I call this, all I need\nto give it is episode and SMSTEP.",
+        "start": 3877.012,
+        "duration": 2.6
+    },
+    {
+        "text": "And then",
+        "start": 3879.612,
+        "duration": 0.18
+    },
+    {
+        "text": "I also have the patch location, and\nI'm getting that from this path here.",
+        "start": 3882.582,
+        "duration": 3.8
+    },
+    {
+        "text": "Yeah, so really, when it's time\nto update the mesh, this only",
+        "start": 3889.862,
+        "duration": 3.93
+    },
+    {
+        "text": "listens to the episode number.",
+        "start": 3893.792,
+        "duration": 1.6
+    },
+    {
+        "text": "again, I'm just removing the old mesh.",
+        "start": 3896.932,
+        "duration": 1.85
+    },
+    {
+        "text": "And I'm adding the new mesh, that's\u2026\nI'm calling the YCB loader, which I",
+        "start": 3899.242,
+        "duration": 7.08
+    },
+    {
+        "text": "talked about in the beginning of this.",
+        "start": 3906.522,
+        "duration": 1.38
+    },
+    {
+        "text": "It basically\u2026",
+        "start": 3907.982,
+        "duration": 0.84
+    },
+    {
+        "text": "I just give it the target ID,\na string, basically, of the",
+        "start": 3909.632,
+        "duration": 3.09
+    },
+    {
+        "text": "mesh that I'm trying to load.",
+        "start": 3913.052,
+        "duration": 1.11
+    },
+    {
+        "text": "And it will create the widget for me.",
+        "start": 3914.862,
+        "duration": 1.58
+    },
+    {
+        "text": "I rotate it based on the\ninformation I extracted from the",
+        "start": 3917.622,
+        "duration": 3.67
+    },
+    {
+        "text": "data parser, and then I shift it.",
+        "start": 3921.292,
+        "duration": 2.34
+    },
+    {
+        "text": "And\u2026 and then add it to the plotter.",
+        "start": 3924.502,
+        "duration": 1.96
+    },
+    {
+        "text": "So now here we're using plotter.add.1.",
+        "start": 3926.472,
+        "duration": 2.46
+    },
+    {
+        "text": "And then I render that plug.",
+        "start": 3929.702,
+        "duration": 1.41
+    },
+    {
+        "text": "That's it.",
+        "start": 3931.582,
+        "duration": 0.4
+    },
+    {
+        "text": "I don't want to publish anything, I\njust return widget again, and false.",
+        "start": 3932.752,
+        "duration": 4.04
+    },
+    {
+        "text": "that's how you update the mesh.",
+        "start": 3939.292,
+        "duration": 1.39
+    },
+    {
+        "text": "to update the sensor, it's a similar\nthing, except that now I'm updating",
+        "start": 3941.452,
+        "duration": 6.01
+    },
+    {
+        "text": "So here, in the init function, I created\u2026",
+        "start": 3948.322,
+        "duration": 2.23
+    },
+    {
+        "text": "These variables, gaze line and\nsensor circle, which are the",
+        "start": 3951.132,
+        "duration": 5.07
+    },
+    {
+        "text": "red sphere and the gaze line.",
+        "start": 3956.202,
+        "duration": 2.67
+    },
+    {
+        "text": "They're empty right now, but they're\ngoing to take line object\u2026 line widget,",
+        "start": 3959.902,
+        "duration": 4.2
+    },
+    {
+        "text": "or line object, and a circle object.",
+        "start": 3965.032,
+        "duration": 1.76
+    },
+    {
+        "text": "I think this is wrong.",
+        "start": 3969.522,
+        "duration": 1.16
+    },
+    {
+        "text": "I need to change that to sphere.",
+        "start": 3970.932,
+        "duration": 1.51
+    },
+    {
+        "text": "But",
+        "start": 3973.202,
+        "duration": 0.03
+    },
+    {
+        "text": "yeah, so updating the\nsensors is as simple as that.",
+        "start": 3976.172,
+        "duration": 4.23
+    },
+    {
+        "text": "Getting the messages, and here\nI'm just going to get the sensor",
+        "start": 3981.122,
+        "duration": 4.46
+    },
+    {
+        "text": "position and the patch position,\nand I'm just going to update the",
+        "start": 3985.592,
+        "duration": 4.09
+    },
+    {
+        "text": "sensor circle and the gaze line, and\nmake it look at the correct place.",
+        "start": 3989.692,
+        "duration": 3.42
+    },
+    {
+        "text": "Niels Leadholm: And what\nwas the return bool again?",
+        "start": 3993.562,
+        "duration": 2.05
+    },
+    {
+        "text": "The second, return?",
+        "start": 3995.742,
+        "duration": 1.27
+    },
+    {
+        "text": "Ramy Mounir: Basically, do\nwe want to publish the state",
+        "start": 3997.022,
+        "duration": 3.96
+    },
+    {
+        "text": "after we update the system?",
+        "start": 4001.072,
+        "duration": 1.375
+    },
+    {
+        "text": "Niels Leadholm: Okay, yeah, thanks.",
+        "start": 4002.602,
+        "duration": 1.6
+    },
+    {
+        "text": "Ramy Mounir: Yeah.",
+        "start": 4005.102,
+        "duration": 0.19
+    },
+    {
+        "text": "So\u2026 that's it.",
+        "start": 4007.392,
+        "duration": 0.59
+    },
+    {
+        "text": "That's really all that\nit takes to create the\u2026",
+        "start": 4008.122,
+        "duration": 2.55
+    },
+    {
+        "text": "This, nice visualization.",
+        "start": 4013.382,
+        "duration": 0.89
+    },
+    {
+        "text": "And, let's do this last one quickly.",
+        "start": 4017.272,
+        "duration": 2.15
+    },
+    {
+        "text": "So again, the same kind of,",
+        "start": 4022.142,
+        "duration": 1.76
+    },
+    {
+        "text": "Pattern.",
+        "start": 4025.342,
+        "duration": 0.46
+    },
+    {
+        "text": "Just added a class for it.",
+        "start": 4026.292,
+        "duration": 1.28
+    },
+    {
+        "text": "And the updaters here are going\nto be listening now to the episode",
+        "start": 4029.622,
+        "duration": 4.47
+    },
+    {
+        "text": "number and the step number.",
+        "start": 4034.092,
+        "duration": 1.09
+    },
+    {
+        "text": "If any of those change,\nwe will update the MLH.",
+        "start": 4035.452,
+        "duration": 2.39
+    },
+    {
+        "text": "And it calls the update mesh.",
+        "start": 4038.592,
+        "duration": 1.92
+    },
+    {
+        "text": "I'm defining a sensor circle\nhere, so this is the object for",
+        "start": 4041.362,
+        "duration": 5.03
+    },
+    {
+        "text": "the sphere, again, not circle.",
+        "start": 4046.392,
+        "duration": 2.47
+    },
+    {
+        "text": "And I'm adding a little bit\nof text to the plotter at 2.",
+        "start": 4049.782,
+        "duration": 3.1
+    },
+    {
+        "text": "I'm just adding that at the top.",
+        "start": 4053.422,
+        "duration": 1.57
+    },
+    {
+        "text": "Just says MLH.",
+        "start": 4056.282,
+        "duration": 1.31
+    },
+    {
+        "text": "The locators are simpler here, because\nI only need to extract the MLH,",
+        "start": 4059.102,
+        "duration": 3.98
+    },
+    {
+        "text": "so I'm just defining that this MLH\ndepends on the episode and the step.",
+        "start": 4063.092,
+        "duration": 5.27
+    },
+    {
+        "text": "Both these in the middle are already\nfixed, the current MLH and LM0.",
+        "start": 4068.922,
+        "duration": 5.22
+    },
+    {
+        "text": "But if you have, a slider here, you can\nalso change that LM0 to something else.",
+        "start": 4075.012,
+        "duration": 2.86
+    },
+    {
+        "text": "An",
+        "start": 4077.892,
+        "duration": 0.09
+    },
+    {
+        "text": "update mesh is, that's\u2026 this\nis the only function I added.",
+        "start": 4081.662,
+        "duration": 4.32
+    },
+    {
+        "text": "Basically, I remove the widgets\nthat already exist, the existing",
+        "start": 4086.732,
+        "duration": 3.95
+    },
+    {
+        "text": "widget for the object, and then the\nsensor circle, I also remove it.",
+        "start": 4090.692,
+        "duration": 3.93
+    },
+    {
+        "text": "And then I extract the MLH.",
+        "start": 4096.792,
+        "duration": 1.7
+    },
+    {
+        "text": "Here, by giving it the episode and\nthe step, and these are the MLH stuff.",
+        "start": 4099.032,
+        "duration": 5.12
+    },
+    {
+        "text": "It's a dictionary when I extract\nit, so I'm getting the graph",
+        "start": 4104.152,
+        "duration": 2.69
+    },
+    {
+        "text": "ID, rotation, and location.",
+        "start": 4106.842,
+        "duration": 1.25
+    },
+    {
+        "text": "I add the object, rotate\nit, shift it into position.",
+        "start": 4108.512,
+        "duration": 3.68
+    },
+    {
+        "text": "And add the sphere, for the sensor circle.",
+        "start": 4112.962,
+        "duration": 3.35
+    },
+    {
+        "text": "And, again, plot.",
+        "start": 4117.292,
+        "duration": 1.13
+    },
+    {
+        "text": "It's as simple as that.",
+        "start": 4120.072,
+        "duration": 1.5
+    },
+    {
+        "text": "I already copied all of this code\nfrom existing other plots, so I know",
+        "start": 4122.372,
+        "duration": 3.56
+    },
+    {
+        "text": "it works by just copying it over.",
+        "start": 4125.932,
+        "duration": 1.88
+    },
+    {
+        "text": "As long as you can connect them through\nthese, topics, episode number and step",
+        "start": 4127.812,
+        "duration": 6.02
+    },
+    {
+        "text": "number, if you use that everywhere, then\nyou can just use\u2026 then you can just\u2026",
+        "start": 4133.832,
+        "duration": 4.46
+    },
+    {
+        "text": "reuse the functionality.",
+        "start": 4138.582,
+        "duration": 1.15
+    },
+    {
+        "text": "Or if\u2026 if I'm copying a widget from,\na visualization from Hoji, and she's",
+        "start": 4140.272,
+        "duration": 5.76
+    },
+    {
+        "text": "using episode num, for example, I\ncould just rename that if I wanted to.",
+        "start": 4146.032,
+        "duration": 3.5
+    },
+    {
+        "text": "It's not a big change.",
+        "start": 4150.512,
+        "duration": 0.94
+    },
+    {
+        "text": "But yeah, as long as you use\nthose, should be reusable.",
+        "start": 4152.792,
+        "duration": 3.17
+    },
+    {
+        "text": "That's it.",
+        "start": 4158.442,
+        "duration": 0.35
+    },
+    {
+        "text": "This is, if you do that,\nyou'll have this visualization.",
+        "start": 4158.822,
+        "duration": 4.87
+    },
+    {
+        "text": "it's a bit of code to add all\nof these classes, but I think it",
+        "start": 4165.572,
+        "duration": 2.75
+    },
+    {
+        "text": "just makes it easy to just extract\nfunctionality a little bit away, and",
+        "start": 4168.322,
+        "duration": 3.66
+    },
+    {
+        "text": "it also makes the code very readable.",
+        "start": 4171.982,
+        "duration": 1.45
+    },
+    {
+        "text": "You could go through the\ncode and see what's going on.",
+        "start": 4173.432,
+        "duration": 4.19
+    },
+    {
+        "text": "Yep, I think this is all.",
+        "start": 4177.822,
+        "duration": 1.09
+    }
+]

@@ -1,0 +1,4917 @@
+[
+    {
+        "text": "Okay, nice.",
+        "start": 7.352,
+        "duration": 0.43
+    },
+    {
+        "text": "So yeah, this is my effort to\ndistill down some thoughts around",
+        "start": 7.792,
+        "duration": 6.32
+    },
+    {
+        "text": "hierarchical action policies.",
+        "start": 14.322,
+        "duration": 1.47
+    },
+    {
+        "text": "It's definitely not clear in my head\nyet, so this is very much going to be",
+        "start": 17.392,
+        "duration": 4.57
+    },
+    {
+        "text": "just like an amalgamation of stuff.",
+        "start": 21.962,
+        "duration": 2.42
+    },
+    {
+        "text": "But yeah, hopefully that's, the\npoint that we'll talk through this.",
+        "start": 25.822,
+        "duration": 2.87
+    },
+    {
+        "text": "And also, it's not like these are\nreally, new ideas, it's more just about",
+        "start": 28.722,
+        "duration": 5.345
+    },
+    {
+        "text": "trying to structure how we think about\nthis and, yeah, just think through it.",
+        "start": 34.317,
+        "duration": 5.12
+    },
+    {
+        "text": "And it relates also, to, for\nexample, Rajesh Rao's presentation.",
+        "start": 39.437,
+        "duration": 5.88
+    },
+    {
+        "text": "There's definitely a lot of\nsimilarities to that as well.",
+        "start": 45.317,
+        "duration": 2.35
+    },
+    {
+        "text": "but yeah,",
+        "start": 50.327,
+        "duration": 0.36
+    },
+    {
+        "text": "I thought, yeah, so in terms of what the\naim of all this we're doing is, these",
+        "start": 52.797,
+        "duration": 6.52
+    },
+    {
+        "text": "hierarchical action policies are really\nabout yeah, flexible agent behavior and",
+        "start": 59.317,
+        "duration": 4.79
+    },
+    {
+        "text": "efficient agent behavior, that can really\nkind of impact the world, and, yeah,",
+        "start": 64.127,
+        "duration": 7.04
+    },
+    {
+        "text": "handle arbitrary, novel situations and,\nand things like that, and, I think we",
+        "start": 71.407,
+        "duration": 5.61
+    },
+    {
+        "text": "all have kind of an intuition about how",
+        "start": 77.017,
+        "duration": 1.66
+    },
+    {
+        "text": "hierarchy helps with efficiency and\nflexibility, but, yeah, we can maybe",
+        "start": 79.237,
+        "duration": 5.04
+    },
+    {
+        "text": "just work through it a little bit.",
+        "start": 84.277,
+        "duration": 1.12
+    },
+    {
+        "text": "but yeah, at the same time as we're\ndoing this, we talked previously",
+        "start": 87.597,
+        "duration": 2.91
+    },
+    {
+        "text": "about how it feels like we need to,\nalso understand better how we're",
+        "start": 90.507,
+        "duration": 4.95
+    },
+    {
+        "text": "going to represent object behaviors.",
+        "start": 95.457,
+        "duration": 1.5
+    },
+    {
+        "text": "And I think that is true, in order\nto really come up with meaningful,",
+        "start": 97.677,
+        "duration": 4.38
+    },
+    {
+        "text": "hierarchical action policies.",
+        "start": 102.777,
+        "duration": 1.39
+    },
+    {
+        "text": "so that's a lot of what\nI'll talk about today.",
+        "start": 105.157,
+        "duration": 1.94
+    },
+    {
+        "text": "and I thought just like a first kind\nof useful thing would be just to give",
+        "start": 109.217,
+        "duration": 3.78
+    },
+    {
+        "text": "some kind of basic definitions, just\nto make sure we're all on the same,",
+        "start": 112.997,
+        "duration": 2.85
+    },
+    {
+        "text": "coming from the same point.",
+        "start": 118.127,
+        "duration": 1.0
+    },
+    {
+        "text": "and, yeah, in particular, so\naction policy, this one's pretty",
+        "start": 122.007,
+        "duration": 3.35
+    },
+    {
+        "text": "basic, yeah, basic set of actions\nto take to achieve a goal.",
+        "start": 125.357,
+        "duration": 3.07
+    },
+    {
+        "text": "this is typically a condition on the\nstate of the agent and the world.",
+        "start": 128.807,
+        "duration": 2.4
+    },
+    {
+        "text": "reinforcement learning is methods to learn\nan action policy given reward signals.",
+        "start": 132.227,
+        "duration": 4.57
+    },
+    {
+        "text": "And there's kind of two main flavors of\nreinforcement learning, model free, which",
+        "start": 137.627,
+        "duration": 4.87
+    },
+    {
+        "text": "has been very popular for many years,\nwhere you basically just learn an action",
+        "start": 142.497,
+        "duration": 3.89
+    },
+    {
+        "text": "policy directly from the rewards, that\nare associated with actions you take,",
+        "start": 146.387,
+        "duration": 3.87
+    },
+    {
+        "text": "but you don't actually learn a model\nof the world to, use in the future.",
+        "start": 152.077,
+        "duration": 5.15
+    },
+    {
+        "text": "You basically just learn okay,\nthis action was good, so I'm",
+        "start": 157.247,
+        "duration": 2.66
+    },
+    {
+        "text": "going to do this action again.",
+        "start": 159.907,
+        "duration": 1.09
+    },
+    {
+        "text": "and then more it can still be\nstate condition, so it's not Right.",
+        "start": 164.397,
+        "duration": 3.74
+    },
+    {
+        "text": "Yeah.",
+        "start": 168.692,
+        "duration": 0.39
+    },
+    {
+        "text": "So you still use the sensory input, but\nyou just don't have a model of the world.",
+        "start": 169.142,
+        "duration": 4.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 174.422,
+        "duration": 0.46
+    },
+    {
+        "text": "Yeah.",
+        "start": 175.122,
+        "duration": 0.28
+    },
+    {
+        "text": "That you could, roll out in a\nmental simulation to, to decide",
+        "start": 175.402,
+        "duration": 4.74
+    },
+    {
+        "text": "okay, how's it going to respond?",
+        "start": 180.592,
+        "duration": 2.4
+    },
+    {
+        "text": "but yeah, more relevant to the approach\nthat I think we were all, thinking about",
+        "start": 184.302,
+        "duration": 4.39
+    },
+    {
+        "text": "is this more model based reinforcement\nlearning where you explicitly learn this.",
+        "start": 188.712,
+        "duration": 3.44
+    },
+    {
+        "text": "model, which is often called\na transition model or a",
+        "start": 192.892,
+        "duration": 2.35
+    },
+    {
+        "text": "transition function of the world.",
+        "start": 195.242,
+        "duration": 2.26
+    },
+    {
+        "text": "and then, you also can learn a reward\nmodel, that basically tells you, how",
+        "start": 198.752,
+        "duration": 6.98
+    },
+    {
+        "text": "valuable being in certain states are.",
+        "start": 205.762,
+        "duration": 1.62
+    },
+    {
+        "text": "And then with those two, so\nunderstanding how one, like what",
+        "start": 207.962,
+        "duration": 4.485
+    },
+    {
+        "text": "causes one to move between states,\nand then understanding what rewards",
+        "start": 212.447,
+        "duration": 4.45
+    },
+    {
+        "text": "are associated with particular states,\nthen, it's very easy to develop policies",
+        "start": 216.897,
+        "duration": 5.22
+    },
+    {
+        "text": "on the fly and adapt as necessary.",
+        "start": 222.137,
+        "duration": 1.68
+    },
+    {
+        "text": "if a wall gets, or a blockage gets put\non a road, you can, refer to the model",
+        "start": 225.257,
+        "duration": 5.76
+    },
+    {
+        "text": "and find a way to, to go around it.",
+        "start": 231.347,
+        "duration": 1.95
+    },
+    {
+        "text": "and, Yeah, and in general, the kind\nof holy grail is, to learn, these",
+        "start": 236.747,
+        "duration": 7.06
+    },
+    {
+        "text": "models in an unsupervised fashion, and\nthen, you can leverage reinforcement",
+        "start": 243.807,
+        "duration": 4.95
+    },
+    {
+        "text": "learning as necessary, when, there's\nstates that are important, that are",
+        "start": 248.757,
+        "duration": 5.63
+    },
+    {
+        "text": "useful, but the hope is to really yeah,\nlearn the transition model, first,",
+        "start": 254.387,
+        "duration": 5.56
+    },
+    {
+        "text": "so that you can, leverage it later.",
+        "start": 260.737,
+        "duration": 1.89
+    },
+    {
+        "text": "Before I go on, I think you\ntouched on this here, but.",
+        "start": 264.797,
+        "duration": 4.53
+    },
+    {
+        "text": "I've always been uncomfortable with\nthe, reward reinforcement learning",
+        "start": 272.137,
+        "duration": 5.65
+    },
+    {
+        "text": "with rewarding, because it seems\nlike so much that we do is, you",
+        "start": 277.787,
+        "duration": 4.69
+    },
+    {
+        "text": "mentioned getting around an obstacle.",
+        "start": 282.477,
+        "duration": 1.44
+    },
+    {
+        "text": "It's not really a reward\nbased learning system.",
+        "start": 284.107,
+        "duration": 2.49
+    },
+    {
+        "text": "It's, it's a model system, right?",
+        "start": 286.597,
+        "duration": 1.74
+    },
+    {
+        "text": "I'm a model, I'm trying\nto get to some state.",
+        "start": 288.337,
+        "duration": 1.87
+    },
+    {
+        "text": "And I use the model to get to that state.",
+        "start": 290.732,
+        "duration": 2.46
+    },
+    {
+        "text": "I don't have to, I don't even\nhave to learn that action policy.",
+        "start": 293.452,
+        "duration": 4.84
+    },
+    {
+        "text": "I just use the model and execute it.",
+        "start": 298.292,
+        "duration": 2.13
+    },
+    {
+        "text": "And then, next time the\nroad won't be blocked.",
+        "start": 300.562,
+        "duration": 2.7
+    },
+    {
+        "text": "So I guess I'm, all I'm stating,\nand I think you're getting out of",
+        "start": 303.292,
+        "duration": 3.06
+    },
+    {
+        "text": "here, but the whole idea of a reward\nmodel, reward system, even for a",
+        "start": 306.352,
+        "duration": 5.45
+    },
+    {
+        "text": "model based, reinforcement learning,\nI think it's a bit of a red herring",
+        "start": 311.802,
+        "duration": 4.06
+    },
+    {
+        "text": "and we shouldn't focus on it, right?",
+        "start": 316.272,
+        "duration": 1.44
+    },
+    {
+        "text": "We really just say, we have\nthese models, how do we achieve",
+        "start": 317.712,
+        "duration": 3.2
+    },
+    {
+        "text": "various    results based on, given a\ndesired outcome, how do we do that?",
+        "start": 321.642,
+        "duration": 5.935
+    },
+    {
+        "text": "And it doesn't have to\nbe reward based at all.",
+        "start": 327.577,
+        "duration": 2.1
+    },
+    {
+        "text": "I don't know if you agree with that or\nnot, but I just want to make it clear.",
+        "start": 329.677,
+        "duration": 2.47
+    },
+    {
+        "text": "Yeah, no, I definitely agree with that.",
+        "start": 332.177,
+        "duration": 1.45
+    },
+    {
+        "text": "And, yeah, that's what I was trying\nto say here was that, like, when",
+        "start": 333.627,
+        "duration": 4.3
+    },
+    {
+        "text": "you At least from my reading of the\nliterature, you rarely see studies",
+        "start": 337.927,
+        "duration": 6.535
+    },
+    {
+        "text": "that just go into transition model\nand learn the transition model.",
+        "start": 344.462,
+        "duration": 3.53
+    },
+    {
+        "text": "There's so much focus on reinforcement\nlearning generally when it comes to",
+        "start": 347.992,
+        "duration": 4.21
+    },
+    {
+        "text": "policies that it's almost always baked in.",
+        "start": 352.222,
+        "duration": 3.84
+    },
+    {
+        "text": "That's the only reason I brought it up\nbecause in your first sentence here it",
+        "start": 356.352,
+        "duration": 3.33
+    },
+    {
+        "text": "says, along with a model of rewards,\nYeah, because that is how it's defined,",
+        "start": 359.682,
+        "duration": 5.595
+    },
+    {
+        "text": "even though, because yeah, but yeah, so\nin a moment I'll specifically drill down",
+        "start": 365.287,
+        "duration": 5.81
+    },
+    {
+        "text": "into the transition model, but yeah.",
+        "start": 371.097,
+        "duration": 1.54
+    },
+    {
+        "text": "But not necessarily, like often you can\nlearn a transition model without rewards,",
+        "start": 372.697,
+        "duration": 5.48
+    },
+    {
+        "text": "like you can learn the transition model\nusing prediction errors, for example, but",
+        "start": 378.177,
+        "duration": 5.23
+    },
+    {
+        "text": "then learn the policy of how to go through",
+        "start": 383.407,
+        "duration": 2.6
+    },
+    {
+        "text": "how to best go through this transition\nmodel using reinforcement learning.",
+        "start": 386.357,
+        "duration": 4.09
+    },
+    {
+        "text": "But you could use the same model,\nand then apply some other planning",
+        "start": 390.707,
+        "duration": 5.1
+    },
+    {
+        "text": "algorithm on top of it, and you would\nhave never used reinforcement learning.",
+        "start": 395.817,
+        "duration": 5.18
+    },
+    {
+        "text": "Yeah, so No, for sure.",
+        "start": 402.077,
+        "duration": 3.56
+    },
+    {
+        "text": "And that's what I mean by\nunsupervised learning here.",
+        "start": 405.787,
+        "duration": 1.81
+    },
+    {
+        "text": "I'm just, from what I saw in for\nexample, with hierarchical reinforcement",
+        "start": 407.627,
+        "duration": 4.7
+    },
+    {
+        "text": "learning, there's very, they almost\nalways talk about reinforcement learning,",
+        "start": 412.327,
+        "duration": 4.92
+    },
+    {
+        "text": "even though, like you say, it's not\nessential, and in fact, we would",
+        "start": 417.257,
+        "duration": 2.95
+    },
+    {
+        "text": "ideally only use it at the last point,\nbut it's often yeah, thrown in there.",
+        "start": 420.207,
+        "duration": 6.42
+    },
+    {
+        "text": "You don't have to use\nit at the last point.",
+        "start": 426.627,
+        "duration": 1.225
+    },
+    {
+        "text": "it's, if I have a sufficient\nmodel of the world, and I'm just",
+        "start": 428.277,
+        "duration": 3.97
+    },
+    {
+        "text": "trying to get to some state,",
+        "start": 432.247,
+        "duration": 1.38
+    },
+    {
+        "text": "I, don't need a reward, it's just,\nI don't know, we've, I think we've",
+        "start": 436.592,
+        "duration": 3.48
+    },
+    {
+        "text": "said enough here, but I think we\nshould really focus on this model",
+        "start": 440.092,
+        "duration": 2.89
+    },
+    {
+        "text": "based transition model, I agree.",
+        "start": 442.982,
+        "duration": 2.66
+    },
+    {
+        "text": "yeah, just the kind of classic example\nof this from neuroscience is Tolman's",
+        "start": 448.282,
+        "duration": 5.07
+    },
+    {
+        "text": "work with rodents where basically they\nwould explore maze like structures.",
+        "start": 453.852,
+        "duration": 5.79
+    },
+    {
+        "text": "And, given no reward, and then, if\nyou took the, those, and they would",
+        "start": 460.067,
+        "duration": 5.27
+    },
+    {
+        "text": "explore it seemingly haphazardly, but\nif you then took those mice that had a",
+        "start": 465.697,
+        "duration": 3.65
+    },
+    {
+        "text": "chance to explore the maze, and then,\ngave them just like a single reward,",
+        "start": 469.347,
+        "duration": 4.55
+    },
+    {
+        "text": "they would very quickly learn, or be\nable to move through the maze, to reach",
+        "start": 474.517,
+        "duration": 4.02
+    },
+    {
+        "text": "their reward, in comparison to ones\nthat kind of were trying to learn how",
+        "start": 478.537,
+        "duration": 4.04
+    },
+    {
+        "text": "to get to the food from the start.",
+        "start": 482.577,
+        "duration": 1.9
+    },
+    {
+        "text": "And it suggested that they\nbuilt this sort of world model.",
+        "start": 484.517,
+        "duration": 2.63
+    },
+    {
+        "text": "This kind of cognitive map, and\nthat's what they were leveraging.",
+        "start": 487.557,
+        "duration": 2.84
+    },
+    {
+        "text": "And I think again, a lot of reinforcement\nlearning and this kind of whole, action,",
+        "start": 490.907,
+        "duration": 6.29
+    },
+    {
+        "text": "yeah, sensorimotor, action based,\nlearning is very focused on an",
+        "start": 499.717,
+        "duration": 4.81
+    },
+    {
+        "text": "agent interacting in an environment.",
+        "start": 504.537,
+        "duration": 1.74
+    },
+    {
+        "text": "What I think makes Numenta unique\nis we're trying to capture this sort",
+        "start": 506.767,
+        "duration": 3.28
+    },
+    {
+        "text": "of concept, but at every level of\nrepresentation, that we're saying, this",
+        "start": 510.047,
+        "duration": 5.6
+    },
+    {
+        "text": "isn't just something that's oh, how does\nan agent interact within the environment?",
+        "start": 515.647,
+        "duration": 4.4
+    },
+    {
+        "text": "It's like, how do we understand\nessentially everything, including objects?",
+        "start": 520.047,
+        "duration": 4.68
+    },
+    {
+        "text": "and yeah, we basically want a\ncognitive map for all of the models,",
+        "start": 527.237,
+        "duration": 3.3
+    },
+    {
+        "text": "that are going to be relevant.",
+        "start": 530.797,
+        "duration": 1.13
+    },
+    {
+        "text": "And compare, drawing the parallel to\nMonty here, basically learning the",
+        "start": 532.617,
+        "duration": 5.05
+    },
+    {
+        "text": "maze is what we do right now, learning\nthe object models in Monty, and then",
+        "start": 537.667,
+        "duration": 4.0
+    },
+    {
+        "text": "the reinforcement learning part.",
+        "start": 542.007,
+        "duration": 1.4
+    },
+    {
+        "text": "would be saying, okay, I have\nthis model of a cup, and I want to",
+        "start": 543.757,
+        "duration": 4.42
+    },
+    {
+        "text": "achieve the state, how do I do this?",
+        "start": 548.177,
+        "duration": 2.27
+    },
+    {
+        "text": "And then achieving the state would\ngive you the reward, but it has",
+        "start": 550.527,
+        "duration": 2.45
+    },
+    {
+        "text": "nothing to do with learning the\nmodel of the cup that's been defined.",
+        "start": 552.977,
+        "duration": 3.58
+    },
+    {
+        "text": "You don't even need a reward.",
+        "start": 556.557,
+        "duration": 1.43
+    },
+    {
+        "text": "you have to know that you've\naccomplished the goal, but",
+        "start": 558.697,
+        "duration": 2.75
+    },
+    {
+        "text": "in the computational sense\nof it, basically just telling",
+        "start": 563.902,
+        "duration": 3.49
+    },
+    {
+        "text": "you accomplished the goal.",
+        "start": 567.522,
+        "duration": 1.64
+    },
+    {
+        "text": "the fact that, do we lay down\nmemories of how we solve the problem?",
+        "start": 571.302,
+        "duration": 4.8
+    },
+    {
+        "text": "Yes, we do, for the most\npart, but not always.",
+        "start": 576.122,
+        "duration": 3.17
+    },
+    {
+        "text": "In a maze like this, surely I would\nremember, oh, I've solved it, next time",
+        "start": 579.322,
+        "duration": 4.82
+    },
+    {
+        "text": "I'll be quicker, manipulating the stapler,\nI may never manipulate the stapler the",
+        "start": 584.142,
+        "duration": 6.0
+    },
+    {
+        "text": "same way again, it, I might do it a\ndifferent way next time, I don't know,",
+        "start": 590.142,
+        "duration": 3.62
+    },
+    {
+        "text": "it just, it doesn't always have to have\nthis reward signal, and we don't even",
+        "start": 593.762,
+        "duration": 3.4
+    },
+    {
+        "text": "always have to learn our solution, we can.",
+        "start": 597.322,
+        "duration": 2.72
+    },
+    {
+        "text": "But sometimes it's a one off solution,\nand I'm done, and it keeps going on,",
+        "start": 600.902,
+        "duration": 2.99
+    },
+    {
+        "text": "Anyway, I think we've said enough about\nthat, but I have said enough about it.",
+        "start": 604.542,
+        "duration": 4.75
+    },
+    {
+        "text": "but yeah, so the kind of, typically\nthis, this kind of model of things",
+        "start": 611.362,
+        "duration": 5.84
+    },
+    {
+        "text": "is the term to transition model or\ntransition function, and yeah, it's",
+        "start": 617.472,
+        "duration": 3.26
+    },
+    {
+        "text": "basically the kind of set of states\nof an environment or an object.",
+        "start": 620.732,
+        "duration": 3.35
+    },
+    {
+        "text": "those states, and then the associated\ntransitions, that occur between",
+        "start": 624.902,
+        "duration": 3.39
+    },
+    {
+        "text": "those states, and how they happen.",
+        "start": 628.292,
+        "duration": 2.49
+    },
+    {
+        "text": "so often it's conditioned\non some sort of action.",
+        "start": 631.242,
+        "duration": 3.3
+    },
+    {
+        "text": "and it the simplest would be a\ndeterministic mapping between states.",
+        "start": 636.912,
+        "duration": 3.78
+    },
+    {
+        "text": "So you're in one state, and you\ndeterministically transition",
+        "start": 640.702,
+        "duration": 2.87
+    },
+    {
+        "text": "through a series of states.",
+        "start": 643.602,
+        "duration": 0.82
+    },
+    {
+        "text": "Obviously, that wouldn't\nbe very interesting.",
+        "start": 644.422,
+        "duration": 1.44
+    },
+    {
+        "text": "or you can have kind of a simple matrix\nof probabilities that basically tells",
+        "start": 646.722,
+        "duration": 3.33
+    },
+    {
+        "text": "you what is your chance of randomly\ngoing from one state into another state.",
+        "start": 650.052,
+        "duration": 4.15
+    },
+    {
+        "text": "But yeah, more often it's a kind of\ncondition on an action and it takes",
+        "start": 655.867,
+        "duration": 5.06
+    },
+    {
+        "text": "the form of some kind of arbitrary\nfunction, which may be probabilistic.",
+        "start": 660.927,
+        "duration": 6.58
+    },
+    {
+        "text": "And it can be hierarchical.",
+        "start": 671.167,
+        "duration": 1.92
+    },
+    {
+        "text": "So I did find some kind of discussion,\nfor example, of this in the literature.",
+        "start": 673.097,
+        "duration": 3.69
+    },
+    {
+        "text": "because we were talking about,\npresumably, yeah, others have thought",
+        "start": 678.402,
+        "duration": 2.9
+    },
+    {
+        "text": "about this and, I thought there was,\nyeah, a particularly useful paper from,",
+        "start": 681.302,
+        "duration": 3.65
+    },
+    {
+        "text": "Matthew Botnovich, I think, from\n2014, where, yeah, he talks about",
+        "start": 687.152,
+        "duration": 3.66
+    },
+    {
+        "text": "hierarchical, reinforcement learning,\nhierarchical transition models.",
+        "start": 692.202,
+        "duration": 2.79
+    },
+    {
+        "text": "Is that the one you sent me?",
+        "start": 695.622,
+        "duration": 1.48
+    },
+    {
+        "text": "No, I'll mention that one as well.",
+        "start": 697.942,
+        "duration": 2.29
+    },
+    {
+        "text": "That was, the one I sent was the one\nthat was linked in, Rajesh's paper,",
+        "start": 700.252,
+        "duration": 4.71
+    },
+    {
+        "text": "which I also did look at briefly.",
+        "start": 705.552,
+        "duration": 1.41
+    },
+    {
+        "text": "Yeah, I'll come back to that one.",
+        "start": 709.227,
+        "duration": 1.58
+    },
+    {
+        "text": "So I didn't read it, it was all math.",
+        "start": 711.397,
+        "duration": 2.11
+    },
+    {
+        "text": "It was, and it's very long.",
+        "start": 713.937,
+        "duration": 1.49
+    },
+    {
+        "text": "Yeah, sorry, I should have looked at\nit closer before I sent it to you.",
+        "start": 715.727,
+        "duration": 3.34
+    },
+    {
+        "text": "It's alright, I spent only\na little bit of time on it.",
+        "start": 719.067,
+        "duration": 2.68
+    },
+    {
+        "text": "Okay.",
+        "start": 721.747,
+        "duration": 0.29
+    },
+    {
+        "text": "I'll let you read that first.",
+        "start": 722.417,
+        "duration": 1.15
+    },
+    {
+        "text": "but yeah.",
+        "start": 727.677,
+        "duration": 0.46
+    },
+    {
+        "text": "And then the other thing is\noften this action is described",
+        "start": 728.782,
+        "duration": 4.4
+    },
+    {
+        "text": "as the action of the agent.",
+        "start": 733.182,
+        "duration": 1.42
+    },
+    {
+        "text": "and again, as I was mentioning,\noften this kind of literature,",
+        "start": 735.072,
+        "duration": 3.12
+    },
+    {
+        "text": "it's all about an agent moving\nin an environment, like a room.",
+        "start": 738.192,
+        "duration": 3.53
+    },
+    {
+        "text": "but I think it's useful and I think\nit's fair to take a more general",
+        "start": 743.322,
+        "duration": 3.1
+    },
+    {
+        "text": "view of this kind of action as\njust an influence on the state.",
+        "start": 746.432,
+        "duration": 4.14
+    },
+    {
+        "text": "It could be kind of anything from gravity\nto the influence of another object, it",
+        "start": 751.722,
+        "duration": 4.69
+    },
+    {
+        "text": "could be the behavior of another agent,\nflapping its wings, and we're observing",
+        "start": 756.412,
+        "duration": 5.09
+    },
+    {
+        "text": "that, or we're, intuiting that it might\nbe doing that, and then of course it",
+        "start": 761.502,
+        "duration": 5.1
+    },
+    {
+        "text": "could be, an action of the agent itself.",
+        "start": 766.602,
+        "duration": 2.3
+    },
+    {
+        "text": "and then, yeah, and arguably maybe\nalso internally driven, things like",
+        "start": 771.137,
+        "duration": 4.27
+    },
+    {
+        "text": "the elasticity in a rubber band,\nalthough maybe this is captured",
+        "start": 775.407,
+        "duration": 2.82
+    },
+    {
+        "text": "fully in, the state itself.",
+        "start": 778.227,
+        "duration": 1.95
+    },
+    {
+        "text": "But just the kind of idea that it's, it's\nnot like everything is just, completely",
+        "start": 781.217,
+        "duration": 4.62
+    },
+    {
+        "text": "passive and the only way that anything\nchanges in the world is by the agent going",
+        "start": 785.847,
+        "duration": 5.07
+    },
+    {
+        "text": "out there and interacting with things.",
+        "start": 790.917,
+        "duration": 1.75
+    },
+    {
+        "text": "things are much more\nkind of fluid than that.",
+        "start": 794.387,
+        "duration": 2.0
+    },
+    {
+        "text": "there are many things that\ncan influence other things,",
+        "start": 796.617,
+        "duration": 1.99
+    },
+    {
+        "text": "transitioning through states.",
+        "start": 799.647,
+        "duration": 1.42
+    },
+    {
+        "text": "and yeah, and so this,",
+        "start": 803.922,
+        "duration": 1.07
+    },
+    {
+        "text": "yeah, feels like a natural way to start\nto connect the kind of object behavior,",
+        "start": 807.312,
+        "duration": 4.21
+    },
+    {
+        "text": "with the kind of representation that's\ngoing to support, planned actions.",
+        "start": 812.372,
+        "duration": 3.92
+    },
+    {
+        "text": "Where kind of, yeah, hopefully once we\nsomehow learn this kind of transition",
+        "start": 816.672,
+        "duration": 3.97
+    },
+    {
+        "text": "function, transition model, represent it\nin a kind of useful way, then that can",
+        "start": 820.652,
+        "duration": 5.23
+    },
+    {
+        "text": "support really powerful, action policies.",
+        "start": 825.882,
+        "duration": 3.82
+    },
+    {
+        "text": ". and then just again, because partly this\nis because the terminology out there,",
+        "start": 833.612,
+        "duration": 4.0
+    },
+    {
+        "text": "yeah, I figure we might come across\nit and it's just useful to understand",
+        "start": 838.292,
+        "duration": 3.99
+    },
+    {
+        "text": "how it all hangs together and how it\nrelates to what we're trying to do.",
+        "start": 842.382,
+        "duration": 2.94
+    },
+    {
+        "text": "So there's also this notion of\nhierarchical reinforcement learning.",
+        "start": 846.422,
+        "duration": 2.71
+    },
+    {
+        "text": "And basically, yeah, this is\nstandard reinforcement learning.",
+        "start": 850.282,
+        "duration": 3.7
+    },
+    {
+        "text": "It can be model based or model free.",
+        "start": 853.982,
+        "duration": 1.59
+    },
+    {
+        "text": "and you're trying to learn action\npolicies, but where these, action",
+        "start": 856.702,
+        "duration": 3.59
+    },
+    {
+        "text": "policies can abstract over time or states.",
+        "start": 860.292,
+        "duration": 3.48
+    },
+    {
+        "text": "if you imagine in this diagram,\nyou have to take this series of,",
+        "start": 865.832,
+        "duration": 3.39
+    },
+    {
+        "text": "kind of actions down this tree\nto reach a particular goal state.",
+        "start": 869.682,
+        "duration": 2.6
+    },
+    {
+        "text": "you might learn a way to lump\nthese together so that this first",
+        "start": 873.532,
+        "duration": 3.81
+    },
+    {
+        "text": "one is okay, I'm opening the door.",
+        "start": 877.342,
+        "duration": 1.67
+    },
+    {
+        "text": "And this one is I'm getting out my car\nkeys or something like that, rather",
+        "start": 879.012,
+        "duration": 4.995
+    },
+    {
+        "text": "than the minutiae of motor movements\nthat you have to do, in order to",
+        "start": 884.007,
+        "duration": 4.87
+    },
+    {
+        "text": "achieve those kind of sub goals.",
+        "start": 888.987,
+        "duration": 1.33
+    },
+    {
+        "text": "And, of course, that's much more efficient\nto plan, it's much easier to do credit",
+        "start": 891.107,
+        "duration": 3.98
+    },
+    {
+        "text": "assignment, and all this kind of stuff.",
+        "start": 895.087,
+        "duration": 1.58
+    },
+    {
+        "text": "but, again, it's, yeah, you don't\nnecessarily need the kind of, if you're",
+        "start": 898.497,
+        "duration": 4.53
+    },
+    {
+        "text": "just trying to achieve a reward, sorry,\na state, then, as you were saying,",
+        "start": 903.027,
+        "duration": 3.73
+    },
+    {
+        "text": "Jeff, The reward learning part maybe\nisn't necessarily that, that relevant.",
+        "start": 906.757,
+        "duration": 4.47
+    },
+    {
+        "text": "if you just know you need to get into a\nstate and you know the structure of the",
+        "start": 912.027,
+        "duration": 3.24
+    },
+    {
+        "text": "world, you can just get into that state.",
+        "start": 915.277,
+        "duration": 1.43
+    },
+    {
+        "text": "the funny thing about that diagram,",
+        "start": 917.527,
+        "duration": 2.16
+    },
+    {
+        "text": "is that if I think about, actions and\naction policies, this says there's one",
+        "start": 921.757,
+        "duration": 5.98
+    },
+    {
+        "text": "path to any endpoint, any end state.",
+        "start": 927.777,
+        "duration": 2.75
+    },
+    {
+        "text": "But that's not true in the world.",
+        "start": 931.172,
+        "duration": 1.94
+    },
+    {
+        "text": "There's many paths to get to there.",
+        "start": 933.422,
+        "duration": 1.42
+    },
+    {
+        "text": "I was looking at these lines\nsaying, oh, do they connect?",
+        "start": 935.392,
+        "duration": 2.52
+    },
+    {
+        "text": "No, they don't.",
+        "start": 937.952,
+        "duration": 0.7
+    },
+    {
+        "text": "This says this is an ideal solution,\nbut in reality, you should be",
+        "start": 938.962,
+        "duration": 5.85
+    },
+    {
+        "text": "able to get there from anywhere.",
+        "start": 944.812,
+        "duration": 1.21
+    },
+    {
+        "text": "it's yeah, you can have that end state,\nbut there's multiple paths to get there.",
+        "start": 946.242,
+        "duration": 4.83
+    },
+    {
+        "text": "so this kind of diagram\ndoesn't capture that.",
+        "start": 951.742,
+        "duration": 2.23
+    },
+    {
+        "text": "I think you're arguing about\nthe chunking of actions or the",
+        "start": 955.502,
+        "duration": 3.85
+    },
+    {
+        "text": "hierarchical nature of these actions.",
+        "start": 959.352,
+        "duration": 1.77
+    },
+    {
+        "text": "I think that's a good illustration of\nthat, but it doesn't, it doesn't capture",
+        "start": 961.122,
+        "duration": 5.67
+    },
+    {
+        "text": "the nature of the problem completely.",
+        "start": 966.822,
+        "duration": 1.76
+    },
+    {
+        "text": "Yeah.",
+        "start": 971.862,
+        "duration": 0.31
+    },
+    {
+        "text": "And then, this is just another diagram\ntrying to show this kind of abstraction",
+        "start": 972.172,
+        "duration": 3.94
+    },
+    {
+        "text": "that, yeah, you can do these kinds of\ntemporal abstractions over a series of,",
+        "start": 976.112,
+        "duration": 3.89
+    },
+    {
+        "text": "actions, where you can do more kind of\na state abstraction, so chunking that,",
+        "start": 980.802,
+        "duration": 5.44
+    },
+    {
+        "text": "okay, what's the high level concept that\nwe care about, the high level state,",
+        "start": 986.242,
+        "duration": 4.14
+    },
+    {
+        "text": "it's the agent has the key, and so forth.",
+        "start": 990.382,
+        "duration": 2.77
+    },
+    {
+        "text": "but Okay, yeah.",
+        "start": 995.862,
+        "duration": 1.07
+    },
+    {
+        "text": "The state abstraction seems somehow\nmore relevant to me than the template.",
+        "start": 998.622,
+        "duration": 4.01
+    },
+    {
+        "text": "It's yeah, the state abstraction is\nthe first thing you do, I think, right?",
+        "start": 1002.762,
+        "duration": 3.64
+    },
+    {
+        "text": "it seems like the first thing you\ndo is you say, Yeah, I think it's",
+        "start": 1008.082,
+        "duration": 3.67
+    },
+    {
+        "text": "definitely, we're already, doing this\nbecause obviously, yeah, again, we",
+        "start": 1011.752,
+        "duration": 4.93
+    },
+    {
+        "text": "don't want to just, know models at the\nhighest level of detail or whatever.",
+        "start": 1016.682,
+        "duration": 4.37
+    },
+    {
+        "text": "and yeah, we want relatively,\nAbstract models of the world.",
+        "start": 1022.342,
+        "duration": 6.21
+    },
+    {
+        "text": "so that's something I guess that\nwe're already doing, with heterarchy.",
+        "start": 1029.372,
+        "duration": 4.9
+    },
+    {
+        "text": "but yeah, what's interesting\nis if you look at these papers,",
+        "start": 1038.062,
+        "duration": 2.73
+    },
+    {
+        "text": "generally a lot of the literature is\nfocused on this kind of model free.",
+        "start": 1041.172,
+        "duration": 2.86
+    },
+    {
+        "text": "if it's, whether it's hierarchical or not,\na lot of reinforcement learning is focused",
+        "start": 1045.252,
+        "duration": 4.5
+    },
+    {
+        "text": "on model free, but particularly this,\nthe hierarchical reinforcement learning.",
+        "start": 1049.752,
+        "duration": 5.11
+    },
+    {
+        "text": "Basically because learning\nhierarchical world slash object models.",
+        "start": 1054.872,
+        "duration": 3.65
+    },
+    {
+        "text": "is, not necessarily that easy to do.",
+        "start": 1058.977,
+        "duration": 2.66
+    },
+    {
+        "text": "yeah, as you were saying, Viviane,\nthere's unsupervised, signals,",
+        "start": 1064.417,
+        "duration": 3.29
+    },
+    {
+        "text": "predicting the next image or whatever\nthat you can use to inform them.",
+        "start": 1068.767,
+        "duration": 2.86
+    },
+    {
+        "text": "But I think it partly just relates to, the\nkind of, represent, the kinds of ways that",
+        "start": 1071.627,
+        "duration": 7.37
+    },
+    {
+        "text": "a hierarchical model is being represented.",
+        "start": 1079.257,
+        "duration": 2.01
+    },
+    {
+        "text": "As far as I've seen, it\ntends to be fairly shallow,",
+        "start": 1081.907,
+        "duration": 2.2
+    },
+    {
+        "text": "or, yeah, relatively simple systems,\nwhich I think the next time, we",
+        "start": 1086.292,
+        "duration": 6.9
+    },
+    {
+        "text": "do a brainstorming, I can maybe\nget into, learning how, a set of",
+        "start": 1093.192,
+        "duration": 3.4
+    },
+    {
+        "text": "particles interact and stuff like\nthat, with kind of a world model.",
+        "start": 1096.612,
+        "duration": 4.17
+    },
+    {
+        "text": "but yeah, but of course it\ncan be model based, and that's",
+        "start": 1103.722,
+        "duration": 3.875
+    },
+    {
+        "text": "maybe where we'll come in.",
+        "start": 1107.627,
+        "duration": 1.7
+    },
+    {
+        "text": "so then the kind of last definition\njust to mention is this term options,",
+        "start": 1112.437,
+        "duration": 3.4
+    },
+    {
+        "text": "which again you might come across.",
+        "start": 1115.837,
+        "duration": 1.28
+    },
+    {
+        "text": "And my understanding is basically\njust a term for this kind of chunking,",
+        "start": 1117.587,
+        "duration": 3.5
+    },
+    {
+        "text": "of, actions together into kind of\na more temporally abstract, manner.",
+        "start": 1122.477,
+        "duration": 3.43
+    },
+    {
+        "text": "And so an option would be something\nlike open door, and then if you",
+        "start": 1126.467,
+        "duration": 3.91
+    },
+    {
+        "text": "select that option, then that's\ngoing to initiate its own subpolicy,",
+        "start": 1130.597,
+        "duration": 2.49
+    },
+    {
+        "text": "and play out.",
+        "start": 1135.157,
+        "duration": 0.95
+    },
+    {
+        "text": "until it's done.",
+        "start": 1136.882,
+        "duration": 0.77
+    },
+    {
+        "text": "You're saying this is the term\nthat's used in the literature?",
+        "start": 1138.052,
+        "duration": 2.15
+    },
+    {
+        "text": "Yeah.",
+        "start": 1140.682,
+        "duration": 0.5
+    },
+    {
+        "text": "So it doesn't imply a choice, it just,\nit, you're saying it just says it's like",
+        "start": 1142.792,
+        "duration": 6.46
+    },
+    {
+        "text": "a, an abstract, action that may be done\ndifferent ways or something like that?",
+        "start": 1149.252,
+        "duration": 4.78
+    },
+    {
+        "text": "When I think of options, I think\noh, you have three options, A,",
+        "start": 1155.562,
+        "duration": 2.33
+    },
+    {
+        "text": "B, C, which one do you want?",
+        "start": 1157.982,
+        "duration": 1.05
+    },
+    {
+        "text": "I guess you, yeah, in this case, you\ndo have, so you could open the door,",
+        "start": 1160.542,
+        "duration": 3.25
+    },
+    {
+        "text": "you could lie down on the sofa, or\nyou could turn on the TV, or whatever.",
+        "start": 1163.792,
+        "duration": 3.82
+    },
+    {
+        "text": "Those are your options.",
+        "start": 1167.632,
+        "duration": 1.14
+    },
+    {
+        "text": "I don't really know why they're called\noptions, it's, but anyways, but then,",
+        "start": 1169.672,
+        "duration": 3.62
+    },
+    {
+        "text": "then once you select one, then you're\ngoing to have a different policy that",
+        "start": 1174.352,
+        "duration": 3.33
+    },
+    {
+        "text": "sorts out actually executing that.",
+        "start": 1177.682,
+        "duration": 1.77
+    },
+    {
+        "text": "Okay.",
+        "start": 1181.472,
+        "duration": 0.41
+    },
+    {
+        "text": "I don't know, yeah, Viviane, do you have\na sense why they're called, Options,",
+        "start": 1183.212,
+        "duration": 2.99
+    },
+    {
+        "text": "oh, I don't know if she's frozen.",
+        "start": 1189.432,
+        "duration": 1.89
+    },
+    {
+        "text": "Viviane's frozen.",
+        "start": 1193.132,
+        "duration": 0.76
+    },
+    {
+        "text": "She's frozen in a good\npose, so she looks good.",
+        "start": 1195.792,
+        "duration": 1.99
+    },
+    {
+        "text": "very pensive.",
+        "start": 1199.282,
+        "duration": 0.82
+    },
+    {
+        "text": "You're frozen, Viviane.",
+        "start": 1200.392,
+        "duration": 2.05
+    },
+    {
+        "text": "Yeah, sorry.",
+        "start": 1203.522,
+        "duration": 0.6
+    },
+    {
+        "text": "No, it's okay.",
+        "start": 1204.982,
+        "duration": 0.66
+    },
+    {
+        "text": "Yeah, do you have a, a deeper sense,\nViviane, of why they're called options?",
+        "start": 1205.692,
+        "duration": 4.03
+    },
+    {
+        "text": "yeah, I also, I'm not sure why, but\nthat's definitely a term it's like",
+        "start": 1212.912,
+        "duration": 4.67
+    },
+    {
+        "text": "in, in the reinforcement learning\nbook from Sutton and Bartow and",
+        "start": 1217.592,
+        "duration": 4.06
+    },
+    {
+        "text": "they have a whole chapter on it.",
+        "start": 1222.142,
+        "duration": 1.18
+    },
+    {
+        "text": "I guess it's just to distinguish\nit from the term actions, even",
+        "start": 1224.137,
+        "duration": 4.16
+    },
+    {
+        "text": "though they are kind of actions,\njust higher level actions.",
+        "start": 1228.297,
+        "duration": 3.27
+    },
+    {
+        "text": "okay.",
+        "start": 1232.727,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay.",
+        "start": 1233.587,
+        "duration": 0.46
+    },
+    {
+        "text": "Yeah.",
+        "start": 1234.227,
+        "duration": 0.23
+    },
+    {
+        "text": "Not true.",
+        "start": 1234.457,
+        "duration": 0.4
+    },
+    {
+        "text": "No, that, that makes sense.",
+        "start": 1235.577,
+        "duration": 1.17
+    },
+    {
+        "text": "Thanks.",
+        "start": 1237.017,
+        "duration": 0.22
+    },
+    {
+        "text": "It'll probably take me\na while to absorb that.",
+        "start": 1237.337,
+        "duration": 1.48
+    },
+    {
+        "text": "Okay.",
+        "start": 1238.817,
+        "duration": 0.26
+    },
+    {
+        "text": "so yeah, so that's all the kind of\ndefinitions out of the way, just so",
+        "start": 1241.727,
+        "duration": 3.08
+    },
+    {
+        "text": "we're all on exactly the same page now.",
+        "start": 1244.807,
+        "duration": 2.47
+    },
+    {
+        "text": "Sure.",
+        "start": 1249.247,
+        "duration": 0.32
+    },
+    {
+        "text": "But yeah.",
+        "start": 1249.627,
+        "duration": 0.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 1250.287,
+        "duration": 0.155
+    },
+    {
+        "text": "Yeah.",
+        "start": 1250.442,
+        "duration": 0.155
+    },
+    {
+        "text": "Just then, to take a step back, so\nthe kind of challenge is, yeah, we",
+        "start": 1252.667,
+        "duration": 4.22
+    },
+    {
+        "text": "want to learn this transition model of\nobjects across multiple hierarchies,",
+        "start": 1256.887,
+        "duration": 3.1
+    },
+    {
+        "text": "these kind of object behaviors.",
+        "start": 1260.137,
+        "duration": 1.3
+    },
+    {
+        "text": "But not only that, we need to learn\nhow motor systems would interact with",
+        "start": 1262.477,
+        "duration": 4.01
+    },
+    {
+        "text": "these, with the transition model,\nto achieve a desired goal state.",
+        "start": 1266.487,
+        "duration": 4.28
+    },
+    {
+        "text": "So it's this kind of intersection of\nobject behaviors and action policies.",
+        "start": 1271.427,
+        "duration": 3.75
+    },
+    {
+        "text": "Which are clearly related,\nbut also not equivalent.",
+        "start": 1277.227,
+        "duration": 3.98
+    },
+    {
+        "text": "I thought as a first\nthing, I would try and just",
+        "start": 1285.957,
+        "duration": 2.37
+    },
+    {
+        "text": "walk through how I'm conceptualizing\nthe transition models at the moment,",
+        "start": 1290.837,
+        "duration": 3.98
+    },
+    {
+        "text": "and how kind of it maybe ties in\nwith the sort of cortical anatomy",
+        "start": 1294.877,
+        "duration": 3.94
+    },
+    {
+        "text": "as we've been recently discussing.",
+        "start": 1298.817,
+        "duration": 1.36
+    },
+    {
+        "text": "and yeah, this is going to be focusing\non object behavior, and it's not, going",
+        "start": 1303.687,
+        "duration": 6.72
+    },
+    {
+        "text": "to get into kind of hierarchy yet.",
+        "start": 1310.407,
+        "duration": 1.86
+    },
+    {
+        "text": "So if we just imagine that we have\na model, a learning module that",
+        "start": 1314.112,
+        "duration": 3.92
+    },
+    {
+        "text": "has learned a model of a stapler,\nwe have these different layers.",
+        "start": 1318.032,
+        "duration": 4.4
+    },
+    {
+        "text": "If I've, for these layers that I've\njust had one color, it's because",
+        "start": 1323.262,
+        "duration": 4.49
+    },
+    {
+        "text": "I don't necessarily have a good\nreason for subdividing the layer,",
+        "start": 1328.107,
+        "duration": 3.72
+    },
+    {
+        "text": "but maybe that's something that will\ncome up in the discussion today.",
+        "start": 1331.827,
+        "duration": 3.03
+    },
+    {
+        "text": "But,",
+        "start": 1335.467,
+        "duration": 0.27
+    },
+    {
+        "text": "and kind the term, can I just,\nagain, the word transition model,",
+        "start": 1338.677,
+        "duration": 6.48
+    },
+    {
+        "text": "I wanna try to understand\nwhat you mean by that.",
+        "start": 1347.867,
+        "duration": 1.74
+    },
+    {
+        "text": "why don't you just rephrase\nwhat that means in a sentence?",
+        "start": 1350.237,
+        "duration": 3.27
+    },
+    {
+        "text": "is that how the morphology,\nthe stapler changes?",
+        "start": 1354.667,
+        "duration": 3.57
+    },
+    {
+        "text": "Is that what it means?",
+        "start": 1358.237,
+        "duration": 0.72
+    },
+    {
+        "text": "So it's how, the state of the object\nchanges, with the environment over time.",
+        "start": 1360.202,
+        "duration": 7.14
+    },
+    {
+        "text": "Okay, so it could be But the state\nmight capture quite a lot of things.",
+        "start": 1367.632,
+        "duration": 3.35
+    },
+    {
+        "text": "but it could be like the\nstapler were going up and down.",
+        "start": 1371.642,
+        "duration": 2.46
+    },
+    {
+        "text": "It could be the icons\nchanging on the screen.",
+        "start": 1374.112,
+        "duration": 1.6
+    },
+    {
+        "text": "So that's, that transition model\nis really, it's the state of",
+        "start": 1375.802,
+        "duration": 3.12
+    },
+    {
+        "text": "the object and how the states\ntransition between each other.",
+        "start": 1378.932,
+        "duration": 3.45
+    },
+    {
+        "text": "Yes, but it could also be, it could\nalso be where we are on the object.",
+        "start": 1383.472,
+        "duration": 4.11
+    },
+    {
+        "text": "Okay.",
+        "start": 1387.582,
+        "duration": 0.075
+    },
+    {
+        "text": "Why would that be a model?",
+        "start": 1388.527,
+        "duration": 1.23
+    },
+    {
+        "text": "That just seems to be a temporary,",
+        "start": 1389.757,
+        "duration": 2.09
+    },
+    {
+        "text": "So the model is, tells us\nhow, transitions take place.",
+        "start": 1395.117,
+        "duration": 5.62
+    },
+    {
+        "text": "So it's not that the location\non the object is a model.",
+        "start": 1400.747,
+        "duration": 2.27
+    },
+    {
+        "text": "It's just, for example, grid cells and\nour understanding of path integration.",
+        "start": 1403.017,
+        "duration": 5.16
+    },
+    {
+        "text": "would be part of the transition\nmodel, because they tell us that",
+        "start": 1408.532,
+        "duration": 4.17
+    },
+    {
+        "text": "if we, move through space, then\nour location will be updated, where",
+        "start": 1412.702,
+        "duration": 5.13
+    },
+    {
+        "text": "the location is part of our state.",
+        "start": 1417.832,
+        "duration": 1.51
+    },
+    {
+        "text": "that's confusing to me, because to\nme, there's a model of how my, sensor",
+        "start": 1421.742,
+        "duration": 6.07
+    },
+    {
+        "text": "moves, my finger moves through space\nunder different motor behaviors.",
+        "start": 1427.812,
+        "duration": 3.91
+    },
+    {
+        "text": "That to me seems very, largely independent\nof the model of the stapler itself.",
+        "start": 1432.202,
+        "duration": 5.49
+    },
+    {
+        "text": "yeah, so it's just all about staplers,",
+        "start": 1442.562,
+        "duration": 2.27
+    },
+    {
+        "text": "yeah, I guess that's where I just, I feel\nlike they are related because, yeah, maybe",
+        "start": 1447.132,
+        "duration": 6.29
+    },
+    {
+        "text": "if I just go through okay, all right,\nyou had a question mark there, I'm not",
+        "start": 1453.422,
+        "duration": 4.35
+    },
+    {
+        "text": "sure why, but I was, I had a question\nmark too, so maybe, yeah, how I was most",
+        "start": 1457.772,
+        "duration": 8.17
+    },
+    {
+        "text": "thinking of it originally is that the\ntransition model is, It's basically how",
+        "start": 1466.062,
+        "duration": 4.16
+    },
+    {
+        "text": "actions move you through the state space.",
+        "start": 1470.222,
+        "duration": 2.29
+    },
+    {
+        "text": "okay, so those actions would be\nrelative to the object, that really",
+        "start": 1473.542,
+        "duration": 5.39
+    },
+    {
+        "text": "doesn't matter which finger I'm\nusing or anything like that, right?",
+        "start": 1478.932,
+        "duration": 2.75
+    },
+    {
+        "text": "it's like the action would\nbe specified in the model.",
+        "start": 1481.972,
+        "duration": 3.31
+    },
+    {
+        "text": "It's The top of the stapler\nhas to be pushed down relative",
+        "start": 1485.442,
+        "duration": 3.7
+    },
+    {
+        "text": "to, something like that.",
+        "start": 1489.142,
+        "duration": 1.45
+    },
+    {
+        "text": "I can't separate out this model of the\nstapler, which has these behaviors and",
+        "start": 1491.852,
+        "duration": 6.85
+    },
+    {
+        "text": "does various things, or the model of a\nsmartphone, and I can separate that out",
+        "start": 1498.732,
+        "duration": 4.16
+    },
+    {
+        "text": "from how am I at this moment, where my\nbody is, and how I'm interacting with it.",
+        "start": 1502.902,
+        "duration": 5.74
+    },
+    {
+        "text": "Because, I can push the stapler down\nat my elbow, it doesn't really matter.",
+        "start": 1509.432,
+        "duration": 3.44
+    },
+    {
+        "text": "Yeah.",
+        "start": 1512.892,
+        "duration": 0.37
+    },
+    {
+        "text": "Yeah, I mean in its simplest form\nit's basically saying, if I'm in",
+        "start": 1514.442,
+        "duration": 3.63
+    },
+    {
+        "text": "this state and I take that action,\nwhat state will I be in next?",
+        "start": 1518.072,
+        "duration": 4.34
+    },
+    {
+        "text": "But I'm saying that the action should\nbe in the models  the definition",
+        "start": 1522.592,
+        "duration": 4.32
+    },
+    {
+        "text": "of the model, not the definition\nof how my fingers move into space.",
+        "start": 1526.932,
+        "duration": 3.71
+    },
+    {
+        "text": "yeah.",
+        "start": 1532.542,
+        "duration": 0.37
+    },
+    {
+        "text": "Okay.",
+        "start": 1535.152,
+        "duration": 0.39
+    },
+    {
+        "text": "But so I feel like it should\nmaybe be both, as in, yeah,",
+        "start": 1535.582,
+        "duration": 8.08
+    },
+    {
+        "text": "so humor me for a moment.",
+        "start": 1543.662,
+        "duration": 2.44
+    },
+    {
+        "text": "I guess if, so if the state is, capturing\na set of things, so the state is,",
+        "start": 1546.712,
+        "duration": 5.05
+    },
+    {
+        "text": "it's more complex than just where we\nare on the object, and it's more complex",
+        "start": 1554.097,
+        "duration": 3.05
+    },
+    {
+        "text": "than just the state of the object,\nlike whether it's open or closed.",
+        "start": 1557.147,
+        "duration": 2.52
+    },
+    {
+        "text": "It's, it's basically\na set of these things.",
+        "start": 1559.737,
+        "duration": 2.1
+    },
+    {
+        "text": "for example, it could capture,\nyeah, where we are on the object.",
+        "start": 1562.607,
+        "duration": 4.53
+    },
+    {
+        "text": "The sensed feature, we're experiencing,\nthe object ID, and then, and the object",
+        "start": 1567.687,
+        "duration": 7.46
+    },
+    {
+        "text": "pose, and then, I think we, arguably\nalso want some kind of object state",
+        "start": 1575.147,
+        "duration": 4.92
+    },
+    {
+        "text": "type, representation which might be\nwrapped up in this L2, L3, Yeah, open",
+        "start": 1580.087,
+        "duration": 4.79
+    },
+    {
+        "text": "versus closed, subject to gravity,\njust, it could be, fairly flexible.",
+        "start": 1584.877,
+        "duration": 5.32
+    },
+    {
+        "text": "okay, if I have a learned behavior,\nmy default behavior is to use my",
+        "start": 1592.427,
+        "duration": 7.11
+    },
+    {
+        "text": "index finger, push down on the\nstapler, and, maybe that's a, fits",
+        "start": 1599.537,
+        "duration": 7.33
+    },
+    {
+        "text": "your model there, that's, because\nit matters where my finger is.",
+        "start": 1606.867,
+        "duration": 3.08
+    },
+    {
+        "text": "That's not the way I think about it.",
+        "start": 1611.137,
+        "duration": 1.53
+    },
+    {
+        "text": "The way I've thought about it in the\npast is more like the stapler has its",
+        "start": 1612.667,
+        "duration": 3.29
+    },
+    {
+        "text": "own model, how it behaves, and then I can\napply my body to it in different ways.",
+        "start": 1615.987,
+        "duration": 5.47
+    },
+    {
+        "text": "But we can go with this for now.",
+        "start": 1621.647,
+        "duration": 1.45
+    },
+    {
+        "text": "It just, it doesn't, it feels like\nthose should be separated to me, but",
+        "start": 1623.097,
+        "duration": 4.14
+    },
+    {
+        "text": "you can make the argument otherwise.",
+        "start": 1627.277,
+        "duration": 1.37
+    },
+    {
+        "text": "Okay, yeah.",
+        "start": 1629.717,
+        "duration": 0.58
+    },
+    {
+        "text": "Yeah, I can maybe they're still separate,",
+        "start": 1630.297,
+        "duration": 3.755
+    },
+    {
+        "text": "but I guess, I just feel like they're\nentangled as well, let's just say there",
+        "start": 1636.502,
+        "duration": 4.73
+    },
+    {
+        "text": "is some transition model that somehow\ncaptures, all of this, like basically",
+        "start": 1641.232,
+        "duration": 5.02
+    },
+    {
+        "text": "how all of this is going to change\ngiven some, the current state, the",
+        "start": 1646.252,
+        "duration": 5.64
+    },
+    {
+        "text": "current set of, all these kind of state\nvariables and the, and some action.",
+        "start": 1651.892,
+        "duration": 3.88
+    },
+    {
+        "text": "and yeah, go ahead.",
+        "start": 1657.792,
+        "duration": 2.22
+    },
+    {
+        "text": "the variables you showed\non the slide before.",
+        "start": 1661.352,
+        "duration": 2.42
+    },
+    {
+        "text": "They would not necessarily all be\nin layer five, it would be more like",
+        "start": 1664.472,
+        "duration": 3.38
+    },
+    {
+        "text": "they would be represented in other\nlayers, and layer five tells us how",
+        "start": 1667.852,
+        "duration": 3.49
+    },
+    {
+        "text": "to move through those given actions.",
+        "start": 1671.342,
+        "duration": 2.05
+    },
+    {
+        "text": "yeah, no, for sure.",
+        "start": 1673.602,
+        "duration": 0.87
+    },
+    {
+        "text": "Yeah, so X, XT is in L6, sorry,\nI should have made that clear.",
+        "start": 1674.492,
+        "duration": 4.62
+    },
+    {
+        "text": "XT is meant to be in, L6, FT is meant to\nbe more in L4, OT and PT are up in L2, L3.",
+        "start": 1680.772,
+        "duration": 7.555
+    },
+    {
+        "text": "Okay, yeah.",
+        "start": 1690.217,
+        "duration": 1.06
+    },
+    {
+        "text": "None of these are in L5.",
+        "start": 1691.277,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah, just because technically that would\nall be part of the transition model.",
+        "start": 1693.017,
+        "duration": 3.39
+    },
+    {
+        "text": "Basically what you're saying is L5 is\njust telling us the routing between",
+        "start": 1698.717,
+        "duration": 4.01
+    },
+    {
+        "text": "Yeah, how to move between them.",
+        "start": 1702.767,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 1705.167,
+        "duration": 0.48
+    },
+    {
+        "text": "yeah, so it's more this model\nitself that's maybe in L5 rather",
+        "start": 1709.027,
+        "duration": 4.15
+    },
+    {
+        "text": "than the states representations.",
+        "start": 1713.187,
+        "duration": 2.15
+    },
+    {
+        "text": "and yeah, and this transition model\nitself is also subject to change.",
+        "start": 1717.757,
+        "duration": 4.35
+    },
+    {
+        "text": "It isn't totally fixed.",
+        "start": 1722.117,
+        "duration": 1.5
+    },
+    {
+        "text": "Okay.",
+        "start": 1723.617,
+        "duration": 0.06
+    },
+    {
+        "text": "so just then going through some examples.",
+        "start": 1725.902,
+        "duration": 2.94
+    },
+    {
+        "text": "So the kind of simplest action would be\na movement through space, which would,",
+        "start": 1729.622,
+        "duration": 6.42
+    },
+    {
+        "text": "yeah, affect, kind of XT plus one.",
+        "start": 1736.602,
+        "duration": 3.64
+    },
+    {
+        "text": "this could be via a direct connection,\nand this could just be hypothetical,",
+        "start": 1741.692,
+        "duration": 4.11
+    },
+    {
+        "text": "like a predicted, we get a predicted\nlocation and then a predicted sensation.",
+        "start": 1745.802,
+        "duration": 4.66
+    },
+    {
+        "text": "or if this, action actually\ngets executed in the real",
+        "start": 1752.112,
+        "duration": 3.69
+    },
+    {
+        "text": "world, then via sensor movement.",
+        "start": 1755.802,
+        "duration": 3.09
+    },
+    {
+        "text": "then the actual, FT plus one, like\nthe actual sensory feature at the",
+        "start": 1759.757,
+        "duration": 5.56
+    },
+    {
+        "text": "next, point is going to change.",
+        "start": 1765.317,
+        "duration": 2.17
+    },
+    {
+        "text": "this is how the kind of state\nvariable, the kind of, the state",
+        "start": 1768.447,
+        "duration": 3.76
+    },
+    {
+        "text": "representation is changing.",
+        "start": 1772.207,
+        "duration": 1.22
+    },
+    {
+        "text": "and this can also, these changes\ncan also then influence, for",
+        "start": 1775.187,
+        "duration": 2.67
+    },
+    {
+        "text": "example, the object model.",
+        "start": 1777.857,
+        "duration": 1.41
+    },
+    {
+        "text": "If, suddenly we decide, okay,\nactually it looks more like, This",
+        "start": 1779.287,
+        "duration": 3.225
+    },
+    {
+        "text": "mug that I'm on, and so forth.",
+        "start": 1782.512,
+        "duration": 2.05
+    },
+    {
+        "text": "So that's a simple way that actions are\nchanging the overall state of the system.",
+        "start": 1785.702,
+        "duration": 6.33
+    },
+    {
+        "text": "and the transition model\nhere is very simple.",
+        "start": 1795.272,
+        "duration": 1.68
+    },
+    {
+        "text": "It's basically path integration\nor something like that.",
+        "start": 1796.952,
+        "duration": 2.68
+    },
+    {
+        "text": "but a more kind of complex action\nlike persistent downward pressure",
+        "start": 1803.272,
+        "duration": 4.34
+    },
+    {
+        "text": "on the stapler head or something\nlike that could affect, the state",
+        "start": 1807.612,
+        "duration": 4.88
+    },
+    {
+        "text": "of the object, and put it into,\nstapler depressed, mode or whatever.",
+        "start": 1812.502,
+        "duration": 6.13
+    },
+    {
+        "text": "and here the kind of transition model\nis definitely going to be more complex.",
+        "start": 1819.942,
+        "duration": 3.19
+    },
+    {
+        "text": "in order to capture that.",
+        "start": 1823.982,
+        "duration": 1.92
+    },
+    {
+        "text": "and yeah, later I'll eventually\nhopefully talk about what that,",
+        "start": 1828.432,
+        "duration": 5.17
+    },
+    {
+        "text": "how we might represent, how we\nmight capture a transition model",
+        "start": 1835.052,
+        "duration": 3.84
+    },
+    {
+        "text": "that could do something like that.",
+        "start": 1838.892,
+        "duration": 1.76
+    },
+    {
+        "text": "And then lastly, the object state.",
+        "start": 1843.852,
+        "duration": 2.01
+    },
+    {
+        "text": "for example, if the stapler is opened,\nor of course if the ID changes,",
+        "start": 1846.452,
+        "duration": 3.31
+    },
+    {
+        "text": "can influence the transition model.",
+        "start": 1850.072,
+        "duration": 1.62
+    },
+    {
+        "text": "we'd expect the transition model\nto be different, probably from",
+        "start": 1852.532,
+        "duration": 2.14
+    },
+    {
+        "text": "different objects, at least in many\nrespects, but also the state of",
+        "start": 1854.672,
+        "duration": 4.72
+    },
+    {
+        "text": "the object might influence that.",
+        "start": 1859.402,
+        "duration": 1.59
+    },
+    {
+        "text": "so basically how your actions are\ninfluenced in the world, and that could",
+        "start": 1862.552,
+        "duration": 2.79
+    },
+    {
+        "text": "be as simple as when the stapler is\nopen, if I'm on one location and I,",
+        "start": 1865.352,
+        "duration": 4.77
+    },
+    {
+        "text": "go to another, I'd expect something\ndifferent versus if it's closed.",
+        "start": 1870.652,
+        "duration": 3.09
+    },
+    {
+        "text": "but of course a more complex object\nas you interact with it, that might",
+        "start": 1878.842,
+        "duration": 3.35
+    },
+    {
+        "text": "make new affordances available, When\nyou close the stapler, that's when",
+        "start": 1883.442,
+        "duration": 3.62
+    },
+    {
+        "text": "you can actually use the stapler.",
+        "start": 1887.062,
+        "duration": 1.055
+    },
+    {
+        "text": "When you open the stapler,\nthat's when you can load it.",
+        "start": 1888.117,
+        "duration": 1.945
+    },
+    {
+        "text": "Etc.",
+        "start": 1890.592,
+        "duration": 0.57
+    },
+    {
+        "text": "and I think here then the transition\nmodel is even more complex, because",
+        "start": 1892.562,
+        "duration": 4.11
+    },
+    {
+        "text": "then suddenly, the whole kind of\nnotion of space and all this kind of",
+        "start": 1896.682,
+        "duration": 3.63
+    },
+    {
+        "text": "stuff becomes a lot more flexible.",
+        "start": 1900.312,
+        "duration": 1.65
+    },
+    {
+        "text": "but yeah, but I feel like it's all,\nlike all of these things are kind",
+        "start": 1905.952,
+        "duration": 5.02
+    },
+    {
+        "text": "of part of this, this possibility\nof kind of actions can happen.",
+        "start": 1910.972,
+        "duration": 6.46
+    },
+    {
+        "text": "The system can change, and the\nstate of the system can change, but",
+        "start": 1918.397,
+        "duration": 3.46
+    },
+    {
+        "text": "different parts of the, this kind\nof state may be affected, and they",
+        "start": 1921.867,
+        "duration": 5.43
+    },
+    {
+        "text": "can also influence one another.",
+        "start": 1927.297,
+        "duration": 1.74
+    },
+    {
+        "text": "So it's not as simple as just\nthere's this environment where we",
+        "start": 1929.037,
+        "duration": 3.24
+    },
+    {
+        "text": "are moving through it, and then\nthere's actions that we're taking.",
+        "start": 1932.277,
+        "duration": 2.54
+    },
+    {
+        "text": "it all yeah, feeds back.",
+        "start": 1937.507,
+        "duration": 1.69
+    },
+    {
+        "text": "Yeah, that was, that part.",
+        "start": 1945.622,
+        "duration": 3.48
+    },
+    {
+        "text": "Jeff, in terms of what you were saying,",
+        "start": 1951.132,
+        "duration": 1.65
+    },
+    {
+        "text": "do you feel like it's fair\nthat, if I understood you,",
+        "start": 1955.772,
+        "duration": 4.24
+    },
+    {
+        "text": "it sounded like what you were saying\nwas like along this line, this kind",
+        "start": 1962.322,
+        "duration": 4.94
+    },
+    {
+        "text": "of example, that kind of actions are\naffecting the state of the object ID.",
+        "start": 1967.262,
+        "duration": 6.9
+    },
+    {
+        "text": "Yeah, I guess so, yeah.",
+        "start": 1974.642,
+        "duration": 1.45
+    },
+    {
+        "text": "Or like the object representation,\nthe object's level state.",
+        "start": 1976.842,
+        "duration": 3.03
+    },
+    {
+        "text": "Yeah,",
+        "start": 1980.202,
+        "duration": 0.43
+    },
+    {
+        "text": "first of all, I like this diagram a lot.",
+        "start": 1982.772,
+        "duration": 1.64
+    },
+    {
+        "text": "I think it, it's a good\nthought provoking picture.",
+        "start": 1984.682,
+        "duration": 4.22
+    },
+    {
+        "text": "I don't think it's necessarily clear\nin my mind all the different things",
+        "start": 1988.902,
+        "duration": 2.96
+    },
+    {
+        "text": "you mean by it, and I probably have\ndifferent interpretations of it, but it's",
+        "start": 1991.862,
+        "duration": 2.89
+    },
+    {
+        "text": "a good way to start thinking about it.",
+        "start": 1994.752,
+        "duration": 1.41
+    },
+    {
+        "text": "yeah, if you want to start\nbrainstorming a bit, I can do that,",
+        "start": 1998.602,
+        "duration": 3.55
+    },
+    {
+        "text": "but if you want to keep going on\nyour presentation, I can, wait.",
+        "start": 2002.152,
+        "duration": 3.2
+    },
+    {
+        "text": "Yeah, I could, I could just do the\nlast bit and then hopefully maybe,",
+        "start": 2007.047,
+        "duration": 6.85
+    },
+    {
+        "text": "like, why Yeah, then at least\nit's clear what I was thinking.",
+        "start": 2013.897,
+        "duration": 4.255
+    },
+    {
+        "text": "oh, just before I forget,\nit was really bothering me.",
+        "start": 2020.162,
+        "duration": 2.12
+    },
+    {
+        "text": "So when I was labeling this, I wrote\nkind of feature detectives and feature",
+        "start": 2022.282,
+        "duration": 2.86
+    },
+    {
+        "text": "location binding cells, the feature\ndetect, what was the name of those",
+        "start": 2025.142,
+        "duration": 3.73
+    },
+    {
+        "text": "cells that you said are very, they\nhave a specific tuning response, which",
+        "start": 2028.882,
+        "duration": 6.44
+    },
+    {
+        "text": "they they fire fairly consistently.",
+        "start": 2035.342,
+        "duration": 2.3
+    },
+    {
+        "text": "And then so they could\nBasically, you can determine the",
+        "start": 2037.642,
+        "duration": 2.65
+    },
+    {
+        "text": "selectivity of a microcolumn.",
+        "start": 2040.292,
+        "duration": 1.61
+    },
+    {
+        "text": "what was it?",
+        "start": 2044.752,
+        "duration": 0.69
+    },
+    {
+        "text": "it's not bipolar cells.",
+        "start": 2045.832,
+        "duration": 1.14
+    },
+    {
+        "text": "that's Oh, they are, but there's a\nThey are a flavor of bipolar cells.",
+        "start": 2047.432,
+        "duration": 4.24
+    },
+    {
+        "text": "and they go by the term, oh gosh.",
+        "start": 2053.452,
+        "duration": 2.4
+    },
+    {
+        "text": "They're not a type of stellate\ncell or something like that?",
+        "start": 2056.322,
+        "duration": 2.52
+    },
+    {
+        "text": "no, not the stellate cells.",
+        "start": 2059.072,
+        "duration": 1.36
+    },
+    {
+        "text": "oh gosh, I'm forgetting\nwords as they get older.",
+        "start": 2062.042,
+        "duration": 2.76
+    },
+    {
+        "text": "But I've always had\ntrouble with this word.",
+        "start": 2066.022,
+        "duration": 1.51
+    },
+    {
+        "text": "I have a picture of what\nthey look like in my head.",
+        "start": 2069.202,
+        "duration": 2.04
+    },
+    {
+        "text": "They're really skinny with the dendrites\nand axons, very limited in size.",
+        "start": 2071.252,
+        "duration": 3.74
+    },
+    {
+        "text": "And sometimes, some papers\njust call them bipolar cells.",
+        "start": 2075.512,
+        "duration": 2.9
+    },
+    {
+        "text": "But I'll just, find distinction and,",
+        "start": 2079.042,
+        "duration": 3.0
+    },
+    {
+        "text": "Okay, yeah, no, it's not that important.",
+        "start": 2085.162,
+        "duration": 1.21
+    },
+    {
+        "text": "It was just, it was bugging me.",
+        "start": 2086.382,
+        "duration": 1.46
+    },
+    {
+        "text": "I should know it.",
+        "start": 2088.822,
+        "duration": 1.24
+    },
+    {
+        "text": "it's a word that not everyone uses.",
+        "start": 2090.282,
+        "duration": 1.59
+    },
+    {
+        "text": "That's why it's, it's hard,\nto keep it in my mind.",
+        "start": 2091.872,
+        "duration": 4.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 2096.972,
+        "duration": 0.43
+    },
+    {
+        "text": "If you want, Yeah, if you think of it.",
+        "start": 2097.582,
+        "duration": 3.28
+    },
+    {
+        "text": "If you a reference to it, then\njust send me a link, or send me a",
+        "start": 2100.882,
+        "duration": 4.56
+    },
+    {
+        "text": "message and I'll try to remember\nto send you a link to some of them.",
+        "start": 2105.442,
+        "duration": 3.75
+    },
+    {
+        "text": "I'll do that, thanks.",
+        "start": 2110.212,
+        "duration": 0.57
+    },
+    {
+        "text": "what the actual name is not\nuniversally agreed upon.",
+        "start": 2112.837,
+        "duration": 2.69
+    },
+    {
+        "text": "Okay, yeah.",
+        "start": 2117.127,
+        "duration": 0.5
+    },
+    {
+        "text": "Yeah, so then, of course the\nwhole point in all this was to",
+        "start": 2120.147,
+        "duration": 4.14
+    },
+    {
+        "text": "bring in, hierarchy, so then",
+        "start": 2124.287,
+        "duration": 2.35
+    },
+    {
+        "text": "okay, yeah, how might\nHierarchy play into this?",
+        "start": 2128.842,
+        "duration": 2.32
+    },
+    {
+        "text": "So again, if you just\nhumor me for a moment.",
+        "start": 2132.602,
+        "duration": 2.94
+    },
+    {
+        "text": "So if you imagine yeah, okay,\nwe want to use a stapler.",
+        "start": 2135.552,
+        "duration": 2.87
+    },
+    {
+        "text": "So we move to the stapler\nin the office space, when we",
+        "start": 2138.962,
+        "duration": 4.57
+    },
+    {
+        "text": "need to depress the stapler.",
+        "start": 2143.822,
+        "duration": 1.26
+    },
+    {
+        "text": "So that's the change of the stapler state.",
+        "start": 2145.082,
+        "duration": 2.42
+    },
+    {
+        "text": "If you imagine there's a stapler\nlevel representation of the object.",
+        "start": 2147.502,
+        "duration": 3.41
+    },
+    {
+        "text": "And that involves moving to the\nstapler head and then applying",
+        "start": 2151.787,
+        "duration": 2.89
+    },
+    {
+        "text": "downward pressure on the stapler head.",
+        "start": 2154.687,
+        "duration": 1.97
+    },
+    {
+        "text": "So a change in the stapler head state.",
+        "start": 2156.657,
+        "duration": 2.6
+    },
+    {
+        "text": "maybe more complex one might be, make\ncoffee, where again, it's beneficial to",
+        "start": 2163.927,
+        "duration": 5.44
+    },
+    {
+        "text": "have hierarchy where you skip over or\nhave these options that you pick amongst.",
+        "start": 2169.367,
+        "duration": 5.0
+    },
+    {
+        "text": "and, once these are fulfilled, once\nthe, A machine has water once that",
+        "start": 2175.177,
+        "duration": 4.545
+    },
+    {
+        "text": "state is achieved then you can then\nmove on to turn on the coffee machine.",
+        "start": 2179.722,
+        "duration": 3.44
+    },
+    {
+        "text": "and again this is changing the machine\nstate and then in order to do that",
+        "start": 2184.482,
+        "duration": 3.68
+    },
+    {
+        "text": "you need to press the start button\nwhich is changing the button state.",
+        "start": 2188.272,
+        "duration": 2.51
+    },
+    {
+        "text": "oh, sorry, I meant to\nbreak down the slides.",
+        "start": 2194.932,
+        "duration": 1.97
+    },
+    {
+        "text": "let me just quickly do that.",
+        "start": 2198.542,
+        "duration": 1.15
+    },
+    {
+        "text": "Sorry, that's a lot of text.",
+        "start": 2199.692,
+        "duration": 2.25
+    },
+    {
+        "text": "You can just tell us to ignore it.",
+        "start": 2201.942,
+        "duration": 4.0
+    },
+    {
+        "text": "yeah, I guess a lot of,",
+        "start": 2209.872,
+        "duration": 1.3
+    },
+    {
+        "text": "hierarchical, action policy stuff\nthat I could see was talking",
+        "start": 2213.292,
+        "duration": 4.06
+    },
+    {
+        "text": "about, What do you call it?",
+        "start": 2217.352,
+        "duration": 2.03
+    },
+    {
+        "text": "you send down these actions and then those\nproduce sub actions and stuff like that.",
+        "start": 2219.562,
+        "duration": 4.32
+    },
+    {
+        "text": "But I wondered whether, to a certain\ndegree, we also want, more kind of top",
+        "start": 2224.512,
+        "duration": 4.05
+    },
+    {
+        "text": "down feedback that's passing a goal state.",
+        "start": 2228.562,
+        "duration": 2.26
+    },
+    {
+        "text": "and so what this, might then mean is,\nbasically the transition model would then",
+        "start": 2232.812,
+        "duration": 5.98
+    },
+    {
+        "text": "be conditioned not just on our current\nstate and, the kind of current action,",
+        "start": 2238.792,
+        "duration": 4.39
+    },
+    {
+        "text": "but, what do you call it?",
+        "start": 2245.222,
+        "duration": 2.41
+    },
+    {
+        "text": "oh, sorry,",
+        "start": 2248.792,
+        "duration": 0.65
+    },
+    {
+        "text": "this should be, yeah, so this\nshould be our current action is",
+        "start": 2251.572,
+        "duration": 3.97
+    },
+    {
+        "text": "conditioned, not just in our current\nstate, but also on our goal state.",
+        "start": 2255.542,
+        "duration": 4.94
+    },
+    {
+        "text": "and basically this would continue\nuntil, the transition, sorry,",
+        "start": 2262.212,
+        "duration": 4.59
+    },
+    {
+        "text": "until the state, of the, the system\nachieves the kind of the goal state.",
+        "start": 2266.882,
+        "duration": 5.22
+    },
+    {
+        "text": "So the transition model is not\nthe same as the policy, right?",
+        "start": 2273.902,
+        "duration": 3.71
+    },
+    {
+        "text": "yeah.",
+        "start": 2280.822,
+        "duration": 0.42
+    },
+    {
+        "text": "yeah, sorry.",
+        "start": 2281.942,
+        "duration": 0.53
+    },
+    {
+        "text": "So that's why I should have\na separate, line for this.",
+        "start": 2282.492,
+        "duration": 2.63
+    },
+    {
+        "text": "Okay.",
+        "start": 2285.902,
+        "duration": 0.43
+    },
+    {
+        "text": "So it would not be output.",
+        "start": 2286.412,
+        "duration": 1.19
+    },
+    {
+        "text": "The output would not be the next state.",
+        "start": 2288.102,
+        "duration": 1.72
+    },
+    {
+        "text": "It would be the next action and it would\nbe independent of the transition model.",
+        "start": 2289.832,
+        "duration": 5.33
+    },
+    {
+        "text": "It would just be, yeah, using\nThe transition model is one",
+        "start": 2295.162,
+        "duration": 4.015
+    },
+    {
+        "text": "of its conditioning elements.",
+        "start": 2299.177,
+        "duration": 1.84
+    },
+    {
+        "text": "Yeah, No, I, I was getting a bit\ntired maybe when I wrote this one.",
+        "start": 2303.897,
+        "duration": 5.43
+    },
+    {
+        "text": "but yeah, but basically, but they\nthen the thought is that, okay, so",
+        "start": 2312.037,
+        "duration": 3.89
+    },
+    {
+        "text": "you pass this goal state to a learning\nmodule and then it's basically going",
+        "start": 2316.107,
+        "duration": 3.97
+    },
+    {
+        "text": "to, kind of transition through this by\ninitiating the, whatever policy it has.",
+        "start": 2320.077,
+        "duration": 6.77
+    },
+    {
+        "text": "until it reaches, that goal state.",
+        "start": 2327.562,
+        "duration": 2.46
+    },
+    {
+        "text": "and that final state, it depends on how\nit's specified, but it might, involve,",
+        "start": 2332.322,
+        "duration": 5.35
+    },
+    {
+        "text": "probably most likely something about\nthe kind of representation at the L2,",
+        "start": 2338.092,
+        "duration": 3.52
+    },
+    {
+        "text": "L3 layer, the kind of object level\nrepresentation, but achieving it might",
+        "start": 2341.612,
+        "duration": 5.15
+    },
+    {
+        "text": "involve some kind of interim location, XT,\nand with the example of the stapler, so",
+        "start": 2346.862,
+        "duration": 7.84
+    },
+    {
+        "text": "maybe, you're passing in this goal state,\nokay, we want the stapler to be depressed.",
+        "start": 2354.872,
+        "duration": 3.63
+    },
+    {
+        "text": "So then, you, this learning module knows\nthat in order to get it into that state",
+        "start": 2359.602,
+        "duration": 6.83
+    },
+    {
+        "text": "Is that what the black line represents?",
+        "start": 2366.822,
+        "duration": 1.83
+    },
+    {
+        "text": "It's the desired goal state?",
+        "start": 2368.662,
+        "duration": 1.72
+    },
+    {
+        "text": "Is that what that is?",
+        "start": 2370.652,
+        "duration": 0.43
+    },
+    {
+        "text": "That's the top down feedback from\nthe higher level learning module.",
+        "start": 2371.282,
+        "duration": 3.02
+    },
+    {
+        "text": "You're now drawing it, you're now\ndrawing it like a neuroscientist",
+        "start": 2374.302,
+        "duration": 2.55
+    },
+    {
+        "text": "after our last meeting, so Laughter.",
+        "start": 2376.852,
+        "duration": 1.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 2382.082,
+        "duration": 0.21
+    },
+    {
+        "text": "And then this is meant\nto be a apical, Okay.",
+        "start": 2382.292,
+        "duration": 4.14
+    },
+    {
+        "text": "But, yeah, then this learning module\nbecause of its, transition model of",
+        "start": 2387.952,
+        "duration": 9.15
+    },
+    {
+        "text": "the stapler, it maybe knows that,\nokay, I need to get to the location,",
+        "start": 2397.102,
+        "duration": 3.15
+    },
+    {
+        "text": "which is the head of the stapler.",
+        "start": 2400.252,
+        "duration": 1.74
+    },
+    {
+        "text": "And then maybe at that point it needs to,\npass on, the kind of responsibility to",
+        "start": 2402.937,
+        "duration": 5.64
+    },
+    {
+        "text": "an even lower level learning module, or\nmaybe at that point it can finish things,",
+        "start": 2408.577,
+        "duration": 4.12
+    },
+    {
+        "text": "but if it needs to pass, down things,\nmaybe then it passes, okay, to the stapler",
+        "start": 2412.697,
+        "duration": 6.76
+    },
+    {
+        "text": "head model, you now need to be, you need\nto be in a state where you have a force,",
+        "start": 2419.477,
+        "duration": 4.7
+    },
+    {
+        "text": "Going down on you, something like that.",
+        "start": 2424.822,
+        "duration": 1.85
+    },
+    {
+        "text": "And then this, the staplehead\nmodel, then takes over.",
+        "start": 2426.682,
+        "duration": 4.86
+    },
+    {
+        "text": "and I guess then, yeah, if the learning\nmodel is basically making progress in",
+        "start": 2433.502,
+        "duration": 5.58
+    },
+    {
+        "text": "kind of achieving its, its target state.",
+        "start": 2439.162,
+        "duration": 3.26
+    },
+    {
+        "text": "then it just sends motor outputs\nfrom L5 and those get executed.",
+        "start": 2442.947,
+        "duration": 5.48
+    },
+    {
+        "text": "But if it's, for some reason, because\nof its kind of insufficient model",
+        "start": 2449.317,
+        "duration": 4.33
+    },
+    {
+        "text": "of the world or, or because, of the\nlevel of hierarchy it's at, if it",
+        "start": 2453.647,
+        "duration": 5.39
+    },
+    {
+        "text": "needs something else to be achieved,\nthen it basically sends a target",
+        "start": 2459.037,
+        "duration": 2.95
+    },
+    {
+        "text": "state to, another learning module.",
+        "start": 2461.997,
+        "duration": 2.65
+    },
+    {
+        "text": "And,",
+        "start": 2466.227,
+        "duration": 0.54
+    },
+    {
+        "text": "so that's where perhaps like making\ncoffee, you'd progress through this and",
+        "start": 2469.207,
+        "duration": 6.24
+    },
+    {
+        "text": "then, okay, you've achieved filling the.",
+        "start": 2475.447,
+        "duration": 1.44
+    },
+    {
+        "text": "machine with coffee, and then you\ngo to the next step, but now you",
+        "start": 2476.887,
+        "duration": 3.6
+    },
+    {
+        "text": "need the machine to have water.",
+        "start": 2480.577,
+        "duration": 2.25
+    },
+    {
+        "text": "So you're going to pass, a goal state\nto other learning models, say, okay, the",
+        "start": 2483.027,
+        "duration": 4.57
+    },
+    {
+        "text": "machine needs, water, and offload that.",
+        "start": 2487.887,
+        "duration": 4.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 2493.947,
+        "duration": 0.39
+    },
+    {
+        "text": "I like the notion of sending goal states.",
+        "start": 2494.387,
+        "duration": 2.24
+    },
+    {
+        "text": "instead of actions, it's similar to\nwhat we have right now, only that",
+        "start": 2498.127,
+        "duration": 4.81
+    },
+    {
+        "text": "our goal state right now can only\ncapture the location of the sensor.",
+        "start": 2502.967,
+        "duration": 3.59
+    },
+    {
+        "text": "And then basically we would\nadd more to the state.",
+        "start": 2507.017,
+        "duration": 2.8
+    },
+    {
+        "text": "So like the state of the world is\nthe location of the sensor, but",
+        "start": 2509.817,
+        "duration": 3.17
+    },
+    {
+        "text": "also location of and pose of the\nobject and state of the object.",
+        "start": 2512.997,
+        "duration": 3.99
+    },
+    {
+        "text": "And then basically you could\nsay, yeah, I want to make coffee.",
+        "start": 2517.407,
+        "duration": 4.28
+    },
+    {
+        "text": "I'm gonna tell you, I, I need\nthe coffee pot in this state.",
+        "start": 2522.617,
+        "duration": 3.15
+    },
+    {
+        "text": "So coffee pot at this location\npose, I need the hand right at",
+        "start": 2526.007,
+        "duration": 3.94
+    },
+    {
+        "text": "this location and pose I need.",
+        "start": 2529.947,
+        "duration": 1.59
+    },
+    {
+        "text": "And then those can say, okay, to\nput the coffee pot there, I need",
+        "start": 2531.747,
+        "duration": 3.24
+    },
+    {
+        "text": "the hand to move in this location.",
+        "start": 2535.167,
+        "duration": 3.2
+    },
+    {
+        "text": "and then basically those goal\nstates would be translated into",
+        "start": 2539.367,
+        "duration": 3.72
+    },
+    {
+        "text": "action sequences somewhere else.",
+        "start": 2543.087,
+        "duration": 1.845
+    },
+    {
+        "text": "I guess my main question\nwould be then like, where.",
+        "start": 2545.247,
+        "duration": 2.34
+    },
+    {
+        "text": "Would the goal state turn into actions?",
+        "start": 2548.247,
+        "duration": 2.09
+    },
+    {
+        "text": "And where does the policy actually live?",
+        "start": 2550.387,
+        "duration": 1.94
+    },
+    {
+        "text": "Is it also in the column or\nis it then somewhere else?",
+        "start": 2552.627,
+        "duration": 3.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 2556.717,
+        "duration": 0.4
+    },
+    {
+        "text": "No, it's a great question.",
+        "start": 2557.167,
+        "duration": 0.71
+    },
+    {
+        "text": "Yeah.",
+        "start": 2557.877,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 2558.307,
+        "duration": 0.22
+    },
+    {
+        "text": "So that's, yeah, exactly.",
+        "start": 2558.527,
+        "duration": 2.18
+    },
+    {
+        "text": "And,",
+        "start": 2560.717,
+        "duration": 0.39
+    },
+    {
+        "text": "yeah, so basically, so it can also\nL5 in this is, because I looked,",
+        "start": 2563.597,
+        "duration": 6.89
+    },
+    {
+        "text": "I think I saw something that L5\ncan send top down, connections.",
+        "start": 2570.737,
+        "duration": 5.73
+    },
+    {
+        "text": "so the kind of, That would be\nwhere it's sending goal states and",
+        "start": 2577.207,
+        "duration": 3.425
+    },
+    {
+        "text": "then, but it also, has this policy\nthat can just generate actions.",
+        "start": 2580.632,
+        "duration": 3.66
+    },
+    {
+        "text": "so the policy, yeah, would also exist,\nhere, but it just Just a quick, I have a",
+        "start": 2585.212,
+        "duration": 6.99
+    },
+    {
+        "text": "lot of thoughts, but I'm not aware that,\nL5 has, hierarchical projections down.",
+        "start": 2592.202,
+        "duration": 5.31
+    },
+    {
+        "text": "I think it's all layer 6.",
+        "start": 2597.522,
+        "duration": 1.17
+    },
+    {
+        "text": "But I could be wrong, I could be wrong.",
+        "start": 2599.647,
+        "duration": 1.82
+    },
+    {
+        "text": "Okay, I'll need to double check.",
+        "start": 2601.477,
+        "duration": 1.08
+    },
+    {
+        "text": "there's so much literature\nhere that it's easy.",
+        "start": 2603.927,
+        "duration": 2.03
+    },
+    {
+        "text": "But I, if all this makes sense to me in\nsome sense, I'm hesitant to interrupt",
+        "start": 2609.047,
+        "duration": 5.5
+    },
+    {
+        "text": "you because I want you to get through it.",
+        "start": 2614.567,
+        "duration": 1.84
+    },
+    {
+        "text": "But the way I'm thinking about this is\nimagine a single learning module has to",
+        "start": 2616.407,
+        "duration": 7.18
+    },
+    {
+        "text": "be able to do an action policy that and\nhas to be able to put the stapler some,",
+        "start": 2623.587,
+        "duration": 6.36
+    },
+    {
+        "text": "it has to be able to take a model and put\nit into some state, because every, if it's",
+        "start": 2630.417,
+        "duration": 4.655
+    },
+    {
+        "text": "going to happen in the cortex, it's going\nto happen in every learning module, and",
+        "start": 2635.072,
+        "duration": 4.14
+    },
+    {
+        "text": "we can then add hierarchy on top of that.",
+        "start": 2639.212,
+        "duration": 1.87
+    },
+    {
+        "text": "And one way to think about it is that,\nI agree, the top down, if someone says,",
+        "start": 2641.562,
+        "duration": 3.82
+    },
+    {
+        "text": "somebody has to provide this learning\nmodule and says, we wanted to depress",
+        "start": 2645.532,
+        "duration": 2.73
+    },
+    {
+        "text": "the stapler, and then this learning\nmodule would say, okay, you're telling",
+        "start": 2648.262,
+        "duration": 4.69
+    },
+    {
+        "text": "me to get into some state of the stapler,\nand, and I know it's current state.",
+        "start": 2652.952,
+        "duration": 6.32
+    },
+    {
+        "text": "and then it can say, where\nis my finger, right now?",
+        "start": 2660.062,
+        "duration": 3.81
+    },
+    {
+        "text": "And then I, then generate a behavior based\non my current location of my fingers.",
+        "start": 2663.882,
+        "duration": 4.71
+    },
+    {
+        "text": "It's like wherever my finger\nis right now, I'm going to",
+        "start": 2669.002,
+        "duration": 1.75
+    },
+    {
+        "text": "generate the behavior, correct?",
+        "start": 2670.752,
+        "duration": 1.19
+    },
+    {
+        "text": "So to my mind, it's L6\nrepresents where your finger is.",
+        "start": 2671.952,
+        "duration": 3.48
+    },
+    {
+        "text": "Somebody's trying to, tell you what\nstate you want to be in, and the",
+        "start": 2676.072,
+        "duration": 4.22
+    },
+    {
+        "text": "combination of where my finger is and\nthe model state, then generates an",
+        "start": 2680.292,
+        "duration": 4.75
+    },
+    {
+        "text": "action in layer five, which says, okay,\nthis is the specific action I need to",
+        "start": 2685.052,
+        "duration": 3.9
+    },
+    {
+        "text": "implement to move my finger to do that\ngoal and move the model to that state.",
+        "start": 2688.952,
+        "duration": 5.49
+    },
+    {
+        "text": "So it's an interaction between This is\nwhat I was saying earlier, layer six in",
+        "start": 2694.962,
+        "duration": 3.785
+    },
+    {
+        "text": "my mind is not really part of the model,\nit's just, it's the contemporaneous",
+        "start": 2698.747,
+        "duration": 4.96
+    },
+    {
+        "text": "position of your sensor or your body, and\nand you're saying, if you want me to put",
+        "start": 2703.747,
+        "duration": 6.67
+    },
+    {
+        "text": "this in some state, I can calculate what\nI need to do to get it into that state,",
+        "start": 2710.417,
+        "duration": 3.9
+    },
+    {
+        "text": "given my current position, and that's\ngoing to be calculated in layer five.",
+        "start": 2714.347,
+        "duration": 3.13
+    },
+    {
+        "text": "That's how I viewed it.",
+        "start": 2718.117,
+        "duration": 1.52
+    },
+    {
+        "text": "But again, imagine now, imagine I\nhave, ten fingers on the stapler,",
+        "start": 2720.337,
+        "duration": 5.15
+    },
+    {
+        "text": "and I'm holding it in both hands.",
+        "start": 2725.487,
+        "duration": 1.45
+    },
+    {
+        "text": "And I have ten learning modules that\nare all modeling the stapler, they all",
+        "start": 2727.702,
+        "duration": 5.26
+    },
+    {
+        "text": "have a model of the stapler, they all\nknow the same, state of the stapler,",
+        "start": 2732.962,
+        "duration": 3.94
+    },
+    {
+        "text": "they all agree we're in this state.",
+        "start": 2737.022,
+        "duration": 1.37
+    },
+    {
+        "text": "And then I put a top down\nrequest to the whole layer,",
+        "start": 2738.562,
+        "duration": 4.5
+    },
+    {
+        "text": "meaning all ten learning modules.",
+        "start": 2743.422,
+        "duration": 1.83
+    },
+    {
+        "text": "And they all could calculate how to move\ntheir specific finger to achieve the goal.",
+        "start": 2745.857,
+        "duration": 4.59
+    },
+    {
+        "text": "And, one of them is going to do\nit, but I could do another one.",
+        "start": 2751.507,
+        "duration": 3.94
+    },
+    {
+        "text": "I could, my point is that\nthere are now ten fingers.",
+        "start": 2755.447,
+        "duration": 2.62
+    },
+    {
+        "text": "There's ten different places, ways\nI can move to push the stapler down.",
+        "start": 2758.077,
+        "duration": 3.96
+    },
+    {
+        "text": "And each one can calculate their own\nspecific behavior that they need to do.",
+        "start": 2762.557,
+        "duration": 4.58
+    },
+    {
+        "text": "everything, I can do it, I can do\nit, and so we can't have them all do",
+        "start": 2768.767,
+        "duration": 4.07
+    },
+    {
+        "text": "it, they have to somehow pick one, I\ndon't know how that happens, but my",
+        "start": 2772.837,
+        "duration": 3.1
+    },
+    {
+        "text": "point is, again, I can have, I have\nlots of models of the stapler, and I",
+        "start": 2775.937,
+        "duration": 5.17
+    },
+    {
+        "text": "provide this goal to all of them, and,",
+        "start": 2781.147,
+        "duration": 2.26
+    },
+    {
+        "text": "one of them has to actually implement\nthe behavior that's required in that",
+        "start": 2785.467,
+        "duration": 3.78
+    },
+    {
+        "text": "simple example, but they all could,\nit's yeah, I could do it, you could",
+        "start": 2789.377,
+        "duration": 5.35
+    },
+    {
+        "text": "do it, I could do it, they can do\nit, but I'll do it, type of thing.",
+        "start": 2794.727,
+        "duration": 4.31
+    },
+    {
+        "text": "I'm just, doing, I'm just saying words how\nI'm interpreting what you're saying, Yeah,",
+        "start": 2801.207,
+        "duration": 4.77
+    },
+    {
+        "text": "no, I, yeah, I think that's exactly, it,\nand, yeah, and, yeah, as you're pointing",
+        "start": 2806.337,
+        "duration": 7.48
+    },
+    {
+        "text": "out, Viviane, obviously, yeah, we do need\nto also do the action at some point, and",
+        "start": 2813.817,
+        "duration": 3.28
+    },
+    {
+        "text": "yeah, clearly there's like a\nbalance between what you call it,",
+        "start": 2819.317,
+        "duration": 3.86
+    },
+    {
+        "text": "Passing the kind of task onward to\nsomeone else versus doing it yourself a",
+        "start": 2825.812,
+        "duration": 4.69
+    },
+    {
+        "text": "little like I guess middle management in\na company or something like there's only",
+        "start": 2830.502,
+        "duration": 3.96
+    },
+    {
+        "text": "so many times you can subdivide a task\nbefore someone actually has to do the work",
+        "start": 2834.822,
+        "duration": 4.1
+    },
+    {
+        "text": "or whatever and you know maybe pressing\na stapler isn't a great example because",
+        "start": 2838.942,
+        "duration": 4.25
+    },
+    {
+        "text": "yeah once we move to the target location\nthen you know maybe we can just generate",
+        "start": 2843.192,
+        "duration": 3.47
+    },
+    {
+        "text": "the action or whatever at that point.",
+        "start": 2846.662,
+        "duration": 2.06
+    },
+    {
+        "text": "I think one thing that's, yeah, clearly\nimportant here that I'm not, showing, but,",
+        "start": 2850.542,
+        "duration": 4.11
+    },
+    {
+        "text": "yeah, maybe, next time we'll, can try and\ndig into is, we'll also have, models for,",
+        "start": 2854.732,
+        "duration": 6.75
+    },
+    {
+        "text": "complex, motor systems, or whatever, on a\nhand, whatever, I know we've talked about",
+        "start": 2862.512,
+        "duration": 5.23
+    },
+    {
+        "text": "that before, and clearly that's involved\nas well, in terms of, actually executing",
+        "start": 2867.742,
+        "duration": 8.47
+    },
+    {
+        "text": "the, action, but, but, yeah, but so just\nto yeah, why, not just send actions?",
+        "start": 2876.792,
+        "duration": 8.95
+    },
+    {
+        "text": "yeah, why send kind of\ngoal states as well?",
+        "start": 2886.672,
+        "duration": 2.07
+    },
+    {
+        "text": "I think yeah, consistent with, what you\nguys are thinking, yeah, basically this",
+        "start": 2890.052,
+        "duration": 4.09
+    },
+    {
+        "text": "is what It's just easier for the higher\nlevel learning module to know nothing",
+        "start": 2894.142,
+        "duration": 4.16
+    },
+    {
+        "text": "about the lower level learning module.",
+        "start": 2898.312,
+        "duration": 1.22
+    },
+    {
+        "text": "It basically just has to say, get,\ncan you, can someone get this for me?",
+        "start": 2899.532,
+        "duration": 3.74
+    },
+    {
+        "text": "this is what's, needed.",
+        "start": 2903.842,
+        "duration": 1.45
+    },
+    {
+        "text": "and separates out knowledge of sort\nof necessary states, so that the",
+        "start": 2907.512,
+        "duration": 3.38
+    },
+    {
+        "text": "coffee machine button is pressed\nfrom the actions that can achieve it.",
+        "start": 2910.892,
+        "duration": 3.65
+    },
+    {
+        "text": "often, talk about how you can press\nstuff with an elbow or whatever, that's",
+        "start": 2915.702,
+        "duration": 4.82
+    },
+    {
+        "text": "independent of, the necessary state.",
+        "start": 2920.712,
+        "duration": 2.27
+    },
+    {
+        "text": "it also feels, yeah, this would be easier\nto represent when we've satisfied the top",
+        "start": 2926.292,
+        "duration": 3.79
+    },
+    {
+        "text": "down directive, because then basically the\ncurrent state will equal the target state,",
+        "start": 2930.082,
+        "duration": 3.7
+    },
+    {
+        "text": "and that's, if that representation is L2,\nL3, then that's being sent forward, so",
+        "start": 2934.022,
+        "duration": 6.27
+    },
+    {
+        "text": "then we know immediately whether, we were\nsuccessful or not, whereas if you send an",
+        "start": 2940.292,
+        "duration": 5.06
+    },
+    {
+        "text": "action, how do you really know, whether",
+        "start": 2945.362,
+        "duration": 3.81
+    },
+    {
+        "text": ".\nwhat you wanted to happen has actually,\nI'm not sure actions are sent down at all.",
+        "start": 2949.812,
+        "duration": 4.73
+    },
+    {
+        "text": "my assumption walking in would\nbe that no actions sent down.",
+        "start": 2954.762,
+        "duration": 3.07
+    },
+    {
+        "text": "It's just desired states and\nBut what about, the motor output",
+        "start": 2958.462,
+        "duration": 5.55
+    },
+    {
+        "text": "from L5 to that's a little weird.",
+        "start": 2964.012,
+        "duration": 2.46
+    },
+    {
+        "text": "it's pretty simple.",
+        "start": 2967.332,
+        "duration": 0.6
+    },
+    {
+        "text": "Imagine I have a two level hierarchy,\nand the top one says, we want to",
+        "start": 2967.932,
+        "duration": 4.32
+    },
+    {
+        "text": "depress the staplers, and then the lower\nlevel says, okay, one of us will do",
+        "start": 2972.252,
+        "duration": 3.76
+    },
+    {
+        "text": "it, and we'll generate the behaviors.",
+        "start": 2976.012,
+        "duration": 1.25
+    },
+    {
+        "text": "Okay.",
+        "start": 2977.262,
+        "duration": 0.02
+    },
+    {
+        "text": "what are the, motor outputs\nof the higher level region",
+        "start": 2979.022,
+        "duration": 2.32
+    },
+    {
+        "text": "doing, how are they expressed?",
+        "start": 2981.352,
+        "duration": 2.47
+    },
+    {
+        "text": "the way that Sherman and Guillory\nwrite about it is that those layer 5",
+        "start": 2985.052,
+        "duration": 3.59
+    },
+    {
+        "text": "cells just project subcortically and,",
+        "start": 2988.652,
+        "duration": 4.32
+    },
+    {
+        "text": "and",
+        "start": 2995.222,
+        "duration": 0.24
+    },
+    {
+        "text": "they do something.",
+        "start": 2998.292,
+        "duration": 0.79
+    },
+    {
+        "text": "Here's, one possibility, and stop\nme if you're not following this.",
+        "start": 3000.032,
+        "duration": 5.63
+    },
+    {
+        "text": "The",
+        "start": 3007.732,
+        "duration": 0.32
+    },
+    {
+        "text": "they've argued that everywhere they\nlook, and they make that distinction,",
+        "start": 3010.882,
+        "duration": 3.24
+    },
+    {
+        "text": "they don't say, they say we haven't\nlooked everywhere, but everywhere",
+        "start": 3014.122,
+        "duration": 2.42
+    },
+    {
+        "text": "you look, you've seen these layer\n5 cells that project subcortically.",
+        "start": 3016.582,
+        "duration": 2.25
+    },
+    {
+        "text": "That doesn't mean they all project\nto the same place subcortically.",
+        "start": 3020.262,
+        "duration": 3.05
+    },
+    {
+        "text": "for example, the motor system we have\nin our bodies is outside of the cortex,",
+        "start": 3024.772,
+        "duration": 7.31
+    },
+    {
+        "text": "is already hierarchically arranged.",
+        "start": 3032.082,
+        "duration": 1.95
+    },
+    {
+        "text": "We have, nerve centers in our spinal\ncord, we have them in our brainstem,",
+        "start": 3034.852,
+        "duration": 4.02
+    },
+    {
+        "text": "then there's the cerebellum, and there's,\nthere's a series of, stuff going on.",
+        "start": 3039.552,
+        "duration": 5.125
+    },
+    {
+        "text": "It's in fact, many of our ingrained\nbehaviors are already hierarchical",
+        "start": 3044.687,
+        "duration": 5.07
+    },
+    {
+        "text": "in some sense, or they're complex.",
+        "start": 3049.757,
+        "duration": 1.83
+    },
+    {
+        "text": "And so a level two region may\nbe saying not move the finger.",
+        "start": 3052.247,
+        "duration": 4.65
+    },
+    {
+        "text": "it may be saying something\nmore higher level, like telling",
+        "start": 3057.837,
+        "duration": 3.91
+    },
+    {
+        "text": "the whole motor system below,",
+        "start": 3061.747,
+        "duration": 1.64
+    },
+    {
+        "text": "I want that the lower level motor system\nis already maybe capable of interpreting",
+        "start": 3066.389,
+        "duration": 4.688
+    },
+    {
+        "text": "some of these high level commands.",
+        "start": 3071.267,
+        "duration": 1.16
+    },
+    {
+        "text": "you know what I'm saying?",
+        "start": 3073.892,
+        "duration": 0.87
+    },
+    {
+        "text": "It's it's not like layer 5 and region\n2, high regions and lower regions",
+        "start": 3074.772,
+        "duration": 4.29
+    },
+    {
+        "text": "are projecting to the same cells.",
+        "start": 3079.212,
+        "duration": 1.44
+    },
+    {
+        "text": "They may be projecting to a, sort of a\ncomplementing hierarchical motor system",
+        "start": 3080.662,
+        "duration": 4.0
+    },
+    {
+        "text": "that already exists in the, old brain.",
+        "start": 3084.702,
+        "duration": 2.09
+    },
+    {
+        "text": "And, and so all they're trying to\ndo is saying, if I can find the",
+        "start": 3087.322,
+        "duration": 3.15
+    },
+    {
+        "text": "correlation between my output and some\nother system down below, I'll do it.",
+        "start": 3090.472,
+        "duration": 4.49
+    },
+    {
+        "text": "a higher level region learning module,\nlayer 5, may project some place to",
+        "start": 3096.062,
+        "duration": 4.04
+    },
+    {
+        "text": "the, in the basal ganglia, or something\nlike that, and the lower level one",
+        "start": 3100.132,
+        "duration": 4.16
+    },
+    {
+        "text": "just projects right to the spinal cord.",
+        "start": 3104.292,
+        "duration": 1.65
+    },
+    {
+        "text": "that kind of thing.",
+        "start": 3107.302,
+        "duration": 0.85
+    },
+    {
+        "text": "And, yeah, and they're all\nsubcortical projections?",
+        "start": 3108.892,
+        "duration": 2.43
+    },
+    {
+        "text": "does any of it go to, motor\ncortex or anything like that?",
+        "start": 3111.462,
+        "duration": 2.97
+    },
+    {
+        "text": "alright, but motor cortex is in the\ncortex, so I'm not aware of layer 5.",
+        "start": 3115.102,
+        "duration": 4.02
+    },
+    {
+        "text": "Again, it's not, I'm not aware of\nanyone saying layer 5 cells project,",
+        "start": 3120.857,
+        "duration": 3.91
+    },
+    {
+        "text": "I'm not even sure I've read\nanything other than what Shulman and",
+        "start": 3128.097,
+        "duration": 2.05
+    },
+    {
+        "text": "Gillibrand have written about this.",
+        "start": 3130.397,
+        "duration": 0.93
+    },
+    {
+        "text": "So they've written a lot, but I'm not\nsure who else has written about it.",
+        "start": 3131.387,
+        "duration": 2.87
+    },
+    {
+        "text": "But they say those layer 5 cells, the\nones that we're talking about, the",
+        "start": 3134.737,
+        "duration": 4.69
+    },
+    {
+        "text": "intrinsically ones, the bigger ones,\nthey say they all do the following thing.",
+        "start": 3139.427,
+        "duration": 5.065
+    },
+    {
+        "text": "They, have an axon, it splits, one part\nof the axon goes out of the cortex,",
+        "start": 3144.842,
+        "duration": 5.42
+    },
+    {
+        "text": "someplace in the old brain, and that's,\nquote, related to behavior, and the other",
+        "start": 3150.542,
+        "duration": 5.8
+    },
+    {
+        "text": "split goes to, is passed to the next,\nis passed back up in the hierarchy to",
+        "start": 3156.382,
+        "duration": 6.1
+    },
+    {
+        "text": "the region above through the thalamus.",
+        "start": 3162.492,
+        "duration": 0.97
+    },
+    {
+        "text": "Okay, but there's no indication that those\nparticular layer 5 cells, the ones that",
+        "start": 3164.742,
+        "duration": 6.34
+    },
+    {
+        "text": "project subcortically, go anywhere else.",
+        "start": 3171.152,
+        "duration": 2.53
+    },
+    {
+        "text": "There are the other layer 5\ncells which seem to be voting.",
+        "start": 3174.912,
+        "duration": 3.86
+    },
+    {
+        "text": "Those cells do not project subcortically,\nbut they do project to other layer 5a",
+        "start": 3178.782,
+        "duration": 6.89
+    },
+    {
+        "text": "cells elsewhere in the cortex, broadly.",
+        "start": 3185.692,
+        "duration": 2.19
+    },
+    {
+        "text": "So there seems to be a voting layer\ngoing on there, and then a Motor",
+        "start": 3188.532,
+        "duration": 3.89
+    },
+    {
+        "text": "output layer that only exits a\ncortex or passes up the hierarchy.",
+        "start": 3192.422,
+        "duration": 3.94
+    },
+    {
+        "text": "That's it.",
+        "start": 3196.672,
+        "duration": 0.54
+    },
+    {
+        "text": "So that's what they've written.",
+        "start": 3198.402,
+        "duration": 0.57
+    },
+    {
+        "text": "I don't know if it's true, but\nthat's what they've written.",
+        "start": 3199.832,
+        "duration": 1.45
+    },
+    {
+        "text": "That's helpful.",
+        "start": 3202.702,
+        "duration": 0.38
+    },
+    {
+        "text": "Thanks.",
+        "start": 3203.102,
+        "duration": 0.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 3204.062,
+        "duration": 0.5
+    },
+    {
+        "text": "But, I don't think, basically, it's\nconsistent at some level with all",
+        "start": 3204.932,
+        "duration": 4.68
+    },
+    {
+        "text": "the things we're talking about.",
+        "start": 3209.622,
+        "duration": 0.75
+    },
+    {
+        "text": "We just have to refine some of this.",
+        "start": 3210.422,
+        "duration": 1.99
+    },
+    {
+        "text": "So anyway, I argue that there's no\nreason to pass down behaviors, while",
+        "start": 3215.117,
+        "duration": 6.58
+    },
+    {
+        "text": "it certainly doesn't look like it's\nbeing, it doesn't look like it's",
+        "start": 3221.697,
+        "duration": 4.54
+    },
+    {
+        "text": "happening, for whatever reason.",
+        "start": 3226.237,
+        "duration": 4.05
+    },
+    {
+        "text": "So I thought about this, this idea, this\nbothered me in the past, and so I said,",
+        "start": 3230.347,
+        "duration": 4.29
+    },
+    {
+        "text": "hey, it does, there is evidence that these\nlayer 5 cells do project, To different",
+        "start": 3234.647,
+        "duration": 5.43
+    },
+    {
+        "text": "levels of hierarchy in the old brain.",
+        "start": 3240.077,
+        "duration": 2.1
+    },
+    {
+        "text": "it may be that the cortex is just\ntrying to model your existing body's",
+        "start": 3243.627,
+        "duration": 4.87
+    },
+    {
+        "text": "behaviors like walking and reflex\nreactions and so on that are old",
+        "start": 3248.497,
+        "duration": 4.87
+    },
+    {
+        "text": "brain behaviors, and the cortex is\nmapping its hierarchy somewhat onto the",
+        "start": 3253.377,
+        "duration": 4.58
+    },
+    {
+        "text": ".\nThe hierarchy of the old brain so\nthat a high level region of the cortex",
+        "start": 3258.467,
+        "duration": 3.685
+    },
+    {
+        "text": "can give a sort of a high level state\ngoal or behavior goal to, some part",
+        "start": 3262.182,
+        "duration": 5.23
+    },
+    {
+        "text": "of the old brain and a lower region of\nthe cortex would project into a lower",
+        "start": 3267.412,
+        "duration": 4.35
+    },
+    {
+        "text": "behavioral section of the old brain.",
+        "start": 3272.472,
+        "duration": 2.13
+    },
+    {
+        "text": "Yeah, does that make sense?",
+        "start": 3276.172,
+        "duration": 1.771
+    },
+    {
+        "text": "Yeah, no, that makes sense.",
+        "start": 3277.943,
+        "duration": 1.771
+    },
+    {
+        "text": "Yeah, so, we can, basically express\nall hierarchical behavior in the",
+        "start": 3280.068,
+        "duration": 6.654
+    },
+    {
+        "text": "cortex as just target states and at\nthe lowest level then like something",
+        "start": 3286.752,
+        "duration": 5.52
+    },
+    {
+        "text": "in the motor cortex would, for example,\nsay my target is that my hand is",
+        "start": 3292.272,
+        "duration": 3.91
+    },
+    {
+        "text": "in this grasping state over there.",
+        "start": 3296.182,
+        "duration": 2.57
+    },
+    {
+        "text": "And then that could be sent\ndown subcortically and actually",
+        "start": 3298.992,
+        "duration": 2.99
+    },
+    {
+        "text": "be turned into motor commands.",
+        "start": 3302.162,
+        "duration": 1.76
+    },
+    {
+        "text": "But remember, layer five cells themselves\nnever Actually innervate a muscle.",
+        "start": 3304.352,
+        "duration": 4.95
+    },
+    {
+        "text": "And it's all, in some sense, I don't\nknow, I'm just going to state that.",
+        "start": 3310.432,
+        "duration": 5.77
+    },
+    {
+        "text": "I don't know how to interpret that.",
+        "start": 3316.202,
+        "duration": 1.15
+    },
+    {
+        "text": "But there's never a point where a layer 5\ncell says, contract this muscle, it says,",
+        "start": 3317.742,
+        "duration": 5.93
+    },
+    {
+        "text": "the way I interpret that is, the layer 5\ncells project to some subcortical motor",
+        "start": 3323.752,
+        "duration": 5.0
+    },
+    {
+        "text": "section, and it associatively learns to\nsay, when I'm in this state, the layer",
+        "start": 3328.752,
+        "duration": 7.975
+    },
+    {
+        "text": "5 cells are in this state, I want to\nassociate, I want to be able to invoke",
+        "start": 3336.727,
+        "duration": 4.36
+    },
+    {
+        "text": "these subcortical cells, when they're in\nthis, if they're in an equivalent state.",
+        "start": 3341.137,
+        "duration": 5.96
+    },
+    {
+        "text": "it's always, it's never directly\ndriving musculature, it's always,",
+        "start": 3348.067,
+        "duration": 4.98
+    },
+    {
+        "text": "Just trying to influence the old\nmotor system, to do something.",
+        "start": 3353.462,
+        "duration": 5.03
+    },
+    {
+        "text": "it's learning to pair its\nrepresentations with something",
+        "start": 3360.112,
+        "duration": 3.04
+    },
+    {
+        "text": "that already exists elsewhere.",
+        "start": 3363.152,
+        "duration": 1.09
+    },
+    {
+        "text": "That's how I've interpreted it.",
+        "start": 3365.902,
+        "duration": 0.69
+    },
+    {
+        "text": "I think that's a good way to, an\ninteresting way to think about it.",
+        "start": 3366.592,
+        "duration": 3.42
+    },
+    {
+        "text": "Yeah, that's a nice abstraction.",
+        "start": 3371.712,
+        "duration": 1.77
+    },
+    {
+        "text": "That's what the evidence suggests.",
+        "start": 3373.482,
+        "duration": 1.22
+    },
+    {
+        "text": "Cool, yeah, I'm glad you guys are on\nboard with sending states down, because,",
+        "start": 3376.477,
+        "duration": 4.0
+    },
+    {
+        "text": "yeah, I was worried maybe, that was going\nto be contentious, but no, it sounds",
+        "start": 3380.637,
+        "duration": 4.48
+    },
+    {
+        "text": "like we're all on a similar I'm going\nfurther, Niels, I'm saying now that we're",
+        "start": 3385.117,
+        "duration": 3.26
+    },
+    {
+        "text": "talking about it, I can't recall that I\ndon't think anybody ever sends any motor",
+        "start": 3388.377,
+        "duration": 3.99
+    },
+    {
+        "text": "actions, they, send in some sense, some\nThe representation that says you should",
+        "start": 3392.367,
+        "duration": 9.765
+    },
+    {
+        "text": "do something to get in the right state.",
+        "start": 3402.142,
+        "duration": 1.86
+    },
+    {
+        "text": "Yeah, achieve this state, yeah.",
+        "start": 3405.392,
+        "duration": 1.56
+    },
+    {
+        "text": "but yeah, and so just,\nyeah, quickly wrapping up,",
+        "start": 3409.552,
+        "duration": 2.99
+    },
+    {
+        "text": "so yeah, basically if you send that\nthen it's very easy to tell when that's,",
+        "start": 3414.602,
+        "duration": 4.19
+    },
+    {
+        "text": "if it's been achieved, and then you,\na higher level learning module then",
+        "start": 3418.812,
+        "duration": 3.2
+    },
+    {
+        "text": "knows, for example, it can continue,\nif it's carrying out a complex series",
+        "start": 3422.012,
+        "duration": 3.39
+    },
+    {
+        "text": "of actions, then, it knows, okay,\nthe coffee machine is on because.",
+        "start": 3425.402,
+        "duration": 3.04
+    },
+    {
+        "text": "The state of the coffee machine is\nnow what I was asking it to be in.",
+        "start": 3428.657,
+        "duration": 3.42
+    },
+    {
+        "text": "And then, similarly, a low level\nlearning module can maybe quickly fire",
+        "start": 3434.157,
+        "duration": 3.4
+    },
+    {
+        "text": "back if, a target state is completely\noutside of its possible state space.",
+        "start": 3437.557,
+        "duration": 3.93
+    },
+    {
+        "text": "it's just going to say, look, I can't\nhelp, and if everything is saying",
+        "start": 3442.317,
+        "duration": 3.22
+    },
+    {
+        "text": "that, then you would, more quickly\nrealize, okay, I need to, at a higher",
+        "start": 3445.537,
+        "duration": 4.77
+    },
+    {
+        "text": "level, try a different approach.",
+        "start": 3450.307,
+        "duration": 1.93
+    },
+    {
+        "text": "and then, yeah, and then this kind\nof, I think, connects to this idea",
+        "start": 3455.037,
+        "duration": 3.85
+    },
+    {
+        "text": "of what if it's all kind of states?",
+        "start": 3458.887,
+        "duration": 2.21
+    },
+    {
+        "text": "One of the kind of thoughts was,\nokay, can we unify the sensory and",
+        "start": 3461.887,
+        "duration": 3.76
+    },
+    {
+        "text": "motor representations a bit more?",
+        "start": 3465.647,
+        "duration": 1.43
+    },
+    {
+        "text": "And basically, if the, motor outputs\nin some sense are target states, then",
+        "start": 3467.767,
+        "duration": 5.11
+    },
+    {
+        "text": "they're essentially analogous, to the,\nsensory or object representations that",
+        "start": 3473.137,
+        "duration": 7.56
+    },
+    {
+        "text": "we're sending up through the hierarchy,\nthe kind of L2, L3, representations.",
+        "start": 3480.697,
+        "duration": 5.67
+    },
+    {
+        "text": "So that kind of means that they're not\nas, yeah, they're fundamentally linked.",
+        "start": 3487.107,
+        "duration": 5.93
+    },
+    {
+        "text": "It's still mysterious exactly.",
+        "start": 3495.067,
+        "duration": 1.81
+    },
+    {
+        "text": "We don't really know yet how\nwe represent object states.",
+        "start": 3496.887,
+        "duration": 2.32
+    },
+    {
+        "text": "But, we do, we're saying,\neverything is in control.",
+        "start": 3499.807,
+        "duration": 4.24
+    },
+    {
+        "text": "However it's represented, yeah.",
+        "start": 3504.507,
+        "duration": 1.62
+    },
+    {
+        "text": "We don't know how it's done yet.",
+        "start": 3506.377,
+        "duration": 1.43
+    },
+    {
+        "text": "Okay.",
+        "start": 3509.847,
+        "duration": 0.38
+    },
+    {
+        "text": "Yeah, I was just thinking about\nthat, because, actually, if we",
+        "start": 3510.997,
+        "duration": 3.33
+    },
+    {
+        "text": "put it this way now, the output\nstates and the input target states",
+        "start": 3514.327,
+        "duration": 4.25
+    },
+    {
+        "text": "will have the exact same format.",
+        "start": 3518.587,
+        "duration": 1.63
+    },
+    {
+        "text": "it will be like, objects at\nposes and sensors at poses.",
+        "start": 3521.137,
+        "duration": 3.11
+    },
+    {
+        "text": "And then, In the hierarchy, it's not that\nbig of a problem because, yeah, you just",
+        "start": 3524.667,
+        "duration": 5.745
+    },
+    {
+        "text": "get the target states from the higher\nlevel hierarchy and then you try to",
+        "start": 3530.412,
+        "duration": 3.61
+    },
+    {
+        "text": "yeah, you send back at what state\nyou're at, and, but then the main",
+        "start": 3536.542,
+        "duration": 5.17
+    },
+    {
+        "text": "question that popped up in my head is,\nwhere does the targets, the highest",
+        "start": 3541.712,
+        "duration": 4.73
+    },
+    {
+        "text": "level targets come from to begin with,\nlike, where does it come from that",
+        "start": 3546.442,
+        "duration": 3.36
+    },
+    {
+        "text": "I want to make a cup of coffee now?",
+        "start": 3549.802,
+        "duration": 1.72
+    },
+    {
+        "text": "Yeah.",
+        "start": 3551.982,
+        "duration": 0.47
+    },
+    {
+        "text": "So I was thinking, yeah, I was\nalso thinking about this, it's",
+        "start": 3552.482,
+        "duration": 3.19
+    },
+    {
+        "text": "almost philosophical, but I feel\nlike, at a certain level, like the",
+        "start": 3555.672,
+        "duration": 4.66
+    },
+    {
+        "text": "hypothalamus and stuff like that and\nthe amygdala, like just like basic",
+        "start": 3560.332,
+        "duration": 5.29
+    },
+    {
+        "text": "needs, like hunger and sleep and stuff.",
+        "start": 3565.622,
+        "duration": 3.63
+    },
+    {
+        "text": "So my, my suggestion on how, at\nleast how I think about this is like.",
+        "start": 3569.452,
+        "duration": 4.03
+    },
+    {
+        "text": "The same way we thought about\njust object modeling in general,",
+        "start": 3573.892,
+        "duration": 2.96
+    },
+    {
+        "text": "we start off by saying every single\ncortical column or learning module",
+        "start": 3580.162,
+        "duration": 3.03
+    },
+    {
+        "text": "has to be able to model an object of\nsome level of complexity, then have to",
+        "start": 3583.562,
+        "duration": 4.92
+    },
+    {
+        "text": "model everything, but it has to be able\nto build a true sensorimotor model.",
+        "start": 3588.512,
+        "duration": 2.98
+    },
+    {
+        "text": "And, and so we just focused on that\none module, one learning module.",
+        "start": 3592.317,
+        "duration": 4.72
+    },
+    {
+        "text": "How does it do that?",
+        "start": 3597.057,
+        "duration": 0.79
+    },
+    {
+        "text": "I'm working on that still this week.",
+        "start": 3598.517,
+        "duration": 1.95
+    },
+    {
+        "text": "And then, we said, oh, we'll\nintroduce hierarchy when we need to.",
+        "start": 3601.077,
+        "duration": 3.88
+    },
+    {
+        "text": "And the first time we really\nintroduced hierarchy was with",
+        "start": 3605.547,
+        "duration": 4.55
+    },
+    {
+        "text": "the, logo on the coffee cup.",
+        "start": 3610.107,
+        "duration": 1.16
+    },
+    {
+        "text": "And initially, we spent a lot of time,\nI spent a lot of time trying to figure",
+        "start": 3611.267,
+        "duration": 5.61
+    },
+    {
+        "text": "out how a single learning model could\nrepresent the logo on the coffee cup.",
+        "start": 3616.877,
+        "duration": 2.87
+    },
+    {
+        "text": "And I eventually gave up, and I\nsaid it has to be hierarchy, and",
+        "start": 3620.567,
+        "duration": 3.57
+    },
+    {
+        "text": "now we have a model of theory about\nhow the hierarchy can do that.",
+        "start": 3624.137,
+        "duration": 3.33
+    },
+    {
+        "text": "And so the same thing here with\naction policies, it seems to me we",
+        "start": 3629.307,
+        "duration": 3.77
+    },
+    {
+        "text": "have to solve, first solve what a\nsingle learning model, how does it",
+        "start": 3633.077,
+        "duration": 5.63
+    },
+    {
+        "text": "interact and change the behavior or\nthe state of an object, all on its own.",
+        "start": 3638.747,
+        "duration": 4.97
+    },
+    {
+        "text": "We have to understand how we can do that\nbut it will be limited and then we'll",
+        "start": 3644.322,
+        "duration": 4.09
+    },
+    {
+        "text": "have to introduce the hierarchy thing\nto overcome some of those limitations",
+        "start": 3648.412,
+        "duration": 4.07
+    },
+    {
+        "text": "in the same way we have to overcome the\nlimitations of a logo on a coffee cup.",
+        "start": 3652.492,
+        "duration": 3.19
+    },
+    {
+        "text": "Now, we never, I don't think our goal\nas here at Numenta at this point in time",
+        "start": 3656.297,
+        "duration": 5.91
+    },
+    {
+        "text": "is to worry about where does that top\nlevel goal come from, because you're",
+        "start": 3662.627,
+        "duration": 3.14
+    },
+    {
+        "text": "right, Niels, it could be coming from,\nall kinds of behaviors, I'm hungry, I,",
+        "start": 3665.767,
+        "duration": 4.35
+    },
+    {
+        "text": "I'm covered, having that, someone else's\nsandwich, I don't know what it is.",
+        "start": 3671.367,
+        "duration": 4.06
+    },
+    {
+        "text": "I don't think we have to worry\nabout that, we could, I'd be happy",
+        "start": 3677.067,
+        "duration": 3.5
+    },
+    {
+        "text": "just to say, here's a stapler.",
+        "start": 3680.567,
+        "duration": 3.05
+    },
+    {
+        "text": "Our goal is to, push it down and have a\nstable come out, or our goal is to open",
+        "start": 3683.982,
+        "duration": 4.11
+    },
+    {
+        "text": "it up so we can put more stables in.",
+        "start": 3688.092,
+        "duration": 1.12
+    },
+    {
+        "text": "I'd be really happy if we could do that.",
+        "start": 3689.252,
+        "duration": 1.82
+    },
+    {
+        "text": "We don't have to worry about\nall this other out of the loop",
+        "start": 3692.062,
+        "duration": 1.95
+    },
+    {
+        "text": "stuff that goes on at the moment.",
+        "start": 3694.012,
+        "duration": 1.39
+    },
+    {
+        "text": "I would avoid that.",
+        "start": 3697.462,
+        "duration": 1.09
+    },
+    {
+        "text": "I'd just say, we could just make\nan artificial system where we just",
+        "start": 3698.902,
+        "duration": 3.05
+    },
+    {
+        "text": "tell it the state you want it to\nbe in and see if it can do it.",
+        "start": 3701.952,
+        "duration": 2.86
+    },
+    {
+        "text": "That would be one thing I'd suggest.",
+        "start": 3705.432,
+        "duration": 1.72
+    },
+    {
+        "text": "Yeah, I think that's an interesting point.",
+        "start": 3708.142,
+        "duration": 2.62
+    },
+    {
+        "text": "yeah, what, what is the kind of the\nbreaking point of one learning module,",
+        "start": 3713.122,
+        "duration": 4.2
+    },
+    {
+        "text": "where we need, where we actually need the\nhierarchy and, yeah, I already gave you a",
+        "start": 3718.372,
+        "duration": 6.3
+    },
+    {
+        "text": "simple example of the multiple fingers on\nthe cup where there is an example where",
+        "start": 3724.672,
+        "duration": 4.73
+    },
+    {
+        "text": "I have to, I can impose a desired object\nstate on a set of learning modules and,",
+        "start": 3729.432,
+        "duration": 6.536
+    },
+    {
+        "text": "and, that requires a hierarchy because\nIn the end, I have to decide which",
+        "start": 3736.873,
+        "duration": 4.814
+    },
+    {
+        "text": "of the ten fingers is going to do it.",
+        "start": 3741.767,
+        "duration": 1.67
+    },
+    {
+        "text": "It's not really, it's not really\na hierarchical composition.",
+        "start": 3744.197,
+        "duration": 3.2
+    },
+    {
+        "text": "oh, I think we're about to\nbe up against our time here.",
+        "start": 3748.437,
+        "duration": 2.05
+    },
+    {
+        "text": "It's not really a hierarchy.",
+        "start": 3750.967,
+        "duration": 3.455
+    },
+    {
+        "text": "it's not really a,\nhierarchical composition.",
+        "start": 3756.122,
+        "duration": 3.18
+    },
+    {
+        "text": "we're not breaking down\na series of behaviors.",
+        "start": 3761.502,
+        "duration": 1.92
+    },
+    {
+        "text": "It's more like hierarchy is also\nnecessary to do something basic that",
+        "start": 3763.422,
+        "duration": 5.57
+    },
+    {
+        "text": "exists in one model, but I don't\nknow how I'm gonna implement it.",
+        "start": 3768.992,
+        "duration": 2.88
+    },
+    {
+        "text": "There's multiple ways of doing it.",
+        "start": 3772.262,
+        "duration": 1.56
+    },
+    {
+        "text": "and that sounds a little bit to me, Yeah.",
+        "start": 3774.002,
+        "duration": 2.67
+    },
+    {
+        "text": "Okay.",
+        "start": 3776.672,
+        "duration": 0.3
+    },
+    {
+        "text": "Which finger in everybody\nis the gonna press stapler?",
+        "start": 3776.972,
+        "duration": 2.56
+    },
+    {
+        "text": "That may be.",
+        "start": 3779.582,
+        "duration": 0.6
+    },
+    {
+        "text": "Somehow similar to oh, I need to\nget around this obstacle, what",
+        "start": 3781.022,
+        "duration": 5.71
+    },
+    {
+        "text": "behavior, who can get me around\nthose obstacles, I don't know.",
+        "start": 3786.752,
+        "duration": 3.92
+    },
+    {
+        "text": "can I, before we exit here, I thought\nthis was great, by the way, I want",
+        "start": 3792.502,
+        "duration": 3.09
+    },
+    {
+        "text": "to make one more point, if I can.",
+        "start": 3795.592,
+        "duration": 1.87
+    },
+    {
+        "text": "You and I briefly exchanged a couple\nof messages about this, Niels.",
+        "start": 3798.067,
+        "duration": 3.0
+    },
+    {
+        "text": "there's some of the, behavior,\nlike making a pot of coffee.",
+        "start": 3803.267,
+        "duration": 3.97
+    },
+    {
+        "text": "Some of those behavioral states\nare like, move to the coffee pot,",
+        "start": 3807.887,
+        "duration": 3.47
+    },
+    {
+        "text": "or move my hand to the coffee pot.",
+        "start": 3811.357,
+        "duration": 1.68
+    },
+    {
+        "text": "Those behaviors are going to\nrequire the where pathways.",
+        "start": 3813.507,
+        "duration": 3.74
+    },
+    {
+        "text": "And, I prefer not to deal\nwith that at the moment.",
+        "start": 3817.952,
+        "duration": 3.28
+    },
+    {
+        "text": "it would be better to say, okay, I'm\ntouching this stapler with my hand,",
+        "start": 3822.902,
+        "duration": 4.06
+    },
+    {
+        "text": "and, and the fingers are on it, and\nthey're all working in the coordinates",
+        "start": 3827.432,
+        "duration": 4.18
+    },
+    {
+        "text": "in the what space, where we are in\nthe coffee cup, and how do I move",
+        "start": 3831.622,
+        "duration": 3.76
+    },
+    {
+        "text": "my fingers to implement something.",
+        "start": 3835.382,
+        "duration": 1.3
+    },
+    {
+        "text": "Whereas if I say, oh, my hand's at my\nside and my coffee cup's on the other side",
+        "start": 3837.022,
+        "duration": 3.95
+    },
+    {
+        "text": "of the room, then that's going to be, we\ncan't do that in a single learning module.",
+        "start": 3840.972,
+        "duration": 5.19
+    },
+    {
+        "text": "We can't do that even just with a\nhierarchy of what modules, right?",
+        "start": 3846.192,
+        "duration": 3.81
+    },
+    {
+        "text": "the evidence suggests we have to figure\nout how to navigate to some place first.",
+        "start": 3850.422,
+        "duration": 4.69
+    },
+    {
+        "text": "We could, we should try to\navoid tasks that are like that.",
+        "start": 3855.442,
+        "duration": 2.72
+    },
+    {
+        "text": "We're just chatting.",
+        "start": 3858.162,
+        "duration": 1.41
+    },
+    {
+        "text": "we should, my, I think we should try\nto avoid that at the moment, Yeah.",
+        "start": 3860.717,
+        "duration": 4.37
+    },
+    {
+        "text": "that sounds good.",
+        "start": 3866.147,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah, I actually, yeah, I was probably\nasking because I have reservations about",
+        "start": 3866.637,
+        "duration": 4.17
+    },
+    {
+        "text": "the, what where pathway where, or I\nthink it, it's obviously, not something",
+        "start": 3871.527,
+        "duration": 5.65
+    },
+    {
+        "text": "I think that would be controversial\nat Numenta, but just like the whole",
+        "start": 3877.177,
+        "duration": 2.83
+    },
+    {
+        "text": "what pathway just implies that there's\nno location information or reference",
+        "start": 3880.017,
+        "duration": 4.11
+    },
+    {
+        "text": "frame type stuff in the ventral stream.",
+        "start": 3884.127,
+        "duration": 2.01
+    },
+    {
+        "text": "and that's obviously not true, but\nthe evidence, the early evidence",
+        "start": 3888.012,
+        "duration": 5.16
+    },
+    {
+        "text": "of the what where pathways is, a\nperson sees an object, if their what",
+        "start": 3893.172,
+        "duration": 3.84
+    },
+    {
+        "text": "pathway is damaged, they can see\nthe object, they can't identify it,",
+        "start": 3897.032,
+        "duration": 3.4
+    },
+    {
+        "text": "but they can move their hand to it.",
+        "start": 3900.432,
+        "duration": 0.97
+    },
+    {
+        "text": "And once their hand is on the object,\nthen they know what the object is.",
+        "start": 3902.282,
+        "duration": 4.49
+    },
+    {
+        "text": "so they know they have to move to\nsome place, but they don't know what's",
+        "start": 3908.347,
+        "duration": 2.53
+    },
+    {
+        "text": "there, but once they get there, and\nthey touch it, they go, oh, I know",
+        "start": 3910.917,
+        "duration": 2.79
+    },
+    {
+        "text": "what it is, and they can manipulate it.",
+        "start": 3913.707,
+        "duration": 1.7
+    },
+    {
+        "text": "we don't, we want to skip the part, oh,\nhow do I move my hand to the object?",
+        "start": 3917.347,
+        "duration": 3.37
+    },
+    {
+        "text": "We just want to start right at it.",
+        "start": 3921.247,
+        "duration": 1.18
+    },
+    {
+        "text": "My hand's on the object,\nnow I want to manipulate it.",
+        "start": 3922.477,
+        "duration": 2.08
+    },
+    {
+        "text": "and that doesn't require\nthe where pathway as much.",
+        "start": 3925.597,
+        "duration": 2.14
+    },
+    {
+        "text": "I think we have to stop here.",
+        "start": 3928.367,
+        "duration": 1.58
+    },
+    {
+        "text": "I'm still slowly working my way through\na bunch of papers, working on the sort of",
+        "start": 3931.862,
+        "duration": 4.6
+    },
+    {
+        "text": "the, the detailed model of the column and\nhow it could relate to all these things.",
+        "start": 3936.462,
+        "duration": 5.79
+    },
+    {
+        "text": "So hopefully soon I shall have\nsomething to present on that.",
+        "start": 3942.262,
+        "duration": 3.91
+    },
+    {
+        "text": "I'm just letting you know, I'm,\nexcited to work on this problem,",
+        "start": 3947.842,
+        "duration": 3.38
+    },
+    {
+        "text": "so I'm working on it, but slowly.",
+        "start": 3951.222,
+        "duration": 1.68
+    }
+]

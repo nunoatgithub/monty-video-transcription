@@ -1,0 +1,6522 @@
+[
+    {
+        "text": "So I volunteered to give a presentation\ntoday about Monty's current capabilities.",
+        "start": 8.502,
+        "duration": 7.29
+    },
+    {
+        "text": "I think it will be a good reminder\nto all of us and a nice overview to",
+        "start": 15.842,
+        "duration": 4.21
+    },
+    {
+        "text": "everyone new who joined just to get an\noverview of what Monty can currently do",
+        "start": 20.082,
+        "duration": 6.8
+    },
+    {
+        "text": "and also what it can currently not do.",
+        "start": 26.962,
+        "duration": 2.9
+    },
+    {
+        "text": "So we have realistic expectations and\nknow what we're talking about and know",
+        "start": 29.942,
+        "duration": 3.63
+    },
+    {
+        "text": "what are the next things we're thinking\nabout and planning on and where we have.",
+        "start": 34.002,
+        "duration": 5.11
+    },
+    {
+        "text": "solutions and where we\ndon't have solutions yet.",
+        "start": 39.687,
+        "duration": 2.44
+    },
+    {
+        "text": "I just put these slides together today\nand I hope they won't be too confusing.",
+        "start": 44.807,
+        "duration": 5.68
+    },
+    {
+        "text": "there's a lot of content, so",
+        "start": 50.977,
+        "duration": 2.08
+    },
+    {
+        "text": "there's a lot, there's three years\nof content and I tried to put",
+        "start": 55.067,
+        "duration": 3.1
+    },
+    {
+        "text": "them into a one hour presentation.",
+        "start": 58.167,
+        "duration": 2.18
+    },
+    {
+        "text": "so just interrupt me if\nyou're missing context or.",
+        "start": 61.167,
+        "duration": 4.13
+    },
+    {
+        "text": "Not following what I'm saying,\nbut yeah, hopefully this should",
+        "start": 65.612,
+        "duration": 4.88
+    },
+    {
+        "text": "give a nice high level overview.",
+        "start": 70.492,
+        "duration": 2.0
+    },
+    {
+        "text": "I'm not going to go into the\ndetails of how the algorithm works.",
+        "start": 72.512,
+        "duration": 3.24
+    },
+    {
+        "text": "so if you want more details on that,\nwe have some meeting recordings and,",
+        "start": 76.402,
+        "duration": 3.74
+    },
+    {
+        "text": "the new documentation about that.",
+        "start": 80.912,
+        "duration": 2.18
+    },
+    {
+        "text": "So this is really just\nabout the capabilities.",
+        "start": 83.112,
+        "duration": 2.44
+    },
+    {
+        "text": "Let me share my screen.",
+        "start": 88.412,
+        "duration": 1.35
+    },
+    {
+        "text": "All right.",
+        "start": 91.382,
+        "duration": 0.36
+    },
+    {
+        "text": "Can you see that first slide?",
+        "start": 91.992,
+        "duration": 1.83
+    },
+    {
+        "text": "All right.",
+        "start": 95.402,
+        "duration": 0.45
+    },
+    {
+        "text": "Awesome.",
+        "start": 95.912,
+        "duration": 0.15
+    },
+    {
+        "text": "So what Monty currently can and cannot do.",
+        "start": 97.002,
+        "duration": 3.17
+    },
+    {
+        "text": "first of all, very briefly, what is Monty?",
+        "start": 102.322,
+        "duration": 2.55
+    },
+    {
+        "text": "it's not some magical wizard\nsystem, but it is like this wizard.",
+        "start": 105.632,
+        "duration": 4.47
+    },
+    {
+        "text": "It's a sensory motor modeling system.",
+        "start": 110.122,
+        "duration": 2.42
+    },
+    {
+        "text": "So you have a motor system actuators,\nyou have sensors that can move",
+        "start": 112.992,
+        "duration": 5.07
+    },
+    {
+        "text": "through the world, and then.",
+        "start": 118.062,
+        "duration": 1.8
+    },
+    {
+        "text": "A brain that kind of processes all the\nsensory information, if you like to",
+        "start": 120.112,
+        "duration": 4.75
+    },
+    {
+        "text": "think of it that way, and we can have\nlike different types of sensors and",
+        "start": 124.862,
+        "duration": 5.785
+    },
+    {
+        "text": "different types of movement through space.",
+        "start": 130.647,
+        "duration": 1.92
+    },
+    {
+        "text": "So for example, in our current\nimplementation, we have something",
+        "start": 132.567,
+        "duration": 3.98
+    },
+    {
+        "text": "we often refer to as a vision\nagent, which is fixed in space.",
+        "start": 136.547,
+        "duration": 4.12
+    },
+    {
+        "text": "And then it can, the camera can\ntilt up and down and left and right",
+        "start": 140.677,
+        "duration": 3.86
+    },
+    {
+        "text": "and explore the space like that.",
+        "start": 144.587,
+        "duration": 1.5
+    },
+    {
+        "text": "And then we have something we referred to\nas the touch agent, which is like a finger",
+        "start": 146.107,
+        "duration": 5.39
+    },
+    {
+        "text": "touching an object and it always moves\nperpendicular to the surface of an object.",
+        "start": 151.537,
+        "duration": 4.09
+    },
+    {
+        "text": "And it can move along the surface\nof a cup and explore it that way.",
+        "start": 155.647,
+        "duration": 4.59
+    },
+    {
+        "text": "Monty has a modular structure.",
+        "start": 162.947,
+        "duration": 2.04
+    },
+    {
+        "text": "and no sensor sees everything.",
+        "start": 166.002,
+        "duration": 2.73
+    },
+    {
+        "text": "So we have sensor modules\nand learning modules.",
+        "start": 168.942,
+        "duration": 2.75
+    },
+    {
+        "text": "And it's not like how you usually think\nof it in classical computer vision,",
+        "start": 172.342,
+        "duration": 4.27
+    },
+    {
+        "text": "where you get like one picture of the\nentire object, and then you recognize",
+        "start": 176.612,
+        "duration": 3.39
+    },
+    {
+        "text": "the object in there, but instead we have\nlike small sensor patches that move.",
+        "start": 180.002,
+        "duration": 4.26
+    },
+    {
+        "text": "along the object and recognize the object\nthrough successive movements in space.",
+        "start": 184.587,
+        "duration": 5.33
+    },
+    {
+        "text": "So this is, the system\nnever sees this part.",
+        "start": 190.257,
+        "duration": 3.0
+    },
+    {
+        "text": "This is just for visualization.",
+        "start": 193.257,
+        "duration": 1.53
+    },
+    {
+        "text": "It's, it gets this small\nsensor patch as input.",
+        "start": 195.047,
+        "duration": 3.04
+    },
+    {
+        "text": "and movement information and you can\nthink of the sensor patch as like",
+        "start": 199.072,
+        "duration": 4.48
+    },
+    {
+        "text": "a small patch on your retina or a\nsmall patch on your fingers, skin,",
+        "start": 203.552,
+        "duration": 4.38
+    },
+    {
+        "text": "Good analogy is the thing\nabout looking through a straw.",
+        "start": 210.212,
+        "duration": 3.12
+    },
+    {
+        "text": "Yeah.",
+        "start": 214.222,
+        "duration": 0.4
+    },
+    {
+        "text": "And that's quite a shift of thinking if\nyou come from classical computer vision,",
+        "start": 215.962,
+        "duration": 4.35
+    },
+    {
+        "text": "that's something you have to get used\nto thinking about it in those terms.",
+        "start": 220.642,
+        "duration": 5.26
+    },
+    {
+        "text": "Also models use reference frames.",
+        "start": 229.012,
+        "duration": 2.96
+    },
+    {
+        "text": "So for one, we get motor input\nand have motor output since",
+        "start": 232.002,
+        "duration": 3.6
+    },
+    {
+        "text": "it's a sensory motor system.",
+        "start": 235.602,
+        "duration": 1.58
+    },
+    {
+        "text": "but also the models are\noptimized for that kind of data.",
+        "start": 237.912,
+        "duration": 2.94
+    },
+    {
+        "text": "So they use reference frames,\nto structure that incoming data.",
+        "start": 241.092,
+        "duration": 4.98
+    },
+    {
+        "text": "And they are loosely modeled\nafter cortical columns.",
+        "start": 246.602,
+        "duration": 3.21
+    },
+    {
+        "text": "So you can roughly think of a learning\nmodule as a cortical column, where",
+        "start": 250.322,
+        "duration": 6.3
+    },
+    {
+        "text": "sensory input and motor input.",
+        "start": 257.657,
+        "duration": 1.67
+    },
+    {
+        "text": "And we have some kind of way to maintain\nreference frame and store how features are",
+        "start": 259.537,
+        "duration": 5.68
+    },
+    {
+        "text": "located relative to each other in space.",
+        "start": 265.217,
+        "duration": 2.18
+    },
+    {
+        "text": "And then we have a cortical messaging\nprotocol, which is a kind of a",
+        "start": 269.377,
+        "duration": 4.75
+    },
+    {
+        "text": "common agreement of how messages are\nsent between the different modules.",
+        "start": 274.617,
+        "duration": 4.32
+    },
+    {
+        "text": "So when learning modules vote with\neach other, that's all in a common",
+        "start": 278.937,
+        "duration": 3.7
+    },
+    {
+        "text": "language, no matter What kind of\nsensory input the learning modules get.",
+        "start": 282.637,
+        "duration": 4.415
+    },
+    {
+        "text": "So a column that gets touch input can\ntalk to one that gets vision input.",
+        "start": 287.052,
+        "duration": 5.93
+    },
+    {
+        "text": "it can also talk to a higher\nlevel, column or learning module.",
+        "start": 293.602,
+        "duration": 4.08
+    },
+    {
+        "text": "and it's all in that unified protocol,\nwhich makes it very easy to plug and",
+        "start": 298.872,
+        "duration": 4.72
+    },
+    {
+        "text": "play different modules and have a\ncross, modality information exchange.",
+        "start": 303.592,
+        "duration": 6.56
+    },
+    {
+        "text": "Does that make sense so far?",
+        "start": 311.722,
+        "duration": 1.32
+    },
+    {
+        "text": "That's the only slide I have\non the basic principles.",
+        "start": 313.892,
+        "duration": 3.25
+    },
+    {
+        "text": "Okay, then let's get to the capabilities.",
+        "start": 319.402,
+        "duration": 2.8
+    },
+    {
+        "text": "we have this project overview spreadsheet.",
+        "start": 324.522,
+        "duration": 2.31
+    },
+    {
+        "text": "I'll show it here briefly, where we have a\nhigh level view of the project and bigger",
+        "start": 327.507,
+        "duration": 5.44
+    },
+    {
+        "text": "tasks and ideas that we want to work on.",
+        "start": 332.947,
+        "duration": 2.33
+    },
+    {
+        "text": "and we have Monty, which is split into\nthese different components like sensor",
+        "start": 336.377,
+        "duration": 4.21
+    },
+    {
+        "text": "modules, learning modules, motor system,\nvoting, hierarchy, environment, and then",
+        "start": 340.597,
+        "duration": 5.63
+    },
+    {
+        "text": "we also have capabilities and that's\nthe part I'm going to look at here.",
+        "start": 346.257,
+        "duration": 5.22
+    },
+    {
+        "text": "Whenever we get a task done over\nhere and check it off, it will add",
+        "start": 353.532,
+        "duration": 4.9
+    },
+    {
+        "text": "progress to these capabilities.",
+        "start": 358.432,
+        "duration": 1.75
+    },
+    {
+        "text": "So we can see where we put a lot of work\nin already, where we haven't done much",
+        "start": 360.202,
+        "duration": 5.41
+    },
+    {
+        "text": "yet, or we have a lot planned to do.",
+        "start": 365.612,
+        "duration": 2.79
+    },
+    {
+        "text": "and this presentation, I\nstructured along these lines.",
+        "start": 369.672,
+        "duration": 2.97
+    },
+    {
+        "text": "So I'm going to go through each of\nthese one by one and just tell you where",
+        "start": 372.642,
+        "duration": 3.81
+    },
+    {
+        "text": "we're at, what we've done there so far,\nAnd what we can do on that capability.",
+        "start": 376.452,
+        "duration": 6.8
+    },
+    {
+        "text": "you might notice that none of the\ncapabilities are at a hundred percent yet.",
+        "start": 384.812,
+        "duration": 3.82
+    },
+    {
+        "text": "So there, everything\ncan still be improved.",
+        "start": 389.042,
+        "duration": 2.63
+    },
+    {
+        "text": "This is still like a, this is a huge\nproject and there's, it's not like",
+        "start": 392.122,
+        "duration": 5.81
+    },
+    {
+        "text": "we're anywhere close to having a\ngeneral system that can do all these",
+        "start": 397.942,
+        "duration": 4.29
+    },
+    {
+        "text": "things perfectly, just as a front note.",
+        "start": 402.232,
+        "duration": 3.77
+    },
+    {
+        "text": "and.",
+        "start": 408.742,
+        "duration": 0.76
+    },
+    {
+        "text": "Yeah, I'll go through them one by one.",
+        "start": 411.262,
+        "duration": 1.58
+    },
+    {
+        "text": "Now, if you don't have,",
+        "start": 412.842,
+        "duration": 0.68
+    },
+    {
+        "text": "yes, I am.",
+        "start": 416.092,
+        "duration": 0.81
+    },
+    {
+        "text": "all So object detection, just again,\nas a brief disclaimer, how object",
+        "start": 420.372,
+        "duration": 5.04
+    },
+    {
+        "text": "detection works at the moment.",
+        "start": 425.412,
+        "duration": 2.33
+    },
+    {
+        "text": "So this is the evidence based learning.",
+        "start": 427.752,
+        "duration": 2.2
+    },
+    {
+        "text": "If you look back into the code later\non, it basically tracks how much",
+        "start": 430.382,
+        "duration": 5.62
+    },
+    {
+        "text": "evidence we have for each hypothesis.",
+        "start": 436.052,
+        "duration": 2.91
+    },
+    {
+        "text": "so here we have movement through\nspace and with every, after every",
+        "start": 440.182,
+        "duration": 4.16
+    },
+    {
+        "text": "movement, we take the sensation that\nwe're sensing with the sensor patch",
+        "start": 444.342,
+        "duration": 4.48
+    },
+    {
+        "text": "and use it to update the evidence for\ndifferent locations on different objects.",
+        "start": 449.152,
+        "duration": 4.21
+    },
+    {
+        "text": "And you can see, as we're\nmoving along this cup, we're",
+        "start": 453.772,
+        "duration": 2.6
+    },
+    {
+        "text": "narrowing down the possibilities.",
+        "start": 456.642,
+        "duration": 1.59
+    },
+    {
+        "text": "So blue is low evidence, red is\nhigh evidence, and it's already.",
+        "start": 458.322,
+        "duration": 3.52
+    },
+    {
+        "text": "quite clear that we're not on the\nbanana or on the dice or on the bowl.",
+        "start": 462.662,
+        "duration": 4.07
+    },
+    {
+        "text": "but there's still quite high evidence\nfor anything around the cup here.",
+        "start": 467.772,
+        "duration": 4.88
+    },
+    {
+        "text": "We're not sure where yet because\nthe cup is quite symmetrical.",
+        "start": 473.122,
+        "duration": 2.77
+    },
+    {
+        "text": "and through more and more\nmovements, we can narrow down",
+        "start": 477.232,
+        "duration": 3.14
+    },
+    {
+        "text": "also the location on the cup.",
+        "start": 480.392,
+        "duration": 1.56
+    },
+    {
+        "text": "Once we actually get on the handle, we can\nbe quite certain where we are on the cup.",
+        "start": 481.982,
+        "duration": 4.4
+    },
+    {
+        "text": "And over here, you can see like\nhow much evidence we accumulated",
+        "start": 486.952,
+        "duration": 4.21
+    },
+    {
+        "text": "and what, rotation, we also\nthink that the cup is in, because",
+        "start": 491.182,
+        "duration": 4.155
+    },
+    {
+        "text": "that's another part of the system.",
+        "start": 495.337,
+        "duration": 1.51
+    },
+    {
+        "text": "It doesn't only recognize what\nobject we're on, it also recognizes",
+        "start": 496.847,
+        "duration": 3.75
+    },
+    {
+        "text": "where on the object we are\nand how the object is rotated.",
+        "start": 501.097,
+        "duration": 3.38
+    },
+    {
+        "text": "yeah.",
+        "start": 510.067,
+        "duration": 0.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 510.447,
+        "duration": 0.19
+    },
+    {
+        "text": "So it says current most likely\nhypothesis is one with rotation.",
+        "start": 511.177,
+        "duration": 5.4
+    },
+    {
+        "text": "Are the correct options?",
+        "start": 517.037,
+        "duration": 2.39
+    },
+    {
+        "text": "Does it learn the correct option or is it?",
+        "start": 519.757,
+        "duration": 1.83
+    },
+    {
+        "text": "Is it trying to choose from\na set of correct options?",
+        "start": 522.007,
+        "duration": 3.47
+    },
+    {
+        "text": "Yeah, so it has learned\nabout the coffee mug.",
+        "start": 527.092,
+        "duration": 2.71
+    },
+    {
+        "text": "It has an internal model of the\ncoffee mug, but it could infer",
+        "start": 529.812,
+        "duration": 4.71
+    },
+    {
+        "text": "any rotation of this coffee mug.",
+        "start": 534.602,
+        "duration": 2.21
+    },
+    {
+        "text": "So when it first senses the coffee\nmug, it's, it initializes hypotheses",
+        "start": 536.932,
+        "duration": 4.05
+    },
+    {
+        "text": "of what could be the rotation of the\ncoffee mug, given that sensation.",
+        "start": 540.982,
+        "duration": 3.79
+    },
+    {
+        "text": "And then the more it moves, the more\nit narrows down those possibilities.",
+        "start": 545.132,
+        "duration": 3.57
+    },
+    {
+        "text": "I couldn't learn instead of a mug, just\ncup or cylindrical, I guess my question",
+        "start": 549.972,
+        "duration": 6.95
+    },
+    {
+        "text": "is it like in the classification?",
+        "start": 557.112,
+        "duration": 3.61
+    },
+    {
+        "text": "Is it trying to choose from\none of the correct 20 answers?",
+        "start": 560.772,
+        "duration": 3.29
+    },
+    {
+        "text": "actually thinking?",
+        "start": 565.222,
+        "duration": 2.4
+    },
+    {
+        "text": "So in a lot of experiments,\nwe use this YCB data set.",
+        "start": 568.597,
+        "duration": 3.76
+    },
+    {
+        "text": "So the, it has models of\nthe 77 objects in memory.",
+        "start": 572.357,
+        "duration": 5.68
+    },
+    {
+        "text": "So it has seen all of these objects\nbefore it has learned models of them.",
+        "start": 578.037,
+        "duration": 3.46
+    },
+    {
+        "text": "And then when it senses a new object\nand tries to recognize it, it basically",
+        "start": 581.737,
+        "duration": 4.54
+    },
+    {
+        "text": "has all of these 77 objects, plus any\nrotation that these objects could be in.",
+        "start": 586.967,
+        "duration": 5.17
+    },
+    {
+        "text": "And then it, narrows down which object it\nmight be in what rotation it might be in.",
+        "start": 592.207,
+        "duration": 4.805
+    },
+    {
+        "text": "Yeah, maybe it's a,",
+        "start": 599.622,
+        "duration": 0.89
+    },
+    {
+        "text": "I was just gonna say, yeah, maybe\nit'd be helpful to clarify that.",
+        "start": 603.062,
+        "duration": 2.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 605.762,
+        "duration": 0.22
+    },
+    {
+        "text": "So at the moment there's this\ndiscrete list of 77 objects.",
+        "start": 605.982,
+        "duration": 3.62
+    },
+    {
+        "text": "And some of the stuff we've recently\nimplemented is, starting to capture",
+        "start": 610.277,
+        "duration": 4.82
+    },
+    {
+        "text": "more that okay, some of these objects\nare obviously more similar, like",
+        "start": 615.097,
+        "duration": 2.9
+    },
+    {
+        "text": "the different cups are more similar.",
+        "start": 618.007,
+        "duration": 1.34
+    },
+    {
+        "text": "but we have some ideas for how to also\nconsolidate that knowledge so that",
+        "start": 620.787,
+        "duration": 4.52
+    },
+    {
+        "text": "you could imagine it Yeah, developing\nlike a cylinder representation, that",
+        "start": 625.307,
+        "duration": 5.055
+    },
+    {
+        "text": "it would that would come to mind.",
+        "start": 630.362,
+        "duration": 1.74
+    },
+    {
+        "text": "and so that it's not always\noh, it's this exact cup.",
+        "start": 632.932,
+        "duration": 2.64
+    },
+    {
+        "text": "doing actually, it's gotten, pretty\ncomplicated because their teams seems",
+        "start": 638.212,
+        "duration": 4.83
+    },
+    {
+        "text": "to be the ability to, recognize objects\nusing different sets of attributes.",
+        "start": 643.042,
+        "duration": 6.18
+    },
+    {
+        "text": "You can recognize,",
+        "start": 649.222,
+        "duration": 0.68
+    },
+    {
+        "text": "sometimes we call it the\nmorphology of an object.",
+        "start": 652.487,
+        "duration": 1.74
+    },
+    {
+        "text": "and, but that could be independent\nof the actual features of the object.",
+        "start": 655.227,
+        "duration": 3.67
+    },
+    {
+        "text": "classic examples, you can have a face\nmade of shroom, and you associate",
+        "start": 659.647,
+        "duration": 4.14
+    },
+    {
+        "text": "it with a face, even though the\nfeatures aren't face features.",
+        "start": 663.787,
+        "duration": 2.22
+    },
+    {
+        "text": "and so there's, so then this\ngets into the problem of,",
+        "start": 667.447,
+        "duration": 2.09
+    },
+    {
+        "text": "classification of categories, right?",
+        "start": 669.887,
+        "duration": 2.1
+    },
+    {
+        "text": "what's a face, right?",
+        "start": 672.137,
+        "duration": 0.98
+    },
+    {
+        "text": "Doesn't have to have eyes, nose, and\na set of things in the right position.",
+        "start": 673.197,
+        "duration": 3.08
+    },
+    {
+        "text": "we've, spent a lot of time thinking\nabout these issues about object modeling,",
+        "start": 677.637,
+        "duration": 3.68
+    },
+    {
+        "text": "and it's not just a unified thing.",
+        "start": 681.407,
+        "duration": 1.69
+    },
+    {
+        "text": "It's not just one model.",
+        "start": 683.097,
+        "duration": 1.06
+    },
+    {
+        "text": "It turns out that When, the system's\nworking, it, it can, it says, okay,",
+        "start": 684.157,
+        "duration": 5.34
+    },
+    {
+        "text": "I have evidence for the, or, the\norientation of some feature separate",
+        "start": 689.497,
+        "duration": 4.28
+    },
+    {
+        "text": "evidence, what the actual feature\nis, and, and the models have to work.",
+        "start": 693.787,
+        "duration": 5.18
+    },
+    {
+        "text": "It's in this gray zone between\nthem, and we also haven't really",
+        "start": 699.027,
+        "duration": 3.04
+    },
+    {
+        "text": "quite figured out how to do that.",
+        "start": 702.067,
+        "duration": 0.87
+    },
+    {
+        "text": "how we represent different\nclasses of objects.",
+        "start": 704.707,
+        "duration": 2.21
+    },
+    {
+        "text": "we have a lot of ideas on this.",
+        "start": 707.657,
+        "duration": 1.41
+    },
+    {
+        "text": "We've spent a lot of time on it, but\nit's still an unknown, a challenge",
+        "start": 709.097,
+        "duration": 4.59
+    },
+    {
+        "text": "because we can clearly recognize\nthings that are distorted and",
+        "start": 713.687,
+        "duration": 3.57
+    },
+    {
+        "text": "different and still know what they are.",
+        "start": 717.257,
+        "duration": 1.69
+    },
+    {
+        "text": "and the system has to be able to do that.",
+        "start": 720.337,
+        "duration": 1.69
+    },
+    {
+        "text": "I guess the reason why I was asking\nif there's like a set of 77 or Just",
+        "start": 722.647,
+        "duration": 4.8
+    },
+    {
+        "text": "thinking on its own, it's, if we have\na Monty robot, an actual Monty robot,",
+        "start": 727.487,
+        "duration": 4.33
+    },
+    {
+        "text": "there's more than 77 objects in the\nworld, it just learned them, right?",
+        "start": 732.477,
+        "duration": 3.89
+    },
+    {
+        "text": "It needs to learn these objects.",
+        "start": 736.407,
+        "duration": 1.32
+    },
+    {
+        "text": "Okay.",
+        "start": 737.807,
+        "duration": 0.24
+    },
+    {
+        "text": "Viviane didn't talk about that, but\nyou learn these objects through the",
+        "start": 739.047,
+        "duration": 2.76
+    },
+    {
+        "text": "same method of sensation movement.",
+        "start": 741.807,
+        "duration": 1.71
+    },
+    {
+        "text": "so it can learn more than 77.",
+        "start": 744.217,
+        "duration": 1.26
+    },
+    {
+        "text": "Oh, yeah, it definitely can fix about 77.",
+        "start": 745.747,
+        "duration": 2.16
+    },
+    {
+        "text": "Okay.",
+        "start": 747.907,
+        "duration": 0.46
+    },
+    {
+        "text": "Yeah, it can learn as\nmany objects as you want.",
+        "start": 749.347,
+        "duration": 2.2
+    },
+    {
+        "text": "There is an issue of capacity.",
+        "start": 753.337,
+        "duration": 1.86
+    },
+    {
+        "text": "There's an issue of capacity of individual\ncortical column or learning module.",
+        "start": 755.197,
+        "duration": 3.85
+    },
+    {
+        "text": "and so that's another topic, complicated\ntopic we could spend time talking about.",
+        "start": 759.977,
+        "duration": 4.17
+    },
+    {
+        "text": "But yeah, maybe two quick\nasides on learning is.",
+        "start": 765.607,
+        "duration": 2.37
+    },
+    {
+        "text": "Like two kind of nice things about it\nis that it's, does well with continual",
+        "start": 768.312,
+        "duration": 3.52
+    },
+    {
+        "text": "learning and it, it just learns very,\nin a very kind of sample efficient way.",
+        "start": 771.832,
+        "duration": 4.67
+    },
+    {
+        "text": "So it's not like you need to look\ninto classic deep learning where",
+        "start": 777.052,
+        "duration": 2.99
+    },
+    {
+        "text": "you need to revisit an object\npotentially thousands or millions of",
+        "start": 780.172,
+        "duration": 3.22
+    },
+    {
+        "text": "times, and in a batch, otherwise you\nforget about all the other objects.",
+        "start": 783.392,
+        "duration": 4.13
+    },
+    {
+        "text": "you can just add a 78th object.",
+        "start": 788.682,
+        "duration": 2.28
+    },
+    {
+        "text": "It could learn it after a\nfew kind of passes over it.",
+        "start": 791.412,
+        "duration": 3.81
+    },
+    {
+        "text": "Similar to yeah, a human and then\nstart using that knowledge, right?",
+        "start": 795.702,
+        "duration": 5.45
+    },
+    {
+        "text": "It's a good point.",
+        "start": 801.152,
+        "duration": 0.71
+    },
+    {
+        "text": "Really good point.",
+        "start": 802.402,
+        "duration": 0.66
+    },
+    {
+        "text": "There was no, there's no training\nphase versus inference phase.",
+        "start": 803.062,
+        "duration": 5.53
+    },
+    {
+        "text": "You can mix them up.",
+        "start": 808.592,
+        "duration": 0.76
+    },
+    {
+        "text": "And as you can continue to\nlearn as you go, don't forget.",
+        "start": 809.372,
+        "duration": 5.07
+    },
+    {
+        "text": "Yeah, and that's, yeah, a very good\npoint because all the measures we have",
+        "start": 815.742,
+        "duration": 3.56
+    },
+    {
+        "text": "here, they don't really talk about, the\nlearning and how sample efficient it",
+        "start": 819.302,
+        "duration": 4.71
+    },
+    {
+        "text": "is, but that's one of the big strengths\nof the system that you can learn a new",
+        "start": 824.012,
+        "duration": 3.66
+    },
+    {
+        "text": "object very quickly without forgetting\nanything about the, already known objects.",
+        "start": 827.672,
+        "duration": 4.95
+    },
+    {
+        "text": "all right, now some\nnumbers, object detection.",
+        "start": 838.122,
+        "duration": 3.44
+    },
+    {
+        "text": "So here, those are, we have\nthe 77 objects in memory.",
+        "start": 841.742,
+        "duration": 4.13
+    },
+    {
+        "text": "We already learned about them and\nnow we're trying to recognize them.",
+        "start": 845.872,
+        "duration": 3.69
+    },
+    {
+        "text": "And system is fairly well on it.",
+        "start": 850.202,
+        "duration": 3.17
+    },
+    {
+        "text": "Not perfect, but, here we,\nin blue is the distant agent.",
+        "start": 853.462,
+        "duration": 4.42
+    },
+    {
+        "text": "That's like the eye that is fixed\nin position and moves, tilts",
+        "start": 857.882,
+        "duration": 5.415
+    },
+    {
+        "text": "up and down and left and right.",
+        "start": 863.317,
+        "duration": 1.32
+    },
+    {
+        "text": "it's a little bit worse than the\nsurface agent, which is like the",
+        "start": 865.727,
+        "duration": 3.2
+    },
+    {
+        "text": "finger that moves along the surface.",
+        "start": 868.927,
+        "duration": 1.82
+    },
+    {
+        "text": "and the main reason for that\nis that with this fixed.",
+        "start": 871.647,
+        "duration": 4.29
+    },
+    {
+        "text": "agent, there can be quite\nambiguous views of objects.",
+        "start": 876.377,
+        "duration": 3.56
+    },
+    {
+        "text": "the surface agent has a bit more\nflexibility of going completely around",
+        "start": 880.717,
+        "duration": 3.75
+    },
+    {
+        "text": "the object and getting the whole\nsize and shape of the object quicker.",
+        "start": 884.517,
+        "duration": 4.62
+    },
+    {
+        "text": "and then when we add noise and\ntest these objects and random",
+        "start": 890.657,
+        "duration": 4.51
+    },
+    {
+        "text": "previously unseen rotations.",
+        "start": 895.407,
+        "duration": 1.66
+    },
+    {
+        "text": "performance gets a bit worse.",
+        "start": 898.247,
+        "duration": 1.84
+    },
+    {
+        "text": "it gets less worse with the surface\nagent again, cause it can just move",
+        "start": 900.607,
+        "duration": 4.1
+    },
+    {
+        "text": "around the whole object quickly.",
+        "start": 904.707,
+        "duration": 1.59
+    },
+    {
+        "text": "and then.",
+        "start": 907.617,
+        "duration": 0.62
+    },
+    {
+        "text": "with using, so all of these numbers are\nwith one learning module and one sensor.",
+        "start": 908.902,
+        "duration": 5.33
+    },
+    {
+        "text": "And then if we use five sensors and\nfive learning modules and let them",
+        "start": 914.762,
+        "duration": 3.24
+    },
+    {
+        "text": "vote with each other, also again, noise\nand random rotations, performance is",
+        "start": 918.002,
+        "duration": 6.35
+    },
+    {
+        "text": "a little better than with just one.",
+        "start": 924.412,
+        "duration": 2.24
+    },
+    {
+        "text": "And I'll show some numbers.",
+        "start": 926.942,
+        "duration": 1.39
+    },
+    {
+        "text": "Later, because voting is really a lot\nabout cutting down on the number of steps.",
+        "start": 928.757,
+        "duration": 5.21
+    },
+    {
+        "text": "That's mostly what voting does\nis let you infer to your vote.",
+        "start": 933.967,
+        "duration": 5.71
+    },
+    {
+        "text": "Yeah, just",
+        "start": 940.647,
+        "duration": 2.45
+    },
+    {
+        "text": "to give a bit more insight\ninto these numbers.",
+        "start": 946.857,
+        "duration": 3.25
+    },
+    {
+        "text": "So, we don't just have right and wrong\nas a potential result of an episode.",
+        "start": 950.507,
+        "duration": 6.67
+    },
+    {
+        "text": "We can also have the correct\nmost likely hypothesis.",
+        "start": 957.177,
+        "duration": 3.23
+    },
+    {
+        "text": "That would mean we've moved along the\nobject, but we have multiple potential",
+        "start": 960.737,
+        "duration": 5.16
+    },
+    {
+        "text": "hypotheses and we didn't get enough\nevidence to make a certain decision of",
+        "start": 965.897,
+        "duration": 5.27
+    },
+    {
+        "text": "which object it is or what rotation it\nis in the given maximum number of steps.",
+        "start": 971.307,
+        "duration": 5.51
+    },
+    {
+        "text": "So just to keep experiments in a\nreasonable timeframe, we have a maximum",
+        "start": 977.302,
+        "duration": 5.15
+    },
+    {
+        "text": "number of steps and after that we\nstop and we just look at the most",
+        "start": 982.452,
+        "duration": 3.96
+    },
+    {
+        "text": "likely hypothesis that the system had.",
+        "start": 986.412,
+        "duration": 1.86
+    },
+    {
+        "text": "And this is the count of where the\nmost likely hypothesis was correct.",
+        "start": 988.282,
+        "duration": 4.34
+    },
+    {
+        "text": "And this is where it was the wrong object.",
+        "start": 992.622,
+        "duration": 2.23
+    },
+    {
+        "text": "That was the most likely hypothesis.",
+        "start": 994.862,
+        "duration": 1.66
+    },
+    {
+        "text": "And it can also happen that.",
+        "start": 997.122,
+        "duration": 1.15
+    },
+    {
+        "text": "We actually classified an object, but it\nwas the wrong object, not the one we saw.",
+        "start": 998.677,
+        "duration": 4.31
+    },
+    {
+        "text": "And here are some examples\nfor when it confused objects.",
+        "start": 1003.347,
+        "duration": 2.72
+    },
+    {
+        "text": "So again, here, this is, I'm just\nshowing these to give you an impression",
+        "start": 1006.067,
+        "duration": 4.26
+    },
+    {
+        "text": "that like when it fails, it is a bit\nunderstandable of why it fails in a sense.",
+        "start": 1010.327,
+        "duration": 4.83
+    },
+    {
+        "text": "so for example, here, the.",
+        "start": 1016.017,
+        "duration": 2.34
+    },
+    {
+        "text": "Spatula for a spoon or fork for a knife,\nor A toy airplane for a B toy airplane.",
+        "start": 1018.467,
+        "duration": 6.62
+    },
+    {
+        "text": "which are.",
+        "start": 1026.467,
+        "duration": 0.43
+    },
+    {
+        "text": "Yeah.",
+        "start": 1027.177,
+        "duration": 0.24
+    },
+    {
+        "text": "similar objects in morphology.",
+        "start": 1027.847,
+        "duration": 2.06
+    },
+    {
+        "text": "And then when it has the most likely\nhypothesis confused, it confuses",
+        "start": 1030.807,
+        "duration": 4.95
+    },
+    {
+        "text": "Phillips screwdriver for a flat\nscrewdriver, but, they were both",
+        "start": 1035.777,
+        "duration": 4.3
+    },
+    {
+        "text": "still in the hypothesis space.",
+        "start": 1040.077,
+        "duration": 1.47
+    },
+    {
+        "text": "So if we hadn't moved more, it might've\nfigured it out, corrected itself.",
+        "start": 1041.557,
+        "duration": 4.23
+    },
+    {
+        "text": "Are you going to talk about\naction policies, Vivian?",
+        "start": 1046.877,
+        "duration": 2.18
+    },
+    {
+        "text": "yeah, briefly.",
+        "start": 1050.147,
+        "duration": 0.98
+    },
+    {
+        "text": "Okay.",
+        "start": 1051.527,
+        "duration": 0.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 1052.837,
+        "duration": 0.24
+    },
+    {
+        "text": "It might be worth just\nbriefly mentioning on that.",
+        "start": 1053.247,
+        "duration": 2.23
+    },
+    {
+        "text": "Cause I was just reminding myself,\nBecause, yeah, I think at the moment for",
+        "start": 1055.477,
+        "duration": 3.98
+    },
+    {
+        "text": "all of these main experiments, including\nlike the 77 objects, the distant agent",
+        "start": 1059.457,
+        "duration": 4.12
+    },
+    {
+        "text": "can still go to other sides of the objects\nbecause they now have the, so there's a",
+        "start": 1063.577,
+        "duration": 5.97
+    },
+    {
+        "text": "policy that, called like the hypothesis\ndriven policy where the learning module.",
+        "start": 1069.547,
+        "duration": 5.73
+    },
+    {
+        "text": "Kind of have its internal model of what\nit thinks is the most likely object.",
+        "start": 1075.827,
+        "duration": 2.87
+    },
+    {
+        "text": "And then for example, it'll have\nanother model of another likely object.",
+        "start": 1078.727,
+        "duration": 3.06
+    },
+    {
+        "text": "And yeah, I guess maybe you'll\ntalk about this, but yeah.",
+        "start": 1081.787,
+        "duration": 2.13
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 1085.037,
+        "duration": 0.88
+    },
+    {
+        "text": "So just in case you guys are watching\nthis video later or something in terms",
+        "start": 1086.267,
+        "duration": 4.23
+    },
+    {
+        "text": "of that difference in accuracy versus\nthe distant agent and the surface agent.",
+        "start": 1090.497,
+        "duration": 3.08
+    },
+    {
+        "text": "Partly as well, it's also there's\nother subtle differences in how",
+        "start": 1094.477,
+        "duration": 4.12
+    },
+    {
+        "text": "they move, even though they can go\nto different parts of the object.",
+        "start": 1098.597,
+        "duration": 3.22
+    },
+    {
+        "text": "Like the distant one is a little\nbit more of a random walk, whereas",
+        "start": 1101.817,
+        "duration": 2.96
+    },
+    {
+        "text": "the surface one is a bit more.",
+        "start": 1104.777,
+        "duration": 1.51
+    },
+    {
+        "text": "of purposefully moving along the surface,\nand so it's that small difference",
+        "start": 1106.602,
+        "duration": 5.33
+    },
+    {
+        "text": "is potentially just down to not\ngetting, like if it's not converging",
+        "start": 1111.932,
+        "duration": 5.29
+    },
+    {
+        "text": "quickly, then it's maybe more likely\nto just accumulate a lot of noise.",
+        "start": 1117.222,
+        "duration": 2.99
+    },
+    {
+        "text": "and things like that.",
+        "start": 1121.142,
+        "duration": 0.73
+    },
+    {
+        "text": "but yeah, but sorry.",
+        "start": 1124.372,
+        "duration": 2.38
+    },
+    {
+        "text": "No, I'm done talking.",
+        "start": 1127.832,
+        "duration": 1.87
+    },
+    {
+        "text": "but I just wanted to clarify that in\ncase anyone's watching this later.",
+        "start": 1130.222,
+        "duration": 2.22
+    },
+    {
+        "text": "It started at this time.",
+        "start": 1132.602,
+        "duration": 1.1
+    },
+    {
+        "text": "We had no, we didn't have a sort of any\nkind of sophisticated action policy.",
+        "start": 1133.722,
+        "duration": 3.91
+    },
+    {
+        "text": "We just went along.",
+        "start": 1137.632,
+        "duration": 0.88
+    },
+    {
+        "text": "of course, if you were\npresented with two screwdrivers.",
+        "start": 1138.712,
+        "duration": 3.53
+    },
+    {
+        "text": "You and you wanted to know which was which\nyou would immediately know where to look.",
+        "start": 1142.707,
+        "duration": 3.54
+    },
+    {
+        "text": "You would look at the end of the end\nof the screwdriver and attend to that",
+        "start": 1146.257,
+        "duration": 2.02
+    },
+    {
+        "text": "point, whether you do that with your\nfinger, whether you do that visually.",
+        "start": 1148.277,
+        "duration": 3.19
+    },
+    {
+        "text": "And so there's a more intelligent\naction policy to differentiate objects.",
+        "start": 1151.817,
+        "duration": 3.86
+    },
+    {
+        "text": "And,",
+        "start": 1156.242,
+        "duration": 0.52
+    },
+    {
+        "text": "but, in the beginning, we didn't\ndo any of that stuff, right?",
+        "start": 1158.962,
+        "duration": 2.54
+    },
+    {
+        "text": "And I'm not sure where we ended up\non, but we do have more sophisticated",
+        "start": 1161.512,
+        "duration": 2.76
+    },
+    {
+        "text": "action policies than we started\nwith, which in the beginning was",
+        "start": 1164.272,
+        "duration": 2.36
+    },
+    {
+        "text": "like, it's all action policy.",
+        "start": 1166.632,
+        "duration": 1.27
+    },
+    {
+        "text": "But this is a big part of getting,\nto differentiate certain objects",
+        "start": 1168.432,
+        "duration": 3.26
+    },
+    {
+        "text": "is to know that, oh, between these\ntwo objects, that's where I have",
+        "start": 1171.692,
+        "duration": 2.86
+    },
+    {
+        "text": "to pretend to tell the difference.",
+        "start": 1174.552,
+        "duration": 1.42
+    },
+    {
+        "text": "And we do that all the time.",
+        "start": 1176.602,
+        "duration": 1.26
+    },
+    {
+        "text": "So speaking of action\npolicies, actually, I had a.",
+        "start": 1179.212,
+        "duration": 3.05
+    },
+    {
+        "text": "Question while reading that\nTBP document like a little bit.",
+        "start": 1182.662,
+        "duration": 2.99
+    },
+    {
+        "text": "I didn't go through the\nwhole thing yet in one day.",
+        "start": 1185.702,
+        "duration": 2.55
+    },
+    {
+        "text": "Just the first part where I think\nwe do a good job and distinguishing",
+        "start": 1188.752,
+        "duration": 5.65
+    },
+    {
+        "text": "Monty that it is not your classical\ncomputer vision or supply sort of",
+        "start": 1194.402,
+        "duration": 4.02
+    },
+    {
+        "text": "problem that we're trying to solve.",
+        "start": 1198.612,
+        "duration": 1.49
+    },
+    {
+        "text": "and I guess I was wondering how, maybe\nwe need to clarify like how different",
+        "start": 1202.437,
+        "duration": 5.67
+    },
+    {
+        "text": "it is from RL, especially because\nwe're talking about policies as well.",
+        "start": 1208.107,
+        "duration": 4.34
+    },
+    {
+        "text": "are we learning policies?",
+        "start": 1214.607,
+        "duration": 1.92
+    },
+    {
+        "text": "so will Monty learn, okay, if I\nhave these two screwdrivers, the",
+        "start": 1217.047,
+        "duration": 4.27
+    },
+    {
+        "text": "intelligent, will it learn on its own?",
+        "start": 1221.457,
+        "duration": 2.97
+    },
+    {
+        "text": "Yeah, it'll be a mix.",
+        "start": 1224.427,
+        "duration": 3.04
+    },
+    {
+        "text": "the policies we have right now can be\nconsidered innate policies and, but",
+        "start": 1228.707,
+        "duration": 5.32
+    },
+    {
+        "text": "yeah, but we'll definitely have elements\nof, reinforcement learning as well.",
+        "start": 1234.027,
+        "duration": 3.73
+    },
+    {
+        "text": "Even now we have, policies\nwhere there's learning involved.",
+        "start": 1238.157,
+        "duration": 4.05
+    },
+    {
+        "text": "So we have the model free policies that\nare basically, you just get the sensory",
+        "start": 1242.217,
+        "duration": 4.31
+    },
+    {
+        "text": "input and that decides how you move next.",
+        "start": 1246.537,
+        "duration": 2.63
+    },
+    {
+        "text": "But then we have the model based\npolicies, which are called the top",
+        "start": 1249.207,
+        "duration": 3.3
+    },
+    {
+        "text": "down policies, where You learn the\nmodel of objects and then you use that",
+        "start": 1252.507,
+        "duration": 5.09
+    },
+    {
+        "text": "learned model to decide the next action.",
+        "start": 1257.597,
+        "duration": 3.04
+    },
+    {
+        "text": "And we're not also not Saying\nthat reinforcement learning is",
+        "start": 1261.897,
+        "duration": 5.61
+    },
+    {
+        "text": "like at odds with the system.",
+        "start": 1267.527,
+        "duration": 1.6
+    },
+    {
+        "text": "So for example, you could, you use\nreinforcement learning as the more",
+        "start": 1269.317,
+        "duration": 3.63
+    },
+    {
+        "text": "for the motor system and train a\nreinforcement learning agent for",
+        "start": 1273.027,
+        "duration": 2.98
+    },
+    {
+        "text": "the more motor system part of it.",
+        "start": 1276.007,
+        "duration": 1.67
+    },
+    {
+        "text": "it's just that here we are setting\nthe framework for it, where we",
+        "start": 1279.017,
+        "duration": 4.37
+    },
+    {
+        "text": "also have these, models that we\nlearn using reference frames.",
+        "start": 1283.387,
+        "duration": 4.15
+    },
+    {
+        "text": "and, we're not using deep\nreinforcement learning, which is not",
+        "start": 1289.017,
+        "duration": 4.28
+    },
+    {
+        "text": "very sample efficient, for example.",
+        "start": 1293.297,
+        "duration": 1.69
+    },
+    {
+        "text": "There's a tendency, pretty much\neveryone, to think about Monty in",
+        "start": 1296.412,
+        "duration": 5.11
+    },
+    {
+        "text": "terms of what they've learned about\nmachine learning  in the past, and",
+        "start": 1301.522,
+        "duration": 2.63
+    },
+    {
+        "text": "almost always that's wrong, okay?",
+        "start": 1304.402,
+        "duration": 2.63
+    },
+    {
+        "text": "You just have to really start rethinking\nthings, the sample efficiency,",
+        "start": 1307.292,
+        "duration": 3.47
+    },
+    {
+        "text": "the whole reference frame, the\nintegration of movement into the whole",
+        "start": 1310.762,
+        "duration": 3.56
+    },
+    {
+        "text": "thing, it's just really, different.",
+        "start": 1314.322,
+        "duration": 1.86
+    },
+    {
+        "text": "And, you have to be careful.",
+        "start": 1316.522,
+        "duration": 1.95
+    },
+    {
+        "text": "That's my, that's the hardest thing to\nbe successful, Monty, is to realize that",
+        "start": 1320.462,
+        "duration": 4.08
+    },
+    {
+        "text": "we don't wanna be constrained by the\nway we think about things in the past.",
+        "start": 1325.082,
+        "duration": 2.52
+    },
+    {
+        "text": "It doesn't mean the brain doesn't\ndo reinforcement, but you just not",
+        "start": 1327.782,
+        "duration": 2.83
+    },
+    {
+        "text": "gonna drop it in and say, okay, we're\ngonna solve this problem with that.",
+        "start": 1330.612,
+        "duration": 2.99
+    },
+    {
+        "text": "And then,",
+        "start": 1334.022,
+        "duration": 0.18
+    },
+    {
+        "text": "yeah.",
+        "start": 1336.442,
+        "duration": 0.09
+    },
+    {
+        "text": "One, oh, go ahead.",
+        "start": 1336.532,
+        "duration": 2.26
+    },
+    {
+        "text": "I had a couple questions.",
+        "start": 1339.362,
+        "duration": 1.23
+    },
+    {
+        "text": "I know we have a lot to get through.",
+        "start": 1341.132,
+        "duration": 2.26
+    },
+    {
+        "text": "I don't know.",
+        "start": 1343.452,
+        "duration": 0.54
+    },
+    {
+        "text": "We have.",
+        "start": 1346.032,
+        "duration": 0.48
+    },
+    {
+        "text": "Sure.",
+        "start": 1347.182,
+        "duration": 1.38
+    },
+    {
+        "text": "So when you do these\nobject detection things,",
+        "start": 1349.242,
+        "duration": 2.4
+    },
+    {
+        "text": "are we looking at a fixed number of\nsteps is allowed to terminate itself once",
+        "start": 1354.472,
+        "duration": 4.64
+    },
+    {
+        "text": "it gets to a certain confidence level.",
+        "start": 1359.112,
+        "duration": 1.77
+    },
+    {
+        "text": "And yeah, I guess my question on that\nis that what if the object, there's",
+        "start": 1361.172,
+        "duration": 8.63
+    },
+    {
+        "text": "a brand new object and it looks like\n90 percent like another object, but",
+        "start": 1369.802,
+        "duration": 4.5
+    },
+    {
+        "text": "it has a new distinguishing feature.",
+        "start": 1374.302,
+        "duration": 1.56
+    },
+    {
+        "text": "Like how do we prevent it from\nterminating itself too early",
+        "start": 1376.587,
+        "duration": 2.8
+    },
+    {
+        "text": "before it gets to that new feature.",
+        "start": 1379.387,
+        "duration": 2.49
+    },
+    {
+        "text": "So now we're looking at a\nnew object that has to learn.",
+        "start": 1382.357,
+        "duration": 2.395
+    },
+    {
+        "text": "Yeah, so there is a terminal condition\nthat is basically saying, Oh, this",
+        "start": 1386.292,
+        "duration": 4.78
+    },
+    {
+        "text": "is an object that I don't know about.",
+        "start": 1391.092,
+        "duration": 2.22
+    },
+    {
+        "text": "So it does not force to\nchoose between the 77 objects.",
+        "start": 1393.352,
+        "duration": 3.35
+    },
+    {
+        "text": "It can say, Oh, this is a new object.",
+        "start": 1396.722,
+        "duration": 1.85
+    },
+    {
+        "text": "And then it would learn about that object\nand create a new model for that object.",
+        "start": 1398.582,
+        "duration": 3.9
+    },
+    {
+        "text": "And next time it should\nbe able to recognize it.",
+        "start": 1403.192,
+        "duration": 1.99
+    },
+    {
+        "text": "but if it is the case, like you\nsay, where you're moving along the",
+        "start": 1406.562,
+        "duration": 3.15
+    },
+    {
+        "text": "object, it all matches with a known\nobject and we'd never get to that.",
+        "start": 1409.712,
+        "duration": 4.24
+    },
+    {
+        "text": "different distinguishing feature,\nthen yeah, we would recognize",
+        "start": 1414.422,
+        "duration": 3.86
+    },
+    {
+        "text": "it as that known object.",
+        "start": 1418.282,
+        "duration": 1.96
+    },
+    {
+        "text": "it will be difficult to prevent that.",
+        "start": 1422.882,
+        "duration": 1.67
+    },
+    {
+        "text": "I guess we, would have, if you've\nnever observed it, how would you know.",
+        "start": 1424.572,
+        "duration": 3.69
+    },
+    {
+        "text": "I'm just thinking if I were to maybe\ngrab these headphones or something.",
+        "start": 1429.772,
+        "duration": 3.2
+    },
+    {
+        "text": "And they have been swapped\nout slightly differently.",
+        "start": 1433.417,
+        "duration": 2.15
+    },
+    {
+        "text": "Maybe the very first grab, I'm satisfied\nthat this is, these are my headphones,",
+        "start": 1435.587,
+        "duration": 3.55
+    },
+    {
+        "text": "but maybe if I grab on the other side,\nI feel something that's brand new.",
+        "start": 1439.797,
+        "duration": 3.54
+    },
+    {
+        "text": "in your old headphones, you've\nexplored the entire object and",
+        "start": 1444.737,
+        "duration": 4.05
+    },
+    {
+        "text": "what's back on the backside,\nthen you'd see something's wrong.",
+        "start": 1449.357,
+        "duration": 2.2
+    },
+    {
+        "text": "You'd have a model in the bottom.",
+        "start": 1451.587,
+        "duration": 1.145
+    },
+    {
+        "text": "It's incorrect prediction.",
+        "start": 1452.732,
+        "duration": 1.035
+    },
+    {
+        "text": "You go, that's not Right.",
+        "start": 1453.777,
+        "duration": 1.65
+    },
+    {
+        "text": "but if you've never observed the\nbackside, how would You know, it's",
+        "start": 1456.667,
+        "duration": 3.07
+    },
+    {
+        "text": "at the moment, basically, we don't\nhave a condition to handle that.",
+        "start": 1462.417,
+        "duration": 3.2
+    },
+    {
+        "text": "I think there's a lot of stuff\nwe want to improve about the kind",
+        "start": 1465.687,
+        "duration": 2.68
+    },
+    {
+        "text": "of unsupervised learning aspect.",
+        "start": 1468.367,
+        "duration": 1.55
+    },
+    {
+        "text": "in terms of, yeah, how you basically\nnaturally add on more objects, without",
+        "start": 1470.517,
+        "duration": 7.98
+    },
+    {
+        "text": "it being there's also the issue of\nlike, how do you learn in like a multi",
+        "start": 1478.497,
+        "duration": 3.55
+    },
+    {
+        "text": "object environment and, how do you know,\nokay, now I'm on a different object.",
+        "start": 1482.047,
+        "duration": 3.39
+    },
+    {
+        "text": "and I think all of these things\nare related to concepts of like",
+        "start": 1486.757,
+        "duration": 3.72
+    },
+    {
+        "text": "prediction error and surprise and okay.",
+        "start": 1490.537,
+        "duration": 2.56
+    },
+    {
+        "text": "I thought this was the, I\nthought I knew what object it is.",
+        "start": 1493.977,
+        "duration": 2.55
+    },
+    {
+        "text": "Okay.",
+        "start": 1496.527,
+        "duration": 0.35
+    },
+    {
+        "text": "Clearly something very wrong.",
+        "start": 1497.237,
+        "duration": 1.49
+    },
+    {
+        "text": "So now I need to take a step back.",
+        "start": 1499.097,
+        "duration": 1.47
+    },
+    {
+        "text": "but yeah, it's not something we've\ngot, we have implemented at the moment.",
+        "start": 1500.967,
+        "duration": 2.59
+    },
+    {
+        "text": "But yeah.",
+        "start": 1503.557,
+        "duration": 1.64
+    },
+    {
+        "text": "And I got into a lot of\nthese topics in a moment.",
+        "start": 1505.197,
+        "duration": 2.52
+    },
+    {
+        "text": "So yeah, just for the sake of getting\nthrough the presentation, maybe.",
+        "start": 1507.717,
+        "duration": 3.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 1512.417,
+        "duration": 0.14
+    },
+    {
+        "text": "I guess just one quick thing I wanted\nto mention about the, policies to your",
+        "start": 1512.557,
+        "duration": 4.63
+    },
+    {
+        "text": "question, so it was just, Yeah, although\na lot of these policies that we have right",
+        "start": 1517.187,
+        "duration": 4.595
+    },
+    {
+        "text": "now are intrinsic, the other thing, and\nbeing designed by us, the other thing to,",
+        "start": 1521.782,
+        "duration": 5.44
+    },
+    {
+        "text": "emphasize is that they would also apply\neven in more kind of abstract spaces.",
+        "start": 1527.452,
+        "duration": 4.07
+    },
+    {
+        "text": "a lot of these ones, like the following\nprincipal curvature on an object, can",
+        "start": 1532.152,
+        "duration": 4.43
+    },
+    {
+        "text": "have kind of parallels in abstract spaces\nand also the hypothesis testing one.",
+        "start": 1536.592,
+        "duration": 3.9
+    },
+    {
+        "text": "so we're not just going to try and\ndesign all policies that something might",
+        "start": 1541.632,
+        "duration": 4.42
+    },
+    {
+        "text": "need to recognize physical objects.",
+        "start": 1546.052,
+        "duration": 1.45
+    },
+    {
+        "text": "This is still like a long\nterm, plan with these policies.",
+        "start": 1548.477,
+        "duration": 4.05
+    },
+    {
+        "text": "I guess I just don't want\nother people to come see Monty.",
+        "start": 1553.977,
+        "duration": 3.07
+    },
+    {
+        "text": "It's oh, I guess it's just\nnot another RL system.",
+        "start": 1557.047,
+        "duration": 2.23
+    },
+    {
+        "text": "It's not right.",
+        "start": 1559.537,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 1561.167,
+        "duration": 0.34
+    },
+    {
+        "text": "Yeah, But to your point, yeah, we can\nmaybe emphasize that a bit better.",
+        "start": 1561.507,
+        "duration": 3.71
+    },
+    {
+        "text": "Yeah, so yeah, and just to make it\nclear right now, all these results,",
+        "start": 1569.137,
+        "duration": 4.35
+    },
+    {
+        "text": "like none of them use any kind\nof deep learning or reinforcement",
+        "start": 1573.487,
+        "duration": 2.79
+    },
+    {
+        "text": "learning, even though we could use\nit in places, but we don't need to,",
+        "start": 1576.277,
+        "duration": 4.77
+    },
+    {
+        "text": "okay, let me just show you, I just\nshowed you the results from the best",
+        "start": 1583.487,
+        "duration": 3.98
+    },
+    {
+        "text": "one now just from the worst one.",
+        "start": 1587.467,
+        "duration": 1.4
+    },
+    {
+        "text": "So this is the, Distant agent\nwith noise and random rotations.",
+        "start": 1588.867,
+        "duration": 3.76
+    },
+    {
+        "text": "And here you can see there are\njust a lot more cases where we",
+        "start": 1592.927,
+        "duration": 2.36
+    },
+    {
+        "text": "reached a time out condition.",
+        "start": 1595.287,
+        "duration": 1.37
+    },
+    {
+        "text": "So it's just not confident\nenough to terminate the episode",
+        "start": 1596.657,
+        "duration": 3.95
+    },
+    {
+        "text": "and say, I'm on this object.",
+        "start": 1600.607,
+        "duration": 1.58
+    },
+    {
+        "text": "most of the time it still has the\ncorrect, most likely hypothesis.",
+        "start": 1603.297,
+        "duration": 3.03
+    },
+    {
+        "text": "And then again, there are a couple.",
+        "start": 1606.587,
+        "duration": 0.92
+    },
+    {
+        "text": "objects that is confused about,\nbut again, you can see that the,",
+        "start": 1608.312,
+        "duration": 4.38
+    },
+    {
+        "text": "all the ones where it's confused\nare like very similar objects,",
+        "start": 1612.702,
+        "duration": 3.43
+    },
+    {
+        "text": "either morphology wise\nor color wise or both.",
+        "start": 1618.182,
+        "duration": 2.88
+    },
+    {
+        "text": "Yeah, we shouldn't view this as a\nfailure of the system to recognize,",
+        "start": 1621.732,
+        "duration": 2.99
+    },
+    {
+        "text": "you've got your count of 40 steps there.",
+        "start": 1624.992,
+        "duration": 2.36
+    },
+    {
+        "text": "Those 40 steps are all\nlocal on the object.",
+        "start": 1627.432,
+        "duration": 2.06
+    },
+    {
+        "text": "You're not going to figure things out.",
+        "start": 1629.492,
+        "duration": 1.46
+    },
+    {
+        "text": "It goes back to the action policy\nand how do you, efficiently",
+        "start": 1631.172,
+        "duration": 3.02
+    },
+    {
+        "text": "sample the object completely.",
+        "start": 1634.192,
+        "duration": 1.38
+    },
+    {
+        "text": "there's a lot going on there.",
+        "start": 1636.502,
+        "duration": 1.24
+    },
+    {
+        "text": "So yeah, these incorrect things were\nnatural, given the way that, that, we set",
+        "start": 1638.252,
+        "duration": 6.54
+    },
+    {
+        "text": "up the action policies in the sampling.",
+        "start": 1644.802,
+        "duration": 1.71
+    },
+    {
+        "text": "yeah.",
+        "start": 1648.572,
+        "duration": 0.5
+    },
+    {
+        "text": "Definitely.",
+        "start": 1649.522,
+        "duration": 0.57
+    },
+    {
+        "text": "And that's why I'm saying there\nare a lot of points where we can",
+        "start": 1650.172,
+        "duration": 4.49
+    },
+    {
+        "text": "improve more and we have a lot of\nconcrete ideas of how we can do it.",
+        "start": 1654.672,
+        "duration": 3.37
+    },
+    {
+        "text": "We just need the time and resources\nto implement all these things.",
+        "start": 1658.062,
+        "duration": 4.05
+    },
+    {
+        "text": "Hey Vivien, did you run an\nexperiment where there was an",
+        "start": 1662.762,
+        "duration": 2.09
+    },
+    {
+        "text": "unbounded number of steps to see\nwhat the correct percentage was?",
+        "start": 1664.862,
+        "duration": 3.41
+    },
+    {
+        "text": "yeah, we, did, but I don't have\nthe results by hand right now.",
+        "start": 1670.162,
+        "duration": 3.88
+    },
+    {
+        "text": "but it would be pretty easy to\nrerun it if you're interested.",
+        "start": 1675.752,
+        "duration": 3.53
+    },
+    {
+        "text": "Alright, now pose detection.",
+        "start": 1683.947,
+        "duration": 1.71
+    },
+    {
+        "text": "So this is, this happens at the\nsame time as object detection.",
+        "start": 1685.657,
+        "duration": 3.3
+    },
+    {
+        "text": "It's a, the same process, actually.",
+        "start": 1688.977,
+        "duration": 3.09
+    },
+    {
+        "text": "and this is the rotation error in degrees.",
+        "start": 1693.357,
+        "duration": 2.43
+    },
+    {
+        "text": "So just for you to have an idea of what\nthose mean, I put these little icons here.",
+        "start": 1696.917,
+        "duration": 5.43
+    },
+    {
+        "text": "So this basically means if that\nwould have been the correct rotation",
+        "start": 1702.347,
+        "duration": 4.34
+    },
+    {
+        "text": "up here, then this is what it\nwould have detected on average.",
+        "start": 1706.687,
+        "duration": 2.98
+    },
+    {
+        "text": "it is again, better for the surface agent\nthan for the distant agent and better",
+        "start": 1711.757,
+        "duration": 3.8
+    },
+    {
+        "text": "without noise than with noise, but all of.",
+        "start": 1715.557,
+        "duration": 2.45
+    },
+    {
+        "text": "These I think are reasonable.",
+        "start": 1718.412,
+        "duration": 1.62
+    },
+    {
+        "text": "The five learning module condition\nis actually not very good, but again,",
+        "start": 1720.532,
+        "duration": 4.95
+    },
+    {
+        "text": "there's another action item we have\non the agenda voting right now is not",
+        "start": 1725.482,
+        "duration": 3.99
+    },
+    {
+        "text": "happening on pose, but only on object ID.",
+        "start": 1729.482,
+        "duration": 2.92
+    },
+    {
+        "text": "And I think once we incorporate that,\nthat should also help a lot here.",
+        "start": 1732.472,
+        "duration": 4.1
+    },
+    {
+        "text": "and then another note on that\nis if we actually look at the",
+        "start": 1737.842,
+        "duration": 3.13
+    },
+    {
+        "text": "distribution of, rotation errors,\nit's a bit of a bimodal distribution.",
+        "start": 1740.972,
+        "duration": 4.41
+    },
+    {
+        "text": "So there's a little spike here\nat one 180 degree rotation error.",
+        "start": 1745.662,
+        "duration": 4.57
+    },
+    {
+        "text": "And that's essentially\nlike mirror symmetry.",
+        "start": 1750.272,
+        "duration": 2.46
+    },
+    {
+        "text": "So a lot of objects in the data set\nare symmetric along one or two axes.",
+        "start": 1752.782,
+        "duration": 4.64
+    },
+    {
+        "text": "So like cups and dice and\nall these kind of objects.",
+        "start": 1757.432,
+        "duration": 3.88
+    },
+    {
+        "text": "we do have a symmetry\ndetection in the algorithm.",
+        "start": 1762.612,
+        "duration": 3.5
+    },
+    {
+        "text": "and account for it, but\ndoesn't always catch it.",
+        "start": 1766.672,
+        "duration": 3.75
+    },
+    {
+        "text": "And in those cases, we get a\npretty high rotation error, which",
+        "start": 1770.632,
+        "duration": 3.13
+    },
+    {
+        "text": "kind of skews it up a bit more.",
+        "start": 1773.812,
+        "duration": 1.59
+    },
+    {
+        "text": "Yes.",
+        "start": 1775.412,
+        "duration": 0.14
+    },
+    {
+        "text": "One of the, one thing that's really useful\nwhen you think about these experiments,",
+        "start": 1776.022,
+        "duration": 3.04
+    },
+    {
+        "text": "like you think about the surface agent,\nimagine you sticking your finger into",
+        "start": 1779.422,
+        "duration": 3.96
+    },
+    {
+        "text": "a black box, you're touching something.",
+        "start": 1783.382,
+        "duration": 1.58
+    },
+    {
+        "text": "If the cup is completely upside down,\nyou might at first think it's just",
+        "start": 1785.362,
+        "duration": 2.92
+    },
+    {
+        "text": "the cup and it takes a little bit more\neffort to realize the cup is inverted.",
+        "start": 1788.282,
+        "duration": 3.15
+    },
+    {
+        "text": "Then I'll be my touch the handle.",
+        "start": 1791.912,
+        "duration": 1.86
+    },
+    {
+        "text": "You might just decide until you\nactually put your finger on the top.",
+        "start": 1793.772,
+        "duration": 2.83
+    },
+    {
+        "text": "You don't know.",
+        "start": 1797.152,
+        "duration": 0.56
+    },
+    {
+        "text": "so that's just you can always relate\nthis back personal experience.",
+        "start": 1798.752,
+        "duration": 3.79
+    },
+    {
+        "text": "And it's very helpful.",
+        "start": 1802.622,
+        "duration": 0.94
+    },
+    {
+        "text": "I'm trying to do that when you're\ntrying to figure out why is",
+        "start": 1803.562,
+        "duration": 2.07
+    },
+    {
+        "text": "it just imagine I thought it.",
+        "start": 1805.822,
+        "duration": 1.62
+    },
+    {
+        "text": "and you'll be able to see what's going on.",
+        "start": 1808.692,
+        "duration": 1.91
+    },
+    {
+        "text": "Yeah.",
+        "start": 1812.272,
+        "duration": 0.45
+    },
+    {
+        "text": "And then, yeah, here you see another\nexample of the symmetry case happening.",
+        "start": 1814.502,
+        "duration": 4.54
+    },
+    {
+        "text": "So we have the target here, this dice\nat the, this rotation 90, 0, 180,",
+        "start": 1819.042,
+        "duration": 5.41
+    },
+    {
+        "text": "but it actually detects 90, 0, 0.",
+        "start": 1824.452,
+        "duration": 2.3
+    },
+    {
+        "text": "And if you look at the image, it's almost\nidentical, there's some artifact down",
+        "start": 1826.752,
+        "duration": 4.61
+    },
+    {
+        "text": "here that maybe distinguishes it, but it\ndetects this rotation, plus it detects",
+        "start": 1831.362,
+        "duration": 6.03
+    },
+    {
+        "text": "a symmetrical object, so we would count\nthat as correct, and it's actually good",
+        "start": 1837.392,
+        "duration": 5.43
+    },
+    {
+        "text": "that the system doesn't overfit to these\nlittle artifacts down here on the dice.",
+        "start": 1842.832,
+        "duration": 4.66
+    },
+    {
+        "text": "next one is number of steps.",
+        "start": 1854.802,
+        "duration": 2.2
+    },
+    {
+        "text": "So how fast do we recognize it?",
+        "start": 1857.942,
+        "duration": 1.89
+    },
+    {
+        "text": "And there are two approaches we take\nto cut down on the number of steps.",
+        "start": 1859.852,
+        "duration": 4.28
+    },
+    {
+        "text": "One is voting and the\nsecond one is policy.",
+        "start": 1864.132,
+        "duration": 2.29
+    },
+    {
+        "text": "so voting is we have a bunch of\npatches in this case, they all",
+        "start": 1867.872,
+        "duration": 5.25
+    },
+    {
+        "text": "move together in the same way.",
+        "start": 1873.122,
+        "duration": 1.61
+    },
+    {
+        "text": "they could be moving independently, like\nfive fingers on the hand, for example.",
+        "start": 1875.012,
+        "duration": 3.83
+    },
+    {
+        "text": "In our case, they don't, they just move\ntogether over the cup, like shown here.",
+        "start": 1879.392,
+        "duration": 4.59
+    },
+    {
+        "text": "Each patch feeds into a different\nsensor module and each sensor module",
+        "start": 1884.377,
+        "duration": 3.53
+    },
+    {
+        "text": "feeds into a different learning module.",
+        "start": 1887.907,
+        "duration": 1.6
+    },
+    {
+        "text": "And since they all get different\nsensory input, they might have different",
+        "start": 1889.537,
+        "duration": 3.43
+    },
+    {
+        "text": "hypotheses about what object they're\non or what pose that object is in.",
+        "start": 1892.977,
+        "duration": 4.51
+    },
+    {
+        "text": "But then they vote with each other\nand can, thereby narrow down those",
+        "start": 1897.987,
+        "duration": 5.23
+    },
+    {
+        "text": "hypotheses much faster together.",
+        "start": 1903.577,
+        "duration": 2.16
+    },
+    {
+        "text": "and if you look at the number, it cuts\ndown the number of steps required by",
+        "start": 1907.357,
+        "duration": 4.32
+    },
+    {
+        "text": "more than half quite significantly,\nand it slightly increases accuracy.",
+        "start": 1911.697,
+        "duration": 4.96
+    },
+    {
+        "text": "Again, you're not voting\non pose here, right?",
+        "start": 1917.887,
+        "duration": 2.03
+    },
+    {
+        "text": "Yeah,",
+        "start": 1920.617,
+        "duration": 0.52
+    },
+    {
+        "text": "And that's something we need,\nthat's not fundamentally",
+        "start": 1923.987,
+        "duration": 2.64
+    },
+    {
+        "text": "impossible, we just need to add it.",
+        "start": 1926.877,
+        "duration": 2.31
+    },
+    {
+        "text": "Have to do it, it's tricky.",
+        "start": 1929.187,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah, we don't know how it's done in\nthe brain then, but we know it has to",
+        "start": 1931.487,
+        "duration": 6.92
+    },
+    {
+        "text": "second way to improve number of steps is\npolicy, like we already mentioned before.",
+        "start": 1941.307,
+        "duration": 5.02
+    },
+    {
+        "text": "So for example, this, touch agent has a,",
+        "start": 1946.327,
+        "duration": 3.23
+    },
+    {
+        "text": "Policy that follows principle\ncurvature and then changes to follow",
+        "start": 1951.657,
+        "duration": 4.84
+    },
+    {
+        "text": "the different principle curvature.",
+        "start": 1956.497,
+        "duration": 1.82
+    },
+    {
+        "text": "And at some point it changes again to\nfollow orthogonal to that and so on.",
+        "start": 1958.317,
+        "duration": 3.55
+    },
+    {
+        "text": "So it is a bit more directional\nabout where it goes and, explores",
+        "start": 1961.867,
+        "duration": 4.99
+    },
+    {
+        "text": "the object more efficiently than\nit would if, you were moving",
+        "start": 1966.857,
+        "duration": 3.28
+    },
+    {
+        "text": "randomly on the object surface.",
+        "start": 1970.137,
+        "duration": 2.18
+    },
+    {
+        "text": "And that helps a lot, like\nNils mentioned earlier.",
+        "start": 1973.092,
+        "duration": 2.66
+    },
+    {
+        "text": "Second one is Maybe it's worth us just\nquickly defining the principal curvature,",
+        "start": 1976.442,
+        "duration": 3.28
+    },
+    {
+        "text": "so if you imagine the like side of a\ncup or a cylinder, you'll have the,",
+        "start": 1979.722,
+        "duration": 6.37
+    },
+    {
+        "text": "maximum magnitude of curvature, which\nwould be like going around the, cup,",
+        "start": 1986.102,
+        "duration": 4.4
+    },
+    {
+        "text": "and then the, orthogonal, direction to\nthat is the second principal curvature,",
+        "start": 1991.392,
+        "duration": 5.0
+    },
+    {
+        "text": "and in a cup that would be flat.",
+        "start": 1996.432,
+        "duration": 1.29
+    },
+    {
+        "text": "Like it would be no curvature.",
+        "start": 1998.467,
+        "duration": 1.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 2000.677,
+        "duration": 0.31
+    },
+    {
+        "text": "So on this cup one, the flat one would\nbe in this direction and then the",
+        "start": 2000.987,
+        "duration": 4.25
+    },
+    {
+        "text": "curve one would be in this direction.",
+        "start": 2005.237,
+        "duration": 1.81
+    },
+    {
+        "text": "And principal curvatures are always like,\nthey're always orthogonal to each other.",
+        "start": 2007.737,
+        "duration": 3.7
+    },
+    {
+        "text": "So they span up a reference frame\ntogether with the point normal, which",
+        "start": 2011.467,
+        "duration": 3.69
+    },
+    {
+        "text": "always points out, out of the surface.",
+        "start": 2015.157,
+        "duration": 2.61
+    },
+    {
+        "text": "Should have made that clear.",
+        "start": 2019.667,
+        "duration": 1.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 2021.997,
+        "duration": 0.27
+    },
+    {
+        "text": "yeah, the second type of policy is\nthe top down or model based policy.",
+        "start": 2024.537,
+        "duration": 3.93
+    },
+    {
+        "text": "Those are based on the models that\nare learned in the learning module.",
+        "start": 2028.467,
+        "duration": 3.25
+    },
+    {
+        "text": "And one that we use at the moment\nis this hypothesis driven jumps.",
+        "start": 2032.307,
+        "duration": 5.65
+    },
+    {
+        "text": "So basically we have two hypotheses\nin this case, a fork and a",
+        "start": 2038.067,
+        "duration": 3.59
+    },
+    {
+        "text": "knife at, in these rotations.",
+        "start": 2041.657,
+        "duration": 2.48
+    },
+    {
+        "text": "And then we look at where should\nwe move in order to distinguish",
+        "start": 2044.657,
+        "duration": 4.76
+    },
+    {
+        "text": "these two, two objects.",
+        "start": 2049.417,
+        "duration": 1.52
+    },
+    {
+        "text": "that would be the red point here,\nand then would jump with the sensor",
+        "start": 2051.807,
+        "duration": 3.9
+    },
+    {
+        "text": "to that location and sense there.",
+        "start": 2055.707,
+        "duration": 2.02
+    },
+    {
+        "text": "here's some example.",
+        "start": 2058.772,
+        "duration": 1.39
+    },
+    {
+        "text": "we are first following the principal\ncurvature and then we do a jump to",
+        "start": 2060.862,
+        "duration": 4.39
+    },
+    {
+        "text": "the top of the cutlery since the\nhandle is not very distinguishing.",
+        "start": 2065.252,
+        "duration": 3.96
+    },
+    {
+        "text": "and then that should narrow down\nour possibilities quite a lot.",
+        "start": 2070.612,
+        "duration": 4.04
+    },
+    {
+        "text": "Or here with five learning modules, we,\nin a distant agent, we can also jump,",
+        "start": 2075.052,
+        "duration": 5.68
+    },
+    {
+        "text": "to different locations on the object.",
+        "start": 2081.102,
+        "duration": 1.84
+    },
+    {
+        "text": "I haven't seen that thing, it's good.",
+        "start": 2085.287,
+        "duration": 2.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 2088.217,
+        "duration": 0.3
+    },
+    {
+        "text": "Niels made those.",
+        "start": 2088.517,
+        "duration": 1.19
+    },
+    {
+        "text": "And again, that cuts down quite\nsignificantly on the number of steps",
+        "start": 2091.337,
+        "duration": 3.82
+    },
+    {
+        "text": "we need to recognize an object.",
+        "start": 2095.157,
+        "duration": 1.79
+    },
+    {
+        "text": "So it seems like we would, you would start\nwith a, non model driven, action policy.",
+        "start": 2099.087,
+        "duration": 5.21
+    },
+    {
+        "text": "Do you have some hypothesis and then\nyou equate the switch to a top down one?",
+        "start": 2104.307,
+        "duration": 3.35
+    },
+    {
+        "text": "Exactly.",
+        "start": 2108.427,
+        "duration": 0.52
+    },
+    {
+        "text": "Yeah.",
+        "start": 2108.947,
+        "duration": 0.38
+    },
+    {
+        "text": "That's what's happening here.",
+        "start": 2109.677,
+        "duration": 1.12
+    },
+    {
+        "text": "First, we follow the principle\ncurvature, which is not model driven.",
+        "start": 2110.797,
+        "duration": 3.94
+    },
+    {
+        "text": "It's just based on the sensory inputs.",
+        "start": 2114.827,
+        "duration": 1.53
+    },
+    {
+        "text": "And then we, once we have\nsome hypotheses, we do a jump.",
+        "start": 2117.117,
+        "duration": 3.11
+    },
+    {
+        "text": "You can imagine again, the\nfinger of the box didn't have",
+        "start": 2121.922,
+        "duration": 2.63
+    },
+    {
+        "text": "no idea what you're touching.",
+        "start": 2124.552,
+        "duration": 0.99
+    },
+    {
+        "text": "You follow some edges and\nsay, Oh, that might be this.",
+        "start": 2125.852,
+        "duration": 2.31
+    },
+    {
+        "text": "And you make a jump to\nhypothesis, see if it is correct.",
+        "start": 2128.202,
+        "duration": 3.48
+    },
+    {
+        "text": "It's also interesting on this animation\nthat like you have your high confidence",
+        "start": 2134.362,
+        "duration": 4.56
+    },
+    {
+        "text": "about the rotation of the object.",
+        "start": 2138.922,
+        "duration": 2.12
+    },
+    {
+        "text": "You're not sure what it is\nyet, but you're very sure it's",
+        "start": 2141.082,
+        "duration": 2.07
+    },
+    {
+        "text": "like lying along this plane.",
+        "start": 2143.162,
+        "duration": 1.55
+    },
+    {
+        "text": "So your hypotheses are like almost\noverlapping, which gives you greater",
+        "start": 2144.712,
+        "duration": 4.52
+    },
+    {
+        "text": "confidence about how to use the\nhypothesis to move around the object.",
+        "start": 2149.232,
+        "duration": 3.79
+    },
+    {
+        "text": "Yeah.",
+        "start": 2154.617,
+        "duration": 0.47
+    },
+    {
+        "text": "And again, with the symmetry, like\nit'll sometimes fail in that, it",
+        "start": 2155.087,
+        "duration": 4.49
+    },
+    {
+        "text": "might suggest going to the other\nside of the cutlery, but it's not",
+        "start": 2159.577,
+        "duration": 3.14
+    },
+    {
+        "text": "really a genuine fair failure.",
+        "start": 2162.727,
+        "duration": 1.51
+    },
+    {
+        "text": "It's just it can't know until it tries\nto sense one of the tops, like which",
+        "start": 2164.237,
+        "duration": 4.75
+    },
+    {
+        "text": "way it's actually oriented in space.",
+        "start": 2168.987,
+        "duration": 1.44
+    },
+    {
+        "text": "But yeah.",
+        "start": 2170.497,
+        "duration": 2.12
+    },
+    {
+        "text": "And another, yeah.",
+        "start": 2172.617,
+        "duration": 1.4
+    },
+    {
+        "text": "And so that's like another thing\nwhere we have some ideas for how to",
+        "start": 2174.077,
+        "duration": 2.89
+    },
+    {
+        "text": "do it, but like At the moment, when\nwe go to an empty point in space,",
+        "start": 2176.967,
+        "duration": 3.83
+    },
+    {
+        "text": "that doesn't update our hypotheses.",
+        "start": 2180.947,
+        "duration": 1.82
+    },
+    {
+        "text": "instead, we just make sure we move\nback onto the object, but it would",
+        "start": 2184.277,
+        "duration": 2.88
+    },
+    {
+        "text": "be very natural for us to integrate\nthat into the system so that, scaling",
+        "start": 2187.167,
+        "duration": 4.34
+    },
+    {
+        "text": "empty space does tell you a lot\nabout, what is the orientation of",
+        "start": 2191.517,
+        "duration": 3.72
+    },
+    {
+        "text": "the object and things like that.",
+        "start": 2195.247,
+        "duration": 1.165
+    },
+    {
+        "text": "Yeah, it's very good to know\nwhere the object is not.",
+        "start": 2199.072,
+        "duration": 2.44
+    },
+    {
+        "text": "And yeah, that's the nice thing that\nit just comes naturally out of the",
+        "start": 2203.712,
+        "duration": 4.15
+    },
+    {
+        "text": "system and how we do things that these\nhypotheses will align with each other",
+        "start": 2207.862,
+        "duration": 4.04
+    },
+    {
+        "text": "and you don't, the models for fork\nand knife might have been learned",
+        "start": 2212.072,
+        "duration": 3.83
+    },
+    {
+        "text": "in totally different orientations.",
+        "start": 2215.902,
+        "duration": 1.55
+    },
+    {
+        "text": "But then once we use the hypotheses\nabout how they're oriented, they will be",
+        "start": 2217.902,
+        "duration": 3.88
+    },
+    {
+        "text": "automatically aligned and we know where\nthe most distinguishing features would be.",
+        "start": 2221.792,
+        "duration": 3.99
+    },
+    {
+        "text": "so now on speed, efficiency, obviously\nthat's a bit related to number of",
+        "start": 2230.742,
+        "duration": 5.08
+    },
+    {
+        "text": "steps since less steps means it takes\nless time to recognize the object,",
+        "start": 2235.832,
+        "duration": 4.57
+    },
+    {
+        "text": "but this is really more about like\nhow long does each individual step and",
+        "start": 2240.402,
+        "duration": 3.49
+    },
+    {
+        "text": "hypothesis update take, and not going\nto go through these in too much detail",
+        "start": 2244.252,
+        "duration": 4.72
+    },
+    {
+        "text": "because those are a bit older numbers.",
+        "start": 2249.022,
+        "duration": 2.19
+    },
+    {
+        "text": "I just.",
+        "start": 2251.212,
+        "duration": 0.32
+    },
+    {
+        "text": "Pulled together slides\nfrom the past two years.",
+        "start": 2251.947,
+        "duration": 2.42
+    },
+    {
+        "text": "but we've already done a\nlot of stuff on speed ups.",
+        "start": 2255.637,
+        "duration": 3.08
+    },
+    {
+        "text": "So including just vectorizing a lot\nof stuff, testing only the top K",
+        "start": 2258.727,
+        "duration": 4.71
+    },
+    {
+        "text": "hypotheses, using different libraries\nthat are faster on our infrastructure,",
+        "start": 2263.437,
+        "duration": 6.04
+    },
+    {
+        "text": "using a multiprocessing and\nmultithreading, and that kind of helped",
+        "start": 2269.777,
+        "duration": 5.19
+    },
+    {
+        "text": "us get a lot of speed ups already.",
+        "start": 2274.967,
+        "duration": 1.9
+    },
+    {
+        "text": "this is the current setup.",
+        "start": 2277.687,
+        "duration": 1.68
+    },
+    {
+        "text": "So we vectorize the evidence update.",
+        "start": 2279.597,
+        "duration": 3.55
+    },
+    {
+        "text": "so those are all matrix\nmultiplications and matrix operations.",
+        "start": 2284.297,
+        "duration": 3.65
+    },
+    {
+        "text": "we use multi threading for the\nloop over learning modules, for",
+        "start": 2288.687,
+        "duration": 4.47
+    },
+    {
+        "text": "the loop over objects and memories.",
+        "start": 2293.157,
+        "duration": 1.89
+    },
+    {
+        "text": "And then the loop over learning\nmodules could be parallelized,",
+        "start": 2295.822,
+        "duration": 4.9
+    },
+    {
+        "text": "but is not at the moment.",
+        "start": 2300.782,
+        "duration": 1.53
+    },
+    {
+        "text": "you'll see that in the speed numbers,\nthat's one of the bottlenecks.",
+        "start": 2303.092,
+        "duration": 3.41
+    },
+    {
+        "text": "If we use more than one learning\nmodule and then we parallelize",
+        "start": 2306.522,
+        "duration": 4.48
+    },
+    {
+        "text": "episodes in an experiment.",
+        "start": 2311.152,
+        "duration": 1.71
+    },
+    {
+        "text": "During evaluation during training,\nwe can't do that because when you're",
+        "start": 2313.412,
+        "duration": 3.99
+    },
+    {
+        "text": "training and learning and constantly\nadding new information to your models,",
+        "start": 2317.402,
+        "duration": 3.11
+    },
+    {
+        "text": "obviously the sequence matters.",
+        "start": 2320.612,
+        "duration": 1.72
+    },
+    {
+        "text": "So we can't do that in\nparallel during training.",
+        "start": 2322.892,
+        "duration": 2.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 2326.642,
+        "duration": 0.14
+    },
+    {
+        "text": "Maybe it's worth mentioning, like at the\nmoment we tend to have a lot of objects,",
+        "start": 2326.782,
+        "duration": 3.73
+    },
+    {
+        "text": "like up to 77 objects, whereas we mostly\nhave one learning module, maybe five.",
+        "start": 2330.512,
+        "duration": 5.45
+    },
+    {
+        "text": "And so that was the reason\nfor kind of choosing to.",
+        "start": 2336.272,
+        "duration": 2.05
+    },
+    {
+        "text": "The parallelize over objects,\nbut of course that'll, that might",
+        "start": 2338.827,
+        "duration": 2.86
+    },
+    {
+        "text": "start changing as we want to add\nlearning modules and then sorting",
+        "start": 2341.687,
+        "duration": 4.65
+    },
+    {
+        "text": "that out would be more important.",
+        "start": 2346.337,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah, And then, yeah, we also\ndid some analysis on what the",
+        "start": 2348.647,
+        "duration": 4.98
+    },
+    {
+        "text": "slowest operations are now.",
+        "start": 2353.627,
+        "duration": 1.59
+    },
+    {
+        "text": "So currently the slowest thing is a KD\ntree query operation, which is basically.",
+        "start": 2355.227,
+        "duration": 6.09
+    },
+    {
+        "text": "If we have a hypothesis of where we are\non the object, that location usually",
+        "start": 2361.697,
+        "duration": 4.37
+    },
+    {
+        "text": "doesn't exactly correspond to a location\nwhere we have stored information",
+        "start": 2366.067,
+        "duration": 4.36
+    },
+    {
+        "text": "about like in the objects model.",
+        "start": 2370.437,
+        "duration": 1.81
+    },
+    {
+        "text": "So we have to do a nearest neighbor\nsearch to find the nearest points in",
+        "start": 2372.737,
+        "duration": 4.66
+    },
+    {
+        "text": "the graph storage, in that search,\ntake some, takes the most time.",
+        "start": 2377.397,
+        "duration": 5.69
+    },
+    {
+        "text": "we have looked into alternatives.",
+        "start": 2384.417,
+        "duration": 2.14
+    },
+    {
+        "text": "We have tried alternatives, but we\nhave not found anything faster so far.",
+        "start": 2386.557,
+        "duration": 4.63
+    },
+    {
+        "text": "but this is an example where\nit's really interesting.",
+        "start": 2392.167,
+        "duration": 4.77
+    },
+    {
+        "text": "I think I know how neurons do\nthis and it's not a separate step.",
+        "start": 2396.967,
+        "duration": 3.92
+    },
+    {
+        "text": "It's very efficient.",
+        "start": 2400.887,
+        "duration": 0.79
+    },
+    {
+        "text": "It's really clever, but it requires\nthe neurons do it using synapses and",
+        "start": 2401.757,
+        "duration": 3.87
+    },
+    {
+        "text": "they're locational on the dendrite and\nit's a completely different mechanism",
+        "start": 2405.627,
+        "duration": 4.815
+    },
+    {
+        "text": "for how we achieve the same result.",
+        "start": 2410.442,
+        "duration": 2.18
+    },
+    {
+        "text": "so it's the kind of challenge\nwe face in this system, right?",
+        "start": 2413.782,
+        "duration": 3.2
+    },
+    {
+        "text": "Here we're trying to do it, not\nemulate neurons exactly in their,",
+        "start": 2416.992,
+        "duration": 3.87
+    },
+    {
+        "text": "in the details, but when we don't,\nsometimes you run into issues like this.",
+        "start": 2420.992,
+        "duration": 3.74
+    },
+    {
+        "text": "Yeah.",
+        "start": 2425.632,
+        "duration": 0.56
+    },
+    {
+        "text": "And this might be one thing that\nwe could maybe solve with a more",
+        "start": 2426.342,
+        "duration": 3.34
+    },
+    {
+        "text": "biological implementation at this point.",
+        "start": 2429.682,
+        "duration": 2.29
+    },
+    {
+        "text": "But then that requires putting a\nwhole bunch of other biological",
+        "start": 2432.372,
+        "duration": 2.45
+    },
+    {
+        "text": "details into this, right?",
+        "start": 2434.822,
+        "duration": 1.34
+    },
+    {
+        "text": "So it's That is one of the big\nchallenges, about this to know where",
+        "start": 2436.932,
+        "duration": 5.115
+    },
+    {
+        "text": "you put the dividing line between, and\nI hate using the word neuro inspired,",
+        "start": 2442.047,
+        "duration": 4.81
+    },
+    {
+        "text": "so neurally constrained solutions,\nthis is how the neurons do this, and we",
+        "start": 2446.857,
+        "duration": 4.56
+    },
+    {
+        "text": "don't want to emulate everything, and\nyet, when, where do you put that line?",
+        "start": 2451.417,
+        "duration": 3.61
+    },
+    {
+        "text": "It's challenging to know.",
+        "start": 2455.107,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah.",
+        "start": 2458.197,
+        "duration": 0.38
+    },
+    {
+        "text": "and then, yeah, the second\nslowest operation are just",
+        "start": 2460.537,
+        "duration": 2.8
+    },
+    {
+        "text": "matrix operations combined.",
+        "start": 2463.337,
+        "duration": 1.91
+    },
+    {
+        "text": "We already managed to cut down a lot\non this time just by only testing the",
+        "start": 2465.707,
+        "duration": 4.28
+    },
+    {
+        "text": "top most likely hypotheses or only\nupdating the most likely hypotheses.",
+        "start": 2469.997,
+        "duration": 4.24
+    },
+    {
+        "text": "We can make the matrices much, much\nsmaller, and make it much faster.",
+        "start": 2474.447,
+        "duration": 4.97
+    },
+    {
+        "text": "and then just some numbers again.",
+        "start": 2480.792,
+        "duration": 2.11
+    },
+    {
+        "text": "So this is runtime per step\nwith 77 objects in memory.",
+        "start": 2483.032,
+        "duration": 4.72
+    },
+    {
+        "text": "A lot of our smaller benchmarks\nonly use 10 objects in memory",
+        "start": 2488.212,
+        "duration": 3.9
+    },
+    {
+        "text": "and that's a faster as well.",
+        "start": 2492.112,
+        "duration": 1.69
+    },
+    {
+        "text": "And this was on 16 CPU cores.",
+        "start": 2494.112,
+        "duration": 3.18
+    },
+    {
+        "text": "If you.",
+        "start": 2497.342,
+        "duration": 0.4
+    },
+    {
+        "text": "Use more, you can also, of course, make\nit faster or slower if you use less",
+        "start": 2498.107,
+        "duration": 4.21
+    },
+    {
+        "text": "or on the laptop, it's also faster.",
+        "start": 2502.317,
+        "duration": 1.66
+    },
+    {
+        "text": "but yeah, here under the setting,\njust to get some relative numbers.",
+        "start": 2505.587,
+        "duration": 3.68
+    },
+    {
+        "text": "it takes around two seconds per step.",
+        "start": 2511.807,
+        "duration": 2.57
+    },
+    {
+        "text": "It takes pretty much exactly five\ntimes that amount for five learning",
+        "start": 2514.667,
+        "duration": 3.62
+    },
+    {
+        "text": "modules, because as I mentioned\nearlier, we don't parallelize",
+        "start": 2518.287,
+        "duration": 3.73
+    },
+    {
+        "text": "the updates of learning modules.",
+        "start": 2522.027,
+        "duration": 1.48
+    },
+    {
+        "text": "Which we could do somehow at some point.",
+        "start": 2523.717,
+        "duration": 3.16
+    },
+    {
+        "text": "but then if we take the total\nepisode runtime, so total time taken",
+        "start": 2528.927,
+        "duration": 3.6
+    },
+    {
+        "text": "until the object is recognized,\nthat difference isn't five times",
+        "start": 2532.527,
+        "duration": 4.32
+    },
+    {
+        "text": "anymore, just because five learning\nmodules take less steps to converge.",
+        "start": 2536.847,
+        "duration": 4.71
+    },
+    {
+        "text": "So they just recognize the object faster.",
+        "start": 2541.737,
+        "duration": 2.25
+    },
+    {
+        "text": "and yeah, it takes about two\nto six minutes, seven minutes.",
+        "start": 2545.297,
+        "duration": 6.28
+    },
+    {
+        "text": "The left chart is seconds.",
+        "start": 2551.937,
+        "duration": 1.1
+    },
+    {
+        "text": "The right chart is minutes.",
+        "start": 2553.037,
+        "duration": 1.06
+    },
+    {
+        "text": "Yeah.",
+        "start": 2555.067,
+        "duration": 0.29
+    },
+    {
+        "text": "This is seconds.",
+        "start": 2555.357,
+        "duration": 0.69
+    },
+    {
+        "text": "This is minutes.",
+        "start": 2556.047,
+        "duration": 0.77
+    },
+    {
+        "text": "Okay.",
+        "start": 2556.817,
+        "duration": 0.09
+    },
+    {
+        "text": "It's still not as fast as we would like it\nto be, but yeah, this is current numbers.",
+        "start": 2557.227,
+        "duration": 6.9
+    },
+    {
+        "text": "all right, noise.",
+        "start": 2569.087,
+        "duration": 0.9
+    },
+    {
+        "text": "So there are two places, there are\nthree, but two places that we commonly",
+        "start": 2571.247,
+        "duration": 4.12
+    },
+    {
+        "text": "test where you could inject noise.",
+        "start": 2575.367,
+        "duration": 2.07
+    },
+    {
+        "text": "We can inject noise\nright here onto the data.",
+        "start": 2577.987,
+        "duration": 3.44
+    },
+    {
+        "text": "The raw data goes into the sensor module.",
+        "start": 2581.437,
+        "duration": 2.57
+    },
+    {
+        "text": "Or we can inject noise here, onto\nthe data that goes from the sensor",
+        "start": 2584.517,
+        "duration": 4.38
+    },
+    {
+        "text": "module into the learning module.",
+        "start": 2588.897,
+        "duration": 1.69
+    },
+    {
+        "text": "Third option is injecting\nnoise into the models directly.",
+        "start": 2590.957,
+        "duration": 2.95
+    },
+    {
+        "text": "basically this one tests how robust\nthe sensor module is and this one",
+        "start": 2595.627,
+        "duration": 4.49
+    },
+    {
+        "text": "allows us to test more controlled\nhow robust the learning module is.",
+        "start": 2600.147,
+        "duration": 4.4
+    },
+    {
+        "text": "Here's an example of how noise\nlooks like if you add it before",
+        "start": 2607.087,
+        "duration": 4.16
+    },
+    {
+        "text": "it goes into the sensor module.",
+        "start": 2611.247,
+        "duration": 1.56
+    },
+    {
+        "text": "So you could imagine like some noise\nadded to the RGBD image, and then all",
+        "start": 2613.117,
+        "duration": 7.8
+    },
+    {
+        "text": "the estimates like of curvature and point\nnormals just get skewed quite a bit.",
+        "start": 2620.917,
+        "duration": 4.55
+    },
+    {
+        "text": "and then if you add noise here, you\ncan add it more refined on specific",
+        "start": 2627.247,
+        "duration": 4.89
+    },
+    {
+        "text": "features, like just noise on the\nlocation information or just noise",
+        "start": 2632.147,
+        "duration": 3.07
+    },
+    {
+        "text": "on the color, or make it more or less\nnoise on different kinds of features.",
+        "start": 2635.217,
+        "duration": 4.18
+    },
+    {
+        "text": "It's just an example of the typical amount\nof noise we add to the locations in all",
+        "start": 2639.707,
+        "duration": 5.73
+    },
+    {
+        "text": "the previous experiment results that I\nshowed, where it was the noisy conditions.",
+        "start": 2645.437,
+        "duration": 4.89
+    },
+    {
+        "text": "To address this raw noise, we added\nsome better calculations, some robust",
+        "start": 2652.837,
+        "duration": 6.28
+    },
+    {
+        "text": "calculations for the point normal.",
+        "start": 2659.117,
+        "duration": 1.94
+    },
+    {
+        "text": "That was a work that,\nintern Jack did last year.",
+        "start": 2661.537,
+        "duration": 3.28
+    },
+    {
+        "text": "so we got some improvement, quite\nsignificant improvement there just using,",
+        "start": 2665.867,
+        "duration": 5.63
+    },
+    {
+        "text": "more, more robust point normal estimates.",
+        "start": 2672.137,
+        "duration": 2.04
+    },
+    {
+        "text": "And then, another thing that comes\nout of the system is this ability to",
+        "start": 2675.467,
+        "duration": 4.64
+    },
+    {
+        "text": "switch, to use different modalities,",
+        "start": 2680.107,
+        "duration": 2.16
+    },
+    {
+        "text": "So I just threw it in here with noise\nbecause it seems a bit related to noise.",
+        "start": 2685.087,
+        "duration": 4.43
+    },
+    {
+        "text": "If basically this is testing, we, learn\nan object with a touch sensor, put the",
+        "start": 2689.517,
+        "duration": 6.08
+    },
+    {
+        "text": "model in here, and then we unplug that\nsensor module and plug in a vision sensor",
+        "start": 2695.597,
+        "duration": 4.35
+    },
+    {
+        "text": "and try to recognize these objects.",
+        "start": 2700.437,
+        "duration": 1.98
+    },
+    {
+        "text": "And we pretty much get the same\nperformance, slightly higher",
+        "start": 2703.462,
+        "duration": 4.26
+    },
+    {
+        "text": "rotation error, pretty much the\nsame amount of steps needed.",
+        "start": 2707.732,
+        "duration": 2.73
+    },
+    {
+        "text": "one thing to add here is that our\nsensors are pretty similar here.",
+        "start": 2712.502,
+        "duration": 3.7
+    },
+    {
+        "text": "just the action policies are\na bit, the bigger difference.",
+        "start": 2716.632,
+        "duration": 3.73
+    },
+    {
+        "text": "that's that did someone,\ndid you have a question?",
+        "start": 2726.552,
+        "duration": 4.68
+    },
+    {
+        "text": "Will, it looked like you\nwere going to say something.",
+        "start": 2731.232,
+        "duration": 1.77
+    },
+    {
+        "text": "I was shocked and delighted\nby that that works.",
+        "start": 2734.117,
+        "duration": 3.09
+    },
+    {
+        "text": "That's, crazy to me that you\ncan plug in a different sensor",
+        "start": 2737.577,
+        "duration": 2.49
+    },
+    {
+        "text": "and it's still recognized.",
+        "start": 2740.097,
+        "duration": 0.92
+    },
+    {
+        "text": "Is there anything out there\nin deep learning world that",
+        "start": 2741.067,
+        "duration": 2.93
+    },
+    {
+        "text": "can come close to doing that?",
+        "start": 2743.997,
+        "duration": 1.42
+    },
+    {
+        "text": "It seems shocking.",
+        "start": 2745.547,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah, I'm not aware of anything\nwhere you can just do it",
+        "start": 2748.677,
+        "duration": 3.52
+    },
+    {
+        "text": "like plug and play like this.",
+        "start": 2752.387,
+        "duration": 1.61
+    },
+    {
+        "text": "That's definitely one of the big strengths\nof the system for one, you can just plug",
+        "start": 2755.467,
+        "duration": 5.37
+    },
+    {
+        "text": "and play sensors as long as they can\nall like estimate movements in space.",
+        "start": 2760.837,
+        "duration": 4.26
+    },
+    {
+        "text": "you can at least generalize\nthe morphology of objects.",
+        "start": 2765.847,
+        "duration": 2.83
+    },
+    {
+        "text": "Obviously, if like you have a\nvision sensor where you have",
+        "start": 2768.707,
+        "duration": 3.16
+    },
+    {
+        "text": "color and then you use a touch\nsensor, it doesn't sense color.",
+        "start": 2771.887,
+        "duration": 3.175
+    },
+    {
+        "text": "You can't distinguish a blue from red\ncup anymore, but that's like impossible.",
+        "start": 2775.272,
+        "duration": 4.87
+    },
+    {
+        "text": "but the features that are still there,\nyou can just generalize very easily.",
+        "start": 2780.992,
+        "duration": 4.9
+    },
+    {
+        "text": "And then the second thing is that you\ncan also do cross modality voting and",
+        "start": 2786.162,
+        "duration": 4.74
+    },
+    {
+        "text": "communication, with pretty much all\ndeep learning solutions I know about.",
+        "start": 2790.902,
+        "duration": 5.38
+    },
+    {
+        "text": "It's like there's different\nsub networks and you have to.",
+        "start": 2796.282,
+        "duration": 2.31
+    },
+    {
+        "text": "coordinate them somehow and merge\nthe features into a mixed vector",
+        "start": 2799.282,
+        "duration": 3.51
+    },
+    {
+        "text": "or something or mixed embedding,\nwhereas here you could, they all",
+        "start": 2802.792,
+        "duration": 5.26
+    },
+    {
+        "text": "use the cortical messaging protocol.",
+        "start": 2808.052,
+        "duration": 2.61
+    },
+    {
+        "text": "So it's, very straightforward.",
+        "start": 2810.672,
+        "duration": 2.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 2813.732,
+        "duration": 0.14
+    },
+    {
+        "text": "This goes back in history and neuroscience\nagain, where Mountcastle's had been",
+        "start": 2813.872,
+        "duration": 3.64
+    },
+    {
+        "text": "other people say, Hey, there's this\ncommon structure throughout the cortex",
+        "start": 2817.542,
+        "duration": 3.12
+    },
+    {
+        "text": "is repeated over and over again.",
+        "start": 2820.752,
+        "duration": 1.28
+    },
+    {
+        "text": "Same processing is occuring everywhere,\nevery point in the hierarchy and so on.",
+        "start": 2822.472,
+        "duration": 3.56
+    },
+    {
+        "text": "And neuroscientists\ndidn't believe it either.",
+        "start": 2826.032,
+        "duration": 1.89
+    },
+    {
+        "text": "So many neuroscientists say that's\nhow can that be doesn't make, it",
+        "start": 2828.347,
+        "duration": 4.06
+    },
+    {
+        "text": "looks like it, but it can't be true.",
+        "start": 2832.407,
+        "duration": 1.57
+    },
+    {
+        "text": "And that may be, Will, your, comment\nas well, the key to understanding",
+        "start": 2833.977,
+        "duration": 4.16
+    },
+    {
+        "text": "all this of course, you just\nhave to accept that it's true.",
+        "start": 2838.137,
+        "duration": 2.24
+    },
+    {
+        "text": "And then you figure out how it works.",
+        "start": 2840.377,
+        "duration": 1.29
+    },
+    {
+        "text": "And, and then really the key to\nunderstanding it was a whole bunch",
+        "start": 2842.232,
+        "duration": 3.42
+    },
+    {
+        "text": "of things we've talked about.",
+        "start": 2845.652,
+        "duration": 0.95
+    },
+    {
+        "text": "It's the fact that it's sensory motor\nand each system, each module knows",
+        "start": 2846.602,
+        "duration": 3.22
+    },
+    {
+        "text": "about movement and the reference frames\nand then the voting, all this stuff",
+        "start": 2849.922,
+        "duration": 3.46
+    },
+    {
+        "text": "plays together to allow that to happen.",
+        "start": 2853.382,
+        "duration": 2.27
+    },
+    {
+        "text": "But that's one of the\nkey elements of this.",
+        "start": 2855.652,
+        "duration": 1.61
+    },
+    {
+        "text": "And we think about the future of Monty and\nThousand Brains Project, people are going",
+        "start": 2857.262,
+        "duration": 4.25
+    },
+    {
+        "text": "to build these modules out of, in silicon.",
+        "start": 2861.592,
+        "duration": 2.04
+    },
+    {
+        "text": "And they're going to be identical and you\ncan build a lot of these modules and you",
+        "start": 2864.422,
+        "duration": 3.1
+    },
+    {
+        "text": "can hook them up to different types of\nsensors and all different types of ways.",
+        "start": 2867.522,
+        "duration": 2.97
+    },
+    {
+        "text": "And that's what we see in biology.",
+        "start": 2870.722,
+        "duration": 1.4
+    },
+    {
+        "text": "Mammals have different types of sensors.",
+        "start": 2872.372,
+        "duration": 1.48
+    },
+    {
+        "text": "They all feed into the same\ncortical learning algorithm.",
+        "start": 2873.852,
+        "duration": 2.59
+    },
+    {
+        "text": "They all seem to work.",
+        "start": 2876.852,
+        "duration": 1.01
+    },
+    {
+        "text": "all animals seem to function.",
+        "start": 2878.922,
+        "duration": 1.58
+    },
+    {
+        "text": "All mammals, and yet they have the same\nunderlying thing, even though they have",
+        "start": 2880.852,
+        "duration": 3.08
+    },
+    {
+        "text": "different sensors, different, even eyes\nare different, and some, animals have",
+        "start": 2883.932,
+        "duration": 4.19
+    },
+    {
+        "text": "electric sensors and things like that.",
+        "start": 2888.282,
+        "duration": 1.48
+    },
+    {
+        "text": "So it's, we just have to accept\nit's true, and we have to make",
+        "start": 2889.772,
+        "duration": 3.26
+    },
+    {
+        "text": "sure we understand how it works.",
+        "start": 2893.032,
+        "duration": 1.7
+    },
+    {
+        "text": "Can I ask a quick question, Vivian?",
+        "start": 2895.992,
+        "duration": 1.24
+    },
+    {
+        "text": "is the, when you're saying you're\nhaving difficulties in, accelerating",
+        "start": 2899.312,
+        "duration": 4.35
+    },
+    {
+        "text": "the nearest neighbor's search, did you\nguys try locality sensitive hashing?",
+        "start": 2903.672,
+        "duration": 4.17
+    },
+    {
+        "text": "yes, I did.",
+        "start": 2910.497,
+        "duration": 1.72
+    },
+    {
+        "text": "I'm not sure anymore what\nthe problem was with it.",
+        "start": 2913.667,
+        "duration": 2.74
+    },
+    {
+        "text": "I would have to go back into my notes.",
+        "start": 2916.407,
+        "duration": 1.81
+    },
+    {
+        "text": "Okay, because effectively it\ncreates a dimensional reduction.",
+        "start": 2919.367,
+        "duration": 3.97
+    },
+    {
+        "text": "So that, jumps you to the most\nlikely candidates more quickly.",
+        "start": 2923.407,
+        "duration": 5.35
+    },
+    {
+        "text": "but sometimes you've got to do multiple\nhashes in order to get enough specificity.",
+        "start": 2929.417,
+        "duration": 3.79
+    },
+    {
+        "text": "Yeah, I remember there was something, it\nwas either like learning became massively",
+        "start": 2934.907,
+        "duration": 4.83
+    },
+    {
+        "text": "slower or something like that, or, yeah.",
+        "start": 2939.737,
+        "duration": 3.0
+    },
+    {
+        "text": "there, there was some issue that we\nhad when you, when you looked into it.",
+        "start": 2942.887,
+        "duration": 5.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 2949.477,
+        "duration": 0.39
+    },
+    {
+        "text": "I don't remember the details.",
+        "start": 2949.867,
+        "duration": 1.08
+    },
+    {
+        "text": "Yeah.",
+        "start": 2951.617,
+        "duration": 0.24
+    },
+    {
+        "text": "It seems if you, are using KD trees\nnow that it could be a swap in",
+        "start": 2952.127,
+        "duration": 3.96
+    },
+    {
+        "text": "thing, but, that's just my naive\nconclusion from what you presented.",
+        "start": 2956.087,
+        "duration": 5.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 2962.827,
+        "duration": 0.39
+    },
+    {
+        "text": "I'll, have a look back in my notes\nwhat the problem was back then.",
+        "start": 2963.552,
+        "duration": 3.265
+    },
+    {
+        "text": "Yeah.",
+        "start": 2966.997,
+        "duration": 2.4
+    },
+    {
+        "text": "at least I'd be interested in what\nthe problems were, because we're",
+        "start": 2969.927,
+        "duration": 2.48
+    },
+    {
+        "text": "looking at that on our side of the\nthing too, as a, possible, accelerant.",
+        "start": 2972.417,
+        "duration": 5.07
+    },
+    {
+        "text": "And if there's inherent problems\nwith it that Monty's seeing,",
+        "start": 2977.487,
+        "duration": 3.5
+    },
+    {
+        "text": "then it would be good to know.",
+        "start": 2980.997,
+        "duration": 1.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 2983.317,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 2984.247,
+        "duration": 0.23
+    },
+    {
+        "text": "I'll have a look back.",
+        "start": 2984.477,
+        "duration": 1.23
+    },
+    {
+        "text": "okay.",
+        "start": 2989.707,
+        "duration": 0.26
+    },
+    {
+        "text": "Let me move on.",
+        "start": 2989.967,
+        "duration": 0.62
+    },
+    {
+        "text": "If that's a lot of stuff, I\nhope I can get through it.",
+        "start": 2990.627,
+        "duration": 3.05
+    },
+    {
+        "text": "all right.",
+        "start": 2994.357,
+        "duration": 0.42
+    },
+    {
+        "text": "Unsupervised learning,\nlike we mentioned earlier.",
+        "start": 2994.827,
+        "duration": 2.25
+    },
+    {
+        "text": "the ideas.",
+        "start": 2998.347,
+        "duration": 0.71
+    },
+    {
+        "text": "Learning and inference is really\na very intertwined process.",
+        "start": 2999.617,
+        "duration": 3.08
+    },
+    {
+        "text": "And although right now a lot of the\nexperiments we run are just evaluation,",
+        "start": 3002.977,
+        "duration": 4.89
+    },
+    {
+        "text": "we still think of the system eventually\njust working continuously, learning,",
+        "start": 3008.737,
+        "duration": 4.34
+    },
+    {
+        "text": "recognizing, learning, recognizing.",
+        "start": 3013.127,
+        "duration": 2.01
+    },
+    {
+        "text": "It's to do any kind of learning,\nyou have to do inference at the",
+        "start": 3015.247,
+        "duration": 4.94
+    },
+    {
+        "text": "same time all the time as well.",
+        "start": 3020.187,
+        "duration": 1.69
+    },
+    {
+        "text": "So for example, here you're\nmoving along the cup.",
+        "start": 3021.877,
+        "duration": 2.57
+    },
+    {
+        "text": "You recognize, oh, this is a cup.",
+        "start": 3024.737,
+        "duration": 1.87
+    },
+    {
+        "text": "And then you move some more,\nexplore the object some more, and",
+        "start": 3027.037,
+        "duration": 3.73
+    },
+    {
+        "text": "add these new observations into\nyour existing model of the cup.",
+        "start": 3030.777,
+        "duration": 4.2
+    },
+    {
+        "text": "And so you keep learning\nand adding onto your models.",
+        "start": 3034.997,
+        "duration": 2.73
+    },
+    {
+        "text": "and we want to be able\nto like continually.",
+        "start": 3039.727,
+        "duration": 2.44
+    },
+    {
+        "text": "update our models of objects.",
+        "start": 3042.537,
+        "duration": 2.54
+    },
+    {
+        "text": "here's a more concrete example.",
+        "start": 3045.877,
+        "duration": 1.44
+    },
+    {
+        "text": "We have a model of a banana and we\nrecognize the banana and then we exploited",
+        "start": 3047.317,
+        "duration": 4.71
+    },
+    {
+        "text": "some more and added some new points to it.",
+        "start": 3052.027,
+        "duration": 1.82
+    },
+    {
+        "text": "And obviously we also make sure we\ndon't add redundant points into it.",
+        "start": 3054.167,
+        "duration": 4.62
+    },
+    {
+        "text": "but that's the basic idea.",
+        "start": 3059.737,
+        "duration": 1.57
+    },
+    {
+        "text": "And we have a couple of experiments in\nour benchmark test suit on this as well.",
+        "start": 3061.307,
+        "duration": 4.56
+    },
+    {
+        "text": "We don't get a great performance here yet.",
+        "start": 3067.787,
+        "duration": 2.57
+    },
+    {
+        "text": "And I think this relates mostly\nto what you touched on Scott.",
+        "start": 3070.367,
+        "duration": 4.97
+    },
+    {
+        "text": "that if we have very few objects in\nmemory, like just one or two, it's very",
+        "start": 3075.767,
+        "duration": 5.55
+    },
+    {
+        "text": "easy for the system to confuse objects.",
+        "start": 3081.317,
+        "duration": 3.66
+    },
+    {
+        "text": "They are not as entangled\ndisentangled yet.",
+        "start": 3085.177,
+        "duration": 2.78
+    },
+    {
+        "text": "so for example, it merges\na model for mark and.",
+        "start": 3088.797,
+        "duration": 2.92
+    },
+    {
+        "text": "Cup, or model for strawberry\nand golf ball or a fork knife",
+        "start": 3092.047,
+        "duration": 4.53
+    },
+    {
+        "text": "spoon object usually emerges.",
+        "start": 3096.577,
+        "duration": 2.16
+    },
+    {
+        "text": "and then once you have this kind\nof merged object, all the following",
+        "start": 3099.607,
+        "duration": 4.27
+    },
+    {
+        "text": "episodes just recognize these merged\nobjects, and add points to them, which",
+        "start": 3103.887,
+        "duration": 7.58
+    },
+    {
+        "text": "is partly that's A symptom of the data\nset or like the benchmark as well.",
+        "start": 3111.467,
+        "duration": 5.025
+    },
+    {
+        "text": "Like we want the mug and E\ncup to be merged, at least",
+        "start": 3116.492,
+        "duration": 5.03
+    },
+    {
+        "text": "at some levels of the system.",
+        "start": 3121.522,
+        "duration": 1.01
+    },
+    {
+        "text": "And, that's also something\nwe're working on.",
+        "start": 3122.942,
+        "duration": 1.43
+    },
+    {
+        "text": "like in some ways it's, great that it.",
+        "start": 3125.912,
+        "duration": 2.31
+    },
+    {
+        "text": "It confuses, or thinks these are the\nsame thing and merges them into one.",
+        "start": 3129.117,
+        "duration": 3.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 3133.637,
+        "duration": 0.36
+    },
+    {
+        "text": "We'll be able to need the\nfork at some point, right?",
+        "start": 3134.407,
+        "duration": 2.97
+    },
+    {
+        "text": "If it's important.",
+        "start": 3137.417,
+        "duration": 0.84
+    },
+    {
+        "text": "Yeah.",
+        "start": 3139.017,
+        "duration": 0.36
+    },
+    {
+        "text": "so what we really need is like a\nhierarchical data set where we can",
+        "start": 3140.097,
+        "duration": 4.19
+    },
+    {
+        "text": "say okay, does it recognize it at\nthe granularity of the most precise",
+        "start": 3144.287,
+        "duration": 5.34
+    },
+    {
+        "text": "object, like fork versus spoon, or\ndoes it recognize it at the kind of",
+        "start": 3149.627,
+        "duration": 3.16
+    },
+    {
+        "text": "granularity of like piece of cutlery?",
+        "start": 3152.817,
+        "duration": 2.28
+    },
+    {
+        "text": "Does it recognize that the granularity\nof like cylindrical object?",
+        "start": 3155.157,
+        "duration": 2.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 3159.677,
+        "duration": 0.37
+    },
+    {
+        "text": "And what this really probably boils\ndown to is like a learning parameter",
+        "start": 3160.047,
+        "duration": 5.25
+    },
+    {
+        "text": "of like, how high do you set the\nthreshold for recognizing a new object?",
+        "start": 3165.297,
+        "duration": 3.68
+    },
+    {
+        "text": "And that might be something that we, that\njust has to get higher, or lower over",
+        "start": 3168.977,
+        "duration": 5.68
+    },
+    {
+        "text": "time, the more objects you have in memory.",
+        "start": 3174.657,
+        "duration": 2.05
+    },
+    {
+        "text": "something like that.",
+        "start": 3177.407,
+        "duration": 0.72
+    },
+    {
+        "text": "if you don't, if you only know one\nobject so far, it's very likely that",
+        "start": 3178.327,
+        "duration": 3.65
+    },
+    {
+        "text": "the next thing is maybe a new object\nand not, just that object again.",
+        "start": 3182.357,
+        "duration": 3.65
+    },
+    {
+        "text": "Yeah, not an unsolvable problem\nand actually a desirable property",
+        "start": 3188.652,
+        "duration": 3.85
+    },
+    {
+        "text": "of the system that it merges these\nalso correctly oriented and aligned.",
+        "start": 3192.502,
+        "duration": 5.69
+    },
+    {
+        "text": "It's also currently, only using like\nbottom up signals to, detect when",
+        "start": 3200.082,
+        "duration": 5.77
+    },
+    {
+        "text": "it's on a new object or whatever.",
+        "start": 3205.852,
+        "duration": 1.25
+    },
+    {
+        "text": "there's no, for example, like scene level\nunderstanding or like object permanence.",
+        "start": 3207.932,
+        "duration": 3.58
+    },
+    {
+        "text": "Like we could definitely\nadd that with the hierarchy.",
+        "start": 3211.512,
+        "duration": 3.51
+    },
+    {
+        "text": "but yeah, so that it understands\nokay, I'm moving away now.",
+        "start": 3215.872,
+        "duration": 3.24
+    },
+    {
+        "text": "Okay.",
+        "start": 3219.122,
+        "duration": 0.23
+    },
+    {
+        "text": "Now it's going to be a different object.",
+        "start": 3219.352,
+        "duration": 1.25
+    },
+    {
+        "text": "And things like that.",
+        "start": 3222.937,
+        "duration": 0.59
+    },
+    {
+        "text": "But, yeah.",
+        "start": 3223.527,
+        "duration": 0.365
+    },
+    {
+        "text": "talking about, multiple objects, this\nis now we're getting into the newer",
+        "start": 3226.412,
+        "duration": 4.74
+    },
+    {
+        "text": "parts and the capabilities that are\na bit lower on the progress bar.",
+        "start": 3231.152,
+        "duration": 3.93
+    },
+    {
+        "text": "so Niels implemented this, multi object\nenvironment, and that's what we've been",
+        "start": 3236.492,
+        "duration": 5.65
+    },
+    {
+        "text": "testing on so far, where we just put a\nbunch of objects into an empty space.",
+        "start": 3242.142,
+        "duration": 4.26
+    },
+    {
+        "text": "And we also have some more.",
+        "start": 3246.892,
+        "duration": 1.26
+    },
+    {
+        "text": "Evaluation criteria measures now where\nwe can have a primary target, the object",
+        "start": 3248.507,
+        "duration": 4.61
+    },
+    {
+        "text": "we start on, but then once we move on\nto a different object, then obviously",
+        "start": 3253.127,
+        "duration": 4.44
+    },
+    {
+        "text": "we have a new target, that we want\nto recognize, or we want to go back",
+        "start": 3257.567,
+        "duration": 3.9
+    },
+    {
+        "text": "to the primary target and these are\nalso some results from last year, that",
+        "start": 3261.467,
+        "duration": 7.01
+    },
+    {
+        "text": "like we can use the shift in evidence.",
+        "start": 3268.637,
+        "duration": 3.83
+    },
+    {
+        "text": "That we get when, we move from one\nobject onto another object to detect",
+        "start": 3272.837,
+        "duration": 4.05
+    },
+    {
+        "text": "that we are now not on that object\nanymore and use that to move back on the",
+        "start": 3277.037,
+        "duration": 5.89
+    },
+    {
+        "text": "object or reset our hypothesis space.",
+        "start": 3282.927,
+        "duration": 3.28
+    },
+    {
+        "text": "and those are some initial results\nand Niels is picking up that work",
+        "start": 3287.277,
+        "duration": 3.42
+    },
+    {
+        "text": "again now, and this is not really\nintegrated in the current code yet.",
+        "start": 3290.727,
+        "duration": 4.17
+    },
+    {
+        "text": "So this is work in progress\nthat we're showing here.",
+        "start": 3294.907,
+        "duration": 2.93
+    },
+    {
+        "text": "but that's the general idea,",
+        "start": 3298.707,
+        "duration": 1.59
+    },
+    {
+        "text": "categories and generalization.",
+        "start": 3303.357,
+        "duration": 1.86
+    },
+    {
+        "text": "also another topic we talked about\nbriefly now, but just some experiment",
+        "start": 3305.647,
+        "duration": 3.9
+    },
+    {
+        "text": "we ran here is that basically I took the\nmemory, the 77 objects, I deleted one",
+        "start": 3309.557,
+        "duration": 6.27
+    },
+    {
+        "text": "object out of memory, so I would delete\nthe cup out of memory and then see what",
+        "start": 3315.827,
+        "duration": 3.69
+    },
+    {
+        "text": "other object it recognizes instead.",
+        "start": 3319.527,
+        "duration": 2.3
+    },
+    {
+        "text": "Now, that it doesn't know about\na cup anymore, and that's the",
+        "start": 3322.307,
+        "duration": 3.26
+    },
+    {
+        "text": "object always shown on the right.",
+        "start": 3325.967,
+        "duration": 1.39
+    },
+    {
+        "text": "So instead of a cup, it would then\nrecognize the red cup instead of",
+        "start": 3327.357,
+        "duration": 5.75
+    },
+    {
+        "text": "a mug, or instead of an orange,\na peach, or instead of this one,",
+        "start": 3333.127,
+        "duration": 3.85
+    },
+    {
+        "text": "or instead of a spoon, a knife.",
+        "start": 3336.977,
+        "duration": 1.5
+    },
+    {
+        "text": "You can see that this is Pretty\nmuch always the most similar object",
+        "start": 3339.137,
+        "duration": 5.12
+    },
+    {
+        "text": "in the data set that's remaining.",
+        "start": 3344.267,
+        "duration": 1.72
+    },
+    {
+        "text": "and of course there's a lot more we can\ndo on categories and generalization,",
+        "start": 3348.517,
+        "duration": 4.59
+    },
+    {
+        "text": "but first we will need some new data\nset that actually has categories of",
+        "start": 3353.107,
+        "duration": 4.07
+    },
+    {
+        "text": "object and new measures on testing that.",
+        "start": 3357.207,
+        "duration": 2.47
+    },
+    {
+        "text": "another one is, I'll just go through this\nquickly, but if you cluster the internal",
+        "start": 3361.367,
+        "duration": 5.54
+    },
+    {
+        "text": "representations of learning modules,\nyou get these clustered into, nice,",
+        "start": 3366.917,
+        "duration": 5.09
+    },
+    {
+        "text": "Clusters that kind of express also the\nsimilarity of the objects, even first",
+        "start": 3374.287,
+        "duration": 5.66
+    },
+    {
+        "text": "the morphology, but also in color space.",
+        "start": 3379.957,
+        "duration": 2.21
+    },
+    {
+        "text": "and this is a plot from, Rami.",
+        "start": 3383.577,
+        "duration": 2.35
+    },
+    {
+        "text": "also if you use TSNE to put all the\nobjects on a two dimensional space, you",
+        "start": 3386.517,
+        "duration": 5.72
+    },
+    {
+        "text": "can make out some meaningful clusters\nof cups and ball shaped objects.",
+        "start": 3392.297,
+        "duration": 5.03
+    },
+    {
+        "text": "and then another thing we are, we've\nimplemented, but still need to do a",
+        "start": 3400.437,
+        "duration": 4.17
+    },
+    {
+        "text": "lot of testing on this, Adding more\nconstraint graphs and graphs that kind of",
+        "start": 3404.607,
+        "duration": 4.725
+    },
+    {
+        "text": "update over time and where you can learn\nthrough those constraints, you can learn",
+        "start": 3409.682,
+        "duration": 4.46
+    },
+    {
+        "text": "more generic objects with like only the\nfeatures that are consistently present.",
+        "start": 3414.142,
+        "duration": 4.61
+    },
+    {
+        "text": "so you like learning a generic cup\nshape versus this specific cup that",
+        "start": 3419.422,
+        "duration": 4.09
+    },
+    {
+        "text": "has a dent in the right corner.",
+        "start": 3423.522,
+        "duration": 1.82
+    },
+    {
+        "text": "Then compositionality is also one we've\ndone a lot of brainstorming on the past",
+        "start": 3429.297,
+        "duration": 5.61
+    },
+    {
+        "text": "year and we have a lot of concrete ideas\nalso of how we want to implement it.",
+        "start": 3434.907,
+        "duration": 4.56
+    },
+    {
+        "text": "We have the basic routing implemented and\nsome first Monty setups and experiments",
+        "start": 3439.957,
+        "duration": 6.29
+    },
+    {
+        "text": "implemented, but we don't really have\na good data set for it yet to test.",
+        "start": 3446.267,
+        "duration": 3.65
+    },
+    {
+        "text": "Rami's internship work tied into\nthis as well and coding object IDs,",
+        "start": 3451.437,
+        "duration": 4.44
+    },
+    {
+        "text": "with some kind of similarity measure.",
+        "start": 3456.267,
+        "duration": 1.7
+    },
+    {
+        "text": "So we can, so the higher level\nlearning module can meaningfully",
+        "start": 3457.967,
+        "duration": 3.81
+    },
+    {
+        "text": "interpret these features.",
+        "start": 3461.787,
+        "duration": 1.43
+    },
+    {
+        "text": "And then this is, was our\nhackathon project in the summer,",
+        "start": 3464.187,
+        "duration": 3.94
+    },
+    {
+        "text": "to put together like a scene data\nset where we can actually test",
+        "start": 3468.917,
+        "duration": 4.1
+    },
+    {
+        "text": "compositional scenes where we have.",
+        "start": 3473.337,
+        "duration": 1.47
+    },
+    {
+        "text": "Lower level objects.",
+        "start": 3475.222,
+        "duration": 1.12
+    },
+    {
+        "text": "So fork, spoon, knife, plate, and\nthen a higher level scene that's",
+        "start": 3476.342,
+        "duration": 3.37
+    },
+    {
+        "text": "composed of these objects relative to\neach other in a certain arrangement.",
+        "start": 3479.712,
+        "duration": 3.58
+    },
+    {
+        "text": "so now the next step here is basically\nturning this into a benchmark experiment,",
+        "start": 3484.612,
+        "duration": 5.6
+    },
+    {
+        "text": "adding some measures of performance\nin there, and testing how well our",
+        "start": 3490.252,
+        "duration": 5.07
+    },
+    {
+        "text": "current, implementation does on it.",
+        "start": 3495.322,
+        "duration": 2.43
+    },
+    {
+        "text": "Deformations is something we have\nno clue on right now, I would say.",
+        "start": 3500.827,
+        "duration": 4.71
+    },
+    {
+        "text": "something that comes up every once\nin a while, but I don't think we have",
+        "start": 3506.777,
+        "duration": 2.78
+    },
+    {
+        "text": "any really promising lead on how to\nimplement this or deal with this.",
+        "start": 3509.587,
+        "duration": 4.64
+    },
+    {
+        "text": "at the moment, all the objects we\nrecognize are like solid objects.",
+        "start": 3514.707,
+        "duration": 4.26
+    },
+    {
+        "text": "not like a t shirt that can be\ndeformed in a bunch of different ways.",
+        "start": 3519.607,
+        "duration": 3.18
+    },
+    {
+        "text": "but it's something we should, we need to\nthink about more and figure out how to do.",
+        "start": 3524.107,
+        "duration": 5.58
+    },
+    {
+        "text": "different features on the same morphology.",
+        "start": 3533.777,
+        "duration": 2.33
+    },
+    {
+        "text": "So we have the morphology of the cup,\nfor example, it can have different color,",
+        "start": 3536.147,
+        "duration": 3.46
+    },
+    {
+        "text": "different pattern, can have a logo, on it.",
+        "start": 3539.607,
+        "duration": 2.34
+    },
+    {
+        "text": "or similarly, same features\non different morphology.",
+        "start": 3543.062,
+        "duration": 3.38
+    },
+    {
+        "text": "So can have the Numenta logo on a cup\nor this squishy brain or baseball cap,",
+        "start": 3546.472,
+        "duration": 5.15
+    },
+    {
+        "text": "and we can recognize it on all of these.",
+        "start": 3551.622,
+        "duration": 2.33
+    },
+    {
+        "text": "this is something we've done a\nlot of brainstorming on lately,",
+        "start": 3555.222,
+        "duration": 2.47
+    },
+    {
+        "text": "and we have some ideas on this,\nbut nothing implemented yet.",
+        "start": 3557.692,
+        "duration": 3.23
+    },
+    {
+        "text": "Scale.",
+        "start": 3562.972,
+        "duration": 0.49
+    },
+    {
+        "text": "you can have a children's chair or\nan adult's chair, or if you live in",
+        "start": 3564.972,
+        "duration": 4.39
+    },
+    {
+        "text": "Germany, maybe you've come across\nthis furniture store that its",
+        "start": 3569.362,
+        "duration": 3.85
+    },
+    {
+        "text": "trademark is that it has a giant chair\nstanding in front of it, and you've",
+        "start": 3573.232,
+        "duration": 4.36
+    },
+    {
+        "text": "probably never seen a chair this big.",
+        "start": 3577.592,
+        "duration": 2.36
+    },
+    {
+        "text": "They actually, I think, have the\nworld record for the biggest chair,",
+        "start": 3580.002,
+        "duration": 2.72
+    },
+    {
+        "text": "but you have no issue recognizing it.",
+        "start": 3583.292,
+        "duration": 2.3
+    },
+    {
+        "text": "At the moment, our system\nwould not be able to do this.",
+        "start": 3587.447,
+        "duration": 3.23
+    },
+    {
+        "text": "we have some ideas about how this is done\nin the brain, but we have yet to translate",
+        "start": 3591.337,
+        "duration": 5.2
+    },
+    {
+        "text": "that into an actual implementation.",
+        "start": 3596.537,
+        "duration": 1.92
+    },
+    {
+        "text": "Real world sensors and agents.",
+        "start": 3601.517,
+        "duration": 2.09
+    },
+    {
+        "text": "We've briefly dabbled into this one\nduring a hackathon, like one and a half",
+        "start": 3603.757,
+        "duration": 5.53
+    },
+    {
+        "text": "years ago, where we took the iPad camera\nand wrote a little iOS app that would",
+        "start": 3609.287,
+        "duration": 6.61
+    },
+    {
+        "text": "basically take a picture with that.",
+        "start": 3616.157,
+        "duration": 1.66
+    },
+    {
+        "text": "iPad depth sensor camera of\nwhatever was in front of the camera.",
+        "start": 3618.897,
+        "duration": 5.23
+    },
+    {
+        "text": "And then we would have a little patch\nout of that picture that moves over it.",
+        "start": 3624.127,
+        "duration": 4.36
+    },
+    {
+        "text": "So it was 2.",
+        "start": 3628.747,
+        "duration": 0.81
+    },
+    {
+        "text": "5 D maybe.",
+        "start": 3629.557,
+        "duration": 1.57
+    },
+    {
+        "text": "and we would then actually\nrecognize these objects.",
+        "start": 3632.957,
+        "duration": 4.47
+    },
+    {
+        "text": "and that was the first\nreal world demo of Monty.",
+        "start": 3640.407,
+        "duration": 3.48
+    },
+    {
+        "text": "There was a recording of it as well.",
+        "start": 3643.887,
+        "duration": 1.47
+    },
+    {
+        "text": "It's a cool moment.",
+        "start": 3645.807,
+        "duration": 2.46
+    },
+    {
+        "text": "and.",
+        "start": 3650.757,
+        "duration": 0.48
+    },
+    {
+        "text": "In that project, we also made a\ndata set, where we have this kind of",
+        "start": 3652.147,
+        "duration": 5.42
+    },
+    {
+        "text": "set of real world objects that are\nall at Neil's apartment right now.",
+        "start": 3657.577,
+        "duration": 3.76
+    },
+    {
+        "text": "and we have 3d scans of all of them\nso we can test them in simulation, or",
+        "start": 3662.617,
+        "duration": 5.9
+    },
+    {
+        "text": "we can test these extra, pictures that\nwe took under different conditions.",
+        "start": 3668.517,
+        "duration": 6.11
+    },
+    {
+        "text": "So here's, here you can see\nthe sim to real transfer.",
+        "start": 3674.627,
+        "duration": 3.79
+    },
+    {
+        "text": "we have some performance\ndrop, but it still works.",
+        "start": 3679.387,
+        "duration": 3.63
+    },
+    {
+        "text": "above chance, like\nsignificantly above chance.",
+        "start": 3684.362,
+        "duration": 2.85
+    },
+    {
+        "text": "there are like 12 objects in here.",
+        "start": 3687.452,
+        "duration": 1.53
+    },
+    {
+        "text": "and then some more adversarial\nconditions like where it's dark or",
+        "start": 3690.062,
+        "duration": 3.74
+    },
+    {
+        "text": "very bright with a lot of reflections,\nhand intrusion or multiple objects.",
+        "start": 3693.832,
+        "duration": 6.15
+    },
+    {
+        "text": "and yeah, there's still a lot we can do\nto improve these numbers, but we have",
+        "start": 3701.477,
+        "duration": 4.39
+    },
+    {
+        "text": "at least a small data set to test on.",
+        "start": 3705.957,
+        "duration": 2.31
+    },
+    {
+        "text": "object behaviors, again, something\nwe've done a lot of talking and",
+        "start": 3713.267,
+        "duration": 3.9
+    },
+    {
+        "text": "brainstorming about and reading other\npapers and thinking about how we might",
+        "start": 3717.177,
+        "duration": 3.59
+    },
+    {
+        "text": "solve it, and we have some ideas of how\nwe could implement a solution to it.",
+        "start": 3720.767,
+        "duration": 3.53
+    },
+    {
+        "text": "And, Jad, an intern, implemented\nthis little toy environment where",
+        "start": 3724.317,
+        "duration": 6.15
+    },
+    {
+        "text": "we can set up some kind of very\nsimplistic objects with behaviors.",
+        "start": 3730.467,
+        "duration": 5.66
+    },
+    {
+        "text": "to test solution solutions on,\nbut the current system can't",
+        "start": 3736.672,
+        "duration": 4.18
+    },
+    {
+        "text": "deal with object behaviors yet.",
+        "start": 3740.872,
+        "duration": 1.57
+    },
+    {
+        "text": "Achieving goals.",
+        "start": 3745.372,
+        "duration": 0.98
+    },
+    {
+        "text": "So this is on the policy part.",
+        "start": 3746.352,
+        "duration": 1.68
+    },
+    {
+        "text": "So if you actually want to put the go,\nthe world into a certain state, how do you",
+        "start": 3748.032,
+        "duration": 5.49
+    },
+    {
+        "text": "tell that to the system and how does the\nsystem then move to achieve that state?",
+        "start": 3754.032,
+        "duration": 4.14
+    },
+    {
+        "text": "again, we have some ideas on this.",
+        "start": 3760.112,
+        "duration": 2.36
+    },
+    {
+        "text": "One thing we did implement is the goal\nstate generator, which is part of the",
+        "start": 3762.882,
+        "duration": 3.92
+    },
+    {
+        "text": "learning module, and that one can take the\nmodels and memory, the current hypotheses,",
+        "start": 3766.812,
+        "duration": 6.16
+    },
+    {
+        "text": "and whatever's currently being sensed.",
+        "start": 3773.282,
+        "duration": 2.6
+    },
+    {
+        "text": "And use this information to generate\na target state and send this to",
+        "start": 3776.617,
+        "duration": 4.85
+    },
+    {
+        "text": "the motor system, which can then\ntranslate that into an action.",
+        "start": 3781.467,
+        "duration": 3.38
+    },
+    {
+        "text": "And we, for example, use the skill\nstate generator for the top down",
+        "start": 3785.487,
+        "duration": 3.41
+    },
+    {
+        "text": "policy to, to tell the motor system\nwhere to move to resolve ambiguity.",
+        "start": 3788.897,
+        "duration": 5.72
+    },
+    {
+        "text": "Like what I showed earlier with\nthe knife and the fork telling it",
+        "start": 3794.657,
+        "duration": 4.61
+    },
+    {
+        "text": "to move to the top of the knife.",
+        "start": 3799.317,
+        "duration": 2.38
+    },
+    {
+        "text": "And then we also made some plans of how we\nmight set up some more, test environments",
+        "start": 3804.342,
+        "duration": 6.09
+    },
+    {
+        "text": "to test kind of goal policies, where\nwe have a certain goal state that",
+        "start": 3810.462,
+        "duration": 4.61
+    },
+    {
+        "text": "we want the environment to be in.",
+        "start": 3815.072,
+        "duration": 1.44
+    },
+    {
+        "text": "And then we have the state the\nenvironment is currently in, and it has",
+        "start": 3816.512,
+        "duration": 3.49
+    },
+    {
+        "text": "to figure out in various adversarial\nconditions of how to get to that state.",
+        "start": 3820.002,
+        "duration": 4.87
+    },
+    {
+        "text": "and then some plans on how this\nwould look in the whole system.",
+        "start": 3827.372,
+        "duration": 3.26
+    },
+    {
+        "text": "one requirement for actually\nimplementing and testing this will be",
+        "start": 3831.152,
+        "duration": 3.0
+    },
+    {
+        "text": "the Modeling compositional objects.",
+        "start": 3834.212,
+        "duration": 2.395
+    },
+    {
+        "text": "So solving that.",
+        "start": 3837.037,
+        "duration": 1.38
+    },
+    {
+        "text": "Then I said table scene and recognizing\nthese scenes will be something we need",
+        "start": 3839.257,
+        "duration": 3.78
+    },
+    {
+        "text": "to do first before we can tackle this,",
+        "start": 3843.037,
+        "duration": 2.42
+    },
+    {
+        "text": "someone just started sawing outside.",
+        "start": 3848.047,
+        "duration": 2.15
+    },
+    {
+        "text": "So I'm going to close my window.",
+        "start": 3850.197,
+        "duration": 1.56
+    },
+    {
+        "text": "We didn't hear it.",
+        "start": 3854.217,
+        "duration": 2.482
+    },
+    {
+        "text": "I didn't.",
+        "start": 3856.699,
+        "duration": 1.903
+    },
+    {
+        "text": "All right, these are a bit quicker because\nwe don't have actual numbers on it yet,",
+        "start": 3864.232,
+        "duration": 3.61
+    },
+    {
+        "text": "so maybe I'll get through everything.",
+        "start": 3867.842,
+        "duration": 1.77
+    },
+    {
+        "text": "abstract concepts and spaces, n\ndimensional spaces, for one we have",
+        "start": 3871.822,
+        "duration": 6.08
+    },
+    {
+        "text": "the temporal dimension, so object\nbehavior, so melodies, Things like that.",
+        "start": 3877.942,
+        "duration": 6.01
+    },
+    {
+        "text": "We have the classical 2D space,\nlike grid cells, and we have three",
+        "start": 3884.482,
+        "duration": 4.73
+    },
+    {
+        "text": "dimensional objects where we know\na lot less about how the brain",
+        "start": 3889.212,
+        "duration": 3.21
+    },
+    {
+        "text": "represents those reference frames.",
+        "start": 3893.102,
+        "duration": 1.78
+    },
+    {
+        "text": "We have more abstract spaces like family\ntrees, which might be like a subspace",
+        "start": 3895.842,
+        "duration": 3.89
+    },
+    {
+        "text": "of 2D space with more constraints on it.",
+        "start": 3900.142,
+        "duration": 2.32
+    },
+    {
+        "text": "very abstract space, like math, and then\nfour dimensional space, like quaternions,",
+        "start": 3904.332,
+        "duration": 6.29
+    },
+    {
+        "text": "even though I'm not sure our brain is\nactually equipped to deal with these,",
+        "start": 3910.922,
+        "duration": 3.97
+    },
+    {
+        "text": "at least from my personal experience.",
+        "start": 3915.892,
+        "duration": 1.93
+    },
+    {
+        "text": "yeah, I think we're generally dealing\nwith the assumption that brains can",
+        "start": 3919.932,
+        "duration": 3.61
+    },
+    {
+        "text": "represent 3d reference frames plus maybe\na temporal dimension, which yeah, is",
+        "start": 3923.542,
+        "duration": 5.03
+    },
+    {
+        "text": "maybe why quaternions are impossible\nto understand for at least most humans.",
+        "start": 3928.602,
+        "duration": 5.06
+    },
+    {
+        "text": "It's also possible that, yeah,\nI've always viewed it as.",
+        "start": 3933.662,
+        "duration": 2.99
+    },
+    {
+        "text": "One possibility is that a cortical column\nor a learning module, the algorithms we",
+        "start": 3937.227,
+        "duration": 6.14
+    },
+    {
+        "text": "think underlying it might suggest that\nthey could learn n dimensional spaces.",
+        "start": 3943.367,
+        "duration": 4.22
+    },
+    {
+        "text": "The neural methods suggest that.",
+        "start": 3947.877,
+        "duration": 1.58
+    },
+    {
+        "text": "But early in our lives, we don't\nexperience, we don't experience",
+        "start": 3950.047,
+        "duration": 3.29
+    },
+    {
+        "text": "certain dimensional spaces.",
+        "start": 3953.337,
+        "duration": 1.21
+    },
+    {
+        "text": "And if you don't, and\nthen they become set.",
+        "start": 3954.607,
+        "duration": 1.96
+    },
+    {
+        "text": "That's the part that doesn't get\nchanged a lot in your lifetime.",
+        "start": 3956.947,
+        "duration": 2.58
+    },
+    {
+        "text": "And because everything\nelse is built upon that.",
+        "start": 3960.657,
+        "duration": 2.55
+    },
+    {
+        "text": "So if you didn't experience\nthose as a child, you wouldn't",
+        "start": 3963.582,
+        "duration": 3.83
+    },
+    {
+        "text": "develop representations for\nit, you couldn't do it later.",
+        "start": 3967.412,
+        "duration": 2.33
+    },
+    {
+        "text": "that with math, right?",
+        "start": 3970.292,
+        "duration": 1.48
+    },
+    {
+        "text": "If you don't learn math early, it\nbecomes very, difficult to understand",
+        "start": 3971.772,
+        "duration": 3.72
+    },
+    {
+        "text": "math concepts later in life.",
+        "start": 3975.492,
+        "duration": 1.35
+    },
+    {
+        "text": "a lot of things are like that.",
+        "start": 3977.742,
+        "duration": 1.16
+    },
+    {
+        "text": "Music is like that.",
+        "start": 3978.902,
+        "duration": 1.09
+    },
+    {
+        "text": "so it's possible that the\nunderlying algorithms are capable",
+        "start": 3981.132,
+        "duration": 4.19
+    },
+    {
+        "text": "of learning n dimensional spaces.",
+        "start": 3985.762,
+        "duration": 1.72
+    },
+    {
+        "text": "But once you've learned whatever\ndimensions you're working with,",
+        "start": 3988.422,
+        "duration": 2.38
+    },
+    {
+        "text": "you don't want to change it.",
+        "start": 3990.832,
+        "duration": 1.03
+    },
+    {
+        "text": "because all the models might get\nreally screwed up at that point.",
+        "start": 3993.272,
+        "duration": 2.83
+    },
+    {
+        "text": "I, I don't, just because we're not\ngood at four dimensional space,",
+        "start": 3997.432,
+        "duration": 3.35
+    },
+    {
+        "text": "it doesn't mean that it's not, it\nmay, be that range could do that if",
+        "start": 4000.782,
+        "duration": 3.33
+    },
+    {
+        "text": "you expose the child early enough.",
+        "start": 4004.112,
+        "duration": 1.38
+    },
+    {
+        "text": "I wouldn't say that's,\nthat's out of the question.",
+        "start": 4005.942,
+        "duration": 2.17
+    },
+    {
+        "text": "And link.",
+        "start": 4009.387,
+        "duration": 0.89
+    },
+    {
+        "text": "Do you have any, Vivian, do you\nhave any things for link to look",
+        "start": 4010.397,
+        "duration": 4.23
+    },
+    {
+        "text": "at that are four dimensional?",
+        "start": 4014.627,
+        "duration": 1.42
+    },
+    {
+        "text": "I'll teach him about the term then soon.",
+        "start": 4016.387,
+        "duration": 2.12
+    },
+    {
+        "text": "I was going to ask in terms of sort\nof things that get abstracted away.",
+        "start": 4021.817,
+        "duration": 6.24
+    },
+    {
+        "text": "If I understand Monty at the moment,\nthere isn't an inherent representation",
+        "start": 4028.667,
+        "duration": 6.41
+    },
+    {
+        "text": "of time as in it's a sample data\nsystem and it doesn't actually matter.",
+        "start": 4035.077,
+        "duration": 4.21
+    },
+    {
+        "text": "Whether it runs slowly\nor quickly, it's still",
+        "start": 4039.672,
+        "duration": 1.99
+    },
+    {
+        "text": "essentially ignoring time, just\nprocessing a sample and then",
+        "start": 4044.642,
+        "duration": 3.24
+    },
+    {
+        "text": "processing the next sample.",
+        "start": 4047.882,
+        "duration": 1.2
+    },
+    {
+        "text": "And in that sense, synchronous.",
+        "start": 4049.082,
+        "duration": 2.96
+    },
+    {
+        "text": "Yeah.",
+        "start": 4052.772,
+        "duration": 0.47
+    },
+    {
+        "text": "So the models don't have any\ntemporal dimension at the moment.",
+        "start": 4053.242,
+        "duration": 3.94
+    },
+    {
+        "text": "they definitely will need to have\nit to, be able to model object",
+        "start": 4057.642,
+        "duration": 3.72
+    },
+    {
+        "text": "behaviors, for example, or like also\nmelodies and stuff like that, but.",
+        "start": 4061.362,
+        "duration": 3.26
+    },
+    {
+        "text": "You're right, right now it's on\nthe one hand the property we want.",
+        "start": 4064.832,
+        "duration": 5.2
+    },
+    {
+        "text": "So if I move along this cup, it doesn't\nmatter if I go this direction or that",
+        "start": 4070.032,
+        "duration": 4.03
+    },
+    {
+        "text": "direction, it should be the same, but,",
+        "start": 4074.062,
+        "duration": 2.56
+    },
+    {
+        "text": "yeah, it doesn't represent\ntime in the models.",
+        "start": 4079.042,
+        "duration": 2.64
+    },
+    {
+        "text": "This is a case where, I have a pretty\nsolid hypothesis, how time is represented",
+        "start": 4082.152,
+        "duration": 5.92
+    },
+    {
+        "text": "in brains and in the cortex and how\nit changed, how it handles variations",
+        "start": 4088.082,
+        "duration": 5.21
+    },
+    {
+        "text": "in tempo and things like that.",
+        "start": 4093.292,
+        "duration": 1.41
+    },
+    {
+        "text": "So it's not like we're\nclueless about this.",
+        "start": 4095.012,
+        "duration": 2.0
+    },
+    {
+        "text": "I've talked about this many times, but\nI think I know neurons are doing this.",
+        "start": 4098.872,
+        "duration": 2.6
+    },
+    {
+        "text": "But, but it's not in Monty, and\nagain, would we do it the same way",
+        "start": 4102.202,
+        "duration": 6.54
+    },
+    {
+        "text": "or not, it's an interesting question,\nbut it is something that I thought",
+        "start": 4108.742,
+        "duration": 4.99
+    },
+    {
+        "text": "about a long time ago, and I figured\nwe've got to solve this problem, and",
+        "start": 4113.732,
+        "duration": 4.13
+    },
+    {
+        "text": "I, think I know how brains do it.",
+        "start": 4118.202,
+        "duration": 1.4
+    },
+    {
+        "text": "And I was, thinking about it, going.",
+        "start": 4120.902,
+        "duration": 3.33
+    },
+    {
+        "text": "to the context of control system\nas like an engineering discipline",
+        "start": 4125.712,
+        "duration": 4.67
+    },
+    {
+        "text": "where we're like one of the harder\nthings in controlling something",
+        "start": 4130.382,
+        "duration": 3.57
+    },
+    {
+        "text": "as a robot is to deal with delays.",
+        "start": 4133.952,
+        "duration": 2.05
+    },
+    {
+        "text": "And so you, there's some like temporal\nproblems that have to be solved, but at",
+        "start": 4136.002,
+        "duration": 5.49
+    },
+    {
+        "text": "the same time, it's one of those nice\nthings to abstract away and ignore.",
+        "start": 4141.502,
+        "duration": 4.22
+    },
+    {
+        "text": "Because.",
+        "start": 4145.722,
+        "duration": 0.48
+    },
+    {
+        "text": "Cause the moment you put time into\nit, then, you have to deal with",
+        "start": 4146.912,
+        "duration": 3.67
+    },
+    {
+        "text": "that through your whole system.",
+        "start": 4150.582,
+        "duration": 1.42
+    },
+    {
+        "text": "Like you have to simulate with the\nnotion of time and you're thinking of",
+        "start": 4152.002,
+        "duration": 3.65
+    },
+    {
+        "text": "time as being a problem, perhaps because\nyou got delays and things like that.",
+        "start": 4155.672,
+        "duration": 3.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 4158.922,
+        "duration": 0.63
+    },
+    {
+        "text": "I was thinking of time as part of\nthe modeling as something you have",
+        "start": 4159.772,
+        "duration": 3.46
+    },
+    {
+        "text": "to represent as well in the model.",
+        "start": 4163.232,
+        "duration": 2.53
+    },
+    {
+        "text": "So it's clearly how you'd have to\ndo that in, like melody and yet",
+        "start": 4165.792,
+        "duration": 4.7
+    },
+    {
+        "text": "you can speed up and slow down\nthe melody and still retain it.",
+        "start": 4170.492,
+        "duration": 2.85
+    },
+    {
+        "text": "It's clear that many of our motor actions.",
+        "start": 4173.522,
+        "duration": 2.08
+    },
+    {
+        "text": "if I sign my name, there's certain\nvelocities and speed at which my fingers",
+        "start": 4176.417,
+        "duration": 3.99
+    },
+    {
+        "text": "move as I write and those vary over time.",
+        "start": 4180.407,
+        "duration": 2.93
+    },
+    {
+        "text": "object behaviors have\ncertain velocities too.",
+        "start": 4184.577,
+        "duration": 2.57
+    },
+    {
+        "text": "And, and some are faster than others.",
+        "start": 4187.557,
+        "duration": 2.08
+    },
+    {
+        "text": "So it's part of the modeling system.",
+        "start": 4189.637,
+        "duration": 1.82
+    },
+    {
+        "text": "It has to deal, it has to represent time.",
+        "start": 4191.457,
+        "duration": 1.96
+    },
+    {
+        "text": "And delay, but you're separate\nquestion is, then how would",
+        "start": 4194.007,
+        "duration": 3.02
+    },
+    {
+        "text": "I have to implement this?",
+        "start": 4197.027,
+        "duration": 1.63
+    },
+    {
+        "text": "and, what would, how do you deal with the\nvariations in the real world in the brain?",
+        "start": 4199.677,
+        "duration": 5.42
+    },
+    {
+        "text": "Is it there's a lot of suggestions that\nanother part of the brain, the cerebellum,",
+        "start": 4205.097,
+        "duration": 3.64
+    },
+    {
+        "text": "it takes care of that issue of delays and.",
+        "start": 4208.947,
+        "duration": 3.45
+    },
+    {
+        "text": "And, compensating for, variations\nin time and not the cortex.",
+        "start": 4212.922,
+        "duration": 6.39
+    },
+    {
+        "text": "So again, I don't know what\nthat means for Monty, but",
+        "start": 4219.322,
+        "duration": 2.64
+    },
+    {
+        "text": "yeah.",
+        "start": 4225.802,
+        "duration": 0.53
+    },
+    {
+        "text": "And this is a bit of a theme in this\npresentation to a lot of these things",
+        "start": 4226.392,
+        "duration": 3.93
+    },
+    {
+        "text": "we have pretty decent hypotheses about\nhow the brain might do it, or even",
+        "start": 4230.332,
+        "duration": 5.75
+    },
+    {
+        "text": "ideas of how we want to implement it.",
+        "start": 4236.142,
+        "duration": 1.83
+    },
+    {
+        "text": "But we just have this huge list\nof action items and things we need",
+        "start": 4238.282,
+        "duration": 3.66
+    },
+    {
+        "text": "to do to get it into the system.",
+        "start": 4241.962,
+        "duration": 1.7
+    },
+    {
+        "text": "and yeah, obviously once we actually\nstart implementing it, we'll come",
+        "start": 4248.617,
+        "duration": 2.84
+    },
+    {
+        "text": "across a whole new set of problems too.",
+        "start": 4251.457,
+        "duration": 2.01
+    },
+    {
+        "text": "Fortunately, I think you're at\nthe end of the, I'm trying to",
+        "start": 4254.107,
+        "duration": 2.62
+    },
+    {
+        "text": "think of what are the big topics\nthat you haven't brought up yet.",
+        "start": 4256.727,
+        "duration": 2.01
+    },
+    {
+        "text": "Oh yeah, I'll finish up.",
+        "start": 4258.737,
+        "duration": 1.62
+    },
+    {
+        "text": "It's only three more.",
+        "start": 4260.357,
+        "duration": 1.16
+    },
+    {
+        "text": "it'll be quick.",
+        "start": 4262.707,
+        "duration": 0.71
+    },
+    {
+        "text": "You're still in abstract\nspaces here, yeah.",
+        "start": 4264.427,
+        "duration": 2.61
+    },
+    {
+        "text": "Yeah, I, bunched language\nwith abstract spaces.",
+        "start": 4267.317,
+        "duration": 3.12
+    },
+    {
+        "text": "so yeah, just the, one of the things\nwe talked about before, how we might.",
+        "start": 4271.967,
+        "duration": 4.45
+    },
+    {
+        "text": "Also, how language would\nalso be represented in Monty.",
+        "start": 4277.072,
+        "duration": 3.66
+    },
+    {
+        "text": "So if we, for example, read a\nsentence, that'll be basic object",
+        "start": 4282.312,
+        "duration": 4.35
+    },
+    {
+        "text": "recognition, like all the other\nobjects are being recognized.",
+        "start": 4286.662,
+        "duration": 2.52
+    },
+    {
+        "text": "We recognize the characters and\nrelative locations of characters",
+        "start": 4289.182,
+        "duration": 3.96
+    },
+    {
+        "text": "from words, which we recognize.",
+        "start": 4293.322,
+        "duration": 1.74
+    },
+    {
+        "text": "But then how do we know\nwhat it actually means?",
+        "start": 4295.362,
+        "duration": 2.11
+    },
+    {
+        "text": "We can learn associative connections\nsimilar to the To voting to models",
+        "start": 4298.142,
+        "duration": 5.48
+    },
+    {
+        "text": "that we've learned in other modalities.",
+        "start": 4303.652,
+        "duration": 1.79
+    },
+    {
+        "text": "Like we might've learned a cup with\ntouch, or we've seen a cup, have a model",
+        "start": 4305.442,
+        "duration": 4.77
+    },
+    {
+        "text": "of a cup and a vision learning module.",
+        "start": 4310.212,
+        "duration": 2.42
+    },
+    {
+        "text": "And we can learn an\nassociative connection.",
+        "start": 4312.652,
+        "duration": 2.32
+    },
+    {
+        "text": "So when I read cup and invokes\nthis model, over there, same",
+        "start": 4314.972,
+        "duration": 5.48
+    },
+    {
+        "text": "with like relative displacements.",
+        "start": 4320.452,
+        "duration": 2.44
+    },
+    {
+        "text": "If I read on, it might invoke like\na relative pose and then table and",
+        "start": 4322.892,
+        "duration": 4.68
+    },
+    {
+        "text": "also the table model until it like.",
+        "start": 4327.572,
+        "duration": 1.82
+    },
+    {
+        "text": "invokes a complete scene in our head.",
+        "start": 4329.767,
+        "duration": 2.21
+    },
+    {
+        "text": "That's at least, how it\nmight be working in Monty.",
+        "start": 4332.897,
+        "duration": 5.24
+    },
+    {
+        "text": "and same if we hear language,\nwe would have auditory learning",
+        "start": 4339.477,
+        "duration": 3.59
+    },
+    {
+        "text": "modules that can recognize words,\ngiven like temporal, features.",
+        "start": 4343.067,
+        "duration": 4.94
+    },
+    {
+        "text": "I think this is the opposite of, large\nlanguage models, in the sense that we",
+        "start": 4348.397,
+        "duration": 3.79
+    },
+    {
+        "text": "start out with these physical models of\nthe world, and we understand that scene,",
+        "start": 4352.187,
+        "duration": 5.43
+    },
+    {
+        "text": "whether we have language for it or not,\nand then what you're really doing language",
+        "start": 4357.647,
+        "duration": 4.45
+    },
+    {
+        "text": "is taking this sort of structured modeling\nout there, this compositional structure",
+        "start": 4362.097,
+        "duration": 4.03
+    },
+    {
+        "text": "right now, and translating it into a\nway of communicating to someone else.",
+        "start": 4366.127,
+        "duration": 5.68
+    },
+    {
+        "text": "it starts with that structured\nmodel, not with the language, and,",
+        "start": 4372.472,
+        "duration": 4.09
+    },
+    {
+        "text": "where like a deep learning, large\nlanguage model system, there's no",
+        "start": 4376.952,
+        "duration": 3.68
+    },
+    {
+        "text": "physical relationship of anything.",
+        "start": 4380.662,
+        "duration": 1.69
+    },
+    {
+        "text": "It's just the language itself.",
+        "start": 4382.352,
+        "duration": 1.01
+    },
+    {
+        "text": "It's just the words.",
+        "start": 4383.362,
+        "duration": 0.82
+    },
+    {
+        "text": "it's completely flipped around in the\nbrain, and we shouldn't forget that.",
+        "start": 4384.882,
+        "duration": 3.66
+    },
+    {
+        "text": "we figure out how to\nrepresent these structures.",
+        "start": 4389.852,
+        "duration": 2.0
+    },
+    {
+        "text": "Essentially, imagine you're\nlooking at that scene and you're",
+        "start": 4392.747,
+        "duration": 3.29
+    },
+    {
+        "text": "attending the different things.",
+        "start": 4396.037,
+        "duration": 1.24
+    },
+    {
+        "text": "You say, oh, there's a\ntable, there's a cup.",
+        "start": 4397.277,
+        "duration": 1.8
+    },
+    {
+        "text": "As you do that, you're pouring\nthe representation of the relative",
+        "start": 4399.347,
+        "duration": 2.82
+    },
+    {
+        "text": "position to come up to the table.",
+        "start": 4402.167,
+        "duration": 1.45
+    },
+    {
+        "text": "that's done visually or tactically.",
+        "start": 4404.737,
+        "duration": 1.63
+    },
+    {
+        "text": "And then you can translate that into\nlanguage to communicate that to someone.",
+        "start": 4406.787,
+        "duration": 3.69
+    },
+    {
+        "text": "and of course, you can go back the other\nway, but it starts with those models.",
+        "start": 4411.817,
+        "duration": 3.22
+    },
+    {
+        "text": "and so I think I've always felt that\nlanguage is a bit dangerous to focus on",
+        "start": 4415.972,
+        "duration": 5.73
+    },
+    {
+        "text": "early, because it's really subservient\nto having these Representational, models",
+        "start": 4421.712,
+        "duration": 5.655
+    },
+    {
+        "text": "of the structure of the world first,\notherwise I end up with like deep learning",
+        "start": 4427.557,
+        "duration": 3.77
+    },
+    {
+        "text": "systems, which are really good language,\nbut they don't really understand anything.",
+        "start": 4431.327,
+        "duration": 3.01
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 4436.217,
+        "duration": 0.89
+    },
+    {
+        "text": "So the nice thing about this system will\nbe that the language is really grounded in",
+        "start": 4437.407,
+        "duration": 4.01
+    },
+    {
+        "text": "physical reality and it will really have\nan understanding of what these words mean",
+        "start": 4441.417,
+        "duration": 6.75
+    },
+    {
+        "text": "and what a cup word is, what is a cup?",
+        "start": 4448.167,
+        "duration": 3.59
+    },
+    {
+        "text": "And, similarly also how does this\nword sound of course, but yeah.",
+        "start": 4451.817,
+        "duration": 4.8
+    },
+    {
+        "text": "What you said starts at the top\nworks his way down question.",
+        "start": 4457.252,
+        "duration": 6.22
+    },
+    {
+        "text": "you said grounded in physical\nreality, but it can also be",
+        "start": 4464.452,
+        "duration": 2.83
+    },
+    {
+        "text": "grounded in abstract reality, right?",
+        "start": 4467.282,
+        "duration": 1.97
+    },
+    {
+        "text": "Just whatever the modeled reality is.",
+        "start": 4470.482,
+        "duration": 2.07
+    },
+    {
+        "text": "When I say physical reality, what\nI really mean is a reference frame.",
+        "start": 4474.722,
+        "duration": 3.82
+    },
+    {
+        "text": "There's things in the reference frames\nat orientations and locations, and",
+        "start": 4478.672,
+        "duration": 4.96
+    },
+    {
+        "text": "those can be physical corresponding\nor they can abstract spaces, but",
+        "start": 4483.792,
+        "duration": 5.27
+    },
+    {
+        "text": "either way, it's the same thing.",
+        "start": 4489.062,
+        "duration": 2.8
+    },
+    {
+        "text": "So the sentence structure there, it\nlooks like, okay, you've got the, nouns",
+        "start": 4494.752,
+        "duration": 5.48
+    },
+    {
+        "text": "and the positions of them relative to\neach other, how do you handle verbs?",
+        "start": 4500.382,
+        "duration": 3.82
+    },
+    {
+        "text": "those will probably be like\nbehavior models, for example, like",
+        "start": 4509.022,
+        "duration": 3.36
+    },
+    {
+        "text": "object behave, like we might have\nmorphology model, feature models,",
+        "start": 4512.642,
+        "duration": 3.63
+    },
+    {
+        "text": "and behavior models, and also models\nof how something changes over time.",
+        "start": 4516.272,
+        "duration": 4.48
+    },
+    {
+        "text": "That, associated with that.",
+        "start": 4521.227,
+        "duration": 1.72
+    },
+    {
+        "text": "Your question's exactly what\nI was trying to address.",
+        "start": 4523.367,
+        "duration": 2.43
+    },
+    {
+        "text": "You start by thinking, oh, with\nthese different types of words and",
+        "start": 4526.057,
+        "duration": 2.74
+    },
+    {
+        "text": "so on, you're going to get lost.",
+        "start": 4528.797,
+        "duration": 1.32
+    },
+    {
+        "text": "You've got to start at the top level,\nas Vivian was saying, and say, start",
+        "start": 4530.227,
+        "duration": 5.02
+    },
+    {
+        "text": "with trying to, how do we understand\nlanguage to describe things here?",
+        "start": 4535.247,
+        "duration": 3.43
+    },
+    {
+        "text": "and right in some many verbs relate\nto actions of objects or actions,",
+        "start": 4539.822,
+        "duration": 5.93
+    },
+    {
+        "text": "relationships between objects.",
+        "start": 4545.752,
+        "duration": 1.75
+    },
+    {
+        "text": "and then verbs come from the reality\nversus we start with a concept of a",
+        "start": 4549.842,
+        "duration": 4.15
+    },
+    {
+        "text": "verb and try to understand what it is.",
+        "start": 4554.042,
+        "duration": 2.12
+    },
+    {
+        "text": "I realize there's a big gap there.",
+        "start": 4557.072,
+        "duration": 2.305
+    },
+    {
+        "text": "But, that's the way to approach it.",
+        "start": 4560.027,
+        "duration": 1.66
+    },
+    {
+        "text": "Otherwise you just get lost in, lost\ndown the rabbit hole of being linguists.",
+        "start": 4561.717,
+        "duration": 5.34
+    },
+    {
+        "text": "Okay.",
+        "start": 4567.827,
+        "duration": 0.21
+    },
+    {
+        "text": "the notion of a behavioral\nmodel makes, sense to me.",
+        "start": 4568.747,
+        "duration": 3.51
+    },
+    {
+        "text": "So that, that you can, segregate\nthat functionality into that",
+        "start": 4572.257,
+        "duration": 5.62
+    },
+    {
+        "text": "way of thinking about it.",
+        "start": 4577.877,
+        "duration": 1.11
+    },
+    {
+        "text": "okay.",
+        "start": 4580.167,
+        "duration": 0.35
+    },
+    {
+        "text": "I'm, satisfied for the moment.",
+        "start": 4583.427,
+        "duration": 2.46
+    },
+    {
+        "text": "Yeah, let me quickly go over this one.",
+        "start": 4586.257,
+        "duration": 1.49
+    },
+    {
+        "text": "It's not the most interesting one.",
+        "start": 4587.747,
+        "duration": 1.63
+    },
+    {
+        "text": "So deep learning networks suffer from\nproblems with adversarial examples.",
+        "start": 4589.377,
+        "duration": 4.28
+    },
+    {
+        "text": "So you add like a tiny bit of noise\nand it suddenly makes a totally wrong",
+        "start": 4593.667,
+        "duration": 3.65
+    },
+    {
+        "text": "prediction with higher confidence\nor a bit more real worldly.",
+        "start": 4597.317,
+        "duration": 4.06
+    },
+    {
+        "text": "You add a little patch on a stop sign\nand detect something, a different sign.",
+        "start": 4601.397,
+        "duration": 4.87
+    },
+    {
+        "text": "it's a bit related also that this\ndeep deep learning vision systems",
+        "start": 4607.517,
+        "duration": 3.28
+    },
+    {
+        "text": "often over rely on texture.",
+        "start": 4610.827,
+        "duration": 1.89
+    },
+    {
+        "text": "So this would, for example, be\nrecognized as an elephant instead of",
+        "start": 4612.717,
+        "duration": 3.19
+    },
+    {
+        "text": "a cat, or this would be recognized\nas a flamingo or a volcano or an",
+        "start": 4615.907,
+        "duration": 4.81
+    },
+    {
+        "text": "Arctic fox instead of an elephant.",
+        "start": 4620.727,
+        "duration": 1.96
+    },
+    {
+        "text": "whereas I think, Monty would be,\ninherently good at these tasks or would",
+        "start": 4623.567,
+        "duration": 6.58
+    },
+    {
+        "text": "not be tricked by a different texture\non, the morphology of an elephant.",
+        "start": 4630.237,
+        "duration": 4.08
+    },
+    {
+        "text": "obviously adversarial examples,\nAre optimized to the system.",
+        "start": 4635.717,
+        "duration": 4.25
+    },
+    {
+        "text": "So you might optimize adversarial\nexamples for Monty, but hopefully",
+        "start": 4639.967,
+        "duration": 4.56
+    },
+    {
+        "text": "those examples would be more similar\nto like visual illusions that humans",
+        "start": 4644.527,
+        "duration": 4.64
+    },
+    {
+        "text": "also perceive as visual illusions.",
+        "start": 4649.167,
+        "duration": 2.16
+    },
+    {
+        "text": "That's at least my hope.",
+        "start": 4651.327,
+        "duration": 1.26
+    },
+    {
+        "text": "but yeah, that's something\nwe can explore in the future.",
+        "start": 4653.747,
+        "duration": 2.52
+    },
+    {
+        "text": "Hard to imagine how that\nwouldn't be the case.",
+        "start": 4656.947,
+        "duration": 1.805
+    },
+    {
+        "text": "And then lastly, recognizing\nobjects learned in 3d and 2d.",
+        "start": 4661.952,
+        "duration": 3.76
+    },
+    {
+        "text": "So you learn an object by touching it\nand looking at it, in a three dimensional",
+        "start": 4665.742,
+        "duration": 5.26
+    },
+    {
+        "text": "world, you have a model of the object\nand you see a two dimensional picture",
+        "start": 4671.012,
+        "duration": 4.05
+    },
+    {
+        "text": "of the object and you can recognize it,\nor even like a sketched line drawing",
+        "start": 4675.062,
+        "duration": 5.68
+    },
+    {
+        "text": "and you can recognize the object,\nYeah, this will, I don't think, be a",
+        "start": 4681.062,
+        "duration": 5.51
+    },
+    {
+        "text": "super difficult property to add to the\nsystem, but just another generalization",
+        "start": 4686.572,
+        "duration": 5.72
+    },
+    {
+        "text": "that we might test at some point.",
+        "start": 4692.652,
+        "duration": 1.51
+    },
+    {
+        "text": "Does Link sign the media release?",
+        "start": 4694.162,
+        "duration": 1.58
+    },
+    {
+        "text": "I'm his guardian, I get\nto sign his media release.",
+        "start": 4697.662,
+        "duration": 6.28
+    },
+    {
+        "text": "Yeah, get some higher, some n dimensions\ninto that baby, test that hypothesis.",
+        "start": 4704.892,
+        "duration": 4.64
+    },
+    {
+        "text": "Yeah, I think he's actually not so\ngood yet at recognizing the 2D version.",
+        "start": 4710.112,
+        "duration": 4.51
+    },
+    {
+        "text": "I didn't see anything else\nother than a cute baby.",
+        "start": 4715.132,
+        "duration": 4.3
+    },
+    {
+        "text": "I've seen parts of him doing very good.",
+        "start": 4719.692,
+        "duration": 1.66
+    },
+    {
+        "text": "How old?.",
+        "start": 4721.952,
+        "duration": 0.77
+    },
+    {
+        "text": "Almost nine months.",
+        "start": 4724.312,
+        "duration": 1.39
+    },
+    {
+        "text": "Wow.",
+        "start": 4725.952,
+        "duration": 0.41
+    },
+    {
+        "text": "He's younger in that picture.",
+        "start": 4728.492,
+        "duration": 1.21
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 4730.882,
+        "duration": 0.51
+    },
+    {
+        "text": "This is from today, I made\nit for this presentation.",
+        "start": 4732.372,
+        "duration": 2.46
+    },
+    {
+        "text": "You're not supposed to look\nat screens, but I didn't want",
+        "start": 4735.652,
+        "duration": 2.37
+    },
+    {
+        "text": "to print out the picture.",
+        "start": 4738.022,
+        "duration": 1.6
+    },
+    {
+        "text": "Okay, a little bit.",
+        "start": 4741.822,
+        "duration": 0.98
+    },
+    {
+        "text": "all right.",
+        "start": 4745.187,
+        "duration": 0.39
+    },
+    {
+        "text": "To sum it up, back to this overview.",
+        "start": 4745.577,
+        "duration": 2.64
+    },
+    {
+        "text": "So these capabilities here, so object\ndetection, accuracy, pose detection,",
+        "start": 4749.067,
+        "duration": 4.92
+    },
+    {
+        "text": "number of steps, speed, noise, and\nlearning, unsupervised or continually,",
+        "start": 4753.987,
+        "duration": 5.07
+    },
+    {
+        "text": "those are regularly benchmarked.",
+        "start": 4759.437,
+        "duration": 1.86
+    },
+    {
+        "text": "We have benchmarks in our code base, and\nyou have to update them every time you",
+        "start": 4761.297,
+        "duration": 4.73
+    },
+    {
+        "text": "make a significant change to the code.",
+        "start": 4766.027,
+        "duration": 1.92
+    },
+    {
+        "text": "we have benchmarks in progress\nfor the multiple objects.",
+        "start": 4770.277,
+        "duration": 3.33
+    },
+    {
+        "text": "We have one there already, but.",
+        "start": 4773.667,
+        "duration": 1.29
+    },
+    {
+        "text": "I guess I put it in progress because\nwe also still need to solve it",
+        "start": 4776.537,
+        "duration": 3.01
+    },
+    {
+        "text": "And then for real world sensors\nand agents, we also have a basic",
+        "start": 4780.417,
+        "duration": 3.56
+    },
+    {
+        "text": "benchmark there, but also still need\nto get a decent accuracy on there.",
+        "start": 4783.977,
+        "duration": 5.26
+    },
+    {
+        "text": "And then for compositionality, that's\nthe one we got started on during the",
+        "start": 4789.467,
+        "duration": 3.23
+    },
+    {
+        "text": "hackathon that we still need to put in\nlike proper accuracy measurements and,",
+        "start": 4792.697,
+        "duration": 5.71
+    },
+    {
+        "text": "make it into a benchmark experiment.",
+        "start": 4798.917,
+        "duration": 2.0
+    },
+    {
+        "text": "current work is focused on, dealing with\nmultiple objects and compositionality.",
+        "start": 4802.637,
+        "duration": 5.63
+    },
+    {
+        "text": "And then current brainstorming\nhas lately mostly revolved around",
+        "start": 4809.167,
+        "duration": 3.89
+    },
+    {
+        "text": "different features on the same\nmorphology and object behaviors.",
+        "start": 4813.237,
+        "duration": 3.58
+    },
+    {
+        "text": "And before that, we talked a lot about\ncompositionality, although there we are",
+        "start": 4817.357,
+        "duration": 3.9
+    },
+    {
+        "text": "have some more concrete ideas already\non how we want to implement that.",
+        "start": 4822.997,
+        "duration": 3.92
+    },
+    {
+        "text": "And then sometimes we also touch\non abstract concepts and how to",
+        "start": 4827.177,
+        "duration": 4.29
+    },
+    {
+        "text": "represent space in reference frames.",
+        "start": 4831.467,
+        "duration": 2.03
+    },
+    {
+        "text": "lately, I'm going to talk about\ncompositionality in a few weeks, right?",
+        "start": 4834.952,
+        "duration": 4.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 4839.822,
+        "duration": 0.44
+    },
+    {
+        "text": "and then there are a couple that\nare still like, some of them",
+        "start": 4843.792,
+        "duration": 2.54
+    },
+    {
+        "text": "are not as relevant right now.",
+        "start": 4846.332,
+        "duration": 1.64
+    },
+    {
+        "text": "And some of them are still quite\nuntouched, like deformations.",
+        "start": 4848.002,
+        "duration": 3.76
+    },
+    {
+        "text": "yeah, that was the overview.",
+        "start": 4856.202,
+        "duration": 2.54
+    },
+    {
+        "text": "Anyone have some more questions now?",
+        "start": 4858.872,
+        "duration": 1.74
+    },
+    {
+        "text": "That was great.",
+        "start": 4861.462,
+        "duration": 0.52
+    },
+    {
+        "text": "That was amazing.",
+        "start": 4862.062,
+        "duration": 0.83
+    },
+    {
+        "text": "Yeah, it really was.",
+        "start": 4862.892,
+        "duration": 1.14
+    },
+    {
+        "text": "you covered everything.",
+        "start": 4864.652,
+        "duration": 0.93
+    },
+    {
+        "text": "It's I feel like this is my life.",
+        "start": 4865.592,
+        "duration": 2.66
+    },
+    {
+        "text": "We would be disorganized after\n40 years of being disorganized.",
+        "start": 4868.662,
+        "duration": 2.97
+    },
+    {
+        "text": "We've worked on these problems\nsince sort of ad hoc order,",
+        "start": 4873.502,
+        "duration": 2.61
+    },
+    {
+        "text": "cause it's so hard to solve them.",
+        "start": 4876.402,
+        "duration": 1.42
+    },
+    {
+        "text": "And, for so many years, it was just\nvery confusing on these things happen,",
+        "start": 4878.457,
+        "duration": 4.24
+    },
+    {
+        "text": "or even just what had to happen.",
+        "start": 4882.697,
+        "duration": 1.29
+    },
+    {
+        "text": "It took a long time even\njust to make this list.",
+        "start": 4884.687,
+        "duration": 2.26
+    },
+    {
+        "text": "and yet I think it's pretty complete now.",
+        "start": 4888.357,
+        "duration": 2.08
+    },
+    {
+        "text": "so it's really great to see that.",
+        "start": 4891.677,
+        "duration": 1.76
+    }
+]

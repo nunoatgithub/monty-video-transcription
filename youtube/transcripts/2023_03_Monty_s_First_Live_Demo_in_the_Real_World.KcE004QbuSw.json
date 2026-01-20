@@ -1,0 +1,1642 @@
+[
+    {
+        "text": "Welcome to the Thousand Brains\nProject YouTube channel.",
+        "start": 0.866,
+        "duration": 2.47
+    },
+    {
+        "text": "This video is one of my favorites.",
+        "start": 4.656,
+        "duration": 1.99
+    },
+    {
+        "text": "It's pretty short, but it's the first\ndemo of Monty on some real world data.",
+        "start": 7.086,
+        "duration": 4.24
+    },
+    {
+        "text": "The background is, in March 2023, Numenta\norganized a little internal hackathon",
+        "start": 12.336,
+        "duration": 5.54
+    },
+    {
+        "text": "where everyone at the company had a week's\ntime to accomplish a moonshot project.",
+        "start": 18.196,
+        "duration": 7.17
+    },
+    {
+        "text": "And at the end of the week,\nwe would demo our results.",
+        "start": 25.886,
+        "duration": 3.1
+    },
+    {
+        "text": "And we would form little teams\nto tackle these projects.",
+        "start": 29.526,
+        "duration": 3.67
+    },
+    {
+        "text": "So the thousand brains project team,\nwhich back then consisted of four people,",
+        "start": 33.816,
+        "duration": 4.16
+    },
+    {
+        "text": "was thinking about what we could do.",
+        "start": 39.446,
+        "duration": 2.03
+    },
+    {
+        "text": "And we've been thinking for a while\nabout doing a real world demo of",
+        "start": 41.536,
+        "duration": 3.47
+    },
+    {
+        "text": "Monty, and we decided that this week\nwould be a great time to do that.",
+        "start": 45.026,
+        "duration": 3.64
+    },
+    {
+        "text": "So we tried to figure out a real\nworld demo that we could accomplish",
+        "start": 49.506,
+        "duration": 4.3
+    },
+    {
+        "text": "within just one week Without having\nto buy some expensive robotics",
+        "start": 53.826,
+        "duration": 4.685
+    },
+    {
+        "text": "hardware or anything like that.",
+        "start": 58.511,
+        "duration": 2.77
+    },
+    {
+        "text": "And also, half of our team was remote, so\nNiels was in England and I was in Greece.",
+        "start": 61.411,
+        "duration": 4.97
+    },
+    {
+        "text": "And then the other half of our team\nwas in the Redwood City office.",
+        "start": 66.811,
+        "duration": 3.13
+    },
+    {
+        "text": "So we would have to have something that\nwe can share and we can all work on.",
+        "start": 70.281,
+        "duration": 3.49
+    },
+    {
+        "text": "So we ended up deciding to use the iPad or\niPhone camera and write a small iOS app.",
+        "start": 74.161,
+        "duration": 6.01
+    },
+    {
+        "text": "That takes the camera picture, and\nthen we would manually take a little",
+        "start": 80.856,
+        "duration": 4.93
+    },
+    {
+        "text": "patch and move it over that picture.",
+        "start": 85.966,
+        "duration": 1.83
+    },
+    {
+        "text": "Which is a little artificial, but\nit's a good starting point, and",
+        "start": 88.216,
+        "duration": 3.0
+    },
+    {
+        "text": "it was something that we could\naccomplish in a short period of time.",
+        "start": 91.216,
+        "duration": 2.94
+    },
+    {
+        "text": "I won't give away too much, you'll see\neverything in the video that's about to",
+        "start": 96.266,
+        "duration": 3.66
+    },
+    {
+        "text": "come, but I'm hoping that this little\nproject will be maybe some inspiration",
+        "start": 99.926,
+        "duration": 4.48
+    },
+    {
+        "text": "for you to think about  some other\nways Monty could be used and some other",
+        "start": 104.406,
+        "duration": 4.065
+    },
+    {
+        "text": "little projects you could try with it.",
+        "start": 108.471,
+        "duration": 1.94
+    },
+    {
+        "text": "Have fun!",
+        "start": 111.171,
+        "duration": 0.55
+    },
+    {
+        "text": "Yeah, so this was definitely\nan exciting week for Monty.",
+        "start": 120.268,
+        "duration": 2.61
+    },
+    {
+        "text": "it was the first time that\nMonty saw some real world data.",
+        "start": 123.308,
+        "duration": 7.03
+    },
+    {
+        "text": "so yeah, this was really something\nwe've been wanting to look at for",
+        "start": 132.463,
+        "duration": 3.56
+    },
+    {
+        "text": "a long time and, the hackathon\nwas a great opportunity for it.",
+        "start": 136.023,
+        "duration": 4.39
+    },
+    {
+        "text": "yeah, you can go to the next slide.",
+        "start": 143.213,
+        "duration": 1.72
+    },
+    {
+        "text": "So yeah, the goal for this week was\nto set up an environment for Monty",
+        "start": 144.933,
+        "duration": 6.47
+    },
+    {
+        "text": "to be tested in the real world.",
+        "start": 151.403,
+        "duration": 1.62
+    },
+    {
+        "text": "And we decided to use the iPad or\niPhone TrueDepth camera as a sensor",
+        "start": 153.553,
+        "duration": 5.1
+    },
+    {
+        "text": "because we all had access to it.",
+        "start": 158.653,
+        "duration": 2.06
+    },
+    {
+        "text": "So we didn't need to.",
+        "start": 160.713,
+        "duration": 0.98
+    },
+    {
+        "text": "Buy any equipment and it gives\nreasonable depth estimates.",
+        "start": 162.023,
+        "duration": 4.8
+    },
+    {
+        "text": "I, didn't realize the iPhone\nhad a depth camera in it.",
+        "start": 168.488,
+        "duration": 2.27
+    },
+    {
+        "text": "It has for the face id.",
+        "start": 170.758,
+        "duration": 1.53
+    },
+    {
+        "text": "It's for the face id.",
+        "start": 172.613,
+        "duration": 1.45
+    },
+    {
+        "text": "Oh, I didn't know that.",
+        "start": 174.628,
+        "duration": 1.11
+    },
+    {
+        "text": "It has LIDAR.",
+        "start": 175.738,
+        "duration": 0.925
+    },
+    {
+        "text": "LIDAR is the other one.",
+        "start": 177.633,
+        "duration": 0.79
+    },
+    {
+        "text": "Oh, LIDAR is the other one.",
+        "start": 178.563,
+        "duration": 1.02
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 179.583,
+        "duration": 0.002
+    },
+    {
+        "text": "Yeah.",
+        "start": 179.938,
+        "duration": 0.18
+    },
+    {
+        "text": "LIDAR is on the other side.",
+        "start": 180.118,
+        "duration": 1.32
+    },
+    {
+        "text": "LIDAR is more for like long range\ndepth detection, and then the one,",
+        "start": 181.438,
+        "duration": 3.72
+    },
+    {
+        "text": "the front facing one is more for.",
+        "start": 185.398,
+        "duration": 1.44
+    },
+    {
+        "text": "Accurate short range depth.",
+        "start": 187.358,
+        "duration": 1.54
+    },
+    {
+        "text": "Up to five meters.",
+        "start": 189.208,
+        "duration": 1.35
+    },
+    {
+        "text": "Is it LIDAR on the back?",
+        "start": 190.578,
+        "duration": 3.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 194.158,
+        "duration": 0.26
+    },
+    {
+        "text": "Yeah, we tested both, but, yeah,\nthen chose to go with this one.",
+        "start": 195.928,
+        "duration": 4.11
+    },
+    {
+        "text": "Yeah.",
+        "start": 200.418,
+        "duration": 0.2
+    },
+    {
+        "text": "but yeah, the main goal was\nto just see how well Monty",
+        "start": 201.408,
+        "duration": 5.7
+    },
+    {
+        "text": "can deal with real world data.",
+        "start": 207.108,
+        "duration": 1.63
+    },
+    {
+        "text": "And to have a testbed for that so\nwe don't always do everything in",
+        "start": 209.153,
+        "duration": 4.34
+    },
+    {
+        "text": "simulation and forget about some\nproblems that occur in the real world.",
+        "start": 213.493,
+        "duration": 3.64
+    },
+    {
+        "text": "And then the second nice to\nhave that we weren't sure",
+        "start": 217.603,
+        "duration": 2.9
+    },
+    {
+        "text": "about, whether it will work out.",
+        "start": 220.503,
+        "duration": 2.365
+    },
+    {
+        "text": "It's just to have a first, start of\na demo of Monty, showing that it can",
+        "start": 223.168,
+        "duration": 7.57
+    },
+    {
+        "text": "actually do something with real sensors,",
+        "start": 230.738,
+        "duration": 3.29
+    },
+    {
+        "text": "yeah.",
+        "start": 236.268,
+        "duration": 0.35
+    },
+    {
+        "text": "Okay, so yeah, so in order to\nevaluate this in the real world,",
+        "start": 238.638,
+        "duration": 3.78
+    },
+    {
+        "text": "as Viviane said, we are going to\nperform inference using these depth",
+        "start": 242.998,
+        "duration": 3.93
+    },
+    {
+        "text": "images, taken from a phone or iPad.",
+        "start": 246.928,
+        "duration": 2.33
+    },
+    {
+        "text": "but one of the kind of, stepping\nstones in this whole process, current",
+        "start": 250.283,
+        "duration": 3.84
+    },
+    {
+        "text": "limitations of the whole, setup is\nwe don't have information about how",
+        "start": 254.123,
+        "duration": 4.82
+    },
+    {
+        "text": "the iPad or iPhone is moving through\nspace and where it is, and because",
+        "start": 258.943,
+        "duration": 4.1
+    },
+    {
+        "text": "Monty is a fully sensorimotor system,\nthat's essential for how it learns.",
+        "start": 263.083,
+        "duration": 4.44
+    },
+    {
+        "text": "and so in order to enable learning still,\nwe had to get real world objects into,",
+        "start": 268.793,
+        "duration": 5.59
+    },
+    {
+        "text": "essentially a simulation environment where\nMonty could then learn, and then based",
+        "start": 274.983,
+        "duration": 3.73
+    },
+    {
+        "text": "on learning in a simulation, it could\nthen perform inference in the real world.",
+        "start": 278.713,
+        "duration": 3.45
+    },
+    {
+        "text": "and so in order to do that, we took a\ncouple, nine real world objects that",
+        "start": 283.063,
+        "duration": 4.69
+    },
+    {
+        "text": "a lot of people have lying around,\nlike the classic, Numenta mug, or",
+        "start": 287.863,
+        "duration": 4.49
+    },
+    {
+        "text": "the wonderful Numenta brain, or, a\nHalloween model of a human heart.",
+        "start": 292.353,
+        "duration": 6.16
+    },
+    {
+        "text": "just whatever you happen\nto have, lying around.",
+        "start": 299.163,
+        "duration": 3.34
+    },
+    {
+        "text": "And anyways, and use, a technique called\nphotogrammetry, to essentially stick",
+        "start": 302.513,
+        "duration": 5.26
+    },
+    {
+        "text": "together, stitch together a bunch of\n2D images, create 3D models, that we",
+        "start": 307.773,
+        "duration": 4.57
+    },
+    {
+        "text": "could then put in Habitat and learn on.",
+        "start": 312.343,
+        "duration": 2.23
+    },
+    {
+        "text": "Yeah, this is how the data pipeline works.",
+        "start": 321.298,
+        "duration": 3.48
+    },
+    {
+        "text": "So we have an app that is iOS,\nnative, it's, just concerned",
+        "start": 324.778,
+        "duration": 5.61
+    },
+    {
+        "text": "with image acquisition.",
+        "start": 330.388,
+        "duration": 1.14
+    },
+    {
+        "text": "So it takes RGB images\nand depth, images as well.",
+        "start": 331.528,
+        "duration": 3.87
+    },
+    {
+        "text": "then it's streams directly the data, so\nboth the RGB and the depth to a local",
+        "start": 336.408,
+        "duration": 4.5
+    },
+    {
+        "text": "server that is hosted on my laptop.",
+        "start": 340.908,
+        "duration": 1.71
+    },
+    {
+        "text": "And this is the inference phase now.",
+        "start": 343.328,
+        "duration": 1.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 346.148,
+        "duration": 0.18
+    },
+    {
+        "text": "So you've already trained on that.",
+        "start": 346.508,
+        "duration": 1.89
+    },
+    {
+        "text": "Whatever.",
+        "start": 349.148,
+        "duration": 0.39
+    },
+    {
+        "text": "okay.",
+        "start": 352.203,
+        "duration": 0.38
+    },
+    {
+        "text": "Yeah, so the, then the server picks up\nall the streamed data and saves it into",
+        "start": 353.563,
+        "duration": 4.18
+    },
+    {
+        "text": "a, local folder, and Monty is running\nin parallel, so constantly looking at",
+        "start": 358.493,
+        "duration": 4.23
+    },
+    {
+        "text": "the folder, seeing if new data has come\nin, and loads it into the, the inference",
+        "start": 362.723,
+        "duration": 6.23
+    },
+    {
+        "text": "pipeline, in real time, and then, so\nthe images that are taken are used to",
+        "start": 368.953,
+        "duration": 6.76
+    },
+    {
+        "text": "initialize the Monty environment, and\nthen the action policy that Monty is,",
+        "start": 375.713,
+        "duration": 4.01
+    },
+    {
+        "text": "It's used to extract patches at different\nlocations within that complete image.",
+        "start": 380.373,
+        "duration": 5.25
+    },
+    {
+        "text": "And then, yeah, eventually Monty\nruns, the inference is run, and the",
+        "start": 388.643,
+        "duration": 6.6
+    },
+    {
+        "text": "app outputs the most likely object\nthat you can pose that is recognized.",
+        "start": 395.243,
+        "duration": 4.03
+    },
+    {
+        "text": "Yeah, this one is just to quickly,\nremind how, yeah, Monty just uses",
+        "start": 401.403,
+        "duration": 4.75
+    },
+    {
+        "text": "sensor patches like Jad mentioned.",
+        "start": 406.163,
+        "duration": 1.77
+    },
+    {
+        "text": "the big, camera image is never given to\nMonty, at once, but Monty has like a small",
+        "start": 409.123,
+        "duration": 6.59
+    },
+    {
+        "text": "patch that it can move over the image.",
+        "start": 415.733,
+        "duration": 2.83
+    },
+    {
+        "text": "And then it has the internal\nmodels that Niels talked about",
+        "start": 418.978,
+        "duration": 3.92
+    },
+    {
+        "text": "that were learned in simulation.",
+        "start": 422.898,
+        "duration": 1.76
+    },
+    {
+        "text": "And it basically updates its evidence\nfor different hypotheses of where and",
+        "start": 425.018,
+        "duration": 5.9
+    },
+    {
+        "text": "on which object it thinks it is right\nnow by moving through this image.",
+        "start": 430.928,
+        "duration": 6.05
+    },
+    {
+        "text": "And yeah, and I should have maybe\nmentioned that although the, kind of",
+        "start": 439.318,
+        "duration": 3.02
+    },
+    {
+        "text": "simulated models is, sort of one way\nto get around this whole bottleneck of",
+        "start": 442.348,
+        "duration": 4.35
+    },
+    {
+        "text": "the motor information, not currently\navailable, it's actually, it makes",
+        "start": 446.698,
+        "duration": 4.87
+    },
+    {
+        "text": "it more challenging because we are\ndoing this transfer from simulation",
+        "start": 451.568,
+        "duration": 3.22
+    },
+    {
+        "text": "to real data, which is, something\nthat, for example, deep learning",
+        "start": 454.798,
+        "duration": 3.92
+    },
+    {
+        "text": "systems classically, struggle with if\nyou've just trained on simulated data.",
+        "start": 458.718,
+        "duration": 4.04
+    },
+    {
+        "text": "Yeah, and, as I mentioned, the input\nare the sensors of the app, and",
+        "start": 465.133,
+        "duration": 5.79
+    },
+    {
+        "text": "the app right now is using a front\nfacing camera on the phone and the",
+        "start": 471.613,
+        "duration": 3.93
+    },
+    {
+        "text": "iPad, which it gives you this, that gives\na more precision 3D depth image than",
+        "start": 477.703,
+        "duration": 6.78
+    },
+    {
+        "text": "the Urizon, because it's over 5 meters.",
+        "start": 484.483,
+        "duration": 2.265
+    },
+    {
+        "text": "And once the app collects both\nthe depth image and the RGB image,",
+        "start": 487.248,
+        "duration": 5.19
+    },
+    {
+        "text": "and that's where it can send to\nMonty, just like the simulator.",
+        "start": 492.478,
+        "duration": 2.96
+    },
+    {
+        "text": "Like when we're using the\nsimulator, we just grab the same",
+        "start": 496.178,
+        "duration": 3.03
+    },
+    {
+        "text": "information that we got from the\nsimulator, we pass it via the app.",
+        "start": 499.208,
+        "duration": 3.54
+    },
+    {
+        "text": "So we have two separate\nthings we're capturing.",
+        "start": 503.938,
+        "duration": 2.1
+    },
+    {
+        "text": "Correct.",
+        "start": 506.358,
+        "duration": 0.51
+    },
+    {
+        "text": "It's a depth map and a color.",
+        "start": 507.068,
+        "duration": 1.69
+    },
+    {
+        "text": "And I call it RGB.",
+        "start": 508.758,
+        "duration": 0.84
+    },
+    {
+        "text": "It's an RGB and a depth map.",
+        "start": 509.598,
+        "duration": 1.84
+    },
+    {
+        "text": "And you probably will see that\nduring the demo, what they look like.",
+        "start": 512.908,
+        "duration": 4.79
+    },
+    {
+        "text": "Okay.",
+        "start": 517.698,
+        "duration": 0.345
+    },
+    {
+        "text": "I think it's like a xbox style.",
+        "start": 519.943,
+        "duration": 2.16
+    },
+    {
+        "text": "No, it's what they do, they project an\ninfrared grid on your face, and then you",
+        "start": 522.303,
+        "duration": 7.76
+    },
+    {
+        "text": "see the distortion of that infrared, that\ngrid, and that's how they computed that.",
+        "start": 530.473,
+        "duration": 4.17
+    },
+    {
+        "text": "Oh yeah, we actually tested this also\nin the dark, so you can also get.",
+        "start": 535.443,
+        "duration": 4.13
+    },
+    {
+        "text": "also if you turn the lights\noff, maybe I can set that up.",
+        "start": 540.548,
+        "duration": 2.94
+    },
+    {
+        "text": "Yeah.",
+        "start": 543.488,
+        "duration": 0.06
+    },
+    {
+        "text": "She works in the dark.",
+        "start": 543.548,
+        "duration": 0.755
+    },
+    {
+        "text": "Yeah.",
+        "start": 544.598,
+        "duration": 0.18
+    },
+    {
+        "text": "You can see that this explain.",
+        "start": 544.778,
+        "duration": 1.56
+    },
+    {
+        "text": "See that, that the little flashing.",
+        "start": 546.338,
+        "duration": 1.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 548.168,
+        "duration": 0.36
+    },
+    {
+        "text": "So that's the infrared\nprojecting on your face.",
+        "start": 548.708,
+        "duration": 2.49
+    },
+    {
+        "text": "How about is it, this explains\nhow sometimes my phone",
+        "start": 551.618,
+        "duration": 3.39
+    },
+    {
+        "text": "recognize my face in the dark.",
+        "start": 555.108,
+        "duration": 1.16
+    },
+    {
+        "text": "I was wondering what the hell's it doing?",
+        "start": 557.138,
+        "duration": 1.502
+    },
+    {
+        "text": "How's it is?",
+        "start": 558.64,
+        "duration": 0.148
+    },
+    {
+        "text": "The infrared projection of a grid of dots.",
+        "start": 558.788,
+        "duration": 2.73
+    },
+    {
+        "text": "Wow.",
+        "start": 561.908,
+        "duration": 0.15
+    },
+    {
+        "text": "How far does it go out?",
+        "start": 562.418,
+        "duration": 0.96
+    },
+    {
+        "text": "So you could actually use this without,\nthe imaging in the dark, right?",
+        "start": 564.858,
+        "duration": 3.53
+    },
+    {
+        "text": "Yeah, so I take pictures of\nthe ceiling, so I was able to",
+        "start": 568.388,
+        "duration": 2.37
+    },
+    {
+        "text": "get some silk from the bottom.",
+        "start": 570.758,
+        "duration": 1.86
+    },
+    {
+        "text": "That's pretty cool.",
+        "start": 573.628,
+        "duration": 0.61
+    },
+    {
+        "text": "Yeah, maybe we, I don't know, can we\ndim the lights or is that complicated?",
+        "start": 576.438,
+        "duration": 3.22
+    },
+    {
+        "text": "Does that help?",
+        "start": 580.038,
+        "duration": 2.26
+    },
+    {
+        "text": "It does help actually, because\nit removes the reflection.",
+        "start": 582.378,
+        "duration": 1.96
+    },
+    {
+        "text": "Get a bit of the demo mood going.",
+        "start": 584.928,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah, Jad, I guess you, you should\nshare the screen with the, yeah, nice.",
+        "start": 588.588,
+        "duration": 5.76
+    },
+    {
+        "text": "Thanks.",
+        "start": 594.348,
+        "duration": 0.05
+    },
+    {
+        "text": "Want to get a dark one?",
+        "start": 594.923,
+        "duration": 0.55
+    },
+    {
+        "text": "All right, so this is the server.",
+        "start": 598.373,
+        "duration": 1.94
+    },
+    {
+        "text": "So this is the server.",
+        "start": 600.313,
+        "duration": 1.9
+    },
+    {
+        "text": "You can start the server.",
+        "start": 602.213,
+        "duration": 2.85
+    },
+    {
+        "text": "So here's the image that we've got.",
+        "start": 605.303,
+        "duration": 1.83
+    },
+    {
+        "text": "Oh, quick thing.",
+        "start": 608.163,
+        "duration": 1.04
+    },
+    {
+        "text": "Once Viviane and Niels talk,\nthen we'll no longer see this",
+        "start": 609.313,
+        "duration": 2.92
+    },
+    {
+        "text": "demo thing when it's recording.",
+        "start": 612.233,
+        "duration": 1.78
+    },
+    {
+        "text": "So I guess Vivian and Niels\nshould mute themselves.",
+        "start": 614.293,
+        "duration": 1.75
+    },
+    {
+        "text": "No, Did you get it?",
+        "start": 616.785,
+        "duration": 1.855
+    },
+    {
+        "text": "I don't know.",
+        "start": 619.011,
+        "duration": 1.113
+    },
+    {
+        "text": "It's usually recorded as\na person that's talking.",
+        "start": 620.124,
+        "duration": 2.967
+    },
+    {
+        "text": "Oh, I see what you're saying.",
+        "start": 623.091,
+        "duration": 2.226
+    },
+    {
+        "text": "yeah.",
+        "start": 625.688,
+        "duration": 0.371
+    },
+    {
+        "text": "I'm a little confused.",
+        "start": 626.059,
+        "duration": 1.484
+    },
+    {
+        "text": "Who's taking this picture?",
+        "start": 628.393,
+        "duration": 0.96
+    },
+    {
+        "text": "Oh, it's this iPad here.",
+        "start": 629.553,
+        "duration": 1.27
+    },
+    {
+        "text": "Yeah, but how come I see\nthe front of the iPad?",
+        "start": 631.583,
+        "duration": 1.92
+    },
+    {
+        "text": "Because there's",
+        "start": 634.453,
+        "duration": 0.86
+    },
+    {
+        "text": "many cameras involved.",
+        "start": 638.223,
+        "duration": 1.22
+    },
+    {
+        "text": "That's just the room\ncamera we're looking at.",
+        "start": 641.513,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah, this guy here.",
+        "start": 643.513,
+        "duration": 0.79
+    },
+    {
+        "text": "But that's an interesting point, actually.",
+        "start": 647.953,
+        "duration": 1.59
+    },
+    {
+        "text": "This view is not on the shared view.",
+        "start": 650.563,
+        "duration": 2.59
+    },
+    {
+        "text": "so I'm not sure, because it\nusually records the screen",
+        "start": 653.603,
+        "duration": 3.46
+    },
+    {
+        "text": "that the person's talking.",
+        "start": 657.063,
+        "duration": 1.09
+    },
+    {
+        "text": "So I'm not sure if this is recording.",
+        "start": 658.893,
+        "duration": 1.24
+    },
+    {
+        "text": "So I guess Viviane, you should\nprobably mute themselves, then for",
+        "start": 660.293,
+        "duration": 2.81
+    },
+    {
+        "text": "sure this will be recording, like,\nwhere the sound's coming from.",
+        "start": 663.103,
+        "duration": 4.175
+    },
+    {
+        "text": "Whose screen is that?",
+        "start": 667.278,
+        "duration": 1.815
+    },
+    {
+        "text": "It's mine.",
+        "start": 669.303,
+        "duration": 0.35
+    },
+    {
+        "text": "That's mine.",
+        "start": 669.663,
+        "duration": 0.45
+    },
+    {
+        "text": "That's yours.",
+        "start": 670.808,
+        "duration": 0.54
+    },
+    {
+        "text": "So I started running the iPad camera\nin the same window as the shared",
+        "start": 671.838,
+        "duration": 4.4
+    },
+    {
+        "text": "screen, so it may be being recorded.",
+        "start": 676.238,
+        "duration": 2.71
+    },
+    {
+        "text": "I don't know if it's recording\nall of them, but I definitely see",
+        "start": 679.058,
+        "duration": 2.16
+    },
+    {
+        "text": "both screens at the same time.",
+        "start": 681.728,
+        "duration": 0.99
+    },
+    {
+        "text": "No, you see it, but the recording won't.",
+        "start": 683.288,
+        "duration": 1.88
+    },
+    {
+        "text": "Yeah, that's what I'm saying.",
+        "start": 685.328,
+        "duration": 1.01
+    },
+    {
+        "text": "Yeah, I mean everyone is here, so let's,\nyeah, we can do this again at another",
+        "start": 686.378,
+        "duration": 4.56
+    },
+    {
+        "text": "time if anyone wants to try it again.",
+        "start": 690.958,
+        "duration": 1.79
+    },
+    {
+        "text": "Okay.",
+        "start": 695.408,
+        "duration": 0.26
+    },
+    {
+        "text": "Yeah, so I just run Monty and\nnow it's waiting for a new",
+        "start": 695.828,
+        "duration": 2.63
+    },
+    {
+        "text": "data to come in on the iPad.",
+        "start": 698.458,
+        "duration": 1.56
+    },
+    {
+        "text": "so I guess we So we have a button here\nthat says save, and I still have to",
+        "start": 701.838,
+        "duration": 3.74
+    },
+    {
+        "text": "press this button to take a picture.",
+        "start": 705.578,
+        "duration": 2.59
+    },
+    {
+        "text": "Oh, wow, and it's scanning.",
+        "start": 709.348,
+        "duration": 3.77
+    },
+    {
+        "text": "Yeah,",
+        "start": 713.403,
+        "duration": 3.07
+    },
+    {
+        "text": "it's updating the hypothesis.",
+        "start": 719.753,
+        "duration": 1.2
+    },
+    {
+        "text": "I know we've got them up.",
+        "start": 721.303,
+        "duration": 0.75
+    },
+    {
+        "text": "It's got them up.",
+        "start": 722.453,
+        "duration": 0.52
+    },
+    {
+        "text": "How many objects are there?",
+        "start": 722.973,
+        "duration": 4.0
+    },
+    {
+        "text": "Multiple, let's try this one.",
+        "start": 729.333,
+        "duration": 1.67
+    },
+    {
+        "text": "Yeah, nine objects, nine\nobjects at the moment.",
+        "start": 731.003,
+        "duration": 2.71
+    },
+    {
+        "text": "But there's a fair amount of ambiguity.",
+        "start": 733.713,
+        "duration": 3.32
+    },
+    {
+        "text": "It's a pretty difficult data set.",
+        "start": 737.043,
+        "duration": 3.0
+    },
+    {
+        "text": "So he works in, not just\non the phone, it works",
+        "start": 740.583,
+        "duration": 4.24
+    },
+    {
+        "text": "also on the.",
+        "start": 750.483,
+        "duration": 3.02
+    },
+    {
+        "text": "How's the accuracy?",
+        "start": 753.523,
+        "duration": 0.87
+    },
+    {
+        "text": "we even have to think about that.",
+        "start": 755.293,
+        "duration": 1.14
+    },
+    {
+        "text": "Probably the wrong question.",
+        "start": 757.063,
+        "duration": 0.735
+    },
+    {
+        "text": "You know how in ImageNet\nyou have like top five?",
+        "start": 761.618,
+        "duration": 3.125
+    },
+    {
+        "text": "and then, obviously that has a\nthousand categories, whatever.",
+        "start": 766.078,
+        "duration": 2.32
+    },
+    {
+        "text": "Our top one accuracy is around 40 percent\nat the moment, but top two is 80 to 90%.",
+        "start": 768.678,
+        "duration": 7.06
+    },
+    {
+        "text": "That's pretty awesome.",
+        "start": 775.738,
+        "duration": 1.39
+    },
+    {
+        "text": "And that's a simple real transfer.",
+        "start": 777.128,
+        "duration": 1.89
+    },
+    {
+        "text": "If you do, if we do, training\nand inference in simulation, it's",
+        "start": 779.018,
+        "duration": 3.67
+    },
+    {
+        "text": "around 90 percent with noise.",
+        "start": 782.748,
+        "duration": 1.78
+    },
+    {
+        "text": "And hundred percent.",
+        "start": 785.528,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 788.708,
+        "duration": 0.54
+    },
+    {
+        "text": "Almost.",
+        "start": 790.328,
+        "duration": 0.33
+    },
+    {
+        "text": "Got",
+        "start": 790.658,
+        "duration": 0.21
+    },
+    {
+        "text": "it.",
+        "start": 793.673,
+        "duration": 0.22
+    },
+    {
+        "text": "It's, yeah.",
+        "start": 794.003,
+        "duration": 0.53
+    },
+    {
+        "text": "That's very cool.",
+        "start": 795.073,
+        "duration": 0.74
+    },
+    {
+        "text": "What is Kashmiri Chili",
+        "start": 797.403,
+        "duration": 1.37
+    },
+    {
+        "text": "? it's a pack of chili\npowder, what's Montys heart.",
+        "start": 800.918,
+        "duration": 4.975
+    },
+    {
+        "text": "So would it recognize it if we rotated and\nthen, as in the brain on the other side?",
+        "start": 806.708,
+        "duration": 7.17
+    },
+    {
+        "text": "You can try.",
+        "start": 813.968,
+        "duration": 0.39
+    },
+    {
+        "text": "This is Monty's heart.",
+        "start": 814.748,
+        "duration": 0.675
+    },
+    {
+        "text": "We tested a lot of different orientations\nand some work better than others, if you",
+        "start": 820.613,
+        "duration": 4.31
+    },
+    {
+        "text": "just see the cylinder, it often confuses\nit with, because there are two other",
+        "start": 824.923,
+        "duration": 5.25
+    },
+    {
+        "text": "objects that are cylindrical and wide.",
+        "start": 830.173,
+        "duration": 2.11
+    },
+    {
+        "text": "And so if we don't see like unique\nfeatures like the handle, it sometimes.",
+        "start": 832.433,
+        "duration": 4.59
+    },
+    {
+        "text": "Yeah, gets it wrong, but do you need to\nflip the image because it's backwards, the",
+        "start": 837.273,
+        "duration": 4.64
+    },
+    {
+        "text": "writing is backwards, or, I don't know.",
+        "start": 842.113,
+        "duration": 3.23
+    },
+    {
+        "text": "Oh, that's interesting.",
+        "start": 845.903,
+        "duration": 1.22
+    },
+    {
+        "text": "But it still looks like it's.",
+        "start": 847.753,
+        "duration": 1.25
+    },
+    {
+        "text": "Between the two mugs\nquestion, I'm not sure.",
+        "start": 849.543,
+        "duration": 1.8
+    },
+    {
+        "text": "We checked about, oh, that's because it's",
+        "start": 851.343,
+        "duration": 2.815
+    },
+    {
+        "text": "cut.",
+        "start": 858.858,
+        "duration": 0.22
+    },
+    {
+        "text": "Yeah, that's pretty good.",
+        "start": 863.148,
+        "duration": 1.265
+    },
+    {
+        "text": "They got it pretty early too.",
+        "start": 864.413,
+        "duration": 1.26
+    },
+    {
+        "text": "Wow.",
+        "start": 867.403,
+        "duration": 0.69
+    },
+    {
+        "text": "that's very cool.",
+        "start": 870.118,
+        "duration": 0.815
+    },
+    {
+        "text": "That's awesome.",
+        "start": 870.933,
+        "duration": 0.69
+    },
+    {
+        "text": "Excellent.",
+        "start": 871.743,
+        "duration": 0.69
+    },
+    {
+        "text": "That's incredible.",
+        "start": 872.523,
+        "duration": 0.635
+    },
+    {
+        "text": "It looks like it was hard\nto get this all the work.",
+        "start": 874.563,
+        "duration": 1.83
+    },
+    {
+        "text": "Did that was it?",
+        "start": 876.603,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah, it was definitely\nquite a team effort.",
+        "start": 878.428,
+        "duration": 2.66
+    },
+    {
+        "text": "it was really, we had a\nbit of an advantage because",
+        "start": 881.458,
+        "duration": 2.18
+    },
+    {
+        "text": "we were in two time zones.",
+        "start": 883.638,
+        "duration": 1.06
+    },
+    {
+        "text": "So we would have, Niels and I work the\nsame day, then we have a handoff meeting.",
+        "start": 884.798,
+        "duration": 4.37
+    },
+    {
+        "text": "Basically, we're passed the baton\nto Jad and Niels, Jad and Luis, and",
+        "start": 889.498,
+        "duration": 3.9
+    },
+    {
+        "text": "they work during, while we sleep,\nwe wake up, we have a, it was",
+        "start": 893.408,
+        "duration": 4.58
+    },
+    {
+        "text": "like 24 hours around the clock..",
+        "start": 897.988,
+        "duration": 4.55
+    },
+    {
+        "text": "And how did you use ChatGPT?",
+        "start": 902.753,
+        "duration": 1.29
+    },
+    {
+        "text": "What was that?",
+        "start": 904.063,
+        "duration": 1.033
+    },
+    {
+        "text": "Oh, right that closely.",
+        "start": 905.096,
+        "duration": 1.377
+    },
+    {
+        "text": "Oh, I see.",
+        "start": 906.473,
+        "duration": 0.65
+    },
+    {
+        "text": "Okay.",
+        "start": 907.123,
+        "duration": 0.25
+    },
+    {
+        "text": "It was really minor.",
+        "start": 907.453,
+        "duration": 1.41
+    },
+    {
+        "text": "The only thing I used it for\nwas to save the RGB image, but",
+        "start": 908.923,
+        "duration": 5.13
+    },
+    {
+        "text": "yeah, most stuff, we don't see.",
+        "start": 914.513,
+        "duration": 2.75
+    },
+    {
+        "text": "Pretty cool.",
+        "start": 917.263,
+        "duration": 0.64
+    },
+    {
+        "text": "Wow.",
+        "start": 918.703,
+        "duration": 0.57
+    },
+    {
+        "text": "That's the first, real time.",
+        "start": 919.273,
+        "duration": 1.91
+    },
+    {
+        "text": "Yeah.",
+        "start": 922.003,
+        "duration": 0.27
+    },
+    {
+        "text": "Sensorimotor, reference frame.",
+        "start": 922.863,
+        "duration": 3.91
+    },
+    {
+        "text": "Has anyone ever else\ndone this in the world?",
+        "start": 928.583,
+        "duration": 2.1
+    },
+    {
+        "text": "This way.",
+        "start": 931.653,
+        "duration": 0.37
+    },
+    {
+        "text": "I know people have been working on\nan object like this for years, but",
+        "start": 932.023,
+        "duration": 2.4
+    },
+    {
+        "text": "not like with a convolutional neural\nnetwork with a sensorimotor system.",
+        "start": 934.693,
+        "duration": 3.153
+    },
+    {
+        "text": "I think there are active\nvision systems out",
+        "start": 937.846,
+        "duration": 1.707
+    },
+    {
+        "text": "there.",
+        "start": 942.533,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah, it'll be really exciting when,\nyeah, maybe next hackathon, who knows,",
+        "start": 943.938,
+        "duration": 4.17
+    },
+    {
+        "text": "we can have the kind of motor information\ncoming from the iPad and actually",
+        "start": 948.108,
+        "duration": 4.38
+    },
+    {
+        "text": "move around it and things like that.",
+        "start": 953.308,
+        "duration": 1.57
+    },
+    {
+        "text": "Yeah, and another thing we wanted to\ndo, maybe at a future hackathon is",
+        "start": 955.898,
+        "duration": 5.12
+    },
+    {
+        "text": "to actually send back the detected\nobject and pose to the iPad and then",
+        "start": 961.368,
+        "duration": 3.8
+    },
+    {
+        "text": "AR render it onto the camera image.",
+        "start": 965.458,
+        "duration": 2.4
+    },
+    {
+        "text": "So we, you can move it around and have the\ndetection rendered onto it in real time.",
+        "start": 968.268,
+        "duration": 5.75
+    },
+    {
+        "text": "That would be like the spy movies.",
+        "start": 974.478,
+        "duration": 1.4
+    },
+    {
+        "text": "Actually if you stop sharing for a second.",
+        "start": 975.878,
+        "duration": 3.35
+    },
+    {
+        "text": "Yeah, now if we speak I think.",
+        "start": 981.958,
+        "duration": 1.48
+    },
+    {
+        "text": "that one hopefully should be\nrecording this scene right now.",
+        "start": 986.143,
+        "duration": 3.3
+    },
+    {
+        "text": "At",
+        "start": 989.443,
+        "duration": 1.57
+    },
+    {
+        "text": "least on the video.",
+        "start": 993.093,
+        "duration": 3.28
+    },
+    {
+        "text": "It's just that it only picks\none camera image to record.",
+        "start": 996.373,
+        "duration": 2.86
+    },
+    {
+        "text": "And so now, at least a little bit of\nthis video will definitely have this.",
+        "start": 999.603,
+        "duration": 3.62
+    },
+    {
+        "text": "Viviane took like a baby steps\nvideo of the demo earlier.",
+        "start": 1006.703,
+        "duration": 4.89
+    },
+    {
+        "text": "Very impressive.",
+        "start": 1012.088,
+        "duration": 1.1
+    },
+    {
+        "text": "Yeah, that's really amazing.",
+        "start": 1014.228,
+        "duration": 1.63
+    },
+    {
+        "text": "Think of Subutai for lending us the iPad.",
+        "start": 1019.448,
+        "duration": 2.3
+    },
+    {
+        "text": "stand, and the stand.",
+        "start": 1022.193,
+        "duration": 0.57
+    },
+    {
+        "text": "Oh, my iPad was there first.",
+        "start": 1022.813,
+        "duration": 3.135
+    },
+    {
+        "text": "You're on Monty?",
+        "start": 1025.998,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 1026.838,
+        "duration": 0.28
+    },
+    {
+        "text": "And the stand, and everything else.",
+        "start": 1027.588,
+        "duration": 1.44
+    },
+    {
+        "text": "You need to engrave it out.",
+        "start": 1029.298,
+        "duration": 0.89
+    },
+    {
+        "text": "Yeah.",
+        "start": 1030.428,
+        "duration": 0.31
+    },
+    {
+        "text": "Frame it out.",
+        "start": 1030.738,
+        "duration": 1.86
+    },
+    {
+        "text": "Yeah, I don't know if, if other people\nhave had this experience, but a few",
+        "start": 1032.678,
+        "duration": 3.47
+    },
+    {
+        "text": "times in my career, there's been\ntimes when things first start doing",
+        "start": 1036.148,
+        "duration": 3.6
+    },
+    {
+        "text": "anything you know, like we wanted it to.",
+        "start": 1039.788,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 1041.798,
+        "duration": 0.155
+    },
+    {
+        "text": "Yeah.",
+        "start": 1041.953,
+        "duration": 0.155
+    },
+    {
+        "text": "The board comes up with palm pilot for\nthe first time and the months of debugging",
+        "start": 1042.858,
+        "duration": 5.48
+    },
+    {
+        "text": "or something, and this felt like that,",
+        "start": 1048.338,
+        "duration": 2.03
+    },
+    {
+        "text": "except this one was a\nweek of debugging . Yeah.",
+        "start": 1052.418,
+        "duration": 2.575
+    },
+    {
+        "text": "At the beginning of, at the beginning\nof the week, we really had no idea if it",
+        "start": 1056.293,
+        "duration": 4.315
+    },
+    {
+        "text": "would work at all or if it would just.",
+        "start": 1060.608,
+        "duration": 1.531
+    },
+    {
+        "text": "Colossally fail completely.",
+        "start": 1062.693,
+        "duration": 1.8
+    },
+    {
+        "text": "so yeah, I think on Wednesday\nNiels, you sent me the first",
+        "start": 1065.563,
+        "duration": 4.08
+    },
+    {
+        "text": "results and it got it correct.",
+        "start": 1069.643,
+        "duration": 1.54
+    },
+    {
+        "text": "And it was like, too\ngood to be true actually.",
+        "start": 1071.193,
+        "duration": 3.4
+    },
+    {
+        "text": "This is definitely a very\nunrealistic goal to attempt.",
+        "start": 1075.793,
+        "duration": 2.84
+    },
+    {
+        "text": "Congratulations.",
+        "start": 1078.733,
+        "duration": 0.84
+    }
+]

@@ -1,0 +1,1837 @@
+[
+    {
+        "text": "Niels Leadholm: morning, everyone.",
+        "start": 1.22,
+        "duration": 0.64
+    },
+    {
+        "text": "My name's Niels, and I lead the research\nteam at the Thousand Brains Project.",
+        "start": 2.21,
+        "duration": 4.35
+    },
+    {
+        "text": "And today I'm going to be talking\nabout, what Monty's capabilities are.",
+        "start": 7.15,
+        "duration": 4.5
+    },
+    {
+        "text": "today, why we're excited about those, and\nwhy that gives us kind of confidence that",
+        "start": 12.27,
+        "duration": 5.57
+    },
+    {
+        "text": "we're on the right path to developing\nmore general, more capable AI systems.",
+        "start": 17.84,
+        "duration": 5.79
+    },
+    {
+        "text": "And in particular, this is a question we\nthink a lot about, is, how do we actually",
+        "start": 25.15,
+        "duration": 4.13
+    },
+    {
+        "text": "know that, even if we're in an early stage\nof this path towards more general AI, how",
+        "start": 29.28,
+        "duration": 5.71
+    },
+    {
+        "text": "do we actually know that we are following\nthe right direction, alluding to that",
+        "start": 34.99,
+        "duration": 4.81
+    },
+    {
+        "text": "compass that Vivian was showing before?",
+        "start": 39.84,
+        "duration": 2.61
+    },
+    {
+        "text": "And to understand the importance\nof knowing whether you're",
+        "start": 43.66,
+        "duration": 3.59
+    },
+    {
+        "text": "going in the right direction.",
+        "start": 47.26,
+        "duration": 1.13
+    },
+    {
+        "text": "I think it's worth taking a page from\nthe story of evolution, as it were, and",
+        "start": 49.03,
+        "duration": 5.66
+    },
+    {
+        "text": "in particular the development of eyes.",
+        "start": 54.69,
+        "duration": 2.21
+    },
+    {
+        "text": "imagine that you are a simple organism\nin the ancient oceans of the world.",
+        "start": 58.87,
+        "duration": 4.3
+    },
+    {
+        "text": "And a predator like this\nis swimming over you.",
+        "start": 64.01,
+        "duration": 2.5
+    },
+    {
+        "text": "If you've developed this kind of\nsheet of light-sensitive cells, that's",
+        "start": 67.13,
+        "duration": 3.43
+    },
+    {
+        "text": "already a really useful innovation.",
+        "start": 70.56,
+        "duration": 1.73
+    },
+    {
+        "text": "You can notice that this\npredator is approaching you.",
+        "start": 72.88,
+        "duration": 2.48
+    },
+    {
+        "text": "And swim away.",
+        "start": 76.06,
+        "duration": 0.67
+    },
+    {
+        "text": "But there are two ways that you\ncan make this even more useful.",
+        "start": 78.62,
+        "duration": 4.07
+    },
+    {
+        "text": "One is to form this sheet\nof cells into a mound.",
+        "start": 83.71,
+        "duration": 3.14
+    },
+    {
+        "text": "And the other one is to\nform it into a dimple.",
+        "start": 88.12,
+        "duration": 1.72
+    },
+    {
+        "text": "And these seem like subtle distinctions.",
+        "start": 90.99,
+        "duration": 2.34
+    },
+    {
+        "text": "And at this point, they give,\nactually, the same effect, which",
+        "start": 94.11,
+        "duration": 3.19
+    },
+    {
+        "text": "is to give you some sense of what\ndirection the light is coming from.",
+        "start": 97.3,
+        "duration": 3.38
+    },
+    {
+        "text": "And so when that predator is\napproaching, you have a better sense",
+        "start": 100.83,
+        "duration": 2.42
+    },
+    {
+        "text": "of which way should run away to.",
+        "start": 103.25,
+        "duration": 2.15
+    },
+    {
+        "text": "But what's interesting is this kind\nof subtle decision at the start has",
+        "start": 106.67,
+        "duration": 4.24
+    },
+    {
+        "text": "profound implications later down\nthe line for what eyes look like",
+        "start": 110.92,
+        "duration": 3.76
+    },
+    {
+        "text": "over millions of years of evolution.",
+        "start": 114.88,
+        "duration": 1.74
+    },
+    {
+        "text": "And in particular, the mound leads\nto a compound eye, what you will",
+        "start": 117.73,
+        "duration": 4.08
+    },
+    {
+        "text": "be familiar with from insects.",
+        "start": 121.81,
+        "duration": 1.99
+    },
+    {
+        "text": "Whereas the dimple leads to camera-like\neyes, as you find in humans and other",
+        "start": 125.3,
+        "duration": 5.8
+    },
+    {
+        "text": "complex animals with large brains.",
+        "start": 131.12,
+        "duration": 2.85
+    },
+    {
+        "text": "And neither one of these kind of\nsolutions is the right solution.",
+        "start": 134.94,
+        "duration": 3.37
+    },
+    {
+        "text": "They both have their own advantages,\ncompound eyes are good for a wide field",
+        "start": 138.35,
+        "duration": 3.53
+    },
+    {
+        "text": "of view, and if you have a small body\nsize, whereas the camera eye is good",
+        "start": 141.88,
+        "duration": 4.32
+    },
+    {
+        "text": "for high acuity vision, and particularly\nwhen powered by these large brains.",
+        "start": 146.2,
+        "duration": 5.39
+    },
+    {
+        "text": "But what's important is that once you\ngo down one of these tracks, it's very",
+        "start": 152.75,
+        "duration": 3.81
+    },
+    {
+        "text": "difficult, almost impossible, to go back\nand redesign things from the ground up.",
+        "start": 156.56,
+        "duration": 4.43
+    },
+    {
+        "text": "Really, you're committed to this initial\ntemplate in a way that constrains all",
+        "start": 162.0,
+        "duration": 5.3
+    },
+    {
+        "text": "future solutions you might come across.",
+        "start": 167.3,
+        "duration": 2.12
+    },
+    {
+        "text": "And we believe that a similar story\nis playing out in terms of the",
+        "start": 170.74,
+        "duration": 3.31
+    },
+    {
+        "text": "development of intelligent AI systems.",
+        "start": 174.05,
+        "duration": 3.06
+    },
+    {
+        "text": "In particular, in the 20th century,\nit was already realized that neurons",
+        "start": 178.6,
+        "duration": 4.26
+    },
+    {
+        "text": "were the core computational unit of the\nbrain, and that there are various ways",
+        "start": 182.86,
+        "duration": 4.33
+    },
+    {
+        "text": "we could mathematically model them.",
+        "start": 187.19,
+        "duration": 1.57
+    },
+    {
+        "text": "But then in the 80s, it was already\napparent that it's very difficult to",
+        "start": 190.25,
+        "duration": 3.43
+    },
+    {
+        "text": "get these networks of neurons to learn\nand do anything useful, and so this",
+        "start": 193.68,
+        "duration": 4.54
+    },
+    {
+        "text": "algorithm, backprop, backpropagation,\nwas invented, as a sort of workaround",
+        "start": 198.3,
+        "duration": 5.29
+    },
+    {
+        "text": "to get the system to learn.",
+        "start": 203.63,
+        "duration": 1.46
+    },
+    {
+        "text": "And we believe that, at this point,\nthere was a fundamental forking",
+        "start": 206.43,
+        "duration": 3.85
+    },
+    {
+        "text": "between biological intelligence and\nthe AI systems that rely on this back",
+        "start": 210.28,
+        "duration": 6.78
+    },
+    {
+        "text": "prop, given that it's not a kind of\nbiologically plausible form of learning.",
+        "start": 217.07,
+        "duration": 4.88
+    },
+    {
+        "text": "This ultimately led to what we are\nfamiliar with today, deep learning.",
+        "start": 222.72,
+        "duration": 4.07
+    },
+    {
+        "text": "But what we are pursuing, and what\nwe think is important, is this",
+        "start": 228.16,
+        "duration": 3.86
+    },
+    {
+        "text": "alternative path, relying on, first\nand foremost, local learning, like",
+        "start": 232.05,
+        "duration": 3.64
+    },
+    {
+        "text": "Vivian mentioned, and also these\nother key principles, like reference",
+        "start": 235.69,
+        "duration": 3.35
+    },
+    {
+        "text": "frames, distributed modules, things\nyou're going to hear more about today.",
+        "start": 239.05,
+        "duration": 3.89
+    },
+    {
+        "text": "And we really believe that\nthese are the key principles",
+        "start": 244.57,
+        "duration": 2.18
+    },
+    {
+        "text": "that enable the sensorimotor\nintelligence we find in nature.",
+        "start": 246.79,
+        "duration": 2.99
+    },
+    {
+        "text": "And that they are going to be\nessential to develop a sensorimotor",
+        "start": 250.47,
+        "duration": 3.83
+    },
+    {
+        "text": "intelligence through artificial means.",
+        "start": 254.32,
+        "duration": 2.14
+    },
+    {
+        "text": "And once again.",
+        "start": 258.21,
+        "duration": 0.83
+    },
+    {
+        "text": "There's this issue that if you go down\nthis path, once you are relying at,",
+        "start": 259.74,
+        "duration": 4.28
+    },
+    {
+        "text": "the core level of your design on these\nearly assumptions, it's very difficult",
+        "start": 264.31,
+        "duration": 4.94
+    },
+    {
+        "text": "to remove the issues that come with\nthese underlying assumptions without",
+        "start": 269.31,
+        "duration": 4.69
+    },
+    {
+        "text": "going all the way back to the start.",
+        "start": 274.0,
+        "duration": 1.53
+    },
+    {
+        "text": "And we're seeing this play out in\nthe way that some of the key players",
+        "start": 276.86,
+        "duration": 5.58
+    },
+    {
+        "text": "are attempting to develop improved\nAI systems today, where kind of",
+        "start": 282.45,
+        "duration": 5.22
+    },
+    {
+        "text": "the only recourse left is just to\nscale systems up larger and larger.",
+        "start": 287.68,
+        "duration": 4.33
+    },
+    {
+        "text": "But as you've likely heard, these\napproaches are not sustainable",
+        "start": 293.35,
+        "duration": 3.53
+    },
+    {
+        "text": "from an energy or data perspective.",
+        "start": 296.89,
+        "duration": 2.38
+    },
+    {
+        "text": "And I'd like to ask you to imagine,\nby analogy of why this is a problem.",
+        "start": 300.15,
+        "duration": 6.93
+    },
+    {
+        "text": "Imagine what would happen if evolution\ntried to develop an eye that has the",
+        "start": 307.91,
+        "duration": 4.12
+    },
+    {
+        "text": "same acuity, the same kind of high\nresolution as a human eye, but based",
+        "start": 312.03,
+        "duration": 4.58
+    },
+    {
+        "text": "on that template of the compound eye.",
+        "start": 316.61,
+        "duration": 2.49
+    },
+    {
+        "text": "you don't have to imagine it, because\nKirschfeld in the 70s actually calculated",
+        "start": 320.7,
+        "duration": 4.07
+    },
+    {
+        "text": "this and provided us with this drawing.",
+        "start": 324.77,
+        "duration": 2.17
+    },
+    {
+        "text": "But really, this just kind of hammers\nhome the importance of, early on,",
+        "start": 328.42,
+        "duration": 3.45
+    },
+    {
+        "text": "really finding what are the key\nprinciples that are necessary to",
+        "start": 331.89,
+        "duration": 3.46
+    },
+    {
+        "text": "reach the end goal that you want.",
+        "start": 335.35,
+        "duration": 2.25
+    },
+    {
+        "text": "Another way of maybe looking at\nthis is that, every technology has",
+        "start": 339.12,
+        "duration": 3.32
+    },
+    {
+        "text": "its appropriate ideal problem set.",
+        "start": 342.44,
+        "duration": 2.2
+    },
+    {
+        "text": "calculators are great\nfor numerical operations.",
+        "start": 345.26,
+        "duration": 2.56
+    },
+    {
+        "text": "And deep learning is clearly a powerful\ntechnology with a wide variety of use",
+        "start": 348.47,
+        "duration": 4.17
+    },
+    {
+        "text": "cases, what we would summarize as function\napproximation and generative sampling.",
+        "start": 352.64,
+        "duration": 5.33
+    },
+    {
+        "text": "So something like AlphaFold is\na great example of where deep",
+        "start": 358.39,
+        "duration": 3.11
+    },
+    {
+        "text": "learning can do really well.",
+        "start": 361.58,
+        "duration": 1.71
+    },
+    {
+        "text": "But we believe that if you want a\nsystem that can interact in open-ended,",
+        "start": 365.05,
+        "duration": 4.69
+    },
+    {
+        "text": "real-world, embodied settings, and\nall the complexity that comes with",
+        "start": 370.01,
+        "duration": 3.09
+    },
+    {
+        "text": "that, then you really need to embrace\na different set of principles, a",
+        "start": 373.11,
+        "duration": 3.67
+    },
+    {
+        "text": "different set of learning principles\nin order to develop such systems.",
+        "start": 376.78,
+        "duration": 4.34
+    },
+    {
+        "text": "And that's what we're really focused\non, here at the Thousand Brains Project.",
+        "start": 381.53,
+        "duration": 4.926
+    },
+    {
+        "text": "So that's why we think a\nlot about that problem.",
+        "start": 387.23,
+        "duration": 2.42
+    },
+    {
+        "text": "Now then the question is, what\ngives us some confidence that we",
+        "start": 390.06,
+        "duration": 3.42
+    },
+    {
+        "text": "are, in fact, on that right path?",
+        "start": 393.54,
+        "duration": 1.69
+    },
+    {
+        "text": "And to answer that, I'm going to show some\nof the capabilities that Monty has today.",
+        "start": 395.87,
+        "duration": 4.31
+    },
+    {
+        "text": "But really, the kind of high-level\nsummary is that we've designed Monty",
+        "start": 401.09,
+        "duration": 4.4
+    },
+    {
+        "text": "really just looking at neuroscience,\nevidence, and thinking through, first",
+        "start": 405.67,
+        "duration": 4.57
+    },
+    {
+        "text": "principles of how this system should work.",
+        "start": 410.32,
+        "duration": 2.09
+    },
+    {
+        "text": "And what's really exciting is a whole\nlist of capabilities have just emerged",
+        "start": 413.02,
+        "duration": 5.79
+    },
+    {
+        "text": "through very little effort in this system.",
+        "start": 418.83,
+        "duration": 2.35
+    },
+    {
+        "text": "Any one of these capabilities, I\nshould note, would be a kind of",
+        "start": 422.45,
+        "duration": 3.48
+    },
+    {
+        "text": "significant finding in machine learning.",
+        "start": 425.93,
+        "duration": 2.18
+    },
+    {
+        "text": "for example, symmetry recognition.",
+        "start": 428.29,
+        "duration": 1.97
+    },
+    {
+        "text": "So the ability to realize that as\nyou rotate an object around certain",
+        "start": 430.28,
+        "duration": 3.94
+    },
+    {
+        "text": "axes and certain objects, then some\nof these rotations are comparable.",
+        "start": 434.24,
+        "duration": 3.93
+    },
+    {
+        "text": "That's a very difficult thing to\nhave emerge in a learning system",
+        "start": 438.87,
+        "duration": 3.42
+    },
+    {
+        "text": "without really baking in that already.",
+        "start": 442.3,
+        "duration": 2.54
+    },
+    {
+        "text": "But this is something that Monty,\nwe found, just developed naturally.",
+        "start": 446.1,
+        "duration": 3.15
+    },
+    {
+        "text": "Continual learning, you may have\nheard about, is a major challenge",
+        "start": 450.26,
+        "duration": 2.96
+    },
+    {
+        "text": "in deep learning, and again,\nthis is something that Monty",
+        "start": 453.22,
+        "duration": 2.57
+    },
+    {
+        "text": "Essentially has, naturally, just\nas a result of how it's designed.",
+        "start": 456.39,
+        "duration": 3.63
+    },
+    {
+        "text": "But importantly, we didn't\nset out to solve symmetry",
+        "start": 460.67,
+        "duration": 2.78
+    },
+    {
+        "text": "or solve continual learning.",
+        "start": 463.61,
+        "duration": 1.27
+    },
+    {
+        "text": "Rather, we just set out to design a system\nbased on these first principles, and",
+        "start": 465.24,
+        "duration": 4.37
+    },
+    {
+        "text": "then these are the kinds of capabilities\nthat we're just finding that it has.",
+        "start": 469.61,
+        "duration": 4.98
+    },
+    {
+        "text": "There's a lot on that list, and\nunfortunately I don't have time",
+        "start": 476.76,
+        "duration": 2.7
+    },
+    {
+        "text": "to talk about all of them today.",
+        "start": 479.46,
+        "duration": 1.14
+    },
+    {
+        "text": "If you're interested to learn more,\nwe have this paper that Vivian",
+        "start": 480.64,
+        "duration": 3.32
+    },
+    {
+        "text": "mentioned we posted online last\nsummer, and as she said, it's just",
+        "start": 483.96,
+        "duration": 3.76
+    },
+    {
+        "text": "been accepted in neural computation,\nso I definitely encourage you to go",
+        "start": 487.72,
+        "duration": 2.98
+    },
+    {
+        "text": "and take a look if you're interested.",
+        "start": 490.7,
+        "duration": 1.95
+    },
+    {
+        "text": "But to give you a bit of context before\nI show some of the results, essentially",
+        "start": 494.54,
+        "duration": 3.96
+    },
+    {
+        "text": "Monty is looking at a series of objects.",
+        "start": 498.51,
+        "duration": 3.37
+    },
+    {
+        "text": "There's around 80 objects we evaluated\nwith in a simulated setting, and these",
+        "start": 501.91,
+        "duration": 4.7
+    },
+    {
+        "text": "are just everyday household objects.",
+        "start": 506.61,
+        "duration": 2.12
+    },
+    {
+        "text": "And Monty's task is to look at these in\nturn, learn about them, and then it's",
+        "start": 509.84,
+        "duration": 4.88
+    },
+    {
+        "text": "going to be presented with an object,\nand it has to both recognize it, and also",
+        "start": 514.74,
+        "duration": 3.96
+    },
+    {
+        "text": "try to estimate, basically, the pose of\nthe object, its orientation in space.",
+        "start": 518.7,
+        "duration": 5.78
+    },
+    {
+        "text": "And so what you see here on the right\nis, again, just giving you a bit more of",
+        "start": 526.49,
+        "duration": 2.97
+    },
+    {
+        "text": "a context of, what does that look like?",
+        "start": 529.46,
+        "duration": 1.79
+    },
+    {
+        "text": "But on the left, this wide\nview is just for our benefit.",
+        "start": 531.67,
+        "duration": 3.44
+    },
+    {
+        "text": "This is not what Monty sees.",
+        "start": 535.12,
+        "duration": 1.37
+    },
+    {
+        "text": "This is just to orient you in space\nand realize, okay, Monty is near a",
+        "start": 536.92,
+        "duration": 3.55
+    },
+    {
+        "text": "red mug, and it's moving over it.",
+        "start": 540.48,
+        "duration": 1.65
+    },
+    {
+        "text": "But actually, what Monty sees, this\nis something Vivian mentioned briefly,",
+        "start": 543.03,
+        "duration": 3.29
+    },
+    {
+        "text": "and you'll hear more about in Scott's\ntalk, Monty actually just gets",
+        "start": 546.32,
+        "duration": 3.39
+    },
+    {
+        "text": "this very narrow perceptual input.",
+        "start": 549.71,
+        "duration": 2.03
+    },
+    {
+        "text": "A bit like looking through a straw.",
+        "start": 552.91,
+        "duration": 1.41
+    },
+    {
+        "text": "But by combining this with movement,\nit's able to do all the amazing things",
+        "start": 554.96,
+        "duration": 4.65
+    },
+    {
+        "text": "that I'm going to talk about soon.",
+        "start": 559.65,
+        "duration": 1.53
+    },
+    {
+        "text": "And what is the kind\nof first one of those?",
+        "start": 563.72,
+        "duration": 2.04
+    },
+    {
+        "text": "the first one is rapid learning.",
+        "start": 565.92,
+        "duration": 1.38
+    },
+    {
+        "text": "And humans naturally learn very quickly.",
+        "start": 567.93,
+        "duration": 2.58
+    },
+    {
+        "text": "You'll all be you'll know that if you\nlook at a new object and kind of study",
+        "start": 571.24,
+        "duration": 4.54
+    },
+    {
+        "text": "it for a few moments, you can already\ndevelop a representation about it.",
+        "start": 575.78,
+        "duration": 3.71
+    },
+    {
+        "text": "You don't need to study all these images\nof that object, to the count of millions",
+        "start": 579.66,
+        "duration": 5.94
+    },
+    {
+        "text": "in order to learn a useful representation.",
+        "start": 585.62,
+        "duration": 3.06
+    },
+    {
+        "text": "And this is something that\nwe've observed in Monty.",
+        "start": 589.55,
+        "duration": 2.56
+    },
+    {
+        "text": "So the way we can look at this,\nfor example, is to take those 80\u2026",
+        "start": 593.23,
+        "duration": 3.75
+    },
+    {
+        "text": "around 80 objects I was describing\nearlier, show just one view of each",
+        "start": 597.14,
+        "duration": 4.4
+    },
+    {
+        "text": "object, so it just sees it from a\nsingle side, and it just gets to",
+        "start": 601.54,
+        "duration": 3.75
+    },
+    {
+        "text": "spend a single episode studying it.",
+        "start": 605.34,
+        "duration": 2.85
+    },
+    {
+        "text": "And then we're going to show a novel\nview, an entirely, unseen rotation of",
+        "start": 609.14,
+        "duration": 5.26
+    },
+    {
+        "text": "the object, and we're basically going\nto ask Monty to try and recognize",
+        "start": 614.41,
+        "duration": 3.68
+    },
+    {
+        "text": "it, and again, predict the pose.",
+        "start": 618.09,
+        "duration": 1.5
+    },
+    {
+        "text": "And just given this one view of each of\nthe objects, Monty can already achieve",
+        "start": 621.19,
+        "duration": 4.68
+    },
+    {
+        "text": "a classification accuracy of around 50%.",
+        "start": 626.04,
+        "duration": 2.13
+    },
+    {
+        "text": "And it's worth highlighting that in\nthis dataset of around 80 objects and",
+        "start": 628.44,
+        "duration": 4.255
+    },
+    {
+        "text": "many rotations, chance is just over 1%.",
+        "start": 632.91,
+        "duration": 1.9
+    },
+    {
+        "text": "So this is a pretty,\npretty significant finding.",
+        "start": 636.48,
+        "duration": 2.36
+    },
+    {
+        "text": "The way it does this, I won't go into it\nat this moment, but essentially it comes",
+        "start": 639.52,
+        "duration": 4.19
+    },
+    {
+        "text": "down to how Monty represents these objects\nas learning based on their actual shape,",
+        "start": 643.71,
+        "duration": 4.86
+    },
+    {
+        "text": "and also how it's transforming the inputs\nit's receiving based on its hypotheses.",
+        "start": 649.04,
+        "duration": 3.91
+    },
+    {
+        "text": "But we can then compare\nto a deep learning system.",
+        "start": 655.49,
+        "duration": 2.59
+    },
+    {
+        "text": "That gets a comparable amount\nof data, and in that case, it",
+        "start": 658.69,
+        "duration": 2.9
+    },
+    {
+        "text": "only gets around 30% accuracy.",
+        "start": 661.59,
+        "duration": 2.47
+    },
+    {
+        "text": "This is really an extremely\nchallenging problem, as you can",
+        "start": 666.1,
+        "duration": 3.12
+    },
+    {
+        "text": "imagine, if you've worked with deep\nlearning systems before, to train",
+        "start": 669.22,
+        "duration": 3.2
+    },
+    {
+        "text": "it, given so few views of an object.",
+        "start": 672.44,
+        "duration": 2.9
+    },
+    {
+        "text": "This finding holds as we extrapolate\nthe data more, so if we give 8 views",
+        "start": 676.29,
+        "duration": 3.95
+    },
+    {
+        "text": "of the object, you can imagine if\nyou were learning about this one, you",
+        "start": 680.24,
+        "duration": 3.26
+    },
+    {
+        "text": "would hold it in your hand, rotate it\naround, look at it from multiple angles.",
+        "start": 683.5,
+        "duration": 3.51
+    },
+    {
+        "text": "And again, we'll present\nnovel views to Monty.",
+        "start": 688.67,
+        "duration": 2.71
+    },
+    {
+        "text": "And this time, we get around 90% accuracy,\nso approaching ceiling performance, which",
+        "start": 691.97,
+        "duration": 5.41
+    },
+    {
+        "text": "can\u2026 is, consistent with the idea that you\nare presenting Monty with the different",
+        "start": 697.38,
+        "duration": 4.47
+    },
+    {
+        "text": "sides of the object, such that it can\nbuild a more, full representation of it.",
+        "start": 701.85,
+        "duration": 3.6
+    },
+    {
+        "text": "The other thing we're showing here\nis, if we look at the rotation error,",
+        "start": 706.47,
+        "duration": 4.16
+    },
+    {
+        "text": "so how well Monty does at predicting\nthe orientation of the object in",
+        "start": 710.63,
+        "duration": 4.63
+    },
+    {
+        "text": "space, it does really quite well.",
+        "start": 715.26,
+        "duration": 2.54
+    },
+    {
+        "text": "Only about 40 degrees of\nerror, so lower here is better.",
+        "start": 718.34,
+        "duration": 3.54
+    },
+    {
+        "text": "If we compare, again, to a deep\nlearning system that gets a comparable",
+        "start": 723.4,
+        "duration": 3.11
+    },
+    {
+        "text": "amount of data, the accuracy is\nmore around 70%, whereas the kind",
+        "start": 726.51,
+        "duration": 5.2
+    },
+    {
+        "text": "of rotation error is significantly\nhigher, so around 110 degrees.",
+        "start": 731.71,
+        "duration": 4.32
+    },
+    {
+        "text": "But it's not just that Monty learns\nvery quickly, like humans, it also",
+        "start": 738.88,
+        "duration": 4.35
+    },
+    {
+        "text": "develops robust representations, and\nwhat I mean by that is that we can throw",
+        "start": 743.24,
+        "duration": 4.58
+    },
+    {
+        "text": "things at the task to make it harder,\nand Monty can still perform well.",
+        "start": 747.82,
+        "duration": 4.89
+    },
+    {
+        "text": "If you have some familiarity\nwith machine learning and deep",
+        "start": 754.34,
+        "duration": 3.33
+    },
+    {
+        "text": "learning, you may think that object\nrecognition is a solved problem.",
+        "start": 757.67,
+        "duration": 4.39
+    },
+    {
+        "text": "But the reality is that even the\nbest systems today struggle at",
+        "start": 762.64,
+        "duration": 3.63
+    },
+    {
+        "text": "recognizing objects, given unusual\nand adversarial conditions.",
+        "start": 766.27,
+        "duration": 4.44
+    },
+    {
+        "text": "for example, this pink elephant is\nvery obviously still an elephant to us.",
+        "start": 771.35,
+        "duration": 4.66
+    },
+    {
+        "text": "But because deep learning systems seem\nto have an over-reliance on things like",
+        "start": 776.58,
+        "duration": 4.27
+    },
+    {
+        "text": "color and texture, they can easily be\nthrown off by this kind of stimulus.",
+        "start": 780.85,
+        "duration": 4.45
+    },
+    {
+        "text": "in this case, one of the networks\nthought that this was a flamingo,",
+        "start": 785.56,
+        "duration": 3.08
+    },
+    {
+        "text": "presumably because of the color.",
+        "start": 788.95,
+        "duration": 1.38
+    },
+    {
+        "text": "And in the case of Monty, we took the\nobjects that it was seen in simulation.",
+        "start": 792.65,
+        "duration": 4.0
+    },
+    {
+        "text": "And we perturbed them in such a way\nto make it more challenging, to make",
+        "start": 797.39,
+        "duration": 4.01
+    },
+    {
+        "text": "it harder for Monty to recognize them.",
+        "start": 801.4,
+        "duration": 2.12
+    },
+    {
+        "text": "for\u2026 one way we did this was to add noise\nto the location where Monty thinks it",
+        "start": 804.5,
+        "duration": 5.02
+    },
+    {
+        "text": "is on the object, which it's constantly\ntrying to estimate through movement.",
+        "start": 809.53,
+        "duration": 3.58
+    },
+    {
+        "text": "We also would rotate the objects in\nunusual ways that it had never seen",
+        "start": 814.08,
+        "duration": 3.82
+    },
+    {
+        "text": "before, and then, with the kind of last\ncondition, we actually just changed",
+        "start": 817.9,
+        "duration": 4.14
+    },
+    {
+        "text": "the color outright of the object\nto something totally different, and",
+        "start": 822.04,
+        "duration": 3.38
+    },
+    {
+        "text": "importantly, something it had never\nseen before in the case of that object.",
+        "start": 825.43,
+        "duration": 3.32
+    },
+    {
+        "text": "And so what you're seeing here is those\ndifferent conditions along the bottom.",
+        "start": 831.36,
+        "duration": 3.7
+    },
+    {
+        "text": "Where they're becoming increasingly\ndifficult, as you go towards the right.",
+        "start": 835.74,
+        "duration": 3.99
+    },
+    {
+        "text": "And then on the left-hand side, we\nhave, in the kind of blue bars, we",
+        "start": 841.49,
+        "duration": 3.84
+    },
+    {
+        "text": "have the accuracy of Monty, so how\nwell it's doing at classification.",
+        "start": 845.33,
+        "duration": 3.53
+    },
+    {
+        "text": "And on the right-hand side, the purple\ndistributions, we have the rotation error.",
+        "start": 849.55,
+        "duration": 4.06
+    },
+    {
+        "text": "So here, we want lower is better.",
+        "start": 853.64,
+        "duration": 2.08
+    },
+    {
+        "text": "And what's important to highlight\nis that all of these perturbations",
+        "start": 857.71,
+        "duration": 2.95
+    },
+    {
+        "text": "that we are doing here are out of\ndistribution, so that means that this is",
+        "start": 860.7,
+        "duration": 3.82
+    },
+    {
+        "text": "not something that Monty's been trained\non before, that it's seen this kind",
+        "start": 864.53,
+        "duration": 4.9
+    },
+    {
+        "text": "of noise in the past during learning.",
+        "start": 869.43,
+        "duration": 1.69
+    },
+    {
+        "text": "In the case, for example, of the new\ncolor, Monty has never seen this mug in",
+        "start": 871.87,
+        "duration": 4.61
+    },
+    {
+        "text": "any color other than its natural one.",
+        "start": 876.48,
+        "duration": 2.03
+    },
+    {
+        "text": "But what's really encouraging is you\nsee this steady performance as we",
+        "start": 879.51,
+        "duration": 3.92
+    },
+    {
+        "text": "ramp up the difficulty of this task.",
+        "start": 884.16,
+        "duration": 1.74
+    },
+    {
+        "text": "And just to give a bit of,\ncontext, again, chance performance",
+        "start": 886.44,
+        "duration": 3.53
+    },
+    {
+        "text": "in this setting is around 1%.",
+        "start": 889.99,
+        "duration": 1.76
+    },
+    {
+        "text": "It's also remarkable, given that even\nfor humans, for example, in the case",
+        "start": 893.79,
+        "duration": 4.0
+    },
+    {
+        "text": "of changing the color, the particular\ndataset in question, some of the objects",
+        "start": 897.79,
+        "duration": 5.22
+    },
+    {
+        "text": "are just inherently ambiguous if you\nentirely remove that color information.",
+        "start": 903.01,
+        "duration": 3.64
+    },
+    {
+        "text": "going back to then, the deep learning\nI was talking about earlier, deep",
+        "start": 909.21,
+        "duration": 3.63
+    },
+    {
+        "text": "learning systems, this is exactly\nthe kind of perturbation that they",
+        "start": 912.84,
+        "duration": 3.84
+    },
+    {
+        "text": "struggle on, where it's out of\ndistribution, it's not something",
+        "start": 916.68,
+        "duration": 2.68
+    },
+    {
+        "text": "they've been trained on before, and it,",
+        "start": 919.36,
+        "duration": 2.8
+    },
+    {
+        "text": "This is the kind of perturbation that\nleads to the sort of weird results",
+        "start": 924.2,
+        "duration": 3.1
+    },
+    {
+        "text": "I was showing of the pink elephant.",
+        "start": 927.32,
+        "duration": 1.73
+    },
+    {
+        "text": "But it's, so now I've talked about\nthe, rapid learning and the robust",
+        "start": 931.64,
+        "duration": 6.21
+    },
+    {
+        "text": "inference that Monty can do.",
+        "start": 937.88,
+        "duration": 1.83
+    },
+    {
+        "text": "But we also want the system to be able to\nact and move intelligently in the world.",
+        "start": 940.38,
+        "duration": 4.56
+    },
+    {
+        "text": "And one kind of\u2026 one of the encouraging\nthings we found is that with the",
+        "start": 945.73,
+        "duration": 4.18
+    },
+    {
+        "text": "architecture that we've developed,\nit's been relatively simple to add",
+        "start": 950.27,
+        "duration": 4.35
+    },
+    {
+        "text": "in these more intelligent policies.",
+        "start": 954.62,
+        "duration": 2.05
+    },
+    {
+        "text": "So policies are how a system decides\nto move in the world, given the learned",
+        "start": 956.89,
+        "duration": 4.31
+    },
+    {
+        "text": "representations that it develops.",
+        "start": 961.2,
+        "duration": 1.54
+    },
+    {
+        "text": "And so what I'm showing here is something\nwe call the hypothesis testing policy.",
+        "start": 964.19,
+        "duration": 3.43
+    },
+    {
+        "text": "Where in this particular case, Monty is\nlooking at something like a spoon, or",
+        "start": 968.4,
+        "duration": 4.27
+    },
+    {
+        "text": "it is looking at a spoon, in this case.",
+        "start": 972.71,
+        "duration": 2.18
+    },
+    {
+        "text": "And it starts here on the handle,\nand a bit like a finger, is",
+        "start": 975.49,
+        "duration": 4.11
+    },
+    {
+        "text": "basically moving along the surface\nuntil it reaches this point.",
+        "start": 979.6,
+        "duration": 3.33
+    },
+    {
+        "text": "While it's doing that kind of sensing,\nit's developing some hypotheses",
+        "start": 984.08,
+        "duration": 3.73
+    },
+    {
+        "text": "about what it may be feeling.",
+        "start": 987.82,
+        "duration": 1.86
+    },
+    {
+        "text": "And by the point that it reaches\nthis kind of bottom of the handle,",
+        "start": 990.36,
+        "duration": 3.73
+    },
+    {
+        "text": "its top hypotheses, its top kind\nof beliefs for what it might be",
+        "start": 994.48,
+        "duration": 3.05
+    },
+    {
+        "text": "sensing are a spoon and a fork.",
+        "start": 997.53,
+        "duration": 2.78
+    },
+    {
+        "text": "What it then does is to use the learned\nmodels it has for these objects to",
+        "start": 1001.85,
+        "duration": 4.7
+    },
+    {
+        "text": "understand that, based on how they would\nbe in the world, based on what it sensed.",
+        "start": 1006.98,
+        "duration": 4.49
+    },
+    {
+        "text": "Where should it move to most\nquickly distinguish between them?",
+        "start": 1012.01,
+        "duration": 3.7
+    },
+    {
+        "text": "And this is where it then develops\nthis kind of goal of moving to the tip",
+        "start": 1016.82,
+        "duration": 3.95
+    },
+    {
+        "text": "of the spoon, because it understands\nthat's the point that differs most",
+        "start": 1020.77,
+        "duration": 3.62
+    },
+    {
+        "text": "from the fork that it's familiar with.",
+        "start": 1024.64,
+        "duration": 1.97
+    },
+    {
+        "text": "And so this is exactly what it does.",
+        "start": 1027.42,
+        "duration": 1.87
+    },
+    {
+        "text": "It generates this goal to\nmove to the head of the spoon.",
+        "start": 1029.3,
+        "duration": 2.11
+    },
+    {
+        "text": "This is passed to the motor system,\nand then the motor system executes",
+        "start": 1031.75,
+        "duration": 2.75
+    },
+    {
+        "text": "that action, and Monty moves there.",
+        "start": 1035.28,
+        "duration": 1.83
+    },
+    {
+        "text": "And what we find then is, as Monty\nmoves to that location, it quickly",
+        "start": 1037.11,
+        "duration": 4.46
+    },
+    {
+        "text": "realizes that the observations it's\nreceiving are consistent with the",
+        "start": 1041.58,
+        "duration": 3.81
+    },
+    {
+        "text": "spoon, the evidence, the belief in\nthe fork representation falls off.",
+        "start": 1045.42,
+        "duration": 5.23
+    },
+    {
+        "text": "And in kind of larger\nexperiments this leads to Monty",
+        "start": 1051.25,
+        "duration": 4.37
+    },
+    {
+        "text": "recognizing more quickly and more",
+        "start": 1055.64,
+        "duration": 1.96
+    },
+    {
+        "text": "robustly.",
+        "start": 1061.01,
+        "duration": 0.01
+    },
+    {
+        "text": "A problem I mentioned earlier that\nis fundamental in deep learning",
+        "start": 1061.02,
+        "duration": 3.31
+    },
+    {
+        "text": "and has been open for many years\nis this one of continual learning.",
+        "start": 1064.33,
+        "duration": 3.78
+    },
+    {
+        "text": "Of being able to add new representations\nwithout forgetting about previous ones.",
+        "start": 1068.42,
+        "duration": 5.08
+    },
+    {
+        "text": "Now, naturally, humans\nare continual learners.",
+        "start": 1074.56,
+        "duration": 2.83
+    },
+    {
+        "text": "We are lifelong learners\nwithout any kind of difficulty",
+        "start": 1077.42,
+        "duration": 4.55
+    },
+    {
+        "text": "And so it can be a bit counterintuitive\nwhy continual learning is",
+        "start": 1083.32,
+        "duration": 4.24
+    },
+    {
+        "text": "an issue in the first place.",
+        "start": 1088.03,
+        "duration": 1.15
+    },
+    {
+        "text": "And to in the case of deep learning, and\nso to make this a bit more, intuitive.",
+        "start": 1090.79,
+        "duration": 4.82
+    },
+    {
+        "text": "I want you to imagine, how you're\nor observe how your brain learns.",
+        "start": 1096.31,
+        "duration": 3.8
+    },
+    {
+        "text": "if you're looking at an object like this.",
+        "start": 1100.8,
+        "duration": 1.69
+    },
+    {
+        "text": "Your eyes move over it, you study\nit, and if you were the person",
+        "start": 1103.19,
+        "duration": 4.18
+    },
+    {
+        "text": "holding it in person, then you could\ninteract with it physically as well.",
+        "start": 1107.39,
+        "duration": 4.45
+    },
+    {
+        "text": "what you would find then is, very\nquickly you develop a representation",
+        "start": 1114.16,
+        "duration": 3.93
+    },
+    {
+        "text": "such that 10 seconds, 10 minutes, or\ntomorrow, I can ask you about this",
+        "start": 1118.09,
+        "duration": 5.91
+    },
+    {
+        "text": "object, and you would be able to recall\nvarious details of it without issue.",
+        "start": 1124.03,
+        "duration": 4.98
+    },
+    {
+        "text": "But in the case of deep learning, things\nunfortunately don't work that way.",
+        "start": 1130.61,
+        "duration": 3.79
+    },
+    {
+        "text": "in order to learn about this new\nobject, it's not a case of just",
+        "start": 1134.99,
+        "duration": 3.19
+    },
+    {
+        "text": "presenting this new data, and\nthen having the system learn.",
+        "start": 1138.19,
+        "duration": 2.52
+    },
+    {
+        "text": "Instead, the new information needs\nto be interleaved or mixed with these",
+        "start": 1141.5,
+        "duration": 5.105
+    },
+    {
+        "text": "other representations that it has\ncome across in the past, and then it",
+        "start": 1146.84,
+        "duration": 3.55
+    },
+    {
+        "text": "needs to retrain on all of this data.",
+        "start": 1150.39,
+        "duration": 2.55
+    },
+    {
+        "text": "If you don't do this, then what\nhappens is these other representations",
+        "start": 1153.85,
+        "duration": 3.05
+    },
+    {
+        "text": "begin fading, and this is something\nknown as catastrophic forgetting.",
+        "start": 1156.9,
+        "duration": 3.44
+    },
+    {
+        "text": "And what's exciting about Monty\nis it does not show evidence of",
+        "start": 1162.01,
+        "duration": 4.58
+    },
+    {
+        "text": "this catastrophic forgetting.",
+        "start": 1166.59,
+        "duration": 1.17
+    },
+    {
+        "text": "And in order to demonstrate this,\nwe're again going to use this dataset",
+        "start": 1170.2,
+        "duration": 3.553
+    },
+    {
+        "text": "of household objects, but we're going\nto change the task setting slightly.",
+        "start": 1173.99,
+        "duration": 3.87
+    },
+    {
+        "text": "And in particular, we present an object,\nlike the LEGO block, and then we ask",
+        "start": 1178.78,
+        "duration": 5.45
+    },
+    {
+        "text": "Monty to try and recognize the LEGO block.",
+        "start": 1184.23,
+        "duration": 1.86
+    },
+    {
+        "text": "But then we show another object,\nlike the fork, and this time, we",
+        "start": 1187.65,
+        "duration": 3.97
+    },
+    {
+        "text": "ask Monty to be able to recognize\nboth the LEGO and the fork.",
+        "start": 1191.64,
+        "duration": 3.76
+    },
+    {
+        "text": "We present both of these\nobjects and see how it does.",
+        "start": 1195.4,
+        "duration": 2.4
+    },
+    {
+        "text": "And then we continue this pattern,\nshowing additional objects, but",
+        "start": 1198.49,
+        "duration": 3.26
+    },
+    {
+        "text": "always seeing how the system performs\non all objects it's seen so far.",
+        "start": 1201.75,
+        "duration": 3.89
+    },
+    {
+        "text": "And we did this for both Monty, as well as\na deep learning system that we compare to.",
+        "start": 1206.44,
+        "duration": 4.12
+    },
+    {
+        "text": "So to do well, the system needs to\nremember the most recent object it's",
+        "start": 1210.56,
+        "duration": 4.1
+    },
+    {
+        "text": "learned, as well as all the previous ones.",
+        "start": 1214.67,
+        "duration": 1.97
+    },
+    {
+        "text": "And what we see here is along the\nx-axis, we have the number of objects",
+        "start": 1218.46,
+        "duration": 4.26
+    },
+    {
+        "text": "that have been learned so far.",
+        "start": 1222.72,
+        "duration": 2.22
+    },
+    {
+        "text": "And then, on the y-axis, you have the\naccuracy across all of those objects that",
+        "start": 1225.51,
+        "duration": 4.63
+    },
+    {
+        "text": "have been observed up until that point.",
+        "start": 1230.15,
+        "duration": 1.74
+    },
+    {
+        "text": "And with this VIT network, this\nis the deep learning network,",
+        "start": 1233.02,
+        "duration": 2.79
+    },
+    {
+        "text": "we see exactly this catastrophic\nforgetting I was talking about before.",
+        "start": 1236.0,
+        "duration": 3.74
+    },
+    {
+        "text": "Whereas a new task is introduced, the\nnetwork becomes seemingly hyper-focused",
+        "start": 1240.27,
+        "duration": 3.95
+    },
+    {
+        "text": "on this, all the weights become dedicated\nto learning about this new task.",
+        "start": 1244.22,
+        "duration": 3.54
+    },
+    {
+        "text": "And it forgets about any\ninformation it's learned previously.",
+        "start": 1248.65,
+        "duration": 2.82
+    },
+    {
+        "text": "Whereas with Monty, we have this\nkind of gradual, drop in performance",
+        "start": 1253.17,
+        "duration": 5.1
+    },
+    {
+        "text": "as some of these new objects that\nare learned are similar to one",
+        "start": 1258.31,
+        "duration": 3.78
+    },
+    {
+        "text": "another, but overall, it maintains\na really strong accuracy throughout,",
+        "start": 1262.09,
+        "duration": 3.51
+    },
+    {
+        "text": "even all the way up to 77 objects.",
+        "start": 1265.63,
+        "duration": 2.22
+    },
+    {
+        "text": "And it's worth emphasizing again,\nwe didn't build Monty to be good at",
+        "start": 1270.07,
+        "duration": 4.32
+    },
+    {
+        "text": "continual learning, this was just\nsomething that emerged naturally.",
+        "start": 1274.39,
+        "duration": 3.24
+    },
+    {
+        "text": "The, last, then, capability I want to\ntalk about is computational efficiency.",
+        "start": 1279.48,
+        "duration": 4.82
+    },
+    {
+        "text": "So you've probably heard how\nthe brain uses a similar amount",
+        "start": 1284.56,
+        "duration": 3.16
+    },
+    {
+        "text": "of energy to a light bulb.",
+        "start": 1287.72,
+        "duration": 1.47
+    },
+    {
+        "text": "And yet you've also probably heard\nhow deep learning systems, the",
+        "start": 1290.34,
+        "duration": 4.53
+    },
+    {
+        "text": "state-of-the-art ones today, need to be\ntrained on massive data centers powered",
+        "start": 1294.87,
+        "duration": 4.14
+    },
+    {
+        "text": "by nuclear plants in order to learn.",
+        "start": 1299.01,
+        "duration": 2.34
+    },
+    {
+        "text": "So the question is, how can we\nget to systems more like the brain",
+        "start": 1302.33,
+        "duration": 3.17
+    },
+    {
+        "text": "that are much more efficient?",
+        "start": 1305.51,
+        "duration": 0.97
+    },
+    {
+        "text": "And another exciting finding is that\nMonty is already showing signs of this.",
+        "start": 1307.14,
+        "duration": 4.5
+    },
+    {
+        "text": "So if we look at the compute\nused for learning, we quantified",
+        "start": 1313.0,
+        "duration": 3.94
+    },
+    {
+        "text": "this by looking at flops.",
+        "start": 1316.94,
+        "duration": 2.02
+    },
+    {
+        "text": "This is essentially the number\nof computations, the number of",
+        "start": 1319.22,
+        "duration": 2.47
+    },
+    {
+        "text": "mathematical operations that\nare performed during learning.",
+        "start": 1321.72,
+        "duration": 2.7
+    },
+    {
+        "text": "And I should note this\nis a logarithmic scale.",
+        "start": 1325.38,
+        "duration": 1.78
+    },
+    {
+        "text": "We then compare Monty to two\ndifferent deep learning systems.",
+        "start": 1328.35,
+        "duration": 4.72
+    },
+    {
+        "text": "One is a network that's trained\non the same data set as Monty.",
+        "start": 1333.42,
+        "duration": 4.38
+    },
+    {
+        "text": "And another one has also been\ntrained beforehand on a very",
+        "start": 1338.79,
+        "duration": 4.53
+    },
+    {
+        "text": "large dataset from the internet.",
+        "start": 1343.32,
+        "duration": 1.98
+    },
+    {
+        "text": "And what we find is that even in the case\nof the network given the smaller, the",
+        "start": 1347.09,
+        "duration": 4.6
+    },
+    {
+        "text": "much smaller amount of data that Monty\nsees, we get a significant boost in the",
+        "start": 1351.69,
+        "duration": 4.87
+    },
+    {
+        "text": "amount of computations, or reduction\nin the amount of computations needed",
+        "start": 1356.56,
+        "duration": 3.36
+    },
+    {
+        "text": "by Monty, about 34,000 times less.",
+        "start": 1359.94,
+        "duration": 2.35
+    },
+    {
+        "text": "But if we compare to the pre-trained\ndeep learning system, the difference",
+        "start": 1363.68,
+        "duration": 3.97
+    },
+    {
+        "text": "is even more stark, around 530\nmillion times less compute required.",
+        "start": 1367.65,
+        "duration": 5.01
+    },
+    {
+        "text": "The real kicker, though, is that if we\nlook at the accuracy of these different",
+        "start": 1373.53,
+        "duration": 3.75
+    },
+    {
+        "text": "systems, that actually Monty, again,\ngiven this small amount of training data,",
+        "start": 1377.28,
+        "duration": 6.43
+    },
+    {
+        "text": "is actually significantly more accurate",
+        "start": 1383.91,
+        "duration": 2.17
+    },
+    {
+        "text": "Than the other two systems.",
+        "start": 1386.9,
+        "duration": 1.23
+    },
+    {
+        "text": "Now, the compute numbers I was showing\nare maybe a bit abstract given their",
+        "start": 1390.34,
+        "duration": 4.19
+    },
+    {
+        "text": "magnitude, so to make this a bit more\nconcrete, if you imagine the amount of",
+        "start": 1394.57,
+        "duration": 4.5
+    },
+    {
+        "text": "compute that Monty needed for learning\nis the length of a grain of rice.",
+        "start": 1399.09,
+        "duration": 4.11
+    },
+    {
+        "text": "Then, for the deep neural network trained\njust on the small task, it would be",
+        "start": 1403.92,
+        "duration": 4.01
+    },
+    {
+        "text": "the length of a shipping container.",
+        "start": 1407.94,
+        "duration": 1.54
+    },
+    {
+        "text": "And for the deep neural network that was\nalso trained on the internet dataset.",
+        "start": 1410.11,
+        "duration": 3.22
+    },
+    {
+        "text": "It would be the distance between\nManhattan and Los Angeles.",
+        "start": 1414.83,
+        "duration": 3.05
+    },
+    {
+        "text": "a pretty significant difference.",
+        "start": 1418.93,
+        "duration": 1.73
+    },
+    {
+        "text": "Unfortunately, I don't have time to\ncover all of the capabilities that",
+        "start": 1422.96,
+        "duration": 2.83
+    },
+    {
+        "text": "Monty has today and that we've explored.",
+        "start": 1425.79,
+        "duration": 1.89
+    },
+    {
+        "text": "Definitely do check out that paper I\nmentioned earlier if you're interested.",
+        "start": 1427.99,
+        "duration": 3.39
+    },
+    {
+        "text": "But just to reiterate, we're really\nexcited about this because we've",
+        "start": 1432.53,
+        "duration": 4.69
+    },
+    {
+        "text": "seen all of these capabilities emerge\nreally from not that much effort",
+        "start": 1437.22,
+        "duration": 3.92
+    },
+    {
+        "text": "on our part, once we had the kind\nof right design at the beginning.",
+        "start": 1441.15,
+        "duration": 4.51
+    },
+    {
+        "text": "I think another way of looking at this is\nthat this is really fertile ground, and",
+        "start": 1445.67,
+        "duration": 5.43
+    },
+    {
+        "text": "so there are many exciting capabilities\nthat aren't yet on this list, and this",
+        "start": 1451.1,
+        "duration": 4.44
+    },
+    {
+        "text": "is exactly the kind of area that you\ncould contribute if you're interested in",
+        "start": 1455.55,
+        "duration": 3.88
+    },
+    {
+        "text": "working with the Thousand Brains project.",
+        "start": 1459.43,
+        "duration": 2.31
+    },
+    {
+        "text": "With that, I'll hand things over to\nScott, one  of our researchers, who",
+        "start": 1464.24,
+        "duration": 3.03
+    },
+    {
+        "text": "will be talking about these principles\nthat I've been talking about, and",
+        "start": 1467.27,
+        "duration": 3.58
+    },
+    {
+        "text": "how they relate to the neocortex.",
+        "start": 1470.86,
+        "duration": 1.69
+    }
+]

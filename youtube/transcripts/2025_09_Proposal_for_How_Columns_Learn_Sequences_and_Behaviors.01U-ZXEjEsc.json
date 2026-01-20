@@ -1,0 +1,3097 @@
+[
+    {
+        "text": "I'll just jump in real quick and yeah,\nI don't mind any in depth discussions,",
+        "start": 8.313,
+        "duration": 5.16
+    },
+    {
+        "text": "or want to get this over with quickly.",
+        "start": 14.253,
+        "duration": 1.59
+    },
+    {
+        "text": "So definitely feel free to\ninterrupt if you have  questions.",
+        "start": 15.843,
+        "duration": 4.006
+    },
+    {
+        "text": "so yeah, basically try to make\nsome visualization of how I, what I",
+        "start": 21.374,
+        "duration": 4.4
+    },
+    {
+        "text": "took away from last week's research\nmeeting about representing time.",
+        "start": 25.774,
+        "duration": 3.325
+    },
+    {
+        "text": "it's a mix of in the brain and in Monty.",
+        "start": 30.249,
+        "duration": 2.95
+    },
+    {
+        "text": "Hopefully it works.",
+        "start": 33.749,
+        "duration": 0.9
+    },
+    {
+        "text": "and yeah, maybe you can just let\nme know if you took away the same",
+        "start": 36.174,
+        "duration": 2.575
+    },
+    {
+        "text": "broad concepts or other things.",
+        "start": 39.349,
+        "duration": 2.325
+    },
+    {
+        "text": "So as a first example, I took a melody,",
+        "start": 41.924,
+        "duration": 2.875
+    },
+    {
+        "text": "So let me just explain this, figure,\nthere's, can you see my cursor?",
+        "start": 46.849,
+        "duration": 4.75
+    },
+    {
+        "text": "Okay.",
+        "start": 52.974,
+        "duration": 0.35
+    },
+    {
+        "text": "this is what's being experienced.",
+        "start": 54.749,
+        "duration": 1.4
+    },
+    {
+        "text": "There's time and I'm gonna move this\nkinda gray bar towards the right",
+        "start": 56.149,
+        "duration": 3.6
+    },
+    {
+        "text": "and it goes through that melody.",
+        "start": 60.174,
+        "duration": 1.65
+    },
+    {
+        "text": "and then up here, this is the kind\nof shot clock or a stopwatch kind",
+        "start": 63.224,
+        "duration": 4.3
+    },
+    {
+        "text": "of mechanism that we talked about.",
+        "start": 67.524,
+        "duration": 1.55
+    },
+    {
+        "text": "And I think I'll refer to it as a\nstopwatch mechanism now because it I",
+        "start": 69.374,
+        "duration": 5.15
+    },
+    {
+        "text": "visualize it like a stopwatch where\nbasically he started this arrow moves",
+        "start": 74.524,
+        "duration": 4.95
+    },
+    {
+        "text": "through it, and then you can reset\nthe stopwatch lap to lap or reset and",
+        "start": 79.474,
+        "duration": 5.396
+    },
+    {
+        "text": "it, and, thus arrow goes back to the\ntop and starts moving around again.",
+        "start": 84.87,
+        "duration": 3.004
+    },
+    {
+        "text": "And you can reset it again.",
+        "start": 87.874,
+        "duration": 0.975
+    },
+    {
+        "text": "It goes back up and moves again,\nreset it, it goes back up and so on.",
+        "start": 88.849,
+        "duration": 3.075
+    },
+    {
+        "text": "And basically, whichever point\nthe error is currently pointing",
+        "start": 92.624,
+        "duration": 4.7
+    },
+    {
+        "text": "at is the input to layer one.",
+        "start": 97.324,
+        "duration": 3.225
+    },
+    {
+        "text": "And that basically represents the\ntiming since the last event and what, I",
+        "start": 101.649,
+        "duration": 4.425
+    },
+    {
+        "text": "mentioned is this clock gets reset with\nevery significant event that was sensed.",
+        "start": 106.074,
+        "duration": 4.75
+    },
+    {
+        "text": "for example, an example of the\nmelody, I'm basically saying each of",
+        "start": 111.124,
+        "duration": 3.425
+    },
+    {
+        "text": "those nodes is a significant event.",
+        "start": 114.549,
+        "duration": 1.85
+    },
+    {
+        "text": "So whenever it hears any\nnode, doesn't matter.",
+        "start": 116.474,
+        "duration": 2.4
+    },
+    {
+        "text": "The, which note it is, but any note\nadheres it resets this clock, and",
+        "start": 119.187,
+        "duration": 4.0
+    },
+    {
+        "text": "then as soon as it resets, it starts\nmoving again clockwise around.",
+        "start": 123.187,
+        "duration": 2.9
+    },
+    {
+        "text": "And the, where it points at is the kind\nof neural or context representation.",
+        "start": 126.087,
+        "duration": 6.175
+    },
+    {
+        "text": "It goes into layer one.",
+        "start": 132.262,
+        "duration": 1.2
+    },
+    {
+        "text": "and then the specific, is it, I'm sorry.",
+        "start": 134.912,
+        "duration": 2.5
+    },
+    {
+        "text": "Yeah, go ahead.",
+        "start": 137.662,
+        "duration": 0.425
+    },
+    {
+        "text": "You say, and is it a circular\nrepresentation of time or would it,",
+        "start": 138.087,
+        "duration": 3.15
+    },
+    {
+        "text": "because that I guess implies that if\nenough time passes it goes back to zero.",
+        "start": 141.812,
+        "duration": 5.325
+    },
+    {
+        "text": "But I'm assuming it's more like\na, it just trails off and you,",
+        "start": 147.137,
+        "duration": 3.625
+    },
+    {
+        "text": "get slower and slower time cells.",
+        "start": 150.762,
+        "duration": 1.725
+    },
+    {
+        "text": "Yeah.",
+        "start": 153.087,
+        "duration": 0.375
+    },
+    {
+        "text": "So I haven't really, I've in this\nexample, avoided this issue of",
+        "start": 153.462,
+        "duration": 3.175
+    },
+    {
+        "text": "what happens if there's no event by\nthe time it gets back to the top.",
+        "start": 156.787,
+        "duration": 3.25
+    },
+    {
+        "text": "I think some, one thing we talked\nabout last week was that as it moves",
+        "start": 161.187,
+        "duration": 3.0
+    },
+    {
+        "text": "forward in time, it, the threshold for a\nsignificant event gets lower and lower.",
+        "start": 164.212,
+        "duration": 4.45
+    },
+    {
+        "text": "So maybe something really\nminor gets detected as a, as",
+        "start": 168.862,
+        "duration": 2.75
+    },
+    {
+        "text": "an event and resets the clock.",
+        "start": 171.612,
+        "duration": 1.55
+    },
+    {
+        "text": "Yeah.",
+        "start": 173.682,
+        "duration": 0.242
+    },
+    {
+        "text": "or just something that at, if it gets\nto the end, it just resets the clock.",
+        "start": 174.437,
+        "duration": 4.2
+    },
+    {
+        "text": "but basically it's not really circular\nin the sense that once it gets here,",
+        "start": 179.412,
+        "duration": 2.7
+    },
+    {
+        "text": "it keeps, it, it starts over again.",
+        "start": 182.112,
+        "duration": 1.95
+    },
+    {
+        "text": "It's really like to get back\nto zero, it's, this is a reset.",
+        "start": 184.112,
+        "duration": 3.35
+    },
+    {
+        "text": "Yeah.",
+        "start": 187.482,
+        "duration": 0.242
+    },
+    {
+        "text": "If it gets back to zero, it,\nit shouldn't really get to",
+        "start": 187.724,
+        "duration": 2.513
+    },
+    {
+        "text": "zero from this last point here.",
+        "start": 190.237,
+        "duration": 1.825
+    },
+    {
+        "text": "Cool.",
+        "start": 193.287,
+        "duration": 0.3
+    },
+    {
+        "text": "okay, so let me just step\nthrough that example.",
+        "start": 195.524,
+        "duration": 1.9
+    },
+    {
+        "text": "So we move, we hear the first node\nand which node it is, basically",
+        "start": 197.849,
+        "duration": 4.8
+    },
+    {
+        "text": "the feature input to layer four.",
+        "start": 202.649,
+        "duration": 2.125
+    },
+    {
+        "text": "and then timing since last event\nin this case is just the very",
+        "start": 205.674,
+        "duration": 3.775
+    },
+    {
+        "text": "first one, since this is our\nvery first event we're sensing.",
+        "start": 209.449,
+        "duration": 2.8
+    },
+    {
+        "text": "And so I added this other thing\ndown here, which is which element",
+        "start": 212.774,
+        "duration": 4.175
+    },
+    {
+        "text": "in the sequence we're currently in.",
+        "start": 216.949,
+        "duration": 1.375
+    },
+    {
+        "text": "And right now we're in the first element.",
+        "start": 218.799,
+        "duration": 1.675
+    },
+    {
+        "text": "We would associate the\ntime since last event.",
+        "start": 220.499,
+        "duration": 1.925
+    },
+    {
+        "text": "And the feature at that first element,\nwe move forward, no node detected yet.",
+        "start": 222.424,
+        "duration": 6.85
+    },
+    {
+        "text": "We're here.",
+        "start": 229.274,
+        "duration": 0.425
+    },
+    {
+        "text": "This is currently the input to layer one.",
+        "start": 229.699,
+        "duration": 1.725
+    },
+    {
+        "text": "move to the next note.",
+        "start": 232.999,
+        "duration": 1.025
+    },
+    {
+        "text": "Not, this is shortly before the note.",
+        "start": 234.599,
+        "duration": 2.525
+    },
+    {
+        "text": "this is the input to, to layer one.",
+        "start": 237.749,
+        "duration": 1.75
+    },
+    {
+        "text": "And then we hear the\nnote clock gets reset.",
+        "start": 239.974,
+        "duration": 3.725
+    },
+    {
+        "text": "we get the feature input again, and\nwe have, this kind of reset signal",
+        "start": 244.999,
+        "duration": 6.975
+    },
+    {
+        "text": "triggers that we move to the next\nelement in the sequence down here.",
+        "start": 251.974,
+        "duration": 2.975
+    },
+    {
+        "text": "So now we're at second\nelement in the sequence.",
+        "start": 255.274,
+        "duration": 2.175
+    },
+    {
+        "text": "And then we associate the timing\nrepresentation that we got just",
+        "start": 257.924,
+        "duration": 3.7
+    },
+    {
+        "text": "before that event happened, and\nthe feature with that element in",
+        "start": 261.624,
+        "duration": 4.125
+    },
+    {
+        "text": "that location in the sequence.",
+        "start": 265.799,
+        "duration": 1.275
+    },
+    {
+        "text": "so then again, we move\nin time, move forward.",
+        "start": 268.937,
+        "duration": 2.35
+    },
+    {
+        "text": "This is the input to\nlayer one move forward.",
+        "start": 271.287,
+        "duration": 1.775
+    },
+    {
+        "text": "Now this one is the input\nto layer one move forward.",
+        "start": 273.137,
+        "duration": 2.45
+    },
+    {
+        "text": "Okay.",
+        "start": 276.187,
+        "duration": 0.175
+    },
+    {
+        "text": "We hear the node, we reset signal.",
+        "start": 276.362,
+        "duration": 1.775
+    },
+    {
+        "text": "Reset signal means we\nmove one more forward.",
+        "start": 278.387,
+        "duration": 2.475
+    },
+    {
+        "text": "In the element in the sequence,\nwe associate the last kind",
+        "start": 280.862,
+        "duration": 3.725
+    },
+    {
+        "text": "of temporal input we got.",
+        "start": 284.587,
+        "duration": 1.075
+    },
+    {
+        "text": "and the feature with that element\nin the sequence, same thing happens.",
+        "start": 286.712,
+        "duration": 3.95
+    },
+    {
+        "text": "Next note.",
+        "start": 290.662,
+        "duration": 0.625
+    },
+    {
+        "text": "it's really the same thing in this\ncase, we are sensing a different feature",
+        "start": 291.687,
+        "duration": 4.175
+    },
+    {
+        "text": "and, associating that different feature\nwith the same element in the sequence.",
+        "start": 296.312,
+        "duration": 5.0
+    },
+    {
+        "text": "Now, this one is the only other\ninteresting case 'cause it's, still the",
+        "start": 301.837,
+        "duration": 3.475
+    },
+    {
+        "text": "same mechanism, but just, we are moving\na bit further down the, stopwatch.",
+        "start": 305.312,
+        "duration": 3.775
+    },
+    {
+        "text": "And as you see, as time passes, the\nin input representation to layer",
+        "start": 309.587,
+        "duration": 3.525
+    },
+    {
+        "text": "one changes, it gets like brighter.",
+        "start": 313.112,
+        "duration": 3.5
+    },
+    {
+        "text": "It's a bit hard to see 'cause I, want to\nmake it look ex aesthetically pleasing,",
+        "start": 316.612,
+        "duration": 3.925
+    },
+    {
+        "text": "but it's, not the best I guess to\ndistinguish, but it cha it changes at",
+        "start": 320.537,
+        "duration": 5.125
+    },
+    {
+        "text": "every step until we get to the next\nevent, which is, yeah, sensing this note",
+        "start": 325.662,
+        "duration": 5.9
+    },
+    {
+        "text": "triggers a reset, which means again, we\nmove one further in the sequence and then",
+        "start": 332.187,
+        "duration": 4.025
+    },
+    {
+        "text": "associate again, the feature we get as\ninput and the time since the last event.",
+        "start": 336.212,
+        "duration": 5.5
+    },
+    {
+        "text": "with that element in the\nsequence and that goes on.",
+        "start": 342.724,
+        "duration": 4.175
+    },
+    {
+        "text": "Does that kind of make sense?",
+        "start": 347.799,
+        "duration": 1.2
+    },
+    {
+        "text": "Is that kind of how you were\nthinking of it last week as well?",
+        "start": 348.999,
+        "duration": 2.2
+    },
+    {
+        "text": "Or,",
+        "start": 351.199,
+        "duration": 0.225
+    },
+    {
+        "text": "yeah.",
+        "start": 353.649,
+        "duration": 0.475
+    },
+    {
+        "text": "Yeah.",
+        "start": 354.299,
+        "duration": 0.15
+    },
+    {
+        "text": "It's nice animation.",
+        "start": 354.449,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah, I think that generally fits.",
+        "start": 355.049,
+        "duration": 1.5
+    },
+    {
+        "text": "I think it was still an open question\nin my head, how we associate like",
+        "start": 356.849,
+        "duration": 5.025
+    },
+    {
+        "text": "what exactly is as being associated\nthat time thing with the, what",
+        "start": 361.874,
+        "duration": 6.5
+    },
+    {
+        "text": "you call it, with the feature.",
+        "start": 368.374,
+        "duration": 1.575
+    },
+    {
+        "text": "I think this is also to me the most\nintuitive, but, but I don't know if",
+        "start": 370.849,
+        "duration": 7.15
+    },
+    {
+        "text": "this is what Jeff had in mind, just\nin terms of things like if we start",
+        "start": 377.999,
+        "duration": 5.075
+    },
+    {
+        "text": "speeding it up or slowing it down.",
+        "start": 383.074,
+        "duration": 1.7
+    },
+    {
+        "text": "yeah, so it's speeding it\nup and slowing it down.",
+        "start": 386.524,
+        "duration": 2.2
+    },
+    {
+        "text": "It's basically this blue arrow.",
+        "start": 389.274,
+        "duration": 2.5
+    },
+    {
+        "text": "I shouldn't have made it blue\n'cause it's not really real time.",
+        "start": 393.099,
+        "duration": 3.725
+    },
+    {
+        "text": "It's not this error.",
+        "start": 396.824,
+        "duration": 0.85
+    },
+    {
+        "text": "It's this one can speed, can turn\nat different speeds on the clock",
+        "start": 397.674,
+        "duration": 4.7
+    },
+    {
+        "text": "and it turns at different speeds,\nbut it still goes through same",
+        "start": 402.899,
+        "duration": 3.15
+    },
+    {
+        "text": "sequence of neural activations.",
+        "start": 406.049,
+        "duration": 1.625
+    },
+    {
+        "text": "So whatever was active at this point\npredicts that feature in the sequence.",
+        "start": 407.949,
+        "duration": 5.325
+    },
+    {
+        "text": "And you can speed up.",
+        "start": 413.624,
+        "duration": 1.425
+    },
+    {
+        "text": "Or slow down this blue arrow\non the clock, basically.",
+        "start": 415.799,
+        "duration": 2.4
+    },
+    {
+        "text": "But it, it doesn't change anything\nin, the representation here.",
+        "start": 418.449,
+        "duration": 3.025
+    },
+    {
+        "text": "It just changes like how, when,\nwhich of these purple features",
+        "start": 421.824,
+        "duration": 4.15
+    },
+    {
+        "text": "are active in layer one.",
+        "start": 425.974,
+        "duration": 1.175
+    },
+    {
+        "text": "Yeah, that makes sense.",
+        "start": 428.649,
+        "duration": 1.85
+    },
+    {
+        "text": "So just to make sure I'm clear\non this, scheme, the clock gets",
+        "start": 433.524,
+        "duration": 4.875
+    },
+    {
+        "text": "reset at every note touch, right?",
+        "start": 438.399,
+        "duration": 1.775
+    },
+    {
+        "text": "Yeah.",
+        "start": 440.787,
+        "duration": 0.241
+    },
+    {
+        "text": "At every significant event.",
+        "start": 445.774,
+        "duration": 1.225
+    },
+    {
+        "text": "So I have another example with\nthe stapler that maybe goes into",
+        "start": 446.999,
+        "duration": 3.775
+    },
+    {
+        "text": "a couple more different cases.",
+        "start": 450.774,
+        "duration": 2.05
+    },
+    {
+        "text": "So yeah, that might help too with\nunderstanding in a moment, but yeah.",
+        "start": 452.949,
+        "duration": 4.85
+    },
+    {
+        "text": "do you wanna ask some questions first?",
+        "start": 458.449,
+        "duration": 1.0
+    },
+    {
+        "text": "Do we send back, do, we send back the\ntempo to the thalamus to do stuff or, is",
+        "start": 461.099,
+        "duration": 5.35
+    },
+    {
+        "text": "this, it looks like this would figure out\nhow to predict based on like basically",
+        "start": 466.449,
+        "duration": 5.325
+    },
+    {
+        "text": "infer the pace, or the temple and\npredict the next step when it will come.",
+        "start": 471.774,
+        "duration": 3.225
+    },
+    {
+        "text": "Yeah.",
+        "start": 475.724,
+        "duration": 0.55
+    },
+    {
+        "text": "So basic, yeah, go ahead.",
+        "start": 477.299,
+        "duration": 2.067
+    },
+    {
+        "text": "I was just gonna say, does it send\nsomething back to the thalamus so that",
+        "start": 479.366,
+        "duration": 2.758
+    },
+    {
+        "text": "the next prediction is like, doesn't\nhave to infer every time or, I'm not just",
+        "start": 482.899,
+        "duration": 5.5
+    },
+    {
+        "text": "a little confused about the template.",
+        "start": 488.399,
+        "duration": 0.95
+    },
+    {
+        "text": "Yeah, so basically the idea would be\nthat this is in the matrix cells, in",
+        "start": 490.249,
+        "duration": 2.875
+    },
+    {
+        "text": "et thalamus it projects to layer one.",
+        "start": 493.124,
+        "duration": 2.625
+    },
+    {
+        "text": "and then the column would recognize if\nit gets a feature input, like basically",
+        "start": 496.624,
+        "duration": 6.25
+    },
+    {
+        "text": "the next feature it expects in the\nsequence, if that appears slightly",
+        "start": 502.874,
+        "duration": 3.9
+    },
+    {
+        "text": "before the expected neural representation\nor after that tells it, whether it",
+        "start": 506.774,
+        "duration": 4.0
+    },
+    {
+        "text": "needs to be slowed down or sped up.",
+        "start": 510.774,
+        "duration": 1.95
+    },
+    {
+        "text": "And since, if we think of these as\nSDRs, it would be smoothly shifting.",
+        "start": 513.199,
+        "duration": 4.25
+    },
+    {
+        "text": "So it, I think it should be able\npossible to tell like whether",
+        "start": 517.799,
+        "duration": 4.3
+    },
+    {
+        "text": "it was before or afterwards.",
+        "start": 522.174,
+        "duration": 1.375
+    },
+    {
+        "text": "And then that would be a signal that gets\nsent back to the matrix cells to that kind",
+        "start": 523.599,
+        "duration": 3.625
+    },
+    {
+        "text": "of clock and makes it go faster or slower.",
+        "start": 527.224,
+        "duration": 2.0
+    },
+    {
+        "text": "and this is a global clock, so this\nwould then change the neural input,",
+        "start": 529.399,
+        "duration": 4.2
+    },
+    {
+        "text": "representation inputs to layer one of all\nthe other columns that projects through.",
+        "start": 533.674,
+        "duration": 3.525
+    },
+    {
+        "text": "So it's enough for one of them to\nsay, oh, you should be faster or",
+        "start": 537.199,
+        "duration": 2.5
+    },
+    {
+        "text": "slower, or you should be reset.",
+        "start": 539.699,
+        "duration": 2.225
+    },
+    {
+        "text": "and that kind of gets, changes\nthat global signal everywhere",
+        "start": 542.974,
+        "duration": 3.225
+    },
+    {
+        "text": "and synchronizes everyone.",
+        "start": 546.199,
+        "duration": 1.175
+    },
+    {
+        "text": "So like for example, also detecting a\nsignificant event could be anywhere,",
+        "start": 548.099,
+        "duration": 3.075
+    },
+    {
+        "text": "like with the stapler example, I'm\nsaying actually like the sound of",
+        "start": 551.174,
+        "duration": 3.925
+    },
+    {
+        "text": "the stapler stapling can be an event.",
+        "start": 555.099,
+        "duration": 2.45
+    },
+    {
+        "text": "that's not something\nthat's represented in the.",
+        "start": 558.999,
+        "duration": 2.25
+    },
+    {
+        "text": "Morphological model of the stapler at all,\nbut could be detected somewhere completely",
+        "start": 561.687,
+        "duration": 3.275
+    },
+    {
+        "text": "else, but it resets the global clock.",
+        "start": 564.962,
+        "duration": 1.625
+    },
+    {
+        "text": "Okay.",
+        "start": 568.312,
+        "duration": 0.3
+    },
+    {
+        "text": "another question is the element in\nsequence, what kind of representations",
+        "start": 569.537,
+        "duration": 3.65
+    },
+    {
+        "text": "Is that like a, 1D grid cell or,\nyeah, I was thinking of this as",
+        "start": 573.187,
+        "duration": 3.75
+    },
+    {
+        "text": "like basically 1D space and you move\nthrough that space, you can only move",
+        "start": 576.937,
+        "duration": 3.45
+    },
+    {
+        "text": "through that space in one direction.",
+        "start": 580.387,
+        "duration": 1.55
+    },
+    {
+        "text": "So always move forward in time.",
+        "start": 582.062,
+        "duration": 1.6
+    },
+    {
+        "text": "And the kind of displacement that\nmoves you forward through that is",
+        "start": 583.937,
+        "duration": 3.25
+    },
+    {
+        "text": "the reset signal from the clock, like\ngetting the first in sequence again.",
+        "start": 587.762,
+        "duration": 4.125
+    },
+    {
+        "text": "So that would be the movement.",
+        "start": 592.262,
+        "duration": 1.0
+    },
+    {
+        "text": "I would just like a, movement.",
+        "start": 593.312,
+        "duration": 1.975
+    },
+    {
+        "text": "Yeah.",
+        "start": 597.637,
+        "duration": 0.225
+    },
+    {
+        "text": "I would basically be one movement.",
+        "start": 597.862,
+        "duration": 2.55
+    },
+    {
+        "text": "And I guess if we, this is with time,\nbut if we have actions, then you might",
+        "start": 600.637,
+        "duration": 5.375
+    },
+    {
+        "text": "be able to move in different there\nin two directions through sequence.",
+        "start": 606.012,
+        "duration": 3.325
+    },
+    {
+        "text": "but, haven't thought\nthrough that too much yet.",
+        "start": 610.712,
+        "duration": 1.8
+    },
+    {
+        "text": "It's really hard to try to do a\nmelody backwards or something in,",
+        "start": 616.337,
+        "duration": 3.07
+    },
+    {
+        "text": "in your mind or move through it.",
+        "start": 619.587,
+        "duration": 1.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 621.662,
+        "duration": 0.325
+    },
+    {
+        "text": "So here we don't have actions, but if\nyou have a hinge, you can imagine opening",
+        "start": 621.987,
+        "duration": 4.325
+    },
+    {
+        "text": "and closing it in both directions,\nand maybe it's like a double sequence.",
+        "start": 626.312,
+        "duration": 5.65
+    },
+    {
+        "text": "You need to learn both directions\nor you can go through it and.",
+        "start": 631.962,
+        "duration": 2.25
+    },
+    {
+        "text": "Those directions, I'm not sure.",
+        "start": 635.349,
+        "duration": 1.075
+    },
+    {
+        "text": "But yeah, in terms of things that we\nlearn as discreet sequences, if they are",
+        "start": 638.624,
+        "duration": 3.775
+    },
+    {
+        "text": "long and complex, it is really hard to\ndo them backwards, like as a sequence.",
+        "start": 642.724,
+        "duration": 4.075
+    },
+    {
+        "text": "opening and closing a\nstapler is extremely simple.",
+        "start": 647.924,
+        "duration": 1.775
+    },
+    {
+        "text": "It's it's literally just doing that.",
+        "start": 649.699,
+        "duration": 2.825
+    },
+    {
+        "text": "Whereas yeah, saying the alphabet\nis really hard to do backwards.",
+        "start": 652.874,
+        "duration": 4.025
+    },
+    {
+        "text": "Or even being like, okay, how\ndo I cook lasagna backwards?",
+        "start": 657.299,
+        "duration": 4.125
+    },
+    {
+        "text": "I don't know.",
+        "start": 661.899,
+        "duration": 0.375
+    },
+    {
+        "text": "It would just be really weird.",
+        "start": 662.299,
+        "duration": 0.825
+    },
+    {
+        "text": "you'd really have to Yeah.",
+        "start": 663.224,
+        "duration": 0.85
+    },
+    {
+        "text": "Almost think forward and then\ndo it backwards step by step.",
+        "start": 664.274,
+        "duration": 3.375
+    },
+    {
+        "text": "Yeah.",
+        "start": 668.399,
+        "duration": 0.35
+    },
+    {
+        "text": "So yeah, it might be that\nthis is just something you can",
+        "start": 668.749,
+        "duration": 1.85
+    },
+    {
+        "text": "move through in one direction.",
+        "start": 670.599,
+        "duration": 1.9
+    },
+    {
+        "text": "And I guess, yeah, one thing to\nnote is that is also discreet.",
+        "start": 672.849,
+        "duration": 3.025
+    },
+    {
+        "text": "So it's not like continuous 1D\nstring, it's like discreet elements",
+        "start": 675.874,
+        "duration": 5.125
+    },
+    {
+        "text": "in that sequence, but then within\neach interval on there, you can have",
+        "start": 680.999,
+        "duration": 3.875
+    },
+    {
+        "text": "different temporal representations\nthat, that tile, that interval space.",
+        "start": 684.874,
+        "duration": 3.875
+    },
+    {
+        "text": "And yeah, I think maybe I'll move\nto the stapler example now 'cause",
+        "start": 689.174,
+        "duration": 2.25
+    },
+    {
+        "text": "that shows a little bit better.",
+        "start": 691.424,
+        "duration": 1.05
+    },
+    {
+        "text": "so this is a, an object behavior\nwith events and also continuous",
+        "start": 694.699,
+        "duration": 4.3
+    },
+    {
+        "text": "changes between those events.",
+        "start": 698.999,
+        "duration": 1.625
+    },
+    {
+        "text": "So before, like there was no feature\nchange between events, every feature",
+        "start": 701.024,
+        "duration": 3.75
+    },
+    {
+        "text": "corresponded to a discreet event.",
+        "start": 704.949,
+        "duration": 1.775
+    },
+    {
+        "text": "With moving objects, there's often\nlike a lot of continuous change.",
+        "start": 707.699,
+        "duration": 2.875
+    },
+    {
+        "text": "So I think this mechanism would\nbe able to deal with that.",
+        "start": 710.899,
+        "duration": 2.125
+    },
+    {
+        "text": "And as I started making this animation,\nI realized that using different",
+        "start": 713.424,
+        "duration": 3.0
+    },
+    {
+        "text": "shades of purple wasn't very, useful.",
+        "start": 716.824,
+        "duration": 2.7
+    },
+    {
+        "text": "And so I added some kind of colored\nrings around the first ones at least.",
+        "start": 720.249,
+        "duration": 3.25
+    },
+    {
+        "text": "So you can distinguish them a bit better,\nof what's the current input to layer one?",
+        "start": 723.499,
+        "duration": 3.9
+    },
+    {
+        "text": "So here's a stapler and the red,\nyellow circle represents the",
+        "start": 727.924,
+        "duration": 4.75
+    },
+    {
+        "text": "sensorimotor patch, of where it\nis currently sensing in the world.",
+        "start": 732.674,
+        "duration": 4.3
+    },
+    {
+        "text": "And here it shows where it things it,\nit is in the objects reference frame.",
+        "start": 737.374,
+        "duration": 4.65
+    },
+    {
+        "text": "So this is basically the\nkind of morphological model.",
+        "start": 742.374,
+        "duration": 2.95
+    },
+    {
+        "text": "it has learned of where the\nstapler exists and what features",
+        "start": 745.724,
+        "duration": 3.35
+    },
+    {
+        "text": "exists at those locations.",
+        "start": 749.074,
+        "duration": 1.275
+    },
+    {
+        "text": "'cause the layer six A locations,",
+        "start": 750.574,
+        "duration": 1.775
+    },
+    {
+        "text": "and so here we're, at the first time step\nagain, we got the first representation",
+        "start": 754.424,
+        "duration": 7.65
+    },
+    {
+        "text": "as input and we're detecting kinda a flow\npattern in this direction, this change.",
+        "start": 762.074,
+        "duration": 5.1
+    },
+    {
+        "text": "And so we're associating that change\nwith, this time since last event at this",
+        "start": 767.524,
+        "duration": 5.975
+    },
+    {
+        "text": "element in the sequence at this location.",
+        "start": 773.499,
+        "duration": 1.825
+    },
+    {
+        "text": "then the stapler moves a bit.",
+        "start": 776.699,
+        "duration": 1.075
+    },
+    {
+        "text": "We detect this change.",
+        "start": 778.124,
+        "duration": 1.225
+    },
+    {
+        "text": "We have a different time\nsince the last event.",
+        "start": 779.649,
+        "duration": 1.925
+    },
+    {
+        "text": "We have not detected a, significant\nevent, so no time reset yet, but since",
+        "start": 782.649,
+        "duration": 4.375
+    },
+    {
+        "text": "there is a different representation\nup here already, we can still make a",
+        "start": 787.024,
+        "duration": 2.975
+    },
+    {
+        "text": "new association with this, slightly\ndifferent flow pattern we detected.",
+        "start": 789.999,
+        "duration": 4.15
+    },
+    {
+        "text": "And then we move further, it,\nmoves down again and again.",
+        "start": 795.224,
+        "duration": 2.925
+    },
+    {
+        "text": "We have a different representation\nup here in layer one.",
+        "start": 798.174,
+        "duration": 2.275
+    },
+    {
+        "text": "So we can associate that, different\nchange pattern again with this",
+        "start": 800.724,
+        "duration": 4.1
+    },
+    {
+        "text": "location in the behavior model.",
+        "start": 804.824,
+        "duration": 2.425
+    },
+    {
+        "text": "then we staple, which makes\nclick, we detect a significant",
+        "start": 808.999,
+        "duration": 4.7
+    },
+    {
+        "text": "event and it resets the clock.",
+        "start": 813.699,
+        "duration": 2.825
+    },
+    {
+        "text": "And this reset clock signal makes us\nmove one element further in the sequence.",
+        "start": 817.149,
+        "duration": 4.925
+    },
+    {
+        "text": "So now we have a new reference frame\nat that element, at the sequence.",
+        "start": 822.649,
+        "duration": 3.9
+    },
+    {
+        "text": "Yeah.",
+        "start": 827.699,
+        "duration": 0.225
+    },
+    {
+        "text": "Kinda like the new state.",
+        "start": 827.924,
+        "duration": 1.1
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 829.562,
+        "duration": 0.508
+    },
+    {
+        "text": "This is new state of the object.",
+        "start": 830.07,
+        "duration": 1.754
+    },
+    {
+        "text": "everything can be at different locations\nagain, and we assume that we stay in the",
+        "start": 832.599,
+        "duration": 4.475
+    },
+    {
+        "text": "same location within that reference frame.",
+        "start": 837.074,
+        "duration": 2.0
+    },
+    {
+        "text": "Like it's still, it's, it's still\nthe same reference frame, it's just",
+        "start": 839.074,
+        "duration": 3.575
+    },
+    {
+        "text": "conditioning what features we would\nexpect at the, locations can change.",
+        "start": 842.649,
+        "duration": 4.375
+    },
+    {
+        "text": "and so the stapler opens, time passes,\nwe get the orange representation and",
+        "start": 848.349,
+        "duration": 3.9
+    },
+    {
+        "text": "all the flow pattern is moving upwards.",
+        "start": 852.249,
+        "duration": 1.6
+    },
+    {
+        "text": "We associate that upwards pattern\nwith this location at this time.",
+        "start": 854.099,
+        "duration": 3.025
+    },
+    {
+        "text": "Event time passes.",
+        "start": 857.124,
+        "duration": 1.5
+    },
+    {
+        "text": "Again, we associate this, in\nthis, with this location and",
+        "start": 858.624,
+        "duration": 4.646
+    },
+    {
+        "text": "the staplers reference frame.",
+        "start": 863.374,
+        "duration": 1.15
+    },
+    {
+        "text": "and yeah, that, that\nwould be basically it.",
+        "start": 866.624,
+        "duration": 2.35
+    },
+    {
+        "text": "That's the general idea.",
+        "start": 869.024,
+        "duration": 1.375
+    },
+    {
+        "text": "And then the learned model for this\nkind of behavior I just showed would",
+        "start": 870.674,
+        "duration": 6.6
+    },
+    {
+        "text": "be that there are two states or two\nintervals, and the one state is,",
+        "start": 877.274,
+        "duration": 6.675
+    },
+    {
+        "text": "has three different durations since\nthe last event associated with it.",
+        "start": 885.099,
+        "duration": 4.6
+    },
+    {
+        "text": "There's, at the event, short\nduration afterwards, in the",
+        "start": 889.774,
+        "duration": 2.975
+    },
+    {
+        "text": "longer duration afterwards.",
+        "start": 892.749,
+        "duration": 1.275
+    },
+    {
+        "text": "those are the representations in layer one\nthat continue to change as time passes.",
+        "start": 894.324,
+        "duration": 4.575
+    },
+    {
+        "text": "And each of those has a\ndifferent flow pattern associated",
+        "start": 899.499,
+        "duration": 2.3
+    },
+    {
+        "text": "with that location in space.",
+        "start": 901.799,
+        "duration": 1.325
+    },
+    {
+        "text": "Then significant event where\nin a new state, and that one",
+        "start": 904.149,
+        "duration": 4.225
+    },
+    {
+        "text": "again has, two different,",
+        "start": 908.374,
+        "duration": 1.275
+    },
+    {
+        "text": "features associated with it.",
+        "start": 912.074,
+        "duration": 1.25
+    },
+    {
+        "text": "Both had slightly different\ndurations since the last event.",
+        "start": 913.324,
+        "duration": 3.05
+    },
+    {
+        "text": "And yeah, during inference\nwe would basically.",
+        "start": 918.024,
+        "duration": 2.475
+    },
+    {
+        "text": "In addition to testing different\norientations of the object, we",
+        "start": 920.874,
+        "duration": 4.425
+    },
+    {
+        "text": "would test different states.",
+        "start": 925.299,
+        "duration": 1.575
+    },
+    {
+        "text": "Like we would start hypothesis of being\nin a bunch of different states and then",
+        "start": 927.074,
+        "duration": 5.35
+    },
+    {
+        "text": "try and match, see, which of those match\nthe features we're currently sensing.",
+        "start": 932.499,
+        "duration": 4.15
+    },
+    {
+        "text": "but we don't have to test the\ndifferent durations since last",
+        "start": 937.174,
+        "duration": 2.775
+    },
+    {
+        "text": "event, since those are externally\nprovided by the GLO global clock.",
+        "start": 939.949,
+        "duration": 3.175
+    },
+    {
+        "text": "Also during inference, so the global\nclock also ticks during inference.",
+        "start": 943.124,
+        "duration": 4.075
+    },
+    {
+        "text": "So during inference we already get this\nkind of red, orange, yellow signal.",
+        "start": 947.499,
+        "duration": 3.575
+    },
+    {
+        "text": "So it tells us like, which one we should\nexpect right now, do we just do inference",
+        "start": 951.149,
+        "duration": 4.7
+    },
+    {
+        "text": "on these discreet, intervals or states?",
+        "start": 955.849,
+        "duration": 2.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 960.174,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah, that makes sense.",
+        "start": 960.899,
+        "duration": 0.55
+    },
+    {
+        "text": "And, is there a reason the arrows\nare shown superimposed rather",
+        "start": 961.449,
+        "duration": 3.625
+    },
+    {
+        "text": "than kinda like at different\npositions in the reference frame?",
+        "start": 965.074,
+        "duration": 2.75
+    },
+    {
+        "text": "Because it's all still at\nthe same location, so the",
+        "start": 968.849,
+        "duration": 1.975
+    },
+    {
+        "text": "sensorimotor hasn't moved.",
+        "start": 970.824,
+        "duration": 1.05
+    },
+    {
+        "text": "it's, always at the same\nlocation in the reference frame.",
+        "start": 974.449,
+        "duration": 2.0
+    },
+    {
+        "text": "It's just at that location we're observing\ndifferent changes at different times.",
+        "start": 976.449,
+        "duration": 4.375
+    },
+    {
+        "text": "Okay, interesting.",
+        "start": 983.112,
+        "duration": 0.612
+    },
+    {
+        "text": "So the sensor's staying totally still?",
+        "start": 983.724,
+        "duration": 1.7
+    },
+    {
+        "text": "Yeah,",
+        "start": 986.024,
+        "duration": 0.45
+    },
+    {
+        "text": "if the sensorimotor would move down here,\nthen this yellow one would move down",
+        "start": 989.724,
+        "duration": 3.5
+    },
+    {
+        "text": "here and we would associate the changes.",
+        "start": 993.224,
+        "duration": 1.4
+    },
+    {
+        "text": "Detect there with this location\nin the reference frame?",
+        "start": 994.974,
+        "duration": 2.525
+    },
+    {
+        "text": "Yeah.",
+        "start": 997.749,
+        "duration": 0.375
+    },
+    {
+        "text": "Yeah.",
+        "start": 999.249,
+        "duration": 0.15
+    },
+    {
+        "text": "I was just thinking because like sometimes\nwe talked about with the smooth pursuit",
+        "start": 999.399,
+        "duration": 3.1
+    },
+    {
+        "text": "and stuff, that it would more create a\npath, but then yeah, I guess to get the",
+        "start": 1002.499,
+        "duration": 6.275
+    },
+    {
+        "text": "input feature to change in that case.",
+        "start": 1008.774,
+        "duration": 1.975
+    },
+    {
+        "text": "And yeah, I tried to leave Smooth\nPursuit out of this example because",
+        "start": 1010.749,
+        "duration": 3.625
+    },
+    {
+        "text": "LA last week we said that we\nwouldn't kinda start with that.",
+        "start": 1014.374,
+        "duration": 3.1
+    },
+    {
+        "text": "Yeah.",
+        "start": 1017.499,
+        "duration": 0.05
+    },
+    {
+        "text": "And it's complicated because there,\nthe sensorimotor is moving and the",
+        "start": 1017.674,
+        "duration": 3.225
+    },
+    {
+        "text": "feature is static, but we want to\ninterpret it as the feature moving and",
+        "start": 1020.899,
+        "duration": 2.85
+    },
+    {
+        "text": "the sensorimotor not, so yeah, this, I\nthought this was the simplest example to",
+        "start": 1023.749,
+        "duration": 7.35
+    },
+    {
+        "text": "illustrate it because it shows how like\nat the same location you can associate",
+        "start": 1031.099,
+        "duration": 4.7
+    },
+    {
+        "text": "different changes at different times.",
+        "start": 1035.799,
+        "duration": 1.675
+    },
+    {
+        "text": "Yeah.",
+        "start": 1039.324,
+        "duration": 0.425
+    },
+    {
+        "text": "One thought is just whether, I'm just\ntrying to see what my eye is doing.",
+        "start": 1040.374,
+        "duration": 3.875
+    },
+    {
+        "text": "I think to a certain degree, maybe when\nyou're not doing smooth pursuit, what",
+        "start": 1046.149,
+        "duration": 3.25
+    },
+    {
+        "text": "you probably do is yeah, a bunch of secs\nthat are very short and, or so you would",
+        "start": 1049.399,
+        "duration": 7.2
+    },
+    {
+        "text": "you'd be moving and then, but you'd be\npausing at each one, so you'd catch a",
+        "start": 1056.999,
+        "duration": 3.675
+    },
+    {
+        "text": "glimpse of movement and then you'd move.",
+        "start": 1060.674,
+        "duration": 1.5
+    },
+    {
+        "text": "it's not that important.",
+        "start": 1062.949,
+        "duration": 0.625
+    },
+    {
+        "text": "it's obviously not that\nrelevant to the time thing.",
+        "start": 1064.374,
+        "duration": 2.05
+    },
+    {
+        "text": "It's just.",
+        "start": 1066.424,
+        "duration": 0.35
+    },
+    {
+        "text": "Trying to think through how\nwe represent the, the behavior",
+        "start": 1067.637,
+        "duration": 3.4
+    },
+    {
+        "text": "reference frame, but yeah.",
+        "start": 1071.037,
+        "duration": 1.275
+    },
+    {
+        "text": "Yeah.",
+        "start": 1074.037,
+        "duration": 0.225
+    },
+    {
+        "text": "So basically I wouldn't, if I\nimplement this now, I wouldn't change",
+        "start": 1074.262,
+        "duration": 3.45
+    },
+    {
+        "text": "anything about how we represent\nspace or the reference frame here.",
+        "start": 1077.712,
+        "duration": 2.75
+    },
+    {
+        "text": "It's still like you're at a location\non the, in the staplers reference",
+        "start": 1080.462,
+        "duration": 3.375
+    },
+    {
+        "text": "frame and you're associating\nchanges at that location.",
+        "start": 1083.837,
+        "duration": 2.2
+    },
+    {
+        "text": "Now there's just an additional\nconditioning on what changes you expect",
+        "start": 1086.462,
+        "duration": 3.675
+    },
+    {
+        "text": "there based on the time since the last\nevent and where in the sequence you're at.",
+        "start": 1090.137,
+        "duration": 4.575
+    },
+    {
+        "text": "And then if we were to do like\nsupervised learning, for example, we",
+        "start": 1096.637,
+        "duration": 3.875
+    },
+    {
+        "text": "could move the sensorimotor as much\nas we want and just tell it like what",
+        "start": 1100.512,
+        "duration": 4.15
+    },
+    {
+        "text": "is currently this, the element in\nsequence in time since last event.",
+        "start": 1104.662,
+        "duration": 3.0
+    },
+    {
+        "text": "It, would learn it correctly.",
+        "start": 1107.837,
+        "duration": 0.925
+    },
+    {
+        "text": "It's, just gonna get complicated\nonce you don't tell it that.",
+        "start": 1109.187,
+        "duration": 4.9
+    },
+    {
+        "text": "And for it to consistently infer,\nbut it shouldn't be that hard,",
+        "start": 1114.087,
+        "duration": 4.7
+    },
+    {
+        "text": "it just needs to be able to detect\nthe significant events somehow,",
+        "start": 1121.162,
+        "duration": 3.95
+    },
+    {
+        "text": "or someone needs to detect them.",
+        "start": 1125.362,
+        "duration": 1.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 1129.987,
+        "duration": 0.25
+    },
+    {
+        "text": "I'm trying to think of what really\nmakes a significant feature.",
+        "start": 1130.241,
+        "duration": 2.496
+    },
+    {
+        "text": "It's, the way you described it here\nis, like a. a sound of the click or, so",
+        "start": 1132.737,
+        "duration": 6.7
+    },
+    {
+        "text": "I've been yeah, I've been thinking about\npendulum, pendulums, pen, pen, pendulums.",
+        "start": 1139.712,
+        "duration": 5.825
+    },
+    {
+        "text": "And thinking like in that case, a\nsignificant event is when there's, it",
+        "start": 1146.162,
+        "duration": 2.65
+    },
+    {
+        "text": "basically goes to the edge and there's\na moment where it gets, it's still,",
+        "start": 1148.812,
+        "duration": 4.7
+    },
+    {
+        "text": "and then it goes into motion again.",
+        "start": 1154.187,
+        "duration": 1.35
+    },
+    {
+        "text": "Yeah.",
+        "start": 1156.137,
+        "duration": 0.175
+    },
+    {
+        "text": "And I guess this is the same kind of\ndeal where not only is there a period",
+        "start": 1156.437,
+        "duration": 4.225
+    },
+    {
+        "text": "where, a point where it's at rest,\nbut then it also reverses direction.",
+        "start": 1160.662,
+        "duration": 4.9
+    },
+    {
+        "text": "So maybe it's like the fact that\nyou go, you, are, you do have some",
+        "start": 1165.887,
+        "duration": 2.9
+    },
+    {
+        "text": "sort of expected motion, but then\nyou hit some limit and then you",
+        "start": 1168.887,
+        "duration": 2.825
+    },
+    {
+        "text": "have to risk reverse direction.",
+        "start": 1171.712,
+        "duration": 1.25
+    },
+    {
+        "text": "Is that something we could use to like,\nqualify something as a significant state?",
+        "start": 1173.112,
+        "duration": 3.525
+    },
+    {
+        "text": "Yeah.",
+        "start": 1177.887,
+        "duration": 0.175
+    },
+    {
+        "text": "Yeah.",
+        "start": 1178.062,
+        "duration": 0.15
+    },
+    {
+        "text": "I was thinking about, saying\nthat, the significant event is",
+        "start": 1178.212,
+        "duration": 3.05
+    },
+    {
+        "text": "just the, change of direction.",
+        "start": 1181.262,
+        "duration": 1.525
+    },
+    {
+        "text": "but then I thought it's maybe a more\ninteresting example if the event",
+        "start": 1183.812,
+        "duration": 3.55
+    },
+    {
+        "text": "is detected somewhere else, just to\nillustrate that this clock is global",
+        "start": 1187.362,
+        "duration": 3.125
+    },
+    {
+        "text": "and can be reset by a bunch of stuff.",
+        "start": 1190.487,
+        "duration": 1.85
+    },
+    {
+        "text": "And the sensorimotor itself\ndoesn't even necessarily need",
+        "start": 1192.337,
+        "duration": 2.575
+    },
+    {
+        "text": "to observe that, that event.",
+        "start": 1194.912,
+        "duration": 1.85
+    },
+    {
+        "text": "but yeah, I like the idea of almost\nyeah, the smoothness of the prediction.",
+        "start": 1199.412,
+        "duration": 3.025
+    },
+    {
+        "text": "So it doesn't necessarily need to\nbe like reversing direction, but if",
+        "start": 1202.462,
+        "duration": 3.7
+    },
+    {
+        "text": "it's just like suddenly it gets hard.",
+        "start": 1206.162,
+        "duration": 1.9
+    },
+    {
+        "text": "Or like suddenly the nature of change\nis just different and predicting is",
+        "start": 1209.187,
+        "duration": 3.275
+    },
+    {
+        "text": "you can't just predict based on almost\nlike low level, first order stuff.",
+        "start": 1212.562,
+        "duration": 4.175
+    },
+    {
+        "text": "Then you would chunk it and be like,\nokay, this is now a different kind",
+        "start": 1217.187,
+        "duration": 3.05
+    },
+    {
+        "text": "of sequence of behavior or something.",
+        "start": 1220.237,
+        "duration": 2.675
+    },
+    {
+        "text": "I think",
+        "start": 1222.912,
+        "duration": 0.512
+    },
+    {
+        "text": "Ramy you were gonna say something else?",
+        "start": 1227.137,
+        "duration": 1.275
+    },
+    {
+        "text": "No, I was gonna say, yeah, I noticed\nthe same thing as, Scott, that maybe",
+        "start": 1229.062,
+        "duration": 3.425
+    },
+    {
+        "text": "it's a, it is the key frame where,\nthe object is, is just staying stable.",
+        "start": 1232.487,
+        "duration": 5.075
+    },
+    {
+        "text": "Like it's not moving.",
+        "start": 1237.562,
+        "duration": 1.075
+    },
+    {
+        "text": "and I was thinking whether, that key frame\nis basically feeding into the behavior,",
+        "start": 1239.462,
+        "duration": 4.425
+    },
+    {
+        "text": "basically went to Oh yeah.",
+        "start": 1245.912,
+        "duration": 1.45
+    },
+    {
+        "text": "Time.",
+        "start": 1247.362,
+        "duration": 0.325
+    },
+    {
+        "text": "Like basically the morphology model of\nthe stapler recognizes the closed state.",
+        "start": 1248.312,
+        "duration": 3.575
+    },
+    {
+        "text": "Yeah.",
+        "start": 1252.587,
+        "duration": 0.425
+    },
+    {
+        "text": "I think a bunch of things like\nthat could be a, significant event.",
+        "start": 1253.137,
+        "duration": 3.75
+    },
+    {
+        "text": "it, could, for example, if the clock\nmoves much farther and we decrease the",
+        "start": 1257.482,
+        "duration": 4.855
+    },
+    {
+        "text": "threshold for significant events, I\ncould imagine events like the orientation",
+        "start": 1262.337,
+        "duration": 3.875
+    },
+    {
+        "text": "aligns somehow, like in a straight or 90\ndegree orientation as significant events.",
+        "start": 1266.212,
+        "duration": 4.35
+    },
+    {
+        "text": "Kind of if you see, an object just\nsmoothly spinning like this, you",
+        "start": 1270.737,
+        "duration": 5.375
+    },
+    {
+        "text": "might just artificially set events\nwhen it's like upright or sideways,",
+        "start": 1276.112,
+        "duration": 4.125
+    },
+    {
+        "text": "and That would, yeah, it could be\nreally minor things, that, that",
+        "start": 1281.087,
+        "duration": 5.525
+    },
+    {
+        "text": "define these events at some point.",
+        "start": 1286.612,
+        "duration": 1.4
+    },
+    {
+        "text": "it would just be important that\nit's consistent events that you see",
+        "start": 1288.787,
+        "duration": 3.75
+    },
+    {
+        "text": "every time you see that behavior\nand that can then reset the clock.",
+        "start": 1292.537,
+        "duration": 3.95
+    },
+    {
+        "text": "But I also like what Neil said about the\nprediction error being a, a change, like",
+        "start": 1297.157,
+        "duration": 5.13
+    },
+    {
+        "text": "a boundary, a change in, between moving\nto the next element in the sequence.",
+        "start": 1302.287,
+        "duration": 5.225
+    },
+    {
+        "text": "it seems very plausible.",
+        "start": 1310.087,
+        "duration": 1.025
+    },
+    {
+        "text": "Yeah.",
+        "start": 1314.362,
+        "duration": 0.15
+    },
+    {
+        "text": "And it does seem like to the\nother point, like when humans see",
+        "start": 1314.512,
+        "duration": 5.425
+    },
+    {
+        "text": "any kind of repetitive behavior,\nyou do develop, I feel a pulsing",
+        "start": 1319.937,
+        "duration": 4.575
+    },
+    {
+        "text": "representation of it, where it's like,\nit doesn't feel truly continuous.",
+        "start": 1324.837,
+        "duration": 4.25
+    },
+    {
+        "text": "It's not if it was truly continuous,\nthen you would just, you wouldn't",
+        "start": 1329.787,
+        "duration": 4.45
+    },
+    {
+        "text": "even really perceive it as repeating.",
+        "start": 1334.237,
+        "duration": 1.575
+    },
+    {
+        "text": "You would almost perceive it as\nconstantly changing, but it's the fact",
+        "start": 1336.487,
+        "duration": 3.75
+    },
+    {
+        "text": "that you notice that it's cycling and\nit's the beat of that cycling that",
+        "start": 1340.237,
+        "duration": 3.9
+    },
+    {
+        "text": "kind of naturally emerges in your head.",
+        "start": 1344.137,
+        "duration": 1.425
+    },
+    {
+        "text": "Yeah, it's like with the thought\nthat spins on the circle when",
+        "start": 1346.487,
+        "duration": 3.075
+    },
+    {
+        "text": "you know, when it laps, you know\nwhen it starts repeating again.",
+        "start": 1349.862,
+        "duration": 2.475
+    },
+    {
+        "text": "Whereas if you look at like a\nfire or the ocean or something.",
+        "start": 1352.362,
+        "duration": 3.025
+    },
+    {
+        "text": "There isn't really like a point where you\nsay, oh, now it's, it starts over again.",
+        "start": 1355.837,
+        "duration": 3.65
+    },
+    {
+        "text": "Unless you watch like one of those\nYouTube videos that have like",
+        "start": 1359.762,
+        "duration": 3.3
+    },
+    {
+        "text": "smooth jazz in the background.",
+        "start": 1363.337,
+        "duration": 1.275
+    },
+    {
+        "text": "But yeah, fire is a good\nexample of something that",
+        "start": 1365.162,
+        "duration": 3.625
+    },
+    {
+        "text": "doesn't feel cyclical at all.",
+        "start": 1368.787,
+        "duration": 1.375
+    },
+    {
+        "text": "Yeah.",
+        "start": 1372.137,
+        "duration": 0.425
+    },
+    {
+        "text": "Yeah.",
+        "start": 1374.512,
+        "duration": 0.175
+    },
+    {
+        "text": "I guess going back to the time cell\nthing, when I was thinking about the",
+        "start": 1374.687,
+        "duration": 2.55
+    },
+    {
+        "text": "pendulum during this last present\npresentation, if we imagined the ball",
+        "start": 1377.237,
+        "duration": 4.65
+    },
+    {
+        "text": "started here at one end, you start\nthe clock and it goes like this.",
+        "start": 1381.912,
+        "duration": 4.1
+    },
+    {
+        "text": "Let's just forget the right side for now.",
+        "start": 1386.012,
+        "duration": 1.45
+    },
+    {
+        "text": "And then, the time cell is clicking down.",
+        "start": 1387.837,
+        "duration": 1.6
+    },
+    {
+        "text": "And then, but eventually when, we get\nback to the beginning, we, if this",
+        "start": 1389.737,
+        "duration": 4.25
+    },
+    {
+        "text": "thing had learned the association with\nthat early time cell, the state is",
+        "start": 1393.987,
+        "duration": 3.625
+    },
+    {
+        "text": "now saying, oh, I was al I was already\nassociated with the time cell and it",
+        "start": 1397.612,
+        "duration": 4.4
+    },
+    {
+        "text": "was at the beginning of the sequence.",
+        "start": 1402.012,
+        "duration": 1.275
+    },
+    {
+        "text": "Oh yeah.",
+        "start": 1404.437,
+        "duration": 1.55
+    },
+    {
+        "text": "And so now we can re now we can restart\nthe sequence because I've already got,",
+        "start": 1406.412,
+        "duration": 3.225
+    },
+    {
+        "text": "I've developed an association between\nwhat the time cell is and what this",
+        "start": 1410.162,
+        "duration": 2.575
+    },
+    {
+        "text": "morphological state is and that Yeah.",
+        "start": 1412.737,
+        "duration": 2.225
+    },
+    {
+        "text": "And that time cell was like\nan early sequence time cell.",
+        "start": 1414.962,
+        "duration": 3.275
+    },
+    {
+        "text": "That's what I was thinking\nabout for detecting cyclical,",
+        "start": 1418.562,
+        "duration": 3.35
+    },
+    {
+        "text": "yeah.",
+        "start": 1424.512,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 1424.937,
+        "duration": 0.125
+    },
+    {
+        "text": "That's a really great point.",
+        "start": 1425.062,
+        "duration": 1.1
+    },
+    {
+        "text": "actually basically like just.",
+        "start": 1426.362,
+        "duration": 1.762
+    },
+    {
+        "text": "This cell down, this location down here.",
+        "start": 1428.937,
+        "duration": 2.625
+    },
+    {
+        "text": "if it sees a free feature at the\nbeginning of the interval, it changes",
+        "start": 1432.212,
+        "duration": 3.375
+    },
+    {
+        "text": "and then it sees the same feature again.",
+        "start": 1435.587,
+        "duration": 1.925
+    },
+    {
+        "text": "That, that's the signal that it's\nback at the beginning, right?",
+        "start": 1437.512,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah, That's your, re like reset,\nlike a cyclical reset signal.",
+        "start": 1440.812,
+        "duration": 4.375
+    },
+    {
+        "text": "Yeah.",
+        "start": 1446.787,
+        "duration": 0.25
+    },
+    {
+        "text": "I like that.",
+        "start": 1447.037,
+        "duration": 0.32
+    },
+    {
+        "text": "That might be the easiest\nmechanism actually.",
+        "start": 1449.287,
+        "duration": 1.95
+    },
+    {
+        "text": "is that, events signal, reset a vote?",
+        "start": 1455.037,
+        "duration": 3.85
+    },
+    {
+        "text": "no.",
+        "start": 1463.887,
+        "duration": 0.175
+    },
+    {
+        "text": "I don't think voting would play too\nmuch into this because basically this,",
+        "start": 1464.062,
+        "duration": 4.3
+    },
+    {
+        "text": "since this is a global clock, it's\nalready broadcasting widely everywhere.",
+        "start": 1468.412,
+        "duration": 3.85
+    },
+    {
+        "text": "So I don't think we would\nneed voting anymore for, a",
+        "start": 1472.537,
+        "duration": 4.475
+    },
+    {
+        "text": "significant event detection.",
+        "start": 1477.012,
+        "duration": 1.125
+    },
+    {
+        "text": "we would still do voting on which object\nwe're sensing or maybe also where we are",
+        "start": 1478.312,
+        "duration": 5.575
+    },
+    {
+        "text": "in the sequence, but we wouldn't vote\nabout whether the event has reset or not.",
+        "start": 1483.887,
+        "duration": 4.825
+    },
+    {
+        "text": "when we see, a sequence like a,\nB, C. DAD or Abhi, like a sequence",
+        "start": 1495.287,
+        "duration": 6.2
+    },
+    {
+        "text": "that has a repetition of a, for\nexample, but it's not really cyclic.",
+        "start": 1501.487,
+        "duration": 5.025
+    },
+    {
+        "text": "It doesn't repeat the same thing.",
+        "start": 1506.887,
+        "duration": 1.6
+    },
+    {
+        "text": "the second, A should not be bound to\nthe first element in the sequence.",
+        "start": 1511.612,
+        "duration": 4.35
+    },
+    {
+        "text": "It should not know that it needs to repeat\nit need, it basically needs to, because",
+        "start": 1515.962,
+        "duration": 4.125
+    },
+    {
+        "text": "the notice sequence is A, B, C, D, A, D,\nnot a, B, C, D, A, B, C, D, A, B, C, D.",
+        "start": 1520.087,
+        "duration": 4.975
+    },
+    {
+        "text": "You get what I'm saying?",
+        "start": 1525.212,
+        "duration": 0.65
+    },
+    {
+        "text": "It's, like it's a higher order.",
+        "start": 1526.162,
+        "duration": 1.95
+    },
+    {
+        "text": "Yeah.",
+        "start": 1528.537,
+        "duration": 0.225
+    },
+    {
+        "text": "I think, yeah, in that case, like\nbasically each letter would be one",
+        "start": 1529.287,
+        "duration": 3.4
+    },
+    {
+        "text": "of the elements in the sequence.",
+        "start": 1532.687,
+        "duration": 1.625
+    },
+    {
+        "text": "And I guess the reset I was thinking\nof right now was like, what triggers",
+        "start": 1534.712,
+        "duration": 3.6
+    },
+    {
+        "text": "moving one forward in the sequence, in\nyour example, like each letter would",
+        "start": 1538.312,
+        "duration": 3.65
+    },
+    {
+        "text": "trigger moving one forward, whereas,\nyeah, I think that's a good point.",
+        "start": 1541.962,
+        "duration": 4.85
+    },
+    {
+        "text": "Like it doesn't solve us knowing\nwhen this whole sequence restarts.",
+        "start": 1546.812,
+        "duration": 3.9
+    },
+    {
+        "text": "It just solves if we only have continuous\nchange within one of those intervals, how",
+        "start": 1550.737,
+        "duration": 4.8
+    },
+    {
+        "text": "do we know when that kind of starts over?",
+        "start": 1555.537,
+        "duration": 5.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 1561.762,
+        "duration": 0.15
+    },
+    {
+        "text": "I think the event stuff\nplays into this quite a lot.",
+        "start": 1562.712,
+        "duration": 2.55
+    },
+    {
+        "text": "if we do have a continuous stream\nof A, B, C, A, D, F, or whatever,",
+        "start": 1567.762,
+        "duration": 3.525
+    },
+    {
+        "text": "so it's a higher order sequence.",
+        "start": 1571.337,
+        "duration": 1.25
+    },
+    {
+        "text": "There's no rest period in between that\nsequence, then it is quite hard to",
+        "start": 1573.149,
+        "duration": 3.45
+    },
+    {
+        "text": "learn that like higher order sequence.",
+        "start": 1576.599,
+        "duration": 1.925
+    },
+    {
+        "text": "But if there was like A, B, C, A, D,\nF break, A, B, C, A, D, F, then that",
+        "start": 1578.774,
+        "duration": 4.925
+    },
+    {
+        "text": "break gives us an indication that first\na is the beginning of an order sequence.",
+        "start": 1583.699,
+        "duration": 4.5
+    },
+    {
+        "text": "It's a significant event.",
+        "start": 1588.574,
+        "duration": 1.125
+    },
+    {
+        "text": "And so that second, A, when we\ncome across to it, maybe we would",
+        "start": 1590.224,
+        "duration": 3.4
+    },
+    {
+        "text": "associate it with a, eh, I feel like\nit helps somehow, but I'm not sure.",
+        "start": 1593.624,
+        "duration": 5.525
+    },
+    {
+        "text": "Yeah, even with music, it's like you often\nplay the first note a bit louder, bit more",
+        "start": 1599.149,
+        "duration": 5.525
+    },
+    {
+        "text": "of an attack on the first note, or you\nhave some kind of beat in the background,",
+        "start": 1604.674,
+        "duration": 3.9
+    },
+    {
+        "text": "that tells you that, what do you call it,\nthe four by four rhythm starts over again.",
+        "start": 1609.599,
+        "duration": 5.525
+    },
+    {
+        "text": "yeah.",
+        "start": 1616.474,
+        "duration": 0.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 1617.349,
+        "duration": 0.225
+    },
+    {
+        "text": "And I could imagine you can almost imagine\nlike a threshold for kinda like you",
+        "start": 1617.574,
+        "duration": 6.325
+    },
+    {
+        "text": "were saying Viviane earlier, like maybe\nthat gets lower as the sequence gets",
+        "start": 1623.899,
+        "duration": 2.775
+    },
+    {
+        "text": "longer, but you have some threshold for\nsaying, okay, the sequence is repeated.",
+        "start": 1626.674,
+        "duration": 5.8
+    },
+    {
+        "text": "And yeah, with a kind of challenging\nsequence like that, like it might almost",
+        "start": 1633.549,
+        "duration": 4.85
+    },
+    {
+        "text": "be a bit of kind of trial and error\nwhere you're trying to predict what's",
+        "start": 1638.399,
+        "duration": 2.375
+    },
+    {
+        "text": "happening and you might not initially\nknow where that repetition happens.",
+        "start": 1640.774,
+        "duration": 3.85
+    },
+    {
+        "text": "I don't know.",
+        "start": 1647.124,
+        "duration": 0.3
+    },
+    {
+        "text": "I can almost imagine this, if you were\nlike reading like genetic sequence",
+        "start": 1647.424,
+        "duration": 4.325
+    },
+    {
+        "text": "or something, if you were just doing\nthat and you would see like a bunch",
+        "start": 1651.749,
+        "duration": 3.2
+    },
+    {
+        "text": "and you generally, you probably\nwouldn't initially reset it at all,",
+        "start": 1655.249,
+        "duration": 3.6
+    },
+    {
+        "text": "but maybe at certain points you'd\nbe like, hang on, is that a reset?",
+        "start": 1659.599,
+        "duration": 3.975
+    },
+    {
+        "text": "And then you'd update your hypothesis\nabout where that reset point is, and",
+        "start": 1664.174,
+        "duration": 3.35
+    },
+    {
+        "text": "then you'd keep going and then you'd be\nlike, oh yeah, maybe that is the reset.",
+        "start": 1667.524,
+        "duration": 3.55
+    },
+    {
+        "text": "And you could almost like tune\nthat point to align with how,",
+        "start": 1671.074,
+        "duration": 5.3
+    },
+    {
+        "text": "yeah, and like pendulum, like when\nyou first see the pendulum swing,",
+        "start": 1679.524,
+        "duration": 4.275
+    },
+    {
+        "text": "you don't really know when it's\ngonna stop and change direction.",
+        "start": 1684.049,
+        "duration": 2.3
+    },
+    {
+        "text": "But then you s yeah, I don't know.",
+        "start": 1686.349,
+        "duration": 1.75
+    },
+    {
+        "text": "Yeah, like HTM solved the\nhigher order sequence thing.",
+        "start": 1689.249,
+        "duration": 3.65
+    },
+    {
+        "text": "So like it could correctly deal with like\nA, B, C, A, D, F. I don't think it does.",
+        "start": 1693.224,
+        "duration": 6.338
+    },
+    {
+        "text": "it would treat that second A is\ndifferent than the first A because of",
+        "start": 1699.932,
+        "duration": 3.417
+    },
+    {
+        "text": "the It was, yeah, it does, that part.",
+        "start": 1703.349,
+        "duration": 1.7
+    },
+    {
+        "text": "It doesn't resolve the issue of how\ndo you in an unsupervised way detect",
+        "start": 1705.049,
+        "duration": 4.25
+    },
+    {
+        "text": "the start of a sequence versus the\ncontinuation of the longer sequence.",
+        "start": 1709.299,
+        "duration": 3.275
+    },
+    {
+        "text": "So it seems like we could just\naugment that logic as it is.",
+        "start": 1712.949,
+        "duration": 3.5
+    },
+    {
+        "text": "Instead of thinking about as,\ncompletely independent identities,",
+        "start": 1717.149,
+        "duration": 3.325
+    },
+    {
+        "text": "there's an SDR R for that first,\nA and a SDR R for the second.",
+        "start": 1720.474,
+        "duration": 2.975
+    },
+    {
+        "text": "A and maybe they may be similar, but when\nwe're talking about resetting a clock,",
+        "start": 1723.449,
+        "duration": 4.925
+    },
+    {
+        "text": "the similarity of that, I don't know.",
+        "start": 1729.099,
+        "duration": 2.8
+    },
+    {
+        "text": "I think similar, different, it's tough.",
+        "start": 1732.499,
+        "duration": 2.5
+    },
+    {
+        "text": "I think that representing the same feature\ndifferently solved by re by having the",
+        "start": 1734.999,
+        "duration": 4.275
+    },
+    {
+        "text": "reference frame down here and moving\nthrough the sequence here as although the",
+        "start": 1739.274,
+        "duration": 5.275
+    },
+    {
+        "text": "same letter A might be coming in it, it\nwould be at D we would be in a different",
+        "start": 1744.549,
+        "duration": 3.5
+    },
+    {
+        "text": "element of the sequence and then predict\na different next element in the sequence.",
+        "start": 1748.074,
+        "duration": 3.475
+    },
+    {
+        "text": "But then, yeah, like Neil said, I\nthink it, it wouldn't solve the, like",
+        "start": 1752.924,
+        "duration": 3.95
+    },
+    {
+        "text": "figuring out whether the a was in the\nmiddle or, if it's restarting again.",
+        "start": 1756.874,
+        "duration": 5.5
+    },
+    {
+        "text": "for, what it's worth, like revisiting the\nwarning paper that you brought up last",
+        "start": 1763.774,
+        "duration": 5.2
+    },
+    {
+        "text": "week, there were, when I was in the lab\nand was involved in studies where we did",
+        "start": 1768.974,
+        "duration": 5.05
+    },
+    {
+        "text": "have sequences like A, B, C, D separated\nby a gray screen versus just let them",
+        "start": 1774.024,
+        "duration": 5.05
+    },
+    {
+        "text": "run without a gray screen in between.",
+        "start": 1779.074,
+        "duration": 1.9
+    },
+    {
+        "text": "And there were like, is, it's\nactually quite hard for the mice.",
+        "start": 1781.299,
+        "duration": 3.8
+    },
+    {
+        "text": "To show like the kind of prediction\nerrors that you would get when you",
+        "start": 1785.899,
+        "duration": 2.525
+    },
+    {
+        "text": "don't have that gray screen in between.",
+        "start": 1788.424,
+        "duration": 1.45
+    },
+    {
+        "text": "It's possible, but having that sort\nof reset teaching signal or some clear",
+        "start": 1789.899,
+        "duration": 4.075
+    },
+    {
+        "text": "event indicating the beginning of the\nevent has like a, quite a large impact",
+        "start": 1793.974,
+        "duration": 5.025
+    },
+    {
+        "text": "on whether or not like prediction\nerror, like signals emerge afterwards.",
+        "start": 1798.999,
+        "duration": 3.525
+    },
+    {
+        "text": "interesting.",
+        "start": 1803.649,
+        "duration": 0.4
+    },
+    {
+        "text": "That's, great.",
+        "start": 1804.274,
+        "duration": 0.5
+    },
+    {
+        "text": "That fits perfectly with, this idea.",
+        "start": 1804.774,
+        "duration": 1.85
+    },
+    {
+        "text": "Let's see if I can find the paper.",
+        "start": 1808.199,
+        "duration": 0.95
+    },
+    {
+        "text": "Oh, by the way, just one side note.",
+        "start": 1812.224,
+        "duration": 1.25
+    },
+    {
+        "text": "the pa, the time cells that Scott out\nlast week had final resolution at shorter",
+        "start": 1814.678,
+        "duration": 6.246
+    },
+    {
+        "text": "time intervals, so that could be easily\nintegrated here by basically putting more",
+        "start": 1820.924,
+        "duration": 4.65
+    },
+    {
+        "text": "neurons here at the beginning and then\nmaking them less and less towards the end.",
+        "start": 1825.624,
+        "duration": 3.65
+    },
+    {
+        "text": "and there wouldn't be need\nto be any change in the",
+        "start": 1830.399,
+        "duration": 2.896
+    },
+    {
+        "text": "learning module, just have a,",
+        "start": 1833.324,
+        "duration": 1.35
+    },
+    {
+        "text": "of course our resolution, in the\nbeginning, a final resolution in it,",
+        "start": 1836.799,
+        "duration": 5.725
+    },
+    {
+        "text": "would change more frequently here.",
+        "start": 1842.524,
+        "duration": 0.975
+    },
+    {
+        "text": "So it could, represent, more\ndetailed differences in the changes.",
+        "start": 1843.499,
+        "duration": 4.833
+    },
+    {
+        "text": "all right, let me just, I'm\ngonna put this in the chat here.",
+        "start": 1850.907,
+        "duration": 2.25
+    },
+    {
+        "text": "if you go to figure two there,\nit shows, oh, if you wanna share",
+        "start": 1854.732,
+        "duration": 2.45
+    },
+    {
+        "text": "your screen, I, stopped sharing.",
+        "start": 1857.182,
+        "duration": 1.275
+    },
+    {
+        "text": "Okay.",
+        "start": 1858.482,
+        "duration": 0.025
+    },
+    {
+        "text": "Screen.",
+        "start": 1860.845,
+        "duration": 0.375
+    },
+    {
+        "text": "So it's  this, one, oddball\nevoked responses, yada yada.",
+        "start": 1867.67,
+        "duration": 4.008
+    },
+    {
+        "text": "B one.",
+        "start": 1871.745,
+        "duration": 0.55
+    },
+    {
+        "text": "Oh, hey, look who the first author is.",
+        "start": 1872.695,
+        "duration": 2.075
+    },
+    {
+        "text": "Yeah.",
+        "start": 1875.245,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah, that's cool.",
+        "start": 1876.07,
+        "duration": 0.675
+    },
+    {
+        "text": "so here's one, showing the,",
+        "start": 1877.995,
+        "duration": 3.35
+    },
+    {
+        "text": "with and without Gray essentially.",
+        "start": 1884.07,
+        "duration": 1.55
+    },
+    {
+        "text": "So you have A, B, C, D, A, C, D, A,\nB, C, D with gray, A, B, c with gray.",
+        "start": 1885.62,
+        "duration": 2.975
+    },
+    {
+        "text": "And the, these are the\ncomparison of the responses.",
+        "start": 1889.095,
+        "duration": 3.1
+    },
+    {
+        "text": "you don't have to worry about OSG or RPG,\ntoo much the different stimulus types,",
+        "start": 1893.045,
+        "duration": 5.275
+    },
+    {
+        "text": "but essentially, yeah, that's cool.",
+        "start": 1898.945,
+        "duration": 0.875
+    },
+    {
+        "text": "The kinds of deviations that you were\nable to get from that 2014, I think",
+        "start": 1900.095,
+        "duration": 2.825
+    },
+    {
+        "text": "it was 2014, good morning paper are,\npretty different when you don't have,",
+        "start": 1902.92,
+        "duration": 3.675
+    },
+    {
+        "text": "intermediate gray screens to in emulate,\nindicate stimulus onset or sequence onset.",
+        "start": 1908.095,
+        "duration": 4.5
+    },
+    {
+        "text": "I, I think this matches what, Niels\nhas been talking about the prediction",
+        "start": 1913.124,
+        "duration": 4.246
+    },
+    {
+        "text": "error, because now every time gray,",
+        "start": 1917.37,
+        "duration": 2.2
+    },
+    {
+        "text": "nevermind, it's, you're always learning\nthe prediction from D to A or D to gray to",
+        "start": 1924.045,
+        "duration": 4.775
+    },
+    {
+        "text": "a, so it, it's not about prediction error.",
+        "start": 1928.82,
+        "duration": 1.775
+    },
+    {
+        "text": "Does it, the gray, period change or is\nit always the same period time period,",
+        "start": 1932.232,
+        "duration": 4.05
+    },
+    {
+        "text": "like a second or something like that?",
+        "start": 1936.482,
+        "duration": 1.225
+    },
+    {
+        "text": "I think, but yeah, you, were saying with\nthe gray, it's better prediction right?",
+        "start": 1937.707,
+        "duration": 4.05
+    },
+    {
+        "text": "they understand the sequence better.",
+        "start": 1941.957,
+        "duration": 1.65
+    },
+    {
+        "text": "Yeah, definitely.",
+        "start": 1943.957,
+        "duration": 1.15
+    },
+    {
+        "text": "if you don't have that gray period,\nyou're essentially just doing like markoff",
+        "start": 1946.407,
+        "duration": 3.05
+    },
+    {
+        "text": "chain learning where you're, you're\njust learning transition probabilities",
+        "start": 1949.457,
+        "duration": 4.025
+    },
+    {
+        "text": "between sequences and it's just a\nharder task to do in an automatic",
+        "start": 1953.482,
+        "duration": 4.6
+    },
+    {
+        "text": "way than if you have something to set\nthe clock at the beginning, which is",
+        "start": 1958.082,
+        "duration": 4.275
+    },
+    {
+        "text": "actually why I was thinking when you're\noriginally going over the clock and",
+        "start": 1962.357,
+        "duration": 3.925
+    },
+    {
+        "text": "there's a new event being set at every\nsingle note intuitively, it feels like",
+        "start": 1966.282,
+        "duration": 4.25
+    },
+    {
+        "text": "the clock is set at the first note.",
+        "start": 1970.532,
+        "duration": 1.625
+    },
+    {
+        "text": "And then, we tick along and learn\nthe few notes until maybe there",
+        "start": 1972.407,
+        "duration": 4.175
+    },
+    {
+        "text": "is that rest period or something\nto reset the entire event clock.",
+        "start": 1976.582,
+        "duration": 3.175
+    },
+    {
+        "text": "And I, kind of wonder on that, whether\nit could be a bit of both that like,",
+        "start": 1981.732,
+        "duration": 3.775
+    },
+    {
+        "text": "'cause it feels like both are useful and",
+        "start": 1986.682,
+        "duration": 1.5
+    },
+    {
+        "text": "yeah, whether you'd almost have",
+        "start": 1991.307,
+        "duration": 1.75
+    },
+    {
+        "text": "in the same way that we have\ndifferent spaces for different,",
+        "start": 1995.782,
+        "duration": 1.75
+    },
+    {
+        "text": "for objects that we have like\ndifferent time starts, but But yeah.",
+        "start": 1997.532,
+        "duration": 5.275
+    },
+    {
+        "text": "But this is really interesting\n'cause yeah, basically.",
+        "start": 2002.807,
+        "duration": 1.65
+    },
+    {
+        "text": "The issue with the top is like\nthe animal needs to infer that",
+        "start": 2005.07,
+        "duration": 2.9
+    },
+    {
+        "text": "d is the end of the sequence.",
+        "start": 2007.97,
+        "duration": 1.425
+    },
+    {
+        "text": "It has very little, signal for that.",
+        "start": 2010.095,
+        "duration": 3.6
+    },
+    {
+        "text": "but,",
+        "start": 2016.945,
+        "duration": 0.5
+    },
+    {
+        "text": "and sorry.",
+        "start": 2019.87,
+        "duration": 0.5
+    },
+    {
+        "text": "And so Blue, just to, to interpret\nit, blue is, high firing rate because",
+        "start": 2020.37,
+        "duration": 4.925
+    },
+    {
+        "text": "of a high prediction error in the\ncontinuous case or talking about here?",
+        "start": 2025.295,
+        "duration": 3.775
+    },
+    {
+        "text": "Yeah.",
+        "start": 2029.345,
+        "duration": 0.375
+    },
+    {
+        "text": "Or, I'm just trying to see of the\ntraces, what's compared with what,",
+        "start": 2029.82,
+        "duration": 3.625
+    },
+    {
+        "text": "or like what should I be looking at?",
+        "start": 2033.495,
+        "duration": 1.125
+    },
+    {
+        "text": "different days.",
+        "start": 2035.32,
+        "duration": 0.65
+    },
+    {
+        "text": "So there's a five day learning regime, so\nwe're actually not looking at prediction",
+        "start": 2036.97,
+        "duration": 3.825
+    },
+    {
+        "text": "here as here we're actually learning,\nlooking at the amount of like adaptation",
+        "start": 2040.795,
+        "duration": 2.975
+    },
+    {
+        "text": "over days in this particular case.",
+        "start": 2043.77,
+        "duration": 1.975
+    },
+    {
+        "text": "So when we're saying day in the\ncontinuous case, it says here blue",
+        "start": 2046.295,
+        "duration": 4.725
+    },
+    {
+        "text": "green is day one, blue is day five.",
+        "start": 2051.545,
+        "duration": 2.15
+    },
+    {
+        "text": "So it's, it is saying that there\nisn't that much of a difference",
+        "start": 2055.47,
+        "duration": 2.325
+    },
+    {
+        "text": "across days when you don't get\na teaching signal on the gray.",
+        "start": 2058.32,
+        "duration": 3.025
+    },
+    {
+        "text": "But when you get a do, get a gr, a\ngray signal in between then, like",
+        "start": 2061.932,
+        "duration": 3.2
+    },
+    {
+        "text": "the day one responses are small, but\nthey grow quite significantly after.",
+        "start": 2065.132,
+        "duration": 4.375
+    },
+    {
+        "text": "Yeah.",
+        "start": 2069.557,
+        "duration": 0.175
+    },
+    {
+        "text": "Okay.",
+        "start": 2069.757,
+        "duration": 0.25
+    },
+    {
+        "text": "Multiple days of exposure.",
+        "start": 2070.157,
+        "duration": 1.175
+    },
+    {
+        "text": "And it's thought that the, this is the\nkind of adaptation I have to dig into",
+        "start": 2071.982,
+        "duration": 4.475
+    },
+    {
+        "text": "this paper 'cause it's been a while.",
+        "start": 2076.457,
+        "duration": 1.025
+    },
+    {
+        "text": "We did so many experiments for this paper.",
+        "start": 2077.582,
+        "duration": 1.25
+    },
+    {
+        "text": "I don't actually remember what,\nwhat made it into the final version.",
+        "start": 2078.832,
+        "duration": 2.375
+    },
+    {
+        "text": "so I have to review it.",
+        "start": 2081.857,
+        "duration": 1.5
+    },
+    {
+        "text": "But it's thought that, the, kind of\nadaptation, the kind of learning you",
+        "start": 2083.357,
+        "duration": 3.2
+    },
+    {
+        "text": "get from having this gray signal is what\nhelps to drive the dictionary signals",
+        "start": 2086.557,
+        "duration": 4.075
+    },
+    {
+        "text": "that you see in the sort of 2014 paper.",
+        "start": 2090.632,
+        "duration": 2.725
+    },
+    {
+        "text": "and that they just don't seem to emerge,\nquite as robustly when you don't have",
+        "start": 2094.282,
+        "duration": 4.0
+    },
+    {
+        "text": "that gray signal when you try, to learn\nfour days of non, continuous sequences.",
+        "start": 2098.282,
+        "duration": 5.75
+    },
+    {
+        "text": "So anyhow.",
+        "start": 2104.707,
+        "duration": 1.35
+    },
+    {
+        "text": "Yeah.",
+        "start": 2108.707,
+        "duration": 0.075
+    },
+    {
+        "text": "That's cool.",
+        "start": 2108.782,
+        "duration": 0.525
+    },
+    {
+        "text": "yeah, that's, really fitting.",
+        "start": 2110.032,
+        "duration": 1.221
+    },
+    {
+        "text": "I have to remember what went outta this.",
+        "start": 2116.737,
+        "duration": 1.295
+    },
+    {
+        "text": "Yeah, there's a lot of, I, I can just\nput this on the chat or something also,",
+        "start": 2119.632,
+        "duration": 2.875
+    },
+    {
+        "text": "but there's a lot of timing related\nstuff in this paper as well, if you're",
+        "start": 2122.507,
+        "duration": 2.525
+    },
+    {
+        "text": "interested in, that kind of thing.",
+        "start": 2125.107,
+        "duration": 2.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 2127.807,
+        "duration": 0.25
+    },
+    {
+        "text": "okay.",
+        "start": 2129.863,
+        "duration": 0.4
+    },
+    {
+        "text": "That, yeah, that was everything.",
+        "start": 2130.263,
+        "duration": 1.225
+    }
+]

@@ -1,0 +1,762 @@
+[
+    {
+        "text": "So, uh, it's the beginning of\nQ2, so the next three months.",
+        "start": 7.123,
+        "duration": 5.37
+    },
+    {
+        "text": "And so I asked, um, Will, Tristan\nand Niels for some input on",
+        "start": 12.583,
+        "duration": 5.16
+    },
+    {
+        "text": "what our priorities for the\nnext three months should be.",
+        "start": 17.983,
+        "duration": 3.27
+    },
+    {
+        "text": "And here's what we came up with.",
+        "start": 21.853,
+        "duration": 2.97
+    },
+    {
+        "text": "So first of all, um, Tristan made\nthis really nice analogy of how",
+        "start": 25.243,
+        "duration": 4.56
+    },
+    {
+        "text": "they, uh, align with our mission.",
+        "start": 29.803,
+        "duration": 2.07
+    },
+    {
+        "text": "So I'll start with that one.",
+        "start": 31.873,
+        "duration": 1.5
+    },
+    {
+        "text": "Um, so here's our, our mission.",
+        "start": 33.793,
+        "duration": 2.58
+    },
+    {
+        "text": "Um, create core sensorimotor\nalgorithms scattered by neuroscience.",
+        "start": 36.463,
+        "duration": 3.72
+    },
+    {
+        "text": "Create open source platform for\ncreating sensorimotor pro products",
+        "start": 40.183,
+        "duration": 4.11
+    },
+    {
+        "text": "and increase awareness of sensorimotor\ntechnologies for AI and robotics.",
+        "start": 44.653,
+        "duration": 4.08
+    },
+    {
+        "text": "And so our Q2 priorities line\nup pretty nicely with those.",
+        "start": 50.413,
+        "duration": 4.53
+    },
+    {
+        "text": "So the first one is, uh, creating the\nalgorithms, which here are priority for",
+        "start": 55.318,
+        "duration": 6.33
+    },
+    {
+        "text": "the next three months is to pave the way\nfor mon to model compositional objects.",
+        "start": 61.648,
+        "duration": 4.47
+    },
+    {
+        "text": "And I'll talk in a moment a bit\nmore concretely about what kind",
+        "start": 66.868,
+        "duration": 3.9
+    },
+    {
+        "text": "of things we wanna do for that.",
+        "start": 70.768,
+        "duration": 2.1
+    },
+    {
+        "text": "Um, second, uh, we wanna make\nMonty easy to use in a variety of",
+        "start": 74.128,
+        "duration": 4.95
+    },
+    {
+        "text": "applications currently with a focus\non the TBP team because we are the",
+        "start": 79.078,
+        "duration": 4.95
+    },
+    {
+        "text": "biggest user of Monty at the moment,\nand we don't have a platform yet.",
+        "start": 84.028,
+        "duration": 3.06
+    },
+    {
+        "text": "And we are the best judges right\nnow of how easy it is to use.",
+        "start": 87.658,
+        "duration": 3.6
+    },
+    {
+        "text": "Um, but this is just for the\nnext three months, the focus.",
+        "start": 91.858,
+        "duration": 3.36
+    },
+    {
+        "text": "And then, um, on increasing awareness.",
+        "start": 96.478,
+        "duration": 2.61
+    },
+    {
+        "text": "We wanna increase, um, engagement,\nbut particularly academic",
+        "start": 99.178,
+        "duration": 4.47
+    },
+    {
+        "text": "engagement with the project.",
+        "start": 103.648,
+        "duration": 1.56
+    },
+    {
+        "text": "And then we have a fourth\none that doesn't map on this.",
+        "start": 106.198,
+        "duration": 2.43
+    },
+    {
+        "text": "Um, but I think it's still very important.",
+        "start": 109.168,
+        "duration": 1.83
+    },
+    {
+        "text": "It kind of maps maybe on the first\none as well, which is, uh, figure",
+        "start": 110.998,
+        "duration": 3.72
+    },
+    {
+        "text": "out how to model object behaviors\nboth in the brain and Monty.",
+        "start": 114.718,
+        "duration": 4.23
+    },
+    {
+        "text": "So that's kind of the core research,\nlike understanding the theory part of it.",
+        "start": 119.008,
+        "duration": 5.49
+    },
+    {
+        "text": "Um, so does that make sense\nfor everyone as priorities?",
+        "start": 126.988,
+        "duration": 5.94
+    },
+    {
+        "text": "Okay.",
+        "start": 133.678,
+        "duration": 0.33
+    },
+    {
+        "text": "So the idea is we have these year concise\npriorities, and then whatever we work on",
+        "start": 134.368,
+        "duration": 6.45
+    },
+    {
+        "text": "in the next three months should kind of\ncontribute to one of these four things.",
+        "start": 140.818,
+        "duration": 4.32
+    },
+    {
+        "text": "Um,",
+        "start": 145.738,
+        "duration": 0.48
+    },
+    {
+        "text": "and so concretely what we're.",
+        "start": 148.438,
+        "duration": 2.34
+    },
+    {
+        "text": "Thinking, um, for the years.",
+        "start": 151.438,
+        "duration": 2.37
+    },
+    {
+        "text": "Uh, so now this is kind of the results we\nwanna see at the end of the three months.",
+        "start": 153.868,
+        "duration": 4.17
+    },
+    {
+        "text": "Um, so for number one, paving the way\nto model composition objects, uh, we",
+        "start": 158.518,
+        "duration": 5.19
+    },
+    {
+        "text": "wanna have, um, the accuracy on the\nunsupervised inference benchmark that",
+        "start": 163.708,
+        "duration": 4.95
+    },
+    {
+        "text": "Ramy set up to dramatically improve.",
+        "start": 168.718,
+        "duration": 3.09
+    },
+    {
+        "text": "Um, probably using the hypothesis\nresampling that, uh, rami's planning on",
+        "start": 172.078,
+        "duration": 6.09
+    },
+    {
+        "text": "the speed of inference for the distant\nagent, uh, to dramatically improve,",
+        "start": 179.938,
+        "duration": 4.44
+    },
+    {
+        "text": "uh, via better policies even in the\nabsence of the hypothesis testing policy.",
+        "start": 184.948,
+        "duration": 4.32
+    },
+    {
+        "text": "So that's kind of a Cade policy\nthat we've been talking about.",
+        "start": 189.538,
+        "duration": 3.0
+    },
+    {
+        "text": "And then have a test bed set\nup for compositional objects.",
+        "start": 194.188,
+        "duration": 3.84
+    },
+    {
+        "text": "So logos on cups is what we're\ncurrently thinking, um, and have that.",
+        "start": 198.358,
+        "duration": 5.13
+    },
+    {
+        "text": "Test bed available and performance\nof baseline, Monty of two",
+        "start": 203.908,
+        "duration": 4.5
+    },
+    {
+        "text": "hierarchically stacked learning\nmodules quantified on there.",
+        "start": 208.588,
+        "duration": 2.85
+    },
+    {
+        "text": "Um, this is just the test bed, so not like\nexpecting it to solve it perfectly yet.",
+        "start": 212.638,
+        "duration": 5.43
+    },
+    {
+        "text": "And then lastly, uh, the MORTAR\nsystem, uh, should support swapping",
+        "start": 220.168,
+        "duration": 4.35
+    },
+    {
+        "text": "out policies, which will be\nimportant for, uh, the policy work.",
+        "start": 224.518,
+        "duration": 4.35
+    },
+    {
+        "text": "Uh, um, here",
+        "start": 228.988,
+        "duration": 1.32
+    },
+    {
+        "text": "we making Monte easy to use\nin a variety of applications.",
+        "start": 234.778,
+        "duration": 3.3
+    },
+    {
+        "text": "Uh, we want the motor system to be\ndisentangled from other classes.",
+        "start": 238.588,
+        "duration": 5.13
+    },
+    {
+        "text": "That's a bit of what we talked\nabout in the previous coding.",
+        "start": 244.018,
+        "duration": 3.09
+    },
+    {
+        "text": "Um, Monty not being\nconstrained by Python 3.8.",
+        "start": 249.898,
+        "duration": 4.86
+    },
+    {
+        "text": "Um.",
+        "start": 255.988,
+        "duration": 0.66
+    },
+    {
+        "text": "And publishing tutorials on Monte and\nnovel applications and robotics, plus",
+        "start": 257.833,
+        "duration": 6.24
+    },
+    {
+        "text": "several example projects that will\nbe, um, the outcome of the hackathon.",
+        "start": 264.073,
+        "duration": 4.8
+    },
+    {
+        "text": "And then for increasing academic\nengagement, the plan is to contact,",
+        "start": 273.043,
+        "duration": 4.08
+    },
+    {
+        "text": "uh, at least 20 universities created\nfive pieces of content targeting",
+        "start": 277.243,
+        "duration": 5.91
+    },
+    {
+        "text": "university PhD, master students.",
+        "start": 283.153,
+        "duration": 2.31
+    },
+    {
+        "text": "Um, we ensured all available all, yeah,\nall of us have booked, booked to go to",
+        "start": 286.573,
+        "duration": 5.49
+    },
+    {
+        "text": "a conference in 2025 to have some actual\nface-to-face engagement with people.",
+        "start": 292.183,
+        "duration": 5.76
+    },
+    {
+        "text": "Um, adding 500 academic contacts on\nTwitter, blue sky, uh, releasing 36",
+        "start": 298.663,
+        "duration": 7.83
+    },
+    {
+        "text": "hours of video on YouTube and publishing\ntwo articles in peer reviewed journals.",
+        "start": 306.493,
+        "duration": 5.31
+    },
+    {
+        "text": "That's the DMC paper\nand the hierarchy paper.",
+        "start": 311.803,
+        "duration": 3.12
+    },
+    {
+        "text": "I. And then on the, uh, object behaviors\ntheory side of things, we would like to",
+        "start": 314.923,
+        "duration": 8.82
+    },
+    {
+        "text": "have a concrete proposal for generalizing\nthe stapler behavior to another object.",
+        "start": 323.743,
+        "duration": 4.71
+    },
+    {
+        "text": "So applying a behavior from one,\num, morphology to another and",
+        "start": 328.813,
+        "duration": 5.82
+    },
+    {
+        "text": "predicting those are features.",
+        "start": 334.633,
+        "duration": 1.92
+    },
+    {
+        "text": "Um, a concrete proposal for how object\nbehavior models could be implemented",
+        "start": 338.113,
+        "duration": 4.11
+    },
+    {
+        "text": "in Monty, and then filing a provisional\npatent application, or alternatively",
+        "start": 342.223,
+        "duration": 7.2
+    },
+    {
+        "text": "a public disclosure writeup.",
+        "start": 349.633,
+        "duration": 2.07
+    },
+    {
+        "text": "Um, all of these, there's a document I can\nshare the link with you in Slack later.",
+        "start": 354.943,
+        "duration": 5.85
+    },
+    {
+        "text": "Um, all of these are in a,\nin our shared Google Drive.",
+        "start": 361.273,
+        "duration": 2.79
+    },
+    {
+        "text": "And then there are, um, sub team\nobjectives, um, in here as well that I'm",
+        "start": 364.393,
+        "duration": 5.4
+    },
+    {
+        "text": "not gonna go through in detail right now.",
+        "start": 369.793,
+        "duration": 1.92
+    },
+    {
+        "text": "Um, basically like.",
+        "start": 372.373,
+        "duration": 1.62
+    },
+    {
+        "text": "The sub teams.",
+        "start": 375.943,
+        "duration": 0.765
+    },
+    {
+        "text": "So research, engineering and\ncommunications set three priorities",
+        "start": 376.708,
+        "duration": 5.07
+    },
+    {
+        "text": "for the next month that each align\nwith those, uh, comp with those, uh,",
+        "start": 381.778,
+        "duration": 5.28
+    },
+    {
+        "text": "companywide priorities, um, and kind\nof the measurable outcomes for those.",
+        "start": 387.148,
+        "duration": 6.3
+    },
+    {
+        "text": "Um, so if you, if you're wondering\nlike, oh, I'm on the research.",
+        "start": 393.808,
+        "duration": 3.36
+    },
+    {
+        "text": "What, what are we gonna take care of\nout of these things I just talked about?",
+        "start": 397.348,
+        "duration": 3.84
+    },
+    {
+        "text": "Then this might be a\ngood, good place to look.",
+        "start": 401.608,
+        "duration": 2.22
+    },
+    {
+        "text": "And just generally, um, this is meant to\nbe a bit of a north star for you today,",
+        "start": 404.308,
+        "duration": 8.22
+    },
+    {
+        "text": "tasks to make sure that whatever you're\nworking on kind of contributes to our,",
+        "start": 412.528,
+        "duration": 4.14
+    },
+    {
+        "text": "uh, main goals for the next three months\nand, um, aligns with these priorities.",
+        "start": 417.208,
+        "duration": 5.43
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 423.208,
+        "duration": 1.2
+    },
+    {
+        "text": "Yes.",
+        "start": 426.748,
+        "duration": 0.36
+    },
+    {
+        "text": "Any questions?",
+        "start": 427.108,
+        "duration": 0.63
+    },
+    {
+        "text": "Cool.",
+        "start": 431.698,
+        "duration": 0.21
+    },
+    {
+        "text": "Then yeah, made this kind of first\nhalf of 2025 timeline, um, in February.",
+        "start": 433.258,
+        "duration": 6.78
+    },
+    {
+        "text": "Talked about it during the retreat,\nand this is how it looked back then.",
+        "start": 440.188,
+        "duration": 3.54
+    },
+    {
+        "text": "And I just made a couple\nof adjustments to it.",
+        "start": 443.998,
+        "duration": 2.07
+    },
+    {
+        "text": "So now we are here.",
+        "start": 446.458,
+        "duration": 2.16
+    },
+    {
+        "text": "Um, basically we extended\nthe two, the work on the two",
+        "start": 449.368,
+        "duration": 3.33
+    },
+    {
+        "text": "papers, uh, a little bit longer.",
+        "start": 452.698,
+        "duration": 2.49
+    },
+    {
+        "text": "Um, hoping to finalize\nthat by the end of April.",
+        "start": 455.398,
+        "duration": 3.87
+    },
+    {
+        "text": "And then",
+        "start": 460.498,
+        "duration": 0.81
+    },
+    {
+        "text": "I made a few minor adjustments on, on\nthis, this one extending the test bit,",
+        "start": 463.318,
+        "duration": 4.65
+    },
+    {
+        "text": "work a little longer, and starting the\nlearning module work a little earlier.",
+        "start": 468.328,
+        "duration": 3.06
+    },
+    {
+        "text": "Um, there's been a bit of overlap\nbetween the two and then policy",
+        "start": 472.558,
+        "duration": 4.29
+    },
+    {
+        "text": "work starting at a little bit later.",
+        "start": 476.848,
+        "duration": 1.71
+    },
+    {
+        "text": "Um, and",
+        "start": 479.308,
+        "duration": 2.88
+    },
+    {
+        "text": "yeah, we, we split up the benchmark\nautomation into part one and part two.",
+        "start": 484.318,
+        "duration": 3.78
+    },
+    {
+        "text": "Part two is currently not,\nuh, scheduled on here.",
+        "start": 488.098,
+        "duration": 2.37
+    },
+    {
+        "text": "Um, and then we have a new one that wasn't\non there before, which was making the",
+        "start": 491.368,
+        "duration": 5.73
+    },
+    {
+        "text": "DMC papers were experiments reproducible.",
+        "start": 497.128,
+        "duration": 3.72
+    },
+    {
+        "text": "So turning, uh, Monty into a package,\nputting out a condo, making a template",
+        "start": 500.848,
+        "duration": 5.64
+    },
+    {
+        "text": "repositories and moving code over there.",
+        "start": 506.488,
+        "duration": 2.7
+    },
+    {
+        "text": "Um, and it's still ongoing.",
+        "start": 509.848,
+        "duration": 1.44
+    },
+    {
+        "text": "Um, and then we have, uh, the task\nof making policy swappable, which",
+        "start": 512.218,
+        "duration": 4.92
+    },
+    {
+        "text": "was actually previously we had this\none first and then the second, but",
+        "start": 517.588,
+        "duration": 3.54
+    },
+    {
+        "text": "now switch the order of the two.",
+        "start": 521.128,
+        "duration": 1.68
+    },
+    {
+        "text": "Um, and then we have a, a first\ntrial of, um, doing a, a Python",
+        "start": 523.588,
+        "duration": 7.89
+    },
+    {
+        "text": "and habitats date, uh, figuring.",
+        "start": 531.478,
+        "duration": 3.09
+    },
+    {
+        "text": "Um, trying to get it to work\nwith Monty and have habitats and",
+        "start": 535.988,
+        "duration": 4.235
+    },
+    {
+        "text": "work with a newer Python version.",
+        "start": 540.223,
+        "duration": 1.71
+    },
+    {
+        "text": "And, uh, it's unsure if that\nwill be possible in that kind",
+        "start": 541.933,
+        "duration": 3.96
+    },
+    {
+        "text": "of time boxed week or not.",
+        "start": 545.893,
+        "duration": 1.74
+    },
+    {
+        "text": "And that will, uh, determine a bit on\nwhat next steps will be, if we will",
+        "start": 547.783,
+        "duration": 3.87
+    },
+    {
+        "text": "decouple more from habitat or, um, yeah,\nthat those boxes are bit, uh, dotted",
+        "start": 551.983,
+        "duration": 6.42
+    },
+    {
+        "text": "because it depends a little bit on\nhow difficult that will end up being.",
+        "start": 558.403,
+        "duration": 4.29
+    },
+    {
+        "text": "Um, and then how these actually\nmap onto the priorities.",
+        "start": 565.003,
+        "duration": 5.4
+    },
+    {
+        "text": "We have the one, uh, pick the composition\nobjects one, which uh, includes",
+        "start": 571.243,
+        "duration": 4.92
+    },
+    {
+        "text": "these, um, green milestones, so the\nunsupervised learning prerequisites",
+        "start": 576.163,
+        "duration": 6.42
+    },
+    {
+        "text": "part, hopefully completed by then.",
+        "start": 582.583,
+        "duration": 2.1
+    },
+    {
+        "text": "And then also the test bed part of\ncomposition objects and making the policy",
+        "start": 584.683,
+        "duration": 5.25
+    },
+    {
+        "text": "swappable here on the engineering side.",
+        "start": 589.933,
+        "duration": 1.8
+    },
+    {
+        "text": "We have making Monte easy to use\nin variety of applications, which",
+        "start": 593.503,
+        "duration": 4.17
+    },
+    {
+        "text": "includes the hackathon work and then\nalso the refactor, the data loader and",
+        "start": 597.673,
+        "duration": 5.1
+    },
+    {
+        "text": "the kinda habitat people and update.",
+        "start": 602.773,
+        "duration": 3.24
+    },
+    {
+        "text": "And then increasing academic\nengagement includes both.",
+        "start": 608.113,
+        "duration": 2.73
+    },
+    {
+        "text": "Um, a lot of the work that Willis\ndoing with the outreach, um, but also",
+        "start": 611.293,
+        "duration": 3.96
+    },
+    {
+        "text": "the two papers working on, um, and\nlastly, figuring out object behaviors.",
+        "start": 615.253,
+        "duration": 6.33
+    },
+    {
+        "text": "This, um, this brainstorming\nwork down here.",
+        "start": 622.123,
+        "duration": 2.25
+    },
+    {
+        "text": "Does that, uh, make sense?",
+        "start": 626.533,
+        "duration": 1.32
+    },
+    {
+        "text": "I think the one the, I think I kind of\nmissed or whatever was just the, um, the",
+        "start": 632.233,
+        "duration": 5.25
+    },
+    {
+        "text": "chain doing the make policy swappable\nearlier now rather than the refactor.",
+        "start": 637.813,
+        "duration": 5.46
+    },
+    {
+        "text": "Um, I mean, I think that, I guess\nmakes sense in terms of, uh,",
+        "start": 643.993,
+        "duration": 4.65
+    },
+    {
+        "text": "priorities and stuff, but maybe\nthat's something that's worth.",
+        "start": 648.673,
+        "duration": 2.28
+    },
+    {
+        "text": "Like discussing, uh, I don't know.",
+        "start": 651.628,
+        "duration": 2.04
+    },
+    {
+        "text": "Uh, and it could be later, but\njust whether it might be hard",
+        "start": 653.668,
+        "duration": 2.94
+    },
+    {
+        "text": "to do that without the refactor.",
+        "start": 656.608,
+        "duration": 1.74
+    },
+    {
+        "text": "Um, I, I think it might be actually\neasier, like, like all the complexity",
+        "start": 659.398,
+        "duration": 5.67
+    },
+    {
+        "text": "will still be there, but you'll just\nbe able to swap the policies out.",
+        "start": 665.068,
+        "duration": 3.36
+    },
+    {
+        "text": "But everything's still\ntalking to everything else.",
+        "start": 668.428,
+        "duration": 2.16
+    },
+    {
+        "text": "I just, I was, yeah.",
+        "start": 671.068,
+        "duration": 0.87
+    },
+    {
+        "text": "Right after doing planning and staring\nit for a while, like, we actually",
+        "start": 671.938,
+        "duration": 3.87
+    },
+    {
+        "text": "might be able just to do this.",
+        "start": 675.808,
+        "duration": 1.41
+    }
+]

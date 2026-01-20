@@ -1,0 +1,5952 @@
+[
+    {
+        "text": "Cool.",
+        "start": 7.802,
+        "duration": 0.4
+    },
+    {
+        "text": "So, yeah, I guess as you all saw\non Slack, I'll be talking about,",
+        "start": 8.242,
+        "duration": 3.34
+    },
+    {
+        "text": "learning rules, in the brain today.",
+        "start": 11.882,
+        "duration": 2.05
+    },
+    {
+        "text": "and this is, I think what's going\nto be kind of part one of probably",
+        "start": 14.892,
+        "duration": 3.67
+    },
+    {
+        "text": "like a two part presentation.",
+        "start": 18.562,
+        "duration": 1.67
+    },
+    {
+        "text": "and unfortunately, Rami, the second\npart, I'll probably, first give",
+        "start": 20.902,
+        "duration": 3.8
+    },
+    {
+        "text": "in, kind of September or something.",
+        "start": 24.702,
+        "duration": 3.28
+    },
+    {
+        "text": "After our other researchers, Hoji\nand Scott join, but, but, yeah,",
+        "start": 28.547,
+        "duration": 4.58
+    },
+    {
+        "text": "I'm sure there'll be a chance\nwhere you can see it as well.",
+        "start": 33.127,
+        "duration": 2.32
+    },
+    {
+        "text": "but, yeah, the general kind of aim\nis to cover the diversity of learning",
+        "start": 37.962,
+        "duration": 4.77
+    },
+    {
+        "text": "rules in the brain, but what I'm\nreally going to focus on is kind of",
+        "start": 42.732,
+        "duration": 2.58
+    },
+    {
+        "text": "the computational details and what\nthe kind of implications of these are.",
+        "start": 45.352,
+        "duration": 3.88
+    },
+    {
+        "text": "And, of course, the main motivation\nfor this is to kind of explore",
+        "start": 49.952,
+        "duration": 3.23
+    },
+    {
+        "text": "the significance of these for\nMonty and hopefully kind of",
+        "start": 53.182,
+        "duration": 3.17
+    },
+    {
+        "text": "trigger some inspiration, or kind\nof ideas about how we might use",
+        "start": 56.392,
+        "duration": 4.0
+    },
+    {
+        "text": "these either now or in the future.",
+        "start": 60.392,
+        "duration": 2.53
+    },
+    {
+        "text": "And, yeah, obviously stop me\nif anyone has any questions.",
+        "start": 64.402,
+        "duration": 3.4
+    },
+    {
+        "text": "Yeah, I guess what the presentation is not\nis kind of Yeah, I'm not gonna cover the",
+        "start": 71.602,
+        "duration": 3.74
+    },
+    {
+        "text": "full diversity of learning in the brain.",
+        "start": 75.342,
+        "duration": 1.32
+    },
+    {
+        "text": "And in particular, I'm not\ngonna be covering it at a",
+        "start": 76.672,
+        "duration": 3.18
+    },
+    {
+        "text": "particularly biological level.",
+        "start": 79.852,
+        "duration": 1.36
+    },
+    {
+        "text": "Fortunately, I kind of discovered this\npresentation from Jeremy Forrest before",
+        "start": 81.622,
+        "duration": 3.61
+    },
+    {
+        "text": "I had put together too many slides.",
+        "start": 85.232,
+        "duration": 1.34
+    },
+    {
+        "text": "and I thought that was a really\nnice summary of the all the kind",
+        "start": 87.892,
+        "duration": 3.66
+    },
+    {
+        "text": "of different learning rules from\na kind of biological perspective.",
+        "start": 91.552,
+        "duration": 2.4
+    },
+    {
+        "text": "and so I would definitely urge everyone\nto watch that if you've not had a chance.",
+        "start": 94.882,
+        "duration": 3.64
+    },
+    {
+        "text": "yeah, I mean, you could\nwatch it after this as well.",
+        "start": 100.762,
+        "duration": 1.85
+    },
+    {
+        "text": "I'm a little confused if it's about\nlearning in the brain, but you're",
+        "start": 103.237,
+        "duration": 2.88
+    },
+    {
+        "text": "not gonna focus on the biology.",
+        "start": 106.117,
+        "duration": 1.41
+    },
+    {
+        "text": "Is it really ? I think it'll become clear,\nas in like that presentation was a lot",
+        "start": 107.527,
+        "duration": 5.6
+    },
+    {
+        "text": "about, you know, what are the biological,\nunderpinnings of kind of reasons that",
+        "start": 113.127,
+        "duration": 8.04
+    },
+    {
+        "text": "weights change and things like that.",
+        "start": 121.167,
+        "duration": 1.65
+    },
+    {
+        "text": "Whereas this is more about.",
+        "start": 123.367,
+        "duration": 1.32
+    },
+    {
+        "text": "Okay, say you have spike time\ndependent plasticity, what does that",
+        "start": 125.277,
+        "duration": 3.18
+    },
+    {
+        "text": "mean in terms of what you can encode\nand how the dynamics of a network",
+        "start": 128.457,
+        "duration": 3.3
+    },
+    {
+        "text": "changes over time, things like that.",
+        "start": 131.757,
+        "duration": 1.63
+    },
+    {
+        "text": "so yeah, and then I guess\nwhy I care about this.",
+        "start": 140.547,
+        "duration": 2.91
+    },
+    {
+        "text": "So yeah, as we all know, the driving\nbelief really in Numenta is that",
+        "start": 143.467,
+        "duration": 3.99
+    },
+    {
+        "text": "there's, you know, unique advantages\nto these biological, learning",
+        "start": 147.457,
+        "duration": 4.59
+    },
+    {
+        "text": "rules, at least in certain cases.",
+        "start": 152.047,
+        "duration": 1.44
+    },
+    {
+        "text": "and we already kind of leveraged,\nI think, some of these in Monty",
+        "start": 154.217,
+        "duration": 2.51
+    },
+    {
+        "text": "and of course Numenta's prior work.",
+        "start": 156.727,
+        "duration": 1.85
+    },
+    {
+        "text": "but then, you know, there's scope to\nexpand this, and then I probably won't",
+        "start": 159.407,
+        "duration": 4.8
+    },
+    {
+        "text": "talk about it today, but, because I think\nit's better after having discussed all",
+        "start": 164.217,
+        "duration": 3.77
+    },
+    {
+        "text": "the different types of learning rules.",
+        "start": 167.987,
+        "duration": 1.48
+    },
+    {
+        "text": "But, yeah, this kind of unlocks\nvarious benefits that, that",
+        "start": 169.987,
+        "duration": 5.05
+    },
+    {
+        "text": "we could realize in, in Monty.",
+        "start": 175.037,
+        "duration": 1.95
+    },
+    {
+        "text": "and yeah, I think it's\nworth kind of saying.",
+        "start": 180.297,
+        "duration": 1.5
+    },
+    {
+        "text": "So learning currently in Monty\nis in a sense, Brain like in some",
+        "start": 181.797,
+        "duration": 4.905
+    },
+    {
+        "text": "respects, so I would argue that all\nthe learning we're doing is local.",
+        "start": 186.702,
+        "duration": 4.37
+    },
+    {
+        "text": "So local when you talk about like\nbrain, kind of learning rules is",
+        "start": 191.262,
+        "duration": 4.43
+    },
+    {
+        "text": "basically just that it's information\nthat the pre synaptic neuron and",
+        "start": 195.692,
+        "duration": 3.44
+    },
+    {
+        "text": "the post synaptic neuron both have.",
+        "start": 199.132,
+        "duration": 1.75
+    },
+    {
+        "text": "That's all the information\nyou need to determine what the",
+        "start": 201.252,
+        "duration": 3.28
+    },
+    {
+        "text": "kind of change is going to be.",
+        "start": 204.532,
+        "duration": 1.6
+    },
+    {
+        "text": "you don't need to transport\ninformation from some other,",
+        "start": 207.062,
+        "duration": 3.07
+    },
+    {
+        "text": "distant part of the network.",
+        "start": 211.512,
+        "duration": 1.12
+    },
+    {
+        "text": "yeah.",
+        "start": 213.132,
+        "duration": 0.02
+    },
+    {
+        "text": "In order to to kind of update, the\nvalues in the system, and that's that's",
+        "start": 213.572,
+        "duration": 5.27
+    },
+    {
+        "text": "something that Monty already does.",
+        "start": 218.842,
+        "duration": 2.22
+    },
+    {
+        "text": "and these changes are rapid associative\nchanges were kind of strengthening",
+        "start": 221.752,
+        "duration": 4.04
+    },
+    {
+        "text": "or weakening connections between\ndifferent parts of the network.",
+        "start": 225.792,
+        "duration": 2.55
+    },
+    {
+        "text": "you know how we they're not necessarily\nrepresented as connections, but, in",
+        "start": 230.432,
+        "duration": 4.49
+    },
+    {
+        "text": "terms of like how we kind of associate a\ncertain feature with a location in space.",
+        "start": 234.922,
+        "duration": 5.1
+    },
+    {
+        "text": "That's kind of a rapid\nrapid change that's made.",
+        "start": 240.052,
+        "duration": 3.45
+    },
+    {
+        "text": "and these associations are also sparse\nin some sense that, like, for example,",
+        "start": 245.082,
+        "duration": 3.97
+    },
+    {
+        "text": "when we learn an object, we're only\nstoring the locations that we actually",
+        "start": 249.052,
+        "duration": 3.47
+    },
+    {
+        "text": "care about and the features that\nare associated with those locations.",
+        "start": 252.522,
+        "duration": 2.82
+    },
+    {
+        "text": "We're not storing information about\nany possible location on an object.",
+        "start": 255.952,
+        "duration": 5.0
+    },
+    {
+        "text": "and I think, yeah, we can\nagree we want to keep these.",
+        "start": 264.472,
+        "duration": 2.79
+    },
+    {
+        "text": "So, you know, avoid, for example,\nintroducing backprop in the",
+        "start": 267.262,
+        "duration": 2.87
+    },
+    {
+        "text": "system, which will start breaking\nsome of these properties.",
+        "start": 270.132,
+        "duration": 3.98
+    },
+    {
+        "text": "But I think the key thing that's\nkind of not present, which I do",
+        "start": 276.592,
+        "duration": 3.51
+    },
+    {
+        "text": "think, you know, could, bring\nsignificant benefits in the future.",
+        "start": 280.132,
+        "duration": 4.04
+    },
+    {
+        "text": "And this is something we've discussed\nbefore is high dimensional feature",
+        "start": 284.352,
+        "duration": 4.06
+    },
+    {
+        "text": "representations and the learning rules\nthat would be associated with those.",
+        "start": 288.412,
+        "duration": 3.81
+    },
+    {
+        "text": "So the classic example would be SDRs.",
+        "start": 292.232,
+        "duration": 2.65
+    },
+    {
+        "text": "so this kind of unlocks using these kind\nof representations, unlocks a bunch of",
+        "start": 296.352,
+        "duration": 3.69
+    },
+    {
+        "text": "things around kind of more fuzzy matching.",
+        "start": 300.042,
+        "duration": 2.36
+    },
+    {
+        "text": "You have these representations\nencoding features or objects.",
+        "start": 302.492,
+        "duration": 3.86
+    },
+    {
+        "text": "but I'm not going to be talking about\nkind of what the specific benefits of",
+        "start": 308.117,
+        "duration": 2.47
+    },
+    {
+        "text": "SDRs are themselves, but rather kind of if\nyou have, if you are representing things",
+        "start": 310.587,
+        "duration": 5.95
+    },
+    {
+        "text": "with a kind of, more neural population,\nwhat are the kind of biological learning",
+        "start": 316.547,
+        "duration": 4.94
+    },
+    {
+        "text": "rules that might function, in those\nkind of high dimensional populations.",
+        "start": 321.487,
+        "duration": 3.87
+    },
+    {
+        "text": "And I won't just be talking about SDRs.",
+        "start": 325.697,
+        "duration": 1.62
+    },
+    {
+        "text": "In fact, I won't get to SDRs and\nNumenta's learning rules today.",
+        "start": 327.327,
+        "duration": 3.38
+    },
+    {
+        "text": "I'm going to start with the kind of\nmore, kind of classical firing rates and",
+        "start": 331.527,
+        "duration": 3.85
+    },
+    {
+        "text": "STVP, to give that as a context, for,\nfor Numenta's, learning rules, next time.",
+        "start": 335.917,
+        "duration": 6.02
+    },
+    {
+        "text": "Cool.",
+        "start": 345.807,
+        "duration": 0.44
+    },
+    {
+        "text": "any questions before I go on?",
+        "start": 346.677,
+        "duration": 2.41
+    },
+    {
+        "text": "No, this, this sounds great.",
+        "start": 350.127,
+        "duration": 1.23
+    },
+    {
+        "text": "Thanks.",
+        "start": 351.457,
+        "duration": 0.27
+    },
+    {
+        "text": "Cool.",
+        "start": 352.977,
+        "duration": 0.34
+    },
+    {
+        "text": "So, yeah, and I'd say the kind of,\nof course, when you say learning",
+        "start": 354.217,
+        "duration": 3.05
+    },
+    {
+        "text": "in the brain, you know, that could\nbe at all kinds of levels that",
+        "start": 357.277,
+        "duration": 2.7
+    },
+    {
+        "text": "could be at the behavioral level.",
+        "start": 359.977,
+        "duration": 1.3
+    },
+    {
+        "text": "And, you know, of course\nthere's biological processes.",
+        "start": 361.277,
+        "duration": 2.72
+    },
+    {
+        "text": "Changing the expression of DNA\nand all this kind of stuff that",
+        "start": 364.662,
+        "duration": 2.17
+    },
+    {
+        "text": "goes on, but I'm not going to\nbe talking about those really.",
+        "start": 366.832,
+        "duration": 2.46
+    },
+    {
+        "text": "I'm going to be talking about\nprocesses that kind of happen at",
+        "start": 369.292,
+        "duration": 2.06
+    },
+    {
+        "text": "the level of individual neurons.",
+        "start": 371.352,
+        "duration": 2.48
+    },
+    {
+        "text": "and I think it's worth kind of, I think\neveryone's probably fairly familiar",
+        "start": 375.902,
+        "duration": 3.46
+    },
+    {
+        "text": "with this, but just not assuming\ntoo much knowledge about, like, the",
+        "start": 379.362,
+        "duration": 2.58
+    },
+    {
+        "text": "kind of structure of, of neurons.",
+        "start": 382.002,
+        "duration": 1.67
+    },
+    {
+        "text": "So just that it's kind of highlighted\nin case these terms have come up.",
+        "start": 385.047,
+        "duration": 2.46
+    },
+    {
+        "text": "So a pyramidal cell is one of the\nmost, common excitatory neurons",
+        "start": 387.957,
+        "duration": 4.75
+    },
+    {
+        "text": "in the brain, in the cortex.",
+        "start": 392.707,
+        "duration": 1.27
+    },
+    {
+        "text": "it has this kind of distinct structure\nof these, dendritic, branches with a",
+        "start": 395.017,
+        "duration": 5.62
+    },
+    {
+        "text": "long axon that projects and sends, spikes\nout to other cells, that receive them.",
+        "start": 400.647,
+        "duration": 6.76
+    },
+    {
+        "text": "And then the dendritic branches are where,\nthe cell can receive inputs as well as",
+        "start": 407.427,
+        "duration": 4.85
+    },
+    {
+        "text": "on its soma, which is kind of the body.",
+        "start": 412.587,
+        "duration": 1.85
+    },
+    {
+        "text": "of the cell and, these dendritic branches,\nhave the actual, kind of synapses on",
+        "start": 415.677,
+        "duration": 7.64
+    },
+    {
+        "text": "their, on these spines, these tiny\nfusions, and so you can see one here,",
+        "start": 423.317,
+        "duration": 4.79
+    },
+    {
+        "text": "for example, as like another axon will\noften kind of pass by, it may produce",
+        "start": 428.187,
+        "duration": 5.43
+    },
+    {
+        "text": "a small branch or just directly on\nit, it may produce the kind of synapse",
+        "start": 433.617,
+        "duration": 4.07
+    },
+    {
+        "text": "that then connects to the spine.",
+        "start": 437.707,
+        "duration": 2.0
+    },
+    {
+        "text": "and the kind of knowledge of these, of\nthis kind of structure is key to, for",
+        "start": 442.912,
+        "duration": 3.65
+    },
+    {
+        "text": "example, Numenta's representation of\nneurons where, you know, rather than",
+        "start": 446.562,
+        "duration": 3.21
+    },
+    {
+        "text": "having just like a weighted sum input\nto represent a neuron, you actually try",
+        "start": 449.772,
+        "duration": 4.53
+    },
+    {
+        "text": "and represent the structure in the, in\nthe kind of the way neurons learn, where",
+        "start": 454.312,
+        "duration": 3.69
+    },
+    {
+        "text": "they have apical dendritic, segments,\nbasal dendritic segments, and then the",
+        "start": 458.002,
+        "duration": 5.92
+    },
+    {
+        "text": "kind of feed forward input, At the Soma.",
+        "start": 463.922,
+        "duration": 3.12
+    },
+    {
+        "text": "and so these can essentially well,\nyeah, I'll get into this another time,",
+        "start": 468.472,
+        "duration": 3.86
+    },
+    {
+        "text": "but these essentially can buy at the\ncell and it's just worth mentioning.",
+        "start": 472.332,
+        "duration": 3.39
+    },
+    {
+        "text": "If you hear the term post segment.",
+        "start": 475.722,
+        "duration": 1.61
+    },
+    {
+        "text": "That's essentially referring to like\na spatial cluster of synapses that",
+        "start": 477.872,
+        "duration": 4.07
+    },
+    {
+        "text": "are nearby each other, in space.",
+        "start": 481.942,
+        "duration": 2.83
+    },
+    {
+        "text": "Are you going to talk about the\ndifference between apical and basal?",
+        "start": 486.112,
+        "duration": 3.43
+    },
+    {
+        "text": "I will eventually, yeah, not today.",
+        "start": 490.072,
+        "duration": 1.83
+    },
+    {
+        "text": "Okay, but that's pretty different.",
+        "start": 491.912,
+        "duration": 1.45
+    },
+    {
+        "text": "Yeah, because the apical stuff has a\npretty different impact, I believe.",
+        "start": 493.902,
+        "duration": 3.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 498.152,
+        "duration": 0.39
+    },
+    {
+        "text": "And then just a couple of high level\npoints before we get a bit more into the",
+        "start": 500.222,
+        "duration": 2.9
+    },
+    {
+        "text": "details, So you could broadly categorize,\nkind of synaptic plasticity or kind of",
+        "start": 503.122,
+        "duration": 5.79
+    },
+    {
+        "text": "learning changes that happen at the neural\nlevel into what are called functional,",
+        "start": 508.932,
+        "duration": 4.17
+    },
+    {
+        "text": "you know, what you can think of as like\nweight changes, and structural, which you",
+        "start": 513.532,
+        "duration": 4.42
+    },
+    {
+        "text": "can kind of think of as wiring, changes.",
+        "start": 518.032,
+        "duration": 2.38
+    },
+    {
+        "text": "And so, you know, if you had these\ntwo neurons here that are kind of",
+        "start": 520.982,
+        "duration": 3.21
+    },
+    {
+        "text": "both projecting their axons to each\nother, then, what you call it, this",
+        "start": 524.202,
+        "duration": 6.66
+    },
+    {
+        "text": "weight here, that was increased such\nthat If this blue neuron spikes, the",
+        "start": 530.862,
+        "duration": 6.99
+    },
+    {
+        "text": "impact on the green neuron is more\nsignificant, it's more likely to",
+        "start": 537.872,
+        "duration": 3.31
+    },
+    {
+        "text": "push the green neuron to then spike.",
+        "start": 541.182,
+        "duration": 1.95
+    },
+    {
+        "text": "That's kind of represented by the\nincrease in this weight, various",
+        "start": 544.362,
+        "duration": 3.61
+    },
+    {
+        "text": "biological processes that can cause that.",
+        "start": 548.012,
+        "duration": 2.36
+    },
+    {
+        "text": "Or you can have more of a wiring\nchange where, through, again, various",
+        "start": 551.352,
+        "duration": 3.79
+    },
+    {
+        "text": "mechanisms, a kind of synapse where\none in effect wasn't before, now is.",
+        "start": 555.142,
+        "duration": 6.24
+    },
+    {
+        "text": "and in general, this is more\nthe kind of flavor of pluses",
+        "start": 562.452,
+        "duration": 2.93
+    },
+    {
+        "text": "that, the new mentor, uses,",
+        "start": 565.482,
+        "duration": 2.44
+    },
+    {
+        "text": "yeah, partly because, I mean, yeah, Jeremy\ntalks about a lot of this, which is why",
+        "start": 570.402,
+        "duration": 4.06
+    },
+    {
+        "text": "I'm not going too much into it, but, you\nknow, there's evidence that the, fidelity",
+        "start": 574.462,
+        "duration": 5.17
+    },
+    {
+        "text": "of these weights isn't that, high.",
+        "start": 579.632,
+        "duration": 2.17
+    },
+    {
+        "text": "So, like, there is definitely evidence\nof this kind of weight persistency, but",
+        "start": 581.802,
+        "duration": 4.15
+    },
+    {
+        "text": "it might be, you know, the equivalent of\nhaving like, very close to zero weight.",
+        "start": 585.952,
+        "duration": 4.94
+    },
+    {
+        "text": "Very high weight and maybe two levels\nin between, if you think of it as",
+        "start": 591.397,
+        "duration": 3.4
+    },
+    {
+        "text": "kind of a form of, quantization.",
+        "start": 594.797,
+        "duration": 3.03
+    },
+    {
+        "text": "And I think even in like, in\ndistal dendritic segments, the",
+        "start": 598.597,
+        "duration": 3.1
+    },
+    {
+        "text": "impact of the synapse is way\nlower in individual synapse.",
+        "start": 601.707,
+        "duration": 4.1
+    },
+    {
+        "text": "So there, it may, it may just be\nliterally binary at that point.",
+        "start": 605.807,
+        "duration": 3.84
+    },
+    {
+        "text": "Yeah, right.",
+        "start": 609.657,
+        "duration": 0.7
+    },
+    {
+        "text": "Whether it impacts at all or not.",
+        "start": 610.397,
+        "duration": 1.7
+    },
+    {
+        "text": "yeah, and then another high level\npoint is just that, this is kind",
+        "start": 617.787,
+        "duration": 4.45
+    },
+    {
+        "text": "of a summary of what Jeremy talks\nabout in case you haven't seen it.",
+        "start": 622.237,
+        "duration": 3.29
+    },
+    {
+        "text": "Right.",
+        "start": 625.527,
+        "duration": 0.29
+    },
+    {
+        "text": "The connection properties and\nhow they evolve over time kind",
+        "start": 626.197,
+        "duration": 3.37
+    },
+    {
+        "text": "of fall on this large time scale.",
+        "start": 629.567,
+        "duration": 2.26
+    },
+    {
+        "text": "So if you imagine the kind of\nconnection properties becoming stronger",
+        "start": 632.397,
+        "duration": 4.2
+    },
+    {
+        "text": "versus weaker, this can happen on\nthe order of kind of milliseconds.",
+        "start": 636.597,
+        "duration": 4.09
+    },
+    {
+        "text": "The short term, that's\njust the all the way up to.",
+        "start": 640.737,
+        "duration": 3.09
+    },
+    {
+        "text": "Yeah, I mean, I haven't tried\nto have this super accurately,",
+        "start": 644.287,
+        "duration": 3.49
+    },
+    {
+        "text": "but kind of generally days.",
+        "start": 647.777,
+        "duration": 1.38
+    },
+    {
+        "text": "where you'd have kind of structural\nplasticity where you're actually",
+        "start": 649.727,
+        "duration": 2.17
+    },
+    {
+        "text": "growing new synaptic spines.",
+        "start": 651.897,
+        "duration": 1.68
+    },
+    {
+        "text": "But then in between that, you can\nmodify things about the synapse",
+        "start": 654.337,
+        "duration": 3.84
+    },
+    {
+        "text": "that give you kind of a, kind\nof medium term potentiation.",
+        "start": 658.207,
+        "duration": 4.85
+    },
+    {
+        "text": "So increasing the strength\nof the weight or, decrease.",
+        "start": 663.097,
+        "duration": 4.39
+    },
+    {
+        "text": "And then, more kind of long\nterm permanent potentiation.",
+        "start": 668.157,
+        "duration": 3.59
+    },
+    {
+        "text": "so this would be kind of a weight change.",
+        "start": 672.917,
+        "duration": 1.66
+    },
+    {
+        "text": "And then this would be a structural\nplaces, but sissy change where you",
+        "start": 675.002,
+        "duration": 3.13
+    },
+    {
+        "text": "can have kind of a, dendritic spine.",
+        "start": 678.132,
+        "duration": 2.65
+    },
+    {
+        "text": "That's sort of, synapses inactive.",
+        "start": 680.782,
+        "duration": 2.74
+    },
+    {
+        "text": "But then, through some fairly\nrapid changes can become, active",
+        "start": 684.122,
+        "duration": 4.52
+    },
+    {
+        "text": "without having to grow a new one.",
+        "start": 688.822,
+        "duration": 1.09
+    },
+    {
+        "text": "and so you can kind of think of these\ntwo shorter ones as kind of traces",
+        "start": 692.432,
+        "duration": 2.59
+    },
+    {
+        "text": "that might serve some purpose, in kind\nof the short term versus more kind of",
+        "start": 695.042,
+        "duration": 4.75
+    },
+    {
+        "text": "persistent changes that would, you'd\nexpect to last, kind of much longer.",
+        "start": 699.792,
+        "duration": 3.95
+    },
+    {
+        "text": "And then a final caution.",
+        "start": 706.882,
+        "duration": 2.48
+    },
+    {
+        "text": "just because I think if you have\na background in your science, this",
+        "start": 709.782,
+        "duration": 3.67
+    },
+    {
+        "text": "is often kind of taken as a given.",
+        "start": 713.472,
+        "duration": 1.52
+    },
+    {
+        "text": "You may not have come across this\nif not, but there's something kind",
+        "start": 715.112,
+        "duration": 3.72
+    },
+    {
+        "text": "of generally referred to as Dale's\nlaw, but basically neurons of a",
+        "start": 718.832,
+        "duration": 4.21
+    },
+    {
+        "text": "particular type of neurotransmitter.",
+        "start": 723.042,
+        "duration": 1.04
+    },
+    {
+        "text": "So an excitatory or an inhibitory\nneurotransmitter will generally only",
+        "start": 724.822,
+        "duration": 3.74
+    },
+    {
+        "text": "release that type of transmitter when\nthey, kind of connect to other neurons.",
+        "start": 728.562,
+        "duration": 4.34
+    },
+    {
+        "text": "And so this means that, you know, neurons\nare either excitatory or inhibitory",
+        "start": 733.462,
+        "duration": 3.77
+    },
+    {
+        "text": "and Progressive changes to a weight is\nnot, it will never kind of flip it from",
+        "start": 737.242,
+        "duration": 4.47
+    },
+    {
+        "text": "being positive to negative, vice versa.",
+        "start": 741.712,
+        "duration": 1.91
+    },
+    {
+        "text": "It's worth pointing out, I don't know\nif you're going to do it yet, but the",
+        "start": 746.842,
+        "duration": 3.4
+    },
+    {
+        "text": "inhibitory synapses are quite different.",
+        "start": 750.272,
+        "duration": 2.24
+    },
+    {
+        "text": "They don't have spines, and\nthey're generally not viewed",
+        "start": 753.042,
+        "duration": 3.68
+    },
+    {
+        "text": "as participating in learning.",
+        "start": 756.782,
+        "duration": 1.82
+    },
+    {
+        "text": "I'm sure there's some exceptions\nto that, but there are sort of more",
+        "start": 759.432,
+        "duration": 3.9
+    },
+    {
+        "text": "background computational things going on.",
+        "start": 763.342,
+        "duration": 2.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 767.197,
+        "duration": 0.18
+    },
+    {
+        "text": "Okay.",
+        "start": 767.377,
+        "duration": 0.34
+    },
+    {
+        "text": "The rule you were just talking\nabout spines and forming a new",
+        "start": 768.177,
+        "duration": 2.69
+    },
+    {
+        "text": "synapses generally do not are not\nbelieved to occur with inhibitory",
+        "start": 770.877,
+        "duration": 3.07
+    },
+    {
+        "text": "synapses and they don't have spines.",
+        "start": 774.387,
+        "duration": 1.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 776.777,
+        "duration": 0.37
+    },
+    {
+        "text": "Yeah.",
+        "start": 777.987,
+        "duration": 0.21
+    },
+    {
+        "text": "Okay.",
+        "start": 778.197,
+        "duration": 0.19
+    },
+    {
+        "text": "Interesting.",
+        "start": 778.387,
+        "duration": 0.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 779.067,
+        "duration": 0.23
+    },
+    {
+        "text": "I wasn't aware about the, the\nkind of spine, difference.",
+        "start": 780.377,
+        "duration": 2.83
+    },
+    {
+        "text": "That's, that's interesting.",
+        "start": 783.547,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 784.517,
+        "duration": 0.15
+    },
+    {
+        "text": "Yeah.",
+        "start": 784.667,
+        "duration": 1.74
+    },
+    {
+        "text": "Another big difference is that it's,\nit's not, you know, excitatory synapses I",
+        "start": 787.387,
+        "duration": 4.66
+    },
+    {
+        "text": "think by and large are very similar, but\ninhibitory synapses is a huge diversity",
+        "start": 792.047,
+        "duration": 4.48
+    },
+    {
+        "text": "of different types of Inhibitory neurons\nand they have very different temporal",
+        "start": 796.527,
+        "duration": 4.105
+    },
+    {
+        "text": "dynamics and very different types of\nimpact on the on the postsynaptic cell.",
+        "start": 800.642,
+        "duration": 5.5
+    },
+    {
+        "text": "And so this is like, I don't know, like\nfive or 10 completely different types of.",
+        "start": 806.782,
+        "duration": 4.21
+    },
+    {
+        "text": "in between neurons in the, in the cortex.",
+        "start": 812.097,
+        "duration": 2.01
+    },
+    {
+        "text": "And what I've always used is when you,\nwhen you have some sort of algorithm",
+        "start": 814.287,
+        "duration": 3.04
+    },
+    {
+        "text": "that has to be operated or created in\nthe, in the cortex, those algorithms",
+        "start": 817.327,
+        "duration": 3.64
+    },
+    {
+        "text": "are often highly, dependent on\ninhibitory neurons, you know, sparsity,",
+        "start": 820.967,
+        "duration": 4.87
+    },
+    {
+        "text": "synchronization, those, those are the,\nthose are like the, the computational.",
+        "start": 827.027,
+        "duration": 4.78
+    },
+    {
+        "text": "background where the excitatory for\nmostly, you know, they are where memories",
+        "start": 833.022,
+        "duration": 5.61
+    },
+    {
+        "text": "are formed and where you learn things.",
+        "start": 838.632,
+        "duration": 1.41
+    },
+    {
+        "text": "Right, right, right.",
+        "start": 840.047,
+        "duration": 0.775
+    },
+    {
+        "text": "Yeah.",
+        "start": 840.882,
+        "duration": 0.3
+    },
+    {
+        "text": "That's how I view it too.",
+        "start": 841.182,
+        "duration": 0.99
+    },
+    {
+        "text": "Like the excited synapsis are like\nthe memory of the system and the",
+        "start": 842.172,
+        "duration": 3.87
+    },
+    {
+        "text": "inhibitory neurons of the control system.",
+        "start": 846.042,
+        "duration": 1.68
+    },
+    {
+        "text": "It's like actually the CPU\ninstructions, it's a very",
+        "start": 847.722,
+        "duration": 4.99
+    },
+    {
+        "text": "different view than deep learning.",
+        "start": 852.712,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 854.732,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 855.942,
+        "duration": 0.45
+    },
+    {
+        "text": "I feel like, I mean, yeah, maybe at\nsome point that could be interesting to.",
+        "start": 856.572,
+        "duration": 3.24
+    },
+    {
+        "text": "A little bit more into the different\ntypes of inhibitory neurons and",
+        "start": 860.477,
+        "duration": 2.5
+    },
+    {
+        "text": "everything from the temporal dynamics\nand stuff, but maybe there's a recording.",
+        "start": 863.977,
+        "duration": 3.29
+    },
+    {
+        "text": "Yeah, there should be a\nrecording of one or two,",
+        "start": 867.867,
+        "duration": 2.31
+    },
+    {
+        "text": "you know, videos we've done on that.",
+        "start": 872.557,
+        "duration": 1.89
+    },
+    {
+        "text": "It's the data on that is not as clear.",
+        "start": 874.767,
+        "duration": 2.58
+    },
+    {
+        "text": "There's all sorts of.",
+        "start": 877.347,
+        "duration": 0.78
+    },
+    {
+        "text": "things, but maybe now it's like,\nyou know, six years later, it",
+        "start": 878.917,
+        "duration": 3.58
+    },
+    {
+        "text": "might be, there might be more.",
+        "start": 882.507,
+        "duration": 1.09
+    },
+    {
+        "text": "There's a lot of data\nthat's even old about that.",
+        "start": 883.597,
+        "duration": 3.76
+    },
+    {
+        "text": "I think we said enough perhaps, but just\nsomething as simple as, you know, a cell",
+        "start": 888.217,
+        "duration": 4.51
+    },
+    {
+        "text": "body, the soma of the cell generally does\nnot have any excitatory synapses on it,",
+        "start": 892.727,
+        "duration": 5.96
+    },
+    {
+        "text": "but it has inhibitory synapses on it.",
+        "start": 898.957,
+        "duration": 1.95
+    },
+    {
+        "text": "So the excitatory synapses\nare limited to the dendrites.",
+        "start": 901.367,
+        "duration": 2.79
+    },
+    {
+        "text": "Where the inhibitory synapses\nare on dendrites on the cell",
+        "start": 904.762,
+        "duration": 2.9
+    },
+    {
+        "text": "body and also on the axon.",
+        "start": 907.662,
+        "duration": 1.69
+    },
+    {
+        "text": "So it's a very different type of,",
+        "start": 909.742,
+        "duration": 1.06
+    },
+    {
+        "text": "Effect in the system.",
+        "start": 913.762,
+        "duration": 1.53
+    },
+    {
+        "text": "Right.",
+        "start": 915.292,
+        "duration": 0.36
+    },
+    {
+        "text": "okay.",
+        "start": 919.622,
+        "duration": 0.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 919.822,
+        "duration": 0.22
+    },
+    {
+        "text": "So then to get into the kind of broad\ncategory, then, I'm really going to",
+        "start": 920.042,
+        "duration": 6.22
+    },
+    {
+        "text": "be talking about Hebbian learning.",
+        "start": 926.272,
+        "duration": 1.49
+    },
+    {
+        "text": "and I mean, I guess everyone will\nhave heard of this, but, you know,",
+        "start": 929.012,
+        "duration": 3.56
+    },
+    {
+        "text": "it's this classic rule, associative\nrule that, you know, cells that",
+        "start": 932.572,
+        "duration": 2.83
+    },
+    {
+        "text": "fire together, wire together.",
+        "start": 935.402,
+        "duration": 1.31
+    },
+    {
+        "text": "and this was proposed by Donahue in\nthe 1940s, and I guess one of the kind",
+        "start": 937.607,
+        "duration": 4.74
+    },
+    {
+        "text": "of clearest demonstrations of this at\nthe cellular level was, first done by,",
+        "start": 942.347,
+        "duration": 4.46
+    },
+    {
+        "text": "this Norwegian physiologist, in the\n1970s, when he kind of showed this long",
+        "start": 947.397,
+        "duration": 4.75
+    },
+    {
+        "text": "term potentiation, when you, cause,\nneurons to kind of spike together.",
+        "start": 952.147,
+        "duration": 6.23
+    },
+    {
+        "text": "And it's a kind of simple\nlearning rule at face value.",
+        "start": 961.402,
+        "duration": 3.24
+    },
+    {
+        "text": "but it's worth kind of, your kind of\nimmediate concerns that might spring to",
+        "start": 965.792,
+        "duration": 3.41
+    },
+    {
+        "text": "mind are probably well founded in that,\nyou know, if this neuron is firing a lot",
+        "start": 969.202,
+        "duration": 3.65
+    },
+    {
+        "text": "and this neuron is firing a lot and then\nthey keep increasing the weight between",
+        "start": 972.872,
+        "duration": 2.68
+    },
+    {
+        "text": "them, then, you know, where does that end?",
+        "start": 975.552,
+        "duration": 2.2
+    },
+    {
+        "text": "weights can grow kind of unbounded\nin a naive implementation",
+        "start": 979.232,
+        "duration": 3.12
+    },
+    {
+        "text": "and it becomes unstable.",
+        "start": 982.352,
+        "duration": 1.44
+    },
+    {
+        "text": "and so what I think is maybe a\nuseful perspective is that kind",
+        "start": 986.312,
+        "duration": 3.14
+    },
+    {
+        "text": "of any form of Hebbian learning.",
+        "start": 989.452,
+        "duration": 1.97
+    },
+    {
+        "text": "need some form of homeostasis\nto, kind of balance the system.",
+        "start": 991.907,
+        "duration": 5.23
+    },
+    {
+        "text": "And then some form of competition, which\nkind of connects to what, Jeff and super",
+        "start": 997.507,
+        "duration": 4.47
+    },
+    {
+        "text": "tight were mentioning earlier about\ninhibition, in order to be interesting.",
+        "start": 1002.027,
+        "duration": 3.69
+    },
+    {
+        "text": "and so I thought this kind of would be a,\nan interesting way to then examine kind",
+        "start": 1008.017,
+        "duration": 4.78
+    },
+    {
+        "text": "of three forms of heavy and learning.",
+        "start": 1012.797,
+        "duration": 1.79
+    },
+    {
+        "text": "which is kind of the classic\nfiring rate neurons and then spike",
+        "start": 1015.507,
+        "duration": 3.03
+    },
+    {
+        "text": "time dependent plasticity, and\nthen nomenclature HTM neurons.",
+        "start": 1018.537,
+        "duration": 3.44
+    },
+    {
+        "text": "Where all of these, both\nof these things apply.",
+        "start": 1024.057,
+        "duration": 2.75
+    },
+    {
+        "text": "And so the first two are really kind of\nmore weight plasticity, whereas Numenta's",
+        "start": 1027.927,
+        "duration": 4.67
+    },
+    {
+        "text": "HTM neurons are more, structural.",
+        "start": 1032.597,
+        "duration": 1.95
+    },
+    {
+        "text": "So, again, I'm sure this is familiar\nto, most people, but, you know, just",
+        "start": 1039.267,
+        "duration": 4.85
+    },
+    {
+        "text": "a classic firing rate neuron, just\nto make sure that we're kind of, in",
+        "start": 1044.117,
+        "duration": 3.89
+    },
+    {
+        "text": "agreement on the kind of variables.",
+        "start": 1048.007,
+        "duration": 2.2
+    },
+    {
+        "text": "You know, you have, some output, which\nis dependent on a weighted sum of inputs.",
+        "start": 1050.677,
+        "duration": 4.91
+    },
+    {
+        "text": "where these input neurons are spiking\na certain number of times per second.",
+        "start": 1056.277,
+        "duration": 4.15
+    },
+    {
+        "text": "That's their rate.",
+        "start": 1062.077,
+        "duration": 0.68
+    },
+    {
+        "text": "And then typically you'd\nhave some non linearity.",
+        "start": 1062.807,
+        "duration": 3.17
+    },
+    {
+        "text": "which ultimately determines the output\nof the, firing this, this neuron, which,",
+        "start": 1066.717,
+        "duration": 6.14
+    },
+    {
+        "text": "you know, could itself be expressed or\nkind of viewed as a, as a firing rate.",
+        "start": 1072.857,
+        "duration": 3.15
+    },
+    {
+        "text": "and in order for this kind of\nnetwork to, to learn with a kind",
+        "start": 1079.237,
+        "duration": 4.14
+    },
+    {
+        "text": "of Hebbian style plasticity, you\nwould update the weight based on the",
+        "start": 1083.377,
+        "duration": 4.2
+    },
+    {
+        "text": "kind of current value plus, change.",
+        "start": 1087.577,
+        "duration": 3.77
+    },
+    {
+        "text": "This is the kind of Hebbian term.",
+        "start": 1091.347,
+        "duration": 1.09
+    },
+    {
+        "text": "So basically the.",
+        "start": 1092.457,
+        "duration": 0.8
+    },
+    {
+        "text": "Magnitude of the input and the\noutput you want to remember.",
+        "start": 1093.762,
+        "duration": 2.26
+    },
+    {
+        "text": "These are never going to be negative.",
+        "start": 1096.022,
+        "duration": 2.13
+    },
+    {
+        "text": "They're always going to be\neither zero or positive.",
+        "start": 1098.202,
+        "duration": 2.37
+    },
+    {
+        "text": "And then the learning rate, which\nis some kind of small factor",
+        "start": 1101.382,
+        "duration": 2.87
+    },
+    {
+        "text": "that slows down that learning.",
+        "start": 1104.752,
+        "duration": 1.09
+    },
+    {
+        "text": "And so, yeah, this, you know, this is\nwhat I was talking about earlier, that if",
+        "start": 1109.142,
+        "duration": 3.75
+    },
+    {
+        "text": "you could just kind of naively implement\nthis and then had a bunch of input",
+        "start": 1112.892,
+        "duration": 3.24
+    },
+    {
+        "text": "neurons and then an output neuron, and\nthen you wired them up, this way, would",
+        "start": 1116.132,
+        "duration": 4.83
+    },
+    {
+        "text": "likely continue just growing unbounded.",
+        "start": 1121.012,
+        "duration": 1.85
+    },
+    {
+        "text": "and so one kind of popular way that was\nproposed to kind of, deal with this is",
+        "start": 1124.992,
+        "duration": 4.79
+    },
+    {
+        "text": "to kind of introduce this homeostatic\nterm, which was called Oha's learning",
+        "start": 1129.782,
+        "duration": 3.74
+    },
+    {
+        "text": "rule, where there is a negative\neffect on the weight that is both",
+        "start": 1133.522,
+        "duration": 5.82
+    },
+    {
+        "text": "proportional to the size of the weight.",
+        "start": 1139.342,
+        "duration": 1.52
+    },
+    {
+        "text": "And the size of the\noutput neuron, squared.",
+        "start": 1141.327,
+        "duration": 2.46
+    },
+    {
+        "text": "And, yeah, so the reason I'm kind of\ngoing through this is because I think it's",
+        "start": 1145.747,
+        "duration": 3.3
+    },
+    {
+        "text": "interesting to understand kind of what a\nfiring rate can learn to encode, before",
+        "start": 1149.057,
+        "duration": 3.89
+    },
+    {
+        "text": "we get on to kind of more complex neurons.",
+        "start": 1152.947,
+        "duration": 2.05
+    },
+    {
+        "text": "I mean, it's interesting, I'm not familiar\nwith this rule, I've never heard it",
+        "start": 1155.007,
+        "duration": 3.93
+    },
+    {
+        "text": "before, but, you know, I always felt\nit was like, okay, a synapse is just",
+        "start": 1158.937,
+        "duration": 3.82
+    },
+    {
+        "text": "a physical structure, it doesn't get\nvery big, it can only do some, release",
+        "start": 1162.757,
+        "duration": 3.42
+    },
+    {
+        "text": "so many, synaptic vessels at once,\nso it's like physically limited, but",
+        "start": 1166.187,
+        "duration": 4.91
+    },
+    {
+        "text": "this implies It's tied to the activity\nof the neuron, which is odd to me.",
+        "start": 1171.097,
+        "duration": 4.445
+    },
+    {
+        "text": "I don't know why that\nterm would be like that.",
+        "start": 1176.007,
+        "duration": 1.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 1178.887,
+        "duration": 0.28
+    },
+    {
+        "text": "So there's a few ways you can.",
+        "start": 1179.167,
+        "duration": 1.23
+    },
+    {
+        "text": "So yeah.",
+        "start": 1181.087,
+        "duration": 0.29
+    },
+    {
+        "text": "This equation may reflect what we see\nin biology, but it's not, I think,",
+        "start": 1182.667,
+        "duration": 3.69
+    },
+    {
+        "text": "what's actually going on in biology.",
+        "start": 1186.367,
+        "duration": 1.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 1189.187,
+        "duration": 0.37
+    },
+    {
+        "text": "I mean, yeah.",
+        "start": 1189.557,
+        "duration": 0.75
+    },
+    {
+        "text": "You can imagine like a hard, a hard\nbalance and that's also somehow controlled",
+        "start": 1190.307,
+        "duration": 4.98
+    },
+    {
+        "text": "by the rate of firing of the neuron.",
+        "start": 1195.287,
+        "duration": 1.55
+    },
+    {
+        "text": "That's weird.",
+        "start": 1196.837,
+        "duration": 0.66
+    },
+    {
+        "text": "So yeah.",
+        "start": 1198.437,
+        "duration": 0.47
+    },
+    {
+        "text": "You can imagine a hard balance\nso that, as you say, like the",
+        "start": 1198.907,
+        "duration": 2.97
+    },
+    {
+        "text": "science can only get so big.",
+        "start": 1201.877,
+        "duration": 1.06
+    },
+    {
+        "text": "I see.",
+        "start": 1202.947,
+        "duration": 0.17
+    },
+    {
+        "text": "You could.",
+        "start": 1203.117,
+        "duration": 0.39
+    },
+    {
+        "text": "You can very easily just say, okay,\nweights cannot go above the value of 1.",
+        "start": 1203.782,
+        "duration": 2.76
+    },
+    {
+        "text": "0 or whatever.",
+        "start": 1206.542,
+        "duration": 1.14
+    },
+    {
+        "text": "and, and that's a totally\nlegitimate thing to do, but it",
+        "start": 1208.502,
+        "duration": 2.61
+    },
+    {
+        "text": "doesn't solve all the problems.",
+        "start": 1211.112,
+        "duration": 1.33
+    },
+    {
+        "text": "the other thing is like, yeah, in terms\nof what this homeostatic term might",
+        "start": 1213.792,
+        "duration": 2.75
+    },
+    {
+        "text": "represent, I mean, the, the squared\nhere is, you know, I, I, this wasn't",
+        "start": 1216.542,
+        "duration": 4.11
+    },
+    {
+        "text": "a learning rule that was necessarily\nfit to biological data that, that",
+        "start": 1220.672,
+        "duration": 3.05
+    },
+    {
+        "text": "wasn't its kind of providence, but,\nbut you could imagine that, you know,",
+        "start": 1223.722,
+        "duration": 3.81
+    },
+    {
+        "text": "every time a post synaptic neuron\nfires, maybe it releases some factor.",
+        "start": 1227.542,
+        "duration": 4.29
+    },
+    {
+        "text": "that then, degrades, kind of synapses,\nlike just kind of a decaying term.",
+        "start": 1232.997,
+        "duration": 4.47
+    },
+    {
+        "text": "I, I guess from a biology point\nof view, I don't think, I've",
+        "start": 1237.977,
+        "duration": 2.14
+    },
+    {
+        "text": "never heard any evidence for that.",
+        "start": 1240.117,
+        "duration": 1.21
+    },
+    {
+        "text": "So, it is, again, it may be a useful\nrule, but I don't think it's reflecting",
+        "start": 1241.337,
+        "duration": 3.66
+    },
+    {
+        "text": "biology as far as I can tell.",
+        "start": 1244.997,
+        "duration": 1.23
+    },
+    {
+        "text": "It's just, you know, synapses are\nphysical structures, they're limited,",
+        "start": 1246.627,
+        "duration": 3.45
+    },
+    {
+        "text": "they have limited area, they can only\nrelease so many, synaptic vessels,",
+        "start": 1250.627,
+        "duration": 3.924
+    },
+    {
+        "text": "vesicles, and they just hit that limit.",
+        "start": 1254.551,
+        "duration": 2.796
+    },
+    {
+        "text": "That's all it is, you know.",
+        "start": 1258.067,
+        "duration": 1.47
+    },
+    {
+        "text": "Okay.",
+        "start": 1261.187,
+        "duration": 0.43
+    },
+    {
+        "text": "But, but I mean, yeah, I'd say\nmost, I mean, even like, I think",
+        "start": 1261.657,
+        "duration": 4.77
+    },
+    {
+        "text": "the, it's not the same, but the,",
+        "start": 1266.427,
+        "duration": 2.26
+    },
+    {
+        "text": "the HTM neuron has like a negative,",
+        "start": 1271.537,
+        "duration": 3.26
+    },
+    {
+        "text": "well, we had, we had a decay.",
+        "start": 1278.047,
+        "duration": 1.65
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 1280.207,
+        "duration": 0.68
+    },
+    {
+        "text": "It decayed.",
+        "start": 1280.887,
+        "duration": 0.52
+    },
+    {
+        "text": "Right.",
+        "start": 1281.407,
+        "duration": 0.25
+    },
+    {
+        "text": "That's not the same as a limiting factor.",
+        "start": 1281.737,
+        "duration": 2.31
+    },
+    {
+        "text": "It's.",
+        "start": 1284.057,
+        "duration": 0.2
+    },
+    {
+        "text": "It's it's a decay and there's and there's\nlots of different ways, you know, but",
+        "start": 1284.807,
+        "duration": 4.46
+    },
+    {
+        "text": "you know, I mean, it was bounded between\nzero and one, I guess, because it's",
+        "start": 1289.647,
+        "duration": 2.94
+    },
+    {
+        "text": "it's naturally because it's it's binary.",
+        "start": 1292.677,
+        "duration": 1.88
+    },
+    {
+        "text": "And then there's a decay that\nkind of, well, it's binary",
+        "start": 1294.567,
+        "duration": 2.87
+    },
+    {
+        "text": "or it's it's just limited.",
+        "start": 1297.447,
+        "duration": 1.49
+    },
+    {
+        "text": "So you could say zero 50.",
+        "start": 1298.977,
+        "duration": 1.34
+    },
+    {
+        "text": "Who care?",
+        "start": 1300.427,
+        "duration": 0.42
+    },
+    {
+        "text": "but, you know, the synapses come and go.",
+        "start": 1302.657,
+        "duration": 2.89
+    },
+    {
+        "text": "And, you know, we do forget.",
+        "start": 1305.567,
+        "duration": 1.71
+    },
+    {
+        "text": "And so there is a part of forgetting is\njust not, I'm not saying all of it, but a",
+        "start": 1307.317,
+        "duration": 5.63
+    },
+    {
+        "text": "lot of part of forgetting is if synapses\naren't used, they just sort of decay,",
+        "start": 1312.947,
+        "duration": 3.67
+    },
+    {
+        "text": "you know, they just can't go with it, so\nyou don't want to keep everything active,",
+        "start": 1316.617,
+        "duration": 4.57
+    },
+    {
+        "text": "you know, every member, we, we, we forget\nthings a lot, right, especially my age,",
+        "start": 1321.227,
+        "duration": 4.77
+    },
+    {
+        "text": "but, yeah, so, but yeah, I guess I\nagree this is probably not, the most",
+        "start": 1328.007,
+        "duration": 5.07
+    },
+    {
+        "text": "biologically plausible implementation\nof this, but I guess it's interesting",
+        "start": 1333.107,
+        "duration": 3.33
+    },
+    {
+        "text": "because OHA was the first one to,\nperson to kind of show that, yeah.",
+        "start": 1336.467,
+        "duration": 3.54
+    },
+    {
+        "text": "What is the significance of this\nis that so in this network, we",
+        "start": 1340.277,
+        "duration": 3.86
+    },
+    {
+        "text": "just have one output neuron that\nreceives a bunch of input neurons",
+        "start": 1344.137,
+        "duration": 3.25
+    },
+    {
+        "text": "X, you know, on through X. I,",
+        "start": 1347.577,
+        "duration": 2.33
+    },
+    {
+        "text": "and if there's some, kind of\nstatistical structure, basically to",
+        "start": 1352.517,
+        "duration": 5.04
+    },
+    {
+        "text": "the activity of the input neurons.",
+        "start": 1357.557,
+        "duration": 1.9
+    },
+    {
+        "text": "Then the alpha neuron is\ngoing to pick up on that.",
+        "start": 1359.892,
+        "duration": 2.88
+    },
+    {
+        "text": "And in particular, so if you have the, if\nyou imagine certain precept, pre synaptic",
+        "start": 1362.802,
+        "duration": 4.7
+    },
+    {
+        "text": "neurons are firing together, i. e. they're\ncorrelated, that's going to, you know,",
+        "start": 1367.502,
+        "duration": 4.74
+    },
+    {
+        "text": "with some random weight initialization,\nagain, all weights here are positive.",
+        "start": 1372.242,
+        "duration": 3.32
+    },
+    {
+        "text": "with some random weight initialization,\nthat's going to cause the output",
+        "start": 1376.727,
+        "duration": 2.37
+    },
+    {
+        "text": "neuron to fire, higher when those\nneurons are firing together.",
+        "start": 1379.097,
+        "duration": 3.93
+    },
+    {
+        "text": "And so those will all experience an\nincrease in their weights up to a limit.",
+        "start": 1383.277,
+        "duration": 4.53
+    },
+    {
+        "text": "on the other hand, if you had some\nother neuron, not shown here, that",
+        "start": 1390.137,
+        "duration": 3.33
+    },
+    {
+        "text": "you can imagine that is poorly\ncorrelated with the others, then",
+        "start": 1393.477,
+        "duration": 4.0
+    },
+    {
+        "text": "this homeostatic term is actually\ngoing to kind of negatively dominate.",
+        "start": 1397.537,
+        "duration": 2.87
+    },
+    {
+        "text": "So, you know, the other neurons are\ndriving the output neuron, so Y is high.",
+        "start": 1400.527,
+        "duration": 5.78
+    },
+    {
+        "text": "But, X J in this case is actually low.",
+        "start": 1406.992,
+        "duration": 2.63
+    },
+    {
+        "text": "and so, if it started randomly with a\nnon zero weight, it's going to decrease.",
+        "start": 1410.562,
+        "duration": 6.09
+    },
+    {
+        "text": "Yeah, there is, and it's fine.",
+        "start": 1418.492,
+        "duration": 2.3
+    },
+    {
+        "text": "I don't want to pick apart\nthis, but the basic way.",
+        "start": 1420.792,
+        "duration": 5.14
+    },
+    {
+        "text": "I mean, basically, you\ndon't want too many neurons.",
+        "start": 1425.962,
+        "duration": 1.96
+    },
+    {
+        "text": "Firing and learning at the same time.",
+        "start": 1428.142,
+        "duration": 1.51
+    },
+    {
+        "text": "And yeah, this is getting\nbefore before inhibition.",
+        "start": 1430.162,
+        "duration": 3.15
+    },
+    {
+        "text": "I'll get to that.",
+        "start": 1433.312,
+        "duration": 0.45
+    },
+    {
+        "text": "Right?",
+        "start": 1433.872,
+        "duration": 0.27
+    },
+    {
+        "text": "Right.",
+        "start": 1434.162,
+        "duration": 0.33
+    },
+    {
+        "text": "Right.",
+        "start": 1434.512,
+        "duration": 0.23
+    },
+    {
+        "text": "Because this is really\ndone by inhibitory neurons.",
+        "start": 1434.742,
+        "duration": 2.28
+    },
+    {
+        "text": "wait.",
+        "start": 1437.512,
+        "duration": 0.22
+    },
+    {
+        "text": "So, well, but this is kind\nof imagine for the moment.",
+        "start": 1437.732,
+        "duration": 2.19
+    },
+    {
+        "text": "We just have a single output neuron.",
+        "start": 1439.962,
+        "duration": 1.59
+    },
+    {
+        "text": "All right, right.",
+        "start": 1441.932,
+        "duration": 0.96
+    },
+    {
+        "text": "Okay.",
+        "start": 1442.982,
+        "duration": 0.33
+    },
+    {
+        "text": "But but okay, fine.",
+        "start": 1443.312,
+        "duration": 1.65
+    },
+    {
+        "text": "I can imagine it, but it's not.",
+        "start": 1445.022,
+        "duration": 1.285
+    },
+    {
+        "text": "Yeah.",
+        "start": 1446.937,
+        "duration": 0.35
+    },
+    {
+        "text": "Right.",
+        "start": 1447.717,
+        "duration": 0.28
+    },
+    {
+        "text": "And we do, we don't have that.",
+        "start": 1447.997,
+        "duration": 1.45
+    },
+    {
+        "text": "We have, we have these very fast\ninhibitory basket cells that essentially",
+        "start": 1449.447,
+        "duration": 3.71
+    },
+    {
+        "text": "enforce sparsity, but it's okay.",
+        "start": 1453.287,
+        "duration": 2.56
+    },
+    {
+        "text": "I just want, I just don't want\nanyone to get confused, like, oh,",
+        "start": 1455.897,
+        "duration": 2.63
+    },
+    {
+        "text": "this is what's really going on.",
+        "start": 1458.527,
+        "duration": 1.38
+    },
+    {
+        "text": "It's like, well, it's a good\nway of expressing some stuff.",
+        "start": 1459.907,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 1463.577,
+        "duration": 0.18
+    },
+    {
+        "text": "Well, so yeah, so just to recap, so\nyeah, so basically these are neurons",
+        "start": 1463.757,
+        "duration": 5.13
+    },
+    {
+        "text": "that are correlated When they're firing,\nyou know, firing together, they're",
+        "start": 1468.887,
+        "duration": 4.355
+    },
+    {
+        "text": "going to experience, kind of weight\ngrowth to the output neuron, and then",
+        "start": 1473.242,
+        "duration": 3.84
+    },
+    {
+        "text": "uncorrelated neurons are going to,\ntheir weights are going to decrease.",
+        "start": 1477.142,
+        "duration": 3.06
+    },
+    {
+        "text": "And the end result of this is basically\nY is going to learn to respond to the",
+        "start": 1481.172,
+        "duration": 4.76
+    },
+    {
+        "text": "variation along the first principal\ncomponent, if that means anything.",
+        "start": 1485.932,
+        "duration": 4.07
+    },
+    {
+        "text": "So if you're familiar with principal\ncomponent analysis, if you have",
+        "start": 1490.002,
+        "duration": 4.8
+    },
+    {
+        "text": "this kind of, cloud of points,\nsome higher dimensional space,",
+        "start": 1494.852,
+        "duration": 4.42
+    },
+    {
+        "text": "you're There's some kind of lower\ndimensional structure to that.",
+        "start": 1499.272,
+        "duration": 4.08
+    },
+    {
+        "text": "So this kind of axis of principle\nkind of largest variation.",
+        "start": 1503.362,
+        "duration": 4.48
+    },
+    {
+        "text": "And basically, that is the dimension of\nwhich on which the kind of why neuron",
+        "start": 1508.702,
+        "duration": 4.32
+    },
+    {
+        "text": "is going to be most sensitive to.",
+        "start": 1513.032,
+        "duration": 1.38
+    },
+    {
+        "text": "which is kind of an interesting,\nthat's up to network.",
+        "start": 1516.487,
+        "duration": 3.6
+    },
+    {
+        "text": "Yeah, I remember this was a really\nbig deal in the early nineties when",
+        "start": 1520.647,
+        "duration": 3.03
+    },
+    {
+        "text": "we were, you know, backpropagation\nhad just come out and stuff like that.",
+        "start": 1523.677,
+        "duration": 4.97
+    },
+    {
+        "text": "This was referred to a lot.",
+        "start": 1528.647,
+        "duration": 1.95
+    },
+    {
+        "text": "This is a pretty big deal.",
+        "start": 1530.637,
+        "duration": 1.13
+    },
+    {
+        "text": "Yeah.",
+        "start": 1532.327,
+        "duration": 0.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 1534.047,
+        "duration": 0.32
+    },
+    {
+        "text": "And then, but then what, what\nmakes it more interesting?",
+        "start": 1534.367,
+        "duration": 4.23
+    },
+    {
+        "text": "So, so remember, this is\nkind of the homeostatic term.",
+        "start": 1538.617,
+        "duration": 2.29
+    },
+    {
+        "text": "all you need is that, and then you\ncan kind of get this, property.",
+        "start": 1542.047,
+        "duration": 3.57
+    },
+    {
+        "text": "But then to Jeff's point,\ninhibition is very important.",
+        "start": 1546.482,
+        "duration": 3.53
+    },
+    {
+        "text": "and so anti Hebbian learning is a\nterm you may hear thrown around.",
+        "start": 1551.482,
+        "duration": 3.59
+    },
+    {
+        "text": "And it basically just means, you\nknow, as the name implies, the",
+        "start": 1555.482,
+        "duration": 2.3
+    },
+    {
+        "text": "opposite of Hebbian learning.",
+        "start": 1557.782,
+        "duration": 1.36
+    },
+    {
+        "text": "So cells that fire together, there's\nactually going to be a growth in a",
+        "start": 1559.142,
+        "duration": 3.97
+    },
+    {
+        "text": "negative connection between them.",
+        "start": 1563.122,
+        "duration": 1.47
+    },
+    {
+        "text": "So if you now imagine that we have\nmultiple output neurons and multiple",
+        "start": 1565.572,
+        "duration": 3.23
+    },
+    {
+        "text": "input neurons, then, any given\noutput neuron, if it's highly active,",
+        "start": 1568.812,
+        "duration": 5.23
+    },
+    {
+        "text": "it's going to inhibit the others.",
+        "start": 1574.592,
+        "duration": 1.57
+    },
+    {
+        "text": "And per Dale's law, It wouldn't in the\nbrain, it wouldn't do that directly.",
+        "start": 1576.232,
+        "duration": 4.49
+    },
+    {
+        "text": "There would be some inhibitory neuron that\nconnects to first, which is why inhibitory",
+        "start": 1580.722,
+        "duration": 4.25
+    },
+    {
+        "text": "neurons are kind of called interneurons.",
+        "start": 1584.972,
+        "duration": 1.81
+    },
+    {
+        "text": "it would connect to that neuron first.",
+        "start": 1587.822,
+        "duration": 1.3
+    },
+    {
+        "text": "And then when that inhibitory interneuron\nspikes, it would then inhibit the others.",
+        "start": 1589.122,
+        "duration": 4.44
+    },
+    {
+        "text": "And of course, this is a toy network\nwhere you get kind of one winner take",
+        "start": 1594.142,
+        "duration": 3.64
+    },
+    {
+        "text": "all where one, excitatory neuron when\nit wins in this output layer, it's",
+        "start": 1597.802,
+        "duration": 5.03
+    },
+    {
+        "text": "going to inhibit everything else.",
+        "start": 1602.832,
+        "duration": 0.99
+    },
+    {
+        "text": "and so this is interesting because\nat the moment, if you, without this",
+        "start": 1607.057,
+        "duration": 3.48
+    },
+    {
+        "text": "inhibition, if you had a bunch of\nneurons in the output layer, they",
+        "start": 1610.637,
+        "duration": 4.04
+    },
+    {
+        "text": "would all learn the same thing.",
+        "start": 1614.677,
+        "duration": 1.3
+    },
+    {
+        "text": "They would all learn this\nfirst principle component.",
+        "start": 1615.987,
+        "duration": 2.11
+    },
+    {
+        "text": "but with this, competition, with this\ninhibition, then basically the first",
+        "start": 1620.577,
+        "duration": 5.17
+    },
+    {
+        "text": "neuron is going to, or, you know, one\nof the neurons is basically going to",
+        "start": 1625.747,
+        "duration": 2.7
+    },
+    {
+        "text": "learn, the first principle component.",
+        "start": 1628.447,
+        "duration": 2.17
+    },
+    {
+        "text": "And so it will inhibit the other neurons.",
+        "start": 1631.077,
+        "duration": 2.0
+    },
+    {
+        "text": "when, it's most active along that,\ncomponent, but then the other neurons",
+        "start": 1634.382,
+        "duration": 6.27
+    },
+    {
+        "text": "and then basically learn to represent,\nthe orthogonal principal components.",
+        "start": 1640.972,
+        "duration": 4.89
+    },
+    {
+        "text": "and so, in this way,\nyou can get an output.",
+        "start": 1648.192,
+        "duration": 2.43
+    },
+    {
+        "text": "So let's say why the output layer is of\nlower dimension than the input layer.",
+        "start": 1651.042,
+        "duration": 4.31
+    },
+    {
+        "text": "Then this is, you know, this way you can\nnaturally take like a hundred dimensional",
+        "start": 1655.932,
+        "duration": 3.47
+    },
+    {
+        "text": "input and compress it down into, you know,\nlet's say a five dimensional and a PCA.",
+        "start": 1659.402,
+        "duration": 5.55
+    },
+    {
+        "text": "Decomposition.",
+        "start": 1666.242,
+        "duration": 0.77
+    },
+    {
+        "text": "any, yeah, questions on that?",
+        "start": 1672.022,
+        "duration": 1.73
+    },
+    {
+        "text": "Roughly makes sense.",
+        "start": 1675.992,
+        "duration": 0.84
+    },
+    {
+        "text": "Yeah, I think, you know, the spatial\npuller is sort of a variation on this",
+        "start": 1677.532,
+        "duration": 3.1
+    },
+    {
+        "text": "idea, but instead of the, you know, each\nneuron being orthogonal to the others.",
+        "start": 1680.632,
+        "duration": 4.68
+    },
+    {
+        "text": "you have an end winner take all,\nyou know, and so it's, it's, it's",
+        "start": 1686.542,
+        "duration": 5.09
+    },
+    {
+        "text": "not, it doesn't have to be, this\nis one cell wins and they all lose.",
+        "start": 1691.632,
+        "duration": 3.57
+    },
+    {
+        "text": "It's, it's like a subset of the cells win.",
+        "start": 1695.202,
+        "duration": 2.31
+    },
+    {
+        "text": "And then another one, another\nsubset wins and so on.",
+        "start": 1697.522,
+        "duration": 2.15
+    },
+    {
+        "text": "So, it's not, it's not like one cell wins.",
+        "start": 1700.422,
+        "duration": 3.11
+    },
+    {
+        "text": "It's in the brain.",
+        "start": 1703.532,
+        "duration": 0.82
+    },
+    {
+        "text": "I don't see that.",
+        "start": 1704.352,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 1705.162,
+        "duration": 0.64
+    },
+    {
+        "text": "But it's the same basic idea, but,\nbut it's more of a, an end winner.",
+        "start": 1706.542,
+        "duration": 4.96
+    },
+    {
+        "text": "It takes a long, you know.",
+        "start": 1711.502,
+        "duration": 1.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 1714.002,
+        "duration": 0.21
+    },
+    {
+        "text": "And I guess while we're on that topic,\nlike in terms of encoding, like more",
+        "start": 1714.212,
+        "duration": 3.92
+    },
+    {
+        "text": "continuous properties, like whether\nthat's like how confident a neuron is that",
+        "start": 1718.132,
+        "duration": 5.5
+    },
+    {
+        "text": "something's in the, in its receptive field\nor yeah, something like that, I guess.",
+        "start": 1723.632,
+        "duration": 7.41
+    },
+    {
+        "text": "yeah.",
+        "start": 1732.822,
+        "duration": 0.2
+    },
+    {
+        "text": "Is that something you, you guys\never kind of thought about whether",
+        "start": 1733.022,
+        "duration": 3.17
+    },
+    {
+        "text": "it would be worth adding back in?",
+        "start": 1736.192,
+        "duration": 1.44
+    },
+    {
+        "text": "Something like kind of firing rates\nor firing probabilities or we had, we",
+        "start": 1738.647,
+        "duration": 5.47
+    },
+    {
+        "text": "didn't have firing rates, but we had,",
+        "start": 1744.117,
+        "duration": 1.81
+    },
+    {
+        "text": "you know, the way we would, we would\ndo continuous variables as we would",
+        "start": 1749.367,
+        "duration": 3.36
+    },
+    {
+        "text": "have, you know, encoding, which was\ndistributed and change slowly with the",
+        "start": 1752.737,
+        "duration": 6.97
+    },
+    {
+        "text": "change in the, in the continuous variable\nup to that, up to some resolution.",
+        "start": 1759.717,
+        "duration": 5.91
+    },
+    {
+        "text": "so we didn't have firing rates\nas such, but we did have that",
+        "start": 1766.537,
+        "duration": 2.97
+    },
+    {
+        "text": "course coding, if you will.",
+        "start": 1769.777,
+        "duration": 1.39
+    },
+    {
+        "text": "And finally, and you do see that in\nthe brain, and we always, you know, I",
+        "start": 1771.642,
+        "duration": 3.64
+    },
+    {
+        "text": "think we always felt the firing rates\nare just too slow to encode anything",
+        "start": 1775.612,
+        "duration": 4.18
+    },
+    {
+        "text": "useful, because you need to integrate\nover hundreds of milliseconds to get any",
+        "start": 1779.802,
+        "duration": 5.83
+    },
+    {
+        "text": "sort of, you know, to get a reasonable.",
+        "start": 1785.632,
+        "duration": 1.83
+    },
+    {
+        "text": "scale of value from just a single neuron\nfiring, but from a population coding, you",
+        "start": 1788.927,
+        "duration": 4.35
+    },
+    {
+        "text": "can get in five milliseconds, you can get\na pretty accurate core, you know, scale.",
+        "start": 1793.277,
+        "duration": 5.18
+    },
+    {
+        "text": "Yeah, it's clear in the brain.",
+        "start": 1798.807,
+        "duration": 2.2
+    },
+    {
+        "text": "There are parts of the\nbrain that really are.",
+        "start": 1801.007,
+        "duration": 2.31
+    },
+    {
+        "text": "you know, firing rate dependent, that's a\nfact, you know that, and, there are parts",
+        "start": 1805.442,
+        "duration": 7.02
+    },
+    {
+        "text": "of the cortex that are that way too, but,\nso it's not like this doesn't exist, it's",
+        "start": 1812.462,
+        "duration": 5.34
+    },
+    {
+        "text": "just that when we talk about the kind of\nrepresentations we, we form in the cortex,",
+        "start": 1817.802,
+        "duration": 4.6
+    },
+    {
+        "text": "there's much less evidence for that.",
+        "start": 1824.277,
+        "duration": 1.66
+    },
+    {
+        "text": "There's much more evidence for sparse and\ndistributed representations, you know.",
+        "start": 1825.957,
+        "duration": 4.32
+    },
+    {
+        "text": "You know, I mentioned before, like,\na neuron that drives a muscle fiber",
+        "start": 1830.757,
+        "duration": 4.83
+    },
+    {
+        "text": "to contract is a rate encoded neuron.",
+        "start": 1835.587,
+        "duration": 3.95
+    },
+    {
+        "text": "I mean, the stronger you want to\ncontract, the faster it spikes, and",
+        "start": 1839.537,
+        "duration": 3.42
+    },
+    {
+        "text": "you slow it down and speed it up.",
+        "start": 1842.967,
+        "duration": 1.29
+    },
+    {
+        "text": "the time frames make sense for that.",
+        "start": 1845.517,
+        "duration": 2.0
+    },
+    {
+        "text": "It's, you know, and those neurons are\ncoming, some of those firing rates",
+        "start": 1847.527,
+        "duration": 3.21
+    },
+    {
+        "text": "are coming from the layer five cells.",
+        "start": 1850.737,
+        "duration": 1.39
+    },
+    {
+        "text": "So there are firing rate dependent, but\nwhen we talk about encoding information",
+        "start": 1852.757,
+        "duration": 5.65
+    },
+    {
+        "text": "in models and so on, it's, it's, the\nevidence is suggesting it's more, it's",
+        "start": 1858.457,
+        "duration": 4.69
+    },
+    {
+        "text": "sparse and it's not firing rate dependent.",
+        "start": 1863.147,
+        "duration": 2.03
+    },
+    {
+        "text": "Yeah.",
+        "start": 1865.177,
+        "duration": 0.24
+    },
+    {
+        "text": "There's a bunch of experiments that,\nyeah, like V4 and stuff, you start to see.",
+        "start": 1866.517,
+        "duration": 3.85
+    },
+    {
+        "text": "Right.",
+        "start": 1871.017,
+        "duration": 0.3
+    },
+    {
+        "text": "Within like a hundred milliseconds,\nyou can recognize an animal.",
+        "start": 1871.317,
+        "duration": 4.05
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 1875.607,
+        "duration": 1.32
+    },
+    {
+        "text": "Or even less than a hundred milliseconds.",
+        "start": 1876.927,
+        "duration": 1.53
+    },
+    {
+        "text": "If you think about, you know, the\ninformation coming to the retina,",
+        "start": 1878.457,
+        "duration": 3.72
+    },
+    {
+        "text": "retina processing it through a couple\nof layers, through the thalamus,",
+        "start": 1882.327,
+        "duration": 4.15
+    },
+    {
+        "text": "through V1, and then eventually to V And\nthere just isn't time for any firing.",
+        "start": 1886.787,
+        "duration": 4.2
+    },
+    {
+        "text": "I guess the only thing with that is,\nif you are sampling from like a large",
+        "start": 1890.987,
+        "duration": 4.61
+    },
+    {
+        "text": "population, so like even if Each spike,\neven if each neuron only has time to",
+        "start": 1895.597,
+        "duration": 5.945
+    },
+    {
+        "text": "give one spike, if those neurons kind\nof are emitting those spikes kind of",
+        "start": 1901.552,
+        "duration": 5.8
+    },
+    {
+        "text": "randomly with some statistics or whatever.",
+        "start": 1907.352,
+        "duration": 2.23
+    },
+    {
+        "text": "I think that as long as you sample from a\nlarge population, you could still kind of",
+        "start": 1910.382,
+        "duration": 3.78
+    },
+    {
+        "text": "approximate kind of the firing rate input.",
+        "start": 1914.692,
+        "duration": 2.84
+    },
+    {
+        "text": "But you might still be a population.",
+        "start": 1918.222,
+        "duration": 2.48
+    },
+    {
+        "text": "That's still population coding.",
+        "start": 1920.992,
+        "duration": 1.44
+    },
+    {
+        "text": "But yes, you could still do that.",
+        "start": 1922.432,
+        "duration": 1.35
+    },
+    {
+        "text": "Yeah, I see what you're saying.",
+        "start": 1923.842,
+        "duration": 0.91
+    },
+    {
+        "text": "It's not like the same population\nis encoding completely different",
+        "start": 1926.802,
+        "duration": 3.83
+    },
+    {
+        "text": "scalar values just by changing their\nprobabilities, there's an actual shift.",
+        "start": 1930.642,
+        "duration": 3.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 1935.032,
+        "duration": 0.28
+    },
+    {
+        "text": "Which ones.",
+        "start": 1935.722,
+        "duration": 0.46
+    },
+    {
+        "text": "And you do, you definitely\nsee that in the brain.",
+        "start": 1936.332,
+        "duration": 1.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 1938.002,
+        "duration": 0.995
+    },
+    {
+        "text": "Right.",
+        "start": 1938.997,
+        "duration": 0.995
+    },
+    {
+        "text": "Yeah.",
+        "start": 1941.452,
+        "duration": 0.09
+    },
+    {
+        "text": "It's so confusing because in the\nliterature people slide between,",
+        "start": 1941.952,
+        "duration": 3.36
+    },
+    {
+        "text": "you know, someone will be studying\na policy of the snail and there'll",
+        "start": 1945.902,
+        "duration": 3.68
+    },
+    {
+        "text": "be showing this kind of, you know,\nthese neurons that work this way.",
+        "start": 1949.592,
+        "duration": 3.35
+    },
+    {
+        "text": "And the general assumption is like, oh,\nneurons throughout the cortex of the",
+        "start": 1953.342,
+        "duration": 4.05
+    },
+    {
+        "text": "brain work this way, but it's not true.",
+        "start": 1957.392,
+        "duration": 1.42
+    },
+    {
+        "text": "And so you have to be careful, you\nknow, there's a lot of evidence for this",
+        "start": 1958.882,
+        "duration": 4.38
+    },
+    {
+        "text": "kind of neuron firing, but the evidence\nin the cortex is quite different.",
+        "start": 1963.262,
+        "duration": 5.68
+    },
+    {
+        "text": "Yeah, you really need to know which\nneurons they've been studying.",
+        "start": 1969.472,
+        "duration": 2.51
+    },
+    {
+        "text": "Yeah, and what scenario.",
+        "start": 1973.542,
+        "duration": 2.32
+    },
+    {
+        "text": "Were you going to say something, Vivien?",
+        "start": 1977.042,
+        "duration": 1.06
+    },
+    {
+        "text": "I wanted to ask, Niels.",
+        "start": 1979.712,
+        "duration": 2.3
+    },
+    {
+        "text": "Or really anyone is, is there a consensus\non which side of the synapse learns as in",
+        "start": 1982.842,
+        "duration": 7.68
+    },
+    {
+        "text": "do you learn by gaining more receptors or\ndo you learn by gaining more vesicles that",
+        "start": 1990.982,
+        "duration": 5.27
+    },
+    {
+        "text": "can emit neurotransmitters or, or both?",
+        "start": 1996.252,
+        "duration": 2.79
+    },
+    {
+        "text": "honestly, I'm not sure.",
+        "start": 2001.502,
+        "duration": 1.21
+    },
+    {
+        "text": "I, I think it's a mixture of both,\nbut, well, yeah, I mean, I guess",
+        "start": 2002.712,
+        "duration": 4.51
+    },
+    {
+        "text": "it probably varies everywhere.",
+        "start": 2007.222,
+        "duration": 0.61
+    },
+    {
+        "text": "Primarily the postsynaptic cell, but.",
+        "start": 2007.832,
+        "duration": 3.02
+    },
+    {
+        "text": "A big part of it is the area of the\nsynapse itself, how much, you know, like",
+        "start": 2011.377,
+        "duration": 5.1
+    },
+    {
+        "text": "a synapse is just these two membranes\nthat are next to each other at the tip",
+        "start": 2016.477,
+        "duration": 2.87
+    },
+    {
+        "text": "of the, of the spine, and the, there are\nvesicles containing the neurotransmitters",
+        "start": 2019.347,
+        "duration": 6.67
+    },
+    {
+        "text": "and they, they pass across that gap.",
+        "start": 2026.017,
+        "duration": 2.08
+    },
+    {
+        "text": "And how many can pass across\nthat gap at any moment in time is",
+        "start": 2028.832,
+        "duration": 3.22
+    },
+    {
+        "text": "dependent on a bunch of things, but\ncertainly the area is important.",
+        "start": 2032.052,
+        "duration": 3.41
+    },
+    {
+        "text": "So a big, you know, well learned synapse\nwill have more area, these are really",
+        "start": 2035.882,
+        "duration": 5.69
+    },
+    {
+        "text": "tiny areas, of course, but, more area\nthan a, than a skinny little synapse.",
+        "start": 2041.572,
+        "duration": 4.77
+    },
+    {
+        "text": "so that's one thing.",
+        "start": 2046.812,
+        "duration": 1.12
+    },
+    {
+        "text": "Another thing is, it's a very\ncomplicated area because when the",
+        "start": 2048.762,
+        "duration": 4.59
+    },
+    {
+        "text": "vesicles go across and they release\ntheir neurotransmitter, they have to",
+        "start": 2053.352,
+        "duration": 4.96
+    },
+    {
+        "text": "be replenished on the presynaptic side.",
+        "start": 2058.312,
+        "duration": 2.52
+    },
+    {
+        "text": "And so, you know, there's not an infinite\nsupply of them, so it's, you know, there's",
+        "start": 2061.722,
+        "duration": 4.27
+    },
+    {
+        "text": "a synapse that fires, meaning it passes\nits It's neurotransmitter has a period",
+        "start": 2066.402,
+        "duration": 7.59
+    },
+    {
+        "text": "of time where it can't do any more can't\ndo much because it hasn't regenerated",
+        "start": 2073.992,
+        "duration": 3.58
+    },
+    {
+        "text": "new vesicles on the other side.",
+        "start": 2077.572,
+        "duration": 1.53
+    },
+    {
+        "text": "So how quickly it can replenish vesicles.",
+        "start": 2079.102,
+        "duration": 2.76
+    },
+    {
+        "text": "So it's a complex equation, but.",
+        "start": 2082.812,
+        "duration": 1.59
+    },
+    {
+        "text": "Mostly, it is viewed as learning\nis on the post synaptic side,",
+        "start": 2085.052,
+        "duration": 4.62
+    },
+    {
+        "text": "that's the general rule.",
+        "start": 2089.682,
+        "duration": 1.04
+    },
+    {
+        "text": "Synapses get bigger mostly on\nthe post synaptic side, you can",
+        "start": 2090.732,
+        "duration": 3.65
+    },
+    {
+        "text": "see the spine's getting bigger.",
+        "start": 2094.382,
+        "duration": 1.45
+    },
+    {
+        "text": "And, and that's, you know, I\nwould say most of the learning",
+        "start": 2096.632,
+        "duration": 4.67
+    },
+    {
+        "text": "is generally viewed to be on that\nside, the post synaptic side.",
+        "start": 2101.382,
+        "duration": 3.12
+    },
+    {
+        "text": "And I was just asking to sort of, like,\ncause with Rojas So did I get the rule",
+        "start": 2105.512,
+        "duration": 6.68
+    },
+    {
+        "text": "name right, you know, it, it assumes\ninformation's flowing back to the",
+        "start": 2112.192,
+        "duration": 4.09
+    },
+    {
+        "text": "synapse and that's going to be easier\nif it's post synaptic or re synaptic.",
+        "start": 2116.282,
+        "duration": 5.54
+    },
+    {
+        "text": "Right.",
+        "start": 2121.902,
+        "duration": 0.23
+    },
+    {
+        "text": "So all these, all of these rules, at\nleast our rules, require in the HTM",
+        "start": 2122.182,
+        "duration": 6.22
+    },
+    {
+        "text": "neuron, it requires that the, there\nis a back action potential, meaning",
+        "start": 2128.402,
+        "duration": 3.88
+    },
+    {
+        "text": "once the cell fires, the spike goes\ndown the axon, but there's another",
+        "start": 2132.292,
+        "duration": 4.05
+    },
+    {
+        "text": "spike that goes back up the dendrites.",
+        "start": 2136.342,
+        "duration": 1.87
+    },
+    {
+        "text": "And it reaches the point where\nthe dendrite was active and",
+        "start": 2138.657,
+        "duration": 5.62
+    },
+    {
+        "text": "was receiving information.",
+        "start": 2144.297,
+        "duration": 1.56
+    },
+    {
+        "text": "And that's, that is the learning signal.",
+        "start": 2146.337,
+        "duration": 2.06
+    },
+    {
+        "text": "It says, Hey, yeah, I did fire.",
+        "start": 2148.397,
+        "duration": 1.63
+    },
+    {
+        "text": "Therefore, you know, this was useful.",
+        "start": 2150.737,
+        "duration": 2.3
+    },
+    {
+        "text": "You guys should strengthen this.",
+        "start": 2153.837,
+        "duration": 1.21
+    },
+    {
+        "text": "You've got a way to do coincidence\ndetection at the synapse.",
+        "start": 2155.307,
+        "duration": 3.16
+    },
+    {
+        "text": "Right?",
+        "start": 2158.517,
+        "duration": 0.44
+    },
+    {
+        "text": "Otherwise you wouldn't know.",
+        "start": 2159.317,
+        "duration": 1.18
+    },
+    {
+        "text": "It, it, these, these synapses\nare not at the soma, remember,",
+        "start": 2160.497,
+        "duration": 3.3
+    },
+    {
+        "text": "they're not at the body.",
+        "start": 2163.797,
+        "duration": 0.87
+    },
+    {
+        "text": "So, and then most of them are\npretty far from the cell body.",
+        "start": 2164.667,
+        "duration": 2.65
+    },
+    {
+        "text": "So they need to know if the cell spiked.",
+        "start": 2167.642,
+        "duration": 2.68
+    },
+    {
+        "text": "and so there has to be\nthis back action potential.",
+        "start": 2171.592,
+        "duration": 2.26
+    },
+    {
+        "text": "yeah, so I guess just kind of the final\nnote on this is just that, yeah, I brought",
+        "start": 2182.652,
+        "duration": 4.95
+    },
+    {
+        "text": "up Oha's learning rule because it's kind\nof a classic example of how to learn in",
+        "start": 2187.602,
+        "duration": 4.3
+    },
+    {
+        "text": "these networks, but it's not the only way.",
+        "start": 2191.902,
+        "duration": 2.1
+    },
+    {
+        "text": "So yeah, as mentioned, you could kind of\nhave a hard bound on weight values, which",
+        "start": 2194.002,
+        "duration": 4.21
+    },
+    {
+        "text": "you know, there's plenty of biological\nreasons that might exist, and this would",
+        "start": 2198.212,
+        "duration": 3.5
+    },
+    {
+        "text": "be kind of clipping if you want to use\nkind of more machine learning terminology.",
+        "start": 2201.722,
+        "duration": 4.3
+    },
+    {
+        "text": "And then, I think, you know, one other\nclassic learning rule that's worth just",
+        "start": 2206.762,
+        "duration": 4.47
+    },
+    {
+        "text": "mentioning is this BCM, learning rule,\nbecause, so the OHA's learning rule,",
+        "start": 2211.232,
+        "duration": 5.97
+    },
+    {
+        "text": "I mentioned it learns the principal\ncomponents, but actually, if you look at",
+        "start": 2217.202,
+        "duration": 2.85
+    },
+    {
+        "text": "the kind of receptive field properties\nof neurons in V1, say, they're not",
+        "start": 2220.052,
+        "duration": 4.87
+    },
+    {
+        "text": "actually, they don't correspond to the\nprincipal components of, natural images.",
+        "start": 2224.952,
+        "duration": 4.96
+    },
+    {
+        "text": "Instead, they correspond to local\nfeature detectors like oriented bars,",
+        "start": 2231.597,
+        "duration": 5.23
+    },
+    {
+        "text": "or at least that's what it looks\nlike when you kind of examine them.",
+        "start": 2236.827,
+        "duration": 3.28
+    },
+    {
+        "text": "And this BCM learning rule actually learns\nmore like these, and it's It's not that",
+        "start": 2240.737,
+        "duration": 5.855
+    },
+    {
+        "text": "different from Oh, I was learning rule.",
+        "start": 2246.592,
+        "duration": 1.58
+    },
+    {
+        "text": "It's just a bit more complicated, complex\nin terms of how it, how the weight",
+        "start": 2248.172,
+        "duration": 5.54
+    },
+    {
+        "text": "changes are dependent on the firing\nproperties of the post synaptic neuron.",
+        "start": 2253.712,
+        "duration": 4.62
+    },
+    {
+        "text": "yeah, then with that, I was then going\nto talk about spike time and fantasticity",
+        "start": 2263.792,
+        "duration": 3.7
+    },
+    {
+        "text": "because, this is where you start to\nget into how kind of weight changes",
+        "start": 2267.792,
+        "duration": 3.79
+    },
+    {
+        "text": "are actually happening in the brain.",
+        "start": 2271.582,
+        "duration": 1.45
+    },
+    {
+        "text": "So before this is kind of a\nhigh level approximation of",
+        "start": 2273.042,
+        "duration": 4.71
+    },
+    {
+        "text": "what we kind of seem to observe.",
+        "start": 2278.152,
+        "duration": 1.28
+    },
+    {
+        "text": "This is much closer to kind of\nMathematically how how synapse is",
+        "start": 2279.802,
+        "duration": 4.715
+    },
+    {
+        "text": "actually changed in the brain over time.",
+        "start": 2284.517,
+        "duration": 2.06
+    },
+    {
+        "text": "and it gets its name because of\nthis kind of relationship between.",
+        "start": 2289.227,
+        "duration": 4.54
+    },
+    {
+        "text": "So if you have a priest and after\nyou're on arriving at sending a spike",
+        "start": 2293.787,
+        "duration": 3.72
+    },
+    {
+        "text": "writing at a post synaptic neuron.",
+        "start": 2297.507,
+        "duration": 1.55
+    },
+    {
+        "text": "So this is the priest and epic\nspike and post synaptic spike.",
+        "start": 2299.057,
+        "duration": 2.27
+    },
+    {
+        "text": "Basically, this one precedes that one.",
+        "start": 2302.117,
+        "duration": 1.81
+    },
+    {
+        "text": "Then you will get this long term\npotentiation increase in the",
+        "start": 2304.587,
+        "duration": 4.22
+    },
+    {
+        "text": "efficacy of that synaptic weight.",
+        "start": 2309.287,
+        "duration": 1.43
+    },
+    {
+        "text": "And if the ordering is reversed, you'll\nget a decrease, but this depression in the",
+        "start": 2311.532,
+        "duration": 7.03
+    },
+    {
+        "text": "efficacy of that synapse, but this only\nhappens within a narrow window around,",
+        "start": 2318.622,
+        "duration": 5.43
+    },
+    {
+        "text": "the kind of timing of the two spikes.",
+        "start": 2325.312,
+        "duration": 2.42
+    },
+    {
+        "text": "and so essentially, yeah, the\noutput neuron is then looking",
+        "start": 2329.442,
+        "duration": 4.52
+    },
+    {
+        "text": "not just at whether, you know,\nI'm firing and you're firing.",
+        "start": 2334.652,
+        "duration": 5.2
+    },
+    {
+        "text": "But really, it's more of a causal kind\nof learning rule, because the output",
+        "start": 2340.197,
+        "duration": 4.35
+    },
+    {
+        "text": "neuron is kind of saying, is there\nevidence the presynaptic neuron was",
+        "start": 2344.577,
+        "duration": 3.22
+    },
+    {
+        "text": "actually responsible for my spiking?",
+        "start": 2347.797,
+        "duration": 4.21
+    },
+    {
+        "text": "Personally, I think it's a\npretty cool thing that evolution",
+        "start": 2353.967,
+        "duration": 4.39
+    },
+    {
+        "text": "kind of figured this out.",
+        "start": 2358.377,
+        "duration": 0.85
+    },
+    {
+        "text": "It makes a lot of sense when you\nthink about the amount of noise",
+        "start": 2360.207,
+        "duration": 2.36
+    },
+    {
+        "text": "and kind of random spikes that are\nhappening in the brain, that you",
+        "start": 2363.577,
+        "duration": 3.95
+    },
+    {
+        "text": "would want this kind of sensitivity.",
+        "start": 2367.527,
+        "duration": 1.84
+    },
+    {
+        "text": "and.",
+        "start": 2372.187,
+        "duration": 0.32
+    },
+    {
+        "text": "This is another way.",
+        "start": 2373.297,
+        "duration": 0.89
+    },
+    {
+        "text": "This is another way that neuron\nactivities get separated.",
+        "start": 2374.547,
+        "duration": 3.85
+    },
+    {
+        "text": "You know, we talked about inhibition.",
+        "start": 2378.747,
+        "duration": 1.52
+    },
+    {
+        "text": "basically, you know, you're going to\nsay, Hey, you know, if, if you, if, if,",
+        "start": 2381.957,
+        "duration": 4.39
+    },
+    {
+        "text": "if your input couldn't have possibly\nbeen responsible for my output, you",
+        "start": 2386.497,
+        "duration": 5.36
+    },
+    {
+        "text": "know, then I'm going to tell you not,\nI'm going to tell you, forget that.",
+        "start": 2391.857,
+        "duration": 3.02
+    },
+    {
+        "text": "And so it will separate out neuron\nrepresentations, to this rule, as well.",
+        "start": 2394.907,
+        "duration": 6.35
+    },
+    {
+        "text": "Yeah.",
+        "start": 2402.457,
+        "duration": 0.34
+    },
+    {
+        "text": "Yeah.",
+        "start": 2404.287,
+        "duration": 0.26
+    },
+    {
+        "text": "And I guess.",
+        "start": 2404.547,
+        "duration": 0.53
+    },
+    {
+        "text": "Yeah, I mentioned that, you\nknow, this is kind of actually",
+        "start": 2405.462,
+        "duration": 2.11
+    },
+    {
+        "text": "how weights are being changed.",
+        "start": 2407.572,
+        "duration": 1.6
+    },
+    {
+        "text": "So I just thought it was worth kind of\nshowing some actual data from biological",
+        "start": 2409.172,
+        "duration": 3.92
+    },
+    {
+        "text": "experiments where they're showing the\npercentage change in the efficacy of the",
+        "start": 2413.092,
+        "duration": 4.31
+    },
+    {
+        "text": "synapse, as a function of kind of when the\npre and post synaptic neurons, spiked and,",
+        "start": 2417.402,
+        "duration": 6.5
+    },
+    {
+        "text": "and the kind of difference between those.",
+        "start": 2423.912,
+        "duration": 1.525
+    },
+    {
+        "text": "And you see it forms this kind of curve\nthat is so often shown, quite nicely.",
+        "start": 2426.037,
+        "duration": 5.6
+    },
+    {
+        "text": "and so this is kind of a essentially\nthen a coincidence detection learning",
+        "start": 2435.777,
+        "duration": 4.27
+    },
+    {
+        "text": "rule, kind of a temporal learning rule.",
+        "start": 2440.047,
+        "duration": 1.61
+    },
+    {
+        "text": "and it means that you can have\noutput neurons that are sensitive",
+        "start": 2443.137,
+        "duration": 2.98
+    },
+    {
+        "text": "to the timing of input neurons.",
+        "start": 2446.117,
+        "duration": 1.99
+    },
+    {
+        "text": "and in particular, kind of neurons that\nare all going to, have signals that arrive",
+        "start": 2448.357,
+        "duration": 4.4
+    },
+    {
+        "text": "together, within a short period of time.",
+        "start": 2452.867,
+        "duration": 3.04
+    },
+    {
+        "text": "And so this is a computational\nstudy, from, And one of the groups",
+        "start": 2456.797,
+        "duration": 4.445
+    },
+    {
+        "text": "that's been most interested in this\nkind of computation in the brain.",
+        "start": 2461.242,
+        "duration": 3.57
+    },
+    {
+        "text": "and so what they're showing\nhere is so along this y axis,",
+        "start": 2466.932,
+        "duration": 2.85
+    },
+    {
+        "text": "you have the neuron IDs.",
+        "start": 2469.782,
+        "duration": 1.86
+    },
+    {
+        "text": "So you're on 100, you're on number one.",
+        "start": 2472.132,
+        "duration": 2.78
+    },
+    {
+        "text": "these are all kind of in the input layer.",
+        "start": 2476.352,
+        "duration": 1.44
+    },
+    {
+        "text": "And then the blue dots are\nwhen they spike over time.",
+        "start": 2478.362,
+        "duration": 3.18
+    },
+    {
+        "text": "and the, they're kind of spike times\nare approximately random, except for",
+        "start": 2483.372,
+        "duration": 6.49
+    },
+    {
+        "text": "these, Pattern shown in red where\nthey will fire with some kind of",
+        "start": 2489.862,
+        "duration": 5.16
+    },
+    {
+        "text": "fixed, kind of within some short\ntime window relative to one another.",
+        "start": 2495.132,
+        "duration": 4.59
+    },
+    {
+        "text": "and so what's kind of important to\nnote is that if you look at the firing",
+        "start": 2501.822,
+        "duration": 3.46
+    },
+    {
+        "text": "rate of the population, that's what's\nbeing shown here in this bottom box.",
+        "start": 2505.282,
+        "duration": 4.74
+    },
+    {
+        "text": "So if you kind of some along the along\nthis access, the population's firing",
+        "start": 2510.022,
+        "duration": 7.07
+    },
+    {
+        "text": "rate never changes significantly,\neven when these patterns are being",
+        "start": 2517.092,
+        "duration": 3.38
+    },
+    {
+        "text": "presented And similarly, if you look\nat the firing rate of this input neuron",
+        "start": 2520.472,
+        "duration": 6.215
+    },
+    {
+        "text": "across the simulation, these aren't\nany different from the neurons that",
+        "start": 2527.167,
+        "duration": 6.0
+    },
+    {
+        "text": "aren't part of the input pattern.",
+        "start": 2533.197,
+        "duration": 1.31
+    },
+    {
+        "text": "And so basically, a neuron that is limited\nto, a kind of simple firing rate code and",
+        "start": 2535.267,
+        "duration": 5.82
+    },
+    {
+        "text": "firing rate base changes to its weights.",
+        "start": 2541.147,
+        "duration": 2.17
+    },
+    {
+        "text": "Is not going to become sensitive\nto, this input pattern.",
+        "start": 2543.777,
+        "duration": 3.6
+    },
+    {
+        "text": "but, but a neuron with spike\ntime dependent plasticity does.",
+        "start": 2551.057,
+        "duration": 4.17
+    },
+    {
+        "text": "And so, and so it just basically\nmeans that Repeat again, how they",
+        "start": 2555.277,
+        "duration": 4.43
+    },
+    {
+        "text": "had identified the red neurons?",
+        "start": 2559.707,
+        "duration": 1.88
+    },
+    {
+        "text": "Because sometimes it's\nlike, it's just one of them.",
+        "start": 2561.637,
+        "duration": 2.52
+    },
+    {
+        "text": "So it doesn't look like there was\nactually neuron 50, for example,",
+        "start": 2564.157,
+        "duration": 4.58
+    },
+    {
+        "text": "in the, there's just one red dot.",
+        "start": 2568.737,
+        "duration": 2.22
+    },
+    {
+        "text": "So I don't see like why there's\na change in the firing pattern.",
+        "start": 2570.957,
+        "duration": 3.71
+    },
+    {
+        "text": "you're on 50.",
+        "start": 2576.977,
+        "duration": 1.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 2578.887,
+        "duration": 0.26
+    },
+    {
+        "text": "I mean, like here.",
+        "start": 2579.197,
+        "duration": 0.7
+    },
+    {
+        "text": "Sorry.",
+        "start": 2579.897,
+        "duration": 0.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 2580.447,
+        "duration": 0.36
+    },
+    {
+        "text": "Wow.",
+        "start": 2581.537,
+        "duration": 0.35
+    },
+    {
+        "text": "So the firing rate is taken\nacross the entire period.",
+        "start": 2581.907,
+        "duration": 5.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 2588.067,
+        "duration": 0.37
+    },
+    {
+        "text": "Like 600 milliseconds, but\nthat's what's measured here.",
+        "start": 2588.647,
+        "duration": 3.0
+    },
+    {
+        "text": "So like, okay.",
+        "start": 2592.087,
+        "duration": 1.01
+    },
+    {
+        "text": "It's like this one is fired.",
+        "start": 2593.097,
+        "duration": 1.62
+    },
+    {
+        "text": "We 1, 2, 3, 4, 5, 6, 7, I don't\nknow, 8, 9 times or something.",
+        "start": 2595.087,
+        "duration": 5.38
+    },
+    {
+        "text": "And then this firing rate is calculated\nby looking across the different neurons.",
+        "start": 2601.197,
+        "duration": 6.25
+    },
+    {
+        "text": "and you're expecting\nat that point in time.",
+        "start": 2608.617,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah, but what decides\nif it's red or blue?",
+        "start": 2610.652,
+        "duration": 2.92
+    },
+    {
+        "text": "So they're, they're\ninserting these patterns.",
+        "start": 2614.032,
+        "duration": 2.17
+    },
+    {
+        "text": "They're, they're just, they're coloring it\nred to show us that that pattern is there.",
+        "start": 2616.252,
+        "duration": 4.15
+    },
+    {
+        "text": "but it's basically, they're just\nsaying these neurons are fine.",
+        "start": 2622.492,
+        "duration": 3.02
+    },
+    {
+        "text": "Yeah, so they artificially increased\nthe synchrony during those, right?",
+        "start": 2625.512,
+        "duration": 4.02
+    },
+    {
+        "text": "Yeah, they basically artificially\ninserted this pattern so that, These",
+        "start": 2629.542,
+        "duration": 5.94
+    },
+    {
+        "text": "neurons are kind of firing with some\ndistinct pattern, like if you look,",
+        "start": 2635.482,
+        "duration": 2.91
+    },
+    {
+        "text": "there's kind of even these like subtle\ndetails, like these three neurons firing",
+        "start": 2638.452,
+        "duration": 3.06
+    },
+    {
+        "text": "with this offset and stuff like that.",
+        "start": 2641.512,
+        "duration": 1.43
+    },
+    {
+        "text": "But the statistics of their firing, like\nif you just look at the, the firing rate,",
+        "start": 2643.522,
+        "duration": 4.18
+    },
+    {
+        "text": "is, is, is the same.",
+        "start": 2649.792,
+        "duration": 2.28
+    },
+    {
+        "text": "It's, it's not being changed during,\nthe presentation of these, patterns.",
+        "start": 2652.072,
+        "duration": 4.57
+    },
+    {
+        "text": "So it's, it's like, it's synthetic\ndata basically questioning like,",
+        "start": 2657.142,
+        "duration": 3.25
+    },
+    {
+        "text": "okay, if you look at the population\nand it looks like random noise.",
+        "start": 2660.392,
+        "duration": 3.18
+    },
+    {
+        "text": "but secretly there's actually\nthese temporal patterns happening.",
+        "start": 2664.017,
+        "duration": 3.25
+    },
+    {
+        "text": "Would a neuron with STDP learn\nto respond to those patterns?",
+        "start": 2667.837,
+        "duration": 2.93
+    },
+    {
+        "text": "Okay.",
+        "start": 2672.467,
+        "duration": 0.33
+    },
+    {
+        "text": "So they know that at the red points,\nthey artificially changed it.",
+        "start": 2672.797,
+        "duration": 3.66
+    },
+    {
+        "text": "They know that, but the\nneuron doesn't know that.",
+        "start": 2677.637,
+        "duration": 1.52
+    },
+    {
+        "text": "It's an unsupervised learning.",
+        "start": 2679.157,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 2681.637,
+        "duration": 0.22
+    },
+    {
+        "text": "Okay.",
+        "start": 2683.367,
+        "duration": 0.34
+    },
+    {
+        "text": "Cool.",
+        "start": 2686.497,
+        "duration": 0.33
+    },
+    {
+        "text": "Oh yeah.",
+        "start": 2687.047,
+        "duration": 0.32
+    },
+    {
+        "text": "Good question.",
+        "start": 2687.477,
+        "duration": 0.54
+    },
+    {
+        "text": "yeah.",
+        "start": 2689.747,
+        "duration": 0.25
+    },
+    {
+        "text": "So I, I should say, yeah, everything\nI'm talking about is unsupervised",
+        "start": 2689.997,
+        "duration": 3.42
+    },
+    {
+        "text": "learning, as well as yeah, local.",
+        "start": 2693.437,
+        "duration": 2.19
+    },
+    {
+        "text": "Okay.",
+        "start": 2695.627,
+        "duration": 0.05
+    },
+    {
+        "text": "Cool.",
+        "start": 2695.677,
+        "duration": 0.015
+    },
+    {
+        "text": "so, yeah, anyways, but so an STD,\nneuron, an output neuron, with",
+        "start": 2698.362,
+        "duration": 6.95
+    },
+    {
+        "text": "STDP, learning rules does learn\nto, respond to these patterns.",
+        "start": 2705.382,
+        "duration": 3.67
+    },
+    {
+        "text": "So that kind of, what that suggests\nis that if you equip neurons with",
+        "start": 2709.062,
+        "duration": 3.57
+    },
+    {
+        "text": "these, this kind of more biologically\nplausible learning rule, it opens up",
+        "start": 2712.682,
+        "duration": 4.05
+    },
+    {
+        "text": "the, kind of capacity of what kind of\ninformation, how information can be",
+        "start": 2716.782,
+        "duration": 4.62
+    },
+    {
+        "text": "encoded, We're no longer limited to\njust firing rates, but you can respond",
+        "start": 2721.402,
+        "duration": 5.24
+    },
+    {
+        "text": "to particular patterns in time as well.",
+        "start": 2726.642,
+        "duration": 3.14
+    },
+    {
+        "text": "are they saying that the neuron learns\nto respond to this within the red thing?",
+        "start": 2733.802,
+        "duration": 5.83
+    },
+    {
+        "text": "If you were to just scramble the red?",
+        "start": 2739.632,
+        "duration": 1.97
+    },
+    {
+        "text": "Patterns.",
+        "start": 2742.162,
+        "duration": 0.44
+    },
+    {
+        "text": "It would, it would not respond anymore, so\nthey don't know if they made that claim.",
+        "start": 2742.642,
+        "duration": 6.02
+    },
+    {
+        "text": "And, I don't think that would work.",
+        "start": 2748.662,
+        "duration": 2.34
+    },
+    {
+        "text": "So it's not really sensitive\nto the timing of the red.",
+        "start": 2751.162,
+        "duration": 2.88
+    },
+    {
+        "text": "Yeah, I think you could.",
+        "start": 2755.502,
+        "duration": 1.78
+    },
+    {
+        "text": "I think you could do both like it would.",
+        "start": 2757.672,
+        "duration": 1.89
+    },
+    {
+        "text": "I think it would be fairly straightforward\nto set the like time constant so",
+        "start": 2759.582,
+        "duration": 2.71
+    },
+    {
+        "text": "that you would be insensitive to\ntheir precise order so that you could",
+        "start": 2762.292,
+        "duration": 4.14
+    },
+    {
+        "text": "have like quite a lot of jitter.",
+        "start": 2766.432,
+        "duration": 1.22
+    },
+    {
+        "text": "And it's more that they're kind\nof synchronous within like,",
+        "start": 2768.232,
+        "duration": 2.54
+    },
+    {
+        "text": "let's say 20 millisecond window.",
+        "start": 2771.002,
+        "duration": 2.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 2773.272,
+        "duration": 0.07
+    },
+    {
+        "text": "Or you can have time constants so\nthat they have to fire, you know,",
+        "start": 2774.337,
+        "duration": 4.31
+    },
+    {
+        "text": "within three milliseconds of this\nprescribed pattern, each neuron.",
+        "start": 2778.647,
+        "duration": 5.95
+    },
+    {
+        "text": "I guess I'm just, like, suppose\nyou did exactly what they did here.",
+        "start": 2787.157,
+        "duration": 3.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 2791.467,
+        "duration": 0.38
+    },
+    {
+        "text": "And the claim is, okay, it's\ngoing to, it's sensitive to the",
+        "start": 2792.237,
+        "duration": 2.28
+    },
+    {
+        "text": "timing of the input neurons.",
+        "start": 2794.527,
+        "duration": 1.62
+    },
+    {
+        "text": "Yeah, but after this learning process,\nif you were to scramble a few of these",
+        "start": 2796.662,
+        "duration": 4.3
+    },
+    {
+        "text": "red, the timing of a few of these red\ndots, I think it would still fire.",
+        "start": 2800.962,
+        "duration": 4.17
+    },
+    {
+        "text": "It's not sensitive.",
+        "start": 2805.152,
+        "duration": 1.98
+    },
+    {
+        "text": "I think that's what it really that's.",
+        "start": 2807.222,
+        "duration": 1.37
+    },
+    {
+        "text": "Yeah, I think it does\ndepend on the time constant.",
+        "start": 2808.642,
+        "duration": 2.03
+    },
+    {
+        "text": "So, like.",
+        "start": 2810.782,
+        "duration": 0.49
+    },
+    {
+        "text": "yeah, like, especially in each\nsynapse time constant, does",
+        "start": 2813.442,
+        "duration": 4.69
+    },
+    {
+        "text": "each synapse have its own?",
+        "start": 2818.132,
+        "duration": 0.97
+    },
+    {
+        "text": "But as in like, so if, yeah, if the\ntime constant is fairly wide, then,",
+        "start": 2819.292,
+        "duration": 5.22
+    },
+    {
+        "text": "then I agree like, you know, and, and\nsorry, I mean, yeah, I guess there's",
+        "start": 2824.572,
+        "duration": 4.14
+    },
+    {
+        "text": "the STDP time constant, which is\nalready fairly broad, but, but more",
+        "start": 2828.722,
+        "duration": 3.66
+    },
+    {
+        "text": "I'm thinking the, like conductance and\nthings like that, where basically like.",
+        "start": 2832.392,
+        "duration": 4.28
+    },
+    {
+        "text": "The time over which the spikes\ncan be integrated by the, the",
+        "start": 2837.312,
+        "duration": 3.43
+    },
+    {
+        "text": "post synaptic spiking neuron.",
+        "start": 2840.932,
+        "duration": 1.21
+    },
+    {
+        "text": "And, Yeah, but if it, I don't\nknow if that's true here.",
+        "start": 2843.052,
+        "duration": 2.9
+    },
+    {
+        "text": "because if you look at just\nthose, you know, you pointed",
+        "start": 2846.302,
+        "duration": 2.44
+    },
+    {
+        "text": "out that diagonal pattern here.",
+        "start": 2848.742,
+        "duration": 3.13
+    },
+    {
+        "text": "If instead it went like this, I\ndon't, I don't think it would make any",
+        "start": 2852.022,
+        "duration": 4.51
+    },
+    {
+        "text": "difference to the output, regardless of.",
+        "start": 2856.532,
+        "duration": 1.72
+    },
+    {
+        "text": "Yeah, not, not in this experiment, but\nI think there is a, a setting where that",
+        "start": 2858.697,
+        "duration": 4.44
+    },
+    {
+        "text": "wouldn't, so we can maybe talk about\nthis the next time with like, Right, you",
+        "start": 2863.137,
+        "duration": 3.35
+    },
+    {
+        "text": "can construct, you can construct that,\nbut I don't think STDP enforces that.",
+        "start": 2866.567,
+        "duration": 4.94
+    },
+    {
+        "text": "I think the claim here is that STDP\ncauses neurons to become sensitive",
+        "start": 2872.317,
+        "duration": 3.93
+    },
+    {
+        "text": "to the timing, but that's not true.",
+        "start": 2876.247,
+        "duration": 1.93
+    },
+    {
+        "text": "No, yeah, I, I would say\nthat, that that's not true.",
+        "start": 2878.187,
+        "duration": 2.22
+    },
+    {
+        "text": "Yeah, yeah, basically you'd need,\nlike heterogeneous conduction delays.",
+        "start": 2880.407,
+        "duration": 4.21
+    },
+    {
+        "text": "Yeah, you can do it.",
+        "start": 2884.947,
+        "duration": 0.89
+    },
+    {
+        "text": "And basically, like, if you still\nneed STTP, but, but, but, yeah, it",
+        "start": 2885.847,
+        "duration": 6.0
+    },
+    {
+        "text": "has STTP is no longer like sufficient.",
+        "start": 2891.857,
+        "duration": 2.06
+    },
+    {
+        "text": "Yeah, yeah, exactly.",
+        "start": 2893.917,
+        "duration": 1.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 2895.387,
+        "duration": 0.24
+    },
+    {
+        "text": "Yeah.",
+        "start": 2896.327,
+        "duration": 0.25
+    },
+    {
+        "text": "So, like, yeah, just for anyone\nelse who's curious, I guess, yeah,",
+        "start": 2896.577,
+        "duration": 3.47
+    },
+    {
+        "text": "I'll talk about this next time.",
+        "start": 2900.047,
+        "duration": 0.88
+    },
+    {
+        "text": "But there's, this is kind\nof a form of synchrony.",
+        "start": 2900.927,
+        "duration": 2.52
+    },
+    {
+        "text": "Although, yeah, they have kind of fixed\nthe pattern, but there's another thing",
+        "start": 2903.617,
+        "duration": 4.91
+    },
+    {
+        "text": "kind of called polychrony, where if,\nlet's say, yeah, they're firing with",
+        "start": 2908.567,
+        "duration": 3.83
+    },
+    {
+        "text": "this kind of specific pattern, right?",
+        "start": 2912.397,
+        "duration": 1.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 2913.487,
+        "duration": 0.03
+    },
+    {
+        "text": "If you have asynchronous, or like\nheterogeneous conduction delays, all",
+        "start": 2913.927,
+        "duration": 4.61
+    },
+    {
+        "text": "landing on your post snap neuron.",
+        "start": 2919.467,
+        "duration": 1.64
+    },
+    {
+        "text": "depending on the values of those\ndelays, these might all be arriving",
+        "start": 2922.817,
+        "duration": 3.83
+    },
+    {
+        "text": "within a very narrow window.",
+        "start": 2926.647,
+        "duration": 1.39
+    },
+    {
+        "text": "Like, you know, within a couple\nmilliseconds of one another.",
+        "start": 2928.037,
+        "duration": 2.52
+    },
+    {
+        "text": "And then, you can imagine, potentially,\nan output neuron that's then",
+        "start": 2931.207,
+        "duration": 4.42
+    },
+    {
+        "text": "sensitive only to this pattern.",
+        "start": 2935.967,
+        "duration": 1.57
+    },
+    {
+        "text": "And then if you reverse the order\nof these, and all these, and",
+        "start": 2937.537,
+        "duration": 3.17
+    },
+    {
+        "text": "whatever, like, they all fire\nwithin this kind of time window.",
+        "start": 2940.717,
+        "duration": 2.75
+    },
+    {
+        "text": "But in a different order, then that\noutput neuron would not respond.",
+        "start": 2944.102,
+        "duration": 3.5
+    },
+    {
+        "text": "but that's a big if, because you\nneed those delays to be correct.",
+        "start": 2950.982,
+        "duration": 2.93
+    },
+    {
+        "text": "but yeah, I think it's worth kind of\ntying it back to this kind of general",
+        "start": 2958.422,
+        "duration": 3.11
+    },
+    {
+        "text": "principles of Hebbian learning.",
+        "start": 2961.782,
+        "duration": 1.03
+    },
+    {
+        "text": "So although now things are\nkind of dependent on time,",
+        "start": 2962.812,
+        "duration": 4.62
+    },
+    {
+        "text": "it's still fundamentally a\nHebbian, kind of learning rule.",
+        "start": 2967.742,
+        "duration": 3.24
+    },
+    {
+        "text": "So you still need some kind\nof form of homeostasis.",
+        "start": 2971.512,
+        "duration": 2.17
+    },
+    {
+        "text": "So again, you can have this issue where.",
+        "start": 2973.682,
+        "duration": 2.52
+    },
+    {
+        "text": "Weights will grow kind of unbounded.",
+        "start": 2976.967,
+        "duration": 2.02
+    },
+    {
+        "text": "And so one of the first papers to\nkind of computationally study STVP,",
+        "start": 2978.987,
+        "duration": 4.07
+    },
+    {
+        "text": "they basically had this kind of\nactor where inhibition slightly.",
+        "start": 2983.847,
+        "duration": 5.15
+    },
+    {
+        "text": "Sorry, I should say.",
+        "start": 2989.197,
+        "duration": 0.87
+    },
+    {
+        "text": "So this is kind of how much the weight\nis going to change, depending on the",
+        "start": 2990.067,
+        "duration": 4.47
+    },
+    {
+        "text": "difference in the timing of the spikes.",
+        "start": 2995.147,
+        "duration": 1.54
+    },
+    {
+        "text": "and basically, you know, you either\nhave like the weight being increased,",
+        "start": 2998.177,
+        "duration": 2.97
+    },
+    {
+        "text": "in which case there's this kind of\npositive learning rule, learning rate,",
+        "start": 3001.147,
+        "duration": 3.66
+    },
+    {
+        "text": "or it's the weights are being decreased.",
+        "start": 3004.837,
+        "duration": 1.63
+    },
+    {
+        "text": "and then this just is determining\nkind of the sign and the magnitude",
+        "start": 3008.087,
+        "duration": 3.6
+    },
+    {
+        "text": "of that for these curves.",
+        "start": 3011.687,
+        "duration": 1.42
+    },
+    {
+        "text": "But basically, they made the inhibitory\nkind of learning factor or the decrement",
+        "start": 3014.297,
+        "duration": 4.16
+    },
+    {
+        "text": "learning factor, larger so that it kind\nof balanced learning in the network,",
+        "start": 3018.997,
+        "duration": 6.56
+    },
+    {
+        "text": "and it didn't kind of runway again.",
+        "start": 3025.557,
+        "duration": 2.26
+    },
+    {
+        "text": "It's not necessarily good biological\nevidence for that, but it's just an",
+        "start": 3028.407,
+        "duration": 2.86
+    },
+    {
+        "text": "example of the kind of challenges and\nthings to be aware of when kind of, I",
+        "start": 3031.267,
+        "duration": 4.68
+    },
+    {
+        "text": "guess, working with, happy and networks.",
+        "start": 3035.947,
+        "duration": 2.53
+    },
+    {
+        "text": "and actually for like a real heavy\nnetwork, that's still I mean, these are",
+        "start": 3041.287,
+        "duration": 6.1
+    },
+    {
+        "text": "very, sorry, a real spike in your network.",
+        "start": 3047.387,
+        "duration": 2.22
+    },
+    {
+        "text": "They're generally very challenging\nto get to learn, anything.",
+        "start": 3049.897,
+        "duration": 3.74
+    },
+    {
+        "text": "and so, you know, in the study, it\nwas still relatively simple stimuli.",
+        "start": 3054.947,
+        "duration": 3.74
+    },
+    {
+        "text": "I'll show in a couple of slides,\nbut they had a variety of kind",
+        "start": 3059.117,
+        "duration": 3.41
+    },
+    {
+        "text": "of biologically motivated.",
+        "start": 3062.527,
+        "duration": 2.29
+    },
+    {
+        "text": "So they were all local\nand everything like that.",
+        "start": 3064.817,
+        "duration": 1.85
+    },
+    {
+        "text": "But.",
+        "start": 3066.667,
+        "duration": 0.09
+    },
+    {
+        "text": "But it was like four different homeostatic\nfactors that were all working in concert",
+        "start": 3067.252,
+        "duration": 3.58
+    },
+    {
+        "text": "to get stable learning and so that\nthe, they could basically have the",
+        "start": 3071.472,
+        "duration": 4.69
+    },
+    {
+        "text": "learned representations maintain over,\na kind of unbounded amount of time,",
+        "start": 3076.182,
+        "duration": 5.04
+    },
+    {
+        "text": "even though there was kind of constant\nnoise, being fed into the network.",
+        "start": 3082.592,
+        "duration": 3.2
+    },
+    {
+        "text": "and similarly, the competition\nis still important.",
+        "start": 3089.242,
+        "duration": 3.29
+    },
+    {
+        "text": "So.",
+        "start": 3092.542,
+        "duration": 0.15
+    },
+    {
+        "text": "This was a follow up study\nfrom the muscular group to",
+        "start": 3093.682,
+        "duration": 2.64
+    },
+    {
+        "text": "the earlier one I showed.",
+        "start": 3096.322,
+        "duration": 1.33
+    },
+    {
+        "text": "And here they're, with this first one,\nthey were basically showing that a single",
+        "start": 3098.192,
+        "duration": 4.03
+    },
+    {
+        "text": "spike neuron could learn this pattern.",
+        "start": 3103.052,
+        "duration": 2.1
+    },
+    {
+        "text": "It could learn a single pattern, so\nkind of the equivalent of the single",
+        "start": 3105.692,
+        "duration": 2.84
+    },
+    {
+        "text": "firing rate learn, firing rate neuron\nlearning a single principal component.",
+        "start": 3108.532,
+        "duration": 4.69
+    },
+    {
+        "text": "In this follow up study, they showed\nthat multiple output spike neurons",
+        "start": 3114.392,
+        "duration": 4.49
+    },
+    {
+        "text": "could learn multiple different input\npatterns and become sensitive to those.",
+        "start": 3118.882,
+        "duration": 3.58
+    },
+    {
+        "text": "Yeah, LIF just stands for leaky integrated\nfire, which is a type of, a simple",
+        "start": 3125.217,
+        "duration": 5.53
+    },
+    {
+        "text": "mathematical model for a spiking neuron.",
+        "start": 3130.767,
+        "duration": 2.31
+    },
+    {
+        "text": "yeah, that's what these output\nneurons learn different patterns.",
+        "start": 3137.577,
+        "duration": 2.64
+    },
+    {
+        "text": "so yeah, I mean, in general,\nthis seems pretty neat.",
+        "start": 3143.267,
+        "duration": 3.0
+    },
+    {
+        "text": "And there was a lot of excitement\nabout temporal code in the brain.",
+        "start": 3146.347,
+        "duration": 3.27
+    },
+    {
+        "text": "I'd say particularly\nbetween 1996 and 2006.",
+        "start": 3150.027,
+        "duration": 2.64
+    },
+    {
+        "text": "tons of papers about this, and kind\nof the biggest journals there are.",
+        "start": 3153.627,
+        "duration": 4.51
+    },
+    {
+        "text": "but maybe around 2007 onwards, there\nwas this kind of general shift in the",
+        "start": 3159.567,
+        "duration": 4.41
+    },
+    {
+        "text": "zeitgeist where there was concerns about\nkind of plausibility in terms of kind of",
+        "start": 3163.987,
+        "duration": 4.43
+    },
+    {
+        "text": "noise in the brain and things like that.",
+        "start": 3168.417,
+        "duration": 1.41
+    },
+    {
+        "text": "And I also wonder to what degree\nmaybe the success of artificial",
+        "start": 3170.277,
+        "duration": 3.6
+    },
+    {
+        "text": "neural networks as models or, or\nthe embracement of artificial neural",
+        "start": 3173.877,
+        "duration": 5.39
+    },
+    {
+        "text": "networks as models of the brain.",
+        "start": 3179.267,
+        "duration": 1.72
+    },
+    {
+        "text": "Kind of dampened enthusiasm, around kind\nof a temporal code, being significant.",
+        "start": 3181.507,
+        "duration": 7.11
+    },
+    {
+        "text": "But I think what, yeah, you can\ndefinitely say it's temporal.",
+        "start": 3189.937,
+        "duration": 2.87
+    },
+    {
+        "text": "The temporal sensitivity of\nSTDP is a biological fact.",
+        "start": 3193.457,
+        "duration": 3.23
+    },
+    {
+        "text": "and so the existence of temporal codes\nin the brain perhaps less clear, but",
+        "start": 3198.337,
+        "duration": 4.33
+    },
+    {
+        "text": "I think kind of when Jeff alluded\nto this earlier, there's, you know,",
+        "start": 3202.667,
+        "duration": 4.74
+    },
+    {
+        "text": "it's probably somewhere in between.",
+        "start": 3207.437,
+        "duration": 1.8
+    },
+    {
+        "text": "So what's interesting, actually,\nabout STDP is that, They",
+        "start": 3209.247,
+        "duration": 4.96
+    },
+    {
+        "text": "themselves are kind of a hybrid.",
+        "start": 3214.217,
+        "duration": 1.93
+    },
+    {
+        "text": "So,",
+        "start": 3216.147,
+        "duration": 0.46
+    },
+    {
+        "text": "so this is the study I mentioned\nearlier that had like four",
+        "start": 3218.917,
+        "duration": 2.45
+    },
+    {
+        "text": "different homeostatic factors.",
+        "start": 3221.367,
+        "duration": 1.69
+    },
+    {
+        "text": "These were kind of stimuli.",
+        "start": 3223.467,
+        "duration": 1.08
+    },
+    {
+        "text": "So if you imagine this is a 64 by 64\ngrid of neurons, the white neurons",
+        "start": 3224.547,
+        "duration": 5.24
+    },
+    {
+        "text": "are firing with a higher rate and they\nwill be showing these different inputs.",
+        "start": 3229.787,
+        "duration": 4.91
+    },
+    {
+        "text": "and, but the spike times of those neurons\nare governed by a Poisson distribution,",
+        "start": 3236.682,
+        "duration": 6.6
+    },
+    {
+        "text": "so they are kind of random in time.",
+        "start": 3243.282,
+        "duration": 2.49
+    },
+    {
+        "text": "there's no kind of synchrony\nor anything like that going on.",
+        "start": 3246.672,
+        "duration": 2.04
+    },
+    {
+        "text": "and this neuron that's receiving\nthese inputs is a spiking neural",
+        "start": 3250.552,
+        "duration": 3.79
+    },
+    {
+        "text": "network with STTP based learning.",
+        "start": 3254.342,
+        "duration": 3.05
+    },
+    {
+        "text": "and it will learn to encode\nthese different patterns.",
+        "start": 3258.282,
+        "duration": 2.69
+    },
+    {
+        "text": "and so, and in general, this connects\nto the fact that, essentially at low",
+        "start": 3263.087,
+        "duration": 6.13
+    },
+    {
+        "text": "firing rates, STDP is in general more\ntemporally sensitive, whereas at high",
+        "start": 3269.217,
+        "duration": 6.26
+    },
+    {
+        "text": "firing rates, it starts to act more\nlike standard firing rates, heavy and",
+        "start": 3275.487,
+        "duration": 4.22
+    },
+    {
+        "text": "learning and part of the reason this\nemerges, I just thought of this, but",
+        "start": 3279.707,
+        "duration": 4.56
+    },
+    {
+        "text": "to mention this, but I could have had\na better graph, but you can imagine,",
+        "start": 3284.497,
+        "duration": 4.74
+    },
+    {
+        "text": "You have this neuron spiking and\nthen this neuron spiking, but now",
+        "start": 3291.262,
+        "duration": 3.34
+    },
+    {
+        "text": "imagine that this pre synaptic\nneuron is firing so frequently",
+        "start": 3294.602,
+        "duration": 3.9
+    },
+    {
+        "text": "that it fires at this time as well.",
+        "start": 3299.002,
+        "duration": 2.91
+    },
+    {
+        "text": "So just after the other one that's\nfiring just before and just after.",
+        "start": 3302.632,
+        "duration": 3.89
+    },
+    {
+        "text": "and that's generally the kind of\nregime that starts happening when",
+        "start": 3308.412,
+        "duration": 2.33
+    },
+    {
+        "text": "you have really high firing rates\nwhere, it's kind of symmetric.",
+        "start": 3310.742,
+        "duration": 5.11
+    },
+    {
+        "text": "And we know in biology that in that kind\nof regime, like if we experimentally",
+        "start": 3316.247,
+        "duration": 5.62
+    },
+    {
+        "text": "do the neurons, they tend to act more\njust like the simple heavy and weights.",
+        "start": 3321.917,
+        "duration": 3.84
+    },
+    {
+        "text": "but then, yeah, as mentioned at\nlower firing rates, these two are",
+        "start": 3327.877,
+        "duration": 4.17
+    },
+    {
+        "text": "going to be very different whether\nthe spike happens before or after.",
+        "start": 3332.047,
+        "duration": 3.03
+    },
+    {
+        "text": "and so then you are going to see\nthis more asymmetric, temporally",
+        "start": 3335.787,
+        "duration": 3.61
+    },
+    {
+        "text": "sensitive, changes to the weights.",
+        "start": 3339.407,
+        "duration": 2.25
+    },
+    {
+        "text": "You generally don't, I mean, there\nare neurons that fire, spike very",
+        "start": 3342.732,
+        "duration": 5.15
+    },
+    {
+        "text": "rapidly, but you know, that's not\ntypically, for example, pyramidal cells.",
+        "start": 3347.882,
+        "duration": 6.08
+    },
+    {
+        "text": "they, you know, there tend\nto be more inhibitory cells.",
+        "start": 3355.482,
+        "duration": 3.59
+    },
+    {
+        "text": "So it's, it's not clear that\nparticular thing we're talking",
+        "start": 3359.752,
+        "duration": 3.07
+    },
+    {
+        "text": "about actually occurs very often.",
+        "start": 3362.822,
+        "duration": 1.51
+    },
+    {
+        "text": "you know, most neurons don't fire\nthat fast, that, that, that role,",
+        "start": 3366.212,
+        "duration": 4.49
+    },
+    {
+        "text": "this, this idea would come to play.",
+        "start": 3370.782,
+        "duration": 1.79
+    },
+    {
+        "text": "Okay.",
+        "start": 3372.572,
+        "duration": 0.11
+    },
+    {
+        "text": "Thanks.",
+        "start": 3372.682,
+        "duration": 0.02
+    },
+    {
+        "text": "but, you know, some inhibitory neurons\ndo, and in some places you see that, but",
+        "start": 3374.032,
+        "duration": 3.88
+    },
+    {
+        "text": "it's, it's pretty rare in the cortex.",
+        "start": 3377.912,
+        "duration": 2.42
+    },
+    {
+        "text": "You do see a, a bunch of neurons that they\ndon't emit a single spike, but when they",
+        "start": 3380.622,
+        "duration": 6.09
+    },
+    {
+        "text": "become active, they emit a, a, a train\nof spikes anywhere between three and five",
+        "start": 3386.712,
+        "duration": 5.22
+    },
+    {
+        "text": "long, and those are very close together.",
+        "start": 3391.982,
+        "duration": 2.68
+    },
+    {
+        "text": "It just complicates things.",
+        "start": 3394.672,
+        "duration": 1.43
+    },
+    {
+        "text": "Right.",
+        "start": 3397.022,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah, I was going to maybe try\nand talk about bursting next time.",
+        "start": 3397.832,
+        "duration": 2.58
+    },
+    {
+        "text": "Right, right.",
+        "start": 3400.692,
+        "duration": 0.57
+    },
+    {
+        "text": "I know that's something\nyou guys account for.",
+        "start": 3401.262,
+        "duration": 1.69
+    },
+    {
+        "text": "Right, because that, that, that can\nlead to what they call metabolic",
+        "start": 3403.277,
+        "duration": 4.12
+    },
+    {
+        "text": "changes, which are changes in the\nchemistry or slower changes in the cell.",
+        "start": 3407.397,
+        "duration": 4.36
+    },
+    {
+        "text": "Anyway, yeah, I don't know if I should\nkeep interjecting my biases into this.",
+        "start": 3413.287,
+        "duration": 4.29
+    },
+    {
+        "text": "It's a good presentation.",
+        "start": 3417.577,
+        "duration": 0.71
+    },
+    {
+        "text": "No, no, no.",
+        "start": 3418.347,
+        "duration": 1.72
+    },
+    {
+        "text": "I mean, I've always found that STTP was\nover, you know, you said it had its, its,",
+        "start": 3420.147,
+        "duration": 5.33
+    },
+    {
+        "text": "its decade and then it kind of declined.",
+        "start": 3425.587,
+        "duration": 1.85
+    },
+    {
+        "text": "It's a, there's a very, very simple\nexplanation, which you've already",
+        "start": 3428.027,
+        "duration": 2.72
+    },
+    {
+        "text": "given, is that, you know, there's a lot\nof time, there's a lot of time delays",
+        "start": 3430.747,
+        "duration": 5.57
+    },
+    {
+        "text": "and uncertainty in the brain, and,\nand a lot of neurons have a background",
+        "start": 3436.317,
+        "duration": 3.58
+    },
+    {
+        "text": "firing rate, which is pretty low, but\nthey're, they're kind of firing a lot.",
+        "start": 3439.897,
+        "duration": 3.42
+    },
+    {
+        "text": "I mean, they're firing all\nthe time at some low rate.",
+        "start": 3443.337,
+        "duration": 2.05
+    },
+    {
+        "text": "That's pretty common.",
+        "start": 3445.427,
+        "duration": 1.01
+    },
+    {
+        "text": "And so there's a lot of random\nspikes that don't mean anything.",
+        "start": 3447.047,
+        "duration": 2.65
+    },
+    {
+        "text": "And, and so this rule basically says,\nyou know what, let's only pay attention",
+        "start": 3450.387,
+        "duration": 4.72
+    },
+    {
+        "text": "to the ones that are truly causal,\nthat this predicted this, you know, so",
+        "start": 3455.117,
+        "duration": 3.86
+    },
+    {
+        "text": "if pre, pre synaptic neuron is a good\npredictor of the post synaptic neuron,",
+        "start": 3459.027,
+        "duration": 4.83
+    },
+    {
+        "text": "well, we want to remember that, and it\nshouldn't be much of a delay because",
+        "start": 3463.867,
+        "duration": 4.18
+    },
+    {
+        "text": "we're not trying to predict, we're not\ntrying to look back in time, we're just",
+        "start": 3468.067,
+        "duration": 2.97
+    },
+    {
+        "text": "like, right now, these neurons, this\none happened before this one, you know.",
+        "start": 3471.037,
+        "duration": 3.29
+    },
+    {
+        "text": "and, it just sort of cleans up\nthe whole learning rule stuff and",
+        "start": 3475.752,
+        "duration": 3.4
+    },
+    {
+        "text": "clearly if something happened after,\nif the pre synaptic neuron fires",
+        "start": 3479.392,
+        "duration": 3.48
+    },
+    {
+        "text": "after the post synaptic neuron, it\ncouldn't possibly have predicted it.",
+        "start": 3482.872,
+        "duration": 2.66
+    },
+    {
+        "text": "so, forget that one.",
+        "start": 3486.662,
+        "duration": 1.1
+    },
+    {
+        "text": "Yeah.",
+        "start": 3488.662,
+        "duration": 0.3
+    },
+    {
+        "text": "There's very simple pedantic mechanics\nhere that could say this is why the",
+        "start": 3489.752,
+        "duration": 3.83
+    },
+    {
+        "text": "brain works like this, as opposed\nto it's a, this is an important",
+        "start": 3493.582,
+        "duration": 3.23
+    },
+    {
+        "text": "part of how information is encoded.",
+        "start": 3496.812,
+        "duration": 2.39
+    },
+    {
+        "text": "It's more like, hey, it's an important\npart of how synapses learn, but it's,",
+        "start": 3499.212,
+        "duration": 3.95
+    },
+    {
+        "text": "I've always viewed it as sort of not\nreally an information theoretic composite.",
+        "start": 3503.512,
+        "duration": 5.04
+    },
+    {
+        "text": "Yeah,",
+        "start": 3509.192,
+        "duration": 0.38
+    },
+    {
+        "text": "you're right.",
+        "start": 3511.682,
+        "duration": 0.55
+    },
+    {
+        "text": "But as you point out, a lot\nof people wrote a lot of",
+        "start": 3513.732,
+        "duration": 1.63
+    },
+    {
+        "text": "papers suggesting otherwise.",
+        "start": 3515.362,
+        "duration": 1.39
+    },
+    {
+        "text": "Yeah,",
+        "start": 3516.752,
+        "duration": 2.04
+    },
+    {
+        "text": "yeah, so, yeah, I guess it's\nalso just kind of on this note of",
+        "start": 3523.822,
+        "duration": 4.26
+    },
+    {
+        "text": "like, okay, maybe it's not like\na black and white in the brain.",
+        "start": 3528.082,
+        "duration": 4.56
+    },
+    {
+        "text": "I think it's also worth mentioning that\nthere's some neurons that are at least",
+        "start": 3533.082,
+        "duration": 4.2
+    },
+    {
+        "text": "more amenable to encoding information\nin more kind of temporal like activity.",
+        "start": 3537.282,
+        "duration": 4.9
+    },
+    {
+        "text": "So, for example, like the, the\nspikes that arrive from dylamic",
+        "start": 3542.192,
+        "duration": 4.5
+    },
+    {
+        "text": "neurons, like LGN, onto the cortex.",
+        "start": 3546.692,
+        "duration": 2.37
+    },
+    {
+        "text": "tend to be more kind of driving inputs\nthat have, where, you know, just a",
+        "start": 3549.687,
+        "duration": 5.32
+    },
+    {
+        "text": "handful of spikes can be enough to cause\na post synaptic, spike, whereas many",
+        "start": 3555.007,
+        "duration": 4.11
+    },
+    {
+        "text": "other spikes in the brain, you might need\nhundreds to, to kind of, come together.",
+        "start": 3559.117,
+        "duration": 5.22
+    },
+    {
+        "text": "And in general, like there's, you can\nkind of show that those, these kinds of",
+        "start": 3565.197,
+        "duration": 5.82
+    },
+    {
+        "text": "small, like sparser high magnitude spikes,\nif there was kind of a temple code.",
+        "start": 3571.767,
+        "duration": 6.16
+    },
+    {
+        "text": "It would, you would be using those\nkinds of, sign access to, kind of",
+        "start": 3578.557,
+        "duration": 5.09
+    },
+    {
+        "text": "encoded and transfer that information.",
+        "start": 3583.647,
+        "duration": 2.42
+    },
+    {
+        "text": "We proposed in our neuron paper an\nalternate explanation for that, which is",
+        "start": 3586.957,
+        "duration": 4.66
+    },
+    {
+        "text": "that, the vast majority of synapses are\npretty far from the soma, and they're",
+        "start": 3591.617,
+        "duration": 5.64
+    },
+    {
+        "text": "on the dendrite branches, and any, any\nindividual spike out there has very,",
+        "start": 3597.257,
+        "duration": 4.61
+    },
+    {
+        "text": "very little effect on the, on the soma.",
+        "start": 3601.867,
+        "duration": 3.5
+    },
+    {
+        "text": "So what typically a researcher will do,\nthey'll measure the voltage inside the",
+        "start": 3605.367,
+        "duration": 4.66
+    },
+    {
+        "text": "body of the cell, the soma, and they'll\nsee what happens when, a presynaptic",
+        "start": 3610.027,
+        "duration": 4.73
+    },
+    {
+        "text": "neuron fires, and, and they'll say,\nhey, This, this piece is not going to be",
+        "start": 3615.297,
+        "duration": 3.95
+    },
+    {
+        "text": "neuron fried, but it has a soma, therefore\nwe're going to need hundreds of them.",
+        "start": 3619.247,
+        "duration": 4.52
+    },
+    {
+        "text": "And, and other ones will have\na very large effect on the",
+        "start": 3624.467,
+        "duration": 2.42
+    },
+    {
+        "text": "soma, since we only need a few.",
+        "start": 3626.887,
+        "duration": 1.54
+    },
+    {
+        "text": "But we propose an alternate explanation,\nwhich is the ones that are far from",
+        "start": 3628.962,
+        "duration": 4.73
+    },
+    {
+        "text": "the soma, you don't need hundreds to\nsummate, you just need 15 or 20 near",
+        "start": 3633.692,
+        "duration": 5.42
+    },
+    {
+        "text": "each other, and then they generate this\ndendritic spike, and then that dendritic",
+        "start": 3639.112,
+        "duration": 4.42
+    },
+    {
+        "text": "spike has a large effect on the soma.",
+        "start": 3643.532,
+        "duration": 1.67
+    },
+    {
+        "text": "And, and so the vast majority of the\nstudies that people did in this area,",
+        "start": 3645.812,
+        "duration": 4.46
+    },
+    {
+        "text": "they didn't account for that possibility.",
+        "start": 3650.292,
+        "duration": 2.39
+    },
+    {
+        "text": "they just measured like, Oh,\nwell, this synapse doesn't",
+        "start": 3653.912,
+        "duration": 2.3
+    },
+    {
+        "text": "seem to have much of a fact.",
+        "start": 3656.212,
+        "duration": 0.88
+    },
+    {
+        "text": "Therefore, we need a lot of them\nas opposed to, well, let's happen.",
+        "start": 3657.092,
+        "duration": 2.82
+    },
+    {
+        "text": "What if we had 15 of them at the same\ntime in the same segment of the dendrite,",
+        "start": 3659.942,
+        "duration": 4.33
+    },
+    {
+        "text": "then you'd have a very different effect.",
+        "start": 3664.292,
+        "duration": 1.43
+    },
+    {
+        "text": "So I just want to point that out\nthat, yeah, that was a big, big",
+        "start": 3666.392,
+        "duration": 6.09
+    },
+    {
+        "text": "part of what our neuron theory says.",
+        "start": 3672.482,
+        "duration": 1.72
+    },
+    {
+        "text": "It explains that that difference,\nit gives a functional reason for it.",
+        "start": 3674.202,
+        "duration": 6.18
+    },
+    {
+        "text": "Right.",
+        "start": 3681.132,
+        "duration": 0.26
+    },
+    {
+        "text": "So,",
+        "start": 3681.402,
+        "duration": 0.02
+    },
+    {
+        "text": "so yeah, just that.",
+        "start": 3686.532,
+        "duration": 1.375
+    },
+    {
+        "text": "I guess we shouldn't discount at least\nthe possibility that, binary temporal",
+        "start": 3688.907,
+        "duration": 4.75
+    },
+    {
+        "text": "and kind of more sort of binary codes\ncould be working together, but right, you",
+        "start": 3693.657,
+        "duration": 5.13
+    },
+    {
+        "text": "know, I think the whole one of the temple\ncodes that we talked about recently, is",
+        "start": 3698.797,
+        "duration": 7.07
+    },
+    {
+        "text": "this idea of, you know, groups of neurons\nfiring in, in sequence during a phase of",
+        "start": 3705.867,
+        "duration": 7.25
+    },
+    {
+        "text": "a background frequency, like, like, you\nknow, looking at the data frequency within",
+        "start": 3713.177,
+        "duration": 5.61
+    },
+    {
+        "text": "the, Within the 100 milliseconds of the,\nor whatever it is of the, of that cycle,",
+        "start": 3718.787,
+        "duration": 5.605
+    },
+    {
+        "text": "neurons go through a sequence of patterns.",
+        "start": 3724.792,
+        "duration": 2.59
+    },
+    {
+        "text": "And, and that's a, that's a type of\ntemporal code, which is obviously",
+        "start": 3728.332,
+        "duration": 3.26
+    },
+    {
+        "text": "very important in the brain.",
+        "start": 3731.592,
+        "duration": 1.15
+    },
+    {
+        "text": "but it's not the kind of temporal\ncode that most people think about.",
+        "start": 3733.752,
+        "duration": 2.42
+    },
+    {
+        "text": "It's, you know, most people think about,\nI believe what you're talking about, most",
+        "start": 3736.342,
+        "duration": 2.82
+    },
+    {
+        "text": "people think about temporal code is like\nthe exact timing of individual synapses,",
+        "start": 3739.162,
+        "duration": 4.01
+    },
+    {
+        "text": "or individual cells, where clearly that's\nimportant in some parts, but it's much",
+        "start": 3744.352,
+        "duration": 5.17
+    },
+    {
+        "text": "less evidence for that in the cortex.",
+        "start": 3749.522,
+        "duration": 1.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 3753.752,
+        "duration": 0.3
+    },
+    {
+        "text": "Maybe the way to put it is that\neverything you said in here is",
+        "start": 3754.542,
+        "duration": 2.09
+    },
+    {
+        "text": "correct, but it's also very, very.",
+        "start": 3756.632,
+        "duration": 1.64
+    },
+    {
+        "text": "Confusing.",
+        "start": 3758.672,
+        "duration": 0.82
+    },
+    {
+        "text": "Yeah, hopefully not too confusing.",
+        "start": 3762.172,
+        "duration": 1.97
+    },
+    {
+        "text": "Well, you presented it clearly, but\nI think, you know, a lot of people,",
+        "start": 3764.912,
+        "duration": 3.28
+    },
+    {
+        "text": "a lot of the research out there\nhasn't really incorporated the kind",
+        "start": 3768.202,
+        "duration": 3.55
+    },
+    {
+        "text": "of the insights that we've had.",
+        "start": 3771.752,
+        "duration": 3.36
+    },
+    {
+        "text": "And, and, and, you know, I don't,\nyou know, sit there and say, Hey, why",
+        "start": 3775.957,
+        "duration": 3.5
+    },
+    {
+        "text": "don't you guys are listening to us?",
+        "start": 3779.457,
+        "duration": 0.94
+    },
+    {
+        "text": "I don't feel that way at all.",
+        "start": 3780.397,
+        "duration": 0.95
+    },
+    {
+        "text": "But I do feel like we really\nunderstand some of this pretty well.",
+        "start": 3781.347,
+        "duration": 2.38
+    },
+    {
+        "text": "And, the vast majority of\nresearchers out there don't,",
+        "start": 3784.197,
+        "duration": 3.23
+    },
+    {
+        "text": "don't think about it that way.",
+        "start": 3787.957,
+        "duration": 1.29
+    },
+    {
+        "text": "They just don't even\nconsider these possibilities.",
+        "start": 3789.247,
+        "duration": 3.21
+    },
+    {
+        "text": "There's a lot of like, really\ndetailed experiments on plasticity",
+        "start": 3793.457,
+        "duration": 2.79
+    },
+    {
+        "text": "and, and have like very specific.",
+        "start": 3797.017,
+        "duration": 3.54
+    },
+    {
+        "text": "Shows very specific, types of plasticity\nrules that we, I found correlate really",
+        "start": 3801.207,
+        "duration": 7.53
+    },
+    {
+        "text": "well with what we did in the neuron paper.",
+        "start": 3808.737,
+        "duration": 2.19
+    },
+    {
+        "text": "I have like this detailed list of, things\njust like that P minus that you pointed",
+        "start": 3810.957,
+        "duration": 4.85
+    },
+    {
+        "text": "out, for example, that in that paper,\nthere are experiments that validate that.",
+        "start": 3815.807,
+        "duration": 5.73
+    },
+    {
+        "text": "Yeah, okay.",
+        "start": 3822.447,
+        "duration": 0.52
+    },
+    {
+        "text": "And then what happens when\na dendritic segment fires?",
+        "start": 3823.027,
+        "duration": 3.93
+    },
+    {
+        "text": "And the postsynaptic cell does\nend up firing or it doesn't.",
+        "start": 3827.412,
+        "duration": 3.57
+    },
+    {
+        "text": "What are the, what's the\nimpact on the dendritic branch?",
+        "start": 3830.992,
+        "duration": 2.57
+    },
+    {
+        "text": "There's like specific things that\nhappen there, that correlate really",
+        "start": 3833.592,
+        "duration": 3.87
+    },
+    {
+        "text": "well with, with our, our learning rules.",
+        "start": 3837.462,
+        "duration": 2.5
+    },
+    {
+        "text": "and then there's some there that we\nhaven't yet incorporated, I think,",
+        "start": 3841.322,
+        "duration": 3.51
+    },
+    {
+        "text": "but there's a lot of like, really.",
+        "start": 3845.572,
+        "duration": 1.35
+    },
+    {
+        "text": "Detail things that are quite\nimportant at the end of the day.",
+        "start": 3847.367,
+        "duration": 3.35
+    },
+    {
+        "text": "Yeah, I feel like this level is\ninteresting, but it's it's hard",
+        "start": 3851.567,
+        "duration": 5.75
+    },
+    {
+        "text": "to know what to really make of it\nuntil you actually put it in an",
+        "start": 3857.357,
+        "duration": 3.75
+    },
+    {
+        "text": "algorithm, actually put it in a\nnetwork and have it do something real.",
+        "start": 3861.117,
+        "duration": 3.72
+    },
+    {
+        "text": "Yeah, and that's the piece I feel\nlike I don't know now, but at least",
+        "start": 3865.447,
+        "duration": 4.4
+    },
+    {
+        "text": "a few years ago in the computational\nneuroscience community, they",
+        "start": 3869.847,
+        "duration": 2.84
+    },
+    {
+        "text": "didn't do much of that at all.",
+        "start": 3872.687,
+        "duration": 1.48
+    },
+    {
+        "text": "I don't know how you could combine\nall of these to recognize a cat,",
+        "start": 3874.662,
+        "duration": 3.5
+    },
+    {
+        "text": "an image of a cat, for example,\nyou know, they show, okay, like",
+        "start": 3878.192,
+        "duration": 3.91
+    },
+    {
+        "text": "oriented bars emerge, you know, okay.",
+        "start": 3882.112,
+        "duration": 2.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 3884.362,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 3886.352,
+        "duration": 0.23
+    },
+    {
+        "text": "And I guess on that note, so like,\nyeah, just kind of summarizing.",
+        "start": 3886.582,
+        "duration": 3.24
+    },
+    {
+        "text": "So, yeah, the, these kinds of two Ebbian\nlearning rules I talked about today.",
+        "start": 3889.842,
+        "duration": 6.03
+    },
+    {
+        "text": "So the kind of firing rate based ones,\nyou know, they can learn input features.",
+        "start": 3895.872,
+        "duration": 4.95
+    },
+    {
+        "text": "The PCA of the data or more local\nfeatures, which I didn't get into",
+        "start": 3901.542,
+        "duration": 4.21
+    },
+    {
+        "text": "like kind of oriented bars and then\nSDP based kind of spiking of this.",
+        "start": 3905.752,
+        "duration": 6.77
+    },
+    {
+        "text": "They can learn temporal spike patterns,\nbut they can also learn what kind of",
+        "start": 3912.982,
+        "duration": 4.51
+    },
+    {
+        "text": "firing rates neurons can, but, oh yeah,\nbut, but to your point, super tight,",
+        "start": 3917.492,
+        "duration": 6.11
+    },
+    {
+        "text": "they're extremely complex to set up\nand maintain and just get to be stable.",
+        "start": 3924.022,
+        "duration": 4.75
+    },
+    {
+        "text": "like, yeah, I think in general\nit's, It's a great way to start",
+        "start": 3930.102,
+        "duration": 5.38
+    },
+    {
+        "text": "pulling your hair out is trying to\nwork with spiking neural networks.",
+        "start": 3935.482,
+        "duration": 4.83
+    },
+    {
+        "text": "If I believe I, I think we shouldn't\nbe tying heavy in with finding rates.",
+        "start": 3942.027,
+        "duration": 4.84
+    },
+    {
+        "text": "I believe heavy head did not\ntalk about the firing range.",
+        "start": 3946.867,
+        "duration": 2.7
+    },
+    {
+        "text": "He just talked about, you\nknow, firing together.",
+        "start": 3950.087,
+        "duration": 2.13
+    },
+    {
+        "text": "And, yeah, so I didn't mean\nto imply that we use have been",
+        "start": 3952.787,
+        "duration": 4.72
+    },
+    {
+        "text": "learning in our, in our neuron role.",
+        "start": 3957.507,
+        "duration": 2.08
+    },
+    {
+        "text": "I mean.",
+        "start": 3959.597,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 3959.942,
+        "duration": 4.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 3964.272,
+        "duration": 0.37
+    },
+    {
+        "text": "It's really interesting to\nread what he actually said.",
+        "start": 3964.642,
+        "duration": 2.31
+    },
+    {
+        "text": "He did not say neurons that fire\ntogether, wire together, as an example.",
+        "start": 3966.972,
+        "duration": 3.46
+    },
+    {
+        "text": "Right.",
+        "start": 3970.572,
+        "duration": 0.14
+    },
+    {
+        "text": "He had a very specific sentence\nor two that's very telling.",
+        "start": 3970.712,
+        "duration": 3.49
+    },
+    {
+        "text": "Right.",
+        "start": 3975.162,
+        "duration": 0.34
+    },
+    {
+        "text": "Yeah.",
+        "start": 3975.812,
+        "duration": 0.29
+    },
+    {
+        "text": "It's interesting to read that\nbecause it's, it's, you know,",
+        "start": 3976.622,
+        "duration": 3.57
+    },
+    {
+        "text": "it's a lot more precise, I think.",
+        "start": 3980.192,
+        "duration": 1.39
+    },
+    {
+        "text": "And if you don't mind, I'd like to\nmake a comment back to the question",
+        "start": 3981.582,
+        "duration": 3.81
+    },
+    {
+        "text": "Michael asked about earlier.",
+        "start": 3985.392,
+        "duration": 1.34
+    },
+    {
+        "text": "it's, there's a, think\nabout a synapse, right?",
+        "start": 3988.897,
+        "duration": 3.25
+    },
+    {
+        "text": "You have an axon and a dendrite and they\nmight be near each other and they may",
+        "start": 3992.597,
+        "duration": 4.91
+    },
+    {
+        "text": "not have a synapse at all, but they're\nnear each other and it's sometimes",
+        "start": 3997.507,
+        "duration": 5.13
+    },
+    {
+        "text": "referred to as a potential synapse.",
+        "start": 4002.637,
+        "duration": 1.49
+    },
+    {
+        "text": "And so even in that situation\nwhere the, where the axon and the",
+        "start": 4004.127,
+        "duration": 3.82
+    },
+    {
+        "text": "dendrite are near each other but\nnot connected in any way, they, they",
+        "start": 4007.947,
+        "duration": 4.31
+    },
+    {
+        "text": "will have been learning type of.",
+        "start": 4012.257,
+        "duration": 1.78
+    },
+    {
+        "text": "rule, they will form a synapse.",
+        "start": 4015.232,
+        "duration": 2.25
+    },
+    {
+        "text": "So, they will, they\nwill grow a new synapse.",
+        "start": 4017.492,
+        "duration": 3.13
+    },
+    {
+        "text": "The brain has the ability to do this.",
+        "start": 4020.652,
+        "duration": 1.45
+    },
+    {
+        "text": "It says, you know, I know you're not\ntouching, but, you know, you should be.",
+        "start": 4022.102,
+        "duration": 3.2
+    },
+    {
+        "text": "And, and, it's, these, there's these\nother, neurons, or these other cells",
+        "start": 4025.302,
+        "duration": 5.29
+    },
+    {
+        "text": "in the brain that facilitate this.",
+        "start": 4030.592,
+        "duration": 1.58
+    },
+    {
+        "text": "and then, and then you start off\nwith a very skinny little synapse.",
+        "start": 4033.572,
+        "duration": 3.49
+    },
+    {
+        "text": "synaptic, spike, spine.",
+        "start": 4037.477,
+        "duration": 2.95
+    },
+    {
+        "text": "It's really like a little more\nlike a little thread and it works.",
+        "start": 4040.437,
+        "duration": 2.95
+    },
+    {
+        "text": "And as you, as a, as a, as the, the\nsynapse trains that it gets reinforced,",
+        "start": 4043.837,
+        "duration": 6.05
+    },
+    {
+        "text": "the, that, that, spine gets, gets bigger.",
+        "start": 4050.347,
+        "duration": 4.14
+    },
+    {
+        "text": "Now we talked earlier about like,\noh, when it gets bigger, maybe",
+        "start": 4055.057,
+        "duration": 3.07
+    },
+    {
+        "text": "more neurotransmitters get passed\nthrough, but there's a lot of",
+        "start": 4058.127,
+        "duration": 3.65
+    },
+    {
+        "text": "evidence and, and some other people\nwrote about this and we adopted it.",
+        "start": 4061.777,
+        "duration": 3.59
+    },
+    {
+        "text": "that once a neuron gets to a certain\nsize, it doesn't really, and you",
+        "start": 4066.537,
+        "duration": 4.69
+    },
+    {
+        "text": "still train it, it doesn't really\npass any more neurotransmitters.",
+        "start": 4071.237,
+        "duration": 3.75
+    },
+    {
+        "text": "That is, its weight value doesn't\ngo up, but the spine gets bigger.",
+        "start": 4074.987,
+        "duration": 3.91
+    },
+    {
+        "text": "So the spine continues to grow even though\nit's not transmitting any more synapses.",
+        "start": 4079.337,
+        "duration": 4.91
+    },
+    {
+        "text": "And that, the idea behind that is that\nthe spine is a, is a sort of permanence.",
+        "start": 4084.797,
+        "duration": 4.12
+    },
+    {
+        "text": "It's like how, how hard is\nit to forget this synapse?",
+        "start": 4088.927,
+        "duration": 2.83
+    },
+    {
+        "text": "Once you've built it and it's structurally\nthere, it's a lot harder to get rid",
+        "start": 4092.582,
+        "duration": 3.9
+    },
+    {
+        "text": "of than if it's just some skinny\nlittle thing and, and so we adopted",
+        "start": 4096.482,
+        "duration": 5.03
+    },
+    {
+        "text": "that as a, we called it permanence.",
+        "start": 4101.512,
+        "duration": 2.43
+    },
+    {
+        "text": "It's, it was a, it's a, it's a learning\nthat is not about increasing efficiency.",
+        "start": 4103.962,
+        "duration": 6.07
+    },
+    {
+        "text": "or transmission, but more\nabout permanence of memory.",
+        "start": 4110.412,
+        "duration": 3.8
+    },
+    {
+        "text": "And so things that have been reinforced a\nlot, even if you don't use them in a long,",
+        "start": 4115.192,
+        "duration": 4.98
+    },
+    {
+        "text": "long time, you'll still remember them.",
+        "start": 4120.172,
+        "duration": 2.47
+    },
+    {
+        "text": "where if something that you learned\nrecently, and it's just as, it has",
+        "start": 4123.472,
+        "duration": 5.49
+    },
+    {
+        "text": "just as much effect as the old synapse.",
+        "start": 4128.972,
+        "duration": 2.025
+    },
+    {
+        "text": "But you might, you might forget\nit pretty quickly if you don't",
+        "start": 4131.237,
+        "duration": 2.86
+    },
+    {
+        "text": "continue to, to reinforce it.",
+        "start": 4134.097,
+        "duration": 1.85
+    },
+    {
+        "text": "So, it, there's, it, I just wanted\nto point out, that's a, back to what",
+        "start": 4136.367,
+        "duration": 4.03
+    },
+    {
+        "text": "Michael asked earlier, learning is not\njust about increasing efficiency, it's",
+        "start": 4140.407,
+        "duration": 5.13
+    },
+    {
+        "text": "also permanence of these memories.",
+        "start": 4145.537,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah, yeah, and so, yeah, the\npresentation from Jeremy, there's a",
+        "start": 4149.987,
+        "duration": 8.91
+    },
+    {
+        "text": "lot of discussion around the kind of\nbiology of that, and then, otherwise,",
+        "start": 4158.897,
+        "duration": 3.33
+    },
+    {
+        "text": "the next presentation I give, I'll\ngo into, I guess, yeah, it mentions",
+        "start": 4162.227,
+        "duration": 4.135
+    },
+    {
+        "text": "actually algorithm for how the premise\nvalues change and things like that, and",
+        "start": 4166.362,
+        "duration": 3.62
+    },
+    {
+        "text": "then what the significance of that is.",
+        "start": 4169.982,
+        "duration": 1.57
+    },
+    {
+        "text": "Could you just, I mean, you had the\nlink in the presentation to that.",
+        "start": 4173.192,
+        "duration": 3.24
+    },
+    {
+        "text": "Yeah, I'll, I can share it on Slack.",
+        "start": 4176.442,
+        "duration": 3.31
+    },
+    {
+        "text": "Slack someplace, I'd like to listen to it.",
+        "start": 4180.232,
+        "duration": 1.84
+    },
+    {
+        "text": "Right, all the way to the start.",
+        "start": 4182.152,
+        "duration": 2.51
+    },
+    {
+        "text": "Yeah, it was two presentations\nfrom November 2021.",
+        "start": 4186.842,
+        "duration": 3.76
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 4190.672,
+        "duration": 1.07
+    },
+    {
+        "text": "But yeah, I'll send it on Slack.",
+        "start": 4191.912,
+        "duration": 1.735
+    },
+    {
+        "text": "Jeremy Forest.",
+        "start": 4195.227,
+        "duration": 0.78
+    },
+    {
+        "text": "I guess I could just look, but, yeah,\nI just wanted to kind of in summarizing",
+        "start": 4196.012,
+        "duration": 5.415
+    },
+    {
+        "text": "just say that Yeah, just kind of the, the\nkind of one thing to just remember is that",
+        "start": 4201.427,
+        "duration": 6.16
+    },
+    {
+        "text": "Yeah, at its core, like heian plasticity\nis kind of working in both these",
+        "start": 4207.707,
+        "duration": 4.27
+    },
+    {
+        "text": "firing rate and these spiking networks.",
+        "start": 4211.977,
+        "duration": 1.62
+    },
+    {
+        "text": "and so some homeostasis and\nsome competition is needed.",
+        "start": 4214.597,
+        "duration": 3.57
+    },
+    {
+        "text": "And actually when we talk about ensis\nalgorithms, the, the same will still",
+        "start": 4218.167,
+        "duration": 4.14
+    },
+    {
+        "text": "apply because it's, it's still, as\nyou were saying, Jeff, fundamentally,",
+        "start": 4222.307,
+        "duration": 3.3
+    },
+    {
+        "text": "Hebbian plasticity as well.",
+        "start": 4225.607,
+        "duration": 1.215
+    },
+    {
+        "text": "so, yeah, so that's what I'm going\nto focus on next time is this",
+        "start": 4231.437,
+        "duration": 4.49
+    },
+    {
+        "text": "kind of structural plasticity\nand the role of the actions and",
+        "start": 4235.927,
+        "duration": 4.69
+    },
+    {
+        "text": "the role of dendrites.",
+        "start": 4243.497,
+        "duration": 1.29
+    },
+    {
+        "text": "But, but there's a few other things\nI'd like to just touch on briefly.",
+        "start": 4245.487,
+        "duration": 4.18
+    },
+    {
+        "text": "I mentioned kind of mile or\npolycritic and how that might",
+        "start": 4249.907,
+        "duration": 3.78
+    },
+    {
+        "text": "connect to myelin plasticity.",
+        "start": 4253.687,
+        "duration": 1.76
+    },
+    {
+        "text": "I think kind of dopamine and serotonin\nis worth kind of referring to briefly.",
+        "start": 4256.087,
+        "duration": 4.46
+    },
+    {
+        "text": "And then, yeah, some other things\nwe've talked about recently, like",
+        "start": 4262.332,
+        "duration": 2.04
+    },
+    {
+        "text": "contrastive learning, representational\ndrift, objective coding, and then",
+        "start": 4264.372,
+        "duration": 3.78
+    },
+    {
+        "text": "maybe local ish backdrop in the brain.",
+        "start": 4268.672,
+        "duration": 2.88
+    },
+    {
+        "text": "I think it'd just be\ninteresting to, to touch on.",
+        "start": 4272.822,
+        "duration": 1.7
+    },
+    {
+        "text": "but hopefully this was like\na useful starting point.",
+        "start": 4276.872,
+        "duration": 3.28
+    },
+    {
+        "text": "Yeah, thanks.",
+        "start": 4281.152,
+        "duration": 2.41
+    },
+    {
+        "text": "That was great.",
+        "start": 4284.332,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah, thanks, Nils.",
+        "start": 4286.722,
+        "duration": 0.88
+    },
+    {
+        "text": "Yeah, then I've got these slides about\nkind of potential benefits, but I, I",
+        "start": 4288.152,
+        "duration": 4.13
+    },
+    {
+        "text": "think they'll make more sense after we\nTalk about, talk about the other learning",
+        "start": 4292.282,
+        "duration": 5.42
+    },
+    {
+        "text": "rules and, and those are all clear.",
+        "start": 4297.702,
+        "duration": 1.75
+    }
+]

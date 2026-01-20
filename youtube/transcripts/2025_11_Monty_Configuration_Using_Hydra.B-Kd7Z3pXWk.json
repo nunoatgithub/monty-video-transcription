@@ -1,0 +1,2222 @@
+[
+    {
+        "text": "Howdy.",
+        "start": 8.384,
+        "duration": 0.57
+    },
+    {
+        "text": "This is Tristan.",
+        "start": 9.014,
+        "duration": 1.23
+    },
+    {
+        "text": "And what I will go over is a\nbrief overview of how we put",
+        "start": 10.454,
+        "duration": 5.82
+    },
+    {
+        "text": "together hydro configurations to\nget a multi experiment running.",
+        "start": 16.274,
+        "duration": 3.72
+    },
+    {
+        "text": "let me orient you to our workspace\nhere and what's gonna happen, over",
+        "start": 21.134,
+        "duration": 4.26
+    },
+    {
+        "text": "here on the right, this will be\njust reference materials so I can",
+        "start": 25.394,
+        "duration": 3.42
+    },
+    {
+        "text": "put together the configuration.",
+        "start": 28.814,
+        "duration": 1.5
+    },
+    {
+        "text": "We're gonna do configuration the hard way.",
+        "start": 30.374,
+        "duration": 1.89
+    },
+    {
+        "text": "It will just be one big flat\nconfiguration so you can see how",
+        "start": 32.264,
+        "duration": 3.15
+    },
+    {
+        "text": "everything comes together in Hydra.",
+        "start": 35.414,
+        "duration": 1.285
+    },
+    {
+        "text": "and then the main workspace\nhere will be here on the left.",
+        "start": 38.744,
+        "duration": 3.12
+    },
+    {
+        "text": "let's get started as a first place.",
+        "start": 43.034,
+        "duration": 2.13
+    },
+    {
+        "text": "We have Monty set up in a configuration.",
+        "start": 45.974,
+        "duration": 2.79
+    },
+    {
+        "text": "I'm gonna go to experiments folder,\nhere, an experiments folder.",
+        "start": 48.764,
+        "duration": 3.66
+    },
+    {
+        "text": "We can see a bunch of experiments already.",
+        "start": 52.424,
+        "duration": 1.71
+    },
+    {
+        "text": "I'm going to add a new file code.",
+        "start": 55.154,
+        "duration": 2.73
+    },
+    {
+        "text": "My experiment yamo.",
+        "start": 57.944,
+        "duration": 2.79
+    },
+    {
+        "text": "And this will be, my experiment.",
+        "start": 61.184,
+        "duration": 3.24
+    },
+    {
+        "text": "Straightforward.",
+        "start": 65.339,
+        "duration": 0.57
+    },
+    {
+        "text": "Alright, let's get started.",
+        "start": 66.509,
+        "duration": 1.02
+    },
+    {
+        "text": "the experiment that I'm going to run\nis going to be the multi supervised",
+        "start": 68.759,
+        "duration": 3.42
+    },
+    {
+        "text": "object p training experiments.",
+        "start": 72.179,
+        "duration": 1.38
+    },
+    {
+        "text": "So we set that as a target and then\neverything else will go inside the config",
+        "start": 73.559,
+        "duration": 4.41
+    },
+    {
+        "text": "for this experiment to get started.",
+        "start": 77.999,
+        "duration": 3.66
+    },
+    {
+        "text": "the first we're going to, let's see, do\ntrain, do eval, So we are going to say",
+        "start": 83.969,
+        "duration": 6.99
+    },
+    {
+        "text": "that we want to do train to be true.",
+        "start": 90.959,
+        "duration": 2.91
+    },
+    {
+        "text": "And we want do evolve to be false.",
+        "start": 95.849,
+        "duration": 3.21
+    },
+    {
+        "text": "So we will train, we will not evaluate\nthis, by the way, will mirror the",
+        "start": 99.509,
+        "duration": 5.34
+    },
+    {
+        "text": "configuration from the tutorial\nfor running your first experiment.",
+        "start": 104.849,
+        "duration": 3.0
+    },
+    {
+        "text": "So it'll be just a very\nstraightforward, short pre-training run.",
+        "start": 107.849,
+        "duration": 4.92
+    },
+    {
+        "text": "So the eval, the train, next step\nwill be show sensorimotor output.",
+        "start": 114.884,
+        "duration": 6.345
+    },
+    {
+        "text": "will be false.",
+        "start": 123.884,
+        "duration": 1.32
+    },
+    {
+        "text": "We don't need to visualize anything.",
+        "start": 125.294,
+        "duration": 2.58
+    },
+    {
+        "text": "we are going to have max train steps.",
+        "start": 129.164,
+        "duration": 3.15
+    },
+    {
+        "text": "One, again, we, this is just a quick\ndemo, so we wanted to finish quickly.",
+        "start": 132.314,
+        "duration": 3.66
+    },
+    {
+        "text": "we can leave max eval steps\ncan really be anything because,",
+        "start": 138.734,
+        "duration": 4.29
+    },
+    {
+        "text": "we will not be doing eval.",
+        "start": 143.594,
+        "duration": 1.38
+    },
+    {
+        "text": "next step will be max total steps.",
+        "start": 146.624,
+        "duration": 4.59
+    },
+    {
+        "text": "also we'll be short circuited, but\nwe're not going to run into this limit",
+        "start": 152.909,
+        "duration": 6.45
+    },
+    {
+        "text": "because we have tiny amount of max train\nsteps and then, we have train epochs.",
+        "start": 159.359,
+        "duration": 5.91
+    },
+    {
+        "text": "We want to have one train epoch",
+        "start": 165.269,
+        "duration": 2.67
+    },
+    {
+        "text": "again, we're just doing\nshort training eval.",
+        "start": 170.159,
+        "duration": 2.91
+    },
+    {
+        "text": "We can take the defaults.",
+        "start": 173.309,
+        "duration": 1.2
+    },
+    {
+        "text": "They don't matter\nbecause we are not doing.",
+        "start": 174.509,
+        "duration": 2.88
+    },
+    {
+        "text": "Evals",
+        "start": 177.494,
+        "duration": 0.03
+    },
+    {
+        "text": "and",
+        "start": 180.344,
+        "duration": 0.51
+    },
+    {
+        "text": "model name or path that we will use.",
+        "start": 183.464,
+        "duration": 3.09
+    },
+    {
+        "text": "we are not loading anything 'cause\nwe are training, we are not loading",
+        "start": 189.434,
+        "duration": 5.52
+    },
+    {
+        "text": "any pre-trained models, so there\nwill be no model name or path Men",
+        "start": 194.954,
+        "duration": 5.79
+    },
+    {
+        "text": "LMS match we believe as the default.",
+        "start": 200.744,
+        "duration": 2.52
+    },
+    {
+        "text": "We will leave the standard seed in\nplace, and then the supervised LM IDs.",
+        "start": 205.874,
+        "duration": 7.68
+    },
+    {
+        "text": "We are going to supervise\nall of the learning modules.",
+        "start": 213.734,
+        "duration": 2.94
+    },
+    {
+        "text": "Again, this is a pre-training setting,\nso that is the main bit of the",
+        "start": 216.674,
+        "duration": 4.89
+    },
+    {
+        "text": "configuration for the experiment.",
+        "start": 221.564,
+        "duration": 1.68
+    },
+    {
+        "text": "Now let's configure everything\nthat goes inside there.",
+        "start": 223.244,
+        "duration": 3.09
+    },
+    {
+        "text": "So next step will be logging.",
+        "start": 226.724,
+        "duration": 1.56
+    },
+    {
+        "text": "So logging configuration is nested.",
+        "start": 228.824,
+        "duration": 1.835
+    },
+    {
+        "text": "let's provide it just\nbefore so we don't forget.",
+        "start": 233.249,
+        "duration": 2.4
+    },
+    {
+        "text": "Let's provide it a run name.",
+        "start": 235.649,
+        "duration": 1.29
+    },
+    {
+        "text": "The run name will be my experiment.",
+        "start": 236.939,
+        "duration": 1.62
+    },
+    {
+        "text": "And next, for logging, we are going to\nsay that we want the multi log level.",
+        "start": 240.539,
+        "duration": 7.17
+    },
+    {
+        "text": "To be detailed, we will, specify three\nmonthly handlers that we wanted to add.",
+        "start": 247.709,
+        "duration": 6.72
+    },
+    {
+        "text": "we want a, these are logging,\nmulti logging handlers, so we",
+        "start": 256.304,
+        "duration": 3.84
+    },
+    {
+        "text": "want the basic CSV stats that will\ngenerate CSV stats, generate j and",
+        "start": 260.144,
+        "duration": 4.14
+    },
+    {
+        "text": "then reproduce episode handler.",
+        "start": 264.284,
+        "duration": 1.53
+    },
+    {
+        "text": "I'm pretty sure we don't need this one.",
+        "start": 266.444,
+        "duration": 2.16
+    },
+    {
+        "text": "So let's just do these two,",
+        "start": 268.604,
+        "duration": 0.84
+    },
+    {
+        "text": "one DB handlers in case you\nwant to send data to one db.",
+        "start": 271.994,
+        "duration": 3.81
+    },
+    {
+        "text": "We don't want to do that, so we\nwill set them as being empty.",
+        "start": 275.834,
+        "duration": 3.66
+    },
+    {
+        "text": "And then we want the Python\nlog level to be info.",
+        "start": 280.874,
+        "duration": 3.78
+    },
+    {
+        "text": "Python log to file.",
+        "start": 285.794,
+        "duration": 1.47
+    },
+    {
+        "text": "We do wanna log to the file.",
+        "start": 288.974,
+        "duration": 1.83
+    },
+    {
+        "text": "We also wanna log to standard\nerror and the output directory.",
+        "start": 291.314,
+        "duration": 7.05
+    },
+    {
+        "text": "We will go with the default, which\nis based on, user expanded path for",
+        "start": 298.364,
+        "duration": 5.91
+    },
+    {
+        "text": "multi logs projects, multi runs.",
+        "start": 304.844,
+        "duration": 2.37
+    },
+    {
+        "text": "we are not resuming in the\none DB run, so that is false.",
+        "start": 310.574,
+        "duration": 3.54
+    },
+    {
+        "text": "We will say we want to use these,\nbut one db ID we can generate it,",
+        "start": 315.839,
+        "duration": 6.06
+    },
+    {
+        "text": "but we're not gonna be needing it.",
+        "start": 321.899,
+        "duration": 1.56
+    },
+    {
+        "text": "This is a debugging group, but\nif we're to run one DB and we",
+        "start": 325.109,
+        "duration": 6.27
+    },
+    {
+        "text": "are not logging, we're not gonna.",
+        "start": 331.379,
+        "duration": 3.57
+    },
+    {
+        "text": "Log in parallel again.",
+        "start": 335.519,
+        "duration": 1.35
+    },
+    {
+        "text": "one DB settings will not take\nplace because we don't have",
+        "start": 337.169,
+        "duration": 2.49
+    },
+    {
+        "text": "one DB handlers activated.",
+        "start": 339.659,
+        "duration": 1.8
+    },
+    {
+        "text": "Okay, and that is it for logging.",
+        "start": 341.939,
+        "duration": 3.75
+    },
+    {
+        "text": "Next, let us configure Monty itself.",
+        "start": 346.139,
+        "duration": 4.14
+    },
+    {
+        "text": "So Monty",
+        "start": 351.899,
+        "duration": 0.27
+    },
+    {
+        "text": "itself, which Monty class\nare we going to use?",
+        "start": 354.254,
+        "duration": 3.315
+    },
+    {
+        "text": "We are going to use.",
+        "start": 358.439,
+        "duration": 1.74
+    },
+    {
+        "text": "Monty for graph matching, which is\nour state of the Art Monty class.",
+        "start": 363.074,
+        "duration": 4.59
+    },
+    {
+        "text": "Let's configure the,",
+        "start": 368.504,
+        "duration": 2.28
+    },
+    {
+        "text": "let's do Monty Arguments next.",
+        "start": 375.644,
+        "duration": 1.89
+    },
+    {
+        "text": "Monty ARGs, which will be\npassed to this monthly class.",
+        "start": 377.774,
+        "duration": 3.06
+    },
+    {
+        "text": "So number of exploratory\nsteps will be a thousand.",
+        "start": 390.344,
+        "duration": 4.11
+    },
+    {
+        "text": "Minimum eval steps will be three.",
+        "start": 394.994,
+        "duration": 4.05
+    },
+    {
+        "text": "Minimum train steps will be three",
+        "start": 399.464,
+        "duration": 1.92
+    },
+    {
+        "text": "max.",
+        "start": 406.514,
+        "duration": 0.3
+    },
+    {
+        "text": "Total steps will be 2,500.",
+        "start": 406.814,
+        "duration": 2.37
+    },
+    {
+        "text": "So these are the Monty arcs\nthat are the defaults that",
+        "start": 412.004,
+        "duration": 3.48
+    },
+    {
+        "text": "we passed through that class.",
+        "start": 415.484,
+        "duration": 1.47
+    },
+    {
+        "text": "Next up,",
+        "start": 417.284,
+        "duration": 0.69
+    },
+    {
+        "text": "I think that's it for Monty Arcs.",
+        "start": 423.824,
+        "duration": 2.37
+    },
+    {
+        "text": "Lemme just double check.",
+        "start": 426.734,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 429.779,
+        "duration": 0.29
+    },
+    {
+        "text": "All right, next up.",
+        "start": 434.249,
+        "duration": 1.59
+    },
+    {
+        "text": "so notice these are here for\nthe experiment, and these",
+        "start": 436.439,
+        "duration": 3.21
+    },
+    {
+        "text": "here are for Monty itself.",
+        "start": 439.649,
+        "duration": 2.43
+    },
+    {
+        "text": "All right?",
+        "start": 443.309,
+        "duration": 0.36
+    },
+    {
+        "text": "So that's multi class and multi arcs.",
+        "start": 444.599,
+        "duration": 1.77
+    },
+    {
+        "text": "next up, let's configure, let's\nconfigure the motor system.",
+        "start": 446.939,
+        "duration": 4.68
+    },
+    {
+        "text": "so Monty, So the motor sy, so it's\nmotor, excuse me, motor system config,",
+        "start": 454.649,
+        "duration": 8.55
+    },
+    {
+        "text": "and the motor system config\nwill have a motor system class",
+        "start": 467.669,
+        "duration": 5.46
+    },
+    {
+        "text": "and that's the motor system",
+        "start": 474.869,
+        "duration": 1.92
+    },
+    {
+        "text": "and it will have water system arcs.",
+        "start": 479.669,
+        "duration": 2.73
+    },
+    {
+        "text": "And in water system\narcs, we want the policy.",
+        "start": 485.594,
+        "duration": 2.7
+    },
+    {
+        "text": "We're going to use the informed policy\nin this case, and we want to pass in",
+        "start": 488.294,
+        "duration": 5.19
+    },
+    {
+        "text": "some policy arguments, policy arcs.",
+        "start": 493.484,
+        "duration": 3.03
+    },
+    {
+        "text": "the action sampler that we will\nuse is a constant action sampler,",
+        "start": 498.434,
+        "duration": 3.69
+    },
+    {
+        "text": "and that action sampler takes a\nrotation degrees as an argument.",
+        "start": 503.084,
+        "duration": 3.99
+    },
+    {
+        "text": "So we're gonna give it five degrees.",
+        "start": 507.194,
+        "duration": 1.77
+    },
+    {
+        "text": "And, the policy arcs also need to\nknow what agent ID the policy is for.",
+        "start": 510.434,
+        "duration": 5.49
+    },
+    {
+        "text": "And so we using,",
+        "start": 516.764,
+        "duration": 1.2
+    },
+    {
+        "text": "agent ID agent IZ zero.",
+        "start": 520.214,
+        "duration": 2.49
+    },
+    {
+        "text": "This, this will turn in, code, will\ninstantiate an agent id, agent ID",
+        "start": 523.184,
+        "duration": 8.13
+    },
+    {
+        "text": "zero, identifier, for the policy.",
+        "start": 531.314,
+        "duration": 3.99
+    },
+    {
+        "text": "Okay.",
+        "start": 536.264,
+        "duration": 0.12
+    },
+    {
+        "text": "the other policy arcs, that we\nwill include is, there is no file",
+        "start": 538.664,
+        "duration": 7.53
+    },
+    {
+        "text": "name that we are reading from.",
+        "start": 546.254,
+        "duration": 1.95
+    },
+    {
+        "text": "If there are any pre-trained actions\ntype of things, good view percentage,",
+        "start": 548.204,
+        "duration": 3.72
+    },
+    {
+        "text": "we want 0.5 desired object distance 0.3.",
+        "start": 551.924,
+        "duration": 4.08
+    },
+    {
+        "text": "This is again for the\ninformed policy parameters.",
+        "start": 556.004,
+        "duration": 2.49
+    },
+    {
+        "text": "If we do not wanna use ghosted der\nactions, which frequency will be one",
+        "start": 560.324,
+        "duration": 4.08
+    },
+    {
+        "text": "mid percent on object zero to five.",
+        "start": 565.304,
+        "duration": 2.13
+    },
+    {
+        "text": "And then, the other thing,",
+        "start": 570.434,
+        "duration": 2.37
+    },
+    {
+        "text": "and then one more thing\nwe need to specify.",
+        "start": 574.814,
+        "duration": 1.77
+    },
+    {
+        "text": "So that's for the, that's\nenough for the policy arguments.",
+        "start": 576.824,
+        "duration": 2.61
+    },
+    {
+        "text": "One more thing we need to specify\nfor the action sampler class.",
+        "start": 579.434,
+        "duration": 2.94
+    },
+    {
+        "text": "Here is the action space.",
+        "start": 582.374,
+        "duration": 4.89
+    },
+    {
+        "text": "And the act, and so these are the\nactions that it chooses from, so actions.",
+        "start": 588.539,
+        "duration": 5.25
+    },
+    {
+        "text": "So the policy sampler, excuse me, this\nconstant sampler of actions, if we",
+        "start": 595.214,
+        "duration": 4.8
+    },
+    {
+        "text": "tell it to sample for random action,\nit'll choose from this list of actions.",
+        "start": 600.014,
+        "duration": 4.53
+    },
+    {
+        "text": "So give it the monthly,\ngive it the classes.",
+        "start": 604.874,
+        "duration": 2.31
+    },
+    {
+        "text": "We give it a lookup action.",
+        "start": 607.184,
+        "duration": 1.2
+    },
+    {
+        "text": "Look down, turn left,\nturn right at agent post.",
+        "start": 608.384,
+        "duration": 2.07
+    },
+    {
+        "text": "At end, sensorimotor of rotations.",
+        "start": 610.454,
+        "duration": 1.53
+    },
+    {
+        "text": "Okay, so with this we have\nour action sampler class and",
+        "start": 613.334,
+        "duration": 3.54
+    },
+    {
+        "text": "with, with its arguments, we\nhave our policy class with its.",
+        "start": 616.874,
+        "duration": 4.42
+    },
+    {
+        "text": "Policy arguments.",
+        "start": 621.629,
+        "duration": 1.11
+    },
+    {
+        "text": "And then we have motor system,\nwe have motor system arguments.",
+        "start": 622.739,
+        "duration": 2.43
+    },
+    {
+        "text": "Let me just make sure that\nthere's nothing else that I",
+        "start": 625.199,
+        "duration": 2.82
+    },
+    {
+        "text": "need to do for the motor system.",
+        "start": 628.019,
+        "duration": 1.74
+    },
+    {
+        "text": "no.",
+        "start": 632.369,
+        "duration": 0.24
+    },
+    {
+        "text": "That configures the motor.",
+        "start": 632.639,
+        "duration": 1.77
+    },
+    {
+        "text": "That completes the motor\nsystem configuration.",
+        "start": 634.409,
+        "duration": 2.04
+    },
+    {
+        "text": "Alright, so next over that's\nconfigure our learning modules,",
+        "start": 636.509,
+        "duration": 3.78
+    },
+    {
+        "text": "learning module, configs, and for\nlearning modules, we are just going",
+        "start": 641.309,
+        "duration": 6.66
+    },
+    {
+        "text": "to have a single learning module.",
+        "start": 647.969,
+        "duration": 2.1
+    },
+    {
+        "text": "we're going to use the displacement graph\nlearning module and the arguments that",
+        "start": 655.094,
+        "duration": 4.56
+    },
+    {
+        "text": "we're gonna give it is match attribute\ndisplacement and K is equal to five.",
+        "start": 659.654,
+        "duration": 3.87
+    },
+    {
+        "text": "Next step, we're gonna configure\nsensorimotor, module configs, and we're",
+        "start": 664.184,
+        "duration": 4.35
+    },
+    {
+        "text": "gonna have two sensorimotor modules.",
+        "start": 668.564,
+        "duration": 1.83
+    },
+    {
+        "text": "One that will be hooked up to\ndisplacement graph, feeding it",
+        "start": 670.394,
+        "duration": 3.27
+    },
+    {
+        "text": "information, and the other one will be.",
+        "start": 673.664,
+        "duration": 1.86
+    },
+    {
+        "text": "Experimental probe so that we can look\nat what's going on in case we want to.",
+        "start": 676.679,
+        "duration": 4.26
+    },
+    {
+        "text": "So sensorimotor module zero will be,\nwill use, will be the standard habitat",
+        "start": 681.509,
+        "duration": 6.45
+    },
+    {
+        "text": "sensorimotor module because we're\nusing habitat for our experiments",
+        "start": 688.559,
+        "duration": 3.09
+    },
+    {
+        "text": "here, sensorimotor module arguments.",
+        "start": 691.649,
+        "duration": 1.77
+    },
+    {
+        "text": "We're going to, give this the ID of patch.",
+        "start": 693.899,
+        "duration": 3.9
+    },
+    {
+        "text": "And then the features we want the\nsensorimotor module to, we're configuring",
+        "start": 699.569,
+        "duration": 4.47
+    },
+    {
+        "text": "again the Habitat Sensorimotor\nmodule and the features we want",
+        "start": 704.129,
+        "duration": 2.43
+    },
+    {
+        "text": "the Habitat sensorimotor module to\ninclude are, this list of features.",
+        "start": 706.559,
+        "duration": 5.1
+    },
+    {
+        "text": "This is, these are the morphological\nfeatures that we wanted to send through",
+        "start": 714.114,
+        "duration": 4.44
+    },
+    {
+        "text": "the learning module, and these are the\nnon morphological features that we wanted",
+        "start": 718.554,
+        "duration": 3.0
+    },
+    {
+        "text": "to send it through the learning module.",
+        "start": 721.554,
+        "duration": 1.56
+    },
+    {
+        "text": "And we do not want to\nsave raw observations.",
+        "start": 723.114,
+        "duration": 3.0
+    },
+    {
+        "text": "sorry.",
+        "start": 726.324,
+        "duration": 0.27
+    },
+    {
+        "text": "We do want to save raw observations.",
+        "start": 726.594,
+        "duration": 2.1
+    },
+    {
+        "text": "Okay.",
+        "start": 730.794,
+        "duration": 0.21
+    },
+    {
+        "text": "And so that's the sensorimotor,\nthat's the first sensorimotor",
+        "start": 732.294,
+        "duration": 2.01
+    },
+    {
+        "text": "module, the zero sensorimotor module.",
+        "start": 734.304,
+        "duration": 1.86
+    },
+    {
+        "text": "Next up, we'll do Sensorimotor module one.",
+        "start": 736.164,
+        "duration": 1.815
+    },
+    {
+        "text": "And for this one, we're going to\nuse the probe sensorimotor module.",
+        "start": 740.054,
+        "duration": 3.9
+    },
+    {
+        "text": "Again, this is our experimental probe,\nso we can visualize things if we need to.",
+        "start": 744.824,
+        "duration": 3.48
+    },
+    {
+        "text": "we're going to pass in\nsensorimotor module arguments.",
+        "start": 749.024,
+        "duration": 3.0
+    },
+    {
+        "text": "And the only arguments it takes is the\nidentifier, which is the viewfinder,",
+        "start": 752.024,
+        "duration": 3.27
+    },
+    {
+        "text": "which is our kind of the name for,\nwe will not look at an object that",
+        "start": 755.354,
+        "duration": 5.01
+    },
+    {
+        "text": "a sensorimotor module is seeing.",
+        "start": 760.364,
+        "duration": 1.11
+    },
+    {
+        "text": "And then we have, and we also\nhave s observations, the truth.",
+        "start": 761.984,
+        "duration": 2.73
+    },
+    {
+        "text": "And this concludes the\nsensorimotor module configuration.",
+        "start": 766.439,
+        "duration": 6.09
+    },
+    {
+        "text": "Okay.",
+        "start": 774.659,
+        "duration": 0.39
+    },
+    {
+        "text": "the other bits of Monty that are,\nif you remember, we're still up",
+        "start": 777.419,
+        "duration": 4.44
+    },
+    {
+        "text": "here, we're still inside Monty.",
+        "start": 781.859,
+        "duration": 1.68
+    },
+    {
+        "text": "We config Monty.",
+        "start": 783.959,
+        "duration": 1.315
+    },
+    {
+        "text": "We did the, we configured Monty arguments.",
+        "start": 785.674,
+        "duration": 2.755
+    },
+    {
+        "text": "We configured motor system\nconfig learning, module config,",
+        "start": 788.429,
+        "duration": 3.81
+    },
+    {
+        "text": "sensorimotor, module config.",
+        "start": 792.239,
+        "duration": 0.81
+    },
+    {
+        "text": "There's a,",
+        "start": 795.209,
+        "duration": 0.78
+    },
+    {
+        "text": "there are a few more, things we\nneed to configure Monty with.",
+        "start": 800.129,
+        "duration": 6.21
+    },
+    {
+        "text": "And so this is, how to set up the\nnetwork between, the sensorimotor module.",
+        "start": 808.064,
+        "duration": 4.92
+    },
+    {
+        "text": "How did these sensorimotor modules,\nlearning modules connected?",
+        "start": 813.014,
+        "duration": 2.46
+    },
+    {
+        "text": "So SM to Agent Dictionary, and we\nhave the, patch sensorimotor module.",
+        "start": 816.074,
+        "duration": 5.97
+    },
+    {
+        "text": "It's the one that we created here.",
+        "start": 822.104,
+        "duration": 2.34
+    },
+    {
+        "text": "Sensorimotor module Patch\nas a sensorimotor module.",
+        "start": 825.974,
+        "duration": 2.43
+    },
+    {
+        "text": "Patch co. corresponds to agent id.",
+        "start": 828.404,
+        "duration": 2.73
+    },
+    {
+        "text": "The data from that corresponds to\nagent ID zero, and then the viewfinder.",
+        "start": 831.614,
+        "duration": 4.2
+    },
+    {
+        "text": "Also agent ID zero and then\nSM to LM Matrix, sensorimotor",
+        "start": 837.404,
+        "duration": 5.25
+    },
+    {
+        "text": "module to learning module matrix.",
+        "start": 842.654,
+        "duration": 1.92
+    },
+    {
+        "text": "and then LM to LM Matrix doesn't have one.",
+        "start": 851.714,
+        "duration": 2.82
+    },
+    {
+        "text": "We only have one learning module, and\nthen there is no voting happening in this.",
+        "start": 854.534,
+        "duration": 3.155
+    },
+    {
+        "text": "Okay.",
+        "start": 858.494,
+        "duration": 0.27
+    },
+    {
+        "text": "And so this completes,\nour monthly configuration.",
+        "start": 859.154,
+        "duration": 3.45
+    },
+    {
+        "text": "So let, actually, let's minimize\nthese guys, so they're outta the way.",
+        "start": 862.964,
+        "duration": 3.09
+    },
+    {
+        "text": "So that's Monty what we need to\nconfigure next is, let me just",
+        "start": 866.054,
+        "duration": 6.78
+    },
+    {
+        "text": "review my reference material here.",
+        "start": 872.834,
+        "duration": 2.07
+    },
+    {
+        "text": "so we have, we've done.",
+        "start": 875.714,
+        "duration": 1.38
+    },
+    {
+        "text": "We've configured the experiment, we've\nconfigured logging, we've configured",
+        "start": 877.904,
+        "duration": 3.6
+    },
+    {
+        "text": "Monty Logging as part of the experiment,\nMonty, inside of the experiment.",
+        "start": 881.504,
+        "duration": 3.63
+    },
+    {
+        "text": "Next we need to do is configure the\nenvironment and so the environment",
+        "start": 885.854,
+        "duration": 6.45
+    },
+    {
+        "text": "will be, one second environment.",
+        "start": 892.304,
+        "duration": 4.83
+    },
+    {
+        "text": "Okay, there we go.",
+        "start": 900.014,
+        "duration": 0.99
+    },
+    {
+        "text": "So environment will be configured\nand environment interface config.",
+        "start": 903.314,
+        "duration": 3.12
+    },
+    {
+        "text": "All right.",
+        "start": 908.414,
+        "duration": 0.3
+    },
+    {
+        "text": "And so the environment\ninitialization it function",
+        "start": 909.164,
+        "duration": 2.67
+    },
+    {
+        "text": "will, be instantiating the\nhabitat environment and then,",
+        "start": 914.024,
+        "duration": 4.68
+    },
+    {
+        "text": "environment in it, ARGs.",
+        "start": 919.874,
+        "duration": 1.92
+    },
+    {
+        "text": "So the arguments to this\nhabitat environment are,",
+        "start": 923.984,
+        "duration": 2.88
+    },
+    {
+        "text": "let me see.",
+        "start": 930.494,
+        "duration": 0.66
+    },
+    {
+        "text": "It's going to the agents\nthat it's gonna get.",
+        "start": 932.264,
+        "duration": 1.915
+    },
+    {
+        "text": "it's gonna be agent type,\nwill be multisensor agent.",
+        "start": 936.704,
+        "duration": 3.06
+    },
+    {
+        "text": "That's what we're gonna give it.",
+        "start": 939.764,
+        "duration": 0.96
+    },
+    {
+        "text": "And then,",
+        "start": 942.104,
+        "duration": 1.05
+    },
+    {
+        "text": "the objects that we will\nput in our environment.",
+        "start": 946.814,
+        "duration": 3.45
+    },
+    {
+        "text": "In this case, we're just going to do a.",
+        "start": 951.764,
+        "duration": 2.16
+    },
+    {
+        "text": "pre, these are predefined\nobjects, so there's inhabit",
+        "start": 956.699,
+        "duration": 2.52
+    },
+    {
+        "text": "that there's a C solid object.",
+        "start": 959.219,
+        "duration": 1.47
+    },
+    {
+        "text": "We're gonna place it at disposition.",
+        "start": 960.689,
+        "duration": 1.62
+    },
+    {
+        "text": "we're gonna tell this,\nscene ID is null, seat 42.",
+        "start": 964.049,
+        "duration": 6.33
+    },
+    {
+        "text": "And then the data path is to retrieve\nobjects from habitat objects, YCB from",
+        "start": 972.089,
+        "duration": 5.91
+    },
+    {
+        "text": "the YCB or Habitat object dataset.",
+        "start": 977.999,
+        "duration": 1.755
+    },
+    {
+        "text": "Okay.",
+        "start": 981.779,
+        "duration": 0.36
+    },
+    {
+        "text": "and then the other thing is we need\nto, we have agents, but we also need",
+        "start": 983.459,
+        "duration": 4.92
+    },
+    {
+        "text": "to provide, we have agent type, but\nwe need agent ARGs that we need to",
+        "start": 988.379,
+        "duration": 4.8
+    },
+    {
+        "text": "provide here to instantiate the agent\nand, agent patch and view finder.",
+        "start": 993.179,
+        "duration": 6.81
+    },
+    {
+        "text": "Okay.",
+        "start": 1000.649,
+        "duration": 0.27
+    },
+    {
+        "text": "Cool.",
+        "start": 1000.919,
+        "duration": 0.3
+    },
+    {
+        "text": "And so the agent id, It is gonna\nbe agent ID, zero sensorimotor IDs.",
+        "start": 1001.519,
+        "duration": 6.33
+    },
+    {
+        "text": "That will be patch and viewfinder.",
+        "start": 1008.179,
+        "duration": 3.12
+    },
+    {
+        "text": "And then the height of this\nagent will be at zero zero.",
+        "start": 1012.889,
+        "duration": 4.65
+    },
+    {
+        "text": "We're, essentially possessing this\nagent inside the habitat simulator now,",
+        "start": 1017.929,
+        "duration": 3.66
+    },
+    {
+        "text": "and then resolutions,\ncorrespond to the two sensors.",
+        "start": 1024.319,
+        "duration": 3.42
+    },
+    {
+        "text": "So there'll be a, so they both\nhave 64 by 64 resolution positions.",
+        "start": 1027.739,
+        "duration": 5.1
+    },
+    {
+        "text": "And then rotations.",
+        "start": 1035.344,
+        "duration": 1.59
+    },
+    {
+        "text": "This is where we essentially set up these\nsensorimotor, like this agent has these",
+        "start": 1036.934,
+        "duration": 3.63
+    },
+    {
+        "text": "sensors and the agent is at this height.",
+        "start": 1040.564,
+        "duration": 3.24
+    },
+    {
+        "text": "This is the agent positions, but these\nare the resolutions of the sensors.",
+        "start": 1043.894,
+        "duration": 2.76
+    },
+    {
+        "text": "The positions of the sensors\nrelative to the agent, rotations of",
+        "start": 1046.654,
+        "duration": 3.3
+    },
+    {
+        "text": "the sensors relative to the agent.",
+        "start": 1049.954,
+        "duration": 1.56
+    },
+    {
+        "text": "So semantics, false, and then zooms.",
+        "start": 1053.469,
+        "duration": 3.325
+    },
+    {
+        "text": "And then these are the zoom\nlevels, for the sensors.",
+        "start": 1057.754,
+        "duration": 4.14
+    },
+    {
+        "text": "Okay.",
+        "start": 1062.959,
+        "duration": 0.3
+    },
+    {
+        "text": "This is very, all this is\nall very habitat specific.",
+        "start": 1063.409,
+        "duration": 2.37
+    },
+    {
+        "text": "So again, we are starting habitat\nenvironment from simulator habitat.",
+        "start": 1066.079,
+        "duration": 4.41
+    },
+    {
+        "text": "And so this configurations is\nfor habitat agents and those",
+        "start": 1070.609,
+        "duration": 5.19
+    },
+    {
+        "text": "have a specific configuration.",
+        "start": 1075.799,
+        "duration": 1.59
+    },
+    {
+        "text": "lemme make sure that, okay, cool.",
+        "start": 1078.379,
+        "duration": 3.36
+    },
+    {
+        "text": "It was just a suggestion.",
+        "start": 1081.739,
+        "duration": 0.96
+    },
+    {
+        "text": "Cool.",
+        "start": 1082.759,
+        "duration": 0.21
+    },
+    {
+        "text": "So you have agents, you\nhave agent type, agent arcs.",
+        "start": 1083.449,
+        "duration": 2.01
+    },
+    {
+        "text": "Excellent.",
+        "start": 1086.479,
+        "duration": 0.51
+    },
+    {
+        "text": "And",
+        "start": 1088.579,
+        "duration": 0.21
+    },
+    {
+        "text": "And that's it.",
+        "start": 1091.549,
+        "duration": 0.84
+    },
+    {
+        "text": "So we have a habitat environment and it's\ngonna be configured with these agents",
+        "start": 1093.079,
+        "duration": 3.81
+    },
+    {
+        "text": "which are connected to these sensors.",
+        "start": 1097.069,
+        "duration": 1.68
+    },
+    {
+        "text": "This environment has these objects.",
+        "start": 1098.869,
+        "duration": 1.77
+    },
+    {
+        "text": "The scene, this entire scene is\njust, I'm gonna give you the id.",
+        "start": 1100.729,
+        "duration": 4.56
+    },
+    {
+        "text": "We have a seed and we have\nwhere the data for any objects",
+        "start": 1105.739,
+        "duration": 3.45
+    },
+    {
+        "text": "that we define here comes from.",
+        "start": 1109.189,
+        "duration": 1.11
+    },
+    {
+        "text": "Excellent.",
+        "start": 1110.989,
+        "duration": 0.39
+    },
+    {
+        "text": "I believe that will, let\nme just double check.",
+        "start": 1112.009,
+        "duration": 2.82
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 1114.859,
+        "duration": 0.51
+    },
+    {
+        "text": "And then the one more thing we\nneed to specify about in our",
+        "start": 1115.369,
+        "duration": 3.12
+    },
+    {
+        "text": "environment is the transform.",
+        "start": 1118.489,
+        "duration": 3.3
+    },
+    {
+        "text": "So what trans, what transforms.",
+        "start": 1123.364,
+        "duration": 2.58
+    },
+    {
+        "text": "So once we receive observations from the\nenvironment, what transforms are we going",
+        "start": 1126.064,
+        "duration": 4.44
+    },
+    {
+        "text": "to run before we hand them over to Monty?",
+        "start": 1130.504,
+        "duration": 2.07
+    },
+    {
+        "text": "one first transform that we're gonna\nrun will be missing to max depth.",
+        "start": 1134.434,
+        "duration": 5.76
+    },
+    {
+        "text": "this thing has gonna have agent id.",
+        "start": 1141.904,
+        "duration": 3.06
+    },
+    {
+        "text": "And notice this agent ID is the\nsame as the agent ID from the agent,",
+        "start": 1147.274,
+        "duration": 3.21
+    },
+    {
+        "text": "and then the max depth will be one.",
+        "start": 1151.354,
+        "duration": 2.19
+    },
+    {
+        "text": "So Max, if depth is missing,\nwe're gonna set it to one.",
+        "start": 1153.814,
+        "duration": 2.94
+    },
+    {
+        "text": "the other thing we're going to\ndo is we're going to convert,",
+        "start": 1157.654,
+        "duration": 2.49
+    },
+    {
+        "text": "basically screen pixel data\nwith depth data on top of it.",
+        "start": 1163.564,
+        "duration": 5.52
+    },
+    {
+        "text": "So it's RGBD, red, blue, green\ndepth, and we're going to",
+        "start": 1169.084,
+        "duration": 4.56
+    },
+    {
+        "text": "convert it into 3D locations.",
+        "start": 1173.644,
+        "duration": 1.71
+    },
+    {
+        "text": "that's what this transform does.",
+        "start": 1177.754,
+        "duration": 1.44
+    },
+    {
+        "text": "Again, the same agent, it\nworks on, and observations",
+        "start": 1180.364,
+        "duration": 3.54
+    },
+    {
+        "text": "coming from the same agent id.",
+        "start": 1183.904,
+        "duration": 2.1
+    },
+    {
+        "text": "it works on",
+        "start": 1187.384,
+        "duration": 1.29
+    },
+    {
+        "text": "the sensors, from that agent.",
+        "start": 1191.704,
+        "duration": 2.43
+    },
+    {
+        "text": "And then, we need to, this transform needs\nto know what resolutions is working with.",
+        "start": 1196.654,
+        "duration": 5.25
+    },
+    {
+        "text": "So we're just feeding it.",
+        "start": 1201.904,
+        "duration": 1.08
+    },
+    {
+        "text": "We're just telling it that these are the\nresolutions that we set for the agent.",
+        "start": 1203.074,
+        "duration": 3.75
+    },
+    {
+        "text": "we'll do this in World Court and it's,",
+        "start": 1208.444,
+        "duration": 2.52
+    },
+    {
+        "text": "again, we have to pass in the zoom\ninformation, same one from above.",
+        "start": 1213.634,
+        "duration": 3.48
+    },
+    {
+        "text": "And we wanted to get all points and we\nwant to use semantic, sensorimotor false.",
+        "start": 1218.164,
+        "duration": 5.73
+    },
+    {
+        "text": "All righty.",
+        "start": 1224.644,
+        "duration": 0.57
+    },
+    {
+        "text": "And then we also need to, we're\nnot gonna give it any specific RNG.",
+        "start": 1225.574,
+        "duration": 4.41
+    },
+    {
+        "text": "this is an artifact.",
+        "start": 1231.994,
+        "duration": 0.96
+    },
+    {
+        "text": "I wouldn't worry about it.",
+        "start": 1232.954,
+        "duration": 0.6
+    },
+    {
+        "text": "so environment interface config.",
+        "start": 1234.604,
+        "duration": 1.68
+    },
+    {
+        "text": "This should complete, our\nenvironment interface configuration.",
+        "start": 1237.694,
+        "duration": 4.41
+    },
+    {
+        "text": "Let me just double check my references.",
+        "start": 1242.134,
+        "duration": 1.8
+    },
+    {
+        "text": "So we have,",
+        "start": 1248.074,
+        "duration": 0.565
+    },
+    {
+        "text": "Let me just see patch and view habitat.",
+        "start": 1252.064,
+        "duration": 2.19
+    },
+    {
+        "text": "Okay.",
+        "start": 1254.289,
+        "duration": 0.29
+    },
+    {
+        "text": "So Envi, we have our\nenvironment in IT function.",
+        "start": 1254.959,
+        "duration": 2.565
+    },
+    {
+        "text": "We have our environment ARGs,\nand we have our transform and we",
+        "start": 1257.524,
+        "duration": 4.08
+    },
+    {
+        "text": "have our RNG for the environment.",
+        "start": 1261.604,
+        "duration": 1.56
+    },
+    {
+        "text": "Okay, excellent.",
+        "start": 1263.374,
+        "duration": 0.96
+    },
+    {
+        "text": "the reason this is RNG Noll is 'cause\nwe need to instantiate habitat with",
+        "start": 1268.474,
+        "duration": 3.69
+    },
+    {
+        "text": "an RNG and a current code will first\ninstantiate habitat environment",
+        "start": 1272.164,
+        "duration": 3.93
+    },
+    {
+        "text": "and then later on pass it an RNG.",
+        "start": 1276.244,
+        "duration": 2.13
+    },
+    {
+        "text": "so this is just how we\nhave things currently.",
+        "start": 1279.199,
+        "duration": 2.82
+    },
+    {
+        "text": "This will be changed in the future.",
+        "start": 1282.019,
+        "duration": 1.2
+    },
+    {
+        "text": "Okay.",
+        "start": 1284.329,
+        "duration": 0.36
+    },
+    {
+        "text": "That should configure the\nenvironment interface configuration.",
+        "start": 1284.929,
+        "duration": 5.82
+    },
+    {
+        "text": "Let me just make sure I put\neverything in the right place.",
+        "start": 1292.159,
+        "duration": 2.19
+    },
+    {
+        "text": "Environment and function.",
+        "start": 1294.799,
+        "duration": 1.35
+    },
+    {
+        "text": "Environment and at ARGs, and then\nTransform and RG are at this top level.",
+        "start": 1296.149,
+        "duration": 4.8
+    },
+    {
+        "text": "Okay.",
+        "start": 1300.979,
+        "duration": 0.3
+    },
+    {
+        "text": "Excellent.",
+        "start": 1301.279,
+        "duration": 0.39
+    },
+    {
+        "text": "So now environment is configured.",
+        "start": 1301.699,
+        "duration": 1.62
+    },
+    {
+        "text": "We are almost there.",
+        "start": 1304.414,
+        "duration": 0.78
+    },
+    {
+        "text": "the remaining bit we have to configure\nis our, we said we're not doing eval,",
+        "start": 1306.424,
+        "duration": 4.65
+    },
+    {
+        "text": "so we don't have to configure eval any\nfarther, but we do have to configure,",
+        "start": 1311.074,
+        "duration": 3.87
+    },
+    {
+        "text": "our, how are we going to interface\nwith the, environment doing training.",
+        "start": 1316.024,
+        "duration": 5.19
+    },
+    {
+        "text": "So train environment interface class,",
+        "start": 1321.214,
+        "duration": 3.09
+    },
+    {
+        "text": "and this will be environment\ninterface per object.",
+        "start": 1326.524,
+        "duration": 2.22
+    },
+    {
+        "text": "And then train environment",
+        "start": 1332.404,
+        "duration": 1.62
+    },
+    {
+        "text": "interface, ARGs.",
+        "start": 1336.664,
+        "duration": 1.5
+    },
+    {
+        "text": "And what are we gonna pass to that?",
+        "start": 1338.524,
+        "duration": 1.68
+    },
+    {
+        "text": "Okay.",
+        "start": 1342.484,
+        "duration": 0.54
+    },
+    {
+        "text": "so one second, let me once again consult.",
+        "start": 1343.504,
+        "duration": 2.28
+    },
+    {
+        "text": "so the per object.",
+        "start": 1348.274,
+        "duration": 1.53
+    },
+    {
+        "text": "So parent, we are not going to provide any\nparent to child mapping in this instance.",
+        "start": 1350.134,
+        "duration": 6.99
+    },
+    {
+        "text": "And then,",
+        "start": 1360.514,
+        "duration": 0.78
+    },
+    {
+        "text": "okay.",
+        "start": 1364.144,
+        "duration": 0.39
+    },
+    {
+        "text": "And then the other thing we need to give\nit is what object names, what objects",
+        "start": 1366.304,
+        "duration": 4.74
+    },
+    {
+        "text": "we wanna populate the environment with.",
+        "start": 1371.044,
+        "duration": 3.78
+    },
+    {
+        "text": "We're gonna do a mug object in.",
+        "start": 1374.824,
+        "duration": 1.62
+    },
+    {
+        "text": "Its simpler,",
+        "start": 1376.444,
+        "duration": 0.87
+    },
+    {
+        "text": "and we want to use the\npredefined object initializer.",
+        "start": 1381.454,
+        "duration": 4.32
+    },
+    {
+        "text": "Okay.",
+        "start": 1387.379,
+        "duration": 0.3
+    },
+    {
+        "text": "And that should be a\nworking configuration.",
+        "start": 1390.199,
+        "duration": 3.81
+    },
+    {
+        "text": "So we have, let me just reduce\nit so it's easier to see.",
+        "start": 1395.059,
+        "duration": 7.47
+    },
+    {
+        "text": "Okay.",
+        "start": 1405.229,
+        "duration": 0.24
+    },
+    {
+        "text": "So we have our, want to\nsupervise machine experiment.",
+        "start": 1405.499,
+        "duration": 3.36
+    },
+    {
+        "text": "We have a configuration.",
+        "start": 1409.009,
+        "duration": 1.26
+    },
+    {
+        "text": "High level configuration\nfor the experiment here.",
+        "start": 1411.004,
+        "duration": 2.37
+    },
+    {
+        "text": "Then we have logging Monty, our\nenvironment set up, and then",
+        "start": 1413.704,
+        "duration": 4.59
+    },
+    {
+        "text": "how, is our training going to\ninterface with the environment?",
+        "start": 1419.074,
+        "duration": 2.7
+    },
+    {
+        "text": "So for logging, we specified\nour run name and then.",
+        "start": 1422.224,
+        "duration": 3.21
+    },
+    {
+        "text": "What log, multi log level, what\nmulti handlers we wanna do.",
+        "start": 1426.364,
+        "duration": 3.51
+    },
+    {
+        "text": "These are like data\ntelemetry level and handlers.",
+        "start": 1429.904,
+        "duration": 3.33
+    },
+    {
+        "text": "And then this is your\nkind of standard logging.",
+        "start": 1433.624,
+        "duration": 3.33
+    },
+    {
+        "text": "it's gonna be info and we're gonna\nlog to a file into a standard error.",
+        "start": 1437.884,
+        "duration": 3.66
+    },
+    {
+        "text": "That's where we're gonna do it at.",
+        "start": 1442.054,
+        "duration": 1.14
+    },
+    {
+        "text": "one DB is ignored.",
+        "start": 1444.814,
+        "duration": 1.14
+    },
+    {
+        "text": "Settings are ignored because we\ndidn't specify any one DB handlers.",
+        "start": 1446.194,
+        "duration": 3.33
+    },
+    {
+        "text": "Then we configure Monty.",
+        "start": 1450.244,
+        "duration": 1.14
+    },
+    {
+        "text": "A multi configurations confi consists of,",
+        "start": 1452.644,
+        "duration": 2.61
+    },
+    {
+        "text": "this.",
+        "start": 1458.704,
+        "duration": 0.57
+    },
+    {
+        "text": "And so we have a multi class, which\nwe're gonna give it some arguments.",
+        "start": 1459.454,
+        "duration": 3.03
+    },
+    {
+        "text": "We also need to configure our motor\nsystem, our learning module configuration,",
+        "start": 1462.484,
+        "duration": 3.03
+    },
+    {
+        "text": "our sensorimotor module configurations,\nand then we need to define how the",
+        "start": 1465.514,
+        "duration": 3.33
+    },
+    {
+        "text": "network of agents to sensorimotor\nmodules to learning modules looks like.",
+        "start": 1468.844,
+        "duration": 3.54
+    },
+    {
+        "text": "So for Monty Arcs, here's\nthe arguments that we passed",
+        "start": 1473.314,
+        "duration": 4.17
+    },
+    {
+        "text": "in for modern configuration.",
+        "start": 1477.484,
+        "duration": 2.16
+    },
+    {
+        "text": "We need to specify motor system\nclass and motor system arcs, which",
+        "start": 1480.019,
+        "duration": 2.52
+    },
+    {
+        "text": "takes a policy and policy arguments.",
+        "start": 1482.539,
+        "duration": 1.74
+    },
+    {
+        "text": "And then policies also take action sampler\nas an action arguments like And then,",
+        "start": 1484.279,
+        "duration": 4.74
+    },
+    {
+        "text": "we have learning module configurations.",
+        "start": 1489.619,
+        "duration": 1.74
+    },
+    {
+        "text": "In this case we specified learning\nmodule class, learning module arcs.",
+        "start": 1491.389,
+        "duration": 4.77
+    },
+    {
+        "text": "I think I'm missing something here.",
+        "start": 1496.159,
+        "duration": 1.68
+    },
+    {
+        "text": "Let me just double check\nthat this is set up.",
+        "start": 1497.899,
+        "duration": 3.99
+    },
+    {
+        "text": "This learning module\nconfiguration is set up correctly.",
+        "start": 1502.189,
+        "duration": 2.94
+    },
+    {
+        "text": "Okay.",
+        "start": 1508.969,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah, I am, I, made a mistake here.",
+        "start": 1509.269,
+        "duration": 1.89
+    },
+    {
+        "text": "this is this, yeah.",
+        "start": 1512.239,
+        "duration": 1.89
+    },
+    {
+        "text": "Learning module.",
+        "start": 1514.699,
+        "duration": 0.54
+    },
+    {
+        "text": "Configure is a dictionary.",
+        "start": 1515.239,
+        "duration": 1.17
+    },
+    {
+        "text": "so this is our learning module zero,\nand this is class and arguments.",
+        "start": 1516.979,
+        "duration": 3.81
+    },
+    {
+        "text": "Okay.",
+        "start": 1520.819,
+        "duration": 0.24
+    },
+    {
+        "text": "This is the correction here, and then\nthe sensorimotor module configuration.",
+        "start": 1521.179,
+        "duration": 3.45
+    },
+    {
+        "text": "Similarly, we have Sensorimotor Module\nZero on Sensorimotor module one, and.",
+        "start": 1524.629,
+        "duration": 4.83
+    },
+    {
+        "text": "For this one, we have actual sensorimotor\nmodule, it's ID and what features we",
+        "start": 1530.389,
+        "duration": 3.96
+    },
+    {
+        "text": "wanna pass to the learning module.",
+        "start": 1534.349,
+        "duration": 1.47
+    },
+    {
+        "text": "And then we have our probe that we use\nfor like visualizations and other things.",
+        "start": 1536.149,
+        "duration": 4.83
+    },
+    {
+        "text": "So that's sensorimotor module\nconfigs mapping between sensorimotor",
+        "start": 1541.039,
+        "duration": 4.02
+    },
+    {
+        "text": "modules and agents, sensorimotor\nmodules and learning modules, and",
+        "start": 1545.059,
+        "duration": 3.585
+    },
+    {
+        "text": "then learning modules and voting.",
+        "start": 1548.644,
+        "duration": 2.775
+    },
+    {
+        "text": "not applicable in this case.",
+        "start": 1551.959,
+        "duration": 1.14
+    },
+    {
+        "text": "Then we have our environment\nconfiguration where we have, our.",
+        "start": 1553.519,
+        "duration": 5.19
+    },
+    {
+        "text": "what we're environment we are gonna\nstand up, which is habitat, and then",
+        "start": 1559.619,
+        "duration": 3.2
+    },
+    {
+        "text": "what arguments we're gonna pass to that,\nand then the transforms that we wanted",
+        "start": 1562.819,
+        "duration": 3.45
+    },
+    {
+        "text": "to do before we pass the observations\nfrom the environment to Monty.",
+        "start": 1566.269,
+        "duration": 3.38
+    },
+    {
+        "text": "And then, this is just an artifact\nof how a Q it currently is.",
+        "start": 1570.259,
+        "duration": 3.51
+    },
+    {
+        "text": "Just put RNG all here.",
+        "start": 1574.084,
+        "duration": 2.07
+    },
+    {
+        "text": "but don't worry about it for now.",
+        "start": 1576.484,
+        "duration": 1.05
+    },
+    {
+        "text": "Any farther.",
+        "start": 1577.684,
+        "duration": 0.48
+    },
+    {
+        "text": "And then inside, this is habitat specific.",
+        "start": 1579.154,
+        "duration": 2.43
+    },
+    {
+        "text": "Now we need to specify what agents\nwe have with objects, CID, and",
+        "start": 1581.584,
+        "duration": 3.99
+    },
+    {
+        "text": "the data path where habitat should\nbe getting it's, objects from.",
+        "start": 1585.574,
+        "duration": 3.27
+    },
+    {
+        "text": "And then these is the, list\nof transfers that we want to",
+        "start": 1588.934,
+        "duration": 2.43
+    },
+    {
+        "text": "apply to those observations.",
+        "start": 1591.364,
+        "duration": 1.68
+    },
+    {
+        "text": "And then lastly, how the training,\nthe how the training is going to",
+        "start": 1593.854,
+        "duration": 3.66
+    },
+    {
+        "text": "interact with the environment.",
+        "start": 1597.514,
+        "duration": 1.56
+    },
+    {
+        "text": "So environment, interface per object.",
+        "start": 1599.554,
+        "duration": 2.04
+    },
+    {
+        "text": "And we're just gonna present a mug and\nwe use the predefined object initializer.",
+        "start": 1602.644,
+        "duration": 5.25
+    },
+    {
+        "text": "And with that we have our, my Experiment,\nmulti configuration, the hard way.",
+        "start": 1608.284,
+        "duration": 7.68
+    },
+    {
+        "text": "And over here, we will, should be\nable to now, from top level do run",
+        "start": 1616.714,
+        "duration": 7.23
+    },
+    {
+        "text": "parallel experiment equals actually\njust may just run, not run parallel.",
+        "start": 1624.004,
+        "duration": 6.395
+    },
+    {
+        "text": "Experiment equals, my experiment.",
+        "start": 1632.119,
+        "duration": 2.19
+    },
+    {
+        "text": "the reason this works, my experiment\nequals my experiment is because",
+        "start": 1636.169,
+        "duration": 3.6
+    },
+    {
+        "text": "inside the Conf Experiment folder, we\ncreated a file called My Experiment.",
+        "start": 1639.769,
+        "duration": 5.19
+    },
+    {
+        "text": "And so that's how that mapping goes.",
+        "start": 1644.959,
+        "duration": 1.885
+    },
+    {
+        "text": "if we were to create it, and if\nmy experiment was inside tutorial,",
+        "start": 1649.264,
+        "duration": 3.87
+    },
+    {
+        "text": "then I would have to do experiment\nequals tutorial my experiment.",
+        "start": 1653.134,
+        "duration": 4.62
+    },
+    {
+        "text": "But I just, because I put it at\ntop level, it should be here.",
+        "start": 1657.874,
+        "duration": 2.16
+    },
+    {
+        "text": "All right.",
+        "start": 1660.664,
+        "duration": 0.18
+    },
+    {
+        "text": "He goes, nothing.",
+        "start": 1660.844,
+        "duration": 0.57
+    },
+    {
+        "text": "Oh no.",
+        "start": 1665.025,
+        "duration": 0.54
+    },
+    {
+        "text": "What did I do?",
+        "start": 1665.565,
+        "duration": 0.72
+    },
+    {
+        "text": "Key error Monty.",
+        "start": 1666.495,
+        "duration": 1.06
+    },
+    {
+        "text": "Config,",
+        "start": 1667.575,
+        "duration": 0.72
+    },
+    {
+        "text": "let's see.",
+        "start": 1670.695,
+        "duration": 0.57
+    },
+    {
+        "text": "Oh, I called it Monty.",
+        "start": 1673.815,
+        "duration": 1.88
+    },
+    {
+        "text": "It's Monty config.",
+        "start": 1676.185,
+        "duration": 0.63
+    },
+    {
+        "text": "I think that should fix it.",
+        "start": 1679.515,
+        "duration": 1.11
+    },
+    {
+        "text": "Let's run it again.",
+        "start": 1681.705,
+        "duration": 0.75
+    },
+    {
+        "text": "And there we go.",
+        "start": 1687.735,
+        "duration": 0.75
+    },
+    {
+        "text": "There is our training happening.",
+        "start": 1689.115,
+        "duration": 1.98
+    },
+    {
+        "text": "It doesn't do anything interesting\nbecause we just wanted to demonstrate",
+        "start": 1691.095,
+        "duration": 3.84
+    },
+    {
+        "text": "the configuration and things running,\nbut it's done running and it, the",
+        "start": 1694.935,
+        "duration": 2.97
+    },
+    {
+        "text": "thing, this concludes the demonstration.",
+        "start": 1697.905,
+        "duration": 3.03
+    }
+]

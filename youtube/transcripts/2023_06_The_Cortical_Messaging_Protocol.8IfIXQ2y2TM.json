@@ -1,0 +1,1392 @@
+[
+    {
+        "text": "this presentation is about the common\n/ cortical communication protocol.",
+        "start": 8.045,
+        "duration": 5.072
+    },
+    {
+        "text": "it doesn't sound like much, but it's\nthe glue within the Monty system.",
+        "start": 14.847,
+        "duration": 4.61
+    },
+    {
+        "text": "so what actually is it?",
+        "start": 24.821,
+        "duration": 1.56
+    },
+    {
+        "text": "I don't know who is there, but if you\nwere, do you remember November 2021?",
+        "start": 27.221,
+        "duration": 4.91
+    },
+    {
+        "text": "We had this meeting and Jeff\nwrote on this whiteboard.",
+        "start": 32.681,
+        "duration": 3.11
+    },
+    {
+        "text": "and we were talking about\nthe, yeah, it's yours.",
+        "start": 36.771,
+        "duration": 4.27
+    },
+    {
+        "text": "I went back into the meeting recordings.",
+        "start": 43.021,
+        "duration": 2.19
+    },
+    {
+        "text": "but yeah, we were talking about\nthe cortical communication",
+        "start": 48.131,
+        "duration": 2.29
+    },
+    {
+        "text": "protocol or also the AI bus.",
+        "start": 50.421,
+        "duration": 2.61
+    },
+    {
+        "text": "Also, Everyone hated it,\nso we didn't use that.",
+        "start": 53.031,
+        "duration": 3.335
+    },
+    {
+        "text": "Yeah,",
+        "start": 57.751,
+        "duration": 0.39
+    },
+    {
+        "text": "yeah, talking about, how we might,\nbuild out an AI bus, which is a common",
+        "start": 60.521,
+        "duration": 7.62
+    },
+    {
+        "text": "protocol of how the components in\nMonty communicate with each other.",
+        "start": 68.651,
+        "duration": 4.29
+    },
+    {
+        "text": "So how learning modules communicate, how\nsensor modules communicate and so on.",
+        "start": 72.981,
+        "duration": 3.93
+    },
+    {
+        "text": "And it was talked about as like AI bus\nas a platform when vendors sell sensor",
+        "start": 77.471,
+        "duration": 5.37
+    },
+    {
+        "text": "modules, robotic modules, and so on.",
+        "start": 82.901,
+        "duration": 2.7
+    },
+    {
+        "text": "and.",
+        "start": 88.201,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 89.966,
+        "duration": 0.41
+    },
+    {
+        "text": "In the same meeting, there was also\nput up like a product roadmap with,",
+        "start": 90.666,
+        "duration": 3.98
+    },
+    {
+        "text": "potentially looking into reference\nframes and TBT next, and then also",
+        "start": 96.786,
+        "duration": 4.16
+    },
+    {
+        "text": "options for what to do next, at\nAI bus research listed down here.",
+        "start": 100.966,
+        "duration": 4.79
+    },
+    {
+        "text": "And I just drew two circles around\nthis, which turned, as I would",
+        "start": 105.756,
+        "duration": 5.23
+    },
+    {
+        "text": "say, into the Monty project now.",
+        "start": 110.986,
+        "duration": 1.81
+    },
+    {
+        "text": "and yeah, this is, there's\nalso the mega project came,",
+        "start": 115.466,
+        "duration": 3.61
+    },
+    {
+        "text": "It was listed here as well.",
+        "start": 121.561,
+        "duration": 1.16
+    },
+    {
+        "text": "But anyways, the idea of this\ncommunication protocol was pretty",
+        "start": 123.271,
+        "duration": 5.03
+    },
+    {
+        "text": "much at the beginning of Monty,\nand it's still there even though",
+        "start": 128.301,
+        "duration": 4.05
+    },
+    {
+        "text": "we don't talk about it that often.",
+        "start": 132.351,
+        "duration": 1.43
+    },
+    {
+        "text": "So what, where do we\nactually need this protocol?",
+        "start": 136.401,
+        "duration": 3.86
+    },
+    {
+        "text": "So Monty, just as a refresher,\nhas three major components.",
+        "start": 140.931,
+        "duration": 4.47
+    },
+    {
+        "text": "We have sensor modules, we have learning\nmodules, and we have motor systems.",
+        "start": 145.401,
+        "duration": 4.99
+    },
+    {
+        "text": "And then we have communication within\nMonty, which includes sensor module",
+        "start": 151.416,
+        "duration": 4.81
+    },
+    {
+        "text": "to learning module to learning module\nhierarchically, and learning module to",
+        "start": 156.256,
+        "duration": 6.09
+    },
+    {
+        "text": "learning module, through lateral voting.",
+        "start": 162.626,
+        "duration": 3.32
+    },
+    {
+        "text": "one note on the hierarchical\ncommunication, it can also go top down.",
+        "start": 167.496,
+        "duration": 4.97
+    },
+    {
+        "text": "from the top to the lower\nlevel learning module.",
+        "start": 174.196,
+        "duration": 2.3
+    },
+    {
+        "text": "and then finally, learning\nmodule to, motor system.",
+        "start": 179.281,
+        "duration": 5.61
+    },
+    {
+        "text": "And then we have communication\nbetween Monty and the world,",
+        "start": 185.831,
+        "duration": 3.08
+    },
+    {
+        "text": "which includes world to sensor\nmodule and motor system to world.",
+        "start": 189.511,
+        "duration": 5.23
+    },
+    {
+        "text": "And basically, we want that all of\nthe communication within Monty uses a",
+        "start": 195.921,
+        "duration": 4.95
+    },
+    {
+        "text": "common communication protocol, a common\nformat, what is always communicated.",
+        "start": 200.871,
+        "duration": 4.32
+    },
+    {
+        "text": "And basically, these two are the interface\nbetween Monty and the real world.",
+        "start": 206.311,
+        "duration": 5.65
+    },
+    {
+        "text": "the main job of the sensor\nmodule is to convert raw data",
+        "start": 212.991,
+        "duration": 2.96
+    },
+    {
+        "text": "into the communication protocol.",
+        "start": 215.971,
+        "duration": 2.27
+    },
+    {
+        "text": "And then the motor system converts.",
+        "start": 219.221,
+        "duration": 1.66
+    },
+    {
+        "text": "The CCP into motor commands\nlike muscle movements or moving",
+        "start": 222.756,
+        "duration": 4.089
+    },
+    {
+        "text": "actuators in the real world.",
+        "start": 226.846,
+        "duration": 2.19
+    },
+    {
+        "text": "okay.",
+        "start": 232.906,
+        "duration": 0.46
+    },
+    {
+        "text": "Why do we need the CCP?",
+        "start": 233.566,
+        "duration": 1.67
+    },
+    {
+        "text": "this is a nice figure\nthat Jeff made, I think.",
+        "start": 237.346,
+        "duration": 3.07
+    },
+    {
+        "text": "and it nicely illustrates, I think of,\nHow we want Monty to be a really flexible",
+        "start": 241.676,
+        "duration": 5.24
+    },
+    {
+        "text": "system, where we can just plug and play\nthese individual components as we want.",
+        "start": 246.916,
+        "duration": 6.23
+    },
+    {
+        "text": "We want to be able to have\nas many learning modules from",
+        "start": 253.166,
+        "duration": 5.19
+    },
+    {
+        "text": "potentially different modalities\ninteracting with each other.",
+        "start": 258.396,
+        "duration": 3.56
+    },
+    {
+        "text": "We want to be able to stack them on top\nof each other, to have a deeper hierarchy.",
+        "start": 261.996,
+        "duration": 5.32
+    },
+    {
+        "text": "You might want to have the possibility\nfor parallelism, and that's really only",
+        "start": 268.666,
+        "duration": 5.77
+    },
+    {
+        "text": "possible if they all have a very similar,\nor all have the same interface and we can,",
+        "start": 274.436,
+        "duration": 4.8
+    },
+    {
+        "text": "yeah, easily combine them into arbitrary\narchitectures, depending on the problem.",
+        "start": 279.876,
+        "duration": 4.38
+    },
+    {
+        "text": "Okay, how do we define the CCP?",
+        "start": 286.416,
+        "duration": 1.95
+    },
+    {
+        "text": "So this is how it is\nimplemented in the code.",
+        "start": 289.826,
+        "duration": 3.53
+    },
+    {
+        "text": "we'll go into a bit more abstract as well.",
+        "start": 294.351,
+        "duration": 2.1
+    },
+    {
+        "text": "So basically, all Monty components\nexpect instances of the state class as",
+        "start": 297.161,
+        "duration": 4.34
+    },
+    {
+        "text": "input and are expected to output them.",
+        "start": 301.521,
+        "duration": 3.35
+    },
+    {
+        "text": "That kind of enforces, All the\nmessages passed within Monty to contain",
+        "start": 305.521,
+        "duration": 5.035
+    },
+    {
+        "text": "certain attributes or information.",
+        "start": 311.106,
+        "duration": 2.38
+    },
+    {
+        "text": "State always has the same\nattributes and is just interpreted",
+        "start": 316.196,
+        "duration": 2.96
+    },
+    {
+        "text": "differently in different contexts.",
+        "start": 319.206,
+        "duration": 1.74
+    },
+    {
+        "text": "So what does that mean?",
+        "start": 321.096,
+        "duration": 0.94
+    },
+    {
+        "text": "For example, a state output\nfrom the sensor module is",
+        "start": 322.686,
+        "duration": 3.08
+    },
+    {
+        "text": "interpreted as an observed state.",
+        "start": 325.766,
+        "duration": 2.24
+    },
+    {
+        "text": "The learning module output\nis a hypothesized state.",
+        "start": 329.176,
+        "duration": 2.85
+    },
+    {
+        "text": "which object do I think I'm on right now,\nand what do I think is the pose of it?",
+        "start": 333.181,
+        "duration": 4.1
+    },
+    {
+        "text": "learning module votes, so lateral\noutputs are all possible states,",
+        "start": 339.001,
+        "duration": 3.91
+    },
+    {
+        "text": "so list of state instances.",
+        "start": 343.921,
+        "duration": 1.62
+    },
+    {
+        "text": "And then, finally, the motor\noutput is a target state,",
+        "start": 346.551,
+        "duration": 3.97
+    },
+    {
+        "text": "and just encode, so you can\nsee it, for example, here.",
+        "start": 352.921,
+        "duration": 3.19
+    },
+    {
+        "text": "Hypothesized state would be the\noutput of the learning module.",
+        "start": 356.676,
+        "duration": 2.93
+    },
+    {
+        "text": "Your observed state, this would be\nthe output of the sensor module.",
+        "start": 360.416,
+        "duration": 2.91
+    },
+    {
+        "text": "This would be your vote.",
+        "start": 363.406,
+        "duration": 1.05
+    },
+    {
+        "text": "And they all have the same attributes.",
+        "start": 364.976,
+        "duration": 3.07
+    },
+    {
+        "text": "so what are these attributes?",
+        "start": 372.036,
+        "duration": 1.8
+    },
+    {
+        "text": "So each state communicates a location\nand orientation, which is the pose",
+        "start": 374.626,
+        "duration": 5.73
+    },
+    {
+        "text": "in a common reference frame, for\nexample, relative to the body and",
+        "start": 380.916,
+        "duration": 5.32
+    },
+    {
+        "text": "features at this pose and features.",
+        "start": 386.366,
+        "duration": 2.21
+    },
+    {
+        "text": "are optional and it can have as\nmany features as wants and, features",
+        "start": 389.916,
+        "duration": 6.25
+    },
+    {
+        "text": "can also be modality specific.",
+        "start": 396.166,
+        "duration": 1.84
+    },
+    {
+        "text": "And then on the side, some\nadditional information that we",
+        "start": 400.031,
+        "duration": 3.28
+    },
+    {
+        "text": "use for information routing and\nweighing is a confidence value.",
+        "start": 403.311,
+        "duration": 4.19
+    },
+    {
+        "text": "So how confident am I in this location\nand orientation and the features that",
+        "start": 407.521,
+        "duration": 5.32
+    },
+    {
+        "text": "are detected, a sender ID, sender\ntype, which is learning module or",
+        "start": 412.841,
+        "duration": 7.19
+    },
+    {
+        "text": "sensor module, because they are\ntreated differently in some cases.",
+        "start": 420.071,
+        "duration": 3.11
+    },
+    {
+        "text": "And whether to use this state,\nwhich is just a Boolean.",
+        "start": 424.176,
+        "duration": 3.58
+    },
+    {
+        "text": "almost last slide.",
+        "start": 430.116,
+        "duration": 1.02
+    },
+    {
+        "text": "What are the attributes of\nstate and detail in the code?",
+        "start": 431.206,
+        "duration": 2.81
+    },
+    {
+        "text": "So at the moment, location is\nexplicitly expressed as XYZ",
+        "start": 434.176,
+        "duration": 5.27
+    },
+    {
+        "text": "coordinates relative to the body.",
+        "start": 439.446,
+        "duration": 1.67
+    },
+    {
+        "text": "Then we have morphological\nfeatures, which is a dictionary.",
+        "start": 442.306,
+        "duration": 2.91
+    },
+    {
+        "text": "It must contain pose vectors, which\nare three orthonormal unit vectors.",
+        "start": 445.606,
+        "duration": 4.75
+    },
+    {
+        "text": "They encode the orientation.",
+        "start": 450.566,
+        "duration": 1.68
+    },
+    {
+        "text": "So together those two represent the pose.",
+        "start": 452.836,
+        "duration": 2.3
+    },
+    {
+        "text": "And we have pose fully\ndefined, which just tells us.",
+        "start": 456.686,
+        "duration": 2.51
+    },
+    {
+        "text": "how much, does the, is the\norientation fully defined?",
+        "start": 460.741,
+        "duration": 3.99
+    },
+    {
+        "text": "Do we have some symmetries, for example?",
+        "start": 464.751,
+        "duration": 2.19
+    },
+    {
+        "text": "And then non morphological features,\nagain, it's a dictionary, it's optional,",
+        "start": 469.151,
+        "duration": 4.2
+    },
+    {
+        "text": "variable length and type can be\nmodality specific, these features don't",
+        "start": 474.031,
+        "duration": 5.64
+    },
+    {
+        "text": "change when the object pose changes.",
+        "start": 479.671,
+        "duration": 1.75
+    },
+    {
+        "text": "So for example, color, curvature, or\ntemperature, or something like that.",
+        "start": 481.421,
+        "duration": 4.62
+    },
+    {
+        "text": "And then confidence is between 0 and\n1, your state is just a Boolean flag.",
+        "start": 487.441,
+        "duration": 6.32
+    },
+    {
+        "text": "Sender ID is a unique string for\neach of the building blocks of",
+        "start": 494.206,
+        "duration": 3.34
+    },
+    {
+        "text": "Monty, and then sender type is either\nsensor module or learning module.",
+        "start": 497.546,
+        "duration": 5.01
+    },
+    {
+        "text": "So here, in the, there's no\ninformation as to whether it's",
+        "start": 506.346,
+        "duration": 3.86
+    },
+    {
+        "text": "visual or auditory or tactile.",
+        "start": 510.206,
+        "duration": 2.04
+    },
+    {
+        "text": "It's just completely\nindependent of that, right?",
+        "start": 512.256,
+        "duration": 2.78
+    },
+    {
+        "text": "Yes.",
+        "start": 515.536,
+        "duration": 0.58
+    },
+    {
+        "text": "So the non morphological features.",
+        "start": 516.696,
+        "duration": 2.48
+    },
+    {
+        "text": "Might be like features that can only be\ndetected by a vision, like color, but,",
+        "start": 519.601,
+        "duration": 5.19
+    },
+    {
+        "text": "yeah, you, it's always the same\nformat and always the same attribute",
+        "start": 526.851,
+        "duration": 5.03
+    },
+    {
+        "text": "types, independent of modality.",
+        "start": 531.931,
+        "duration": 2.57
+    },
+    {
+        "text": "But even the features, it\nseems to the receiver, you",
+        "start": 538.871,
+        "duration": 3.41
+    },
+    {
+        "text": "don't, they don't really care.",
+        "start": 542.281,
+        "duration": 1.71
+    },
+    {
+        "text": "It just might be color, but they don't,\nat least in the brain, it's just patterns.",
+        "start": 544.161,
+        "duration": 4.03
+    },
+    {
+        "text": "You don't know.",
+        "start": 548.271,
+        "duration": 0.55
+    },
+    {
+        "text": "Exactly.",
+        "start": 549.341,
+        "duration": 0.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 549.831,
+        "duration": 0.14
+    },
+    {
+        "text": "It doesn't matter what\nit actually represents.",
+        "start": 549.971,
+        "duration": 1.92
+    },
+    {
+        "text": "We were talking about that this morning\nand it's one of the most amazing things",
+        "start": 553.526,
+        "duration": 4.53
+    },
+    {
+        "text": "about brains is that the neurons don't\nknow anything, they don't know what",
+        "start": 558.086,
+        "duration": 3.97
+    },
+    {
+        "text": "they're looking at, they don't know\nwhat data represents, they're just cells",
+        "start": 562.056,
+        "duration": 4.61
+    },
+    {
+        "text": "and the system has to work completely.",
+        "start": 566.666,
+        "duration": 5.81
+    },
+    {
+        "text": "With nothing knowing anything\nabout the nature of the data,",
+        "start": 572.896,
+        "duration": 3.774
+    },
+    {
+        "text": "but it's a fact for brains,",
+        "start": 576.671,
+        "duration": 1.09
+    },
+    {
+        "text": "each neuron just has dendrites\nand connections and learning.",
+        "start": 580.101,
+        "duration": 3.01
+    },
+    {
+        "text": "It sounds simple, but the depth\nof that, making a system work",
+        "start": 585.151,
+        "duration": 4.76
+    },
+    {
+        "text": "this way and understanding it's\nactually very challenging, I",
+        "start": 589.921,
+        "duration": 2.46
+    },
+    {
+        "text": "still struggle with it myself.",
+        "start": 592.381,
+        "duration": 1.499
+    },
+    {
+        "text": "Yeah, and we've been So for the past,\nyeah, since November 2021, we've been",
+        "start": 593.88,
+        "duration": 6.171
+    },
+    {
+        "text": "implementing all the Monty components\nto figure out what actually do we",
+        "start": 600.471,
+        "duration": 5.33
+    },
+    {
+        "text": "need to communicate between them\nand to fine tune this information.",
+        "start": 605.801,
+        "duration": 4.81
+    },
+    {
+        "text": "it was pretty clear from the beginning\nthat we want to communicate features.",
+        "start": 610.981,
+        "duration": 3.75
+    },
+    {
+        "text": "and poses, but just whether this all\nworks and we can, and that we can",
+        "start": 615.471,
+        "duration": 5.61
+    },
+    {
+        "text": "actually use this format for all,\nthe different types of communication",
+        "start": 621.081,
+        "duration": 4.14
+    },
+    {
+        "text": "within Monty, really came together\nnicely in the past months, I think.",
+        "start": 625.231,
+        "duration": 4.83
+    },
+    {
+        "text": "This is really nice.",
+        "start": 631.241,
+        "duration": 0.84
+    },
+    {
+        "text": "I didn't know you were\ndoing all this stuff.",
+        "start": 632.491,
+        "duration": 1.09
+    },
+    {
+        "text": "Yeah, I can go to the last slide\njust with what we can do now.",
+        "start": 636.451,
+        "duration": 2.93
+    },
+    {
+        "text": "and then, but yeah, go ahead if you\nwant to do some, say something first.",
+        "start": 640.461,
+        "duration": 3.97
+    },
+    {
+        "text": "Okay.",
+        "start": 644.431,
+        "duration": 2.059
+    },
+    {
+        "text": "So yeah, given this, nice protocol that\nwe have, we can now flexibly combine",
+        "start": 648.671,
+        "duration": 6.16
+    },
+    {
+        "text": "Monty components and generate arbitrarily\nlarge and complex architectures.",
+        "start": 654.841,
+        "duration": 4.53
+    },
+    {
+        "text": "we can use the inputs to learning\nmodules to model sensorimotor input",
+        "start": 661.591,
+        "duration": 4.2
+    },
+    {
+        "text": "using reference frames, which is not\ndirectly Like that much related to",
+        "start": 665.791,
+        "duration": 5.925
+    },
+    {
+        "text": "the CCP, but we needed to make sure\nthat we have all the information",
+        "start": 671.716,
+        "duration": 3.3
+    },
+    {
+        "text": "in the CCP to be able to do this.",
+        "start": 676.106,
+        "duration": 3.21
+    },
+    {
+        "text": "And yeah, basically we can, given\nthe features and poses, we can",
+        "start": 679.806,
+        "duration": 5.25
+    },
+    {
+        "text": "perform fast learning of structured\nmodels and fast and robust inference",
+        "start": 685.076,
+        "duration": 4.58
+    },
+    {
+        "text": "on object ID and pose based on\narbitrary movement over the object.",
+        "start": 689.766,
+        "duration": 4.64
+    },
+    {
+        "text": "We can vote between models\nof different modalities.",
+        "start": 696.596,
+        "duration": 3.19
+    },
+    {
+        "text": "We can combine multi sensory\nmodels of object components into",
+        "start": 701.526,
+        "duration": 4.72
+    },
+    {
+        "text": "compositional objects and scenes.",
+        "start": 706.276,
+        "duration": 1.83
+    },
+    {
+        "text": "That's the hierarchy work\nwe've been doing lately.",
+        "start": 708.796,
+        "duration": 3.46
+    },
+    {
+        "text": "And use learned models to guide movement\nand interact with the world efficiently.",
+        "start": 713.936,
+        "duration": 4.71
+    },
+    {
+        "text": "That's work that Niels has been doing.",
+        "start": 718.776,
+        "duration": 2.09
+    },
+    {
+        "text": "And, yeah, that's it.",
+        "start": 722.721,
+        "duration": 4.309
+    },
+    {
+        "text": "Wow.",
+        "start": 727.031,
+        "duration": 0.47
+    },
+    {
+        "text": "Any questions?",
+        "start": 732.811,
+        "duration": 1.02
+    },
+    {
+        "text": "No, I didn't know all this was going on.",
+        "start": 734.071,
+        "duration": 1.39
+    },
+    {
+        "text": "Maybe you worked on this in context of the\npatents or something, like they just got",
+        "start": 735.461,
+        "duration": 5.423
+    },
+    {
+        "text": "today, They implemented this a while ago.",
+        "start": 740.884,
+        "duration": 3.327
+    },
+    {
+        "text": "they have to show all the If anything,\nwe see it like this, and it's",
+        "start": 744.351,
+        "duration": 4.35
+    },
+    {
+        "text": "simply really quite amazing to me.",
+        "start": 748.721,
+        "duration": 1.54
+    },
+    {
+        "text": "I think, that's exposed in something.",
+        "start": 751.76,
+        "duration": 1.991
+    },
+    {
+        "text": "One way to think about Monty and with the\nbrain is that we always think about AI",
+        "start": 753.761,
+        "duration": 5.95
+    },
+    {
+        "text": "systems or vision systems or whatever it\nis, processing visual data or processing",
+        "start": 759.731,
+        "duration": 5.99
+    },
+    {
+        "text": "auditory data or processing tactile data.",
+        "start": 765.731,
+        "duration": 1.91
+    },
+    {
+        "text": "But I think what's exposed here\nand one of the strange lessons of",
+        "start": 768.371,
+        "duration": 4.43
+    },
+    {
+        "text": "thousand brains theory is that The\nbrain is really a processor of space.",
+        "start": 772.801,
+        "duration": 4.33
+    },
+    {
+        "text": "That's what it is.",
+        "start": 778.091,
+        "duration": 0.56
+    },
+    {
+        "text": "It processes space, the data type of space\nand pose and orientation, and the vast",
+        "start": 778.721,
+        "duration": 5.36
+    },
+    {
+        "text": "majority of what's going on in your brain\nis processing reference frames and spaces",
+        "start": 784.081,
+        "duration": 4.07
+    },
+    {
+        "text": "and distances and, it's just a process.",
+        "start": 788.411,
+        "duration": 3.104
+    },
+    {
+        "text": "And then the, what we typically think\nof, our sensory input is it's not,",
+        "start": 792.446,
+        "duration": 5.59
+    },
+    {
+        "text": "obviously it's important, but it's it's,\na feeder into the space processor, And",
+        "start": 798.126,
+        "duration": 6.61
+    },
+    {
+        "text": "it's oh yeah, we're going to use this\nstuff to figure out what's going on in",
+        "start": 804.736,
+        "duration": 2.86
+    },
+    {
+        "text": "all these positions of things in the\nworld, and how you know where everything",
+        "start": 807.596,
+        "duration": 3.25
+    },
+    {
+        "text": "is in relationship with how things move.",
+        "start": 810.846,
+        "duration": 1.68
+    },
+    {
+        "text": "it's just a, it's really a very\ndifferent way from traditionally",
+        "start": 814.501,
+        "duration": 3.71
+    },
+    {
+        "text": "thinking about both computing and AI,",
+        "start": 818.211,
+        "duration": 2.169
+    },
+    {
+        "text": "and, I think it's, really cool.",
+        "start": 822.601,
+        "duration": 3.12
+    },
+    {
+        "text": "It's interesting to think about\ntransformers because they, with",
+        "start": 830.781,
+        "duration": 4.01
+    },
+    {
+        "text": "language, it's just one need.",
+        "start": 834.791,
+        "duration": 1.28
+    },
+    {
+        "text": "But they had to put in a notion\nof position overlaid on the",
+        "start": 836.551,
+        "duration": 4.53
+    },
+    {
+        "text": "feature to get it to work.",
+        "start": 841.091,
+        "duration": 1.36
+    },
+    {
+        "text": "And then the more recent stuff is,\nI think it's a cyclical location.",
+        "start": 842.451,
+        "duration": 3.38
+    },
+    {
+        "text": "It's not an absolute location, basically.",
+        "start": 846.601,
+        "duration": 1.96
+    },
+    {
+        "text": "Going back to what Viviane presented, the\nnice thing about what you presented is",
+        "start": 848.561,
+        "duration": 4.89
+    },
+    {
+        "text": "that We're taking, laying a foundation\nfor, the whole idea is you're laying",
+        "start": 853.461,
+        "duration": 5.91
+    },
+    {
+        "text": "a foundation for which you can build\na sensorimotor, it is a backbone",
+        "start": 859.371,
+        "duration": 4.84
+    },
+    {
+        "text": "for how communications works and,",
+        "start": 864.251,
+        "duration": 3.39
+    },
+    {
+        "text": "and starting on that premise as\nopposed to slowly discovering it",
+        "start": 869.761,
+        "duration": 3.21
+    },
+    {
+        "text": "through various, AI projects and so on.",
+        "start": 872.971,
+        "duration": 2.21
+    },
+    {
+        "text": "to take a much more fundamental\napproach to the whole problem, which",
+        "start": 876.501,
+        "duration": 2.4
+    },
+    {
+        "text": "I think is something unique to them\nout there, and it's really cool that,",
+        "start": 878.901,
+        "duration": 2.84
+    },
+    {
+        "text": "I think that 3D position\norientation is something that",
+        "start": 884.801,
+        "duration": 2.77
+    },
+    {
+        "text": "could be elaborated over time.",
+        "start": 887.601,
+        "duration": 1.56
+    },
+    {
+        "text": "it serves exploring sensorimotor\nspace, but I have a feeling that",
+        "start": 889.301,
+        "duration": 5.41
+    },
+    {
+        "text": "it could generalize on that.",
+        "start": 894.741,
+        "duration": 1.26
+    },
+    {
+        "text": "But it could be in any, it doesn't have\nto be, it could be in some abstract space.",
+        "start": 896.051,
+        "duration": 5.56
+    },
+    {
+        "text": "No, absolutely.",
+        "start": 901.621,
+        "duration": 1.7
+    },
+    {
+        "text": "In fact, that's the only thing,\nif our communication protocol",
+        "start": 903.461,
+        "duration": 3.02
+    },
+    {
+        "text": "defines three dimensional space.",
+        "start": 906.531,
+        "duration": 1.5
+    },
+    {
+        "text": "That would be a limit, I\nthink, that brains don't exist.",
+        "start": 908.846,
+        "duration": 2.77
+    },
+    {
+        "text": "we define that it has to contain\na location and orientation.",
+        "start": 912.666,
+        "duration": 3.16
+    },
+    {
+        "text": "It doesn't say it has\nto be three dimensional.",
+        "start": 915.826,
+        "duration": 1.75
+    },
+    {
+        "text": "Wow, there you go, smart.",
+        "start": 917.596,
+        "duration": 1.53
+    },
+    {
+        "text": "I thought you said three dimensional.",
+        "start": 919.126,
+        "duration": 3.1
+    },
+    {
+        "text": "I think brains discover space.",
+        "start": 922.306,
+        "duration": 2.08
+    },
+    {
+        "text": "Neurons don't know about space.",
+        "start": 924.856,
+        "duration": 1.33
+    },
+    {
+        "text": "other parts of the brain do, perhaps,\nbut the neocortex, the neurons don't",
+        "start": 926.436,
+        "duration": 5.05
+    },
+    {
+        "text": "really, they just have to discover what\nspace, what actually the world looks like.",
+        "start": 931.486,
+        "duration": 4.72
+    },
+    {
+        "text": "But it really looks like\nthat's what they're doing.",
+        "start": 936.206,
+        "duration": 2.23
+    },
+    {
+        "text": "So we can say that you allow to have, the\nreal fundamental thing of those things is",
+        "start": 940.911,
+        "duration": 5.57
+    },
+    {
+        "text": "that they encode, independent dimensions.",
+        "start": 946.481,
+        "duration": 3.34
+    },
+    {
+        "text": "Yeah.",
+        "start": 951.901,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 953.771,
+        "duration": 0.34
+    },
+    {
+        "text": "And you need to be able to path integrate\nthrough that space, So like it works the",
+        "start": 954.111,
+        "duration": 6.74
+    },
+    {
+        "text": "same if, for example, in 2D Euclidean\nspace, it would all work the same",
+        "start": 960.851,
+        "duration": 6.32
+    },
+    {
+        "text": "as long as you can do like location\ntransforms and rotation transforms.",
+        "start": 967.171,
+        "duration": 4.52
+    },
+    {
+        "text": "Anything you feel is missing\nin the CCP right now?",
+        "start": 974.321,
+        "duration": 3.66
+    },
+    {
+        "text": "we've got some kind of exciting, I\nthink, exciting stuff in the pipeline.",
+        "start": 981.651,
+        "duration": 3.49
+    },
+    {
+        "text": "yeah, Viviane briefly touched on\nlike the, like motor, goal state.",
+        "start": 985.551,
+        "duration": 4.9
+    },
+    {
+        "text": "But, yeah, we're hoping that will\nreally unlock the hierarchical action",
+        "start": 991.001,
+        "duration": 3.92
+    },
+    {
+        "text": "policies where different learning modules\ncan pass goal states to each other",
+        "start": 994.921,
+        "duration": 5.29
+    },
+    {
+        "text": "and unlock this more like sub goal.",
+        "start": 1000.691,
+        "duration": 2.72
+    },
+    {
+        "text": "I think that's a pretty basic system\nwhere, at the moment, yeah, the policy",
+        "start": 1004.096,
+        "duration": 2.53
+    },
+    {
+        "text": "is still quite simple, but a lot of that\nis still, yeah, in the conceptual stage.",
+        "start": 1006.626,
+        "duration": 5.44
+    },
+    {
+        "text": "Yeah, it won't change the CCP.",
+        "start": 1012.856,
+        "duration": 2.5
+    },
+    {
+        "text": "The CCP will stay the same.",
+        "start": 1015.366,
+        "duration": 1.49
+    },
+    {
+        "text": "We're thinking about additional\nconnections in the network, like",
+        "start": 1017.296,
+        "duration": 2.94
+    },
+    {
+        "text": "top down connections, and like Niels\nsays, the motor command connections",
+        "start": 1020.246,
+        "duration": 3.81
+    },
+    {
+        "text": "are not really used at the moment.",
+        "start": 1024.416,
+        "duration": 2.15
+    },
+    {
+        "text": "and then another thing that we just\ntalked about in the research meeting",
+        "start": 1028.306,
+        "duration": 3.05
+    },
+    {
+        "text": "is that, as part of the features, for\nexample, that get communicated, we might",
+        "start": 1031.356,
+        "duration": 5.32
+    },
+    {
+        "text": "also communicate like object states and\nobject behaviors, but that can also still",
+        "start": 1036.676,
+        "duration": 6.92
+    },
+    {
+        "text": "be phrased in the framework of this CCP.",
+        "start": 1043.596,
+        "duration": 3.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 1047.316,
+        "duration": 0.15
+    },
+    {
+        "text": "In some sense, the goal state, what's,\nthat's an interesting one to think about.",
+        "start": 1047.466,
+        "duration": 4.4
+    },
+    {
+        "text": "What is the difference between\na goal state and an object?",
+        "start": 1051.886,
+        "duration": 2.46
+    },
+    {
+        "text": "a goal is still something you can\nreason about and, manipulate and decide",
+        "start": 1055.491,
+        "duration": 5.51
+    },
+    {
+        "text": "what aspect of the goal you want.",
+        "start": 1061.511,
+        "duration": 1.53
+    },
+    {
+        "text": "It's still, it's not that\ndifferent from an abstract concept.",
+        "start": 1063.101,
+        "duration": 2.86
+    },
+    {
+        "text": "Exactly, yeah, so I guess the\nkind of whole point we wanted",
+        "start": 1066.861,
+        "duration": 2.72
+    },
+    {
+        "text": "to do was unify that so that the\ngoal states are in the same form.",
+        "start": 1069.591,
+        "duration": 5.37
+    },
+    {
+        "text": "And basically, as you say,\nequivalent to the states that",
+        "start": 1075.301,
+        "duration": 4.22
+    },
+    {
+        "text": "a learning module can be in.",
+        "start": 1079.541,
+        "duration": 1.1
+    },
+    {
+        "text": "So as in, a learning module can\nexpress what it sees, or it can",
+        "start": 1080.641,
+        "duration": 3.32
+    },
+    {
+        "text": "receive a goal state of what it should\nbe in, what state it should be in.",
+        "start": 1084.351,
+        "duration": 5.23
+    },
+    {
+        "text": "And based on that goal state, it can\ntry and output other goal states,",
+        "start": 1089.941,
+        "duration": 3.72
+    },
+    {
+        "text": "other learning modules, or, like\nbasic motor actions to achieve that.",
+        "start": 1093.661,
+        "duration": 4.22
+    },
+    {
+        "text": "And that way we can also have\nhierarchical action policies.",
+        "start": 1098.961,
+        "duration": 2.92
+    },
+    {
+        "text": "So basically.",
+        "start": 1101.901,
+        "duration": 0.69
+    },
+    {
+        "text": "It can decompose a larger goal\nstate into sub goal states and",
+        "start": 1102.971,
+        "duration": 4.83
+    },
+    {
+        "text": "pass them down the hierarchy.",
+        "start": 1107.801,
+        "duration": 1.32
+    },
+    {
+        "text": "And a goal state could, for example, be\nI want the sensor to be in this location",
+        "start": 1109.971,
+        "duration": 5.92
+    },
+    {
+        "text": "and orientation, for example, so I get\nsome information to recognize the object.",
+        "start": 1115.891,
+        "duration": 4.34
+    },
+    {
+        "text": "It could also, in the future, we\ndon't, haven't implemented that",
+        "start": 1121.021,
+        "duration": 2.75
+    },
+    {
+        "text": "yet, be something like, I want\nthis object to be in that state.",
+        "start": 1123.771,
+        "duration": 3.65
+    },
+    {
+        "text": "to manipulate the world actually,\nin some way, not just sensing.",
+        "start": 1128.811,
+        "duration": 5.31
+    },
+    {
+        "text": "Here's an analogy I think it's\napt, you don't want me to go over",
+        "start": 1135.531,
+        "duration": 4.67
+    },
+    {
+        "text": "grandiose, but I think this is apt.",
+        "start": 1140.201,
+        "duration": 1.27
+    },
+    {
+        "text": "the internet is based on communication\nprotocol, it's very simple.",
+        "start": 1142.521,
+        "duration": 4.16
+    },
+    {
+        "text": "IP Addressing protocol\nand packets and so on.",
+        "start": 1147.061,
+        "duration": 2.78
+    },
+    {
+        "text": "And it was designed sufficiently\nrobustly that it enabled everything",
+        "start": 1150.606,
+        "duration": 3.8
+    },
+    {
+        "text": "we do on the internet today.",
+        "start": 1154.416,
+        "duration": 1.27
+    },
+    {
+        "text": "it's gone through a few revisions,\nbut pretty much held up intact.",
+        "start": 1157.236,
+        "duration": 2.94
+    },
+    {
+        "text": "I think the stuff you're working\non is as fundamental as that.",
+        "start": 1160.176,
+        "duration": 4.01
+    },
+    {
+        "text": "And, in the future, these, if it's\nnot this protocol, something very",
+        "start": 1164.826,
+        "duration": 4.5
+    },
+    {
+        "text": "much like it, will play a similar\nrole, it'll be as important.",
+        "start": 1169.326,
+        "duration": 4.96
+    },
+    {
+        "text": "It sounds crazy to say that right now,\nbut it seems inevitable in my mind.",
+        "start": 1174.926,
+        "duration": 4.785
+    }
+]

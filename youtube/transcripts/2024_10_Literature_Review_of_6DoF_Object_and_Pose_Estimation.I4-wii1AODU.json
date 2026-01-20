@@ -1,0 +1,5977 @@
+[
+    {
+        "text": "Okay, so yeah, thanks a lot Scott\nand Hojay for volunteering to, to",
+        "start": 8.219,
+        "duration": 5.05
+    },
+    {
+        "text": "present today on such short notice.",
+        "start": 13.269,
+        "duration": 2.45
+    },
+    {
+        "text": "so yeah, the two of them have been\ngoing into the literature for the",
+        "start": 17.809,
+        "duration": 5.59
+    },
+    {
+        "text": "past days, looking at what are other\napproaches people have been taking for",
+        "start": 23.399,
+        "duration": 4.98
+    },
+    {
+        "text": "this kind of object and pose recognition\ntask that Monty is currently doing.",
+        "start": 28.449,
+        "duration": 4.24
+    },
+    {
+        "text": "So that we have some kind of baselines\nthat we compare it to when we write",
+        "start": 33.419,
+        "duration": 5.02
+    },
+    {
+        "text": "up a paper about Monty's capabilities.",
+        "start": 38.439,
+        "duration": 2.49
+    },
+    {
+        "text": "so we can talk about that now.",
+        "start": 43.359,
+        "duration": 1.46
+    },
+    {
+        "text": "And then if, that doesn't take up\nthe whole time, there are also a",
+        "start": 44.819,
+        "duration": 3.16
+    },
+    {
+        "text": "bunch of questions people have been\nsending in that we can talk about",
+        "start": 47.979,
+        "duration": 3.35
+    },
+    {
+        "text": "more, or we can do that next week.",
+        "start": 51.329,
+        "duration": 1.86
+    },
+    {
+        "text": "Yeah, then I'll give it over to you, too.",
+        "start": 56.219,
+        "duration": 2.14
+    },
+    {
+        "text": "Sounds good.",
+        "start": 59.649,
+        "duration": 0.59
+    },
+    {
+        "text": "Okay, so we'll put together some\nslides for, that will primarily go",
+        "start": 60.459,
+        "duration": 5.16
+    },
+    {
+        "text": "into some state of the art methods\nfor pose estimation, and I'll get",
+        "start": 65.619,
+        "duration": 5.27
+    },
+    {
+        "text": "to why we're focusing on this first.",
+        "start": 70.889,
+        "duration": 2.38
+    },
+    {
+        "text": "so About a week ago, Scott, me,\nVivian and Nils had a research kind",
+        "start": 75.319,
+        "duration": 8.695
+    },
+    {
+        "text": "of brainstorming meeting on how to\ndemonstrate capabilities for a paper that",
+        "start": 84.014,
+        "duration": 6.18
+    },
+    {
+        "text": "we can write up by the end of the year.",
+        "start": 90.224,
+        "duration": 1.59
+    },
+    {
+        "text": "So some of the starting point was, these\nkind of broad objectives like, demonstrate",
+        "start": 92.254,
+        "duration": 6.22
+    },
+    {
+        "text": "rapid learning for computer vision,\nwhether that be from number of images,",
+        "start": 98.534,
+        "duration": 4.16
+    },
+    {
+        "text": "or, total data that's being collected.",
+        "start": 103.554,
+        "duration": 1.22
+    },
+    {
+        "text": "Being used by Monty rapid inference with\nmobile sensors, improved slash robust",
+        "start": 105.044,
+        "duration": 5.82
+    },
+    {
+        "text": "recognition and multimodal transfer.",
+        "start": 110.864,
+        "duration": 2.43
+    },
+    {
+        "text": "We came up with additional things\nthat we may be able to show, but",
+        "start": 113.744,
+        "duration": 3.66
+    },
+    {
+        "text": "I don't think these are current or\nnot fully implemented in Monty yet.",
+        "start": 117.464,
+        "duration": 4.49
+    },
+    {
+        "text": "But, some other ideas that were\nsuggested were generative or",
+        "start": 121.994,
+        "duration": 4.92
+    },
+    {
+        "text": "predictive reconstruction of input.",
+        "start": 126.914,
+        "duration": 1.475
+    },
+    {
+        "text": "So if we're seeing part of an\nobject, if Monty can reconstruct",
+        "start": 128.389,
+        "duration": 5.145
+    },
+    {
+        "text": "the rest, and continual learning.",
+        "start": 133.534,
+        "duration": 2.98
+    },
+    {
+        "text": "Can I just make a comment on that?",
+        "start": 137.324,
+        "duration": 1.32
+    },
+    {
+        "text": "I think, predicting the rest\nis the right thing to do.",
+        "start": 138.974,
+        "duration": 3.22
+    },
+    {
+        "text": "Reconstructing doesn't seem right to me.",
+        "start": 142.194,
+        "duration": 2.11
+    },
+    {
+        "text": "there's no place in the brain\nwhere images are reconstructed.",
+        "start": 145.644,
+        "duration": 3.58
+    },
+    {
+        "text": "we're not good at that, but we\nare good at predicting what will",
+        "start": 151.984,
+        "duration": 2.55
+    },
+    {
+        "text": "be someplace and seeing that.",
+        "start": 154.544,
+        "duration": 1.59
+    },
+    {
+        "text": "So as long as it's, it's I don't\nthink our system is going to",
+        "start": 156.724,
+        "duration": 4.67
+    },
+    {
+        "text": "be good at generative models.",
+        "start": 161.394,
+        "duration": 2.18
+    },
+    {
+        "text": "Humans aren't good at that.",
+        "start": 164.004,
+        "duration": 1.01
+    },
+    {
+        "text": "so I think the, predictive, ability\nof money should be really good.",
+        "start": 165.954,
+        "duration": 5.9
+    },
+    {
+        "text": "Yeah.",
+        "start": 173.204,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 173.524,
+        "duration": 0.2
+    },
+    {
+        "text": "That's what I said too.",
+        "start": 173.724,
+        "duration": 1.37
+    },
+    {
+        "text": "And I think, like you said, it should\nbe really good at predicting using",
+        "start": 175.094,
+        "duration": 4.75
+    },
+    {
+        "text": "its models to predict, but if it's\nsupposed to be like photo realistic.",
+        "start": 179.894,
+        "duration": 3.8
+    },
+    {
+        "text": "generation, for example, we would\nneed to train some kind of decoder",
+        "start": 184.619,
+        "duration": 3.56
+    },
+    {
+        "text": "on top of that, which might actually\nalso be pretty good because it gets",
+        "start": 188.179,
+        "duration": 4.35
+    },
+    {
+        "text": "better information to use for this\nkind of photorealistic reconstruction.",
+        "start": 192.569,
+        "duration": 4.91
+    },
+    {
+        "text": "So it wouldn't be too difficult, I think,\nto add as a, like another readout layer,",
+        "start": 197.779,
+        "duration": 5.09
+    },
+    {
+        "text": "but it's definitely not what Monty is.",
+        "start": 202.919,
+        "duration": 1.99
+    },
+    {
+        "text": "That's a good, that's\na good way to put it.",
+        "start": 205.764,
+        "duration": 1.31
+    },
+    {
+        "text": "so we don't have to give\nup on the idea completely.",
+        "start": 207.434,
+        "duration": 2.03
+    },
+    {
+        "text": "Yeah.",
+        "start": 210.034,
+        "duration": 0.58
+    },
+    {
+        "text": "it could be a flashy demo or\nsomething because people are really",
+        "start": 211.864,
+        "duration": 4.09
+    },
+    {
+        "text": "into generative AI right now.",
+        "start": 215.954,
+        "duration": 1.46
+    },
+    {
+        "text": "But yeah, it's not really like the,\nI think what we have to be careful of",
+        "start": 217.744,
+        "duration": 3.2
+    },
+    {
+        "text": "is, not falling to the trap of trying\nto do what deep learning models do.",
+        "start": 221.224,
+        "duration": 4.285
+    },
+    {
+        "text": "Yeah, in trying to match them\nbecause probably we won't match them.",
+        "start": 226.339,
+        "duration": 3.55
+    },
+    {
+        "text": "we're not but I like the idea that\ncould be an add on piece, but I would",
+        "start": 231.609,
+        "duration": 4.14
+    },
+    {
+        "text": "make it clear that brain, brains and\nmoney is not a generative system per se.",
+        "start": 235.749,
+        "duration": 3.87
+    },
+    {
+        "text": "And, certainly for images.",
+        "start": 239.639,
+        "duration": 2.24
+    },
+    {
+        "text": "And, humans aren't good at this.",
+        "start": 242.419,
+        "duration": 2.51
+    },
+    {
+        "text": "We can't draw things.",
+        "start": 244.929,
+        "duration": 0.86
+    },
+    {
+        "text": "We can't, we actually can't picture\nthings with detail in our heads.",
+        "start": 245.789,
+        "duration": 3.46
+    },
+    {
+        "text": "but as an add on piece, oh, there could\nbe a feed into a, feeding into another",
+        "start": 250.749,
+        "duration": 4.8
+    },
+    {
+        "text": "system that does generative modeling.",
+        "start": 255.549,
+        "duration": 1.51
+    },
+    {
+        "text": "That should be good.",
+        "start": 257.059,
+        "duration": 0.59
+    },
+    {
+        "text": "Yeah.",
+        "start": 259.084,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 259.444,
+        "duration": 0.48
+    },
+    {
+        "text": "I don't think we'll include this part\nin the paper that we're planning on.",
+        "start": 259.924,
+        "duration": 3.35
+    },
+    {
+        "text": "And then, yeah, on the second part,\nthe continual learning, I would rename",
+        "start": 264.414,
+        "duration": 4.52
+    },
+    {
+        "text": "this to unsupervised learning because\nwe're already doing continual learning",
+        "start": 268.934,
+        "duration": 4.28
+    },
+    {
+        "text": "all the time, like for number four.",
+        "start": 273.724,
+        "duration": 2.44
+    },
+    {
+        "text": "Point A, for example, this\nis all continual learning.",
+        "start": 277.159,
+        "duration": 2.9
+    },
+    {
+        "text": "Like you see the object from one angle\nand you build a model and you see it",
+        "start": 280.069,
+        "duration": 3.98
+    },
+    {
+        "text": "from another angle and you add points\nto the model and you see a new object",
+        "start": 284.379,
+        "duration": 3.72
+    },
+    {
+        "text": "and you learn about that object without\nforgetting about that other object.",
+        "start": 288.099,
+        "duration": 3.96
+    },
+    {
+        "text": "But, what we call learning from\nscratch and the benchmarks, the big",
+        "start": 292.529,
+        "duration": 5.97
+    },
+    {
+        "text": "thing there compared to the Current\ndefault setup is that we don't",
+        "start": 298.499,
+        "duration": 4.605
+    },
+    {
+        "text": "provide any labels to the system.",
+        "start": 303.104,
+        "duration": 2.28
+    },
+    {
+        "text": "More balloons.",
+        "start": 305.394,
+        "duration": 1.06
+    },
+    {
+        "text": "And we don't make assumptions about the\norder of the data being presented either.",
+        "start": 307.004,
+        "duration": 3.23
+    },
+    {
+        "text": "Yeah, Yeah.",
+        "start": 310.884,
+        "duration": 1.89
+    },
+    {
+        "text": "Yeah.",
+        "start": 313.054,
+        "duration": 0.21
+    },
+    {
+        "text": "That's, something that's\ndifferent to deep learning.",
+        "start": 313.264,
+        "duration": 2.19
+    },
+    {
+        "text": "Like we can present the.",
+        "start": 315.474,
+        "duration": 1.68
+    },
+    {
+        "text": "Objects in any order.",
+        "start": 317.509,
+        "duration": 0.97
+    },
+    {
+        "text": "We can learn one object from all angles\nfirst and then the next one and then or",
+        "start": 318.479,
+        "duration": 4.22
+    },
+    {
+        "text": "you can move your finger over an object\none direction and learn a model and going",
+        "start": 323.089,
+        "duration": 3.22
+    },
+    {
+        "text": "over another direction, learn a model\nis it's really a motor based system.",
+        "start": 326.309,
+        "duration": 4.18
+    },
+    {
+        "text": "Okay.",
+        "start": 330.539,
+        "duration": 0.4
+    },
+    {
+        "text": "And is there a reason\nthat A and C are bold?",
+        "start": 333.299,
+        "duration": 1.94
+    },
+    {
+        "text": "Yeah, because, from these four milestones,\nthe way that we went in deep into post",
+        "start": 335.799,
+        "duration": 7.87
+    },
+    {
+        "text": "estimation was, we wanted to at least,\nfind on a common basis something,",
+        "start": 343.669,
+        "duration": 4.82
+    },
+    {
+        "text": "compare Monty against, so that, one is\norder, we wanted to have, a task that",
+        "start": 349.449,
+        "duration": 10.54
+    },
+    {
+        "text": "people in the deep learning world does\nunderstand that Monty can also do, and",
+        "start": 360.739,
+        "duration": 7.155
+    },
+    {
+        "text": "also, I realized that task is, highly.",
+        "start": 367.894,
+        "duration": 2.59
+    },
+    {
+        "text": "related to robust recognition.",
+        "start": 371.034,
+        "duration": 1.77
+    },
+    {
+        "text": "that's why it's bolded.",
+        "start": 376.204,
+        "duration": 0.78
+    },
+    {
+        "text": "so I tried to put this in\nthe deep learning, lingo of",
+        "start": 380.954,
+        "duration": 5.3
+    },
+    {
+        "text": "current moth capabilities.",
+        "start": 386.304,
+        "duration": 1.54
+    },
+    {
+        "text": "so I think what with current currently\nimplemented, we can do option recognition",
+        "start": 389.584,
+        "duration": 6.335
+    },
+    {
+        "text": "and something called six degrees\nof freedom post estimation and some",
+        "start": 396.049,
+        "duration": 5.28
+    },
+    {
+        "text": "other future mark capabilities that\nis that may be able to do in the CV.",
+        "start": 401.369,
+        "duration": 6.47
+    },
+    {
+        "text": "Lingo is 3D reconstruction.",
+        "start": 407.839,
+        "duration": 1.67
+    },
+    {
+        "text": "Again,",
+        "start": 409.519,
+        "duration": 0.41
+    },
+    {
+        "text": "just put the word prediction\ninstead of reconstruction.",
+        "start": 412.199,
+        "duration": 2.59
+    },
+    {
+        "text": "Yeah.",
+        "start": 415.039,
+        "duration": 0.44
+    },
+    {
+        "text": "Yeah.",
+        "start": 416.779,
+        "duration": 0.39
+    },
+    {
+        "text": "And, and some other, possibly like\nrobotic grasping and manipulation,",
+        "start": 417.814,
+        "duration": 5.88
+    },
+    {
+        "text": "semantic and instant segmentation.",
+        "start": 423.724,
+        "duration": 1.37
+    },
+    {
+        "text": "But these are not yet implemented,\nbut possibly maybe compare these tasks",
+        "start": 425.094,
+        "duration": 5.33
+    },
+    {
+        "text": "may be compared against in the future.",
+        "start": 430.424,
+        "duration": 1.75
+    },
+    {
+        "text": "Because the post estimation subsumes\nobject recognition or often involves",
+        "start": 434.259,
+        "duration": 5.15
+    },
+    {
+        "text": "object recognition, we, so a lot\nof the models, if it's doing post",
+        "start": 439.409,
+        "duration": 4.52
+    },
+    {
+        "text": "estimation, can already do recognition\nor sometimes segmentation, depending",
+        "start": 443.929,
+        "duration": 4.57
+    },
+    {
+        "text": "on how it's implemented, which is\nwhy I focus on, okay, let's dig into",
+        "start": 448.499,
+        "duration": 4.57
+    },
+    {
+        "text": "existing models for, six degrees of\nfreedom post estimation that's how",
+        "start": 453.834,
+        "duration": 6.16
+    },
+    {
+        "text": "we went from the milestones into this\nvery specific task because otherwise it",
+        "start": 459.994,
+        "duration": 4.88
+    },
+    {
+        "text": "just looks like we're doing some random\nliterature beyond post estimation.",
+        "start": 464.874,
+        "duration": 3.19
+    },
+    {
+        "text": "I think, again, we need to be doing is\nwe need to lay out the basic capabilities",
+        "start": 470.284,
+        "duration": 3.74
+    },
+    {
+        "text": "of a sensor motor system and then\nstart showing that we're tackling each",
+        "start": 474.044,
+        "duration": 3.91
+    },
+    {
+        "text": "component of those, and as opposed to\nbeing best of class or anything like that.",
+        "start": 477.954,
+        "duration": 5.66
+    },
+    {
+        "text": "I'm a little bit concerned about the\nrobotic grasping and manipulation.",
+        "start": 484.919,
+        "duration": 2.92
+    },
+    {
+        "text": "That is, a very robotics point of view.",
+        "start": 488.609,
+        "duration": 2.84
+    },
+    {
+        "text": "it seems to me we need, what we\nreally need is a, essentially,",
+        "start": 492.669,
+        "duration": 3.74
+    },
+    {
+        "text": "a motor output theory for Monty.",
+        "start": 496.749,
+        "duration": 2.59
+    },
+    {
+        "text": "A more higher level theory\nabout how columns and learning",
+        "start": 500.149,
+        "duration": 3.55
+    },
+    {
+        "text": "modules, can move their sensors.",
+        "start": 503.709,
+        "duration": 4.22
+    },
+    {
+        "text": "in a logical way to achieve,\nachieve goals and that may or",
+        "start": 509.369,
+        "duration": 4.46
+    },
+    {
+        "text": "may not be a robotic graspment.",
+        "start": 513.829,
+        "duration": 1.41
+    },
+    {
+        "text": "It could be a lot of things.",
+        "start": 515.239,
+        "duration": 1.06
+    },
+    {
+        "text": "So I just we don't want to get down the I\nthink that would come after we understand",
+        "start": 516.669,
+        "duration": 5.57
+    },
+    {
+        "text": "a broader theory of motor generation.",
+        "start": 522.719,
+        "duration": 2.27
+    },
+    {
+        "text": "and we shouldn't focus on that\nparticular type of thing right now.",
+        "start": 527.299,
+        "duration": 2.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 530.629,
+        "duration": 0.33
+    },
+    {
+        "text": "So this is in the future capability.",
+        "start": 530.959,
+        "duration": 2.01
+    },
+    {
+        "text": "So that those three, I don't think\nthey will be, I'm very sure that",
+        "start": 532.999,
+        "duration": 4.01
+    },
+    {
+        "text": "they won't be included in this.",
+        "start": 537.069,
+        "duration": 1.05
+    },
+    {
+        "text": "Yeah, I got it.",
+        "start": 538.119,
+        "duration": 0.73
+    },
+    {
+        "text": "But I'm just saying, even in, I'm\ntrying to correct potential miss",
+        "start": 538.849,
+        "duration": 3.28
+    },
+    {
+        "text": "thinking about these things right now.",
+        "start": 542.139,
+        "duration": 2.22
+    },
+    {
+        "text": "but then also motor behavior will be\nlike one of the prime applications",
+        "start": 545.909,
+        "duration": 5.65
+    },
+    {
+        "text": "of Monty eventually, I think.",
+        "start": 551.569,
+        "duration": 1.74
+    },
+    {
+        "text": "So we need to generate a general\ntheory of motor behavior in a",
+        "start": 554.299,
+        "duration": 6.8
+    },
+    {
+        "text": "sensory motor learning system.",
+        "start": 561.099,
+        "duration": 1.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 563.009,
+        "duration": 0.42
+    },
+    {
+        "text": "And then we can implement\nthat theory in different ways.",
+        "start": 563.529,
+        "duration": 3.49
+    },
+    {
+        "text": "One might be robotic\ngrasping manipulation.",
+        "start": 567.029,
+        "duration": 2.45
+    },
+    {
+        "text": "But, we don't want to go there first.",
+        "start": 571.419,
+        "duration": 2.35
+    },
+    {
+        "text": "We need this general theory.",
+        "start": 573.769,
+        "duration": 1.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 576.399,
+        "duration": 0.35
+    },
+    {
+        "text": "Great.",
+        "start": 578.419,
+        "duration": 0.36
+    },
+    {
+        "text": "but for now,",
+        "start": 580.939,
+        "duration": 1.71
+    },
+    {
+        "text": "precision is very highly detailed, but\npost estimation kind of one deep, pretty",
+        "start": 585.159,
+        "duration": 3.82
+    },
+    {
+        "text": "much all, like all the model talk we're\nactually going to do is going to be about",
+        "start": 588.979,
+        "duration": 3.18
+    },
+    {
+        "text": "object recognition and post estimation.",
+        "start": 592.159,
+        "duration": 1.91
+    },
+    {
+        "text": "So I think we're just outlining that.",
+        "start": 594.069,
+        "duration": 1.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 595.879,
+        "duration": 0.31
+    },
+    {
+        "text": "so just, to give a quick.",
+        "start": 597.069,
+        "duration": 2.68
+    },
+    {
+        "text": "more context, I think, so this\nis not to, say, Oh, these papers",
+        "start": 601.274,
+        "duration": 4.86
+    },
+    {
+        "text": "do exactly what we're doing.",
+        "start": 606.164,
+        "duration": 1.54
+    },
+    {
+        "text": "As far as I know, I don't think you found\nanything that does what we're doing.",
+        "start": 607.954,
+        "duration": 3.55
+    },
+    {
+        "text": "It's more like we're\ngoing to write a paper.",
+        "start": 611.964,
+        "duration": 2.13
+    },
+    {
+        "text": "We want to show results from Monty.",
+        "start": 614.174,
+        "duration": 1.75
+    },
+    {
+        "text": "And it's always good to have something\nto compare to, to show how this is really",
+        "start": 616.294,
+        "duration": 3.91
+    },
+    {
+        "text": "good, because I assume a lot of these\nsystems will need a lot more data or.",
+        "start": 620.214,
+        "duration": 4.55
+    },
+    {
+        "text": "have other drawbacks\nthat Monty does better.",
+        "start": 625.114,
+        "duration": 2.35
+    },
+    {
+        "text": "So we just want to know what's out\nthere and what can we compare to",
+        "start": 627.464,
+        "duration": 3.27
+    },
+    {
+        "text": "at least on some of the dimensions,\nbut it's not like there will be",
+        "start": 630.994,
+        "duration": 3.7
+    },
+    {
+        "text": "any like perfect comparison here.",
+        "start": 634.714,
+        "duration": 2.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 638.764,
+        "duration": 0.24
+    },
+    {
+        "text": "I don't think there'll be any\nlike perfect comparison at all.",
+        "start": 639.004,
+        "duration": 2.62
+    },
+    {
+        "text": "And, I will go into how post estimation\nis, there's different ways to tackle",
+        "start": 642.064,
+        "duration": 5.04
+    },
+    {
+        "text": "it and how for each of them we can.",
+        "start": 647.104,
+        "duration": 1.67
+    },
+    {
+        "text": "Try to relate it back to Monty and how\nwe can compare that to Monty in some",
+        "start": 649.424,
+        "duration": 3.63
+    },
+    {
+        "text": "similar dimension that Vivian mentioned.",
+        "start": 653.854,
+        "duration": 1.8
+    },
+    {
+        "text": "the six DOF or degrees of freedom.",
+        "start": 657.124,
+        "duration": 1.91
+    },
+    {
+        "text": "Are we talking about the pose\nof the object to the sensor?",
+        "start": 659.384,
+        "duration": 3.64
+    },
+    {
+        "text": "Is that what we're doing?",
+        "start": 663.224,
+        "duration": 0.555
+    },
+    {
+        "text": "Yes.",
+        "start": 663.779,
+        "duration": 0.355
+    },
+    {
+        "text": "Okay.",
+        "start": 664.134,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 665.404,
+        "duration": 0.24
+    },
+    {
+        "text": "Or just as well as the pose\nof the sensor to the object.",
+        "start": 666.174,
+        "duration": 2.25
+    },
+    {
+        "text": "Those are flip sides of the same thing.",
+        "start": 668.494,
+        "duration": 1.93
+    },
+    {
+        "text": "Yes.",
+        "start": 670.724,
+        "duration": 0.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 671.214,
+        "duration": 0.47
+    },
+    {
+        "text": "yeah.",
+        "start": 673.874,
+        "duration": 0.35
+    },
+    {
+        "text": "So when you just say pose estimation,\nthere's actually two types.",
+        "start": 674.224,
+        "duration": 3.28
+    },
+    {
+        "text": "Like one is I think the more common\none, honestly, is human post estimation",
+        "start": 677.524,
+        "duration": 3.715
+    },
+    {
+        "text": "because that's very important for,\ncars not to hit people and whatnot.",
+        "start": 681.249,
+        "duration": 3.97
+    },
+    {
+        "text": "but, another kind of category of\npost estimation is object post",
+        "start": 686.399,
+        "duration": 4.17
+    },
+    {
+        "text": "recognition, post estimation, which,\nIs generally about estimating these",
+        "start": 690.569,
+        "duration": 6.46
+    },
+    {
+        "text": "six variables, translations along X,\nY, Z and rotations along X, Y, Z with",
+        "start": 697.039,
+        "duration": 6.74
+    },
+    {
+        "text": "respect to the camera or monty agent or\nsensor, whatever you have to call it.",
+        "start": 703.779,
+        "duration": 4.06
+    },
+    {
+        "text": "So we first, didn't, at least I first\ndug into the data sets and after talking",
+        "start": 708.629,
+        "duration": 8.04
+    },
+    {
+        "text": "to them on Monday, I think there's some.",
+        "start": 716.669,
+        "duration": 2.765
+    },
+    {
+        "text": "categories of datasets that\nwe have preferences for.",
+        "start": 720.014,
+        "duration": 3.0
+    },
+    {
+        "text": "So this is the preference\nfrom top to bottom.",
+        "start": 723.804,
+        "duration": 2.07
+    },
+    {
+        "text": "So we want datasets in order to train\nMonty or deep learning models, whatever,",
+        "start": 725.874,
+        "duration": 4.79
+    },
+    {
+        "text": "something that contains 3D meshes.",
+        "start": 731.274,
+        "duration": 1.69
+    },
+    {
+        "text": "So that, it, so that it's something\nthat Monty can interact with.",
+        "start": 733.244,
+        "duration": 4.71
+    },
+    {
+        "text": "That sounds reasonable.",
+        "start": 738.324,
+        "duration": 1.02
+    },
+    {
+        "text": "the next preferred data set is, Maybe\nhas point clouds, but not the mesh.",
+        "start": 740.414,
+        "duration": 5.44
+    },
+    {
+        "text": "In that case, from the point\nclouds, we can we may be able",
+        "start": 746.224,
+        "duration": 2.74
+    },
+    {
+        "text": "to get the mesh, but it's not.",
+        "start": 748.964,
+        "duration": 2.07
+    },
+    {
+        "text": "It's an additional step.",
+        "start": 751.034,
+        "duration": 1.25
+    },
+    {
+        "text": "And then the vast majority of data sets\nout there are actually RGB or RGB images,",
+        "start": 752.834,
+        "duration": 5.47
+    },
+    {
+        "text": "which is not really compatible with Monty.",
+        "start": 758.684,
+        "duration": 4.97
+    },
+    {
+        "text": "Exactly.",
+        "start": 763.664,
+        "duration": 0.61
+    },
+    {
+        "text": "It's it will probably have\nto do much more processing.",
+        "start": 764.274,
+        "duration": 3.03
+    },
+    {
+        "text": "Pre processing like extracting\nthe point cloud from the RGBD and",
+        "start": 768.349,
+        "duration": 3.59
+    },
+    {
+        "text": "then from the point cloud, get\nthe, do a surface reconstruction",
+        "start": 771.939,
+        "duration": 4.12
+    },
+    {
+        "text": "to get the mesh and whatnot.",
+        "start": 776.059,
+        "duration": 1.61
+    },
+    {
+        "text": "in general, Monty could learn from RGBD\nimages, but the thing is you would need",
+        "start": 778.829,
+        "duration": 6.46
+    },
+    {
+        "text": "to know the movement between two images.",
+        "start": 785.289,
+        "duration": 2.49
+    },
+    {
+        "text": "so if we would have the exact pose of the\ncamera when it sees the image and then",
+        "start": 788.809,
+        "duration": 4.73
+    },
+    {
+        "text": "another pose of the camera when it sees.",
+        "start": 793.799,
+        "duration": 1.89
+    },
+    {
+        "text": "the object, then, we could use that.",
+        "start": 796.039,
+        "duration": 2.44
+    },
+    {
+        "text": "We wouldn't have active movement\nthat Monty determines, but we",
+        "start": 798.529,
+        "duration": 3.09
+    },
+    {
+        "text": "could somehow learn from it.",
+        "start": 801.619,
+        "duration": 1.58
+    },
+    {
+        "text": "And then just to clarify on the reference\nfor 3D meshes, it's not like we're",
+        "start": 804.489,
+        "duration": 4.84
+    },
+    {
+        "text": "giving the meshes themselves to Monty.",
+        "start": 809.329,
+        "duration": 2.37
+    },
+    {
+        "text": "But we're using them to render\nthem in an environment which",
+        "start": 811.994,
+        "duration": 3.09
+    },
+    {
+        "text": "is then sensed by the sensors.",
+        "start": 815.084,
+        "duration": 1.78
+    },
+    {
+        "text": "for example, we could also\njust learn in the real world.",
+        "start": 817.247,
+        "duration": 3.187
+    },
+    {
+        "text": "So we only need meshes when we\nlearn in simulation because we",
+        "start": 820.724,
+        "duration": 3.13
+    },
+    {
+        "text": "need something to render it.",
+        "start": 823.854,
+        "duration": 1.28
+    },
+    {
+        "text": "But we could also just let Monty\nhave an actual sensor and sense",
+        "start": 825.404,
+        "duration": 3.56
+    },
+    {
+        "text": "actual objects in the world.",
+        "start": 828.994,
+        "duration": 1.54
+    },
+    {
+        "text": "the good thing is, I think\nthere's still plenty of, 3D mesh",
+        "start": 838.834,
+        "duration": 2.65
+    },
+    {
+        "text": "datasets already that exist.",
+        "start": 841.484,
+        "duration": 1.61
+    },
+    {
+        "text": "The three most common being LineMod,\nYCB Video, which is similar, it's",
+        "start": 843.414,
+        "duration": 5.54
+    },
+    {
+        "text": "not the same as the YCB that we have\nin Habitat, but a video version, and",
+        "start": 848.974,
+        "duration": 4.51
+    },
+    {
+        "text": "something called TLS, which is, Sans for\ntextualist objects, something like that.",
+        "start": 853.484,
+        "duration": 5.005
+    },
+    {
+        "text": "And for whatever reason, YCB\nvideo is in a lot of these models.",
+        "start": 860.199,
+        "duration": 3.96
+    },
+    {
+        "text": "Yeah.",
+        "start": 864.199,
+        "duration": 0.46
+    },
+    {
+        "text": "As opposed to regular YCB.",
+        "start": 864.839,
+        "duration": 1.73
+    },
+    {
+        "text": "I don't know if that's because they're\nemphasizing pose tracking as well",
+        "start": 866.619,
+        "duration": 3.82
+    },
+    {
+        "text": "on a lot of these models because\nthey're trying to maintain a stable.",
+        "start": 870.439,
+        "duration": 2.48
+    },
+    {
+        "text": "Estimation throughout time, but yeah,\nit's a, for a lot of the papers,",
+        "start": 873.529,
+        "duration": 4.85
+    },
+    {
+        "text": "we didn't actually see benchmark\nagainst YCB, but YCB video other",
+        "start": 878.419,
+        "duration": 4.73
+    },
+    {
+        "text": "common things I've seen was line mod.",
+        "start": 883.149,
+        "duration": 1.75
+    },
+    {
+        "text": "So these three, I think, are definitely,\nI think line mod is the OG kind of",
+        "start": 885.289,
+        "duration": 4.57
+    },
+    {
+        "text": "the longest existing benchmark data\nset and text TLS is often used when",
+        "start": 891.069,
+        "duration": 6.01
+    },
+    {
+        "text": "there isn't like significant features.",
+        "start": 897.339,
+        "duration": 1.47
+    },
+    {
+        "text": "Features.",
+        "start": 899.474,
+        "duration": 0.66
+    },
+    {
+        "text": "and so this is a kind of particular\nuse case where, so texture",
+        "start": 901.054,
+        "duration": 6.4
+    },
+    {
+        "text": "list would be something like",
+        "start": 907.454,
+        "duration": 1.21
+    },
+    {
+        "text": "a baking sheet where it's just flat,\nall gray, so when you move around,",
+        "start": 910.699,
+        "duration": 4.21
+    },
+    {
+        "text": "there isn't a particular edge that\nyou can extract out from, and those",
+        "start": 914.909,
+        "duration": 4.11
+    },
+    {
+        "text": "are often for deep learning models\nharder to do post estimation for.",
+        "start": 919.019,
+        "duration": 4.44
+    },
+    {
+        "text": "Why wouldn't there be an\nedge on a baking sheet?",
+        "start": 923.779,
+        "duration": 2.01
+    },
+    {
+        "text": "I'm missing that.",
+        "start": 925.789,
+        "duration": 0.84
+    },
+    {
+        "text": "there would be an like, for the majority\nof the, let's say image of a baking",
+        "start": 927.454,
+        "duration": 5.81
+    },
+    {
+        "text": "sheet, but it's a large pan inside\nthe baking sheet is just gray flats.",
+        "start": 933.264,
+        "duration": 4.9
+    },
+    {
+        "text": "And it's not really changing.",
+        "start": 938.444,
+        "duration": 1.28
+    },
+    {
+        "text": "But if if I'm thinking of my fingers\nrunning across the baking sheet, when I",
+        "start": 940.054,
+        "duration": 4.21
+    },
+    {
+        "text": "get to the edge, I feel an edge, right?",
+        "start": 944.264,
+        "duration": 1.91
+    },
+    {
+        "text": "that would be that's\ncaptured in the 3D mesh.",
+        "start": 946.444,
+        "duration": 2.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 949.709,
+        "duration": 0.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 949.909,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 951.469,
+        "duration": 0.3
+    },
+    {
+        "text": "it's just, this is more maybe\nthis is closer to our idea of a",
+        "start": 953.969,
+        "duration": 4.44
+    },
+    {
+        "text": "morphology class of objects, right?",
+        "start": 958.409,
+        "duration": 1.89
+    },
+    {
+        "text": "Where you're, not paying attention\nto other features other than",
+        "start": 960.299,
+        "duration": 3.83
+    },
+    {
+        "text": "just this surface morphology.",
+        "start": 964.129,
+        "duration": 1.86
+    },
+    {
+        "text": "Is that would be correct?",
+        "start": 965.989,
+        "duration": 0.82
+    },
+    {
+        "text": "to Monty, Monty will be, I\nthink would do fine on TLS.",
+        "start": 968.069,
+        "duration": 4.62
+    },
+    {
+        "text": "It's just deep learning models will\nnot do well, does not typically",
+        "start": 972.809,
+        "duration": 3.34
+    },
+    {
+        "text": "do well in textureless objects.",
+        "start": 976.149,
+        "duration": 2.18
+    },
+    {
+        "text": "That's all.",
+        "start": 978.709,
+        "duration": 0.08
+    },
+    {
+        "text": "Okay.",
+        "start": 978.929,
+        "duration": 0.37
+    },
+    {
+        "text": "Could be interesting to\ntest on that and compare.",
+        "start": 980.869,
+        "duration": 2.48
+    },
+    {
+        "text": "Yeah, in some sense, it's getting\nat the, one of the core capabilities",
+        "start": 983.409,
+        "duration": 3.12
+    },
+    {
+        "text": "we think brains are doing.",
+        "start": 986.529,
+        "duration": 1.03
+    },
+    {
+        "text": "We see, in some modalities, you, maybe all\nof them, you're able to detect morphology",
+        "start": 987.619,
+        "duration": 6.56
+    },
+    {
+        "text": "of objects and features disappear.",
+        "start": 994.179,
+        "duration": 1.59
+    },
+    {
+        "text": "it's just right.",
+        "start": 998.489,
+        "duration": 1.82
+    },
+    {
+        "text": "So it just seems like it\nwould be testing that exactly.",
+        "start": 1000.899,
+        "duration": 2.42
+    },
+    {
+        "text": "It's like vision without color and,\ntouch without texture or heat or,",
+        "start": 1005.549,
+        "duration": 5.65
+    },
+    {
+        "text": "things like that.",
+        "start": 1013.629,
+        "duration": 0.62
+    },
+    {
+        "text": "Sure.",
+        "start": 1016.709,
+        "duration": 0.49
+    },
+    {
+        "text": "Probably I will, I'm not going to\ngo into all of that, but there's",
+        "start": 1017.869,
+        "duration": 3.3
+    },
+    {
+        "text": "a lot more than these with,",
+        "start": 1021.199,
+        "duration": 1.9
+    },
+    {
+        "text": "some of them I heard are already\nimplemented, like shape net and model net.",
+        "start": 1025.179,
+        "duration": 4.08
+    },
+    {
+        "text": "But from what I see, they don't have,",
+        "start": 1029.889,
+        "duration": 2.54
+    },
+    {
+        "text": "Let's see, not this one, but,\nthey don't have, pose annotations.",
+        "start": 1034.679,
+        "duration": 5.04
+    },
+    {
+        "text": "So I'm not sure how, it was\nused in multi before, but, they",
+        "start": 1039.759,
+        "duration": 5.4
+    },
+    {
+        "text": "don't need pose annotations.",
+        "start": 1045.159,
+        "duration": 2.48
+    },
+    {
+        "text": "We just initialize them in an\nenvironment, like in a 3d rendering",
+        "start": 1047.679,
+        "duration": 3.84
+    },
+    {
+        "text": "engine, and then we can just ourselves.",
+        "start": 1051.529,
+        "duration": 2.39
+    },
+    {
+        "text": "We can just set how we want to\ninitialize them in this environment.",
+        "start": 1053.919,
+        "duration": 3.1
+    },
+    {
+        "text": "so that kind of people kind of summarizing\nthe different, data sets to exist.",
+        "start": 1062.054,
+        "duration": 5.5
+    },
+    {
+        "text": "We need to dig into them.",
+        "start": 1068.084,
+        "duration": 1.25
+    },
+    {
+        "text": "So how, I'll dig into how\npost estimation is done.",
+        "start": 1069.734,
+        "duration": 4.3
+    },
+    {
+        "text": "So the good news, or bad news,\nif you want to compare exactly,",
+        "start": 1074.304,
+        "duration": 3.75
+    },
+    {
+        "text": "but I think it's good news.",
+        "start": 1078.054,
+        "duration": 0.83
+    },
+    {
+        "text": "So there's no existing model that I\ncould find or Scott could find that",
+        "start": 1079.364,
+        "duration": 3.56
+    },
+    {
+        "text": "does post estimation like Monty, which\nis I'm thinking about it as like a,",
+        "start": 1082.924,
+        "duration": 5.505
+    },
+    {
+        "text": "model or agent that can explore and,\nand touch or sense something and",
+        "start": 1089.739,
+        "duration": 6.31
+    },
+    {
+        "text": "then try to estimate the pose of it.",
+        "start": 1096.049,
+        "duration": 1.54
+    },
+    {
+        "text": "So even I did find some\nreinforcement learning based",
+        "start": 1098.049,
+        "duration": 3.25
+    },
+    {
+        "text": "models, but these are still not.",
+        "start": 1101.299,
+        "duration": 1.67
+    },
+    {
+        "text": "it, just to be clear,",
+        "start": 1104.319,
+        "duration": 0.91
+    },
+    {
+        "text": "in the brain and in Monty.",
+        "start": 1107.549,
+        "duration": 1.62
+    },
+    {
+        "text": "You, don't really do pose estimation\nindependent of object recognition, right?",
+        "start": 1110.444,
+        "duration": 3.95
+    },
+    {
+        "text": "Those things all happen at the same time.",
+        "start": 1115.164,
+        "duration": 1.81
+    },
+    {
+        "text": "Three things, as you explore, there are\nthree separate things that are resolved.",
+        "start": 1116.994,
+        "duration": 3.79
+    },
+    {
+        "text": "One is what is the object you're on,\nwhere you are on the object, and the",
+        "start": 1121.604,
+        "duration": 4.71
+    },
+    {
+        "text": "pose of the sensor to the object.",
+        "start": 1126.314,
+        "duration": 1.755
+    },
+    {
+        "text": "I just want to be clear.",
+        "start": 1129.209,
+        "duration": 0.78
+    },
+    {
+        "text": "You can't really separate those three out.",
+        "start": 1131.119,
+        "duration": 1.96
+    },
+    {
+        "text": "So when we talk about pose estimation,\nwe have to also in a money setting.",
+        "start": 1133.089,
+        "duration": 4.14
+    },
+    {
+        "text": "We have to also be talking about,\ninferring the object underlying it.",
+        "start": 1137.269,
+        "duration": 4.27
+    },
+    {
+        "text": "You can't do a pose unless you\nknow what the object is and",
+        "start": 1141.939,
+        "duration": 3.41
+    },
+    {
+        "text": "where you're on the object.",
+        "start": 1145.349,
+        "duration": 0.78
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 1147.344,
+        "duration": 0.74
+    },
+    {
+        "text": "Yeah.",
+        "start": 1148.084,
+        "duration": 0.91
+    },
+    {
+        "text": "Okay.",
+        "start": 1148.994,
+        "duration": 0.91
+    },
+    {
+        "text": "So there's several ways, that,\nI think also the existing models",
+        "start": 1152.544,
+        "duration": 6.02
+    },
+    {
+        "text": "also does object recognition.",
+        "start": 1158.584,
+        "duration": 1.82
+    },
+    {
+        "text": "So yeah, these, I think\nthese problems are.",
+        "start": 1161.974,
+        "duration": 3.35
+    },
+    {
+        "text": "They have to be, in some sense,\nthere's no way to do pose estimation,",
+        "start": 1167.394,
+        "duration": 2.65
+    },
+    {
+        "text": "unless you know what fingers\nyou're looking at, you're sensing.",
+        "start": 1170.044,
+        "duration": 3.53
+    },
+    {
+        "text": "So the reinforcement learning\nmethods that you found.",
+        "start": 1175.324,
+        "duration": 2.95
+    },
+    {
+        "text": "How are they different?",
+        "start": 1179.759,
+        "duration": 1.04
+    },
+    {
+        "text": "Like, why, do they not learn\nthrough moving along the object?",
+        "start": 1180.849,
+        "duration": 4.92
+    },
+    {
+        "text": "so they, at least, so I found, I'll\nget to that when I talk about iterative",
+        "start": 1186.419,
+        "duration": 6.27
+    },
+    {
+        "text": "refinement, but they require, They don't\nuse reinforcement learning for the sensing",
+        "start": 1192.689,
+        "duration": 6.555
+    },
+    {
+        "text": "part, they use it for the inference.",
+        "start": 1199.244,
+        "duration": 2.11
+    },
+    {
+        "text": "Okay, I see.",
+        "start": 1201.414,
+        "duration": 0.94
+    },
+    {
+        "text": "yeah, I'll, get to that point when\nI get to, iterative refinement.",
+        "start": 1204.504,
+        "duration": 4.93
+    },
+    {
+        "text": "So there's four different\nmethods, four different ways",
+        "start": 1209.734,
+        "duration": 2.54
+    },
+    {
+        "text": "that post estimation can be done.",
+        "start": 1212.284,
+        "duration": 1.23
+    },
+    {
+        "text": "Regression, keypoint detection, template\nmatching, and iterative refinement.",
+        "start": 1213.774,
+        "duration": 4.27
+    },
+    {
+        "text": "So direct regression is your brute\nforce, you feed in your RGB or RGBD data,",
+        "start": 1218.889,
+        "duration": 5.72
+    },
+    {
+        "text": "and you just try to regress, the, six,",
+        "start": 1225.559,
+        "duration": 3.3
+    },
+    {
+        "text": "parameters that define the pose.",
+        "start": 1230.989,
+        "duration": 1.57
+    },
+    {
+        "text": "this probably the, this is\nlike the most deep learning",
+        "start": 1236.369,
+        "duration": 3.42
+    },
+    {
+        "text": "brute force y way of doing it.",
+        "start": 1239.789,
+        "duration": 1.63
+    },
+    {
+        "text": "There's, we just let the black\nbox learn, just to, function from",
+        "start": 1241.459,
+        "duration": 5.14
+    },
+    {
+        "text": "the RGBD to, the six parameters.",
+        "start": 1246.749,
+        "duration": 3.31
+    },
+    {
+        "text": "how they might be compared to Monty,\nthat, this is just like a, Thought,",
+        "start": 1250.739,
+        "duration": 7.365
+    },
+    {
+        "text": "but, maybe we could possibly like.",
+        "start": 1259.074,
+        "duration": 2.5
+    },
+    {
+        "text": "So when we're exploring with Monty,\nwe sense color, in terms of HSV.",
+        "start": 1261.694,
+        "duration": 5.74
+    },
+    {
+        "text": "and we may be able to extract\nthat and feed that into the",
+        "start": 1268.429,
+        "duration": 4.03
+    },
+    {
+        "text": "deep learning models to train.",
+        "start": 1272.459,
+        "duration": 1.28
+    },
+    {
+        "text": "I'm not sure if deep learning models can\neven learn, rotation and pose at this,",
+        "start": 1273.849,
+        "duration": 4.19
+    },
+    {
+        "text": "with this kind of small number of patch\ndata at TCs, but, it's just a way that",
+        "start": 1278.299,
+        "duration": 5.8
+    },
+    {
+        "text": "I thought, that could be comparable,\ntrying to put them into the same dimension",
+        "start": 1284.099,
+        "duration": 4.92
+    },
+    {
+        "text": "between Monty and these kinds of models.",
+        "start": 1289.309,
+        "duration": 2.39
+    },
+    {
+        "text": "The key point method is\nwhere the deep learning.",
+        "start": 1294.279,
+        "duration": 4.05
+    },
+    {
+        "text": "So instead of directly predicting\nthe pose, it tries to extract",
+        "start": 1298.449,
+        "duration": 5.0
+    },
+    {
+        "text": "interesting points like edges or,",
+        "start": 1303.689,
+        "duration": 1.7
+    },
+    {
+        "text": "or places where it changes features.",
+        "start": 1307.559,
+        "duration": 2.96
+    },
+    {
+        "text": "and then.",
+        "start": 1311.729,
+        "duration": 0.69
+    },
+    {
+        "text": "It tries to match those key\npoints to an existing 3D model,",
+        "start": 1312.829,
+        "duration": 3.33
+    },
+    {
+        "text": "key points in the 3D model.",
+        "start": 1316.159,
+        "duration": 1.38
+    },
+    {
+        "text": "So this one requires a, 3D CAD model.",
+        "start": 1317.869,
+        "duration": 3.62
+    },
+    {
+        "text": "and then if you have the 2D, key points\nand the 3D key points matched, there are",
+        "start": 1323.439,
+        "duration": 5.09
+    },
+    {
+        "text": "some algorithms, one called Perspective\nEndpoint that you can solve for the pose.",
+        "start": 1328.529,
+        "duration": 3.73
+    },
+    {
+        "text": "So This seems closer to what\nwe're doing with Monty, is it not?",
+        "start": 1332.999,
+        "duration": 5.8
+    },
+    {
+        "text": "in some sense you can imagine,\nin Monty, you don't sense the",
+        "start": 1339.619,
+        "duration": 4.07
+    },
+    {
+        "text": "whole ducky at the same time.",
+        "start": 1343.689,
+        "duration": 2.34
+    },
+    {
+        "text": "Yeah.",
+        "start": 1346.519,
+        "duration": 0.44
+    },
+    {
+        "text": "You would, be moving.",
+        "start": 1347.469,
+        "duration": 0.97
+    },
+    {
+        "text": "You'd have to start with one learning\nmodule that would move over and",
+        "start": 1348.639,
+        "duration": 2.68
+    },
+    {
+        "text": "detect different points on the object.",
+        "start": 1351.319,
+        "duration": 2.79
+    },
+    {
+        "text": "And through that sequence of points,\nit would infer the object and pose.",
+        "start": 1354.129,
+        "duration": 3.97
+    },
+    {
+        "text": "So that seems like something\nthat they're doing here.",
+        "start": 1358.569,
+        "duration": 2.28
+    },
+    {
+        "text": "They're creating a series of.",
+        "start": 1360.849,
+        "duration": 1.25
+    },
+    {
+        "text": "And then I don't know how they do\nit, but they got a series of points.",
+        "start": 1362.924,
+        "duration": 3.23
+    },
+    {
+        "text": "And then there's, that together\nhelped, them define the",
+        "start": 1366.164,
+        "duration": 4.41
+    },
+    {
+        "text": "pose and the object itself.",
+        "start": 1370.574,
+        "duration": 1.7
+    },
+    {
+        "text": "Is that, correct?",
+        "start": 1372.814,
+        "duration": 0.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 1375.054,
+        "duration": 0.4
+    },
+    {
+        "text": "So the, features,",
+        "start": 1375.454,
+        "duration": 1.56
+    },
+    {
+        "text": "yeah, I think the difference is that\nthis system gets the entire image",
+        "start": 1381.874,
+        "duration": 4.47
+    },
+    {
+        "text": "at once and then uses the whole\nimage to detect those key points.",
+        "start": 1386.374,
+        "duration": 4.15
+    },
+    {
+        "text": "Whereas we're getting a small patch that.",
+        "start": 1391.014,
+        "duration": 2.86
+    },
+    {
+        "text": "Just moves along the object and\nuses whatever points it sees there.",
+        "start": 1394.169,
+        "duration": 6.17
+    },
+    {
+        "text": "But yeah, it's similar in the sense\nthat we also have kind of 3d models",
+        "start": 1400.909,
+        "duration": 5.31
+    },
+    {
+        "text": "in the background that we match\nthese points that we sense too.",
+        "start": 1406.369,
+        "duration": 3.17
+    },
+    {
+        "text": "We have a 3d model and we're taking a\nseries of points until we get enough",
+        "start": 1410.409,
+        "duration": 4.56
+    },
+    {
+        "text": "points to infer the object, pose and\nID and where we are in the object.",
+        "start": 1415.209,
+        "duration": 5.71
+    },
+    {
+        "text": "Yeah.",
+        "start": 1421.629,
+        "duration": 0.46
+    },
+    {
+        "text": "This is also making me\nthink a lot of SLAM.",
+        "start": 1422.439,
+        "duration": 2.51
+    },
+    {
+        "text": "Which is slightly different scenario\nwhere you're trying to locate yourself,",
+        "start": 1426.019,
+        "duration": 4.05
+    },
+    {
+        "text": "not an object in the world, but\nthey use key points a lot in that.",
+        "start": 1430.259,
+        "duration": 4.73
+    },
+    {
+        "text": "Yeah,",
+        "start": 1434.989,
+        "duration": 0.95
+    },
+    {
+        "text": "but you can use SLAM to map an object\nas well in the environment, and you can",
+        "start": 1437.999,
+        "duration": 6.26
+    },
+    {
+        "text": "compare that to Monty directly, I think.",
+        "start": 1444.259,
+        "duration": 2.64
+    },
+    {
+        "text": "SLAM is actually in concept a very\nbiologically, it's something brains do.",
+        "start": 1448.439,
+        "duration": 5.8
+    },
+    {
+        "text": "the details of how they do it might\nbe different, but that's the closest",
+        "start": 1454.689,
+        "duration": 4.97
+    },
+    {
+        "text": "existing, research area out there that's\nclose to what I think Monty's doing.",
+        "start": 1460.229,
+        "duration": 5.42
+    },
+    {
+        "text": "How about training those models?",
+        "start": 1468.589,
+        "duration": 1.71
+    },
+    {
+        "text": "do they, just get point\nclouds or meshes directly?",
+        "start": 1470.999,
+        "duration": 4.26
+    },
+    {
+        "text": "And then, or can you actually get\nthem to learn from observations?",
+        "start": 1475.269,
+        "duration": 5.67
+    },
+    {
+        "text": "Yeah, I think they use a\nsensor, like a LIDAR sensor.",
+        "start": 1481.529,
+        "duration": 5.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 1486.979,
+        "duration": 0.38
+    },
+    {
+        "text": "for the learning procedure?",
+        "start": 1488.779,
+        "duration": 1.01
+    },
+    {
+        "text": "Yeah, but",
+        "start": 1489.929,
+        "duration": 4.5
+    },
+    {
+        "text": "anyway, so for the key point\ndetections, these work pretty well, but,",
+        "start": 1499.649,
+        "duration": 3.98
+    },
+    {
+        "text": "they don't, I think this is probably\nthe most common way that I've seen,",
+        "start": 1505.839,
+        "duration": 3.92
+    },
+    {
+        "text": "but they don't do well in occlusions.",
+        "start": 1511.009,
+        "duration": 1.89
+    },
+    {
+        "text": "Again, if you have occlusions in the\nimage, it can't, extract at the key",
+        "start": 1512.909,
+        "duration": 3.77
+    },
+    {
+        "text": "point where the object is hidden,\ntextualist objects again by textualist.",
+        "start": 1516.679,
+        "duration": 5.85
+    },
+    {
+        "text": "Okay.",
+        "start": 1522.529,
+        "duration": 0.265
+    },
+    {
+        "text": "it doesn't have interesting features,\nso we won't have enough key points to",
+        "start": 1523.724,
+        "duration": 3.84
+    },
+    {
+        "text": "match between 2D and 3D, and symmetric\nobjects, so for this, it, we may be able",
+        "start": 1527.564,
+        "duration": 9.79
+    },
+    {
+        "text": "to, I guess one way is that we can maybe\njust use this as is, but in settings",
+        "start": 1537.354,
+        "duration": 5.36
+    },
+    {
+        "text": "where, we have these occlusions or\ntextless objects or whatever, And, kind",
+        "start": 1542.734,
+        "duration": 8.14
+    },
+    {
+        "text": "of show robust recognition compared to\nexisting, key point detection methods.",
+        "start": 1550.874,
+        "duration": 6.34
+    },
+    {
+        "text": "In this case, there's,",
+        "start": 1559.774,
+        "duration": 1.37
+    },
+    {
+        "text": "they process the entire image at once.",
+        "start": 1564.014,
+        "duration": 2.32
+    },
+    {
+        "text": "So how does it do segmentation?",
+        "start": 1566.344,
+        "duration": 2.53
+    },
+    {
+        "text": "segmentation.",
+        "start": 1572.464,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 1579.894,
+        "duration": 0.22
+    },
+    {
+        "text": "Does it first assign these key points\nto the different objects on the table?",
+        "start": 1580.114,
+        "duration": 4.07
+    },
+    {
+        "text": "I think it depends on the,",
+        "start": 1587.254,
+        "duration": 1.37
+    },
+    {
+        "text": "so if it's a, so I think\nthere's some literature that.",
+        "start": 1591.374,
+        "duration": 2.81
+    },
+    {
+        "text": "Assume a world uses only single object\non scenes, which is like a simple in",
+        "start": 1594.424,
+        "duration": 5.28
+    },
+    {
+        "text": "that case, I will do segmentation.",
+        "start": 1599.704,
+        "duration": 1.51
+    },
+    {
+        "text": "I think the others try to do\nsome insects imitation first.",
+        "start": 1601.214,
+        "duration": 3.73
+    },
+    {
+        "text": "This is a general overview, but I\nthink many models do segmentation",
+        "start": 1605.854,
+        "duration": 6.95
+    },
+    {
+        "text": "as part of this key point detection.",
+        "start": 1613.144,
+        "duration": 2.1
+    },
+    {
+        "text": "it's a mystery, you go from\nthis third image to the fourth",
+        "start": 1617.584,
+        "duration": 2.27
+    },
+    {
+        "text": "image, okay, how did that happen?",
+        "start": 1619.854,
+        "duration": 1.74
+    },
+    {
+        "text": "so another third method is template\nmatching, which I thought was",
+        "start": 1627.644,
+        "duration": 4.38
+    },
+    {
+        "text": "similar to Monty's graph matching.",
+        "start": 1632.324,
+        "duration": 1.66
+    },
+    {
+        "text": "This one is where You have some.",
+        "start": 1634.414,
+        "duration": 3.045
+    },
+    {
+        "text": "We definitely need 3D CAD models, but\nfrom the model, we tried to basically",
+        "start": 1638.139,
+        "duration": 3.97
+    },
+    {
+        "text": "take 2D projections at various angles\nand try to match the input image",
+        "start": 1642.109,
+        "duration": 6.15
+    },
+    {
+        "text": "to, the 2D projections of the 3D.",
+        "start": 1648.259,
+        "duration": 3.52
+    },
+    {
+        "text": "So if I had like a object, then\nI can take a bunch of pictures,",
+        "start": 1651.779,
+        "duration": 4.275
+    },
+    {
+        "text": "at different angles or different\nposes or different projections",
+        "start": 1656.854,
+        "duration": 2.9
+    },
+    {
+        "text": "or whatever you want to call it.",
+        "start": 1659.914,
+        "duration": 1.15
+    },
+    {
+        "text": "and then try to, compare two images.",
+        "start": 1663.354,
+        "duration": 2.87
+    },
+    {
+        "text": "So once there's like a good match,\nthen, you would know from which",
+        "start": 1667.554,
+        "duration": 4.41
+    },
+    {
+        "text": "image that it matched, like what\nthe pose was of that object.",
+        "start": 1672.034,
+        "duration": 2.9
+    },
+    {
+        "text": "So I thought this was\nfelt like graph matching.",
+        "start": 1675.854,
+        "duration": 3.33
+    },
+    {
+        "text": "But in the sense that we show the\nobject in a couple of different poses",
+        "start": 1682.374,
+        "duration": 4.7
+    },
+    {
+        "text": "and then we recognize it in any pose or",
+        "start": 1687.144,
+        "duration": 4.86
+    },
+    {
+        "text": "I think in the sense that when\nwe see like a single patch and",
+        "start": 1694.744,
+        "duration": 4.66
+    },
+    {
+        "text": "we later try to construct the\nobject, we need to match the pose.",
+        "start": 1699.404,
+        "duration": 3.825
+    },
+    {
+        "text": "of the object in that in the memory.",
+        "start": 1703.439,
+        "duration": 1.91
+    },
+    {
+        "text": "the object in memory\ndoesn't really have a pose.",
+        "start": 1707.219,
+        "duration": 3.34
+    },
+    {
+        "text": "We, just have a hypothesis of how\nthe object we're sensing is rotated.",
+        "start": 1711.209,
+        "duration": 3.92
+    },
+    {
+        "text": "And we use that to rotate our\ninput and then match it to the",
+        "start": 1715.159,
+        "duration": 5.34
+    },
+    {
+        "text": "3D model that we have in memory.",
+        "start": 1720.529,
+        "duration": 1.89
+    },
+    {
+        "text": "Yeah.",
+        "start": 1722.889,
+        "duration": 0.37
+    },
+    {
+        "text": "And so in this case, it's\nnot that our template is,",
+        "start": 1723.579,
+        "duration": 2.99
+    },
+    {
+        "text": "We have a bunch of instances of\ntemplate, but whether we're moving the",
+        "start": 1729.184,
+        "duration": 3.95
+    },
+    {
+        "text": "object inside our head or input, for\nme, I think they're the same things.",
+        "start": 1733.144,
+        "duration": 4.4
+    },
+    {
+        "text": "which one are you rotating?",
+        "start": 1737.754,
+        "duration": 0.93
+    },
+    {
+        "text": "you don't yeah, it's not\nreally multiple templates.",
+        "start": 1740.604,
+        "duration": 4.6
+    },
+    {
+        "text": "It's just one three\ndimensional model that we have.",
+        "start": 1746.674,
+        "duration": 2.75
+    },
+    {
+        "text": "so in that sense we have to\navoid thinking along those lines.",
+        "start": 1752.154,
+        "duration": 2.9
+    },
+    {
+        "text": "But so is this method able to interpolate?",
+        "start": 1757.884,
+        "duration": 3.46
+    },
+    {
+        "text": "So if the object is in a new pose\nnow that is not in the templates,",
+        "start": 1761.354,
+        "duration": 4.07
+    },
+    {
+        "text": "can it recognize that pose?",
+        "start": 1765.754,
+        "duration": 1.56
+    },
+    {
+        "text": "Or",
+        "start": 1769.704,
+        "duration": 0.53
+    },
+    {
+        "text": "will it just match to\nthe nearest template?",
+        "start": 1772.554,
+        "duration": 2.8
+    },
+    {
+        "text": "Oh, sure.",
+        "start": 1779.764,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah, that's a good question.",
+        "start": 1780.274,
+        "duration": 1.12
+    },
+    {
+        "text": "Yeah.",
+        "start": 1785.564,
+        "duration": 0.41
+    },
+    {
+        "text": "This seems, less similar to Monty\nthan the previous, key feature method.",
+        "start": 1789.074,
+        "duration": 5.79
+    },
+    {
+        "text": "Yeah.",
+        "start": 1798.704,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 1804.494,
+        "duration": 0.25
+    },
+    {
+        "text": "do you know how it's trained?",
+        "start": 1806.164,
+        "duration": 1.53
+    },
+    {
+        "text": "It's trained on the CAD model\nplus a bunch of views, right?",
+        "start": 1811.774,
+        "duration": 3.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 1815.154,
+        "duration": 0.39
+    },
+    {
+        "text": "So the one nice thing about it,\nis that if we wanted to train",
+        "start": 1817.534,
+        "duration": 3.75
+    },
+    {
+        "text": "one of these models, we have,",
+        "start": 1821.284,
+        "duration": 1.08
+    },
+    {
+        "text": "We can generate all those observations\nfrom different angles in the",
+        "start": 1824.999,
+        "duration": 3.75
+    },
+    {
+        "text": "habitat and we have the models.",
+        "start": 1828.789,
+        "duration": 1.75
+    },
+    {
+        "text": "So in this method, so there is actually\na longer training procedure involved.",
+        "start": 1832.159,
+        "duration": 6.74
+    },
+    {
+        "text": "It's not just like you have these 2D\nviews of the object and you're doing",
+        "start": 1839.029,
+        "duration": 4.82
+    },
+    {
+        "text": "like a kernel operation over the\nimage and see if it matches anywhere.",
+        "start": 1843.849,
+        "duration": 3.54
+    },
+    {
+        "text": "do they actually train on\nlike thousands of images?",
+        "start": 1849.999,
+        "duration": 2.69
+    },
+    {
+        "text": "before this works, or can\nthis kind of work out of the",
+        "start": 1853.364,
+        "duration": 3.19
+    },
+    {
+        "text": "box with just a few images?",
+        "start": 1856.554,
+        "duration": 1.49
+    },
+    {
+        "text": "I definitely need to be trying to put\nin my speaking, because, so again,",
+        "start": 1859.224,
+        "duration": 5.31
+    },
+    {
+        "text": "this one would definitely involves\nsegmentation because the models would",
+        "start": 1864.534,
+        "duration": 3.99
+    },
+    {
+        "text": "exist without any background or seen.",
+        "start": 1868.774,
+        "duration": 2.72
+    },
+    {
+        "text": "so I think, one of the key aspects.",
+        "start": 1872.504,
+        "duration": 2.92
+    },
+    {
+        "text": "of these models is to do segmentation,\nremove the background and try to",
+        "start": 1876.094,
+        "duration": 4.0
+    },
+    {
+        "text": "learn to minimize whatever\nkind of difference with you,",
+        "start": 1882.564,
+        "duration": 3.75
+    },
+    {
+        "text": "difference function that you said.",
+        "start": 1886.644,
+        "duration": 1.3
+    },
+    {
+        "text": "So for example, the models might\nnot have like the colors on them.",
+        "start": 1889.314,
+        "duration": 5.43
+    },
+    {
+        "text": "So how basically like it will\nstill need to learn to minimize",
+        "start": 1895.164,
+        "duration": 4.7
+    },
+    {
+        "text": "a loss function, whether it's\na structured loss or whatever.",
+        "start": 1899.864,
+        "duration": 4.01
+    },
+    {
+        "text": "To, yeah, to say, oh,\nthis 2D image matches,",
+        "start": 1906.324,
+        "duration": 3.73
+    },
+    {
+        "text": "this point of view of a 3D model.",
+        "start": 1912.434,
+        "duration": 2.38
+    },
+    {
+        "text": "Is this still, a state of the art model?",
+        "start": 1917.244,
+        "duration": 3.21
+    },
+    {
+        "text": "I think this one, in general,\nbecause there can be so",
+        "start": 1922.064,
+        "duration": 4.56
+    },
+    {
+        "text": "much, it takes a long time.",
+        "start": 1926.624,
+        "duration": 2.87
+    },
+    {
+        "text": "Because there can be so many\nposes that the object can be in.",
+        "start": 1930.504,
+        "duration": 3.09
+    },
+    {
+        "text": "I don't think the sodas that you found\nare template matching based, right?",
+        "start": 1937.484,
+        "duration": 3.34
+    },
+    {
+        "text": "Maybe this multi view\nconvolutional neural network.",
+        "start": 1940.934,
+        "duration": 3.08
+    },
+    {
+        "text": "Okay, but, okay.",
+        "start": 1944.014,
+        "duration": 2.27
+    },
+    {
+        "text": "That's also an older one.",
+        "start": 1946.864,
+        "duration": 1.04
+    },
+    {
+        "text": "It's almost 10 years old now.",
+        "start": 1947.934,
+        "duration": 1.09
+    },
+    {
+        "text": "So I don't know if that would be\nconsidered state of the art or not.",
+        "start": 1949.074,
+        "duration": 2.47
+    },
+    {
+        "text": "Probably not.",
+        "start": 1951.684,
+        "duration": 0.31
+    },
+    {
+        "text": "And then, the final way to do pose\nestimation is, iterative refinement.",
+        "start": 1955.284,
+        "duration": 4.79
+    },
+    {
+        "text": "So this one, starts with the\ninitial hypothesis of where the",
+        "start": 1960.074,
+        "duration": 3.69
+    },
+    {
+        "text": "pose, what the pose could be.",
+        "start": 1963.764,
+        "duration": 1.65
+    },
+    {
+        "text": "And then, so this one requires\nan initial pose, hypothesis.",
+        "start": 1966.004,
+        "duration": 6.81
+    },
+    {
+        "text": "So that can come from direct regression\nor any other previous methods,",
+        "start": 1972.814,
+        "duration": 3.37
+    },
+    {
+        "text": "and then try to rotate the target\nor the object until they match.",
+        "start": 1976.854,
+        "duration": 5.27
+    },
+    {
+        "text": "Yeah, this is, these are all\nparallel vision methods here, right?",
+        "start": 1983.474,
+        "duration": 5.4
+    },
+    {
+        "text": "they're not really sensory\nmotor type of systems.",
+        "start": 1989.974,
+        "duration": 3.02
+    },
+    {
+        "text": "Yeah, It's not money like.",
+        "start": 1993.414,
+        "duration": 1.22
+    },
+    {
+        "text": "Yeah, there is, I don't, think\nthere is a sensory model like that.",
+        "start": 1995.254,
+        "duration": 4.0
+    },
+    {
+        "text": "Yeah, I know, that's\nour strength, actually.",
+        "start": 1999.254,
+        "duration": 2.31
+    },
+    {
+        "text": "we're, yeah, okay, let's leave it at that.",
+        "start": 2005.524,
+        "duration": 1.86
+    },
+    {
+        "text": "I'm just trying to remember, are\nwe, looking at these different",
+        "start": 2008.784,
+        "duration": 2.41
+    },
+    {
+        "text": "methods, proposed estimation?",
+        "start": 2011.194,
+        "duration": 1.76
+    },
+    {
+        "text": "as ways we might implement it in\nMonty, or are we using it ways for,",
+        "start": 2013.334,
+        "duration": 3.95
+    },
+    {
+        "text": "testing Monty, or are we using it ways\nfor comparing Monty to other systems?",
+        "start": 2018.744,
+        "duration": 4.6
+    },
+    {
+        "text": "It's just for the last one.",
+        "start": 2024.154,
+        "duration": 1.62
+    },
+    {
+        "text": "So we're not thinking of using\nthis method, any of these",
+        "start": 2025.774,
+        "duration": 2.98
+    },
+    {
+        "text": "methods, to implement in Monty.",
+        "start": 2028.784,
+        "duration": 1.97
+    },
+    {
+        "text": "It's more, we want to show the\ncapabilities of Monty, and to do",
+        "start": 2030.754,
+        "duration": 4.49
+    },
+    {
+        "text": "that, we should compare it to the\ncurrent state of the art in the field.",
+        "start": 2035.244,
+        "duration": 3.55
+    },
+    {
+        "text": "Yeah, I think Monty is already doing\nbetter, so we don't need these methods.",
+        "start": 2040.084,
+        "duration": 3.26
+    },
+    {
+        "text": "but we need to find some common\nground to compare them, I think.",
+        "start": 2044.504,
+        "duration": 3.66
+    },
+    {
+        "text": "So that's why I was looking into the\nkind of different methods and what",
+        "start": 2048.164,
+        "duration": 3.19
+    },
+    {
+        "text": "are the common grounds that we can",
+        "start": 2051.354,
+        "duration": 1.19
+    },
+    {
+        "text": "say, Yeah, anyway, so the reinforcement\nlearning methods are under these ones.",
+        "start": 2054.574,
+        "duration": 5.85
+    },
+    {
+        "text": "this one kind of, they pose a\nproblem as, navigating through",
+        "start": 2060.964,
+        "duration": 4.25
+    },
+    {
+        "text": "like a hypothesis space.",
+        "start": 2065.214,
+        "duration": 1.2
+    },
+    {
+        "text": "So instead of trying out a bunch\nof different rotations and trying",
+        "start": 2066.424,
+        "duration": 2.41
+    },
+    {
+        "text": "to randomly match it, the RL\nmethod just learns a better action",
+        "start": 2068.834,
+        "duration": 4.14
+    },
+    {
+        "text": "policy to rotate or like move the\nobject in a, in a more sensible, or",
+        "start": 2072.974,
+        "duration": 6.793
+    },
+    {
+        "text": "in a more computationally\nefficient manner.",
+        "start": 2081.844,
+        "duration": 1.8
+    },
+    {
+        "text": "but they're not actually, navigating\nor sensing, by themselves.",
+        "start": 2087.054,
+        "duration": 4.22
+    },
+    {
+        "text": "It's just",
+        "start": 2091.324,
+        "duration": 0.59
+    },
+    {
+        "text": "a method to speed this up.",
+        "start": 2093.924,
+        "duration": 1.84
+    },
+    {
+        "text": "Because this is usually the\nthing, after template matching,",
+        "start": 2095.764,
+        "duration": 3.55
+    },
+    {
+        "text": "this is the slowest one.",
+        "start": 2099.314,
+        "duration": 0.98
+    },
+    {
+        "text": "And often, post estimation, there's\na huge goal to make it fast, aka real",
+        "start": 2100.314,
+        "duration": 5.32
+    },
+    {
+        "text": "time for, again, for autonomous cars.",
+        "start": 2105.634,
+        "duration": 3.48
+    },
+    {
+        "text": "for those applications, iterative\nrefinement, Isn't used because it",
+        "start": 2110.214,
+        "duration": 3.5
+    },
+    {
+        "text": "just takes it improves accuracy,\nbut at a huge computational cost.",
+        "start": 2113.714,
+        "duration": 3.84
+    },
+    {
+        "text": "So that's why some of these like oral\nbase or other methods exist to, make this",
+        "start": 2117.914,
+        "duration": 5.73
+    },
+    {
+        "text": "shorter because we want to have both,\nreal time tracking and high accuracy.",
+        "start": 2123.644,
+        "duration": 5.12
+    },
+    {
+        "text": "So wherever this, method here,\nis there a model of the object?",
+        "start": 2128.914,
+        "duration": 5.09
+    },
+    {
+        "text": "it's, not clear.",
+        "start": 2138.254,
+        "duration": 0.88
+    },
+    {
+        "text": "Is it, just, I",
+        "start": 2141.084,
+        "duration": 0.65
+    },
+    {
+        "text": "think they just give the raw\nground truth cat models and then",
+        "start": 2144.464,
+        "duration": 4.11
+    },
+    {
+        "text": "put that pose into the renderer.",
+        "start": 2149.274,
+        "duration": 1.76
+    },
+    {
+        "text": "Yeah, So you would have some\ninitial pose for your object, right?",
+        "start": 2151.714,
+        "duration": 4.48
+    },
+    {
+        "text": "So think of that as like a point\ncloud or mesh, that would, let's",
+        "start": 2156.204,
+        "duration": 5.33
+    },
+    {
+        "text": "say one is flat and, there's an\nobject that's flat on the table.",
+        "start": 2161.534,
+        "duration": 4.4
+    },
+    {
+        "text": "and then, we have an object in\nthe cat model that's upright.",
+        "start": 2166.564,
+        "duration": 4.93
+    },
+    {
+        "text": "Then the object on the table, it\nwill try to move around until it",
+        "start": 2172.099,
+        "duration": 7.33
+    },
+    {
+        "text": "matches the kind of orientation.",
+        "start": 2179.469,
+        "duration": 2.98
+    },
+    {
+        "text": "So the CAD model has a sort of\npreferred pose, and then it's, it tries.",
+        "start": 2183.629,
+        "duration": 6.45
+    },
+    {
+        "text": "Actually, yeah, I think they\nactually mostly try to find that the",
+        "start": 2191.199,
+        "duration": 3.14
+    },
+    {
+        "text": "relative pose between the CAD model.",
+        "start": 2194.349,
+        "duration": 2.03
+    },
+    {
+        "text": "And your, existing.",
+        "start": 2196.719,
+        "duration": 2.86
+    },
+    {
+        "text": "Yeah, I think I get the, what do\nyou mean with your question, Jeff?",
+        "start": 2200.999,
+        "duration": 3.84
+    },
+    {
+        "text": "Cause like, where's the\nimage going in here?",
+        "start": 2204.869,
+        "duration": 2.89
+    },
+    {
+        "text": "Like the image where we're\ntrying to detect the pose.",
+        "start": 2207.769,
+        "duration": 3.53
+    },
+    {
+        "text": "Where does that come from?",
+        "start": 2211.329,
+        "duration": 1.24
+    },
+    {
+        "text": "so in this case, the, usually\nthe input is like a point cloud.",
+        "start": 2214.349,
+        "duration": 5.47
+    },
+    {
+        "text": "and that point cloud is coming from\nposts that was estimated from images.",
+        "start": 2220.589,
+        "duration": 4.19
+    },
+    {
+        "text": "Oh, so there's another preprocessing step.",
+        "start": 2226.409,
+        "duration": 1.97
+    },
+    {
+        "text": "Yeah, because, we need to have\nsome kind of initial guess.",
+        "start": 2228.679,
+        "duration": 3.14
+    },
+    {
+        "text": "So that, that often\ninvolves, direct regression.",
+        "start": 2231.829,
+        "duration": 3.06
+    },
+    {
+        "text": "So it often comes from an image.",
+        "start": 2234.899,
+        "duration": 3.98
+    },
+    {
+        "text": "We have a, some kind of post\nestimate, initial post estimate, and",
+        "start": 2239.049,
+        "duration": 3.95
+    },
+    {
+        "text": "then we can use that post estimate.",
+        "start": 2242.999,
+        "duration": 1.34
+    },
+    {
+        "text": "To, convert the 2D to the 3D, and\nthen from there, we try to rotate",
+        "start": 2245.099,
+        "duration": 6.52
+    },
+    {
+        "text": "the 3D object to match the CAD model.",
+        "start": 2251.769,
+        "duration": 2.21
+    },
+    {
+        "text": "this one's a little confusing to me\nbecause it just seems like it's, unless",
+        "start": 2256.759,
+        "duration": 5.46
+    },
+    {
+        "text": "it's doing all those CAD models in\nparallel, it does them all one at a time.",
+        "start": 2262.219,
+        "duration": 4.96
+    },
+    {
+        "text": "from the initial, I guess there will\nbe an object that was identified,",
+        "start": 2270.939,
+        "duration": 3.15
+    },
+    {
+        "text": "Again, so we already\nknow what the object is.",
+        "start": 2276.514,
+        "duration": 2.49
+    },
+    {
+        "text": "Yeah, and now, okay, it just I'm looking\nat the little flow diagram there and",
+        "start": 2279.384,
+        "duration": 6.49
+    },
+    {
+        "text": "there's nothing in the flow diagram that\nexplains what the model of the object is.",
+        "start": 2285.874,
+        "duration": 3.57
+    },
+    {
+        "text": "It's just this, initial pose,\nchange the pose, initial.",
+        "start": 2289.444,
+        "duration": 3.19
+    },
+    {
+        "text": "It's pose of what,",
+        "start": 2293.444,
+        "duration": 1.82
+    },
+    {
+        "text": "I don't need to get into the\ndetails unless it's something",
+        "start": 2297.584,
+        "duration": 2.16
+    },
+    {
+        "text": "we're going to really rely on.",
+        "start": 2299.754,
+        "duration": 1.9
+    },
+    {
+        "text": "Yeah, but I think this one probably isn't.",
+        "start": 2302.434,
+        "duration": 1.97
+    },
+    {
+        "text": "Yeah.",
+        "start": 2304.404,
+        "duration": 3.345
+    },
+    {
+        "text": "So, I have a question.",
+        "start": 2312.159,
+        "duration": 1.21
+    },
+    {
+        "text": "I'm sorry.",
+        "start": 2313.369,
+        "duration": 0.46
+    },
+    {
+        "text": "I was, my zoom was cutting in and out,\nso I missed part of the discussion.",
+        "start": 2313.829,
+        "duration": 3.74
+    },
+    {
+        "text": "But, did you cover, ransack\nmethods for pose estimation?",
+        "start": 2318.179,
+        "duration": 5.52
+    },
+    {
+        "text": "Yes, I didn't say it here, but,",
+        "start": 2324.529,
+        "duration": 1.76
+    },
+    {
+        "text": "when we do, when,",
+        "start": 2329.009,
+        "duration": 1.31
+    },
+    {
+        "text": "during perspective and\npoints, it's ransack to not",
+        "start": 2332.729,
+        "duration": 4.1
+    },
+    {
+        "text": "to generate possible pose hypotheses.",
+        "start": 2339.059,
+        "duration": 3.77
+    },
+    {
+        "text": "Okay.",
+        "start": 2343.389,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 2343.959,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah, that I hadn't seen that\none particular image where they",
+        "start": 2344.469,
+        "duration": 3.86
+    },
+    {
+        "text": "were going from features to pose.",
+        "start": 2348.329,
+        "duration": 2.31
+    },
+    {
+        "text": "Got it.",
+        "start": 2351.059,
+        "duration": 0.52
+    },
+    {
+        "text": "Yeah, sorry.",
+        "start": 2352.269,
+        "duration": 0.6
+    },
+    {
+        "text": "I guess I copied these\ndiagrams from a review paper.",
+        "start": 2353.989,
+        "duration": 2.39
+    },
+    {
+        "text": "Okay, thank you.",
+        "start": 2359.494,
+        "duration": 0.67
+    },
+    {
+        "text": "Yeah, but yeah.",
+        "start": 2360.664,
+        "duration": 2.05
+    },
+    {
+        "text": "which of these methods would you say is\nthe best state of the art at the moment?",
+        "start": 2363.284,
+        "duration": 5.5
+    },
+    {
+        "text": "For me, it's keypoint.",
+        "start": 2370.634,
+        "duration": 0.75
+    },
+    {
+        "text": "I think that's",
+        "start": 2371.914,
+        "duration": 0.57
+    },
+    {
+        "text": "Okay.",
+        "start": 2375.994,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 2376.814,
+        "duration": 0.52
+    },
+    {
+        "text": "So you said there was nothing out\nthere that uses the same kind of",
+        "start": 2377.704,
+        "duration": 3.76
+    },
+    {
+        "text": "inference regime where you have a sensor\nthat moves over the object, right?",
+        "start": 2383.474,
+        "duration": 5.42
+    },
+    {
+        "text": "Yes.",
+        "start": 2389.264,
+        "duration": 0.37
+    },
+    {
+        "text": "Yeah.",
+        "start": 2389.944,
+        "duration": 0.17
+    },
+    {
+        "text": "Okay.",
+        "start": 2391.504,
+        "duration": 0.17
+    },
+    {
+        "text": "Let me ask a sort of a\nhigher level question.",
+        "start": 2392.484,
+        "duration": 2.48
+    },
+    {
+        "text": "So in Monty in the brain, we have\nlearning modules, each learning module",
+        "start": 2395.584,
+        "duration": 4.35
+    },
+    {
+        "text": "of course can do this independently of\nall the other learning modules, but of",
+        "start": 2399.934,
+        "duration": 3.53
+    },
+    {
+        "text": "course they also vote on this as well.",
+        "start": 2403.464,
+        "duration": 1.98
+    },
+    {
+        "text": "So that's why we were able\nto do flash inference.",
+        "start": 2405.454,
+        "duration": 3.16
+    },
+    {
+        "text": "Are we going to try to demonstrate\nboth of those initially, or are",
+        "start": 2410.924,
+        "duration": 3.47
+    },
+    {
+        "text": "we going to just try to show how a\nsingle learning module does this?",
+        "start": 2414.394,
+        "duration": 2.84
+    },
+    {
+        "text": "Both.",
+        "start": 2419.204,
+        "duration": 0.44
+    },
+    {
+        "text": "So the voting is, I think it was.",
+        "start": 2419.654,
+        "duration": 1.59
+    },
+    {
+        "text": "0. 2 of the capabilities\nthat we want to demonstrate.",
+        "start": 2421.679,
+        "duration": 3.74
+    },
+    {
+        "text": "yeah.",
+        "start": 2427.249,
+        "duration": 0.45
+    },
+    {
+        "text": "If I remember.",
+        "start": 2429.229,
+        "duration": 0.52
+    },
+    {
+        "text": "Yeah.",
+        "start": 2431.019,
+        "duration": 0.2
+    },
+    {
+        "text": "Rapid inference with multiple sensors.",
+        "start": 2431.219,
+        "duration": 2.06
+    },
+    {
+        "text": "Okay.",
+        "start": 2433.339,
+        "duration": 0.35
+    },
+    {
+        "text": "So that multiple sensors includes multiple\nvision patches or multiple sensors.",
+        "start": 2433.689,
+        "duration": 3.97
+    },
+    {
+        "text": "Yeah.",
+        "start": 2437.729,
+        "duration": 0.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 2438.289,
+        "duration": 0.32
+    },
+    {
+        "text": "that's even I got fooled by that because.",
+        "start": 2439.859,
+        "duration": 2.5
+    },
+    {
+        "text": "Maybe if it said multiple sensor\npatches, that would be clearer.",
+        "start": 2443.254,
+        "duration": 2.97
+    },
+    {
+        "text": "I took that to mean, and I think most\npeople take that to mean oh, vision and",
+        "start": 2446.864,
+        "duration": 3.87
+    },
+    {
+        "text": "touch or vision and hearing or something.",
+        "start": 2450.734,
+        "duration": 1.61
+    },
+    {
+        "text": "Oh, that would be B, a multimodal\ntransfer, Okay, maybe we could just",
+        "start": 2452.384,
+        "duration": 4.82
+    },
+    {
+        "text": "change B to say multiple sensor patches.",
+        "start": 2457.204,
+        "duration": 3.38
+    },
+    {
+        "text": "Yeah, I think I also confused that,\nJeff, when I was first going through it.",
+        "start": 2461.099,
+        "duration": 4.23
+    },
+    {
+        "text": "it is a general rule here.",
+        "start": 2466.399,
+        "duration": 2.32
+    },
+    {
+        "text": "Monty works very differently than\nalmost every other kind of learning",
+        "start": 2471.729,
+        "duration": 2.89
+    },
+    {
+        "text": "system out there, and we need to be\ndemonstrating that we're making progress",
+        "start": 2474.619,
+        "duration": 4.33
+    },
+    {
+        "text": "on those components of how Monty works.",
+        "start": 2479.009,
+        "duration": 2.24
+    },
+    {
+        "text": "And that's more important than showing\nthat Monty is better at other systems.",
+        "start": 2481.949,
+        "duration": 4.87
+    },
+    {
+        "text": "that's a losing game initially,\nwe, we, don't want to go there.",
+        "start": 2488.739,
+        "duration": 4.76
+    },
+    {
+        "text": "We really want to say, hey,\nit's some unique capabilities.",
+        "start": 2493.509,
+        "duration": 3.28
+    },
+    {
+        "text": "We're starting to show how they work.",
+        "start": 2497.029,
+        "duration": 1.7
+    },
+    {
+        "text": "it's almost like illustrating and teaching\npeople how these systems, how Monty",
+        "start": 2500.319,
+        "duration": 3.89
+    },
+    {
+        "text": "and the brain actually do these things,\nwhich is more important than actually",
+        "start": 2504.209,
+        "duration": 3.57
+    },
+    {
+        "text": "saying, oh, we'd be, we're better at\nthis benchmark than these people are.",
+        "start": 2507.789,
+        "duration": 3.92
+    },
+    {
+        "text": "So I just want to make clear that.",
+        "start": 2511.709,
+        "duration": 1.58
+    },
+    {
+        "text": "To me, it'd be more important to\nsay, oh, let's talk about how a",
+        "start": 2513.919,
+        "duration": 2.12
+    },
+    {
+        "text": "single learning module does this.",
+        "start": 2516.049,
+        "duration": 1.27
+    },
+    {
+        "text": "Let's talk about how they vote to\nreach a consensus more quickly, and",
+        "start": 2517.349,
+        "duration": 5.03
+    },
+    {
+        "text": "demonstrate that we can do that.",
+        "start": 2522.379,
+        "duration": 1.44
+    },
+    {
+        "text": "I'm not against comparing it to other\nsystems, but we have to be really careful.",
+        "start": 2524.459,
+        "duration": 4.68
+    },
+    {
+        "text": "If you compare to other systems,\nyou're not better than the machine",
+        "start": 2529.889,
+        "duration": 3.36
+    },
+    {
+        "text": "learning world will just ignore you.",
+        "start": 2533.249,
+        "duration": 1.45
+    },
+    {
+        "text": "They don't really care how you do it.",
+        "start": 2534.699,
+        "duration": 1.4
+    },
+    {
+        "text": "They'll just say, on that benchmark,\nyou're not as good or you're",
+        "start": 2536.734,
+        "duration": 2.43
+    },
+    {
+        "text": "about par, so who cares type of\nthing, you know what I'm saying?",
+        "start": 2539.184,
+        "duration": 2.54
+    },
+    {
+        "text": "We don't want to, we won't, we\ndon't want to give people that view.",
+        "start": 2541.994,
+        "duration": 2.6
+    },
+    {
+        "text": "We want them to say, hey,\nthis thing works differently.",
+        "start": 2544.604,
+        "duration": 1.89
+    },
+    {
+        "text": "And look how cool it is that it works.",
+        "start": 2546.494,
+        "duration": 1.31
+    },
+    {
+        "text": "That kind of thing.",
+        "start": 2547.804,
+        "duration": 0.59
+    },
+    {
+        "text": "Yeah.",
+        "start": 2549.064,
+        "duration": 0.45
+    },
+    {
+        "text": "but one, I think we, we are,\nwe would beat all of these.",
+        "start": 2550.964,
+        "duration": 3.92
+    },
+    {
+        "text": "approaches if we, make it with the same\namount of training data, like they get",
+        "start": 2555.544,
+        "duration": 5.08
+    },
+    {
+        "text": "as much training data as Monty gets,\nthey would probably all fail completely.",
+        "start": 2560.644,
+        "duration": 4.47
+    },
+    {
+        "text": "But now seeing that you didn't find\nanything that even works closely",
+        "start": 2565.114,
+        "duration": 4.27
+    },
+    {
+        "text": "to how Monty does inference.",
+        "start": 2569.384,
+        "duration": 1.72
+    },
+    {
+        "text": "I wonder if it would make more sense\nfor us to just put out new benchmarks.",
+        "start": 2571.824,
+        "duration": 6.07
+    },
+    {
+        "text": "We could ourselves try to train a\nreinforcement learning agent on it,",
+        "start": 2579.314,
+        "duration": 3.58
+    },
+    {
+        "text": "or something that we think would\nbe best to transform a model or",
+        "start": 2582.894,
+        "duration": 2.84
+    },
+    {
+        "text": "something, but then just put it\nout there, say humans can do this.",
+        "start": 2585.734,
+        "duration": 4.86
+    },
+    {
+        "text": "Our system is very good at it.",
+        "start": 2590.834,
+        "duration": 1.53
+    },
+    {
+        "text": "Try to solve it in a better way.",
+        "start": 2592.524,
+        "duration": 2.15
+    },
+    {
+        "text": "Kind of thing.",
+        "start": 2595.444,
+        "duration": 0.91
+    },
+    {
+        "text": "Yeah.",
+        "start": 2596.384,
+        "duration": 0.53
+    },
+    {
+        "text": "you could do that in the form of a demo.",
+        "start": 2599.444,
+        "duration": 1.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 2603.864,
+        "duration": 0.41
+    },
+    {
+        "text": "because, that, then that gets\npeople intrigued with, how",
+        "start": 2606.384,
+        "duration": 3.85
+    },
+    {
+        "text": "are you able to accomplish it?",
+        "start": 2610.234,
+        "duration": 1.16
+    },
+    {
+        "text": "Rather than trying to go against\nyou Oh, here's a thousand object",
+        "start": 2612.129,
+        "duration": 5.16
+    },
+    {
+        "text": "library and, here's how we\nstack up against something else.",
+        "start": 2617.529,
+        "duration": 4.33
+    },
+    {
+        "text": "But if you can, if the demo\nillustrates unique features of",
+        "start": 2621.899,
+        "duration": 4.31
+    },
+    {
+        "text": "Monty, that might serve as a teaser\nfor people to get more interested.",
+        "start": 2626.219,
+        "duration": 5.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 2634.459,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 2636.079,
+        "duration": 0.25
+    },
+    {
+        "text": "And the demo could be something\nlike a benchmark as well.",
+        "start": 2636.329,
+        "duration": 4.88
+    },
+    {
+        "text": "Not in the sense as it could be\nstill be something cool, but in",
+        "start": 2641.209,
+        "duration": 5.75
+    },
+    {
+        "text": "the sense of try to solve this\ntask in a better way than we do.",
+        "start": 2646.959,
+        "duration": 4.08
+    },
+    {
+        "text": "Yeah.",
+        "start": 2651.839,
+        "duration": 0.51
+    },
+    {
+        "text": "I wouldn't want to make that challenge.",
+        "start": 2652.509,
+        "duration": 1.7
+    },
+    {
+        "text": "I think what we would want to do is\nwe want to show how the system works.",
+        "start": 2654.899,
+        "duration": 2.97
+    },
+    {
+        "text": "First, that is the most important thing.",
+        "start": 2657.879,
+        "duration": 1.55
+    },
+    {
+        "text": "How does this system work?",
+        "start": 2659.559,
+        "duration": 1.07
+    },
+    {
+        "text": "Single learning module can do it\nthrough inference over time movement.",
+        "start": 2660.809,
+        "duration": 3.53
+    },
+    {
+        "text": "Multiple learning modules can\nvote to do this more rapidly",
+        "start": 2664.719,
+        "duration": 2.8
+    },
+    {
+        "text": "and then characterize that.",
+        "start": 2668.099,
+        "duration": 1.32
+    },
+    {
+        "text": "maybe we do some sort\nof capacity testing or,",
+        "start": 2669.729,
+        "duration": 2.42
+    },
+    {
+        "text": "performance testing on just for\nourselves for starters, And then",
+        "start": 2674.169,
+        "duration": 4.84
+    },
+    {
+        "text": "after you've done all that, you could\nthen compare it to other systems.",
+        "start": 2679.039,
+        "duration": 2.96
+    },
+    {
+        "text": "but really the goal here is not to\nget people to say, Oh, this is better",
+        "start": 2684.019,
+        "duration": 4.07
+    },
+    {
+        "text": "than system X. The goal here is to\neducate people that there's a whole",
+        "start": 2688.089,
+        "duration": 3.13
+    },
+    {
+        "text": "different way of doing these things.",
+        "start": 2691.219,
+        "duration": 1.22
+    },
+    {
+        "text": "And, I think in some sense, we're\ngoing to have fans who just have bought",
+        "start": 2693.789,
+        "duration": 3.32
+    },
+    {
+        "text": "into the whole thousand brains theory.",
+        "start": 2697.109,
+        "duration": 1.51
+    },
+    {
+        "text": "And those are our, audience here, the\naudience of people who, basically think",
+        "start": 2699.534,
+        "duration": 5.53
+    },
+    {
+        "text": "like deep learning can do everything.",
+        "start": 2705.064,
+        "duration": 1.44
+    },
+    {
+        "text": "we don't, our goal isn't to try\nto convince them, at this point.",
+        "start": 2707.734,
+        "duration": 3.81
+    },
+    {
+        "text": "we have to stay away from that, I think.",
+        "start": 2712.264,
+        "duration": 1.91
+    },
+    {
+        "text": "So as long as we focus on,\nhey, this is how Monty does it.",
+        "start": 2714.174,
+        "duration": 3.03
+    },
+    {
+        "text": "These are the capabilities of it.",
+        "start": 2717.264,
+        "duration": 1.23
+    },
+    {
+        "text": "This, it's, it's, limits and potential.",
+        "start": 2718.504,
+        "duration": 3.92
+    },
+    {
+        "text": "Oh, by the way, if we, and if we can say,",
+        "start": 2722.764,
+        "duration": 2.23
+    },
+    {
+        "text": "it's better than other systems, but that\ncan't be the main focus, because then",
+        "start": 2727.214,
+        "duration": 4.54
+    },
+    {
+        "text": "someone will come along and try to do\nsomething different with another system.",
+        "start": 2731.754,
+        "duration": 3.06
+    },
+    {
+        "text": "I don't know.",
+        "start": 2734.814,
+        "duration": 0.38
+    },
+    {
+        "text": "we don't want to get stuck\nin this benchmark hell.",
+        "start": 2736.774,
+        "duration": 2.56
+    },
+    {
+        "text": "We also need some",
+        "start": 2742.764,
+        "duration": 1.39
+    },
+    {
+        "text": "screen sharing session to creatively\nshow Monty, or maybe not even",
+        "start": 2746.884,
+        "duration": 6.04
+    },
+    {
+        "text": "creatively, but show Monty capabilities\nand, not just about how not just.",
+        "start": 2752.924,
+        "duration": 7.16
+    },
+    {
+        "text": "Focus it on how it performs, but how\nit's a different paradigm for doing it.",
+        "start": 2760.729,
+        "duration": 7.02
+    },
+    {
+        "text": "But so yeah, that, that is, it'll\nbe a while before Monty is beating",
+        "start": 2767.769,
+        "duration": 9.63
+    },
+    {
+        "text": "other systems at various benchmarks.",
+        "start": 2777.419,
+        "duration": 1.99
+    },
+    {
+        "text": "maybe I'm being too\npessimistic on that, but.",
+        "start": 2781.129,
+        "duration": 2.07
+    },
+    {
+        "text": "I view that as not our goal.",
+        "start": 2784.349,
+        "duration": 1.54
+    },
+    {
+        "text": "Our goal is to really just\ncontinually talk about this",
+        "start": 2785.919,
+        "duration": 4.52
+    },
+    {
+        "text": "is the way the brain does it.",
+        "start": 2790.439,
+        "duration": 1.21
+    },
+    {
+        "text": "This is a different way of doing it.",
+        "start": 2791.649,
+        "duration": 1.09
+    },
+    {
+        "text": "This is one that's built on movement and,\nmovement and sensation, and that's unique.",
+        "start": 2792.749,
+        "duration": 5.14
+    },
+    {
+        "text": "And here are the components and\nwe're making good progress on them.",
+        "start": 2798.349,
+        "duration": 3.38
+    },
+    {
+        "text": "And if we can then say, Oh, by the way,\nit's, it's performing state of the art.",
+        "start": 2802.289,
+        "duration": 4.18
+    },
+    {
+        "text": "That's okay.",
+        "start": 2806.729,
+        "duration": 0.6
+    },
+    {
+        "text": "But we don't want that\nto be the main goal.",
+        "start": 2807.329,
+        "duration": 1.91
+    },
+    {
+        "text": "Yeah, so I would characterize that as\nfocusing on qualitative differences",
+        "start": 2810.179,
+        "duration": 4.23
+    },
+    {
+        "text": "rather than quantitative differences.",
+        "start": 2814.409,
+        "duration": 1.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 2817.864,
+        "duration": 0.37
+    },
+    {
+        "text": "here's how I'm thinking of it.",
+        "start": 2818.474,
+        "duration": 1.71
+    },
+    {
+        "text": "So we already have a lot of written\nup on how the system works, what the",
+        "start": 2820.194,
+        "duration": 4.12
+    },
+    {
+        "text": "principles are, how, we do these things.",
+        "start": 2824.314,
+        "duration": 3.31
+    },
+    {
+        "text": "And I was planning to turn all of that\ninto a white paper that we are already",
+        "start": 2827.624,
+        "duration": 3.83
+    },
+    {
+        "text": "going to put on archive pretty soon.",
+        "start": 2831.454,
+        "duration": 1.58
+    },
+    {
+        "text": "So like once the project is\nopen source, people can really",
+        "start": 2833.034,
+        "duration": 2.99
+    },
+    {
+        "text": "read about how does it work.",
+        "start": 2836.024,
+        "duration": 1.53
+    },
+    {
+        "text": "But people will ask.",
+        "start": 2837.944,
+        "duration": 1.4
+    },
+    {
+        "text": "What can it actually do in what\ncases would I want to use the system?",
+        "start": 2839.599,
+        "duration": 4.19
+    },
+    {
+        "text": "What are the capabilities?",
+        "start": 2843.789,
+        "duration": 1.23
+    },
+    {
+        "text": "And there we want to show okay, it\ncan learn from very little data.",
+        "start": 2845.469,
+        "duration": 3.87
+    },
+    {
+        "text": "So if you have an application where\nyou don't have internet scale data",
+        "start": 2849.339,
+        "duration": 3.24
+    },
+    {
+        "text": "sets, you might want to consider this.",
+        "start": 2852.589,
+        "duration": 2.61
+    },
+    {
+        "text": "All right.",
+        "start": 2855.509,
+        "duration": 0.22
+    },
+    {
+        "text": "I agree with that.",
+        "start": 2855.809,
+        "duration": 0.7
+    },
+    {
+        "text": "That's the right approach.",
+        "start": 2857.129,
+        "duration": 1.11
+    },
+    {
+        "text": "It's more like the unique capabilities\nand where might that be useful as",
+        "start": 2858.249,
+        "duration": 6.12
+    },
+    {
+        "text": "opposed to comparing to other systems\nthat, some sort of performance",
+        "start": 2864.369,
+        "duration": 4.98
+    },
+    {
+        "text": "benchmark, you know what I'm saying?",
+        "start": 2869.369,
+        "duration": 1.2
+    },
+    {
+        "text": "it's got to be careful about that.",
+        "start": 2872.019,
+        "duration": 1.34
+    },
+    {
+        "text": "So yeah, and yeah, we don't need to\ncompare to a bunch of other approaches.",
+        "start": 2874.209,
+        "duration": 5.35
+    },
+    {
+        "text": "This is just an initial literature\nreview to see what is out there.",
+        "start": 2879.729,
+        "duration": 3.75
+    },
+    {
+        "text": "Are there similar approaches\nthat we should look at?",
+        "start": 2883.839,
+        "duration": 2.27
+    },
+    {
+        "text": "it doesn't look like there is an\napproach that uses the same kind of",
+        "start": 2887.169,
+        "duration": 3.6
+    },
+    {
+        "text": "data to infer from, so it might be\ndifficult to even do a fair comparison.",
+        "start": 2891.179,
+        "duration": 4.38
+    },
+    {
+        "text": "But Yeah.",
+        "start": 2896.419,
+        "duration": 1.305
+    },
+    {
+        "text": "It would be nice to at least have\na show where we take the exact",
+        "start": 2897.724,
+        "duration": 5.19
+    },
+    {
+        "text": "same data that we give to Monty and\nthen we give it to a transformer",
+        "start": 2902.914,
+        "duration": 3.08
+    },
+    {
+        "text": "or reinforcement learning agent.",
+        "start": 2906.414,
+        "duration": 1.84
+    },
+    {
+        "text": "And it just fails because it's\nnot enough data, for example.",
+        "start": 2908.304,
+        "duration": 3.5
+    },
+    {
+        "text": "That would be nice.",
+        "start": 2911.804,
+        "duration": 0.81
+    },
+    {
+        "text": "It'd be nice to do that.",
+        "start": 2912.684,
+        "duration": 0.96
+    },
+    {
+        "text": "but I don't think it's\nan absolute requirement.",
+        "start": 2914.874,
+        "duration": 2.45
+    },
+    {
+        "text": "So if we can do it, that'd be great.",
+        "start": 2917.834,
+        "duration": 1.58
+    },
+    {
+        "text": "Sounds good.",
+        "start": 2921.709,
+        "duration": 0.56
+    },
+    {
+        "text": "Yeah, I think it's gonna be hard\nto find a 1 to 1 comparison.",
+        "start": 2924.309,
+        "duration": 3.63
+    },
+    {
+        "text": "let's say we even trained a transformer\nwith the data we collected from Habitat or",
+        "start": 2928.209,
+        "duration": 5.58
+    },
+    {
+        "text": "something or 77 objects, we'd still need\nto feed that transformer a whole image,",
+        "start": 2933.789,
+        "duration": 5.05
+    },
+    {
+        "text": "like what a viewfinder gets unless we\nwant, because there's no, architectures",
+        "start": 2939.649,
+        "duration": 5.22
+    },
+    {
+        "text": "that we know of that are going to take it.",
+        "start": 2944.909,
+        "duration": 1.2
+    },
+    {
+        "text": "Image patches and try to detect\nan object, from image patches.",
+        "start": 2946.604,
+        "duration": 4.83
+    },
+    {
+        "text": "So we could give it a series of image\npatches, plus the movement or the change",
+        "start": 2951.614,
+        "duration": 5.95
+    },
+    {
+        "text": "in location and orientation over time.",
+        "start": 2957.564,
+        "duration": 2.4
+    },
+    {
+        "text": "With transformers, I was thinking like\npatch views, like the small patches that",
+        "start": 2960.814,
+        "duration": 5.54
+    },
+    {
+        "text": "it takes for Monty to get to recognize.",
+        "start": 2966.364,
+        "duration": 2.59
+    },
+    {
+        "text": "So it takes a thousand steps\nand it'll be a thousand patches.",
+        "start": 2968.974,
+        "duration": 2.76
+    },
+    {
+        "text": "And the positional embedding can\nbe a difference in location, but",
+        "start": 2972.089,
+        "duration": 3.14
+    },
+    {
+        "text": "it is that we're designing our own\ntransformer network to do this.",
+        "start": 2975.509,
+        "duration": 3.36
+    },
+    {
+        "text": "Like we're, yeah, those\naren't preexisting models.",
+        "start": 2979.309,
+        "duration": 5.02
+    },
+    {
+        "text": "if I understand it, why?",
+        "start": 2985.639,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 2987.349,
+        "duration": 0.32
+    },
+    {
+        "text": "I'm not saying let's not\ndo it or whatever, but.",
+        "start": 2987.709,
+        "duration": 2.33
+    },
+    {
+        "text": "to my knowledge, there aren't any\npre built systems out there that",
+        "start": 2991.059,
+        "duration": 3.38
+    },
+    {
+        "text": "are going to work in these patches.",
+        "start": 2994.719,
+        "duration": 1.36
+    },
+    {
+        "text": "Yeah, there's no, yeah.",
+        "start": 2996.279,
+        "duration": 0.94
+    },
+    {
+        "text": "If you look at vision transformers,\nthey actually break the image up into",
+        "start": 2997.409,
+        "duration": 3.26
+    },
+    {
+        "text": "patches, just as part of the training\nwith encoding of relative positions.",
+        "start": 3000.789,
+        "duration": 4.78
+    },
+    {
+        "text": "it's not totally divorced from\nwhat you're talking about.",
+        "start": 3006.549,
+        "duration": 4.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 3011.179,
+        "duration": 0.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 3012.329,
+        "duration": 0.3
+    },
+    {
+        "text": "Okay.",
+        "start": 3013.009,
+        "duration": 0.49
+    },
+    {
+        "text": "we just need to figure out\nhow to get our patches.",
+        "start": 3015.879,
+        "duration": 2.07
+    },
+    {
+        "text": "They just realize an image, right?",
+        "start": 3017.949,
+        "duration": 1.47
+    },
+    {
+        "text": "They actually, they actually\nbreak it on up into, each patch",
+        "start": 3021.314,
+        "duration": 9.13
+    },
+    {
+        "text": "is an input that is encoded.",
+        "start": 3030.774,
+        "duration": 2.86
+    },
+    {
+        "text": "It's in a way you could think of\nserialized, but they try to keep some",
+        "start": 3033.954,
+        "duration": 3.9
+    },
+    {
+        "text": "of the two dimensional aspect of it.",
+        "start": 3037.854,
+        "duration": 1.47
+    },
+    {
+        "text": "Yeah, so the transformer\ndoesn't have to learn the whole",
+        "start": 3039.324,
+        "duration": 4.29
+    },
+    {
+        "text": "serial to 2D transformation.",
+        "start": 3043.794,
+        "duration": 2.17
+    },
+    {
+        "text": "it's, using the word patches,\nbut it's, somewhat different.",
+        "start": 3050.204,
+        "duration": 3.37
+    },
+    {
+        "text": "it's, a subdivided image, so it's,\nnot, they're not free floating patches,",
+        "start": 3054.604,
+        "duration": 4.05
+    },
+    {
+        "text": "at least the way it's conventionally\ntrained, doesn't mean to say that you",
+        "start": 3058.654,
+        "duration": 3.83
+    },
+    {
+        "text": "couldn't try to do something like that.",
+        "start": 3062.504,
+        "duration": 1.8
+    },
+    {
+        "text": "So I'm just trying to sit.",
+        "start": 3064.304,
+        "duration": 1.46
+    },
+    {
+        "text": "Some space in between we're looking at\ntotally transformers and we're trying",
+        "start": 3066.419,
+        "duration": 3.96
+    },
+    {
+        "text": "to look at Monte, vision transformers\nhave an intermediate aspect to it,",
+        "start": 3070.379,
+        "duration": 5.74
+    },
+    {
+        "text": "which is not totally divorced from\nbreaking the image up into patches.",
+        "start": 3076.459,
+        "duration": 3.79
+    },
+    {
+        "text": "Yeah.",
+        "start": 3082.509,
+        "duration": 0.24
+    },
+    {
+        "text": "Could you, in theory, then just\nlet's say you want to just.",
+        "start": 3082.789,
+        "duration": 3.165
+    },
+    {
+        "text": "Simulate having looked\nat three image patches.",
+        "start": 3086.664,
+        "duration": 2.26
+    },
+    {
+        "text": "Can you just mask out?",
+        "start": 3089.064,
+        "duration": 1.19
+    },
+    {
+        "text": "Yeah, I think basically they tend\nto subdivide the image, but I don't",
+        "start": 3091.824,
+        "duration": 6.63
+    },
+    {
+        "text": "think there's any reason as long\nas you have some encoding of the",
+        "start": 3098.464,
+        "duration": 3.46
+    },
+    {
+        "text": "roles of relationships between them\nof having patches that overlap.",
+        "start": 3101.924,
+        "duration": 3.62
+    },
+    {
+        "text": "Or in some other aspect, so you\ncould gradually move from a fully,",
+        "start": 3106.404,
+        "duration": 5.07
+    },
+    {
+        "text": "rectilinear, Cartesian orientation\nfor the patches, maybe the things",
+        "start": 3111.734,
+        "duration": 5.11
+    },
+    {
+        "text": "that were starting to get looser.",
+        "start": 3116.844,
+        "duration": 2.21
+    },
+    {
+        "text": "But, at this point, I'm speculating\nbecause I can't point to a paper",
+        "start": 3119.854,
+        "duration": 4.41
+    },
+    {
+        "text": "where they actually did that.",
+        "start": 3124.264,
+        "duration": 1.04
+    },
+    {
+        "text": "I'm just saying, there's the,\nthing about, vision systems,",
+        "start": 3125.334,
+        "duration": 5.9
+    },
+    {
+        "text": "whether it was, convolutional\nnetworks or vision transformers.",
+        "start": 3131.544,
+        "duration": 4.27
+    },
+    {
+        "text": "Was that there was a huge amount of\nredundancy because there is this 2D,",
+        "start": 3136.499,
+        "duration": 4.21
+    },
+    {
+        "text": "things move slowly across the image, type\nof thing, as opposed to linguistically,",
+        "start": 3142.249,
+        "duration": 5.23
+    },
+    {
+        "text": "where things are not nearly coherent,\nand within the space of that, if",
+        "start": 3148.599,
+        "duration": 6.74
+    },
+    {
+        "text": "those things work, you can start.",
+        "start": 3155.359,
+        "duration": 2.04
+    },
+    {
+        "text": "kicking the system and relaxing\nsome of the hard constraints",
+        "start": 3158.639,
+        "duration": 2.99
+    },
+    {
+        "text": "and see how well it does.",
+        "start": 3161.639,
+        "duration": 1.19
+    },
+    {
+        "text": "But, like I, said, I'm, just saying\nthere is a framework there if",
+        "start": 3163.259,
+        "duration": 4.66
+    },
+    {
+        "text": "you want, if for whatever reasons\nyou want to draw an analogy or,",
+        "start": 3167.919,
+        "duration": 4.9
+    },
+    {
+        "text": "comparisons, there's a starting point.",
+        "start": 3173.289,
+        "duration": 2.18
+    },
+    {
+        "text": "Okay.",
+        "start": 3176.154,
+        "duration": 0.51
+    },
+    {
+        "text": "It's good to know worth looking into\na bit, but more, I feel like that's",
+        "start": 3177.504,
+        "duration": 4.84
+    },
+    {
+        "text": "almost the best way for us to go to\nkeep the exact same training regime",
+        "start": 3182.354,
+        "duration": 4.63
+    },
+    {
+        "text": "we have for Monty, and then try our\nvery best to train a transformer",
+        "start": 3186.984,
+        "duration": 7.05
+    },
+    {
+        "text": "model or a deep reinforcement\nlearning agent on that same data.",
+        "start": 3194.034,
+        "duration": 3.74
+    },
+    {
+        "text": "I wouldn't want to spend\na lot of time on that.",
+        "start": 3197.774,
+        "duration": 4.18
+    },
+    {
+        "text": "That could take forever, maybe.",
+        "start": 3202.019,
+        "duration": 3.8
+    },
+    {
+        "text": "I don't think it would.",
+        "start": 3206.629,
+        "duration": 1.21
+    },
+    {
+        "text": "Okay.",
+        "start": 3208.389,
+        "duration": 0.53
+    },
+    {
+        "text": "Yeah.",
+        "start": 3209.099,
+        "duration": 0.27
+    },
+    {
+        "text": "Can I ask a slightly different question?",
+        "start": 3209.959,
+        "duration": 3.14
+    },
+    {
+        "text": "In mining today, do we have,\ndo we, I should know this but I",
+        "start": 3213.659,
+        "duration": 3.81
+    },
+    {
+        "text": "don't, do we vote on POS already\nacross multiple learning modules?",
+        "start": 3217.479,
+        "duration": 5.17
+    },
+    {
+        "text": "not, really.",
+        "start": 3224.959,
+        "duration": 0.8
+    },
+    {
+        "text": "So we take the relative pose of\nthe two sensors that are voting",
+        "start": 3225.859,
+        "duration": 4.41
+    },
+    {
+        "text": "into account, but they are not\ncommunicating their hypotheses",
+        "start": 3230.299,
+        "duration": 4.49
+    },
+    {
+        "text": "of the object pose to each other.",
+        "start": 3234.819,
+        "duration": 1.86
+    },
+    {
+        "text": "Is that something we should be working on?",
+        "start": 3237.349,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 3239.909,
+        "duration": 0.25
+    },
+    {
+        "text": "It's on the to do list.",
+        "start": 3240.159,
+        "duration": 1.08
+    },
+    {
+        "text": "It's a very long to do list.",
+        "start": 3241.649,
+        "duration": 1.73
+    },
+    {
+        "text": "One of the things that occurred to me is,",
+        "start": 3246.769,
+        "duration": 1.61
+    },
+    {
+        "text": "we want to, highlight capabilities that\nare unique to the system, regardless",
+        "start": 3252.699,
+        "duration": 6.05
+    },
+    {
+        "text": "of how they compare to other systems.",
+        "start": 3258.749,
+        "duration": 1.4
+    },
+    {
+        "text": "And, we think about everyone, almost\neveryone thinks about vision as this",
+        "start": 3260.814,
+        "duration": 4.09
+    },
+    {
+        "text": "image and then there's these patches\non the retina next to each other,",
+        "start": 3264.914,
+        "duration": 3.69
+    },
+    {
+        "text": "but we're not limited to that at all.",
+        "start": 3269.184,
+        "duration": 1.99
+    },
+    {
+        "text": "I've said this in the past, you could\nhave an image system where you've got",
+        "start": 3271.604,
+        "duration": 4.07
+    },
+    {
+        "text": "three cameras in different corners of\nthe room, and each one is attending",
+        "start": 3275.944,
+        "duration": 4.64
+    },
+    {
+        "text": "to some patch in its visual space.",
+        "start": 3280.584,
+        "duration": 2.57
+    },
+    {
+        "text": "And as long as they're all looking at the\nsame object from different directions.",
+        "start": 3283.854,
+        "duration": 2.74
+    },
+    {
+        "text": "It all worked just fine.",
+        "start": 3287.119,
+        "duration": 1.33
+    },
+    {
+        "text": "it's it, people just don't\nthink along those lines.",
+        "start": 3289.989,
+        "duration": 4.24
+    },
+    {
+        "text": "And so one of the things, it'd\nbe nice to demonstrate what,",
+        "start": 3295.009,
+        "duration": 3.0
+    },
+    {
+        "text": "having two fingers touching the\nobject in different locations.",
+        "start": 3298.509,
+        "duration": 2.45
+    },
+    {
+        "text": "it'd be nice to somehow, if there\nwere, illustrate the benefits of that.",
+        "start": 3303.049,
+        "duration": 4.84
+    },
+    {
+        "text": "it's a system that can handle\nthese sensors that are in",
+        "start": 3309.449,
+        "duration": 3.05
+    },
+    {
+        "text": "different locations and unite\nthem in a single, very rapid way.",
+        "start": 3312.499,
+        "duration": 4.6
+    },
+    {
+        "text": "Yeah, that reminds me.",
+        "start": 3319.939,
+        "duration": 1.67
+    },
+    {
+        "text": "Are there any approaches that do object\npost recognition from touch sensors?",
+        "start": 3323.249,
+        "duration": 5.39
+    },
+    {
+        "text": "I didn't see anything like that.",
+        "start": 3330.349,
+        "duration": 1.35
+    },
+    {
+        "text": "so I can go back and refine the search\nwith that particular modality in mind.",
+        "start": 3332.939,
+        "duration": 7.26
+    },
+    {
+        "text": "Because I'm not surprised that it\nwouldn't have come up, given the way",
+        "start": 3340.689,
+        "duration": 3.57
+    },
+    {
+        "text": "I was searching, if that does exist.",
+        "start": 3344.269,
+        "duration": 1.68
+    },
+    {
+        "text": "In the, in the, neuroscience world,",
+        "start": 3348.899,
+        "duration": 2.72
+    },
+    {
+        "text": "they almost completely ignore\nsomatosensory sensation because",
+        "start": 3353.709,
+        "duration": 4.5
+    },
+    {
+        "text": "they have no idea how to handle it.",
+        "start": 3358.379,
+        "duration": 1.63
+    },
+    {
+        "text": "the, the classic, a hierarchy of\nfeature detectors model doesn't make",
+        "start": 3361.574,
+        "duration": 8.03
+    },
+    {
+        "text": "any sense with fingers and skin.",
+        "start": 3369.604,
+        "duration": 2.72
+    },
+    {
+        "text": "just, people have avoided it.",
+        "start": 3374.464,
+        "duration": 1.98
+    },
+    {
+        "text": "They're like, on the neuroscience side,\nI'm not aware of any theories that",
+        "start": 3376.474,
+        "duration": 3.36
+    },
+    {
+        "text": "explain how we recognize things in touch.",
+        "start": 3379.834,
+        "duration": 2.16
+    },
+    {
+        "text": "just point that out so I wouldn't be\nsurprised if there were fewer in the",
+        "start": 3383.404,
+        "duration": 3.35
+    },
+    {
+        "text": "machine learning world as well because\npeople, it just doesn't, people can always",
+        "start": 3386.764,
+        "duration": 4.15
+    },
+    {
+        "text": "say, oh, it's an image or these patches.",
+        "start": 3390.914,
+        "duration": 1.73
+    },
+    {
+        "text": "I, I'm looking at the object,\nwhen you have fingers touching",
+        "start": 3392.644,
+        "duration": 3.71
+    },
+    {
+        "text": "an object at different places and\nlocations, what the hell is it?",
+        "start": 3396.354,
+        "duration": 2.33
+    },
+    {
+        "text": "What's going on?",
+        "start": 3398.714,
+        "duration": 0.64
+    },
+    {
+        "text": "they don't know what to make.",
+        "start": 3400.564,
+        "duration": 0.77
+    },
+    {
+        "text": "They have no idea what to make of that.",
+        "start": 3401.384,
+        "duration": 1.29
+    },
+    {
+        "text": "Yeah, they're, yeah, I'm sure\nthere's a lot less, if any,",
+        "start": 3403.514,
+        "duration": 3.21
+    },
+    {
+        "text": "machine learning research on that.",
+        "start": 3407.854,
+        "duration": 1.36
+    },
+    {
+        "text": "So like recognition from touch, but\nI wonder if it, might actually be",
+        "start": 3410.154,
+        "duration": 3.76
+    },
+    {
+        "text": "good for us to phrase it as like\nrecognizing the object through touch.",
+        "start": 3413.914,
+        "duration": 3.94
+    },
+    {
+        "text": "Because exactly like you say, people are,\nif you think about vision, they're used",
+        "start": 3417.874,
+        "duration": 4.39
+    },
+    {
+        "text": "to thinking about the entire image and\nfor them to understand that those are",
+        "start": 3422.284,
+        "duration": 4.33
+    },
+    {
+        "text": "a bunch of small sensors moving across\nthe image, it's going to be hard to.",
+        "start": 3426.624,
+        "duration": 4.72
+    },
+    {
+        "text": "Like a lot of people, we might lose\na lot of people there, whereas when",
+        "start": 3431.704,
+        "duration": 3.3
+    },
+    {
+        "text": "we say, okay, we have three fingers\nthat are moving on the object,",
+        "start": 3435.004,
+        "duration": 3.32
+    },
+    {
+        "text": "that might be easier to understand.",
+        "start": 3439.534,
+        "duration": 1.49
+    },
+    {
+        "text": "Why do I keep getting balloons?",
+        "start": 3441.474,
+        "duration": 1.27
+    },
+    {
+        "text": "It's weird because,",
+        "start": 3443.624,
+        "duration": 1.13
+    },
+    {
+        "text": "this has really messed up all kinds\nof AI and machine learning and",
+        "start": 3446.844,
+        "duration": 3.73
+    },
+    {
+        "text": "neuroscientists all these years.",
+        "start": 3450.794,
+        "duration": 1.6
+    },
+    {
+        "text": "it's, the real breakthrough is\nunderstanding, patches of the",
+        "start": 3454.229,
+        "duration": 3.11
+    },
+    {
+        "text": "retina are really no different\nthan patches of your skin.",
+        "start": 3457.339,
+        "duration": 2.59
+    },
+    {
+        "text": "And, it's, it is, it's, something that\nmost people just don't understand.",
+        "start": 3460.889,
+        "duration": 4.42
+    },
+    {
+        "text": "our job is to educate them.",
+        "start": 3468.979,
+        "duration": 1.63
+    },
+    {
+        "text": "For touch data, what the closest",
+        "start": 3473.549,
+        "duration": 3.06
+    },
+    {
+        "text": "thing, what would a touch data,\nI guess one question, what",
+        "start": 3479.149,
+        "duration": 3.04
+    },
+    {
+        "text": "would a touch data look like?",
+        "start": 3482.189,
+        "duration": 1.31
+    },
+    {
+        "text": "And maybe the closest thing I can\nthink of is depth because you can",
+        "start": 3483.499,
+        "duration": 4.41
+    },
+    {
+        "text": "think of depth as how much I need to\nmove my finger to get to that object.",
+        "start": 3487.909,
+        "duration": 5.36
+    },
+    {
+        "text": "and if I phrase the question\nas, is there any models that",
+        "start": 3494.309,
+        "duration": 3.11
+    },
+    {
+        "text": "does post estimation from depth?",
+        "start": 3497.439,
+        "duration": 2.43
+    },
+    {
+        "text": "not just from depth, it,\nusually involves RSV as well.",
+        "start": 3500.899,
+        "duration": 2.54
+    },
+    {
+        "text": "So that's sadly that I don't\nthink I've seen model that just.",
+        "start": 3503.489,
+        "duration": 3.035
+    },
+    {
+        "text": "On depth, but, those might exist,\nYeah, but then they again, they get",
+        "start": 3506.814,
+        "duration": 6.07
+    },
+    {
+        "text": "the entire image probably are not\njust that moves over the object.",
+        "start": 3512.884,
+        "duration": 4.8
+    },
+    {
+        "text": "yes.",
+        "start": 3519.094,
+        "duration": 0.48
+    },
+    {
+        "text": "I don't know if there's research,\nbut in, in like autonomous driving",
+        "start": 3520.674,
+        "duration": 3.67
+    },
+    {
+        "text": "space, a lot of the new LIDAR sensors.",
+        "start": 3524.344,
+        "duration": 1.95
+    },
+    {
+        "text": "Are not scanning.",
+        "start": 3526.669,
+        "duration": 1.02
+    },
+    {
+        "text": "They're just fixed orientation.",
+        "start": 3527.699,
+        "duration": 1.8
+    },
+    {
+        "text": "So they're looking out from the\ncar with a specific focus and",
+        "start": 3530.239,
+        "duration": 4.25
+    },
+    {
+        "text": "are going to move with the car.",
+        "start": 3534.489,
+        "duration": 1.14
+    },
+    {
+        "text": "So maybe there's something there.",
+        "start": 3535.629,
+        "duration": 1.27
+    },
+    {
+        "text": "Is that right?",
+        "start": 3537.319,
+        "duration": 0.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 3539.059,
+        "duration": 0.22
+    },
+    {
+        "text": "The, Definitely like the Google cars\nare still using fully scanning LIDARs,",
+        "start": 3539.639,
+        "duration": 5.29
+    },
+    {
+        "text": "but it's a much more expensive device.",
+        "start": 3544.959,
+        "duration": 2.47
+    },
+    {
+        "text": "And so there's a whole slew of\ncompanies producing essentially",
+        "start": 3548.229,
+        "duration": 2.99
+    },
+    {
+        "text": "LIDAR cameras, if you will.",
+        "start": 3551.219,
+        "duration": 1.42
+    },
+    {
+        "text": "Okay.",
+        "start": 3553.439,
+        "duration": 0.47
+    },
+    {
+        "text": "Interesting.",
+        "start": 3554.659,
+        "duration": 0.15
+    },
+    {
+        "text": "They still scan the laser\nwithin a defined window?",
+        "start": 3555.259,
+        "duration": 3.58
+    },
+    {
+        "text": "They still scan, but they don't rotate.",
+        "start": 3559.609,
+        "duration": 2.1
+    },
+    {
+        "text": "Exactly.",
+        "start": 3562.229,
+        "duration": 0.41
+    },
+    {
+        "text": "that's just a, it's a\nmatter of degree, right?",
+        "start": 3563.169,
+        "duration": 3.59
+    },
+    {
+        "text": "I'm just thinking of a place where\nsomeone's You know, getting a",
+        "start": 3567.379,
+        "duration": 3.225
+    },
+    {
+        "text": "small patch of LIDAR information.",
+        "start": 3570.604,
+        "duration": 2.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 3573.354,
+        "duration": 0.52
+    },
+    {
+        "text": "They probably build up a three\ndimensional image from that,",
+        "start": 3574.464,
+        "duration": 2.7
+    },
+    {
+        "text": "and then they process that.",
+        "start": 3577.204,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 3579.989,
+        "duration": 0.43
+    },
+    {
+        "text": "Yeah.",
+        "start": 3580.639,
+        "duration": 0.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 3581.159,
+        "duration": 0.32
+    },
+    {
+        "text": "I don't know how they're doing it.",
+        "start": 3581.979,
+        "duration": 1.89
+    },
+    {
+        "text": "Did you have any other\napproaches to talk through?",
+        "start": 3592.429,
+        "duration": 3.57
+    },
+    {
+        "text": "those are the four major categories\nof how post estimation is done.",
+        "start": 3597.609,
+        "duration": 3.59
+    },
+    {
+        "text": "I think the rest of the\nslides are sort of models.",
+        "start": 3601.209,
+        "duration": 3.25
+    },
+    {
+        "text": "yeah.",
+        "start": 3607.469,
+        "duration": 0.24
+    },
+    {
+        "text": "Metrics of how post estimation is,\nhow their performance is measured.",
+        "start": 3608.909,
+        "duration": 5.38
+    },
+    {
+        "text": "Because, if we were to go this route\nwhere we're comparing to Deploying",
+        "start": 3615.109,
+        "duration": 4.92
+    },
+    {
+        "text": "models and we probably want to compare\nagainst, use the same metric to compare.",
+        "start": 3620.059,
+        "duration": 3.59
+    },
+    {
+        "text": "but it's not,",
+        "start": 3623.969,
+        "duration": 0.81
+    },
+    {
+        "text": "I guess it's not the highest\npriority now, but yeah.",
+        "start": 3628.299,
+        "duration": 1.92
+    },
+    {
+        "text": "the rest is like just a collection of\nwhat we assembled is like most promising.",
+        "start": 3633.289,
+        "duration": 5.33
+    },
+    {
+        "text": "If we want to go down this route of\ncreating a model on Monty type data",
+        "start": 3638.719,
+        "duration": 3.73
+    },
+    {
+        "text": "for comparison purposes, these are\nsome promising options, for object",
+        "start": 3643.649,
+        "duration": 5.54
+    },
+    {
+        "text": "recognition and, pose estimation.",
+        "start": 3649.189,
+        "duration": 3.54
+    },
+    {
+        "text": "Work in slightly different ways and\nin, in order to know like how much of a",
+        "start": 3655.404,
+        "duration": 5.01
+    },
+    {
+        "text": "haul it would be to get Monte data into\na format that's, that is compatible,",
+        "start": 3660.414,
+        "duration": 6.75
+    },
+    {
+        "text": "we'll still take a little bit of work.",
+        "start": 3667.584,
+        "duration": 1.5
+    },
+    {
+        "text": "I, need to download some training\ndata and see what format it's in.",
+        "start": 3669.324,
+        "duration": 3.62
+    },
+    {
+        "text": "some are pretty interesting,\nfoundation Pose is probably,",
+        "start": 3675.424,
+        "duration": 3.03
+    },
+    {
+        "text": "it's, up there as state of the\nart, that just came out this year.",
+        "start": 3681.494,
+        "duration": 3.96
+    },
+    {
+        "text": "it's got two sort of modes of training\nyou can give with those CAD images.",
+        "start": 3688.354,
+        "duration": 3.48
+    },
+    {
+        "text": "Or CAD files, or you can give it,\nimages from different angles, and",
+        "start": 3693.329,
+        "duration": 4.11
+    },
+    {
+        "text": "that's its model for your training mode.",
+        "start": 3697.439,
+        "duration": 2.36
+    },
+    {
+        "text": "And from that, it works on\nit develops category ideas.",
+        "start": 3700.539,
+        "duration": 5.2
+    },
+    {
+        "text": "So it can encounter novel objects\nand estimate their pose by",
+        "start": 3705.739,
+        "duration": 4.08
+    },
+    {
+        "text": "associating with some kind of\nsimilar object or category of object.",
+        "start": 3709.819,
+        "duration": 3.18
+    },
+    {
+        "text": "it takes a ton of training.",
+        "start": 3715.519,
+        "duration": 1.24
+    },
+    {
+        "text": "is that for the model free or\nalso for the model based version?",
+        "start": 3719.674,
+        "duration": 3.92
+    },
+    {
+        "text": "Okay.",
+        "start": 3724.824,
+        "duration": 0.26
+    },
+    {
+        "text": "The model free version to my\nunderstanding, it's a preprocessing stuff.",
+        "start": 3725.094,
+        "duration": 5.04
+    },
+    {
+        "text": "It's going to get you to something like\nwhat a cap file will get you by giving,",
+        "start": 3730.154,
+        "duration": 5.19
+    },
+    {
+        "text": "it'll basically reconstruct this mesh.",
+        "start": 3735.604,
+        "duration": 2.01
+    },
+    {
+        "text": "so it's more of a preprocessing\nstep, but yeah, it seems almost",
+        "start": 3740.524,
+        "duration": 5.71
+    },
+    {
+        "text": "like it would be fair to compare\nit to the model based approach.",
+        "start": 3746.264,
+        "duration": 4.22
+    },
+    {
+        "text": "saying the CAD models are a\nbit like our 3d graph models.",
+        "start": 3751.989,
+        "duration": 3.18
+    },
+    {
+        "text": "we disregard that the training is\ndifferent and that they just get them.",
+        "start": 3756.479,
+        "duration": 3.2
+    },
+    {
+        "text": "And then, I don't know, I'd be curious\nabout how they then, what kind of",
+        "start": 3760.449,
+        "duration": 4.78
+    },
+    {
+        "text": "data do they then use for inference?",
+        "start": 3765.279,
+        "duration": 1.72
+    },
+    {
+        "text": "And how did I process it\nand recognize the pose?",
+        "start": 3768.024,
+        "duration": 3.07
+    },
+    {
+        "text": "This single, I think it takes\nsingle RGBD images for inference.",
+        "start": 3771.794,
+        "duration": 4.16
+    },
+    {
+        "text": "It's pretty fast.",
+        "start": 3776.324,
+        "duration": 0.7
+    },
+    {
+        "text": "You can do it in real time.",
+        "start": 3777.024,
+        "duration": 1.09
+    },
+    {
+        "text": "Like you can click on these links and\nget the demonstrations or whatever.",
+        "start": 3778.234,
+        "duration": 3.48
+    },
+    {
+        "text": "I wouldn't call it continual learning.",
+        "start": 3785.794,
+        "duration": 1.76
+    },
+    {
+        "text": "It's not going to keep adding\nto its, database of objects,",
+        "start": 3787.564,
+        "duration": 5.08
+    },
+    {
+        "text": "but it does at least have.",
+        "start": 3792.744,
+        "duration": 2.21
+    },
+    {
+        "text": "the ability to",
+        "start": 3795.839,
+        "duration": 1.14
+    },
+    {
+        "text": "Estimate pose of novel objects just\nby associating with the category.",
+        "start": 3799.139,
+        "duration": 3.37
+    },
+    {
+        "text": "So it's like a little less\nbrittle than something that's",
+        "start": 3802.539,
+        "duration": 2.34
+    },
+    {
+        "text": "It's not continual learning, but\nat least it doesn't freak out,",
+        "start": 3807.514,
+        "duration": 3.38
+    },
+    {
+        "text": "want to see something brand new.",
+        "start": 3810.894,
+        "duration": 1.07
+    },
+    {
+        "text": "Can you open up the paper and\njust show the figures in there?",
+        "start": 3811.964,
+        "duration": 5.52
+    },
+    {
+        "text": "They're so funny.",
+        "start": 3841.084,
+        "duration": 0.76
+    },
+    {
+        "text": "Yeah.",
+        "start": 3842.684,
+        "duration": 0.3
+    },
+    {
+        "text": "Oh, they use language too.",
+        "start": 3843.214,
+        "duration": 1.34
+    },
+    {
+        "text": "Okay.",
+        "start": 3844.764,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 3845.064,
+        "duration": 0.61
+    },
+    {
+        "text": "The objawars.",
+        "start": 3858.854,
+        "duration": 1.3
+    },
+    {
+        "text": "Is that a universe of objects?",
+        "start": 3861.364,
+        "duration": 2.24
+    },
+    {
+        "text": "Good question.",
+        "start": 3870.224,
+        "duration": 0.64
+    },
+    {
+        "text": "Okay.",
+        "start": 3874.504,
+        "duration": 0.21
+    },
+    {
+        "text": "This looks a bit too\ncomplex to understand.",
+        "start": 3874.714,
+        "duration": 2.49
+    },
+    {
+        "text": "with a quick look, but yeah, I think\nwe're like this kind of, comparison",
+        "start": 3878.634,
+        "duration": 5.37
+    },
+    {
+        "text": "seems like where we're going is, if\nwe want to, again, low priority, we,",
+        "start": 3884.044,
+        "duration": 5.15
+    },
+    {
+        "text": "I agree that we can use transformer\nto feed in patches, but it will be",
+        "start": 3889.354,
+        "duration": 3.76
+    },
+    {
+        "text": "patches at Monte C's that we feed in.",
+        "start": 3893.124,
+        "duration": 2.07
+    },
+    {
+        "text": "I don't think we can train these\nmodels with 1 million images, nor I",
+        "start": 3895.464,
+        "duration": 4.22
+    },
+    {
+        "text": "don't even want to, or I don't want to\npersonally, I'm not trying to make a",
+        "start": 3899.714,
+        "duration": 3.85
+    },
+    {
+        "text": "recreate a soda, deep learning, like\na thing, but, It's and so I think",
+        "start": 3903.604,
+        "duration": 7.275
+    },
+    {
+        "text": "what we can do is we can make start\nfrom like a basic vision transformer.",
+        "start": 3910.879,
+        "duration": 3.26
+    },
+    {
+        "text": "We can possibly add some walls\nof bells and whistles from, so",
+        "start": 3914.429,
+        "duration": 4.34
+    },
+    {
+        "text": "that some of the techniques, but\nultimately will probably be training",
+        "start": 3918.769,
+        "duration": 4.49
+    },
+    {
+        "text": "our own kind of custom transformer.",
+        "start": 3923.259,
+        "duration": 2.21
+    },
+    {
+        "text": "Let's see.",
+        "start": 3925.709,
+        "duration": 0.39
+    },
+    {
+        "text": "It's the same things as Monty.",
+        "start": 3926.109,
+        "duration": 1.69
+    },
+    {
+        "text": "Let's say for patches.",
+        "start": 3928.119,
+        "duration": 1.86
+    },
+    {
+        "text": "and Okay.",
+        "start": 3930.829,
+        "duration": 0.56
+    },
+    {
+        "text": "That made that would be\na comparison to Monty.",
+        "start": 3932.419,
+        "duration": 5.23
+    },
+    {
+        "text": "It strikes me a little odd that we\nwould take Monty's training data,",
+        "start": 3938.519,
+        "duration": 3.82
+    },
+    {
+        "text": "which is a series of patches and\nmovement information, and then try",
+        "start": 3942.339,
+        "duration": 5.25
+    },
+    {
+        "text": "to train a transformer model on that.",
+        "start": 3947.619,
+        "duration": 2.3
+    },
+    {
+        "text": "it's I'm trying to put my\nfinger on what's odd about it.",
+        "start": 3953.689,
+        "duration": 3.03
+    },
+    {
+        "text": "yeah, it's, I'm just going to\nrepeat what I said earlier.",
+        "start": 3959.749,
+        "duration": 2.53
+    },
+    {
+        "text": "Our goal isn't to say, oh, our algorithm\nat doing this is better than, it's more",
+        "start": 3962.319,
+        "duration": 6.4
+    },
+    {
+        "text": "like our algorithm works differently.",
+        "start": 3968.719,
+        "duration": 2.13
+    },
+    {
+        "text": "These systems don't work this way.",
+        "start": 3970.939,
+        "duration": 1.77
+    },
+    {
+        "text": "And, because we train a transformer on a\nseries of image patches that Monique gets.",
+        "start": 3973.689,
+        "duration": 4.69
+    },
+    {
+        "text": "It'd be hard to argue\nthat's a fair comparison,",
+        "start": 3979.739,
+        "duration": 3.49
+    },
+    {
+        "text": "for the benefits of doing it Monty's way.",
+        "start": 3985.929,
+        "duration": 1.93
+    },
+    {
+        "text": "people might dismiss it as oh,\nyou trained this thing, it's",
+        "start": 3990.319,
+        "duration": 2.26
+    },
+    {
+        "text": "weird data, why would you do that?",
+        "start": 3992.579,
+        "duration": 1.47
+    },
+    {
+        "text": "I don't trust that you trained\nit properly, that kind of thing.",
+        "start": 3995.689,
+        "duration": 4.04
+    },
+    {
+        "text": "And there's that kind of disconnect.",
+        "start": 4001.299,
+        "duration": 1.26
+    },
+    {
+        "text": "yeah, for all these things, just\nbecause of the way the money collects",
+        "start": 4007.624,
+        "duration": 3.45
+    },
+    {
+        "text": "observations and does inference,\nlike the actual training process, the",
+        "start": 4011.074,
+        "duration": 6.69
+    },
+    {
+        "text": "inference process, what the information\nis for these different types of models",
+        "start": 4018.324,
+        "duration": 4.24
+    },
+    {
+        "text": "versus what information money sees,\nit just makes it very difficult to,",
+        "start": 4022.564,
+        "duration": 3.77
+    },
+    {
+        "text": "try to do a one to one comparison, I\nthink, with any of these other models.",
+        "start": 4026.594,
+        "duration": 2.94
+    },
+    {
+        "text": "I think possibly what could\nbe getting similar is using",
+        "start": 4030.994,
+        "duration": 3.52
+    },
+    {
+        "text": "insert transformer possibly RNN.",
+        "start": 4034.524,
+        "duration": 3.19
+    },
+    {
+        "text": "So for every step patch that they\nprocess it might have a pose and",
+        "start": 4037.744,
+        "duration": 4.16
+    },
+    {
+        "text": "then the more patches it sees\nit can try to refine that pose.",
+        "start": 4041.904,
+        "duration": 3.4
+    },
+    {
+        "text": "Maybe that's closer.",
+        "start": 4046.834,
+        "duration": 1.06
+    },
+    {
+        "text": "but again, I think that one at\nleast takes into account of kind of",
+        "start": 4049.784,
+        "duration": 4.0
+    },
+    {
+        "text": "sequential kind of processing perhaps,\nbut yeah, but otherwise it's just,",
+        "start": 4055.634,
+        "duration": 8.36
+    },
+    {
+        "text": "yeah.",
+        "start": 4066.334,
+        "duration": 0.08
+    },
+    {
+        "text": "It's probably nonsensical to download\nthese foundation models with the 1",
+        "start": 4067.054,
+        "duration": 5.74
+    },
+    {
+        "text": "million or images and try to train\nthat and compare that to Monty.",
+        "start": 4072.794,
+        "duration": 3.82
+    },
+    {
+        "text": "Like it, there's no point in doing that.",
+        "start": 4076.634,
+        "duration": 1.68
+    },
+    {
+        "text": "Agreed.",
+        "start": 4079.374,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 4080.794,
+        "duration": 0.42
+    },
+    {
+        "text": "it looked like they tested on YCB.",
+        "start": 4083.504,
+        "duration": 1.97
+    },
+    {
+        "text": "Can you go show what\nthe results were there?",
+        "start": 4085.494,
+        "duration": 3.07
+    },
+    {
+        "text": "YCB video, I believe.",
+        "start": 4089.424,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 4090.884,
+        "duration": 0.43
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 4091.844,
+        "duration": 0.69
+    },
+    {
+        "text": "But it does have a potted meat can.",
+        "start": 4093.954,
+        "duration": 1.44
+    },
+    {
+        "text": "Some of the objects in YCB, I\nthink 21 of the objects from YCB",
+        "start": 4095.394,
+        "duration": 7.65
+    },
+    {
+        "text": "were made into YCB video, I think.",
+        "start": 4103.054,
+        "duration": 2.58
+    },
+    {
+        "text": "Oh, true.",
+        "start": 4105.644,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 4107.074,
+        "duration": 0.42
+    },
+    {
+        "text": "These all sound familiar,\nthe MasterChef can.",
+        "start": 4107.784,
+        "duration": 2.64
+    },
+    {
+        "text": "Seen that one many times.",
+        "start": 4110.894,
+        "duration": 1.35
+    },
+    {
+        "text": "Mug and bowl.",
+        "start": 4114.074,
+        "duration": 1.24
+    },
+    {
+        "text": "Okay, and then those numbers\nare accuracy on pose detection?",
+        "start": 4117.414,
+        "duration": 5.26
+    },
+    {
+        "text": "This stands for average distance.",
+        "start": 4122.674,
+        "duration": 2.07
+    },
+    {
+        "text": "So after getting the pose, they make\nit into 3D, and so they calculate, and",
+        "start": 4125.034,
+        "duration": 4.02
+    },
+    {
+        "text": "then after the 3D model, they compare\nthat, so compare that with a ground truth",
+        "start": 4129.054,
+        "duration": 6.68
+    },
+    {
+        "text": "pose rendered 3D, and then calculate the\nEuclidean distance between every point.",
+        "start": 4135.734,
+        "duration": 4.58
+    },
+    {
+        "text": "and then average that.",
+        "start": 4141.494,
+        "duration": 0.94
+    },
+    {
+        "text": "So bigger is better?",
+        "start": 4144.234,
+        "duration": 2.13
+    },
+    {
+        "text": "no, smaller.",
+        "start": 4148.444,
+        "duration": 0.7
+    },
+    {
+        "text": "I would have thought with distance\nthat smaller would be better, but",
+        "start": 4149.144,
+        "duration": 4.98
+    },
+    {
+        "text": "here they've got the largest values.",
+        "start": 4154.154,
+        "duration": 2.05
+    },
+    {
+        "text": "I",
+        "start": 4156.429,
+        "duration": 0.01
+    },
+    {
+        "text": "guess it's 96 percent correct or\nsomething like that it means, maybe?",
+        "start": 4159.009,
+        "duration": 3.89
+    },
+    {
+        "text": "possibly.",
+        "start": 4164.059,
+        "duration": 0.7
+    },
+    {
+        "text": "I know, that's confusing.",
+        "start": 4164.809,
+        "duration": 2.1
+    },
+    {
+        "text": "So I did Okay, it's not that important,\nbut Sorry, I did write like a metrics",
+        "start": 4167.239,
+        "duration": 8.5
+    },
+    {
+        "text": "section, but that doesn't, help.",
+        "start": 4175.739,
+        "duration": 3.79
+    },
+    {
+        "text": "okay, nevermind.",
+        "start": 4181.589,
+        "duration": 0.9
+    },
+    {
+        "text": "By the way, if you are interested in any\nof these papers, there is a folder where",
+        "start": 4184.219,
+        "duration": 4.6
+    },
+    {
+        "text": "we've dumped a bunch of these papers into.",
+        "start": 4188.819,
+        "duration": 1.74
+    },
+    {
+        "text": "On the Google drive.",
+        "start": 4191.314,
+        "duration": 2.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 4198.164,
+        "duration": 0.31
+    },
+    {
+        "text": "So I wonder if it makes more sense\nright now, we just focus on creating",
+        "start": 4198.474,
+        "duration": 4.37
+    },
+    {
+        "text": "plots that show Monty's capability.",
+        "start": 4202.844,
+        "duration": 2.4
+    },
+    {
+        "text": "So how we are good at all those things,\nlearning from little data and so on.",
+        "start": 4205.244,
+        "duration": 5.2
+    },
+    {
+        "text": "And then we mentioned all of these\napproaches say, okay, this transfer",
+        "start": 4210.444,
+        "duration": 4.95
+    },
+    {
+        "text": "based method uses a million of\nimages, instead of actually trying",
+        "start": 4215.434,
+        "duration": 4.91
+    },
+    {
+        "text": "to retrain it on the exact Monty\ndata and, trying to compare it.",
+        "start": 4220.344,
+        "duration": 5.57
+    },
+    {
+        "text": "I'm not in the machine learning world\nenough to know whether or not this",
+        "start": 4230.064,
+        "duration": 2.75
+    },
+    {
+        "text": "would be fair or not, but to actually\njust side by side show how much",
+        "start": 4232.814,
+        "duration": 6.86
+    },
+    {
+        "text": "actual information is being provided\nthe system before it comes up with a",
+        "start": 4239.754,
+        "duration": 3.04
+    },
+    {
+        "text": "positive result, like something like\nthat, comparing that with other models.",
+        "start": 4242.794,
+        "duration": 3.94
+    },
+    {
+        "text": "I'm step beyond just the training data,\nbecause if we are just using patches.",
+        "start": 4247.574,
+        "duration": 4.22
+    },
+    {
+        "text": "that could ultimately be a\nlot more parsimonious of a,",
+        "start": 4253.529,
+        "duration": 3.92
+    },
+    {
+        "text": "or, we can show efficiency basically,\non inference if we're talking about",
+        "start": 4260.529,
+        "duration": 5.68
+    },
+    {
+        "text": "sensor patches versus whole images.",
+        "start": 4266.209,
+        "duration": 1.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 4268.924,
+        "duration": 0.57
+    },
+    {
+        "text": "Possibly.",
+        "start": 4270.134,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 4273.324,
+        "duration": 0.24
+    },
+    {
+        "text": "We could have one of those log scale plots\nwith number of images seen, and then,",
+        "start": 4273.564,
+        "duration": 4.91
+    },
+    {
+        "text": "it is at the bottom and transformers\nare all the way up there, but I,",
+        "start": 4281.054,
+        "duration": 5.02
+    },
+    {
+        "text": "yeah, I guess the problem is\nthat the performance measure",
+        "start": 4288.214,
+        "duration": 2.22
+    },
+    {
+        "text": "is also different and we get.",
+        "start": 4290.434,
+        "duration": 1.81
+    },
+    {
+        "text": "We have patches and movement\ndata and they get full images.",
+        "start": 4293.759,
+        "duration": 3.88
+    },
+    {
+        "text": "How do you compare those\nnumbers to each other?",
+        "start": 4297.819,
+        "duration": 3.15
+    },
+    {
+        "text": "if they're, I think if the reader is\nlike a kind of actually done, if they're",
+        "start": 4304.289,
+        "duration": 3.63
+    },
+    {
+        "text": "if they're truly concerned about Monty\nperformance and they can like just",
+        "start": 4308.459,
+        "duration": 3.39
+    },
+    {
+        "text": "read these papers and see like how.",
+        "start": 4312.469,
+        "duration": 3.03
+    },
+    {
+        "text": "people are doing it,\nthese YCB video datasets,",
+        "start": 4316.629,
+        "duration": 3.6
+    },
+    {
+        "text": "because the way that we're doing\nis so different that it's basically",
+        "start": 4323.739,
+        "duration": 3.2
+    },
+    {
+        "text": "incomparable, for the most part.",
+        "start": 4326.959,
+        "duration": 2.65
+    },
+    {
+        "text": "Yeah, you have the input data side, but\nyou also have, the intrinsic number of",
+        "start": 4331.049,
+        "duration": 5.8
+    },
+    {
+        "text": "parameters that takes Monte to once it's\ntrained to represent things compared to.",
+        "start": 4336.859,
+        "duration": 5.07
+    },
+    {
+        "text": "some morally equivalent,\ntransformer out there.",
+        "start": 4343.154,
+        "duration": 2.89
+    },
+    {
+        "text": "I'm sure you'll win on the\nparameter side of things.",
+        "start": 4346.344,
+        "duration": 2.68
+    },
+    {
+        "text": "True.",
+        "start": 4350.274,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 4350.634,
+        "duration": 0.26
+    },
+    {
+        "text": "That's another comparison we can make.",
+        "start": 4350.894,
+        "duration": 1.66
+    },
+    {
+        "text": "But I think I agree with, what\nyou said earlier, Vivian, about,",
+        "start": 4358.184,
+        "duration": 2.96
+    },
+    {
+        "text": "focusing on visualization and\nplotting to show multi capabilities.",
+        "start": 4361.654,
+        "duration": 4.69
+    },
+    {
+        "text": "Yeah, and then we can just do more\nof a literature review of the other",
+        "start": 4368.374,
+        "duration": 4.53
+    },
+    {
+        "text": "approaches and highlight how they are\nso very different from what we are",
+        "start": 4372.914,
+        "duration": 3.6
+    },
+    {
+        "text": "doing and then maybe have like plot or\ntable comparing number of examples seen",
+        "start": 4376.514,
+        "duration": 5.88
+    },
+    {
+        "text": "and number of parameters internally.",
+        "start": 4382.434,
+        "duration": 2.59
+    },
+    {
+        "text": "Yeah,",
+        "start": 4385.024,
+        "duration": 0.51
+    },
+    {
+        "text": "I guess it could go into some for\nwriting a full paper, like a background",
+        "start": 4388.014,
+        "duration": 4.26
+    },
+    {
+        "text": "and kind of What's been done previously\nand that would be much easier to pull",
+        "start": 4392.274,
+        "duration": 4.06
+    },
+    {
+        "text": "together on a table of number of images\nand how it's doing than trying to test",
+        "start": 4396.354,
+        "duration": 4.78
+    },
+    {
+        "text": "a bunch of these models for sure, right?",
+        "start": 4401.134,
+        "duration": 2.47
+    },
+    {
+        "text": "I agree with that.",
+        "start": 4403.604,
+        "duration": 0.67
+    },
+    {
+        "text": "We just don't want to do that.",
+        "start": 4405.304,
+        "duration": 1.27
+    },
+    {
+        "text": "Cause yeah, we already know.",
+        "start": 4407.214,
+        "duration": 2.0
+    },
+    {
+        "text": "And I think every machine learning reader\nwould know that if we would train a",
+        "start": 4409.214,
+        "duration": 3.74
+    },
+    {
+        "text": "transformer on the amount of data Monty's\ntrained on it, it would just, fail.",
+        "start": 4412.954,
+        "duration": 4.45
+    },
+    {
+        "text": "Like we don't need to train a\nmodel that would fail, right?",
+        "start": 4419.874,
+        "duration": 2.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 4422.564,
+        "duration": 0.36
+    },
+    {
+        "text": "If you need someone to train\na model to fail, I'm your man.",
+        "start": 4423.514,
+        "duration": 2.18
+    },
+    {
+        "text": "Okay.",
+        "start": 4425.694,
+        "duration": 5.18
+    },
+    {
+        "text": "yeah, I guess that's about it on our side.",
+        "start": 4434.844,
+        "duration": 2.16
+    },
+    {
+        "text": "I think that was helpful.",
+        "start": 4437.074,
+        "duration": 3.01
+    },
+    {
+        "text": "Useful just to see what the\nstate of the art is out there.",
+        "start": 4440.124,
+        "duration": 2.6
+    },
+    {
+        "text": "and it was also good to have\nthis discussion about what we're",
+        "start": 4445.134,
+        "duration": 2.13
+    },
+    {
+        "text": "trying to do, what we need to do.",
+        "start": 4447.264,
+        "duration": 2.55
+    },
+    {
+        "text": "Yeah.",
+        "start": 4451.184,
+        "duration": 0.31
+    },
+    {
+        "text": "Thanks for putting together those slides.",
+        "start": 4451.494,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah.",
+        "start": 4453.334,
+        "duration": 0.43
+    },
+    {
+        "text": "It's very interesting.",
+        "start": 4454.999,
+        "duration": 0.68
+    },
+    {
+        "text": "And now you know more about object pose\nestimation, probably more than you care.",
+        "start": 4457.879,
+        "duration": 3.92
+    },
+    {
+        "text": "instead of a, I wasn't even aware any\nof the state of the art out there.",
+        "start": 4463.609,
+        "duration": 3.87
+    },
+    {
+        "text": "So to me, it's a good introduction.",
+        "start": 4467.479,
+        "duration": 2.04
+    },
+    {
+        "text": "I dropped the salient image of\nvision transformers into the chat.",
+        "start": 4470.619,
+        "duration": 4.413
+    },
+    {
+        "text": "It just came from the Wikimedia.",
+        "start": 4475.032,
+        "duration": 2.992
+    },
+    {
+        "text": "Wikipedia,",
+        "start": 4479.614,
+        "duration": 0.48
+    },
+    {
+        "text": "section on just you just input\nvision transforms, just to",
+        "start": 4482.624,
+        "duration": 3.59
+    },
+    {
+        "text": "show that parsing that goes on.",
+        "start": 4486.214,
+        "duration": 2.43
+    },
+    {
+        "text": "Sorry, I can't leave\nthe chat to the screen.",
+        "start": 4491.074,
+        "duration": 4.0
+    },
+    {
+        "text": "Sorry.",
+        "start": 4495.074,
+        "duration": 0.32
+    },
+    {
+        "text": "So you'll just have to open\nthe chat yourself and see, but.",
+        "start": 4497.354,
+        "duration": 2.64
+    },
+    {
+        "text": "Okay.",
+        "start": 4499.994,
+        "duration": 2.28
+    },
+    {
+        "text": "Okay.",
+        "start": 4504.234,
+        "duration": 0.25
+    },
+    {
+        "text": "yeah, I guess we took the whole meeting.",
+        "start": 4504.814,
+        "duration": 1.78
+    },
+    {
+        "text": "but I think this was a good discussion.",
+        "start": 4507.194,
+        "duration": 2.59
+    },
+    {
+        "text": "And then.",
+        "start": 4509.934,
+        "duration": 0.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 4511.464,
+        "duration": 0.48
+    },
+    {
+        "text": "for next week we can go over all the\nother smaller topics and I'll have",
+        "start": 4512.434,
+        "duration": 5.28
+    },
+    {
+        "text": "a bit more time to prepare answers.",
+        "start": 4517.714,
+        "duration": 2.09
+    },
+    {
+        "text": "And I think Jeff, you offered also to give\nsome answers to some of the questions.",
+        "start": 4519.814,
+        "duration": 3.73
+    },
+    {
+        "text": "Yeah.",
+        "start": 4523.774,
+        "duration": 0.37
+    },
+    {
+        "text": "Remind me again, like\non Monday or something.",
+        "start": 4525.484,
+        "duration": 2.12
+    },
+    {
+        "text": "All right.",
+        "start": 4528.144,
+        "duration": 0.73
+    },
+    {
+        "text": "We'll do it.",
+        "start": 4528.924,
+        "duration": 0.47
+    },
+    {
+        "text": "And yeah, if anyone else wants to\nsend in some more questions and",
+        "start": 4529.434,
+        "duration": 3.31
+    },
+    {
+        "text": "topics you'd like to talk about,\njust post it in the research channel.",
+        "start": 4532.744,
+        "duration": 5.22
+    }
+]

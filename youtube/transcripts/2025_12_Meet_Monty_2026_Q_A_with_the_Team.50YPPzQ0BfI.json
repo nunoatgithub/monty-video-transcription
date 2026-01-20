@@ -1,0 +1,2032 @@
+[
+    {
+        "text": "Thousand Brains Project: first\nquestion, do you expect that this",
+        "start": 1.884,
+        "duration": 3.12
+    },
+    {
+        "text": "sensory motor approach can also\nbe useful for cognitive functions?",
+        "start": 5.034,
+        "duration": 4.63
+    },
+    {
+        "text": "Who would like to.",
+        "start": 11.078,
+        "duration": 0.46
+    },
+    {
+        "text": "Jeff Hawkins: Any one of\u2026 any\none of us can answer that one.",
+        "start": 11.558,
+        "duration": 2.16
+    },
+    {
+        "text": "Okay.",
+        "start": 15.908,
+        "duration": 0.37
+    },
+    {
+        "text": "I'll start, sure.",
+        "start": 17.528,
+        "duration": 1.2
+    },
+    {
+        "text": "We know that, studying the brain, that the\nneocortex does all these different things.",
+        "start": 20.388,
+        "duration": 5.96
+    },
+    {
+        "text": "It does and all the cognitive\nfunctions we think about.",
+        "start": 26.348,
+        "duration": 3.08
+    },
+    {
+        "text": "And yet it has the exact same\narchitecture or very similar everywhere.",
+        "start": 30.538,
+        "duration": 3.48
+    },
+    {
+        "text": "And that's the starting assumption, the\nevidence is strongly suggestive of that.",
+        "start": 34.558,
+        "duration": 4.84
+    },
+    {
+        "text": "that all cognitive functions are\nbuilt on the same principles.",
+        "start": 39.808,
+        "duration": 3.58
+    },
+    {
+        "text": "And only very recently did we start\nreally getting to deeply understand that.",
+        "start": 43.788,
+        "duration": 4.13
+    },
+    {
+        "text": "We haven't discussed it\npublicly anywhere yet.",
+        "start": 47.918,
+        "duration": 2.02
+    },
+    {
+        "text": "We knew that if we just started focusing\non how learning modules work in a",
+        "start": 50.938,
+        "duration": 3.95
+    },
+    {
+        "text": "generic sense, like, how can I sense\nthrough vision, how can I sense through",
+        "start": 54.888,
+        "duration": 2.89
+    },
+    {
+        "text": "touch, how can I sense through hearing,\nand understand the world, that the",
+        "start": 57.778,
+        "duration": 4.44
+    },
+    {
+        "text": "principles we learned there would apply\nto high-level cognitive thoughts, and",
+        "start": 62.218,
+        "duration": 3.98
+    },
+    {
+        "text": "we're now beginning to understand that.",
+        "start": 66.198,
+        "duration": 1.25
+    },
+    {
+        "text": "So the answer is yes, but we haven't\nreally explained it yet completely.",
+        "start": 67.448,
+        "duration": 3.3
+    },
+    {
+        "text": "If someone else wants to jump\nin, they can do that, too.",
+        "start": 71.028,
+        "duration": 1.93
+    },
+    {
+        "text": "Thousand Brains Project: Thank",
+        "start": 72.958,
+        "duration": 0.05
+    },
+    {
+        "text": "you, Jeff.",
+        "start": 75.048,
+        "duration": 0.64
+    },
+    {
+        "text": "Okay, next question.",
+        "start": 76.348,
+        "duration": 2.09
+    },
+    {
+        "text": "Is Monty capable of moving\nthrough time in time series data?",
+        "start": 78.438,
+        "duration": 4.79
+    },
+    {
+        "text": "Viviane Clay: Yeah, I'm\njust raising my hand now.",
+        "start": 84.368,
+        "duration": 1.46
+    },
+    {
+        "text": "I guess we can all just raise hands if we\u2026",
+        "start": 86.068,
+        "duration": 1.53
+    },
+    {
+        "text": "I feel like we have an answer.",
+        "start": 87.598,
+        "duration": 1.62
+    },
+    {
+        "text": "fundamentally, Monty is always moving\nthrough time in the sense that it",
+        "start": 89.607,
+        "duration": 5.581
+    },
+    {
+        "text": "senses different locations in space\nover time, but you're probably",
+        "start": 95.298,
+        "duration": 4.08
+    },
+    {
+        "text": "referring to basic time series data\nwhere the progression in time is",
+        "start": 99.378,
+        "duration": 5.5
+    },
+    {
+        "text": "not anything under Monty's control.",
+        "start": 104.968,
+        "duration": 3.74
+    },
+    {
+        "text": "And so that's gonna be one of the\nthings that we're gonna work on a lot",
+        "start": 109.958,
+        "duration": 5.07
+    },
+    {
+        "text": "next year which is what Jeff alluded\nto, modeling object behaviors, so how",
+        "start": 115.078,
+        "duration": 5.14
+    },
+    {
+        "text": "things change over time and learning\nmodels of how things change over time.",
+        "start": 120.258,
+        "duration": 3.93
+    },
+    {
+        "text": "So at the moment, Monty's models\ndon't have a representation of time",
+        "start": 124.608,
+        "duration": 3.58
+    },
+    {
+        "text": "but we're planning to prototype and\nintegrate that in the next year.",
+        "start": 129.058,
+        "duration": 5.39
+    },
+    {
+        "text": "Thousand Brains Project: Great, thank you.",
+        "start": 136.958,
+        "duration": 0.64
+    },
+    {
+        "text": "Okay, next question.",
+        "start": 139.198,
+        "duration": 1.07
+    },
+    {
+        "text": "Can inference and training run at the\nsame time as I suspect our brain does?",
+        "start": 142.458,
+        "duration": 3.9
+    },
+    {
+        "text": "If so, is there a moment where it\ndecides whether it needs to create",
+        "start": 146.358,
+        "duration": 4.01
+    },
+    {
+        "text": "a new model for a new object?",
+        "start": 150.388,
+        "duration": 1.94
+    },
+    {
+        "text": "Viviane Clay: Alright, I'll answer that,\nbecause I worked a lot on that part.",
+        "start": 154.083,
+        "duration": 2.56
+    },
+    {
+        "text": "Yeah, inherently, there isn't\nreally, like you said, in the brain,",
+        "start": 157.483,
+        "duration": 3.74
+    },
+    {
+        "text": "there isn't really a distinction\nbetween learning and inference.",
+        "start": 161.223,
+        "duration": 2.6
+    },
+    {
+        "text": "We are always learning new things and\nwe're always doing inference all the time.",
+        "start": 163.823,
+        "duration": 4.27
+    },
+    {
+        "text": "We actually need to do inference to be\nable to recognize that there's something",
+        "start": 168.093,
+        "duration": 3.3
+    },
+    {
+        "text": "new that we need to be learning.",
+        "start": 171.393,
+        "duration": 1.53
+    },
+    {
+        "text": "And Monty can work the same way.",
+        "start": 173.433,
+        "duration": 2.58
+    },
+    {
+        "text": "We currently, in our configs, you'll\nsee setups for training and evaluation.",
+        "start": 177.563,
+        "duration": 5.92
+    },
+    {
+        "text": "But the only difference between the two is\nwhether the model, the things that Monty",
+        "start": 183.973,
+        "duration": 5.38
+    },
+    {
+        "text": "observes during its exploration, will\nget stored permanently in memory or not.",
+        "start": 189.373,
+        "duration": 6.14
+    },
+    {
+        "text": "Everything else is exactly identical.",
+        "start": 195.773,
+        "duration": 1.93
+    },
+    {
+        "text": "And if you do learning Monty will first\nstart doing inference and will start",
+        "start": 198.233,
+        "duration": 5.68
+    },
+    {
+        "text": "to recognize whatever it is sensing.",
+        "start": 203.913,
+        "duration": 1.73
+    },
+    {
+        "text": "And if what it is sensing is not\nmatching any of its models, it will",
+        "start": 206.213,
+        "duration": 5.69
+    },
+    {
+        "text": "create a new model and store all the\npoints it just sensed in that new model.",
+        "start": 211.913,
+        "duration": 5.2
+    },
+    {
+        "text": "If it recognizes a model, it will\njust integrate the past observations",
+        "start": 217.643,
+        "duration": 5.06
+    },
+    {
+        "text": "into that model and fill in the\ngaps that exist in that model.",
+        "start": 222.733,
+        "duration": 3.84
+    },
+    {
+        "text": "Make it a bit more filled\nin, add more details to it.",
+        "start": 226.613,
+        "duration": 5.26
+    },
+    {
+        "text": "If you run Monty in kind of training\nmode it will do learning and inference.",
+        "start": 231.873,
+        "duration": 4.14
+    },
+    {
+        "text": "Niels Leadholm: Maybe just to add to that,\nVivian mentioned that we've had some more",
+        "start": 238.323,
+        "duration": 3.63
+    },
+    {
+        "text": "ideas on attention recently, and most\nof these haven't been implemented yet.",
+        "start": 241.973,
+        "duration": 3.73
+    },
+    {
+        "text": "But, in general, our view is going\ntowards that attention is essential",
+        "start": 246.223,
+        "duration": 4.5
+    },
+    {
+        "text": "for a lot of things including learning.",
+        "start": 250.733,
+        "duration": 2.91
+    },
+    {
+        "text": "In general, you don't, certainly at a\ncortical level, learn much about the world",
+        "start": 253.703,
+        "duration": 3.69
+    },
+    {
+        "text": "unless you're attending to something.",
+        "start": 257.393,
+        "duration": 1.44
+    },
+    {
+        "text": "But I just thought I'd mention this\nbecause I think in your question you asked",
+        "start": 260.123,
+        "duration": 3.54
+    },
+    {
+        "text": "about teachers and the importance of that.",
+        "start": 263.663,
+        "duration": 2.09
+    },
+    {
+        "text": "So although clearly you can learn without\na teacher just by exploring the world,",
+        "start": 266.573,
+        "duration": 5.28
+    },
+    {
+        "text": "in humans this kind of shared attention\nbetween either parents and children, or",
+        "start": 272.763,
+        "duration": 4.67
+    },
+    {
+        "text": "teachers and children, where you both\nlook at something, and then the teacher",
+        "start": 277.433,
+        "duration": 3.93
+    },
+    {
+        "text": "describes what's being seen, that's\nreally essential to how learning takes",
+        "start": 281.683,
+        "duration": 4.52
+    },
+    {
+        "text": "place in humans, and you can imagine\nsomething similar working in Monty.",
+        "start": 286.203,
+        "duration": 4.65
+    },
+    {
+        "text": "But that would be bootstrapping and\njust making the process go quicker.",
+        "start": 291.523,
+        "duration": 4.26
+    },
+    {
+        "text": "Like Vivian says, you can totally\nmove flexibly back and forth",
+        "start": 296.103,
+        "duration": 4.33
+    },
+    {
+        "text": "between inference and learning.",
+        "start": 300.433,
+        "duration": 1.97
+    },
+    {
+        "text": "Thousand Brains Project: Alright, great.",
+        "start": 304.933,
+        "duration": 0.8
+    },
+    {
+        "text": "Thank you, Niels.",
+        "start": 306.733,
+        "duration": 0.83
+    },
+    {
+        "text": "Okay, Agent Rev asks, so far your\nfocus has been mostly centered",
+        "start": 308.483,
+        "duration": 3.85
+    },
+    {
+        "text": "around vision, along with a lot\nof discussions about Touch 2.",
+        "start": 312.333,
+        "duration": 3.44
+    },
+    {
+        "text": "In the documentation in some of your\nvideos, you talked about eventually",
+        "start": 317.383,
+        "duration": 2.31
+    },
+    {
+        "text": "dealing with abstract concepts, language,\nworld models, logical reasoning, and more.",
+        "start": 319.693,
+        "duration": 4.11
+    },
+    {
+        "text": "I suspect this might require more\ntypes of sensor and learning modules",
+        "start": 324.133,
+        "duration": 3.4
+    },
+    {
+        "text": "for the other brain regions, e.g.\nmotion, audio, scene mapping,",
+        "start": 327.793,
+        "duration": 3.01
+    },
+    {
+        "text": "attention, reasoning, prediction, etc.",
+        "start": 330.803,
+        "duration": 1.82
+    },
+    {
+        "text": "Along with a distributed associative\ndatabase of sensory SDRs and live global",
+        "start": 333.423,
+        "duration": 3.34
+    },
+    {
+        "text": "workspace to solve the binding problem.",
+        "start": 336.763,
+        "duration": 1.93
+    },
+    {
+        "text": "All of it optimized to\nrun a standard workspace.",
+        "start": 339.043,
+        "duration": 2.05
+    },
+    {
+        "text": "I'm curious to find out how far the\ntheory of columns can be pushed.",
+        "start": 341.503,
+        "duration": 5.49
+    },
+    {
+        "text": "Alright, Jeff has raised his hand.",
+        "start": 349.156,
+        "duration": 1.19
+    },
+    {
+        "text": "Jeff Hawkins: It's a tough question.",
+        "start": 352.926,
+        "duration": 1.2
+    },
+    {
+        "text": "It just relates early about the\nquestion about can the column",
+        "start": 356.686,
+        "duration": 3.83
+    },
+    {
+        "text": "theory apply to cognitive things?",
+        "start": 360.516,
+        "duration": 1.65
+    },
+    {
+        "text": "And we've just recently, in the\nlast few months, had some further",
+        "start": 362.666,
+        "duration": 5.85
+    },
+    {
+        "text": "insights in this which I alluded to.",
+        "start": 368.516,
+        "duration": 1.35
+    },
+    {
+        "text": "So I don't want to get into\ntoo much detail about it",
+        "start": 370.136,
+        "duration": 2.55
+    },
+    {
+        "text": "because it's very speculative.",
+        "start": 372.786,
+        "duration": 1.49
+    },
+    {
+        "text": "But we accept the fact that all\ncolumns are reference frame based, and",
+        "start": 375.716,
+        "duration": 4.11
+    },
+    {
+        "text": "all columns have a reference frame.",
+        "start": 379.916,
+        "duration": 3.07
+    },
+    {
+        "text": "The question is what does\na reference frame refer to?",
+        "start": 383.356,
+        "duration": 2.32
+    },
+    {
+        "text": "And the way we currently understand\nit, they're very much tied to",
+        "start": 386.846,
+        "duration": 3.27
+    },
+    {
+        "text": "physical things in the world.",
+        "start": 390.126,
+        "duration": 1.25
+    },
+    {
+        "text": "You even when you learn mathematics,\nyou do it by looking at images",
+        "start": 392.176,
+        "duration": 3.43
+    },
+    {
+        "text": "of equations and things.",
+        "start": 395.606,
+        "duration": 1.41
+    },
+    {
+        "text": "When you learn about history you look at\npictures of images of the world, or so on.",
+        "start": 397.046,
+        "duration": 5.61
+    },
+    {
+        "text": "But an answer here that might go beyond\nwhat most people would be able to capture",
+        "start": 405.546,
+        "duration": 3.74
+    },
+    {
+        "text": "right now, is that as you go up the\ncortex, and you go higher or higher,",
+        "start": 409.286,
+        "duration": 4.2
+    },
+    {
+        "text": "which you end up with the representations\nof objects that are very compositional.",
+        "start": 413.596,
+        "duration": 4.61
+    },
+    {
+        "text": "They're very objects composed of\nobjects and the power of abstract",
+        "start": 419.796,
+        "duration": 4.79
+    },
+    {
+        "text": "thinking comes from that, not\nfrom the reference frame itself.",
+        "start": 424.596,
+        "duration": 3.7
+    },
+    {
+        "text": "And so you might even use very simple\nreference frames and movements to",
+        "start": 429.776,
+        "duration": 3.19
+    },
+    {
+        "text": "learn mathematics and language.",
+        "start": 432.966,
+        "duration": 1.87
+    },
+    {
+        "text": "But the features that are being\nfed into those reference frames",
+        "start": 435.336,
+        "duration": 2.86
+    },
+    {
+        "text": "are themselves much more abstract.",
+        "start": 438.216,
+        "duration": 2.86
+    },
+    {
+        "text": "So the abstraction comes less from the\nreference frame but from the accumulated",
+        "start": 441.376,
+        "duration": 3.87
+    },
+    {
+        "text": "compositional objects that are being\nrepresented in reference frames.",
+        "start": 445.256,
+        "duration": 3.03
+    },
+    {
+        "text": "I hope that was maybe slightly helpful.",
+        "start": 449.196,
+        "duration": 1.91
+    },
+    {
+        "text": "I don't know if it was.",
+        "start": 452.196,
+        "duration": 0.94
+    },
+    {
+        "text": "Viviane Clay: Yeah, I think maybe\njust emphasizing that we don't think",
+        "start": 454.366,
+        "duration": 5.05
+    },
+    {
+        "text": "we need to build custom learning\nmodules for reasoning, or attention,",
+        "start": 459.416,
+        "duration": 4.33
+    },
+    {
+        "text": "or language or something like that.",
+        "start": 463.746,
+        "duration": 3.38
+    },
+    {
+        "text": "They will all get fundamental sensory\ninput at the lowest level, and then if",
+        "start": 467.376,
+        "duration": 4.28
+    },
+    {
+        "text": "you go to higher up in the hierarchy,\nthey get the more compositional features,",
+        "start": 471.656,
+        "duration": 4.74
+    },
+    {
+        "text": "like the outputs of other learning\nmodules that have learned entire models.",
+        "start": 476.396,
+        "duration": 3.98
+    },
+    {
+        "text": "And some of the things you mentioned\nin the question was reasoning and",
+        "start": 481.836,
+        "duration": 5.96
+    },
+    {
+        "text": "prediction so those things would be\nthings that are going on inside each",
+        "start": 487.796,
+        "duration": 3.5
+    },
+    {
+        "text": "of the learning modules themselves, and\nnot specialized to one specific region.",
+        "start": 491.296,
+        "duration": 6.97
+    },
+    {
+        "text": "All of the learning modules are\ndoing prediction, basically.",
+        "start": 498.756,
+        "duration": 2.6
+    },
+    {
+        "text": "Thousand Brains Project: what's the\nlargest scale Monty has been trained",
+        "start": 502.801,
+        "duration": 2.57
+    },
+    {
+        "text": "on in terms of data and compute?",
+        "start": 505.411,
+        "duration": 2.75
+    },
+    {
+        "text": "Do we have confidence it will scale\nwell in performance, and if so, why?",
+        "start": 508.501,
+        "duration": 3.35
+    },
+    {
+        "text": "Niels Leadholm: Yeah, so\nI'm happy to take this one.",
+        "start": 513.351,
+        "duration": 2.19
+    },
+    {
+        "text": "So yeah, this is a great question and\nsomeone else asked something similar.",
+        "start": 515.541,
+        "duration": 3.5
+    },
+    {
+        "text": "So in terms of the experiments, for\nexample, that we do in the paper, and",
+        "start": 519.051,
+        "duration": 3.33
+    },
+    {
+        "text": "just generally, 77 objects at 32 rotations\nis about the most that we've looked at.",
+        "start": 522.381,
+        "duration": 7.67
+    },
+    {
+        "text": "Not because we couldn't look at more,\nbut really, as you've probably guessed",
+        "start": 530.581,
+        "duration": 4.2
+    },
+    {
+        "text": "from the results we were showing,\nwe're really focused on showing what",
+        "start": 534.781,
+        "duration": 3.77
+    },
+    {
+        "text": "Monty can do, and exploring what Monty\ncan do, given very small amounts of",
+        "start": 538.551,
+        "duration": 3.2
+    },
+    {
+        "text": "data like what humans can learn from.",
+        "start": 541.761,
+        "duration": 2.68
+    },
+    {
+        "text": "But in terms of scaling, there's\nmore details in the paper if you're",
+        "start": 545.071,
+        "duration": 4.27
+    },
+    {
+        "text": "interested, but at learning, If you\nremember those charts, we could learn on",
+        "start": 549.341,
+        "duration": 7.39
+    },
+    {
+        "text": "10,000 objects, and it would still use,\nbecause it, sorry, it scales linearly.",
+        "start": 556.771,
+        "duration": 4.84
+    },
+    {
+        "text": "you could learn Monty on 10,000 objects\nand it would still use fewer flops",
+        "start": 562.521,
+        "duration": 4.64
+    },
+    {
+        "text": "than that very short deep learning run.",
+        "start": 567.161,
+        "duration": 2.82
+    },
+    {
+        "text": "The one that had the same\namount of training data and",
+        "start": 570.601,
+        "duration": 3.15
+    },
+    {
+        "text": "it's just learning 77 objects.",
+        "start": 573.751,
+        "duration": 1.71
+    },
+    {
+        "text": "So the difference there is\nhuge and we're not concerned.",
+        "start": 575.821,
+        "duration": 2.92
+    },
+    {
+        "text": "At inference, it's a bit more\nsubtle, because again in the",
+        "start": 579.151,
+        "duration": 3.14
+    },
+    {
+        "text": "current version of Monty, the\namount of flops scales linearly.",
+        "start": 582.291,
+        "duration": 3.56
+    },
+    {
+        "text": "But really the current implementation\nof Monty is very naive.",
+        "start": 586.671,
+        "duration": 3.32
+    },
+    {
+        "text": "We've not, as I mentioned earlier, we've\nnot designed it to be computationally",
+        "start": 589.991,
+        "duration": 3.89
+    },
+    {
+        "text": "efficient as an aim or a goal, aside\nfrom some very basic optimizations.",
+        "start": 593.881,
+        "duration": 4.66
+    },
+    {
+        "text": "And so there's a huge amount that\ncould be done to make that nonlinear.",
+        "start": 599.771,
+        "duration": 4.75
+    },
+    {
+        "text": "Everything from sparsity to\nhierarchy to reuse of models.",
+        "start": 604.521,
+        "duration": 3.48
+    },
+    {
+        "text": "All these things that we believe\nthe brain's doing and that we",
+        "start": 608.011,
+        "duration": 2.77
+    },
+    {
+        "text": "eventually want to implement in Monty.",
+        "start": 610.781,
+        "duration": 2.47
+    },
+    {
+        "text": "Both that learning and inference I\nthink the amount of flops is definitely",
+        "start": 613.741,
+        "duration": 6.51
+    },
+    {
+        "text": "not our kind of current concern.",
+        "start": 620.251,
+        "duration": 2.23
+    },
+    {
+        "text": "It's something that should just come\nnaturally from the design of the system.",
+        "start": 623.191,
+        "duration": 3.52
+    },
+    {
+        "text": "Jeff Hawkins: I'd like to ask a question,\nwhich I'm not sure if the person who",
+        "start": 629.101,
+        "duration": 3.0
+    },
+    {
+        "text": "proposed the question was, this, but\nthat's how we've talked about scaling to",
+        "start": 632.101,
+        "duration": 4.43
+    },
+    {
+        "text": "the task, but another way of scaling is\nhow many learning modules have we used",
+        "start": 636.811,
+        "duration": 3.55
+    },
+    {
+        "text": "at once and sensorimotor integration.",
+        "start": 640.361,
+        "duration": 2.32
+    },
+    {
+        "text": "Because, in the brain we have\n150,000 of these and yet we",
+        "start": 642.701,
+        "duration": 2.92
+    },
+    {
+        "text": "can do a hell of a lot with one",
+        "start": 645.621,
+        "duration": 1.43
+    },
+    {
+        "text": "learning modules.",
+        "start": 649.371,
+        "duration": 0.11
+    },
+    {
+        "text": "And so we spend a lot of time\njust exploring the capabilities.",
+        "start": 649.481,
+        "duration": 2.57
+    },
+    {
+        "text": "But another question is, what's our\nconfidence level that we can scale",
+        "start": 652.571,
+        "duration": 3.79
+    },
+    {
+        "text": "up the number of learning modules to.",
+        "start": 656.361,
+        "duration": 2.67
+    },
+    {
+        "text": "And I don't know the answer to that\nquestion so someone else can answer.",
+        "start": 659.171,
+        "duration": 3.27
+    },
+    {
+        "text": "Viviane Clay: On a concrete\nlevel we haven't really scaled",
+        "start": 663.625,
+        "duration": 1.86
+    },
+    {
+        "text": "it beyond 16 learning modules.",
+        "start": 665.485,
+        "duration": 2.04
+    },
+    {
+        "text": "But it's mostly because we haven't\ndone a lot of hierarchy yet and at some",
+        "start": 667.525,
+        "duration": 5.19
+    },
+    {
+        "text": "point you can't just add more sensors\nto a system and still get meaningful",
+        "start": 672.715,
+        "duration": 5.33
+    },
+    {
+        "text": "input on different parts of the object.",
+        "start": 678.045,
+        "duration": 2.18
+    },
+    {
+        "text": "But so once we add hierarchy we're\ngonna run more experiments with more",
+        "start": 681.675,
+        "duration": 3.39
+    },
+    {
+        "text": "learning modules and since Monty is an\ninherently very parallelizable system,",
+        "start": 685.065,
+        "duration": 6.34
+    },
+    {
+        "text": "one thing you can do is you can just\nuse a bunch of CPUs and parallelize",
+        "start": 693.435,
+        "duration": 4.19
+    },
+    {
+        "text": "all the learning modules across\nthem or other custom hardware that",
+        "start": 697.695,
+        "duration": 3.6
+    },
+    {
+        "text": "Xavier, for example, one of the\nuniversity collaborations, is exploring",
+        "start": 704.145,
+        "duration": 4.44
+    },
+    {
+        "text": "on other types of hardware to scale it\nto actual thousands of learning modules.",
+        "start": 708.825,
+        "duration": 4.42
+    },
+    {
+        "text": "Thousand Brains Project: Great, thank you.",
+        "start": 714.678,
+        "duration": 0.81
+    },
+    {
+        "text": "Okay, next question.",
+        "start": 716.678,
+        "duration": 0.95
+    },
+    {
+        "text": "Ray asks do you use spiking\nneural networks in Monty?",
+        "start": 717.628,
+        "duration": 3.55
+    },
+    {
+        "text": "If not, do you think that the spiking\nbehavior of biological neurons is relevant",
+        "start": 721.198,
+        "duration": 5.11
+    },
+    {
+        "text": "to an artificial intelligence in any way?",
+        "start": 726.828,
+        "duration": 2.05
+    },
+    {
+        "text": "Niels Leadholm: Yeah, I'm happy\nto at least start on this one.",
+        "start": 729.628,
+        "duration": 4.2
+    },
+    {
+        "text": "Yeah, this is another\ninteresting question.",
+        "start": 734.278,
+        "duration": 1.9
+    },
+    {
+        "text": "For anyone who's been following\nwork associated with Jeff for the",
+        "start": 737.558,
+        "duration": 3.357
+    },
+    {
+        "text": "last couple decades, first Numenta\nand then now TBP, you'll know that",
+        "start": 740.978,
+        "duration": 4.3
+    },
+    {
+        "text": "there's been kind of various levels\nof biological realism and in the",
+        "start": 745.278,
+        "duration": 5.15
+    },
+    {
+        "text": "kind of systems that are being built.",
+        "start": 750.438,
+        "duration": 1.52
+    },
+    {
+        "text": "And this is a struggle we're constantly\nthinking about and trying to figure out:",
+        "start": 752.358,
+        "duration": 4.82
+    },
+    {
+        "text": "what is the right level of abstraction?",
+        "start": 757.338,
+        "duration": 1.56
+    },
+    {
+        "text": "And that includes whether you need\nto model things like spiking neurons.",
+        "start": 759.268,
+        "duration": 3.82
+    },
+    {
+        "text": "In general, our approach is to try\nand find the most abstract level",
+        "start": 763.708,
+        "duration": 4.52
+    },
+    {
+        "text": "possible that still captures the\nkind of key computation we want.",
+        "start": 768.338,
+        "duration": 3.34
+    },
+    {
+        "text": "For example, with HTM and the neurons\nthat were used in HTM, they found this",
+        "start": 773.408,
+        "duration": 4.33
+    },
+    {
+        "text": "kind of interesting balance between the\nold kind of point neurons and a kind",
+        "start": 777.738,
+        "duration": 4.08
+    },
+    {
+        "text": "of overly complex multi-compartmental\nneuron, if that means anything to you.",
+        "start": 781.818,
+        "duration": 4.14
+    },
+    {
+        "text": "Trying to get the key role of dendritic\nbranches and what those were doing of",
+        "start": 786.768,
+        "duration": 4.49
+    },
+    {
+        "text": "putting a neuron into a predictive state.",
+        "start": 791.258,
+        "duration": 1.67
+    },
+    {
+        "text": "And that's actually something that's\nstill made its way into Monty today,",
+        "start": 793.668,
+        "duration": 2.93
+    },
+    {
+        "text": "even though we don't have neurons in\nthe same way, we're still capturing",
+        "start": 796.818,
+        "duration": 3.5
+    },
+    {
+        "text": "this notion of prediction following\nmovement and things like that.",
+        "start": 800.318,
+        "duration": 4.31
+    },
+    {
+        "text": "So then the question is, what\nmight be the kind of key things",
+        "start": 805.158,
+        "duration": 3.43
+    },
+    {
+        "text": "that spiking is delivering?",
+        "start": 808.588,
+        "duration": 1.2
+    },
+    {
+        "text": "And every now and then in our\nresearch meetings we talk about",
+        "start": 810.118,
+        "duration": 3.03
+    },
+    {
+        "text": "things like temporal codes, and\nhow maybe spikes at certain times",
+        "start": 813.148,
+        "duration": 5.38
+    },
+    {
+        "text": "relative to a background phase might\nbe important, and things like that.",
+        "start": 818.528,
+        "duration": 4.17
+    },
+    {
+        "text": "But a lot of that is more about\nhow the brain is doing it and",
+        "start": 822.698,
+        "duration": 2.95
+    },
+    {
+        "text": "doesn't necessarily need to\nconstrain how we implemented Monty.",
+        "start": 825.648,
+        "duration": 2.62
+    },
+    {
+        "text": "So I guess the answer is that, at\nthe moment, we don't have anything",
+        "start": 828.908,
+        "duration": 3.34
+    },
+    {
+        "text": "where we think we definitely need\nit, and given the complexity of",
+        "start": 832.248,
+        "duration": 3.82
+    },
+    {
+        "text": "training spiking neural networks, it's\nsomething we want to avoid if we can.",
+        "start": 836.078,
+        "duration": 3.09
+    },
+    {
+        "text": "But it's also not something that we've\nruled out that there might be elements, at",
+        "start": 839.568,
+        "duration": 4.52
+    },
+    {
+        "text": "least, of what spiking neurons are doing.",
+        "start": 844.088,
+        "duration": 2.14
+    },
+    {
+        "text": "Things like STDP, causal learning, some\nof these kind of key elements that we",
+        "start": 847.138,
+        "duration": 3.89
+    },
+    {
+        "text": "might take out and integrate into Monty.",
+        "start": 851.028,
+        "duration": 2.98
+    },
+    {
+        "text": "Jeff Hawkins: That was a\nnice explanation, Niels.",
+        "start": 856.158,
+        "duration": 1.41
+    },
+    {
+        "text": "I think something like SCDP,\nwhich is a spike timing-dependent",
+        "start": 857.828,
+        "duration": 3.23
+    },
+    {
+        "text": "plasticity is maybe critical but\nyou can achieve that without spikes.",
+        "start": 861.108,
+        "duration": 4.35
+    },
+    {
+        "text": "It's just really a temporal\ncausality that you're capturing.",
+        "start": 865.958,
+        "duration": 3.22
+    },
+    {
+        "text": "And so we've only put into the theory\nthings we absolutely think have to be",
+        "start": 869.828,
+        "duration": 4.5
+    },
+    {
+        "text": "there to support all the principles.",
+        "start": 874.328,
+        "duration": 2.33
+    },
+    {
+        "text": "But Vivian often points out that\nyou can build learning modules any",
+        "start": 877.548,
+        "duration": 5.22
+    },
+    {
+        "text": "way you want as long as you adhere\nto the cortical messaging protocol.",
+        "start": 882.768,
+        "duration": 4.12
+    },
+    {
+        "text": "So if someone wants to come along and\nsay, I'm going to build a learning module",
+        "start": 887.388,
+        "duration": 2.56
+    },
+    {
+        "text": "built on spiking neurons you can do that.",
+        "start": 889.978,
+        "duration": 2.1
+    },
+    {
+        "text": "And maybe you'll do something amazing\nbut I think it would be more amazing",
+        "start": 892.108,
+        "duration": 2.77
+    },
+    {
+        "text": "in terms of performance, power\nreduction, something like that.",
+        "start": 894.888,
+        "duration": 4.56
+    },
+    {
+        "text": "As opposed to some new\ngreat new capabilities.",
+        "start": 899.448,
+        "duration": 2.29
+    },
+    {
+        "text": "I don't think that's gonna happen.",
+        "start": 902.008,
+        "duration": 1.32
+    },
+    {
+        "text": "But it might be a great way of building\nstuff if you have the right semiconductor",
+        "start": 903.638,
+        "duration": 4.18
+    },
+    {
+        "text": "substrate and you know how to build\nthat and you might get tremendous",
+        "start": 907.818,
+        "duration": 2.68
+    },
+    {
+        "text": "efficiencies or something like that.",
+        "start": 910.508,
+        "duration": 1.31
+    },
+    {
+        "text": "So it's not like we rule it out but\nI don't think from a principle's",
+        "start": 912.358,
+        "duration": 4.52
+    },
+    {
+        "text": "point of view, it's essential.",
+        "start": 916.898,
+        "duration": 0.96
+    },
+    {
+        "text": "Thousand Brains Project: Alright, great.",
+        "start": 921.308,
+        "duration": 1.36
+    },
+    {
+        "text": "Thank you so much.",
+        "start": 922.898,
+        "duration": 0.88
+    },
+    {
+        "text": "Avinash asks, how soon is Monty expected\nto be capable of language learning?",
+        "start": 924.168,
+        "duration": 6.1
+    },
+    {
+        "text": "Viviane Clay: Yeah, I think we\nhave several posts around that on",
+        "start": 932.245,
+        "duration": 2.63
+    },
+    {
+        "text": "this discourse where we go into\nmore depth of what we think of how",
+        "start": 934.875,
+        "duration": 3.59
+    },
+    {
+        "text": "language could be modeled in Monty.",
+        "start": 938.465,
+        "duration": 1.68
+    },
+    {
+        "text": "I think maybe one important point to\nmake is that we don't think language",
+        "start": 940.155,
+        "duration": 4.27
+    },
+    {
+        "text": "is where a system should start.",
+        "start": 944.425,
+        "duration": 2.34
+    },
+    {
+        "text": "It's not you start out learning language.",
+        "start": 947.305,
+        "duration": 3.33
+    },
+    {
+        "text": "A baby comes into the world and it\nstarts out interacting with the world",
+        "start": 950.965,
+        "duration": 3.53
+    },
+    {
+        "text": "and learning a bunch of different things\nbut language is one of the last things",
+        "start": 954.495,
+        "duration": 3.99
+    },
+    {
+        "text": "that come on top of everything else.",
+        "start": 958.545,
+        "duration": 2.26
+    },
+    {
+        "text": "Of learning how to move and walk\nand interact with toys and all that.",
+        "start": 960.815,
+        "duration": 4.36
+    },
+    {
+        "text": "And once language comes into Monty,\nfollowing this basic principle that",
+        "start": 966.665,
+        "duration": 7.41
+    },
+    {
+        "text": "also columns that learn models of\nwords, for instance, have the same basic",
+        "start": 974.085,
+        "duration": 4.53
+    },
+    {
+        "text": "structure, the idea is that it will fall\nout naturally from the other things.",
+        "start": 978.615,
+        "duration": 5.52
+    },
+    {
+        "text": "It's just based on what kind of\nenvironment you place a Monty system.",
+        "start": 984.135,
+        "duration": 3.83
+    },
+    {
+        "text": "If you place Monty in an environment where\nit hears language or it reads words, it",
+        "start": 987.965,
+        "duration": 5.22
+    },
+    {
+        "text": "will learn models of these letters and\nwords and sentences, and it will be able",
+        "start": 993.195,
+        "duration": 5.54
+    },
+    {
+        "text": "to associate meaning with words, and\nground those words in physical reality.",
+        "start": 998.735,
+        "duration": 6.94
+    },
+    {
+        "text": "But since we haven't really scaled\nMonty and made it hierarchically deep",
+        "start": 1007.265,
+        "duration": 5.07
+    },
+    {
+        "text": "in the way that would be necessary\nto get multimodal integration and",
+        "start": 1012.345,
+        "duration": 4.58
+    },
+    {
+        "text": "language associations with meaning we\nhaven't really had a way to test this.",
+        "start": 1016.935,
+        "duration": 5.18
+    },
+    {
+        "text": "Jeff Hawkins: Just adding\non to that a little bit.",
+        "start": 1023.745,
+        "duration": 1.6
+    },
+    {
+        "text": "If you think about language, what it\nmostly is, is a way of transferring a",
+        "start": 1025.915,
+        "duration": 4.67
+    },
+    {
+        "text": "model I have in my head into your head.",
+        "start": 1030.585,
+        "duration": 2.23
+    },
+    {
+        "text": "And, so often we express language in\nterms of the same sort of communication",
+        "start": 1035.235,
+        "duration": 5.37
+    },
+    {
+        "text": "protocols we have in Monty.",
+        "start": 1041.095,
+        "duration": 1.61
+    },
+    {
+        "text": "Oh imagine this, you're at this\nintersection and when you know there's",
+        "start": 1043.345,
+        "duration": 3.45
+    },
+    {
+        "text": "that store over there, inside of\nthere you'll find the such and such",
+        "start": 1046.805,
+        "duration": 2.95
+    },
+    {
+        "text": "and yesterday we did this and you're\nbasically recreating models in one",
+        "start": 1049.755,
+        "duration": 5.44
+    },
+    {
+        "text": "person's head into another person's head.",
+        "start": 1055.195,
+        "duration": 1.48
+    },
+    {
+        "text": "Once you realize that, it\nbecomes not very mystical at all.",
+        "start": 1057.055,
+        "duration": 3.97
+    },
+    {
+        "text": "But it does require you have these\nexisting models, as Vivian just",
+        "start": 1061.845,
+        "duration": 3.61
+    },
+    {
+        "text": "said, you don't start with language,\nyou start with models of the world.",
+        "start": 1065.455,
+        "duration": 3.19
+    },
+    {
+        "text": "And then once you have models of\nthe world, we can talk about how to",
+        "start": 1068.645,
+        "duration": 1.95
+    },
+    {
+        "text": "communicate them to someone else and\nI actually think the process is going",
+        "start": 1070.605,
+        "duration": 3.495
+    },
+    {
+        "text": "to turn out to be fairly simple.",
+        "start": 1074.155,
+        "duration": 1.1
+    },
+    {
+        "text": "Thousand Brains Project: All\nright, very next question.",
+        "start": 1076.164,
+        "duration": 1.76
+    },
+    {
+        "text": "We have time for a couple more, and\nthen we'll call it, but, Falco asks.",
+        "start": 1077.924,
+        "duration": 3.95
+    },
+    {
+        "text": "Is the hypothesis generating and\npruning based on neuroscience?",
+        "start": 1082.354,
+        "duration": 3.9
+    },
+    {
+        "text": "that one?",
+        "start": 1087.846,
+        "duration": 0.06
+    },
+    {
+        "text": "Ramy Mounir: I think I'd try\nand take a stab at this one.",
+        "start": 1087.906,
+        "duration": 1.18
+    },
+    {
+        "text": "We've already worked out a lot of details\nabout how a single hypothesis in a column,",
+        "start": 1090.966,
+        "duration": 4.47
+    },
+    {
+        "text": "like a hypothesis about orientation,\ncan actually transform the movement",
+        "start": 1095.536,
+        "duration": 5.15
+    },
+    {
+        "text": "that is being sent from the thalamus.",
+        "start": 1100.686,
+        "duration": 2.11
+    },
+    {
+        "text": "We think there are hypotheses about\nthese orientations in the column.",
+        "start": 1104.626,
+        "duration": 2.43
+    },
+    {
+        "text": "But the question here is how many\ncan exist simultaneously in a column?",
+        "start": 1107.096,
+        "duration": 4.98
+    },
+    {
+        "text": "That's a bit of a more\ncomplicated question.",
+        "start": 1112.426,
+        "duration": 1.93
+    },
+    {
+        "text": "We've discussed this a lot in our\nresearch meetings about how maybe",
+        "start": 1115.576,
+        "duration": 4.11
+    },
+    {
+        "text": "we can have different populations\nof these representations exist.",
+        "start": 1119.686,
+        "duration": 5.87
+    },
+    {
+        "text": "And we can oscillate between them\nbased on phase, or oscillations,",
+        "start": 1125.926,
+        "duration": 3.9
+    },
+    {
+        "text": "or something like that.",
+        "start": 1129.856,
+        "duration": 1.03
+    },
+    {
+        "text": "And we could also imagine maybe like\na fixed-point attractor network where,",
+        "start": 1130.886,
+        "duration": 6.32
+    },
+    {
+        "text": "you know, these can compete together.",
+        "start": 1137.346,
+        "duration": 1.49
+    },
+    {
+        "text": "But it's something that, again,\ngoes back to the abstraction of how",
+        "start": 1138.916,
+        "duration": 6.68
+    },
+    {
+        "text": "biologically plausible should this\nbe and what do we need in our system?",
+        "start": 1145.736,
+        "duration": 4.45
+    },
+    {
+        "text": "We think there are multiple hypotheses.",
+        "start": 1151.206,
+        "duration": 2.15
+    },
+    {
+        "text": "Whether they can all fire together at the\nsame time, or we oscillate between them,",
+        "start": 1153.386,
+        "duration": 3.07
+    },
+    {
+        "text": "that's a kind of a different question.",
+        "start": 1156.486,
+        "duration": 1.43
+    },
+    {
+        "text": "Jeff Hawkins: I agree with\neverything Rami just said.",
+        "start": 1157.926,
+        "duration": 2.768
+    },
+    {
+        "text": "I'll just add in the neuroscience, we\nhave a pretty strong hypothesis about one",
+        "start": 1160.694,
+        "duration": 4.04
+    },
+    {
+        "text": "form of keeping these hypotheses going.",
+        "start": 1164.744,
+        "duration": 2.17
+    },
+    {
+        "text": "Which is a union of\nsparse representations.",
+        "start": 1167.264,
+        "duration": 3.17
+    },
+    {
+        "text": "So you can literally activate multiple\nhypotheses in the same set of cells at",
+        "start": 1170.444,
+        "duration": 4.15
+    },
+    {
+        "text": "the same time and nobody gets confused.",
+        "start": 1174.594,
+        "duration": 2.22
+    },
+    {
+        "text": "We've shown that, how that works\nmathematically and there's a lot",
+        "start": 1177.514,
+        "duration": 4.04
+    },
+    {
+        "text": "of biological evidence for it.",
+        "start": 1181.624,
+        "duration": 1.14
+    },
+    {
+        "text": "We don't do it that way in Monty.",
+        "start": 1183.064,
+        "duration": 1.68
+    },
+    {
+        "text": "We could.",
+        "start": 1184.774,
+        "duration": 0.73
+    },
+    {
+        "text": "We don't have to model it that way.",
+        "start": 1186.134,
+        "duration": 2.9
+    },
+    {
+        "text": "We can do it other ways\nand work just as well.",
+        "start": 1189.054,
+        "duration": 2.12
+    },
+    {
+        "text": "The answer is yeah, it's\ngoing on in the neuroscience.",
+        "start": 1191.724,
+        "duration": 2.23
+    },
+    {
+        "text": "It's going on in the biology.",
+        "start": 1193.974,
+        "duration": 1.12
+    },
+    {
+        "text": "We think we know some of the ways\nit's happening in the biology but",
+        "start": 1195.094,
+        "duration": 2.67
+    },
+    {
+        "text": "we're not actually emulating those.",
+        "start": 1197.764,
+        "duration": 1.46
+    },
+    {
+        "text": "We're just achieving the\nsame result in Monty.",
+        "start": 1199.244,
+        "duration": 2.55
+    },
+    {
+        "text": "Niels Leadholm: And yeah, maybe just to\nadd as well this point about generating.",
+        "start": 1202.571,
+        "duration": 2.92
+    },
+    {
+        "text": "So Rami was showing some results\nearlier from some nice work he's done",
+        "start": 1205.501,
+        "duration": 4.52
+    },
+    {
+        "text": "recently, where, in the latest version,\nnot necessarily the version if you",
+        "start": 1210.021,
+        "duration": 4.93
+    },
+    {
+        "text": "just use Monty in most of the configs,\nbut the latest version will expand",
+        "start": 1214.981,
+        "duration": 5.0
+    },
+    {
+        "text": "its hypothesis space dynamically.",
+        "start": 1219.981,
+        "duration": 1.81
+    },
+    {
+        "text": "And that has a lot of similarity\nto how we think sparsity is",
+        "start": 1222.301,
+        "duration": 5.69
+    },
+    {
+        "text": "playing out in the brain.",
+        "start": 1228.311,
+        "duration": 0.82
+    },
+    {
+        "text": "Where basically when there's a prediction\nerror, when something is unexpected,",
+        "start": 1229.131,
+        "duration": 3.16
+    },
+    {
+        "text": "suddenly lots of neurons are active.",
+        "start": 1232.641,
+        "duration": 1.7
+    },
+    {
+        "text": "And that's something that Monty does in\nthis version that Rami's been working on.",
+        "start": 1234.741,
+        "duration": 4.14
+    },
+    {
+        "text": "Where, you know, if the system's\nfailing to understand what it's",
+        "start": 1238.881,
+        "duration": 2.77
+    },
+    {
+        "text": "seeing, suddenly it bursts this\nhypothesis space and expands it.",
+        "start": 1241.651,
+        "duration": 5.07
+    },
+    {
+        "text": "So it's just another example of\nsomething that has a flavor of the",
+        "start": 1247.961,
+        "duration": 4.17
+    },
+    {
+        "text": "neuroscience without necessarily needing\nto be implemented to the letter in",
+        "start": 1252.131,
+        "duration": 3.65
+    },
+    {
+        "text": "the same way that the brain would.",
+        "start": 1255.781,
+        "duration": 1.46
+    },
+    {
+        "text": "Thousand Brains Project:\nAlright, great, thank you.",
+        "start": 1258.308,
+        "duration": 1.06
+    },
+    {
+        "text": "Okay, two more questions,",
+        "start": 1259.598,
+        "duration": 2.3
+    },
+    {
+        "text": "So Robin asks, how is the sensor\nmodule able to infer curvature?",
+        "start": 1263.068,
+        "duration": 5.23
+    },
+    {
+        "text": "Is it analyzing the 2D pixel data, or\ndoes it get depth input from the sensor?",
+        "start": 1268.648,
+        "duration": 4.35
+    },
+    {
+        "text": "Viviane Clay: Yeah, I can\ndo that, it's pretty quick.",
+        "start": 1275.698,
+        "duration": 1.32
+    },
+    {
+        "text": "It does get depth input.",
+        "start": 1277.058,
+        "duration": 1.25
+    },
+    {
+        "text": "Yeah, we use depth input to both\ndetermine where the sensor is in space.",
+        "start": 1280.538,
+        "duration": 6.3
+    },
+    {
+        "text": "Because, for example if you have a\ncamera, the patch itself on the object",
+        "start": 1287.248,
+        "duration": 5.63
+    },
+    {
+        "text": "is not where the camera is, so we need\nto know the distance to the object.",
+        "start": 1293.148,
+        "duration": 3.25
+    },
+    {
+        "text": "And then plus, from the patch\nand the depth values within",
+        "start": 1296.848,
+        "duration": 4.32
+    },
+    {
+        "text": "that patch we can calculate the\ncurvature and the surface normal.",
+        "start": 1301.168,
+        "duration": 2.96
+    },
+    {
+        "text": "Niels Leadholm: Maybe it's worth\njust adding though, that right now,",
+        "start": 1305.185,
+        "duration": 4.2
+    },
+    {
+        "text": "we're limited if we want to apply\nMonty in the real world to having",
+        "start": 1309.385,
+        "duration": 2.98
+    },
+    {
+        "text": "some sort of depth camera, like\ntime of flight and things like that.",
+        "start": 1312.365,
+        "duration": 2.54
+    },
+    {
+        "text": "But one of the items on that future\nwork section that everyone was",
+        "start": 1315.295,
+        "duration": 4.25
+    },
+    {
+        "text": "alluding to is to use things like\nparallax, both motion and binocular,",
+        "start": 1319.545,
+        "duration": 4.78
+    },
+    {
+        "text": "to extract depth, because this is\nmore similar to how the brain does it.",
+        "start": 1325.005,
+        "duration": 3.75
+    },
+    {
+        "text": "If that's something you have familiarity\nwith and would be interested in",
+        "start": 1329.915,
+        "duration": 2.6
+    },
+    {
+        "text": "working on that would be really cool.",
+        "start": 1332.515,
+        "duration": 2.27
+    },
+    {
+        "text": "Viviane Clay: It also depends\non what modality you get.",
+        "start": 1335.655,
+        "duration": 3.02
+    },
+    {
+        "text": "For example, for the ultrasound project\nwe did, it wasn't a depth camera",
+        "start": 1338.805,
+        "duration": 4.01
+    },
+    {
+        "text": "itself, it was the ultrasound image.",
+        "start": 1342.815,
+        "duration": 1.86
+    },
+    {
+        "text": "Which includes information about\nhow far the probe penetrates",
+        "start": 1344.975,
+        "duration": 5.44
+    },
+    {
+        "text": "into whatever it's scanning.",
+        "start": 1350.415,
+        "duration": 3.73
+    },
+    {
+        "text": "Basically, you can write custom sensor\nmodules however you like and connect them",
+        "start": 1354.755,
+        "duration": 4.77
+    },
+    {
+        "text": "to whatever particular sensor you have.",
+        "start": 1359.525,
+        "duration": 2.31
+    },
+    {
+        "text": "And the sensor modules can\nextract whatever features",
+        "start": 1362.305,
+        "duration": 3.21
+    },
+    {
+        "text": "you want them to extract.",
+        "start": 1365.515,
+        "duration": 1.2
+    },
+    {
+        "text": "And they can extract them however\nyou want them to be extracted.",
+        "start": 1367.415,
+        "duration": 3.89
+    },
+    {
+        "text": "The important thing is that sensor\nmodules need to be able to extract",
+        "start": 1371.695,
+        "duration": 3.67
+    },
+    {
+        "text": "where in space they are, and what\norientation they're sensing there.",
+        "start": 1375.395,
+        "duration": 5.25
+    },
+    {
+        "text": "And that's part of the cortical\nmessaging protocol so that the",
+        "start": 1380.755,
+        "duration": 3.22
+    },
+    {
+        "text": "learning module can then infer how\nit has moved from the previous step.",
+        "start": 1383.975,
+        "duration": 4.52
+    },
+    {
+        "text": "Thousand Brains Project: Great, thank you.",
+        "start": 1389.408,
+        "duration": 0.69
+    },
+    {
+        "text": "Okay, last question, it's\na good one, it's a big one.",
+        "start": 1392.048,
+        "duration": 3.38
+    },
+    {
+        "text": "Do you believe that Monty would be able\nto achieve knowledge generalization and",
+        "start": 1395.468,
+        "duration": 4.33
+    },
+    {
+        "text": "creativity without modeling hippocampus\nand neuromodulators as reward signals?",
+        "start": 1399.798,
+        "duration": 5.25
+    },
+    {
+        "text": "Jeff Hawkins: Okay, so there's\na bunch of things in there.",
+        "start": 1406.38,
+        "duration": 1.89
+    },
+    {
+        "text": "First of all, we believe we\nhave to model the hippocampus.",
+        "start": 1408.27,
+        "duration": 2.85
+    },
+    {
+        "text": "And one of the ways you have to, not just\nfor this creativity issue, but we have to",
+        "start": 1411.53,
+        "duration": 4.64
+    },
+    {
+        "text": "model the concept of attention and fast\nlearning that occurs in the hippocampus.",
+        "start": 1416.17,
+        "duration": 4.66
+    },
+    {
+        "text": "So we've been talking a\nlot about that lately.",
+        "start": 1421.15,
+        "duration": 1.51
+    },
+    {
+        "text": "The good news is that a lot of people\nbelieve that the neocortex is a",
+        "start": 1422.94,
+        "duration": 3.31
+    },
+    {
+        "text": "derived structure from the hippocampus,\nso there's analogous processes to",
+        "start": 1426.26,
+        "duration": 4.23
+    },
+    {
+        "text": "cortical columns in the hippocampus.",
+        "start": 1430.49,
+        "duration": 1.22
+    },
+    {
+        "text": "So we don't have to introduce new\nfundamental features, we just have",
+        "start": 1431.71,
+        "duration": 3.54
+    },
+    {
+        "text": "to introduce new concepts of fast\nlearning and slow learning, and",
+        "start": 1435.25,
+        "duration": 4.8
+    },
+    {
+        "text": "temporary learning, which it all\nfits within the current framework.",
+        "start": 1440.28,
+        "duration": 3.28
+    },
+    {
+        "text": "The neuromodulator one is interesting.",
+        "start": 1443.8,
+        "duration": 1.82
+    },
+    {
+        "text": "There has to be something that tells the\nsystem to learn or not learn, all right,",
+        "start": 1447.0,
+        "duration": 4.12
+    },
+    {
+        "text": "and it could be as simple as a switch that\nsays \"we want to learn, learn everything.\"",
+        "start": 1451.15,
+        "duration": 3.87
+    },
+    {
+        "text": "Or you might say, \"oh, we want to have\nvalue-based learning, learn the only",
+        "start": 1455.38,
+        "duration": 3.062
+    },
+    {
+        "text": "things that have certain types of values.\"",
+        "start": 1458.58,
+        "duration": 1.82
+    },
+    {
+        "text": "I think when we think about\nneuromodulators that's",
+        "start": 1460.98,
+        "duration": 3.35
+    },
+    {
+        "text": "really what they're about.",
+        "start": 1464.35,
+        "duration": 1.06
+    },
+    {
+        "text": "They're mostly about\ndeciding when to learn.",
+        "start": 1465.46,
+        "duration": 2.42
+    },
+    {
+        "text": "They get involved when we're\ntrying to do, understanding",
+        "start": 1468.33,
+        "duration": 3.71
+    },
+    {
+        "text": "causal relationships in the world.",
+        "start": 1472.07,
+        "duration": 1.84
+    },
+    {
+        "text": "Oh, these things led up to this desirable\nevent, like reinforcement learning.",
+        "start": 1474.26,
+        "duration": 5.0
+    },
+    {
+        "text": "So we're gonna model some of that.",
+        "start": 1480.4,
+        "duration": 1.44
+    },
+    {
+        "text": "But I think the idea that you\ncan generalize knowledge and",
+        "start": 1482.05,
+        "duration": 3.45
+    },
+    {
+        "text": "they don't really require that.",
+        "start": 1487.57,
+        "duration": 1.59
+    },
+    {
+        "text": "We're going to have those in the system.",
+        "start": 1489.26,
+        "duration": 1.65
+    },
+    {
+        "text": "But the system basically learns models.",
+        "start": 1491.28,
+        "duration": 1.85
+    },
+    {
+        "text": "They can generate some\nknowledge from those models.",
+        "start": 1493.13,
+        "duration": 2.4
+    },
+    {
+        "text": "But we will have to have at\nleast some sort of equivalent",
+        "start": 1495.94,
+        "duration": 3.55
+    },
+    {
+        "text": "to neuromodulators decide on an\napplication-by-application basis, what",
+        "start": 1499.49,
+        "duration": 4.17
+    },
+    {
+        "text": "do we want this system to care about?",
+        "start": 1503.66,
+        "duration": 1.71
+    },
+    {
+        "text": "How much do we want it to learn?",
+        "start": 1506.63,
+        "duration": 0.99
+    },
+    {
+        "text": "Do we want it to be fixed?",
+        "start": 1507.62,
+        "duration": 0.92
+    },
+    {
+        "text": "Do we want it to learn all the time?",
+        "start": 1508.54,
+        "duration": 1.28
+    },
+    {
+        "text": "Should it learn everything,\nor just certain things?",
+        "start": 1510.35,
+        "duration": 1.74
+    },
+    {
+        "text": "Those are kind of\napplication-specific problems.",
+        "start": 1512.95,
+        "duration": 2.17
+    },
+    {
+        "text": "They're less about theory, overall theory.",
+        "start": 1515.19,
+        "duration": 2.65
+    },
+    {
+        "text": "A little bit of a complicated answer to\nyour question but it's a great question",
+        "start": 1518.54,
+        "duration": 2.58
+    },
+    {
+        "text": "and we think about these things a lot.",
+        "start": 1521.12,
+        "duration": 1.17
+    }
+]

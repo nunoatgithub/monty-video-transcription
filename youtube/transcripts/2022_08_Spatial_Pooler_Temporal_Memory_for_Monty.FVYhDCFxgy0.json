@@ -1,0 +1,5462 @@
+[
+    {
+        "text": "Yeah, I guess this is, a yearend review.",
+        "start": 8.174,
+        "duration": 2.76
+    },
+    {
+        "text": "Hopefully, yeah, there's,\nnot too many slides.",
+        "start": 12.404,
+        "duration": 4.08
+    },
+    {
+        "text": "there's around 30 slides.",
+        "start": 17.444,
+        "duration": 1.05
+    },
+    {
+        "text": "Hopefully I can, maybe that\nis quite a bit of slides.",
+        "start": 18.764,
+        "duration": 3.24
+    },
+    {
+        "text": "Maybe I can go through, the parts\nthat I've already gone through",
+        "start": 23.234,
+        "duration": 3.12
+    },
+    {
+        "text": "in detail relatively quickly.",
+        "start": 26.414,
+        "duration": 1.8
+    },
+    {
+        "text": "I really want to, take time to talk\nabout what I took away from some of",
+        "start": 28.964,
+        "duration": 4.95
+    },
+    {
+        "text": "these projects and what are the key\nnext steps that I think could be taken.",
+        "start": 33.914,
+        "duration": 4.08
+    },
+    {
+        "text": "so yeah, questions are welcome.",
+        "start": 39.104,
+        "duration": 1.86
+    },
+    {
+        "text": "All right, cool.",
+        "start": 44.024,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah, so I guess my time here started\nlast August, and it's August now.",
+        "start": 44.954,
+        "duration": 4.47
+    },
+    {
+        "text": "So it's been a year, four key\nprojects that I was working on.",
+        "start": 49.424,
+        "duration": 3.96
+    },
+    {
+        "text": "One was the dendrites project.",
+        "start": 53.714,
+        "duration": 1.53
+    },
+    {
+        "text": "The next was like a deep dive into\nspatial pooler and temporal memory.",
+        "start": 55.574,
+        "duration": 3.84
+    },
+    {
+        "text": "Then I wanted to integrate that into\nMonty, so there that again, the temporal",
+        "start": 59.894,
+        "duration": 4.11
+    },
+    {
+        "text": "memory for Monty Project, and I guess for\nthe last two or what, three months I've",
+        "start": 64.004,
+        "duration": 5.16
+    },
+    {
+        "text": "been working on grid cells for Monty.",
+        "start": 69.164,
+        "duration": 2.04
+    },
+    {
+        "text": "Okay, so the Dens Project,\njust a very brief recap.",
+        "start": 73.904,
+        "duration": 3.87
+    },
+    {
+        "text": "I guess this project started before\nI joined, but I came and contributed",
+        "start": 78.644,
+        "duration": 3.51
+    },
+    {
+        "text": "a bit of things, a few things.",
+        "start": 82.154,
+        "duration": 1.77
+    },
+    {
+        "text": "one of the key intuitions for this\nproject was that we, they started looking",
+        "start": 85.154,
+        "duration": 3.81
+    },
+    {
+        "text": "at, neurons and deep learning, and we\nstarted comparing them to real parametal",
+        "start": 89.144,
+        "duration": 4.08
+    },
+    {
+        "text": "neurons in the ne in the neocortex.",
+        "start": 93.284,
+        "duration": 1.68
+    },
+    {
+        "text": "and the basic idea was\nthat artificial neurons.",
+        "start": 95.654,
+        "duration": 2.01
+    },
+    {
+        "text": "A really vast oversimplifications\nof what's really happening.",
+        "start": 98.114,
+        "duration": 3.03
+    },
+    {
+        "text": "On the left, you see an artificial\nneuron diagram, where it's a soma",
+        "start": 101.474,
+        "duration": 4.5
+    },
+    {
+        "text": "is basically replicated as a linear\nweighted sum, and the axon is like",
+        "start": 105.974,
+        "duration": 3.87
+    },
+    {
+        "text": "the output of a non-linearity.",
+        "start": 109.844,
+        "duration": 1.95
+    },
+    {
+        "text": "but in, in reality, this is not at\nall how dead rights work or this",
+        "start": 112.364,
+        "duration": 3.69
+    },
+    {
+        "text": "is not how all, how neurons work.",
+        "start": 116.054,
+        "duration": 1.74
+    },
+    {
+        "text": "Neurons have basically thousands\nand thousands of synapses.",
+        "start": 118.274,
+        "duration": 3.18
+    },
+    {
+        "text": "and these dendri segments, segments\nact as independent pattern recognizers,",
+        "start": 122.024,
+        "duration": 5.49
+    },
+    {
+        "text": "by checking to see if a set of\nsynapses are, are connected or not.",
+        "start": 127.964,
+        "duration": 5.22
+    },
+    {
+        "text": "And this is what depolarizes the\nneuron, the cell body to fire.",
+        "start": 133.184,
+        "duration": 3.48
+    },
+    {
+        "text": "and this is like some, this, is a\ndeep complexity that's completely",
+        "start": 137.294,
+        "duration": 3.33
+    },
+    {
+        "text": "missing in deep learning.",
+        "start": 140.624,
+        "duration": 0.96
+    },
+    {
+        "text": "And this was the impetus\nfor the dendrites project.",
+        "start": 141.824,
+        "duration": 2.91
+    },
+    {
+        "text": "so the first part was augmenting\nthe standard point neuron,",
+        "start": 145.604,
+        "duration": 2.985
+    },
+    {
+        "text": "the artificial neuron model.",
+        "start": 148.844,
+        "duration": 1.41
+    },
+    {
+        "text": "on the bottom you see the feed forward\ninput, and this is like the standard",
+        "start": 150.644,
+        "duration": 2.91
+    },
+    {
+        "text": "part of a, of an artificial neuron.",
+        "start": 154.004,
+        "duration": 1.98
+    },
+    {
+        "text": "But the key contribution here\nwas adding context vectors, which",
+        "start": 156.314,
+        "duration": 3.42
+    },
+    {
+        "text": "kind of mimic basal dent rights.",
+        "start": 159.734,
+        "duration": 1.53
+    },
+    {
+        "text": "and these context vectors, you have, one\nweighted, one weight per segment per se.",
+        "start": 161.864,
+        "duration": 6.06
+    },
+    {
+        "text": "and you would feed a context into\nthis, into this, into this area.",
+        "start": 168.764,
+        "duration": 4.5
+    },
+    {
+        "text": "You would compute which segment response\nhas the maximal response to that",
+        "start": 173.354,
+        "duration": 3.87
+    },
+    {
+        "text": "context vector, and that would modulate\nwhether then you're on fires or not.",
+        "start": 177.224,
+        "duration": 3.75
+    },
+    {
+        "text": "so yeah,",
+        "start": 181.934,
+        "duration": 0.54
+    },
+    {
+        "text": "I'm gonna try to go step by step here.",
+        "start": 184.544,
+        "duration": 1.62
+    },
+    {
+        "text": "This is like the full architecture of this\nwas the key contribution of that paper.",
+        "start": 186.164,
+        "duration": 4.32
+    },
+    {
+        "text": "the first contribution was\nadding dendrites to the",
+        "start": 191.084,
+        "duration": 2.67
+    },
+    {
+        "text": "standard, point you're on.",
+        "start": 193.754,
+        "duration": 1.77
+    },
+    {
+        "text": "The second one was adding sparse weights,\nand that's the thing at the bottom.",
+        "start": 196.364,
+        "duration": 3.96
+    },
+    {
+        "text": "Instead of a fully connected dense\nlayer where all neurons of one layer are",
+        "start": 200.504,
+        "duration": 3.72
+    },
+    {
+        "text": "connected to all neurons of the second\nlayer, we drew some inspiration for the",
+        "start": 204.224,
+        "duration": 4.56
+    },
+    {
+        "text": "neuroscience and we decided to say that,\nthese connections should really be sparse.",
+        "start": 208.784,
+        "duration": 4.56
+    },
+    {
+        "text": "this would basically reduce the\nsort of gradient interference that",
+        "start": 214.094,
+        "duration": 3.54
+    },
+    {
+        "text": "you see with most deep networks.",
+        "start": 217.634,
+        "duration": 1.8
+    },
+    {
+        "text": "and that would probably help\nalleviate, catastrophic forgetting,",
+        "start": 219.974,
+        "duration": 3.12
+    },
+    {
+        "text": "in like dynamic environments\nand dynamic training scenarios.",
+        "start": 223.634,
+        "duration": 2.76
+    },
+    {
+        "text": "and the third contribution was adding\nsparse activations instead of the",
+        "start": 227.264,
+        "duration": 3.66
+    },
+    {
+        "text": "classic, relu activation, which I\nthink in its best case, only gates,",
+        "start": 230.924,
+        "duration": 5.01
+    },
+    {
+        "text": "maybe 50% of the neurons to be active.",
+        "start": 235.934,
+        "duration": 2.49
+    },
+    {
+        "text": "But here we introduced a variable\nsparse activation where only",
+        "start": 238.724,
+        "duration": 3.75
+    },
+    {
+        "text": "the top k neurons become active.",
+        "start": 242.474,
+        "duration": 2.55
+    },
+    {
+        "text": "like I said, this project was\nwell underway before I got here.",
+        "start": 246.024,
+        "duration": 2.67
+    },
+    {
+        "text": "I think most of the continual learning\nexperi experiments were already run.",
+        "start": 248.964,
+        "duration": 3.84
+    },
+    {
+        "text": "I started working on the multitask\nreinforcement learning experiments.",
+        "start": 252.954,
+        "duration": 4.05
+    },
+    {
+        "text": "and this was basically looking at this\nenvironment set up called the Metal World",
+        "start": 258.114,
+        "duration": 4.41
+    },
+    {
+        "text": "V two benchmark, where, you have this\nrobotic arm, it needs to solve a bunch",
+        "start": 262.524,
+        "duration": 4.05
+    },
+    {
+        "text": "of these tasks, and you would ideally\nlearn all 10 of these tasks together using",
+        "start": 266.574,
+        "duration": 5.07
+    },
+    {
+        "text": "some reinforcement learning algorithm.",
+        "start": 271.644,
+        "duration": 1.62
+    },
+    {
+        "text": "But a standard deep network would\nreally struggle to do this because,",
+        "start": 273.774,
+        "duration": 3.06
+    },
+    {
+        "text": "when it's learning one task, and you're\nalso trying to learn an orthogonal",
+        "start": 277.434,
+        "duration": 3.84
+    },
+    {
+        "text": "task, two tasks that don't have any\nsemantic overlap, you would see a lot of",
+        "start": 281.274,
+        "duration": 4.32
+    },
+    {
+        "text": "gradient interference during training.",
+        "start": 285.594,
+        "duration": 1.47
+    },
+    {
+        "text": "but this is something that we really\ntried mitigating, by introducing",
+        "start": 287.874,
+        "duration": 3.24
+    },
+    {
+        "text": "this active dendrites network.",
+        "start": 291.114,
+        "duration": 1.47
+    },
+    {
+        "text": "So some of the results here, I\nthink the, the den, this is just",
+        "start": 295.029,
+        "duration": 4.56
+    },
+    {
+        "text": "for, the, reinforcement learning\nexperiments with dendrites, which",
+        "start": 299.589,
+        "duration": 3.72
+    },
+    {
+        "text": "used about 7.2 million parameters.",
+        "start": 303.309,
+        "duration": 2.46
+    },
+    {
+        "text": "We had, a, model that had about an 88%\naverage accuracy across 10 of these tasks.",
+        "start": 306.939,
+        "duration": 4.44
+    },
+    {
+        "text": "A regular deep network with maybe about\n500,000 more parameters was far less",
+        "start": 311.889,
+        "duration": 5.28
+    },
+    {
+        "text": "accurate, about 11% less accurate.",
+        "start": 317.169,
+        "duration": 2.25
+    },
+    {
+        "text": "and an even larger MLP just showed\nthat, adding more parameters doesn't",
+        "start": 320.229,
+        "duration": 4.83
+    },
+    {
+        "text": "solve anything, even though the\nlarge MLP had about 2 million more",
+        "start": 325.059,
+        "duration": 3.81
+    },
+    {
+        "text": "parameters than our Denverites model.",
+        "start": 328.869,
+        "duration": 2.01
+    },
+    {
+        "text": "all it showed was that, no matter\nhow large you go, you'll still",
+        "start": 331.599,
+        "duration": 3.0
+    },
+    {
+        "text": "have problems like catastrophic\ninterference and gradient interference",
+        "start": 334.599,
+        "duration": 3.09
+    },
+    {
+        "text": "when training orthogonal tasks.",
+        "start": 337.689,
+        "duration": 1.56
+    },
+    {
+        "text": "so yeah, this was cool to see.",
+        "start": 340.179,
+        "duration": 1.74
+    },
+    {
+        "text": "Yeah, and this was like one of the\nkey figures of the paper where we",
+        "start": 345.054,
+        "duration": 3.03
+    },
+    {
+        "text": "see that a neuron, in this model for\nboth multitask reinforcement learning",
+        "start": 348.354,
+        "duration": 5.22
+    },
+    {
+        "text": "and the continual learning per\nexperiments that Karin was working on.",
+        "start": 353.574,
+        "duration": 4.17
+    },
+    {
+        "text": "you see that before training and\nafter training, how selective a",
+        "start": 358.284,
+        "duration": 4.41
+    },
+    {
+        "text": "neuron responds to a particular task.",
+        "start": 362.694,
+        "duration": 2.49
+    },
+    {
+        "text": "What you don't wanna see is that a neuron\nresponds to all tasks, but you see here",
+        "start": 365.574,
+        "duration": 3.75
+    },
+    {
+        "text": "that it responds selectively, which\nmeans that, we see these sub networks",
+        "start": 369.324,
+        "duration": 3.96
+    },
+    {
+        "text": "automatically forming in our deep network,\nthat correspond to different tasks.",
+        "start": 373.284,
+        "duration": 4.62
+    },
+    {
+        "text": "and these sub networks are\nautomatically non overlapping,",
+        "start": 378.834,
+        "duration": 2.79
+    },
+    {
+        "text": "when they don't need to be and\noverlapping when they share knowledge.",
+        "start": 381.984,
+        "duration": 2.94
+    },
+    {
+        "text": "So that was cool.",
+        "start": 385.134,
+        "duration": 0.37
+    },
+    {
+        "text": "yeah, we've got some good, PR out of this.",
+        "start": 388.839,
+        "duration": 2.49
+    },
+    {
+        "text": "this paper we published something in\nthe Frontiers in Neuro Robotics Journal.",
+        "start": 392.379,
+        "duration": 4.56
+    },
+    {
+        "text": "That was cool.",
+        "start": 396.969,
+        "duration": 0.66
+    },
+    {
+        "text": "all, all of us gave like a, small\ntalk at Yanik Kils YouTube video.",
+        "start": 398.649,
+        "duration": 5.37
+    },
+    {
+        "text": "that was cool too.",
+        "start": 404.529,
+        "duration": 0.9
+    },
+    {
+        "text": "just recently, Karin and me presented\nsomething at the Sparsity in Neural",
+        "start": 405.999,
+        "duration": 5.43
+    },
+    {
+        "text": "Networks workshop, about this work.",
+        "start": 411.429,
+        "duration": 2.46
+    },
+    {
+        "text": "and just last Sunday, me and\nKarin recorded a podcast for the",
+        "start": 414.879,
+        "duration": 4.38
+    },
+    {
+        "text": "Auto ml, yeah, auto ML podcast.",
+        "start": 419.409,
+        "duration": 3.51
+    },
+    {
+        "text": "They wanted to hear more about\nhow dendrites might help, stuff",
+        "start": 422.919,
+        "duration": 3.54
+    },
+    {
+        "text": "like neural architecture search.",
+        "start": 426.459,
+        "duration": 1.71
+    },
+    {
+        "text": "So that was cool.",
+        "start": 428.229,
+        "duration": 0.75
+    },
+    {
+        "text": "just a question for the, yeah.",
+        "start": 432.279,
+        "duration": 1.68
+    },
+    {
+        "text": "For this slide, or the\none before with the,",
+        "start": 433.959,
+        "duration": 3.51
+    },
+    {
+        "text": "context, did you guys have time to\nplay around with Task composition, like",
+        "start": 439.539,
+        "duration": 6.39
+    },
+    {
+        "text": "where you could have maybe a similar\ntask that you, try and generalize to",
+        "start": 446.469,
+        "duration": 6.72
+    },
+    {
+        "text": "and you recall a similar context or,\nlike composing two contexts that have",
+        "start": 453.189,
+        "duration": 7.08
+    },
+    {
+        "text": "been learned for a task that requires\nboth of them or something like that.",
+        "start": 460.269,
+        "duration": 4.29
+    },
+    {
+        "text": "That's actually an interesting idea.",
+        "start": 464.859,
+        "duration": 1.29
+    },
+    {
+        "text": "I don't think we tried that.",
+        "start": 466.149,
+        "duration": 0.9
+    },
+    {
+        "text": "we used like fixed context vectors, and\nwe let the dite segments learn whether",
+        "start": 468.129,
+        "duration": 6.12
+    },
+    {
+        "text": "a particular task was semantically\nsimilar to another task, but the",
+        "start": 474.249,
+        "duration": 4.26
+    },
+    {
+        "text": "context vectors themselves were\nentirely orthogonal to each other.",
+        "start": 478.509,
+        "duration": 3.27
+    },
+    {
+        "text": "They were just like one, not encoded\nvector IDs describing the task.",
+        "start": 482.109,
+        "duration": 3.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 486.399,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay.",
+        "start": 486.794,
+        "duration": 0.05
+    },
+    {
+        "text": "Also a criticism of Permuted is that\nit's like really difficult to study,",
+        "start": 488.089,
+        "duration": 3.935
+    },
+    {
+        "text": "transfer knowledge across tasks because\nthe tasks are basically, they're",
+        "start": 492.894,
+        "duration": 4.77
+    },
+    {
+        "text": "the same task, but they're basically\nindependent because they've been permuted.",
+        "start": 497.664,
+        "duration": 3.9
+    },
+    {
+        "text": "Yeah.",
+        "start": 503.334,
+        "duration": 0.18
+    },
+    {
+        "text": "Like a really simple example might be to\nlike split into the first and the last",
+        "start": 503.514,
+        "duration": 4.44
+    },
+    {
+        "text": "five classes and train separately on\nboth of those with different contexts.",
+        "start": 507.954,
+        "duration": 4.29
+    },
+    {
+        "text": "And then see if you can superimpose the\ncontext vectors to handle both situations,",
+        "start": 512.244,
+        "duration": 7.56
+    },
+    {
+        "text": "like classification across all 10.",
+        "start": 519.834,
+        "duration": 1.74
+    },
+    {
+        "text": "Yeah, that is a good idea.",
+        "start": 524.829,
+        "duration": 2.33
+    },
+    {
+        "text": "but yeah.",
+        "start": 527.899,
+        "duration": 0.54
+    },
+    {
+        "text": "Cool.",
+        "start": 530.994,
+        "duration": 0.21
+    },
+    {
+        "text": "No.",
+        "start": 531.204,
+        "duration": 0.24
+    },
+    {
+        "text": "but yeah, really interesting.",
+        "start": 531.834,
+        "duration": 1.11
+    },
+    {
+        "text": "I'm, sad there's not a screenshot\nof you, of the sunglasses.",
+        "start": 533.814,
+        "duration": 3.6
+    },
+    {
+        "text": "Oh, I don't need the, I\ndon't need the reminder.",
+        "start": 537.504,
+        "duration": 2.4
+    },
+    {
+        "text": "There's a reason I put this\npicture up instead of the one",
+        "start": 540.474,
+        "duration": 2.22
+    },
+    {
+        "text": "where I didn't have sunglasses.",
+        "start": 542.694,
+        "duration": 1.32
+    },
+    {
+        "text": "Oh.",
+        "start": 544.014,
+        "duration": 0.24
+    },
+    {
+        "text": "It's just, yeah.",
+        "start": 544.254,
+        "duration": 0.81
+    },
+    {
+        "text": "Okay.",
+        "start": 548.559,
+        "duration": 0.33
+    },
+    {
+        "text": "so I guess what's next?",
+        "start": 549.249,
+        "duration": 1.23
+    },
+    {
+        "text": "we briefly talked about how sparse\nwe could use den right segments with",
+        "start": 550.989,
+        "duration": 3.21
+    },
+    {
+        "text": "sparse weights instead of dense ones.",
+        "start": 554.199,
+        "duration": 1.59
+    },
+    {
+        "text": "we didn't really explore\nthat, but it was talked about.",
+        "start": 556.479,
+        "duration": 2.19
+    },
+    {
+        "text": "but going back to, I guess to what\nNeil's you were talking about, I",
+        "start": 559.479,
+        "duration": 2.43
+    },
+    {
+        "text": "think definitely more compelling\nbenchmarks would be interesting.",
+        "start": 561.909,
+        "duration": 3.54
+    },
+    {
+        "text": "not many papers explored this\nnotion of continual reinforcement",
+        "start": 566.259,
+        "duration": 3.69
+    },
+    {
+        "text": "learning, but I think that would've\nbeen really cool to try instead of",
+        "start": 569.949,
+        "duration": 2.52
+    },
+    {
+        "text": "multitask reinforcement learning.",
+        "start": 572.469,
+        "duration": 1.44
+    },
+    {
+        "text": "and instead of permuted where instead\nof learning all these 10 tasks together,",
+        "start": 574.689,
+        "duration": 4.35
+    },
+    {
+        "text": "for like a complicated robot set\nof the, I showed, you learn them in",
+        "start": 579.549,
+        "duration": 3.6
+    },
+    {
+        "text": "sequence and you don't see all tasks\nafter you finish learning on them.",
+        "start": 583.149,
+        "duration": 3.365
+    },
+    {
+        "text": "Another interesting thing\nI think that could be tried",
+        "start": 587.469,
+        "duration": 2.55
+    },
+    {
+        "text": "is more realistic dendrites.",
+        "start": 590.019,
+        "duration": 1.95
+    },
+    {
+        "text": "Right now we treat dendrites as\nlike standalone context processors.",
+        "start": 592.209,
+        "duration": 3.21
+    },
+    {
+        "text": "They're like floating weights, that\ndon't really get touched, except",
+        "start": 595.599,
+        "duration": 4.2
+    },
+    {
+        "text": "when they're updated by back prop.",
+        "start": 599.799,
+        "duration": 1.38
+    },
+    {
+        "text": "But what we could do is make more\nrealistic ones where we connect neurons",
+        "start": 601.239,
+        "duration": 3.78
+    },
+    {
+        "text": "laterally by a dendrite segments.",
+        "start": 605.019,
+        "duration": 2.01
+    },
+    {
+        "text": "So within a particular\nlayer, just food for thought.",
+        "start": 607.029,
+        "duration": 3.78
+    },
+    {
+        "text": "that's not really a\nmore realistic dendrite.",
+        "start": 611.809,
+        "duration": 1.56
+    },
+    {
+        "text": "So it's more of a more realistic,",
+        "start": 613.369,
+        "duration": 1.56
+    },
+    {
+        "text": "architecture.",
+        "start": 617.149,
+        "duration": 0.63
+    },
+    {
+        "text": "yeah.",
+        "start": 619.069,
+        "duration": 0.27
+    },
+    {
+        "text": "I should say more realistic,\ndeep learning dendrites.",
+        "start": 619.939,
+        "duration": 2.52
+    },
+    {
+        "text": "it's not, it's really you're using the\ndendrites, but the change here would be,",
+        "start": 623.484,
+        "duration": 4.045
+    },
+    {
+        "text": "connections between cells and the layer,",
+        "start": 627.859,
+        "duration": 1.59
+    },
+    {
+        "text": "Is that what you're saying?",
+        "start": 632.179,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 633.229,
+        "duration": 0.3
+    },
+    {
+        "text": "All right.",
+        "start": 634.129,
+        "duration": 0.24
+    },
+    {
+        "text": "So the, it's not really making\nthe dendrites more realistic.",
+        "start": 634.369,
+        "duration": 2.85
+    },
+    {
+        "text": "It's more realistic neural\narchitecture, just to be clear.",
+        "start": 637.219,
+        "duration": 3.09
+    },
+    {
+        "text": "Yeah, that's right.",
+        "start": 641.539,
+        "duration": 1.825
+    },
+    {
+        "text": "Of course we did do that in other places.",
+        "start": 645.649,
+        "duration": 2.04
+    },
+    {
+        "text": "Of course, the whole temple\nmemory built on that idea.",
+        "start": 647.689,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 650.479,
+        "duration": 0.42
+    },
+    {
+        "text": "I guess this like purely for.",
+        "start": 651.679,
+        "duration": 1.35
+    },
+    {
+        "text": "Okay.",
+        "start": 654.029,
+        "duration": 0.42
+    },
+    {
+        "text": "onto the fun stuff.",
+        "start": 655.049,
+        "duration": 0.87
+    },
+    {
+        "text": "I did a nice deep dive into the spatial\npooler and temporal memory stuff,",
+        "start": 657.209,
+        "duration": 4.86
+    },
+    {
+        "text": "'cause that was something I really\nwanted to work on when I first started.",
+        "start": 662.099,
+        "duration": 2.88
+    },
+    {
+        "text": "but we were working on\nthe, the dendrites project.",
+        "start": 665.639,
+        "duration": 2.49
+    },
+    {
+        "text": "So we, wrapped that up, got some\nreally good, nice results from that.",
+        "start": 668.129,
+        "duration": 4.02
+    },
+    {
+        "text": "and then starting January I worked on\nlike this sort of deep dive in trying to",
+        "start": 672.629,
+        "duration": 4.05
+    },
+    {
+        "text": "understand, all the nuances behind the\nspatial pooler and temporal algorithms.",
+        "start": 676.679,
+        "duration": 4.5
+    },
+    {
+        "text": "when I was exploring this, I found\nthat all the existing code, or the",
+        "start": 681.809,
+        "duration": 3.75
+    },
+    {
+        "text": "fastest versions of the code had\nbeen written in c plus and linked",
+        "start": 685.559,
+        "duration": 3.72
+    },
+    {
+        "text": "to Python via some PI bind library.",
+        "start": 689.279,
+        "duration": 3.12
+    },
+    {
+        "text": "so the, one of the key things here\nis that it worked quickly, but it",
+        "start": 692.909,
+        "duration": 3.18
+    },
+    {
+        "text": "was hard to decipher and learn.",
+        "start": 696.089,
+        "duration": 1.59
+    },
+    {
+        "text": "It was really hard to,\noptimize the algorithm.",
+        "start": 698.039,
+        "duration": 2.16
+    },
+    {
+        "text": "it was also built on this really\nabstract sparse matrix library called",
+        "start": 700.789,
+        "duration": 4.35
+    },
+    {
+        "text": "Sparse Matrix Connections, which\nis something I think Marcus wrote.",
+        "start": 705.139,
+        "duration": 3.24
+    },
+    {
+        "text": "and it's very, detailed.",
+        "start": 708.769,
+        "duration": 1.41
+    },
+    {
+        "text": "It works very well, but it's also\nvery hard to improve and optimize.",
+        "start": 710.179,
+        "duration": 4.14
+    },
+    {
+        "text": "so yeah, that was like my first thought\nwhen I started doing this deep, dive.",
+        "start": 715.639,
+        "duration": 3.78
+    },
+    {
+        "text": "what I ended up doing was, for\nbetter or for worse, reproducing all",
+        "start": 720.649,
+        "duration": 4.56
+    },
+    {
+        "text": "of the spatial pooler and all the\ntemporal memory code purely in Python.",
+        "start": 725.209,
+        "duration": 3.72
+    },
+    {
+        "text": "And I think anyone can use that now.",
+        "start": 729.869,
+        "duration": 1.38
+    },
+    {
+        "text": "if anyone goes to the frameworks slash\nHTM folder inside research, they can",
+        "start": 731.849,
+        "duration": 5.43
+    },
+    {
+        "text": "find like the spatial folder that has\nbeen written completely in Python or",
+        "start": 737.279,
+        "duration": 4.02
+    },
+    {
+        "text": "the temporal memory algorithms, which\nhave been written completely in PyTorch.",
+        "start": 741.299,
+        "duration": 3.54
+    },
+    {
+        "text": "and yeah, this is like a snippet\nof, all those three, would those",
+        "start": 746.519,
+        "duration": 4.38
+    },
+    {
+        "text": "implementations be slower than the c plus?",
+        "start": 750.959,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah, I'm getting there.",
+        "start": 753.359,
+        "duration": 2.005
+    },
+    {
+        "text": "Okay.",
+        "start": 756.034,
+        "duration": 0.29
+    },
+    {
+        "text": "yeah, but I would like to say this is like\nthe most readable code I've ever seen.",
+        "start": 756.749,
+        "duration": 4.29
+    },
+    {
+        "text": "This is it's, you almost can read the code\nand see what's in the paper, direct way.",
+        "start": 761.039,
+        "duration": 6.48
+    },
+    {
+        "text": "So I, it may be slower, but\nit's incredibly instructive.",
+        "start": 767.519,
+        "duration": 3.69
+    },
+    {
+        "text": "Thank you, Ben.",
+        "start": 771.449,
+        "duration": 0.39
+    },
+    {
+        "text": "I'm just trying to understand the, point\nof sometimes we spend huge amounts of",
+        "start": 772.109,
+        "duration": 3.18
+    },
+    {
+        "text": "efforts trying to make things fast,\nlike moving away from Python, and now",
+        "start": 775.289,
+        "duration": 3.69
+    },
+    {
+        "text": "you're going the opposite direction.",
+        "start": 778.979,
+        "duration": 1.17
+    },
+    {
+        "text": "You're moving to Python.",
+        "start": 780.149,
+        "duration": 1.08
+    },
+    {
+        "text": "It just, I'm not questioning it.",
+        "start": 781.584,
+        "duration": 2.19
+    },
+    {
+        "text": "I'm just saying it's like funny because\nwe spent all this time optimizing",
+        "start": 783.774,
+        "duration": 3.24
+    },
+    {
+        "text": "things to see and now you, found\nout, you wanna go back to Python.",
+        "start": 787.014,
+        "duration": 2.85
+    },
+    {
+        "text": "yeah.",
+        "start": 790.259,
+        "duration": 0.29
+    },
+    {
+        "text": "So I guess, you're right, but one of the\nthings I, I did when I started this was my",
+        "start": 790.854,
+        "duration": 4.86
+    },
+    {
+        "text": "first intention wasn't to make it faster.",
+        "start": 795.714,
+        "duration": 2.19
+    },
+    {
+        "text": "I already thought it was pretty fast.",
+        "start": 797.994,
+        "duration": 1.86
+    },
+    {
+        "text": "My, my intention was to, make\na readable version of the code",
+        "start": 800.089,
+        "duration": 3.395
+    },
+    {
+        "text": "where anyone could understand the\nalgorithm just by reading the code.",
+        "start": 803.484,
+        "duration": 3.72
+    },
+    {
+        "text": "and I guess that would improve, if\nyou really wanted to build upon the",
+        "start": 808.584,
+        "duration": 3.57
+    },
+    {
+        "text": "algorithm, you would do so here in\nthis prototyped version and then",
+        "start": 812.154,
+        "duration": 3.21
+    },
+    {
+        "text": "move it to SQL Plus to become faster.",
+        "start": 815.364,
+        "duration": 1.77
+    },
+    {
+        "text": "that was my idea.",
+        "start": 817.884,
+        "duration": 0.84
+    },
+    {
+        "text": "But in terms of speed, so this is\nlike a questionable outcome of if",
+        "start": 820.829,
+        "duration": 4.44
+    },
+    {
+        "text": "anything here was useful or not.",
+        "start": 825.269,
+        "duration": 1.53
+    },
+    {
+        "text": "the Python spatial Pooler is readable\nand it's fast and it's also easy",
+        "start": 828.269,
+        "duration": 3.42
+    },
+    {
+        "text": "to build upon, so that's good.",
+        "start": 831.689,
+        "duration": 1.53
+    },
+    {
+        "text": "it's almost as fast as the c plus\nversion, but it's negligible.",
+        "start": 833.699,
+        "duration": 3.57
+    },
+    {
+        "text": "You could use either\nand be perfectly fine.",
+        "start": 837.299,
+        "duration": 1.65
+    },
+    {
+        "text": "The temporal memory one was a pain\nthough, the code is reasonable, readable,",
+        "start": 839.429,
+        "duration": 4.68
+    },
+    {
+        "text": "but the actual, the runtime is, really,\nslow compared to the c plus version.",
+        "start": 844.109,
+        "duration": 5.16
+    },
+    {
+        "text": "and I moved it to Pito specifically so\nthat I could run it both on, CPU and",
+        "start": 849.989,
+        "duration": 4.26
+    },
+    {
+        "text": "GPU, but I realized that even if I didn't\nmove it to GPU, the, operations that",
+        "start": 854.249,
+        "duration": 4.29
+    },
+    {
+        "text": "were happening for the sparse matrix\nmultiplications are, still inefficient.",
+        "start": 858.539,
+        "duration": 3.9
+    },
+    {
+        "text": "Moving into GPU will really change that.",
+        "start": 862.439,
+        "duration": 1.83
+    },
+    {
+        "text": "so I guess like the biggest outcome of\nthis was that it's a good learning tool",
+        "start": 865.289,
+        "duration": 3.12
+    },
+    {
+        "text": "to grasp all the nuances of the algorithm\nfor anyone who's starting an htm.",
+        "start": 868.499,
+        "duration": 3.24
+    },
+    {
+        "text": "how much slower was it?",
+        "start": 872.939,
+        "duration": 0.88
+    },
+    {
+        "text": "just roughly, 26 times more from the last\nexperience that I, yeah, it's really slow.",
+        "start": 874.139,
+        "duration": 6.205
+    },
+    {
+        "text": "That's significant.",
+        "start": 880.644,
+        "duration": 0.78
+    },
+    {
+        "text": "One thing you should know, defaultly,\nthe way that sometimes they do these",
+        "start": 883.084,
+        "duration": 4.505
+    },
+    {
+        "text": "operations, that they take the spars\nrepresentation, blow it on up to a dense",
+        "start": 887.589,
+        "duration": 3.93
+    },
+    {
+        "text": "one before feeding it down the normal path\nand then reconverting the results back.",
+        "start": 891.519,
+        "duration": 4.83
+    },
+    {
+        "text": "So I was exploring using some\nof those sparse libraries.",
+        "start": 896.349,
+        "duration": 4.05
+    },
+    {
+        "text": "Yeah, that was something I was\ngonna do, but I never got to do.",
+        "start": 900.459,
+        "duration": 2.13
+    },
+    {
+        "text": "So what I'm doing here is\nactually a dense map wall.",
+        "start": 902.769,
+        "duration": 2.76
+    },
+    {
+        "text": "Like I intended to do a dense map\nwall and then it was just stupid.",
+        "start": 905.559,
+        "duration": 3.3
+    },
+    {
+        "text": "they, could have changed it when\nI, looked at it, down at the",
+        "start": 910.569,
+        "duration": 4.17
+    },
+    {
+        "text": "deepest level of the A 10 A level.",
+        "start": 914.919,
+        "duration": 3.57
+    },
+    {
+        "text": "they're just doing dense multipli.",
+        "start": 919.299,
+        "duration": 1.77
+    },
+    {
+        "text": "the only savings is,\nstorage representation.",
+        "start": 922.119,
+        "duration": 2.82
+    },
+    {
+        "text": "So you, should have, the fact that it's\neven slower than that is, is a testament",
+        "start": 927.204,
+        "duration": 6.21
+    },
+    {
+        "text": "to, the cost I guess, of moving back\nand forth between the representations.",
+        "start": 933.414,
+        "duration": 3.93
+    },
+    {
+        "text": "Yeah.",
+        "start": 938.094,
+        "duration": 0.36
+    },
+    {
+        "text": "There are some good\ntakeaways from this though.",
+        "start": 941.934,
+        "duration": 1.68
+    },
+    {
+        "text": "One thing that we were talking about a\nlot, or I was talking about a lot, but I",
+        "start": 944.784,
+        "duration": 3.63
+    },
+    {
+        "text": "never got to do, was, using the spatial\npooler to create SDRs of image patches.",
+        "start": 948.414,
+        "duration": 5.43
+    },
+    {
+        "text": "We were always, like in all our\nMonte experiments, we were facing",
+        "start": 954.204,
+        "duration": 3.66
+    },
+    {
+        "text": "this problem head on of how do we\ncreate SDRs for real value data.",
+        "start": 957.864,
+        "duration": 3.42
+    },
+    {
+        "text": "and I presented some stuff in the\ntemporal memory section where I used",
+        "start": 961.764,
+        "duration": 4.29
+    },
+    {
+        "text": "this coordinate encoder strategy\nwhere, I was taking real value numbers",
+        "start": 966.054,
+        "duration": 4.8
+    },
+    {
+        "text": "and trying to create them into SDRs.",
+        "start": 970.854,
+        "duration": 1.38
+    },
+    {
+        "text": "But one of the interesting things I wanted\nto try was using the spatial pooler to",
+        "start": 972.234,
+        "duration": 4.08
+    },
+    {
+        "text": "automatically do this for image patches.",
+        "start": 976.314,
+        "duration": 1.74
+    },
+    {
+        "text": "I never got to do that,\nbut interesting idea.",
+        "start": 978.594,
+        "duration": 2.19
+    },
+    {
+        "text": "Maybe someone can do that in the future.",
+        "start": 980.844,
+        "duration": 1.53
+    },
+    {
+        "text": "The temporal memory stuff.",
+        "start": 984.054,
+        "duration": 1.26
+    },
+    {
+        "text": "So even though the code that I wrote\nwas, not really fast, much faster",
+        "start": 985.434,
+        "duration": 4.38
+    },
+    {
+        "text": "compared to the c plus version, what\nwe realized was when I tried temporal",
+        "start": 989.814,
+        "duration": 3.99
+    },
+    {
+        "text": "memory in the Monty project, the c\nplus version actually was still very",
+        "start": 993.804,
+        "duration": 4.53
+    },
+    {
+        "text": "slow after ingesting a lot of data.",
+        "start": 998.334,
+        "duration": 2.31
+    },
+    {
+        "text": "And the reason for this was twofold.",
+        "start": 1000.944,
+        "duration": 1.26
+    },
+    {
+        "text": "One was that you're not\ndeleting unused DTIC segments.",
+        "start": 1002.324,
+        "duration": 3.33
+    },
+    {
+        "text": "You're just gonna create\nsegments as they go.",
+        "start": 1005.654,
+        "duration": 1.92
+    },
+    {
+        "text": "and so the sparse matrix just\nbecomes exponentially bigger.",
+        "start": 1008.024,
+        "duration": 3.12
+    },
+    {
+        "text": "And the other thing is that sparse\nmatrix multiplication in the sleep",
+        "start": 1011.804,
+        "duration": 3.06
+    },
+    {
+        "text": "c plus version still uses four loops\nto, to basically compute a map hole.",
+        "start": 1014.864,
+        "duration": 5.55
+    },
+    {
+        "text": "and while it is relatively\nefficient because you're only gonna",
+        "start": 1021.104,
+        "duration": 3.48
+    },
+    {
+        "text": "loop over the non-zero values.",
+        "start": 1024.584,
+        "duration": 2.4
+    },
+    {
+        "text": "we're still using a for loop here.",
+        "start": 1027.554,
+        "duration": 1.015
+    },
+    {
+        "text": "and I feel like that could be done better.",
+        "start": 1029.604,
+        "duration": 1.65
+    },
+    {
+        "text": "So maybe the next step would be to\nwrite a c plus version without any",
+        "start": 1031.554,
+        "duration": 3.72
+    },
+    {
+        "text": "sparse matrix multiplication at all.",
+        "start": 1035.274,
+        "duration": 1.77
+    },
+    {
+        "text": "And I remember, and I were talking\nabout this very briefly, but, we were",
+        "start": 1037.524,
+        "duration": 3.24
+    },
+    {
+        "text": "brainstorming this notion where you could\nuse pointers to basically calculate the",
+        "start": 1040.764,
+        "duration": 3.3
+    },
+    {
+        "text": "synaptic overlap between a given SDR and\na set of D segments instead of doing a",
+        "start": 1044.064,
+        "duration": 4.95
+    },
+    {
+        "text": "sparse or dense matrix multiplication.",
+        "start": 1049.014,
+        "duration": 2.28
+    },
+    {
+        "text": "and I feel like this is, this is\npretty mission critical because if",
+        "start": 1052.074,
+        "duration": 3.75
+    },
+    {
+        "text": "we used temporal memory, the current\nc plus version in any of the Monty",
+        "start": 1055.824,
+        "duration": 4.77
+    },
+    {
+        "text": "experiments, you're really limited\nby how much data you can ingest.",
+        "start": 1060.594,
+        "duration": 4.14
+    },
+    {
+        "text": "if you wanted to really use HTM\nto its, fullest benefits, then",
+        "start": 1066.324,
+        "duration": 4.65
+    },
+    {
+        "text": "we would have to make you rewrite\nparts of this c plus algorithm.",
+        "start": 1070.974,
+        "duration": 3.45
+    },
+    {
+        "text": "Yeah, it's, I'm trying to remember.",
+        "start": 1075.294,
+        "duration": 1.89
+    },
+    {
+        "text": "It's a little surprising because\nwhen we first did the temple",
+        "start": 1077.184,
+        "duration": 2.22
+    },
+    {
+        "text": "memory, I used to, Always refer to\nsomething I called, fixed resources.",
+        "start": 1079.404,
+        "duration": 6.215
+    },
+    {
+        "text": "in brains you just can't\nadd, segments willy-nilly.",
+        "start": 1085.949,
+        "duration": 3.57
+    },
+    {
+        "text": "And, neurons just don't\nget bigger and bigger.",
+        "start": 1090.209,
+        "duration": 2.34
+    },
+    {
+        "text": "This, this growth and things can\nhappen, but, the number of neurons",
+        "start": 1092.549,
+        "duration": 3.84
+    },
+    {
+        "text": "doesn't change quickly and, in most\nparts of the brain and, the size of",
+        "start": 1096.389,
+        "duration": 5.25
+    },
+    {
+        "text": "the ginger trees don't see, a realistic\nneural model would have constraints.",
+        "start": 1101.639,
+        "duration": 5.31
+    },
+    {
+        "text": "It says this is, we got a fixed\namount of resources and you have",
+        "start": 1106.949,
+        "duration": 2.55
+    },
+    {
+        "text": "to reallocate them as you go.",
+        "start": 1109.499,
+        "duration": 2.4
+    },
+    {
+        "text": "I think we did a lot of modeling\ndoing it that way, for this very",
+        "start": 1112.514,
+        "duration": 3.93
+    },
+    {
+        "text": "reason because if you just keep adding\ndendritic segments, it will slow down.",
+        "start": 1116.444,
+        "duration": 4.74
+    },
+    {
+        "text": "you can't do it forever.",
+        "start": 1121.844,
+        "duration": 0.84
+    },
+    {
+        "text": "So I'm surp I don't remember the history\nhere, but I'm surprised that that's,",
+        "start": 1122.984,
+        "duration": 5.82
+    },
+    {
+        "text": "in there like that as opposed to more\nof a, a resource constrained network.",
+        "start": 1128.804,
+        "duration": 4.62
+    },
+    {
+        "text": "You know what I'm saying?",
+        "start": 1133.424,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 1134.324,
+        "duration": 0.21
+    },
+    {
+        "text": "So Lewis and told me the same, but\nthose versions are probably no longer",
+        "start": 1134.534,
+        "duration": 6.81
+    },
+    {
+        "text": "runable because they're, either written\nin old person, old version of c plus or",
+        "start": 1141.464,
+        "duration": 5.07
+    },
+    {
+        "text": "the Python bindings are also very old.",
+        "start": 1146.534,
+        "duration": 2.76
+    },
+    {
+        "text": "And right before Marcus left, he\ntranslated some version of temporal",
+        "start": 1149.654,
+        "duration": 4.56
+    },
+    {
+        "text": "memory to c plus, which is runable.",
+        "start": 1154.214,
+        "duration": 2.34
+    },
+    {
+        "text": "And that's this version.",
+        "start": 1156.734,
+        "duration": 0.96
+    },
+    {
+        "text": "okay.",
+        "start": 1158.354,
+        "duration": 0.03
+    },
+    {
+        "text": "so fine.",
+        "start": 1158.624,
+        "duration": 0.57
+    },
+    {
+        "text": "But if we think about the future of these\nthings, that's what we should probably",
+        "start": 1159.284,
+        "duration": 5.07
+    },
+    {
+        "text": "be heading towards going back there.",
+        "start": 1164.774,
+        "duration": 1.47
+    },
+    {
+        "text": "Whether it's, just 'cause it's\nnot runable today, the problem.",
+        "start": 1166.244,
+        "duration": 3.75
+    },
+    {
+        "text": "Is, the problem is that you can't just\nkeep adding, resources, indefinitely.",
+        "start": 1170.414,
+        "duration": 8.52
+    },
+    {
+        "text": "that's probably the\nsolution to those problems.",
+        "start": 1180.224,
+        "duration": 2.34
+    },
+    {
+        "text": "at least say very interesting ways about\nhow does the system degrade as you, as",
+        "start": 1183.014,
+        "duration": 5.16
+    },
+    {
+        "text": "you fill up the resources and you can't\nadd more, and you have to trade off.",
+        "start": 1188.174,
+        "duration": 3.96
+    },
+    {
+        "text": "and I think one of the things we found,\nand it made sense logically, was that",
+        "start": 1193.364,
+        "duration": 3.87
+    },
+    {
+        "text": "the system tends to generalize more.",
+        "start": 1197.234,
+        "duration": 1.89
+    },
+    {
+        "text": "It tends to say, things that could\nsee as different in the beginning, and",
+        "start": 1199.514,
+        "duration": 4.53
+    },
+    {
+        "text": "now groups 'em together and, which is\na, nice failure mode in some sense.",
+        "start": 1204.044,
+        "duration": 6.18
+    },
+    {
+        "text": "it's, not like an incorrect failure, it's\njust you just or unless you, over time,",
+        "start": 1210.914,
+        "duration": 5.88
+    },
+    {
+        "text": "you lose the differentiation between\nspecific events and things like that.",
+        "start": 1217.094,
+        "duration": 3.09
+    },
+    {
+        "text": "anyway, the, just the, everyone\nshould know that if we wanna work",
+        "start": 1221.504,
+        "duration": 2.85
+    },
+    {
+        "text": "with this in the future, we ought to\nbe, thinking about fixed resource.",
+        "start": 1224.354,
+        "duration": 3.33
+    },
+    {
+        "text": "Also I'm a question about what's\nthe problem with, for loops?",
+        "start": 1229.499,
+        "duration": 2.82
+    },
+    {
+        "text": "It's, I, what's, that's maybe a\nstupid question, but what, why",
+        "start": 1232.499,
+        "duration": 2.79
+    },
+    {
+        "text": "are for loops inherently bad?",
+        "start": 1235.289,
+        "duration": 2.04
+    },
+    {
+        "text": "I think they're done sequentially.",
+        "start": 1238.199,
+        "duration": 1.62
+    },
+    {
+        "text": "So if you wanted to compute a\nmap, Mo you probably wouldn't",
+        "start": 1239.819,
+        "duration": 3.66
+    },
+    {
+        "text": "wanna do it sequentially.",
+        "start": 1243.479,
+        "duration": 1.05
+    },
+    {
+        "text": "You wanna do Oh, It's, there's nothing\nwrong about 'em algorithmically.",
+        "start": 1244.529,
+        "duration": 3.03
+    },
+    {
+        "text": "It's just you, it doesn't\nallow for prioritization.",
+        "start": 1247.564,
+        "duration": 2.09
+    },
+    {
+        "text": "Is that what you're saying?",
+        "start": 1249.654,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 1250.254,
+        "duration": 0.2
+    },
+    {
+        "text": "Okay.",
+        "start": 1250.764,
+        "duration": 0.29
+    },
+    {
+        "text": "Go ahead.",
+        "start": 1251.054,
+        "duration": 0.28
+    },
+    {
+        "text": "The way it's written, it\ndoesn't, okay, thanks.",
+        "start": 1251.434,
+        "duration": 2.215
+    },
+    {
+        "text": "One, one of the problems is if\nyou're going across a thing, deciding",
+        "start": 1254.034,
+        "duration": 2.765
+    },
+    {
+        "text": "whether to multiply or not, each\nmispredicted if is extremely expensive.",
+        "start": 1256.799,
+        "duration": 6.21
+    },
+    {
+        "text": "It's 30 cycles worth.",
+        "start": 1263.009,
+        "duration": 1.47
+    },
+    {
+        "text": "the more you can run the code\nsequentially, deterministically,",
+        "start": 1266.969,
+        "duration": 3.12
+    },
+    {
+        "text": "the better off you are\nwith, the CPU architectures.",
+        "start": 1271.259,
+        "duration": 2.91
+    },
+    {
+        "text": "where is that, Kevin, that, that comes up?",
+        "start": 1277.649,
+        "duration": 1.56
+    },
+    {
+        "text": "as in, if you have a, logic\nstatement within the for loop.",
+        "start": 1279.389,
+        "duration": 3.745
+    },
+    {
+        "text": "if you have the for loop itself\nobviously has a condition on it, but",
+        "start": 1285.569,
+        "duration": 5.31
+    },
+    {
+        "text": "the once it goes through it first time,\nit's able to predict where the next",
+        "start": 1290.999,
+        "duration": 4.59
+    },
+    {
+        "text": "instruction is at the bottom of the loop.",
+        "start": 1295.769,
+        "duration": 1.89
+    },
+    {
+        "text": "So it's not so much the fact that\nthere's an, if, it's the fact",
+        "start": 1298.139,
+        "duration": 3.0
+    },
+    {
+        "text": "that if it's a random value that\nyou can't reliably predict what",
+        "start": 1301.139,
+        "duration": 4.29
+    },
+    {
+        "text": "the, which way the code flows.",
+        "start": 1305.429,
+        "duration": 3.09
+    },
+    {
+        "text": "What happens is it's, if it misre\npredicts, it's gotta abandon a deep",
+        "start": 1308.819,
+        "duration": 4.62
+    },
+    {
+        "text": "stack of partial results and reload\nthe instruction cash from that.",
+        "start": 1313.439,
+        "duration": 5.79
+    },
+    {
+        "text": "And that's what's expensive.",
+        "start": 1319.229,
+        "duration": 1.17
+    },
+    {
+        "text": "And the time that you could, that you'd\ntake a mispredicted, branch, you could",
+        "start": 1320.669,
+        "duration": 3.87
+    },
+    {
+        "text": "probably do about 128, multiplies.",
+        "start": 1324.539,
+        "duration": 4.38
+    },
+    {
+        "text": "So that's, why it's really expensive\nto, have mispredicted branches.",
+        "start": 1329.759,
+        "duration": 4.35
+    },
+    {
+        "text": "In this code, there's no\nconditions inside the for loop.",
+        "start": 1335.249,
+        "duration": 2.25
+    },
+    {
+        "text": "It's already somewhat optimized,\nbut we're only gonna iterate",
+        "start": 1337.529,
+        "duration": 2.43
+    },
+    {
+        "text": "over the non-zero indices.",
+        "start": 1339.959,
+        "duration": 1.44
+    },
+    {
+        "text": "We have that knowledge beforehand.",
+        "start": 1341.759,
+        "duration": 1.38
+    },
+    {
+        "text": "how do you determine which one's the\nnon-zero, the you, add them like that.",
+        "start": 1344.429,
+        "duration": 3.12
+    },
+    {
+        "text": "Like you always keep track of which\nis, which indices are non-zero.",
+        "start": 1347.789,
+        "duration": 4.02
+    },
+    {
+        "text": "Okay.",
+        "start": 1351.814,
+        "duration": 0.23
+    },
+    {
+        "text": "so then the other problem is then\nthe, you're doing a gather operation.",
+        "start": 1352.799,
+        "duration": 6.27
+    },
+    {
+        "text": "It is.",
+        "start": 1359.879,
+        "duration": 0.27
+    },
+    {
+        "text": "yeah.",
+        "start": 1360.454,
+        "duration": 0.23
+    },
+    {
+        "text": "So then, you have the coherency\nof the access to the memory being",
+        "start": 1361.229,
+        "duration": 4.26
+    },
+    {
+        "text": "not cash coherent and that's\nthe other side of the thing.",
+        "start": 1365.489,
+        "duration": 3.15
+    },
+    {
+        "text": "yeah.",
+        "start": 1369.779,
+        "duration": 0.42
+    },
+    {
+        "text": "Okay.",
+        "start": 1370.559,
+        "duration": 0.39
+    },
+    {
+        "text": "But good, you didn't do\nit brain damage, but Yeah.",
+        "start": 1370.949,
+        "duration": 3.57
+    },
+    {
+        "text": "when you mentioned the for loop,\nthat's why I was thinking it",
+        "start": 1375.839,
+        "duration": 2.46
+    },
+    {
+        "text": "might have been that simple.",
+        "start": 1378.839,
+        "duration": 2.34
+    },
+    {
+        "text": "Okay.",
+        "start": 1381.719,
+        "duration": 0.39
+    },
+    {
+        "text": "Anyway.",
+        "start": 1382.169,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 1385.379,
+        "duration": 0.45
+    },
+    {
+        "text": "I presented this project\nbefore, maybe two months ago.",
+        "start": 1386.429,
+        "duration": 3.69
+    },
+    {
+        "text": "This was temporal memory for Monty.",
+        "start": 1390.209,
+        "duration": 1.71
+    },
+    {
+        "text": "and the whole idea here was\ncan we use temporal memory to",
+        "start": 1392.489,
+        "duration": 2.1
+    },
+    {
+        "text": "achieve sample in variance?",
+        "start": 1394.589,
+        "duration": 2.13
+    },
+    {
+        "text": "basically, can I disambiguate between\nmany objects while observing features",
+        "start": 1397.199,
+        "duration": 4.65
+    },
+    {
+        "text": "at locations on that object surface?",
+        "start": 1401.849,
+        "duration": 2.52
+    },
+    {
+        "text": "This is like a, kind of like a roadmap\ndiagram that I presented at one of the",
+        "start": 1406.604,
+        "duration": 4.23
+    },
+    {
+        "text": "lunch meetings, maybe also two months ago.",
+        "start": 1410.834,
+        "duration": 2.04
+    },
+    {
+        "text": "and this is like a summary\nof all the projects that were",
+        "start": 1413.414,
+        "duration": 2.64
+    },
+    {
+        "text": "happening two months ago.",
+        "start": 1416.054,
+        "duration": 1.11
+    },
+    {
+        "text": "The first was Vivian's graph learning,\nwhich was, I guess one of the more",
+        "start": 1417.464,
+        "duration": 3.24
+    },
+    {
+        "text": "important things about that was that\nit's in very to scale and orientation.",
+        "start": 1420.704,
+        "duration": 3.45
+    },
+    {
+        "text": "Karin reproduced the vector neurons\nfrom the paper, and this was, this was",
+        "start": 1424.964,
+        "duration": 4.65
+    },
+    {
+        "text": "supposed to be in variant orientation\nand the temporal memory part, which",
+        "start": 1429.614,
+        "duration": 3.99
+    },
+    {
+        "text": "you can see here in the bottom.",
+        "start": 1433.604,
+        "duration": 1.08
+    },
+    {
+        "text": "the whole goal here was\nin very disassembly.",
+        "start": 1435.014,
+        "duration": 1.89
+    },
+    {
+        "text": "if I revisit part of an object I've never\nseen before, can I identify what object",
+        "start": 1437.684,
+        "duration": 4.23
+    },
+    {
+        "text": "it is, no matter where I sampled from\nwas the main question I wanted to answer.",
+        "start": 1441.914,
+        "duration": 3.84
+    },
+    {
+        "text": "and this is Going back to that,\nthat, that same old discussion, how",
+        "start": 1448.454,
+        "duration": 4.14
+    },
+    {
+        "text": "do I turn locations and curvatures\nor, any real valued items into SDRs?",
+        "start": 1452.594,
+        "duration": 5.34
+    },
+    {
+        "text": "and I use this old technique that\nwas used before, it's called the",
+        "start": 1458.594,
+        "duration": 3.21
+    },
+    {
+        "text": "coordinate encoder strategy, where\nif I wanna ha, if I want to basically",
+        "start": 1461.804,
+        "duration": 4.17
+    },
+    {
+        "text": "turn this purple point here into an\nSDR, I find a neighborhood of points.",
+        "start": 1465.974,
+        "duration": 4.56
+    },
+    {
+        "text": "I, find some pink points\naround that purple point.",
+        "start": 1470.894,
+        "duration": 2.61
+    },
+    {
+        "text": "I randomly pick some of those pick\npoints, hash their values to an SDR.",
+        "start": 1473.834,
+        "duration": 4.59
+    },
+    {
+        "text": "I set those indices as on\nand I set the rest off.",
+        "start": 1478.604,
+        "duration": 3.03
+    },
+    {
+        "text": "This is like one of the strategies for\ncreating an SDR from real valued points.",
+        "start": 1482.054,
+        "duration": 5.01
+    },
+    {
+        "text": "you can do the same exact\nstrategy for, curvatures.",
+        "start": 1487.364,
+        "duration": 2.79
+    },
+    {
+        "text": "And that's what I ended up doing.",
+        "start": 1490.364,
+        "duration": 1.35
+    },
+    {
+        "text": "And this is the data\nthat I was working with.",
+        "start": 1495.179,
+        "duration": 2.1
+    },
+    {
+        "text": "I was working with two\ndifferent kinds of objects.",
+        "start": 1497.279,
+        "duration": 2.49
+    },
+    {
+        "text": "basically one where, I uniformly,\nsampled this object, for training and",
+        "start": 1500.429,
+        "duration": 7.23
+    },
+    {
+        "text": "testing using this clustering technique.",
+        "start": 1507.659,
+        "duration": 2.37
+    },
+    {
+        "text": "where I tried to find, what\nare the optimal training points",
+        "start": 1510.629,
+        "duration": 2.46
+    },
+    {
+        "text": "that I could sample from.",
+        "start": 1513.089,
+        "duration": 0.99
+    },
+    {
+        "text": "and I did the exact same thing in\nanother case, but instead this time",
+        "start": 1514.769,
+        "duration": 3.54
+    },
+    {
+        "text": "the evaluation points are basically,\na small parts of the object.",
+        "start": 1518.309,
+        "duration": 4.77
+    },
+    {
+        "text": "This is what we called\noccluded, occluded objects.",
+        "start": 1523.079,
+        "duration": 3.57
+    },
+    {
+        "text": "So a huge majority of the object\nwould be occluded, and we can only",
+        "start": 1526.949,
+        "duration": 4.05
+    },
+    {
+        "text": "see part of the points during testing.",
+        "start": 1530.999,
+        "duration": 1.8
+    },
+    {
+        "text": "And that's like these green\npoints that you guys see here.",
+        "start": 1533.159,
+        "duration": 2.31
+    },
+    {
+        "text": "so yeah, there was, I, went\nover this briefly in the past.",
+        "start": 1538.454,
+        "duration": 2.73
+    },
+    {
+        "text": "I don't want to go over the specifics\nof the algorithm all over again.",
+        "start": 1541.214,
+        "duration": 2.97
+    },
+    {
+        "text": "But, during inference what we really\nwanna do is predict the object with",
+        "start": 1544.274,
+        "duration": 4.83
+    },
+    {
+        "text": "the highest total overlap between\ntwo sets of cells that we collect.",
+        "start": 1549.104,
+        "duration": 4.11
+    },
+    {
+        "text": "One is the winter cells that we\ncollected during training for these,",
+        "start": 1553.634,
+        "duration": 3.72
+    },
+    {
+        "text": "these curvatures and coordinate pairs.",
+        "start": 1557.504,
+        "duration": 1.83
+    },
+    {
+        "text": "And the other set is basically\nthese predicted active cells that",
+        "start": 1559.724,
+        "duration": 2.76
+    },
+    {
+        "text": "we collected during evaluation.",
+        "start": 1562.484,
+        "duration": 1.35
+    },
+    {
+        "text": "and basically the sets that have the\nhighest overlap, you sum them all together",
+        "start": 1564.734,
+        "duration": 3.6
+    },
+    {
+        "text": "and you try to figure out what object\nwas this testing point most likely from.",
+        "start": 1568.574,
+        "duration": 4.47
+    },
+    {
+        "text": "and that I, presented\nthese charts in the past.",
+        "start": 1573.974,
+        "duration": 2.58
+    },
+    {
+        "text": "Hopefully it looks, familiar.",
+        "start": 1576.614,
+        "duration": 1.68
+    },
+    {
+        "text": "this was one of the simple experiments\nthat I was running for, occluded",
+        "start": 1579.294,
+        "duration": 3.72
+    },
+    {
+        "text": "evaluating on occluded objects.",
+        "start": 1583.014,
+        "duration": 1.47
+    },
+    {
+        "text": "Basically the question I asked was,\nhow many testing points do I need?",
+        "start": 1585.024,
+        "duration": 3.66
+    },
+    {
+        "text": "If I wanna get a high testing accuracy,\nif I only see part of the object?",
+        "start": 1588.954,
+        "duration": 4.47
+    },
+    {
+        "text": "and in this like very simple experiment,\nwith about, I think 13 objects, and",
+        "start": 1594.264,
+        "duration": 4.89
+    },
+    {
+        "text": "50 training points, if I had more than\n500 points in my, non occluded part",
+        "start": 1599.154,
+        "duration": 6.09
+    },
+    {
+        "text": "of the object, then I would get about\na hundred percent testing accuracy.",
+        "start": 1605.244,
+        "duration": 3.39
+    },
+    {
+        "text": "but there's a lot of caveats\nto this experiment and, that's",
+        "start": 1609.504,
+        "duration": 4.65
+    },
+    {
+        "text": "basically what this slide describes.",
+        "start": 1614.214,
+        "duration": 1.68
+    },
+    {
+        "text": "the locations that I was working\nwith are globally fixed, the",
+        "start": 1616.404,
+        "duration": 3.51
+    },
+    {
+        "text": "object moves in the environment\nthat this method completely fails.",
+        "start": 1619.914,
+        "duration": 2.73
+    },
+    {
+        "text": "so something that I wanted to work\non next was achieving translation in",
+        "start": 1623.334,
+        "duration": 3.63
+    },
+    {
+        "text": "variance by working with grid cells.",
+        "start": 1626.964,
+        "duration": 1.77
+    },
+    {
+        "text": "To encode the location of the sensorimotor\non the object surface at any time.",
+        "start": 1629.139,
+        "duration": 3.48
+    },
+    {
+        "text": "and also just hit the nail on the\nhead again about speed issues.",
+        "start": 1633.639,
+        "duration": 3.57
+    },
+    {
+        "text": "because I was using that c plus\ntemporal memory version, there was",
+        "start": 1637.689,
+        "duration": 3.6
+    },
+    {
+        "text": "only so many objects I could basically\ningest data from without speed",
+        "start": 1641.289,
+        "duration": 4.32
+    },
+    {
+        "text": "completely hampering my experiments.",
+        "start": 1645.669,
+        "duration": 1.95
+    },
+    {
+        "text": "Is it scaling up an\ninstance, solution to speak?",
+        "start": 1647.979,
+        "duration": 4.44
+    },
+    {
+        "text": "I know you did some parallelization\ncode, so we just use a",
+        "start": 1653.229,
+        "duration": 3.66
+    },
+    {
+        "text": "library instance like that.",
+        "start": 1656.889,
+        "duration": 3.24
+    },
+    {
+        "text": "Make it viable.",
+        "start": 1660.129,
+        "duration": 0.87
+    },
+    {
+        "text": "I don't think I've explored, parallelizing\nTM like that over in, over instances.",
+        "start": 1661.299,
+        "duration": 5.25
+    },
+    {
+        "text": "I just, one instance, but a\nlot of, lot, of course I have",
+        "start": 1667.299,
+        "duration": 5.1
+    },
+    {
+        "text": "no idea was all bring local,",
+        "start": 1672.399,
+        "duration": 3.24
+    },
+    {
+        "text": "either way there's like that core problem\nwhere I'm just creating way too many",
+        "start": 1678.369,
+        "duration": 3.03
+    },
+    {
+        "text": "segments and like Jeff was saying that\nI shouldn't probably be doing that.",
+        "start": 1681.399,
+        "duration": 2.565
+    },
+    {
+        "text": "So on the last slide, before\nthis, do you have the same chart",
+        "start": 1684.964,
+        "duration": 5.88
+    },
+    {
+        "text": "for, this is for with occlusion.",
+        "start": 1690.844,
+        "duration": 1.92
+    },
+    {
+        "text": "Sorry.",
+        "start": 1692.824,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 1693.334,
+        "duration": 0.21
+    },
+    {
+        "text": "I this the same chart for without ocion.",
+        "start": 1693.544,
+        "duration": 1.68
+    },
+    {
+        "text": "I do.",
+        "start": 1695.254,
+        "duration": 0.24
+    },
+    {
+        "text": "Is it fewer samples than you?",
+        "start": 1695.734,
+        "duration": 1.385
+    },
+    {
+        "text": "It's significantly fewer samples.",
+        "start": 1697.144,
+        "duration": 2.04
+    },
+    {
+        "text": "It's 50 or a hundred testing\npoints if it's not occluded.",
+        "start": 1699.184,
+        "duration": 3.18
+    },
+    {
+        "text": "just because you're also picking\nlike uniformly random testing points.",
+        "start": 1702.844,
+        "duration": 3.15
+    },
+    {
+        "text": "It's like the perfect case.",
+        "start": 1706.294,
+        "duration": 0.99
+    },
+    {
+        "text": "Okay.",
+        "start": 1708.284,
+        "duration": 0.42
+    },
+    {
+        "text": "Even more fun stuff.",
+        "start": 1708.854,
+        "duration": 0.99
+    },
+    {
+        "text": "so I started working on grin salad\nfor the last two or so months.",
+        "start": 1710.324,
+        "duration": 3.15
+    },
+    {
+        "text": "and just to recap for everyone, a good\ncell module is a, term I'm gonna be using",
+        "start": 1714.644,
+        "duration": 4.2
+    },
+    {
+        "text": "a lot, and these are basically a set\nof cells that share the same scale and",
+        "start": 1718.844,
+        "duration": 3.6
+    },
+    {
+        "text": "orientation, activity across multiple\nmodules can encode unique locations.",
+        "start": 1722.444,
+        "duration": 5.19
+    },
+    {
+        "text": "That's the gist of it.",
+        "start": 1728.204,
+        "duration": 1.2
+    },
+    {
+        "text": "and there's two existing,\nimplementations of grid cells.",
+        "start": 1730.274,
+        "duration": 3.3
+    },
+    {
+        "text": "One uses an anatomically\nconsistent version of grid cells.",
+        "start": 1734.264,
+        "duration": 3.81
+    },
+    {
+        "text": "Basically you have a rish shaped\nlattice of these cells, and",
+        "start": 1738.404,
+        "duration": 3.48
+    },
+    {
+        "text": "there's another simpler version\nthat doesn't use these Gaussian",
+        "start": 1741.884,
+        "duration": 3.15
+    },
+    {
+        "text": "estimation processes to determine,\nhow the grid cell algorithm works.",
+        "start": 1745.034,
+        "duration": 4.86
+    },
+    {
+        "text": "Instead, you have this very simple\nrectangular lattice, but it's",
+        "start": 1750.134,
+        "duration": 3.24
+    },
+    {
+        "text": "actually functionally equivalent\nto the anatomically consistent one.",
+        "start": 1753.374,
+        "duration": 3.45
+    },
+    {
+        "text": "So that's the one I ended up using.",
+        "start": 1756.824,
+        "duration": 1.17
+    },
+    {
+        "text": "one of the key, so these were two\nexisting code bases we had Yeah.",
+        "start": 1758.654,
+        "duration": 3.69
+    },
+    {
+        "text": "When, I don't remember\nthe rectangular one.",
+        "start": 1763.154,
+        "duration": 1.86
+    },
+    {
+        "text": "When was that created?",
+        "start": 1765.014,
+        "duration": 1.17
+    },
+    {
+        "text": "Who, what was that for?",
+        "start": 1766.364,
+        "duration": 1.14
+    },
+    {
+        "text": "I believe that was the one that\nMarcus originally implemented.",
+        "start": 1768.764,
+        "duration": 2.94
+    },
+    {
+        "text": "for the columns plus paper.",
+        "start": 1772.889,
+        "duration": 1.71
+    },
+    {
+        "text": "And then in order for the figures\nto look more biologically relevant,",
+        "start": 1774.809,
+        "duration": 5.79
+    },
+    {
+        "text": "he adapted it to the, Rhombus one.",
+        "start": 1781.439,
+        "duration": 2.16
+    },
+    {
+        "text": "Oh, interesting.",
+        "start": 1784.409,
+        "duration": 0.57
+    },
+    {
+        "text": "Because he, was a pretty stickler\nabout these things, and I don't",
+        "start": 1784.979,
+        "duration": 3.39
+    },
+    {
+        "text": "remember him ever talking about\nrectal lattice, but maybe he did.",
+        "start": 1788.369,
+        "duration": 3.21
+    },
+    {
+        "text": "Okay.",
+        "start": 1792.659,
+        "duration": 0.24
+    },
+    {
+        "text": "The key thing here is that both\nof these work, for displacement",
+        "start": 1795.134,
+        "duration": 3.075
+    },
+    {
+        "text": "and only two dimensions.",
+        "start": 1798.209,
+        "duration": 1.23
+    },
+    {
+        "text": "and I wanted to do this\nfor three dimensions.",
+        "start": 1800.609,
+        "duration": 2.16
+    },
+    {
+        "text": "so what I ended up doing was I re\nrecreated both of these implementations.",
+        "start": 1804.119,
+        "duration": 3.9
+    },
+    {
+        "text": "They existed in an old version\nof Python two, I had to bring",
+        "start": 1808.169,
+        "duration": 2.73
+    },
+    {
+        "text": "them over to Python three.",
+        "start": 1810.899,
+        "duration": 1.11
+    },
+    {
+        "text": "and I was working on making this grid\ncell layer, we just call it L six A",
+        "start": 1813.299,
+        "duration": 4.89
+    },
+    {
+        "text": "melon, to work in three dimensions\nX, Y, and Z. So what I ended up doing",
+        "start": 1818.249,
+        "duration": 4.5
+    },
+    {
+        "text": "was actually not complicated at all.",
+        "start": 1822.749,
+        "duration": 1.86
+    },
+    {
+        "text": "I was just creating groups of grid cell\nmodules where each group would handle path",
+        "start": 1824.669,
+        "duration": 4.29
+    },
+    {
+        "text": "integration along a specific dimension.",
+        "start": 1828.959,
+        "duration": 1.83
+    },
+    {
+        "text": "as you can imagine, I would've\nthree groups, one dimension or two",
+        "start": 1832.424,
+        "duration": 4.02
+    },
+    {
+        "text": "dimensions along one dimension.",
+        "start": 1836.444,
+        "duration": 3.09
+    },
+    {
+        "text": "Okay.",
+        "start": 1839.774,
+        "duration": 0.24
+    },
+    {
+        "text": "So that's even simpler\nthan the biological ones.",
+        "start": 1840.014,
+        "duration": 3.21
+    },
+    {
+        "text": "So just, oh, sorry.",
+        "start": 1843.224,
+        "duration": 2.16
+    },
+    {
+        "text": "when I say one dimension, sorry, that\nI should never written it like that.",
+        "start": 1845.564,
+        "duration": 3.24
+    },
+    {
+        "text": "It's two dimensions.",
+        "start": 1849.434,
+        "duration": 1.14
+    },
+    {
+        "text": "It's long, it's along one plane.",
+        "start": 1850.579,
+        "duration": 3.565
+    },
+    {
+        "text": "It's along one plane,\nlike the oh one plane.",
+        "start": 1854.144,
+        "duration": 0.725
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 1854.894,
+        "duration": 0.495
+    },
+    {
+        "text": "Okay.",
+        "start": 1855.394,
+        "duration": 0.34
+    },
+    {
+        "text": "So this is, this goes back to the\npaper that, Merkel and Marcus and",
+        "start": 1855.734,
+        "duration": 4.32
+    },
+    {
+        "text": "others did, where you had multiple\ngrid cell modules, 2D grid cell",
+        "start": 1860.054,
+        "duration": 2.82
+    },
+    {
+        "text": "modules that created 3D spaces.",
+        "start": 1862.874,
+        "duration": 1.71
+    },
+    {
+        "text": "Is that it?",
+        "start": 1864.674,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 1865.034,
+        "duration": 0.21
+    },
+    {
+        "text": "Okay.",
+        "start": 1865.694,
+        "duration": 0.27
+    },
+    {
+        "text": "More or less.",
+        "start": 1865.969,
+        "duration": 0.3
+    },
+    {
+        "text": "More or less, yeah.",
+        "start": 1866.594,
+        "duration": 0.96
+    },
+    {
+        "text": "you would create like these\ngroups where each group would",
+        "start": 1868.844,
+        "duration": 2.37
+    },
+    {
+        "text": "handle, along one specific plane.",
+        "start": 1871.214,
+        "duration": 2.64
+    },
+    {
+        "text": "and just for argument's sake, I\njust provided some numbers here.",
+        "start": 1874.454,
+        "duration": 3.09
+    },
+    {
+        "text": "if I had 10 modules for each of\nthese groups, each with maybe about",
+        "start": 1877.964,
+        "duration": 3.36
+    },
+    {
+        "text": "25 cells, I would have about 750\ntotal cells that I was, looking at.",
+        "start": 1881.324,
+        "duration": 4.57
+    },
+    {
+        "text": "One of the key things is that only one\ncell per module could become active.",
+        "start": 1886.484,
+        "duration": 3.63
+    },
+    {
+        "text": "so if you're looking at an SDR, that's\nan output of the squid cell groups.",
+        "start": 1890.864,
+        "duration": 3.78
+    },
+    {
+        "text": "You would look at an SDR that has 30\nactive bits out of a total of seven 50",
+        "start": 1895.004,
+        "duration": 3.72
+    },
+    {
+        "text": "and the 10 modules they were at different\nscales and orientations, or were they",
+        "start": 1899.084,
+        "duration": 3.6
+    },
+    {
+        "text": "different scales and orientations.",
+        "start": 1902.894,
+        "duration": 1.56
+    },
+    {
+        "text": "Yeah.",
+        "start": 1904.544,
+        "duration": 0.12
+    },
+    {
+        "text": "So see you combine the concept that we had\nfrom the frameworks and columns plus paper",
+        "start": 1904.814,
+        "duration": 4.98
+    },
+    {
+        "text": "with, the 2D, to 3D Merkel Marcus paper.",
+        "start": 1910.814,
+        "duration": 5.76
+    },
+    {
+        "text": "Yeah.",
+        "start": 1917.174,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 1918.074,
+        "duration": 0.33
+    },
+    {
+        "text": "I think these, I didn't, so\njust full disclaimer here.",
+        "start": 1919.214,
+        "duration": 3.36
+    },
+    {
+        "text": "I didn't have enough time to run,\nlike in depth detailed experiments,",
+        "start": 1922.844,
+        "duration": 3.63
+    },
+    {
+        "text": "to try to figure out if I change\nthe scale of this module, how would",
+        "start": 1926.894,
+        "duration": 2.79
+    },
+    {
+        "text": "that affect my training results?",
+        "start": 1929.684,
+        "duration": 1.5
+    },
+    {
+        "text": "Nothing like that.",
+        "start": 1931.454,
+        "duration": 0.78
+    },
+    {
+        "text": "I really just wanted to get this code up\nand running as a proof of concept that",
+        "start": 1932.714,
+        "duration": 3.06
+    },
+    {
+        "text": "something like this could work for 3D\nobjects the way we are dealing with them.",
+        "start": 1935.774,
+        "duration": 3.87
+    },
+    {
+        "text": "Point clouds,",
+        "start": 1940.454,
+        "duration": 0.75
+    },
+    {
+        "text": "I also borrowed some, I guess like maybe\nsome anatomic details from the tank paper",
+        "start": 1944.384,
+        "duration": 5.37
+    },
+    {
+        "text": "where there was a small snippet where\nscales between successive module or Yeah.",
+        "start": 1949.754,
+        "duration": 5.73
+    },
+    {
+        "text": "Scales between successive modules\nhad this multiplier effect",
+        "start": 1955.484,
+        "duration": 3.75
+    },
+    {
+        "text": "of 1.5, something like that.",
+        "start": 1959.234,
+        "duration": 2.19
+    },
+    {
+        "text": "I brought that in here too.",
+        "start": 1962.054,
+        "duration": 1.14
+    },
+    {
+        "text": "I have no idea if that, actually\ncontributes something or not, but all this",
+        "start": 1963.644,
+        "duration": 4.29
+    },
+    {
+        "text": "stuff is detailed pretty much in the code.",
+        "start": 1967.934,
+        "duration": 2.04
+    },
+    {
+        "text": "Just be clear.",
+        "start": 1970.454,
+        "duration": 0.51
+    },
+    {
+        "text": "That wasn't his idea.",
+        "start": 1970.969,
+        "duration": 1.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 1974.019,
+        "duration": 0.29
+    },
+    {
+        "text": "Okay.",
+        "start": 1974.459,
+        "duration": 0.29
+    },
+    {
+        "text": "that's, an old thing.",
+        "start": 1975.974,
+        "duration": 1.02
+    },
+    {
+        "text": "That tank didn't come up with.",
+        "start": 1976.994,
+        "duration": 1.38
+    },
+    {
+        "text": "Be clear empirical observation\nthat was made many years ago.",
+        "start": 1978.704,
+        "duration": 4.125
+    },
+    {
+        "text": "Years ago.",
+        "start": 1984.979,
+        "duration": 0.39
+    },
+    {
+        "text": "My bad.",
+        "start": 1985.374,
+        "duration": 0.32
+    },
+    {
+        "text": "That's alright.",
+        "start": 1986.744,
+        "duration": 0.45
+    },
+    {
+        "text": "Was he probably mentioned the tank\npaper, but it wasn't his idea.",
+        "start": 1987.194,
+        "duration": 3.18
+    },
+    {
+        "text": "Just one question, since you're\noperating with planes, I don't know,",
+        "start": 1992.414,
+        "duration": 3.24
+    },
+    {
+        "text": "did you get a chance to look at, 'cause\nI guess if you just use two planes,",
+        "start": 1995.654,
+        "duration": 3.33
+    },
+    {
+        "text": "that would be sufficient to specify a.",
+        "start": 1999.464,
+        "duration": 1.95
+    },
+    {
+        "text": "A point in 3D space.",
+        "start": 2002.299,
+        "duration": 1.2
+    },
+    {
+        "text": "yeah, so you're saying like, I\ncould do like X and Y and maybe",
+        "start": 2005.749,
+        "duration": 2.49
+    },
+    {
+        "text": "like X and Z or Y and z basically.",
+        "start": 2008.239,
+        "duration": 2.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 2011.539,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 2012.619,
+        "duration": 0.24
+    },
+    {
+        "text": "and, maybe you have more accuracy or\nsomething with three planes intersecting,",
+        "start": 2013.549,
+        "duration": 4.14
+    },
+    {
+        "text": "but, but it might not be necessary.",
+        "start": 2018.139,
+        "duration": 1.56
+    },
+    {
+        "text": "I was considering that, but I just wanted\nto go like full on, just have every",
+        "start": 2020.089,
+        "duration": 4.2
+    },
+    {
+        "text": "combination of every plane possible.",
+        "start": 2024.289,
+        "duration": 1.59
+    },
+    {
+        "text": "I think when, fair enough, if you\ndo that, if I recall you, you end up",
+        "start": 2026.419,
+        "duration": 3.69
+    },
+    {
+        "text": "with, there's nothing wrong with it,\nbut you end up with, elongated field.",
+        "start": 2030.109,
+        "duration": 5.16
+    },
+    {
+        "text": "So it's very easy to get up to\nelongated field as opposed to",
+        "start": 2035.269,
+        "duration": 2.34
+    },
+    {
+        "text": "a spherical, it's like a cell.",
+        "start": 2038.234,
+        "duration": 1.595
+    },
+    {
+        "text": "Where would a cell respond?",
+        "start": 2039.979,
+        "duration": 1.44
+    },
+    {
+        "text": "you'll end up with, classically,\nif you look at a good cell in 2D,",
+        "start": 2043.969,
+        "duration": 3.63
+    },
+    {
+        "text": "it's respond to some circular area.",
+        "start": 2047.599,
+        "duration": 2.25
+    },
+    {
+        "text": "but when you, limit the number of\ndimensions like that, you end up with",
+        "start": 2050.839,
+        "duration": 3.24
+    },
+    {
+        "text": "these elongated fields, it still works.",
+        "start": 2054.079,
+        "duration": 1.71
+    },
+    {
+        "text": "just point out.",
+        "start": 2057.109,
+        "duration": 0.6
+    },
+    {
+        "text": "But they're not, they\ndon't seem to be observed.",
+        "start": 2057.709,
+        "duration": 2.07
+    },
+    {
+        "text": "Okay.",
+        "start": 2062.809,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 2063.349,
+        "duration": 0.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 2063.679,
+        "duration": 0.15
+    },
+    {
+        "text": "if the two planes are very closely\naligned in auto agonal, then you end up",
+        "start": 2064.039,
+        "duration": 3.63
+    },
+    {
+        "text": "with this, this sort of elongated field",
+        "start": 2067.669,
+        "duration": 2.22
+    },
+    {
+        "text": "if I think, if I understand\nwhat you're saying.",
+        "start": 2073.219,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay.",
+        "start": 2075.809,
+        "duration": 0.29
+    },
+    {
+        "text": "I'll try to go this, go through\nthis, in some amount of detail.",
+        "start": 2076.574,
+        "duration": 4.44
+    },
+    {
+        "text": "so this is like the training\nprocedure that I ended up using.",
+        "start": 2081.704,
+        "duration": 2.43
+    },
+    {
+        "text": "This is a picture that I\nborrowed from Neil's paper.",
+        "start": 2084.434,
+        "duration": 3.21
+    },
+    {
+        "text": "where if you look at the top layer,\nthat's the sensorimotor layer.",
+        "start": 2089.009,
+        "duration": 2.64
+    },
+    {
+        "text": "I'm just gonna denote that as L four.",
+        "start": 2091.649,
+        "duration": 1.59
+    },
+    {
+        "text": "That's the temporal memory layer.",
+        "start": 2093.269,
+        "duration": 1.35
+    },
+    {
+        "text": "And bottom the location layer is denoted\nas L six A and that's the grid cell layer.",
+        "start": 2094.859,
+        "duration": 4.17
+    },
+    {
+        "text": "So what the algorithm here is trying to\ndo is not strict object classification.",
+        "start": 2099.509,
+        "duration": 4.68
+    },
+    {
+        "text": "It's not, given this object that I\nhave no idea what it is, even though",
+        "start": 2104.309,
+        "duration": 4.02
+    },
+    {
+        "text": "I've trained on a bunch of those\nsimilar objects, it's not like I",
+        "start": 2108.329,
+        "duration": 2.73
+    },
+    {
+        "text": "have to identify what that object is.",
+        "start": 2111.059,
+        "duration": 1.77
+    },
+    {
+        "text": "It's not like that.",
+        "start": 2112.859,
+        "duration": 0.6
+    },
+    {
+        "text": "This is instead object recall.",
+        "start": 2113.879,
+        "duration": 2.07
+    },
+    {
+        "text": "If I put my finger or like a, a\nsensorimotor along one of these objects",
+        "start": 2116.159,
+        "duration": 5.07
+    },
+    {
+        "text": "that I've seen in the past, can I\nidentify that I'm on that object?",
+        "start": 2121.229,
+        "duration": 3.84
+    },
+    {
+        "text": "So the first step here, I'm confused and\nbe, but you could classify it, right?",
+        "start": 2127.439,
+        "duration": 5.4
+    },
+    {
+        "text": "that wasn't your goal, but once you were\nable to do that, you can classify it.",
+        "start": 2133.139,
+        "duration": 3.42
+    },
+    {
+        "text": "No, it's not like a, it's not a strict\nclassification where I can go back and,",
+        "start": 2136.559,
+        "duration": 5.4
+    },
+    {
+        "text": "I don't wanna use the term cloud.",
+        "start": 2145.139,
+        "duration": 1.62
+    },
+    {
+        "text": "I know what you're saying.",
+        "start": 2147.399,
+        "duration": 0.83
+    },
+    {
+        "text": "I know what you're saying.",
+        "start": 2148.229,
+        "duration": 0.63
+    },
+    {
+        "text": "what I'm saying is this is, there's\nthis odd thing about all these",
+        "start": 2149.549,
+        "duration": 3.15
+    },
+    {
+        "text": "very sparse representations, and we\ntalked about like unique locations,",
+        "start": 2152.699,
+        "duration": 4.02
+    },
+    {
+        "text": "which you're trying to get to unique\nlocations in your grid cell modules.",
+        "start": 2157.499,
+        "duration": 2.91
+    },
+    {
+        "text": "once you, every unique location is\nclassifiable because it's unique to",
+        "start": 2161.309,
+        "duration": 4.17
+    },
+    {
+        "text": "a particular point on a particular\nobject, but it's unique to that object.",
+        "start": 2165.479,
+        "duration": 3.06
+    },
+    {
+        "text": "and the same with the sensory layer.",
+        "start": 2169.349,
+        "duration": 1.38
+    },
+    {
+        "text": "The sensory inputs are represented\nuniquely in the context of a",
+        "start": 2170.849,
+        "duration": 2.91
+    },
+    {
+        "text": "location on a particular object.",
+        "start": 2173.759,
+        "duration": 2.01
+    },
+    {
+        "text": "So all these things are\npotentially classifiable.",
+        "start": 2175.769,
+        "duration": 2.7
+    },
+    {
+        "text": "You just maybe didn't do it.",
+        "start": 2178.619,
+        "duration": 1.23
+    },
+    {
+        "text": "You didn't, you have to, learn\nthat with temple pooling.",
+        "start": 2180.179,
+        "duration": 3.09
+    },
+    {
+        "text": "That's, yeah, that's a much\nbetter way of saying it.",
+        "start": 2183.274,
+        "duration": 2.455
+    },
+    {
+        "text": "Yes.",
+        "start": 2185.879,
+        "duration": 0.36
+    },
+    {
+        "text": "Thanks.",
+        "start": 2186.269,
+        "duration": 0.33
+    },
+    {
+        "text": "Okay.",
+        "start": 2187.199,
+        "duration": 0.18
+    },
+    {
+        "text": "that's also how we use the\ngraph match for classification.",
+        "start": 2187.529,
+        "duration": 2.97
+    },
+    {
+        "text": "Graph does the same thing.",
+        "start": 2191.444,
+        "duration": 1.14
+    },
+    {
+        "text": "You can only tell whether you're\non an object you've seen before.",
+        "start": 2192.584,
+        "duration": 3.54
+    },
+    {
+        "text": "So we can only, we basically actuate for\nall the object that have seen before and",
+        "start": 2196.664,
+        "duration": 4.14
+    },
+    {
+        "text": "see whether we're on any, so you could\nessentially do the same thing here.",
+        "start": 2200.804,
+        "duration": 4.92
+    },
+    {
+        "text": "I'll go next step.",
+        "start": 2207.254,
+        "duration": 0.72
+    },
+    {
+        "text": "Yeah.",
+        "start": 2207.974,
+        "duration": 0.27
+    },
+    {
+        "text": "but yeah, the algorithm here was borrowed\na lot from the columns plus paper where,",
+        "start": 2210.734,
+        "duration": 4.47
+    },
+    {
+        "text": "the first thing here labeled one, I have\na motor input to the grid cell layer.",
+        "start": 2215.654,
+        "duration": 4.8
+    },
+    {
+        "text": "And this grid cell layer is\ndoing this for three planes.",
+        "start": 2220.784,
+        "duration": 2.58
+    },
+    {
+        "text": "Remember that?",
+        "start": 2223.394,
+        "duration": 0.48
+    },
+    {
+        "text": "So it's doing displacement para\nin parallel for all three planes.",
+        "start": 2223.874,
+        "duration": 4.29
+    },
+    {
+        "text": "I provide this motor input to\nthe grid cell layer, and I do",
+        "start": 2228.464,
+        "duration": 2.52
+    },
+    {
+        "text": "path integration and I get a set\nof active cells for this layer.",
+        "start": 2230.984,
+        "duration": 2.76
+    },
+    {
+        "text": "at the same time, after that I basically\nget some location representation",
+        "start": 2234.644,
+        "duration": 5.46
+    },
+    {
+        "text": "from the grid cell layer, and that is\nserving as the basal context for L four.",
+        "start": 2240.104,
+        "duration": 4.95
+    },
+    {
+        "text": "and while that's happening, I feed\nin some sensory input to L four,",
+        "start": 2246.314,
+        "duration": 3.75
+    },
+    {
+        "text": "in the name of the curvatures.",
+        "start": 2250.724,
+        "duration": 1.41
+    },
+    {
+        "text": "So it's the same curvatures I\nused in the previous project.",
+        "start": 2252.404,
+        "duration": 2.58
+    },
+    {
+        "text": "and after that is done, you\nbasically get some kind of active",
+        "start": 2256.394,
+        "duration": 3.24
+    },
+    {
+        "text": "representation coming from L four.",
+        "start": 2259.634,
+        "duration": 1.74
+    },
+    {
+        "text": "and the grid cell layer is basically\nupdated back with this new sensory, this",
+        "start": 2262.034,
+        "duration": 4.89
+    },
+    {
+        "text": "joint sensory location representation.",
+        "start": 2266.924,
+        "duration": 2.22
+    },
+    {
+        "text": "and one additional thing I added here\nwas that step five is you store away this",
+        "start": 2270.764,
+        "duration": 5.25
+    },
+    {
+        "text": "sensory associated location representation\nto compare against during inference.",
+        "start": 2276.014,
+        "duration": 4.74
+    },
+    {
+        "text": "you're on mute, Jeff.",
+        "start": 2281.754,
+        "duration": 0.975
+    },
+    {
+        "text": "so I'm sorry.",
+        "start": 2284.199,
+        "duration": 0.465
+    },
+    {
+        "text": "So you're saying you're gonna\nuse that representation for",
+        "start": 2284.669,
+        "duration": 2.89
+    },
+    {
+        "text": "classification, is that right?",
+        "start": 2287.559,
+        "duration": 1.41
+    },
+    {
+        "text": "yeah, almost.",
+        "start": 2290.889,
+        "duration": 0.78
+    },
+    {
+        "text": "You said, you stored it for later?",
+        "start": 2291.969,
+        "duration": 1.26
+    },
+    {
+        "text": "For inference?",
+        "start": 2293.229,
+        "duration": 0.69
+    },
+    {
+        "text": "For inference.",
+        "start": 2294.069,
+        "duration": 0.96
+    },
+    {
+        "text": "I don't, is identification,\ncome closer to what you want.",
+        "start": 2297.234,
+        "duration": 4.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 2301.554,
+        "duration": 0.42
+    },
+    {
+        "text": "It's, more, there's a nuance\nhere that I can't explain between",
+        "start": 2302.454,
+        "duration": 2.91
+    },
+    {
+        "text": "like strict classification.",
+        "start": 2305.364,
+        "duration": 1.2
+    },
+    {
+        "text": "Now classification would say it is\na, an example of a cat as opposed to",
+        "start": 2306.564,
+        "duration": 3.48
+    },
+    {
+        "text": "something specific that I've seen before.",
+        "start": 2310.044,
+        "duration": 1.65
+    },
+    {
+        "text": "Classification would allow\nyou to generalize, right?",
+        "start": 2312.054,
+        "duration": 2.075
+    },
+    {
+        "text": "Yeah, I got it.",
+        "start": 2314.479,
+        "duration": 0.725
+    },
+    {
+        "text": "I got it.",
+        "start": 2315.474,
+        "duration": 0.45
+    },
+    {
+        "text": "But in this case, it's a distinction.",
+        "start": 2315.924,
+        "duration": 3.33
+    },
+    {
+        "text": "I don't understand how it's, how\nyou're making that distinction.",
+        "start": 2319.254,
+        "duration": 3.75
+    },
+    {
+        "text": "maybe it's not important.",
+        "start": 2324.384,
+        "duration": 0.9
+    },
+    {
+        "text": "these, representations are for\nparticular objects, are they not?",
+        "start": 2328.764,
+        "duration": 2.61
+    },
+    {
+        "text": "Yes.",
+        "start": 2332.004,
+        "duration": 0.15
+    },
+    {
+        "text": "So this would be inferring\na particular object.",
+        "start": 2332.844,
+        "duration": 2.58
+    },
+    {
+        "text": "I don't know how you'd classify it.",
+        "start": 2335.424,
+        "duration": 1.26
+    },
+    {
+        "text": "classification says, Hey, it\nseems to me like, oh, this is a",
+        "start": 2338.424,
+        "duration": 3.72
+    },
+    {
+        "text": "location on a particular object.",
+        "start": 2342.144,
+        "duration": 1.44
+    },
+    {
+        "text": "Therefore it would be, it would\nbe inference, not classification",
+        "start": 2344.124,
+        "duration": 4.14
+    },
+    {
+        "text": "in that regard, but maybe\ninference is the wrong word here.",
+        "start": 2348.834,
+        "duration": 3.48
+    },
+    {
+        "text": "I guess it's just during the, yeah.",
+        "start": 2354.279,
+        "duration": 1.59
+    },
+    {
+        "text": "Alright.",
+        "start": 2356.559,
+        "duration": 0.24
+    },
+    {
+        "text": "You're storing away.",
+        "start": 2356.799,
+        "duration": 0.87
+    },
+    {
+        "text": "I'm just saying what you're\nstoring is not, is a, unique",
+        "start": 2357.759,
+        "duration": 3.78
+    },
+    {
+        "text": "location on a unique object.",
+        "start": 2361.539,
+        "duration": 1.44
+    },
+    {
+        "text": "That is correct.",
+        "start": 2364.089,
+        "duration": 0.455
+    },
+    {
+        "text": "Okay, fine.",
+        "start": 2364.929,
+        "duration": 0.93
+    },
+    {
+        "text": "You, can you recognize, so if you do\nthe same thing with the rev matching,",
+        "start": 2367.839,
+        "duration": 3.745
+    },
+    {
+        "text": "let's say I see 10 cats and 10 dogs,\nand then at infant's time I run this",
+        "start": 2371.584,
+        "duration": 6.365
+    },
+    {
+        "text": "and say, and this kind of looks like six\nof my dogs, but just four of my cats.",
+        "start": 2377.949,
+        "duration": 5.19
+    },
+    {
+        "text": "So it's more likely a dog that\nis Could you introduce that here?",
+        "start": 2383.139,
+        "duration": 3.045
+    },
+    {
+        "text": "That is absolutely possible.",
+        "start": 2386.184,
+        "duration": 1.395
+    },
+    {
+        "text": "I just didn't, but I don't understand.",
+        "start": 2387.849,
+        "duration": 1.8
+    },
+    {
+        "text": "at some sense at this point,\nyou're, there's no effort to say",
+        "start": 2390.069,
+        "duration": 4.32
+    },
+    {
+        "text": "these ca two cats are, the same.",
+        "start": 2394.389,
+        "duration": 2.25
+    },
+    {
+        "text": "You're just, learning objects and you're\ngonna try to the algorithm will try to d",
+        "start": 2397.179,
+        "duration": 5.04
+    },
+    {
+        "text": "see them as different things, won't it?",
+        "start": 2402.729,
+        "duration": 1.77
+    },
+    {
+        "text": "it's classification doesn't come for free.",
+        "start": 2404.799,
+        "duration": 3.42
+    },
+    {
+        "text": "You have to put something\nin there to do that.",
+        "start": 2408.219,
+        "duration": 1.225
+    },
+    {
+        "text": "Yeah, so what you were describing\nLucas, is, yeah, basically what, I was",
+        "start": 2411.189,
+        "duration": 4.59
+    },
+    {
+        "text": "doing with the grid cell net stuff.",
+        "start": 2415.779,
+        "duration": 2.28
+    },
+    {
+        "text": "and yeah, this is, yeah, I think more\naccurately described as recall because",
+        "start": 2419.139,
+        "duration": 4.2
+    },
+    {
+        "text": "as everyone's saying, it's a specific\nobject that you're identifying.",
+        "start": 2423.849,
+        "duration": 3.93
+    },
+    {
+        "text": "I'm gonna go onto the next step.",
+        "start": 2428.779,
+        "duration": 2.16
+    },
+    {
+        "text": "Now,",
+        "start": 2430.939,
+        "duration": 0.42
+    },
+    {
+        "text": "again, I don't know if I should call this\ninference or not, but in the next stage",
+        "start": 2433.399,
+        "duration": 3.63
+    },
+    {
+        "text": "when I'm trying to recall a specific\nobject, the same training steps apply.",
+        "start": 2437.719,
+        "duration": 5.19
+    },
+    {
+        "text": "I do the same thing.",
+        "start": 2443.269,
+        "duration": 0.78
+    },
+    {
+        "text": "I pass a motor input, I bias\nmy temporal memory layer.",
+        "start": 2444.049,
+        "duration": 3.27
+    },
+    {
+        "text": "I pass in the sensory and put along with\nthat to get some set of active cells.",
+        "start": 2447.439,
+        "duration": 3.45
+    },
+    {
+        "text": "I use that new associated sensory\nlocation representation back to, to",
+        "start": 2450.979,
+        "duration": 6.57
+    },
+    {
+        "text": "tune the cells in my grid cell layer.",
+        "start": 2457.549,
+        "duration": 1.62
+    },
+    {
+        "text": "But the inference rule here is that\nlocation sensory representation",
+        "start": 2459.754,
+        "duration": 4.83
+    },
+    {
+        "text": "is only correctly inferred if the\ninference location representation is",
+        "start": 2464.794,
+        "duration": 4.68
+    },
+    {
+        "text": "a strict subset of the representations\nyou collected during training.",
+        "start": 2469.474,
+        "duration": 4.02
+    },
+    {
+        "text": "In other words, the representations\nneed to have the strict overlap with",
+        "start": 2474.184,
+        "duration": 3.405
+    },
+    {
+        "text": "the ones that I collected before.",
+        "start": 2477.589,
+        "duration": 1.695
+    },
+    {
+        "text": "It's pretty, yeah,",
+        "start": 2481.984,
+        "duration": 1.23
+    },
+    {
+        "text": "it might be naive, but it's,\npretty straightforward.",
+        "start": 2485.224,
+        "duration": 2.1
+    },
+    {
+        "text": "okay.",
+        "start": 2488.324,
+        "duration": 0.39
+    },
+    {
+        "text": "Gonna go on.",
+        "start": 2488.954,
+        "duration": 0.93
+    },
+    {
+        "text": "This is like the data that I was\nworking with, I was, I didn't have",
+        "start": 2491.624,
+        "duration": 3.6
+    },
+    {
+        "text": "much time to do more than this,\nbut I created these two different",
+        "start": 2495.224,
+        "duration": 4.02
+    },
+    {
+        "text": "kinds of randomly generated points.",
+        "start": 2499.244,
+        "duration": 2.46
+    },
+    {
+        "text": "The first is on the left where\nyou can see like somewhat of a",
+        "start": 2502.124,
+        "duration": 3.09
+    },
+    {
+        "text": "sequence of continuous paths.",
+        "start": 2505.214,
+        "duration": 1.95
+    },
+    {
+        "text": "if you ignore the red ones, which\nare used for testing and only",
+        "start": 2508.004,
+        "duration": 2.88
+    },
+    {
+        "text": "look at the green ones, I can\nmaybe zoom in here a little bit.",
+        "start": 2510.884,
+        "duration": 4.35
+    },
+    {
+        "text": "If you look at the green\nones, they're they're bunched",
+        "start": 2517.589,
+        "duration": 3.24
+    },
+    {
+        "text": "together in this sort of path.",
+        "start": 2520.829,
+        "duration": 1.32
+    },
+    {
+        "text": "So I wanted to, I wanted to mimic what\na sensorimotor would be doing, if it's",
+        "start": 2522.479,
+        "duration": 4.14
+    },
+    {
+        "text": "going on some kind of continuous path.",
+        "start": 2526.619,
+        "duration": 1.59
+    },
+    {
+        "text": "And I have a series of these\npaths, all of which I see",
+        "start": 2528.569,
+        "duration": 2.97
+    },
+    {
+        "text": "during te training and testing.",
+        "start": 2531.539,
+        "duration": 1.56
+    },
+    {
+        "text": "and similarly, the red points\nare basically the same.",
+        "start": 2534.089,
+        "duration": 2.58
+    },
+    {
+        "text": "You do the same for when you're doing\nan evaluation object recall phase.",
+        "start": 2536.699,
+        "duration": 3.93
+    },
+    {
+        "text": "this is the alternative example\nwhere I just have a sequence of",
+        "start": 2544.049,
+        "duration": 3.84
+    },
+    {
+        "text": "uniformly distributed random points,\nfor both training and testing.",
+        "start": 2548.009,
+        "duration": 4.44
+    },
+    {
+        "text": "Okay.",
+        "start": 2553.449,
+        "duration": 0.45
+    },
+    {
+        "text": "so I just ran, I ran a bunch of\nexperiments, but I only wanted to",
+        "start": 2555.699,
+        "duration": 3.09
+    },
+    {
+        "text": "show these two, because I guess\nthese are like the ones that I guess",
+        "start": 2558.789,
+        "duration": 3.15
+    },
+    {
+        "text": "you can maybe learn the most from.",
+        "start": 2561.939,
+        "duration": 2.4
+    },
+    {
+        "text": "the first here in the top where I used.",
+        "start": 2565.149,
+        "duration": 2.1
+    },
+    {
+        "text": "50 pots for both training and\ntesting, whether kind of these 10",
+        "start": 2567.594,
+        "duration": 3.54
+    },
+    {
+        "text": "sensations or points per path for a\ntotal of 500 sensations on an object.",
+        "start": 2571.134,
+        "duration": 4.71
+    },
+    {
+        "text": "And I use these four\nrandom objects in my, set.",
+        "start": 2576.294,
+        "duration": 2.97
+    },
+    {
+        "text": "and as you can see from the\nresults, I don't have any like",
+        "start": 2580.134,
+        "duration": 2.4
+    },
+    {
+        "text": "nice visualizations to show.",
+        "start": 2582.744,
+        "duration": 1.68
+    },
+    {
+        "text": "All I can show you is\nwhat my, terminal put out.",
+        "start": 2584.604,
+        "duration": 2.545
+    },
+    {
+        "text": "But, for the first object, which is\nobject 10, it was unable to see from",
+        "start": 2587.244,
+        "duration": 5.64
+    },
+    {
+        "text": "those random paths or random sensations\nor from the testing sensations is it was",
+        "start": 2592.884,
+        "duration": 5.46
+    },
+    {
+        "text": "unable to draw a correlation with what had\ncollected during training, but it was able",
+        "start": 2598.344,
+        "duration": 4.56
+    },
+    {
+        "text": "to do that for the other objects within\na certain number of steps or sensations.",
+        "start": 2602.904,
+        "duration": 4.62
+    },
+    {
+        "text": "The second experiment did the exact\nsame thing, but I used, instead of",
+        "start": 2609.414,
+        "duration": 3.42
+    },
+    {
+        "text": "these paths, I used random sensations.",
+        "start": 2612.834,
+        "duration": 2.07
+    },
+    {
+        "text": "And you can see how quickly\nyou can converge upon a correct",
+        "start": 2615.294,
+        "duration": 3.33
+    },
+    {
+        "text": "representation, because you're\njust covering more of the object.",
+        "start": 2618.624,
+        "duration": 3.87
+    },
+    {
+        "text": "So the chances that you see a\ntesting representation that has the",
+        "start": 2622.824,
+        "duration": 4.2
+    },
+    {
+        "text": "strict overlap or strict subset with\nthe training ones is pretty high.",
+        "start": 2627.024,
+        "duration": 3.78
+    },
+    {
+        "text": "So you're able to converge upon a\ncorrect representation for all four",
+        "start": 2631.164,
+        "duration": 3.21
+    },
+    {
+        "text": "objects very, quickly compared to the,\nthe amount of time it takes for, some",
+        "start": 2634.374,
+        "duration": 5.58
+    },
+    {
+        "text": "of those objects in training, which\ntook like maybe 200 steps for one.",
+        "start": 2639.954,
+        "duration": 3.36
+    },
+    {
+        "text": "And that same object took, takes one step\nto do here when you're looking at random",
+        "start": 2643.674,
+        "duration": 3.78
+    },
+    {
+        "text": "sensations that, that's the first one\nactually worked with the paths because",
+        "start": 2647.454,
+        "duration": 6.63
+    },
+    {
+        "text": "yeah, in the picture you showed before,\nthe paths didn't even look similar.",
+        "start": 2654.114,
+        "duration": 4.56
+    },
+    {
+        "text": "do you know why it worked?",
+        "start": 2660.024,
+        "duration": 1.95
+    },
+    {
+        "text": "there's not really a lot of overlap\nbetween the green and the red.",
+        "start": 2662.454,
+        "duration": 3.57
+    },
+    {
+        "text": "There.",
+        "start": 2667.014,
+        "duration": 0.42
+    },
+    {
+        "text": "So there, there might not be strict\noverlap in the points itself, but if",
+        "start": 2667.434,
+        "duration": 3.3
+    },
+    {
+        "text": "it's in a, like it's in a vicinity,\nlike some neighborhood of points,",
+        "start": 2670.734,
+        "duration": 3.24
+    },
+    {
+        "text": "then those SDRs will have overlap.",
+        "start": 2674.214,
+        "duration": 1.62
+    },
+    {
+        "text": "So that's, why I'm, that's why\nI'm, that's why I think happened",
+        "start": 2676.254,
+        "duration": 2.64
+    },
+    {
+        "text": "for the, for the uniformly sampled\nones, when it shows one step.",
+        "start": 2679.894,
+        "duration": 5.31
+    },
+    {
+        "text": "So is there like a zero step,\ndoes one step mean there's",
+        "start": 2685.204,
+        "duration": 3.78
+    },
+    {
+        "text": "still a, like prediction step?",
+        "start": 2689.044,
+        "duration": 2.07
+    },
+    {
+        "text": "You have two points or is that\nliterally just given one point?",
+        "start": 2691.114,
+        "duration": 3.63
+    },
+    {
+        "text": "It's given one point.",
+        "start": 2695.044,
+        "duration": 0.9
+    },
+    {
+        "text": "It's given exactly one point.",
+        "start": 2696.274,
+        "duration": 1.17
+    },
+    {
+        "text": "huh.",
+        "start": 2699.394,
+        "duration": 0.24
+    },
+    {
+        "text": "Going back to maybe, can I do that?",
+        "start": 2700.684,
+        "duration": 2.22
+    },
+    {
+        "text": "It you, your green and your red were\nboth done with paths, is that right?",
+        "start": 2704.284,
+        "duration": 4.44
+    },
+    {
+        "text": "You tr you trained on little paths\nand you inferred on little paths.",
+        "start": 2708.724,
+        "duration": 4.02
+    },
+    {
+        "text": "Is that right?",
+        "start": 2712.744,
+        "duration": 0.42
+    },
+    {
+        "text": "Correct.",
+        "start": 2713.169,
+        "duration": 0.2
+    },
+    {
+        "text": "Correct.",
+        "start": 2713.704,
+        "duration": 0.33
+    },
+    {
+        "text": "so then you can, it's, Yeah.",
+        "start": 2714.394,
+        "duration": 4.875
+    },
+    {
+        "text": "So then if you have, if those paths\noverall don't, aren't near each other",
+        "start": 2719.269,
+        "duration": 4.68
+    },
+    {
+        "text": "very much, then it's not gonna work.",
+        "start": 2723.949,
+        "duration": 2.1
+    },
+    {
+        "text": "you could, they don't have to be\nexact same points, but the, there's",
+        "start": 2726.859,
+        "duration": 2.58
+    },
+    {
+        "text": "gotta be points that are nearby.",
+        "start": 2729.439,
+        "duration": 1.56
+    },
+    {
+        "text": "And so it'd be easy with a small\nset of these little paths that",
+        "start": 2730.999,
+        "duration": 4.62
+    },
+    {
+        "text": "there's paths aren't near each other.",
+        "start": 2735.679,
+        "duration": 1.08
+    },
+    {
+        "text": "Like I see some paths on\nthe tail of the airplane.",
+        "start": 2736.759,
+        "duration": 2.04
+    },
+    {
+        "text": "There's no, they're red,\nhonestly, in a green one.",
+        "start": 2738.799,
+        "duration": 2.01
+    },
+    {
+        "text": "Therefore, there's no way\nin the world that's gonna",
+        "start": 2741.349,
+        "duration": 1.65
+    },
+    {
+        "text": "recognize anything back there.",
+        "start": 2742.999,
+        "duration": 1.29
+    },
+    {
+        "text": "so you could have had randomly\nsampled during training and then",
+        "start": 2745.909,
+        "duration": 4.44
+    },
+    {
+        "text": "inferred using paths, and I would\nthink that would work much better.",
+        "start": 2750.859,
+        "duration": 3.12
+    },
+    {
+        "text": "I'm just trying to understand this.",
+        "start": 2755.244,
+        "duration": 1.435
+    },
+    {
+        "text": "I think that's my observation about that.",
+        "start": 2757.339,
+        "duration": 1.8
+    },
+    {
+        "text": "That's, also valid.",
+        "start": 2760.644,
+        "duration": 0.9
+    },
+    {
+        "text": "I could have done that.",
+        "start": 2761.784,
+        "duration": 0.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 2763.039,
+        "duration": 0.36
+    },
+    {
+        "text": "but is the fact that you're,\nsometimes, the fact you're doing",
+        "start": 2763.819,
+        "duration": 2.31
+    },
+    {
+        "text": "these short paths, it's like you're\njust highly under sampling the thing",
+        "start": 2766.129,
+        "duration": 5.01
+    },
+    {
+        "text": "because you've got a whole bunch of\npoints in one space and then a whole",
+        "start": 2771.139,
+        "duration": 2.19
+    },
+    {
+        "text": "bunch of points in another space.",
+        "start": 2773.329,
+        "duration": 1.11
+    },
+    {
+        "text": "And they're not evenly distributed,\nand therefore the intersection",
+        "start": 2774.904,
+        "duration": 2.61
+    },
+    {
+        "text": "between the inference and the\nlearning path, could be very low.",
+        "start": 2777.514,
+        "duration": 4.44
+    },
+    {
+        "text": "So in my head, maybe I was wrong, but\nthinking, thinking it like this, but",
+        "start": 2782.854,
+        "duration": 4.02
+    },
+    {
+        "text": "I was thinking of creating like this\nrealistic training scenario where if",
+        "start": 2787.234,
+        "duration": 2.55
+    },
+    {
+        "text": "I'm looking at an novel object, I'm not,\nrunning my finger to random points on",
+        "start": 2790.174,
+        "duration": 4.17
+    },
+    {
+        "text": "that object, trying to understand it.",
+        "start": 2794.344,
+        "duration": 1.32
+    },
+    {
+        "text": "I'm going along this continuous\npath, for maybe part of the",
+        "start": 2795.664,
+        "duration": 3.57
+    },
+    {
+        "text": "object, moving to a different part,\ntouching that in a continuous path.",
+        "start": 2799.234,
+        "duration": 3.21
+    },
+    {
+        "text": "That's what I wanted to replicate.",
+        "start": 2802.804,
+        "duration": 1.32
+    },
+    {
+        "text": "that's a kind of impoverished,\nlearning strategy.",
+        "start": 2805.024,
+        "duration": 2.04
+    },
+    {
+        "text": "reality is we would, we, we typ\ntypically focus on areas of, interest,",
+        "start": 2807.364,
+        "duration": 5.85
+    },
+    {
+        "text": "things that are unique and different.",
+        "start": 2813.364,
+        "duration": 1.59
+    },
+    {
+        "text": "you typically, during learning,\nyou would cover the entire object.",
+        "start": 2815.854,
+        "duration": 2.4
+    },
+    {
+        "text": "I can't learn what that airplane\nis unless I've somehow sampled",
+        "start": 2818.464,
+        "duration": 3.78
+    },
+    {
+        "text": "all parts of it, even briefly.",
+        "start": 2822.244,
+        "duration": 2.76
+    },
+    {
+        "text": "it'd be imagining I was looking\nat this object and I had to look",
+        "start": 2827.434,
+        "duration": 2.91
+    },
+    {
+        "text": "through a series of little holes.",
+        "start": 2830.344,
+        "duration": 1.59
+    },
+    {
+        "text": "I have a, my vision is restricted to a\nseries of little holes, and the holes are",
+        "start": 2832.744,
+        "duration": 4.11
+    },
+    {
+        "text": "pretty small, and that's all I can see.",
+        "start": 2836.854,
+        "duration": 1.92
+    },
+    {
+        "text": "And now I then, when I'm in referring, I'm\nlooking to a different set of little holes",
+        "start": 2838.774,
+        "duration": 3.0
+    },
+    {
+        "text": "and, they may not be overlapping much.",
+        "start": 2842.614,
+        "duration": 2.04
+    },
+    {
+        "text": "If, I could have learned the\nentire object, then my, then",
+        "start": 2845.074,
+        "duration": 2.94
+    },
+    {
+        "text": "observing only part of it during\ninfants would've worked better.",
+        "start": 2848.014,
+        "duration": 2.25
+    },
+    {
+        "text": "Anyway, I, it's okay.",
+        "start": 2850.624,
+        "duration": 1.65
+    },
+    {
+        "text": "It just, I think that was, is probably not\nthe wisest choice for a learning strategy.",
+        "start": 2852.274,
+        "duration": 5.52
+    },
+    {
+        "text": "but, I at least can see why\nit wouldn't work very well.",
+        "start": 2859.894,
+        "duration": 3.06
+    },
+    {
+        "text": "Those points, there are just the\nscope of that local feature, right?",
+        "start": 2863.464,
+        "duration": 3.03
+    },
+    {
+        "text": "If you imagine a fat finger",
+        "start": 2867.814,
+        "duration": 1.71
+    },
+    {
+        "text": "and you're taking swats across it, so\nyou're seeing more course representation",
+        "start": 2871.744,
+        "duration": 4.05
+    },
+    {
+        "text": "in the thing, there's a greater chance\nthat you would have some kind of",
+        "start": 2875.794,
+        "duration": 2.61
+    },
+    {
+        "text": "intersection that would if you're if\nyou're blind and you're taking this object",
+        "start": 2878.404,
+        "duration": 4.29
+    },
+    {
+        "text": "in your hand and rolling around in it,\nit's like Jeff said, you'll basically.",
+        "start": 2882.754,
+        "duration": 5.19
+    },
+    {
+        "text": "All the interesting extensions\nof the object and then smooth",
+        "start": 2889.459,
+        "duration": 5.115
+    },
+    {
+        "text": "here and stuff like that.",
+        "start": 2894.634,
+        "duration": 1.11
+    },
+    {
+        "text": "So it's gonna be a lot denser than\njust I'm finding a point feature here.",
+        "start": 2895.744,
+        "duration": 5.43
+    },
+    {
+        "text": "Yeah.",
+        "start": 2901.719,
+        "duration": 0.29
+    },
+    {
+        "text": "So just Making more And that's brings\nof a good point because something we've",
+        "start": 2902.014,
+        "duration": 5.7
+    },
+    {
+        "text": "never really tried, but we've suspected\nand we've written about is, we do have, in",
+        "start": 2907.714,
+        "duration": 5.55
+    },
+    {
+        "text": "central modalities and vision and touches,\nyou have, regions of the cortex that have",
+        "start": 2914.194,
+        "duration": 4.86
+    },
+    {
+        "text": "different scales at which they work with.",
+        "start": 2919.054,
+        "duration": 1.77
+    },
+    {
+        "text": "And one way to look at that\nis they're hierarchical.",
+        "start": 2921.484,
+        "duration": 3.21
+    },
+    {
+        "text": "The other way is we proposed, you\ncan look at 'em as just modeling",
+        "start": 2924.694,
+        "duration": 3.48
+    },
+    {
+        "text": "the object in different resolutions.",
+        "start": 2928.174,
+        "duration": 1.41
+    },
+    {
+        "text": "and so you could say, oh, I have\nmultiple models of this airplane.",
+        "start": 2930.814,
+        "duration": 3.03
+    },
+    {
+        "text": "One is a very fuzzy resolution,\nwhich gives me the overall.",
+        "start": 2933.844,
+        "duration": 2.79
+    },
+    {
+        "text": "It's hard to, I can't really get details\non it, but I get the overall shape",
+        "start": 2937.159,
+        "duration": 3.3
+    },
+    {
+        "text": "because, 'cause my points are big.",
+        "start": 2940.459,
+        "duration": 1.95
+    },
+    {
+        "text": "And then you could say, oh, and then the\nfiner resolution region will focus on",
+        "start": 2942.859,
+        "duration": 4.8
+    },
+    {
+        "text": "things that require finer resolution.",
+        "start": 2948.229,
+        "duration": 1.5
+    },
+    {
+        "text": "I can learn that maybe the detail of\nthe propeller curvature, where, but I",
+        "start": 2950.779,
+        "duration": 5.16
+    },
+    {
+        "text": "wouldn't learn the overall, the, details\nof the fuselage or something like that.",
+        "start": 2955.969,
+        "duration": 4.83
+    },
+    {
+        "text": "So there's other ways we\ncould address these issues.",
+        "start": 2961.069,
+        "duration": 2.73
+    },
+    {
+        "text": "We just don't wanna be too\nmuch into the fact that it",
+        "start": 2964.489,
+        "duration": 2.1
+    },
+    {
+        "text": "didn't work well in this case.",
+        "start": 2966.589,
+        "duration": 1.17
+    },
+    {
+        "text": "when you sense the point, do\nyou get any features there",
+        "start": 2970.249,
+        "duration": 4.23
+    },
+    {
+        "text": "or Do you only get location?",
+        "start": 2974.479,
+        "duration": 2.355
+    },
+    {
+        "text": "So if you recognize the object from\njust one sensation, is that just because",
+        "start": 2976.834,
+        "duration": 3.75
+    },
+    {
+        "text": "it's a pretty unique feature or is\nit because you're using an absolute,",
+        "start": 2980.584,
+        "duration": 4.5
+    },
+    {
+        "text": "coordinate system and it's only\nthat object exists in this location?",
+        "start": 2985.534,
+        "duration": 4.17
+    },
+    {
+        "text": "So there's no, absolute\ncoordinate system here.",
+        "start": 2989.974,
+        "duration": 2.76
+    },
+    {
+        "text": "The only feature you can\nget is the curvature.",
+        "start": 2992.974,
+        "duration": 2.88
+    },
+    {
+        "text": "and I'm assuming that if it, in\nthose cases where it does only",
+        "start": 2997.174,
+        "duration": 3.78
+    },
+    {
+        "text": "work in one sensation, it's because\nit's something that it pretty much",
+        "start": 3000.954,
+        "duration": 3.33
+    },
+    {
+        "text": "saw during, in doing training.",
+        "start": 3004.284,
+        "duration": 1.59
+    },
+    {
+        "text": "but, Viviane asked a\nseparate question, which",
+        "start": 3007.704,
+        "duration": 1.5
+    },
+    {
+        "text": "is, are the locations absolute, you\njust assume the plane's in the same",
+        "start": 3011.694,
+        "duration": 5.4
+    },
+    {
+        "text": "reference frames in both cases.",
+        "start": 3017.124,
+        "duration": 2.16
+    },
+    {
+        "text": "Oh, it's, wait, is it a question about\nreference frame is, or is it a question",
+        "start": 3019.974,
+        "duration": 4.59
+    },
+    {
+        "text": "of if it's fixed, if there's like a\nglobal fixed location, like how I did",
+        "start": 3024.564,
+        "duration": 5.61
+    },
+    {
+        "text": "in my past temporal memory project?",
+        "start": 3030.174,
+        "duration": 1.62
+    },
+    {
+        "text": "Yeah, I guess both.",
+        "start": 3034.389,
+        "duration": 1.14
+    },
+    {
+        "text": "I'm just trying to figure out\nhow you would recognize an",
+        "start": 3035.859,
+        "duration": 2.43
+    },
+    {
+        "text": "object from just one sensation.",
+        "start": 3038.289,
+        "duration": 1.92
+    },
+    {
+        "text": "Okay.",
+        "start": 3040.599,
+        "duration": 0.3
+    },
+    {
+        "text": "So it's using a fixed reference\nframe for sure, because if I rotated",
+        "start": 3041.079,
+        "duration": 5.37
+    },
+    {
+        "text": "this object, it would not work.",
+        "start": 3046.449,
+        "duration": 1.05
+    },
+    {
+        "text": "the grid cells are, yeah, there's a fixed\nreference frame, but at the same time",
+        "start": 3048.819,
+        "duration": 5.16
+    },
+    {
+        "text": "it's not using a fixed object coordinate\nlocation like I was doing in the past.",
+        "start": 3054.729,
+        "duration": 3.96
+    },
+    {
+        "text": "So if I wanted to look at one\nsensation, I'm pretty sure it worked",
+        "start": 3059.169,
+        "duration": 4.35
+    },
+    {
+        "text": "in those cases because that particular\nsensation was something I saw pretty",
+        "start": 3063.729,
+        "duration": 4.38
+    },
+    {
+        "text": "much similarly during training.",
+        "start": 3068.109,
+        "duration": 1.77
+    },
+    {
+        "text": "it was like very nearby.",
+        "start": 3070.719,
+        "duration": 1.65
+    },
+    {
+        "text": "It was a unique curvature.",
+        "start": 3072.549,
+        "duration": 1.41
+    },
+    {
+        "text": "and yeah, there was a lot, but\nnearby assumes that you have",
+        "start": 3074.859,
+        "duration": 3.63
+    },
+    {
+        "text": "this absolute reference from.",
+        "start": 3078.489,
+        "duration": 1.08
+    },
+    {
+        "text": "It's it's saying like that you're not get,\nyou don't have to read, you don't have to",
+        "start": 3079.929,
+        "duration": 4.53
+    },
+    {
+        "text": "infer which grid cells, In each module.",
+        "start": 3084.459,
+        "duration": 5.205
+    },
+    {
+        "text": "Yeah.",
+        "start": 3089.874,
+        "duration": 0.12
+    },
+    {
+        "text": "He said it was a fixed\nreference frame, so Yeah.",
+        "start": 3089.994,
+        "duration": 2.52
+    },
+    {
+        "text": "But to, to the, to Vivian's question,\nthe feature he's looking at is",
+        "start": 3092.754,
+        "duration": 5.19
+    },
+    {
+        "text": "curvature, not, a point coordinate.",
+        "start": 3097.944,
+        "duration": 2.28
+    },
+    {
+        "text": "Got it.",
+        "start": 3102.024,
+        "duration": 0.57
+    },
+    {
+        "text": "but you do have the location of\nthe coordinate of that feature.",
+        "start": 3103.044,
+        "duration": 2.88
+    },
+    {
+        "text": "Yeah.",
+        "start": 3107.184,
+        "duration": 0.24
+    },
+    {
+        "text": "Presumably.",
+        "start": 3107.904,
+        "duration": 0.48
+    },
+    {
+        "text": "But it's a, if you, miss by a little\nbit and you're still part of that",
+        "start": 3108.384,
+        "duration": 6.42
+    },
+    {
+        "text": "curvature shape, then you might\nhave a, still have a close match.",
+        "start": 3114.804,
+        "duration": 6.21
+    },
+    {
+        "text": "So I guess it depends upon what the\nscale of the, curvature is that you're",
+        "start": 3121.974,
+        "duration": 3.81
+    },
+    {
+        "text": "taking it over as to how, restricted.",
+        "start": 3125.784,
+        "duration": 4.365
+    },
+    {
+        "text": "It is how close you have to land to\nit and say, oh, this is the curvature",
+        "start": 3130.149,
+        "duration": 4.08
+    },
+    {
+        "text": "I recognize in roughly this location.",
+        "start": 3134.229,
+        "duration": 2.34
+    },
+    {
+        "text": "Correct.",
+        "start": 3136.689,
+        "duration": 0.36
+    },
+    {
+        "text": "That goes back to my coordinate encoder\nstrategy that I was talking about before,",
+        "start": 3137.409,
+        "duration": 3.45
+    },
+    {
+        "text": "to find a neighborhood that points\nanything within that neighborhood or",
+        "start": 3141.069,
+        "duration": 3.33
+    },
+    {
+        "text": "that real value neighborhood, that's\nsomething you consider over overlap four.",
+        "start": 3144.399,
+        "duration": 3.15
+    },
+    {
+        "text": "So you don't have to have an exact match.",
+        "start": 3147.879,
+        "duration": 1.86
+    },
+    {
+        "text": "it's, yeah.",
+        "start": 3150.219,
+        "duration": 0.93
+    },
+    {
+        "text": "I got you Still have some scope.",
+        "start": 3151.149,
+        "duration": 1.215
+    },
+    {
+        "text": "I don't wanna beat this too much,\nbut imagine I had only one object",
+        "start": 3152.769,
+        "duration": 2.88
+    },
+    {
+        "text": "actually occupied the location.",
+        "start": 3155.649,
+        "duration": 2.64
+    },
+    {
+        "text": "0, 0 0. In these, graphs here,\nalthough the axis are not the same",
+        "start": 3158.289,
+        "duration": 5.07
+    },
+    {
+        "text": "here, but imagine there's only\none object that occupied 0, 0, 0.",
+        "start": 3163.359,
+        "duration": 3.6
+    },
+    {
+        "text": "All the other objects\ndidn't come close to it.",
+        "start": 3167.379,
+        "duration": 1.86
+    },
+    {
+        "text": "Therefore, the question is, if I\ndetected a feature at 0, 0 0 and that,",
+        "start": 3169.929,
+        "duration": 5.46
+    },
+    {
+        "text": "even if I say that feature\nhas to be the same feature.",
+        "start": 3177.429,
+        "duration": 2.34
+    },
+    {
+        "text": "But that's how you\ncould uniquely identify.",
+        "start": 3180.204,
+        "duration": 2.31
+    },
+    {
+        "text": "You say, oh, I have this curvature\nhere, but this is the only object",
+        "start": 3182.514,
+        "duration": 3.0
+    },
+    {
+        "text": "that has a curvature in that location.",
+        "start": 3185.544,
+        "duration": 1.38
+    },
+    {
+        "text": "That's how I interpreted\nVivian's question.",
+        "start": 3187.164,
+        "duration": 1.56
+    },
+    {
+        "text": "and I think you were, I\nthink you were doing that",
+        "start": 3191.154,
+        "duration": 1.92
+    },
+    {
+        "text": "but that, that shouldn't be happening\nhere if, grid cells are being used, that",
+        "start": 3195.534,
+        "duration": 3.45
+    },
+    {
+        "text": "should be an internal reference frame.",
+        "start": 3198.984,
+        "duration": 1.47
+    },
+    {
+        "text": "Ev, even if you may have kept the\nobjects fixed in the environment at",
+        "start": 3200.844,
+        "duration": 4.17
+    },
+    {
+        "text": "training inference, it should still\nbe an internal reference frame.",
+        "start": 3205.104,
+        "duration": 3.27
+    },
+    {
+        "text": "but then I don't, but then it,\nyeah, it, i, if you just have one",
+        "start": 3209.369,
+        "duration": 4.53
+    },
+    {
+        "text": "location and you have coverage, yeah.",
+        "start": 3214.139,
+        "duration": 1.52
+    },
+    {
+        "text": "temperature should be the same everywhere\non the outside of the cup, basically.",
+        "start": 3215.859,
+        "duration": 3.405
+    },
+    {
+        "text": "yeah, so that's the thing.",
+        "start": 3219.354,
+        "duration": 0.84
+    },
+    {
+        "text": "I think it'd be worth, it'd be\nworth checking Abhi, like how big",
+        "start": 3221.459,
+        "duration": 3.775
+    },
+    {
+        "text": "the location representation is.",
+        "start": 3225.234,
+        "duration": 1.71
+    },
+    {
+        "text": "At inference time, because in my mind on\nthe first sensation, you're not gonna be",
+        "start": 3227.769,
+        "duration": 4.14
+    },
+    {
+        "text": "predicting anything in the feature layer.",
+        "start": 3231.909,
+        "duration": 1.89
+    },
+    {
+        "text": "So all of the cells in any given\nmini column are gonna light up.",
+        "start": 3234.009,
+        "duration": 3.39
+    },
+    {
+        "text": "So you should like, pretty much\nno matter what, be getting lots of",
+        "start": 3237.669,
+        "duration": 3.66
+    },
+    {
+        "text": "location cells, becoming active.",
+        "start": 3241.329,
+        "duration": 2.61
+    },
+    {
+        "text": "And so I'd be surprised if you\ncan do it in one sensation, but",
+        "start": 3244.689,
+        "duration": 4.53
+    },
+    {
+        "text": "maybe with efficiently small\ntraining, few objects rather.",
+        "start": 3249.219,
+        "duration": 5.73
+    },
+    {
+        "text": "How many objects do you use?",
+        "start": 3255.369,
+        "duration": 1.32
+    },
+    {
+        "text": "Are we, there's only four.",
+        "start": 3256.779,
+        "duration": 2.1
+    },
+    {
+        "text": "Four?",
+        "start": 3259.419,
+        "duration": 0.12
+    },
+    {
+        "text": "Not many.",
+        "start": 3261.549,
+        "duration": 0.48
+    },
+    {
+        "text": "and did you test for translation variance?",
+        "start": 3264.669,
+        "duration": 2.07
+    },
+    {
+        "text": "I didn't, have a test for transmission\nvariance, but this is transmission and",
+        "start": 3268.869,
+        "duration": 5.13
+    },
+    {
+        "text": "variant the way I'm using grid cells.",
+        "start": 3273.999,
+        "duration": 2.43
+    },
+    {
+        "text": "Jeff, were you asking something?",
+        "start": 3279.384,
+        "duration": 1.23
+    },
+    {
+        "text": "You were, I was, just\nmaking a funny comment.",
+        "start": 3280.614,
+        "duration": 2.34
+    },
+    {
+        "text": "He said There's only four objects.",
+        "start": 3282.954,
+        "duration": 1.11
+    },
+    {
+        "text": "Object 75 and object 45.",
+        "start": 3284.634,
+        "duration": 1.95
+    },
+    {
+        "text": "it, I get it is funny.",
+        "start": 3288.269,
+        "duration": 3.325
+    },
+    {
+        "text": "So on the first sensation or first\ndata point, how does the grid code",
+        "start": 3293.664,
+        "duration": 5.46
+    },
+    {
+        "text": "activations get established or, so the,\nin the very beginning, the grid cell I",
+        "start": 3299.454,
+        "duration": 5.22
+    },
+    {
+        "text": "anchors at a completely random point.",
+        "start": 3304.674,
+        "duration": 1.71
+    },
+    {
+        "text": "so what do you mean by point, not point\nhere, point in the grid cell space.",
+        "start": 3307.344,
+        "duration": 4.92
+    },
+    {
+        "text": "You anchor somewhere randomly\nin that point then you hang on.",
+        "start": 3312.924,
+        "duration": 3.42
+    },
+    {
+        "text": "Are you talking about inference\nor training inference, yeah.",
+        "start": 3316.344,
+        "duration": 3.9
+    },
+    {
+        "text": "In inference, in both inference.",
+        "start": 3320.514,
+        "duration": 2.16
+    },
+    {
+        "text": "That's not what happens at inference.",
+        "start": 3322.674,
+        "duration": 1.32
+    },
+    {
+        "text": "Okay.",
+        "start": 3325.314,
+        "duration": 0.36
+    },
+    {
+        "text": "How does that inference do not, do you\nnot activate a random point in the grid",
+        "start": 3325.674,
+        "duration": 4.62
+    },
+    {
+        "text": "space, compute displacement to that point?",
+        "start": 3330.294,
+        "duration": 2.49
+    },
+    {
+        "text": "No, at the start of inference, the first\nsensation will activate, so let's say like",
+        "start": 3334.794,
+        "duration": 5.73
+    },
+    {
+        "text": "columns two, seven and 20 of the, or like\nminicolumns, those ones receive inputs.",
+        "start": 3340.524,
+        "duration": 6.36
+    },
+    {
+        "text": "All of the sensory cells are going to\nbecome active in those, minicolumns.",
+        "start": 3347.304,
+        "duration": 3.87
+    },
+    {
+        "text": "'cause you don't have any\nprediction because you don't",
+        "start": 3351.354,
+        "duration": 2.13
+    },
+    {
+        "text": "have a location representation.",
+        "start": 3353.484,
+        "duration": 1.59
+    },
+    {
+        "text": "And then all of those cells will have\nsome learned association with a grid cell.",
+        "start": 3356.064,
+        "duration": 4.68
+    },
+    {
+        "text": "And so they're gonna, that\ninput is gonna drive a bunch",
+        "start": 3361.644,
+        "duration": 3.9
+    },
+    {
+        "text": "of grid cells to become active.",
+        "start": 3365.544,
+        "duration": 1.23
+    },
+    {
+        "text": "And then on the next step, all\nthose grid cells are gonna be",
+        "start": 3367.644,
+        "duration": 2.52
+    },
+    {
+        "text": "updated with path integration.",
+        "start": 3370.164,
+        "duration": 1.14
+    },
+    {
+        "text": "They predict next sensation.",
+        "start": 3371.304,
+        "duration": 1.26
+    },
+    {
+        "text": "And then hopefully at this\npoint is when you get the,",
+        "start": 3372.774,
+        "duration": 2.34
+    },
+    {
+        "text": "paring down of representations.",
+        "start": 3375.684,
+        "duration": 2.07
+    },
+    {
+        "text": "Ah, okay.",
+        "start": 3378.834,
+        "duration": 1.11
+    },
+    {
+        "text": "That is a nuance that I might\nnot have implemented then.",
+        "start": 3379.944,
+        "duration": 2.31
+    },
+    {
+        "text": "yeah.",
+        "start": 3384.024,
+        "duration": 0.33
+    },
+    {
+        "text": "Other worries.",
+        "start": 3384.354,
+        "duration": 0.39
+    },
+    {
+        "text": "Abhi, this, you were, you had to do a\nlot of stuff and only a couple days on.",
+        "start": 3384.774,
+        "duration": 4.95
+    },
+    {
+        "text": "Yeah.",
+        "start": 3390.384,
+        "duration": 0.18
+    },
+    {
+        "text": "Don't worry.",
+        "start": 3390.564,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 3391.434,
+        "duration": 0.45
+    },
+    {
+        "text": "So that would be translation\nand rotation and variant, right?",
+        "start": 3392.979,
+        "duration": 2.94
+    },
+    {
+        "text": "Not rotation, just translation.",
+        "start": 3395.944,
+        "duration": 2.015
+    },
+    {
+        "text": "it, I think it's a general question\nis you just don't know your location.",
+        "start": 3399.429,
+        "duration": 3.96
+    },
+    {
+        "text": "You have to infer what the right\nanchoring of the grid cells, regardless",
+        "start": 3403.389,
+        "duration": 4.38
+    },
+    {
+        "text": "of what they're representing.",
+        "start": 3407.769,
+        "duration": 0.96
+    },
+    {
+        "text": "And you weren't Yeah, I,\nguess what, I'm sorry.",
+        "start": 3409.929,
+        "duration": 3.69
+    },
+    {
+        "text": "You just, you weren't narrowing down the\npossible set of active grid cells, which",
+        "start": 3414.099,
+        "duration": 3.99
+    },
+    {
+        "text": "is I think what the general idea is.",
+        "start": 3418.089,
+        "duration": 3.24
+    },
+    {
+        "text": "Yeah.",
+        "start": 3422.329,
+        "duration": 0.21
+    },
+    {
+        "text": "And just I guess regarding what you\nwere saying, Phil, yeah, my mind at",
+        "start": 3422.689,
+        "duration": 5.13
+    },
+    {
+        "text": "least, rotation in variance doesn't\nfall out automatically because you",
+        "start": 3427.819,
+        "duration": 3.45
+    },
+    {
+        "text": "don't necessarily know how you're\nmoving relative to the features",
+        "start": 3431.269,
+        "duration": 5.04
+    },
+    {
+        "text": "and your learned representation.",
+        "start": 3436.309,
+        "duration": 1.38
+    },
+    {
+        "text": "so you either need to kind\nof test lots of possible.",
+        "start": 3440.479,
+        "duration": 2.4
+    },
+    {
+        "text": "That you could have relative to the\nobject or, try and infer that somehow.",
+        "start": 3443.929,
+        "duration": 3.84
+    },
+    {
+        "text": "I see.",
+        "start": 3449.509,
+        "duration": 0.3
+    },
+    {
+        "text": "But, translation in\nvariance should be Yeah.",
+        "start": 3450.079,
+        "duration": 1.68
+    },
+    {
+        "text": "automatic.",
+        "start": 3451.999,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay.",
+        "start": 3453.389,
+        "duration": 0.29
+    },
+    {
+        "text": "yeah, so this is, I guess\nlike the last slide.",
+        "start": 3454.679,
+        "duration": 2.07
+    },
+    {
+        "text": "this is just based off of the experience\nthat I was running, what I think",
+        "start": 3457.649,
+        "duration": 2.46
+    },
+    {
+        "text": "could be interesting to do next.",
+        "start": 3460.109,
+        "duration": 1.59
+    },
+    {
+        "text": "the first is probably some kind\nof intelligent action selection.",
+        "start": 3463.559,
+        "duration": 2.73
+    },
+    {
+        "text": "We've been talking about this a\nlot, but it seems useful here.",
+        "start": 3466.289,
+        "duration": 3.45
+    },
+    {
+        "text": "instead of having those naive paths that\nI collected during training, I could",
+        "start": 3470.939,
+        "duration": 3.9
+    },
+    {
+        "text": "possibly do some kind of action selection\nto maximize the most information gain, and",
+        "start": 3474.839,
+        "duration": 6.06
+    },
+    {
+        "text": "also probably more realistic grid self.",
+        "start": 3481.199,
+        "duration": 2.28
+    },
+    {
+        "text": "architectures instead of the groups\nthat I created here, it feels almost",
+        "start": 3484.529,
+        "duration": 3.93
+    },
+    {
+        "text": "inefficient to use this many grid\ncell modules to reconstruct 3D space.",
+        "start": 3488.459,
+        "duration": 3.42
+    },
+    {
+        "text": "I was talking with Viviane about\nthis yesterday, about an idea.",
+        "start": 3493.499,
+        "duration": 2.94
+    },
+    {
+        "text": "I think Jeff, you and Viviane were talking\nabout this briefly, maybe unwrapping 3D",
+        "start": 3497.669,
+        "duration": 4.68
+    },
+    {
+        "text": "meshes of objects into 2D sheets and using\ngrid cells in standard two dimensions.",
+        "start": 3502.349,
+        "duration": 4.74
+    },
+    {
+        "text": "and I was thinking about this maybe a bit\nfurther too, where, if that unwrapping is",
+        "start": 3507.839,
+        "duration": 3.36
+    },
+    {
+        "text": "really challenging, you can just project\nit onto view spheres, which I think Niels",
+        "start": 3511.199,
+        "duration": 4.02
+    },
+    {
+        "text": "was describing maybe 3, 3, 4 months ago.",
+        "start": 3515.219,
+        "duration": 2.31
+    },
+    {
+        "text": "And just deterministically, unwrap\nthe sphere, which is, that's a known,",
+        "start": 3517.829,
+        "duration": 3.69
+    },
+    {
+        "text": "there's a known solution to that problem.",
+        "start": 3521.579,
+        "duration": 1.62
+    },
+    {
+        "text": "and you could just, I think\nboth, have challenges.",
+        "start": 3524.364,
+        "duration": 2.825
+    },
+    {
+        "text": "So yeah, there's, you can unwrap\nthe sphere, but then you have to",
+        "start": 3527.429,
+        "duration": 4.41
+    },
+    {
+        "text": "pick your distortions and you lose\nangle or you use area, mapping",
+        "start": 3531.839,
+        "duration": 5.76
+    },
+    {
+        "text": "is, it's just a known problem.",
+        "start": 3537.929,
+        "duration": 1.83
+    },
+    {
+        "text": "It's a sphere is not a, what they call it.",
+        "start": 3539.759,
+        "duration": 2.745
+    },
+    {
+        "text": "Composable, but there's a, there's\na problem with, projection.",
+        "start": 3544.444,
+        "duration": 5.185
+    },
+    {
+        "text": "Yeah.",
+        "start": 3550.079,
+        "duration": 0.15
+    },
+    {
+        "text": "That's an intrinsic curvature.",
+        "start": 3550.229,
+        "duration": 1.47
+    },
+    {
+        "text": "You cannot, yeah.",
+        "start": 3551.699,
+        "duration": 0.78
+    },
+    {
+        "text": "I think, Viviane and I were talking\nabout an idea that, I wouldn't say it",
+        "start": 3552.749,
+        "duration": 3.84
+    },
+    {
+        "text": "was brief, it was pretty complicated\nand long, but, how you can have locally",
+        "start": 3556.589,
+        "duration": 6.54
+    },
+    {
+        "text": "2D you, you assume that locally in 2D\neverything is plainer, but, the over",
+        "start": 3563.969,
+        "duration": 7.415
+    },
+    {
+        "text": "longer distances, it's not at all.",
+        "start": 3571.384,
+        "duration": 1.77
+    },
+    {
+        "text": "And so how could you represent, complex,\nshapes using grid cell type mechanisms,",
+        "start": 3573.394,
+        "duration": 7.17
+    },
+    {
+        "text": "but you just have to assume, there's\na way, it seemed like there was a",
+        "start": 3580.564,
+        "duration": 4.68
+    },
+    {
+        "text": "way of doing it where, you just, you\ncan't make long distance movements.",
+        "start": 3585.244,
+        "duration": 6.06
+    },
+    {
+        "text": "You reliably have to local movements you\nassume are linear or close to linear.",
+        "start": 3591.304,
+        "duration": 5.58
+    },
+    {
+        "text": "It's a long topic.",
+        "start": 3597.694,
+        "duration": 0.99
+    },
+    {
+        "text": "but it wasn't a simple idea I was trying\nto pick up was a developable surface.",
+        "start": 3599.524,
+        "duration": 6.03
+    },
+    {
+        "text": "that's one that can be mapped\nto a plane without distortion.",
+        "start": 3606.304,
+        "duration": 2.58
+    },
+    {
+        "text": "What was it, what was the\nwords you used there, Kevin?",
+        "start": 3609.754,
+        "duration": 2.07
+    },
+    {
+        "text": "I'm trying to make an\nadjective out develop.",
+        "start": 3612.634,
+        "duration": 1.795
+    },
+    {
+        "text": "oh, okay.",
+        "start": 3615.929,
+        "duration": 0.42
+    },
+    {
+        "text": "Developable lovable.",
+        "start": 3617.579,
+        "duration": 2.61
+    },
+    {
+        "text": "Yeah.",
+        "start": 3620.539,
+        "duration": 0.29
+    },
+    {
+        "text": "So that's, there, there are some\nsurfaces that you can, unfold onto",
+        "start": 3621.209,
+        "duration": 5.495
+    },
+    {
+        "text": "a, onto a plane without distortion.",
+        "start": 3626.704,
+        "duration": 2.43
+    },
+    {
+        "text": "This is, yeah, this is, I think probably\neven more complex than that because we're",
+        "start": 3629.979,
+        "duration": 5.035
+    },
+    {
+        "text": "trying to take any kind of surface anyway.",
+        "start": 3635.014,
+        "duration": 3.57
+    },
+    {
+        "text": "What we were trying to do is understand\nhow, if we just accept the fact that",
+        "start": 3638.614,
+        "duration": 4.74
+    },
+    {
+        "text": "we don't really have, apparently\ndon't have 3D grid cell modules.",
+        "start": 3643.354,
+        "duration": 3.03
+    },
+    {
+        "text": "There's no, evidence that they work like\ngrid cell modules when you're in 3D.",
+        "start": 3647.344,
+        "duration": 2.985
+    },
+    {
+        "text": "Then, how could this actually,\nhow could you actually learn",
+        "start": 3652.819,
+        "duration": 3.315
+    },
+    {
+        "text": "three dimensional objects?",
+        "start": 3656.464,
+        "duration": 1.08
+    },
+    {
+        "text": "And, so that was the\nchallenge we were looking at.",
+        "start": 3657.664,
+        "duration": 2.76
+    },
+    {
+        "text": "Okay.",
+        "start": 3661.424,
+        "duration": 0.48
+    },
+    {
+        "text": "that's it.",
+        "start": 3662.444,
+        "duration": 0.51
+    },
+    {
+        "text": "That's it.",
+        "start": 3664.184,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 3664.814,
+        "duration": 0.21
+    },
+    {
+        "text": "Thanks.",
+        "start": 3667.544,
+        "duration": 0.3
+    },
+    {
+        "text": "I wanna seeky pig.",
+        "start": 3669.284,
+        "duration": 1.29
+    },
+    {
+        "text": "Where's for pig?",
+        "start": 3670.574,
+        "duration": 0.87
+    },
+    {
+        "text": "He's supposed to come.",
+        "start": 3671.444,
+        "duration": 0.54
+    }
+]

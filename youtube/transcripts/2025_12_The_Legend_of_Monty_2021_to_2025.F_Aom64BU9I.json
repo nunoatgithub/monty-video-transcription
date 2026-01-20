@@ -1,0 +1,1607 @@
+[
+    {
+        "text": "Viviane Clay: Alright, thanks.",
+        "start": 8.582,
+        "duration": 0.96
+    },
+    {
+        "text": "Yeah, welcome everyone.",
+        "start": 9.592,
+        "duration": 1.23
+    },
+    {
+        "text": "I'm Vivian Clay, Director of\nthe Thousand Brains Project.",
+        "start": 11.112,
+        "duration": 3.07
+    },
+    {
+        "text": "And today, we hope to give you\na high-level overview of the",
+        "start": 14.802,
+        "duration": 3.31
+    },
+    {
+        "text": "Thousand Brains Project and the\nnew type of AI that we're building.",
+        "start": 18.112,
+        "duration": 3.35
+    },
+    {
+        "text": "And so we set up a\nseries of 9 short talks.",
+        "start": 22.212,
+        "duration": 2.97
+    },
+    {
+        "text": "So everyone from our team will present\na different aspect of the project.",
+        "start": 25.192,
+        "duration": 4.74
+    },
+    {
+        "text": "Not all talks have the same length,\nso don't worry if by the halfway mark",
+        "start": 31.562,
+        "duration": 3.95
+    },
+    {
+        "text": "we're not through half of the talks.",
+        "start": 35.512,
+        "duration": 1.5
+    },
+    {
+        "text": "Overall, it will take, about 2 hours,\nbut, in case you have to drop off at any",
+        "start": 37.512,
+        "duration": 4.81
+    },
+    {
+        "text": "point, we're also recording this meeting.",
+        "start": 42.322,
+        "duration": 1.67
+    },
+    {
+        "text": "If you have any questions, feel free to\npost them throughout in the Q&A section,",
+        "start": 44.802,
+        "duration": 5.48
+    },
+    {
+        "text": "and then we will answer them in the end.",
+        "start": 50.802,
+        "duration": 2.25
+    },
+    {
+        "text": "And you can also upvote other people's\nquestions if you find them interesting.",
+        "start": 53.142,
+        "duration": 3.61
+    },
+    {
+        "text": "So",
+        "start": 56.762,
+        "duration": 0.02
+    },
+    {
+        "text": "yeah, we hope that you'll walk away\nfrom today's talk series with interest",
+        "start": 58.802,
+        "duration": 4.28
+    },
+    {
+        "text": "and excitement about what we're doing.",
+        "start": 63.082,
+        "duration": 1.65
+    },
+    {
+        "text": "And there are many ways\nin which you can help us.",
+        "start": 65.482,
+        "duration": 2.85
+    },
+    {
+        "text": "You can contribute code, build\napplications, or tell others",
+        "start": 68.332,
+        "duration": 2.93
+    },
+    {
+        "text": "about the Thousand Brains Project.",
+        "start": 71.272,
+        "duration": 1.42
+    },
+    {
+        "text": "We think that, yeah, what we're\ncreating is really exciting and",
+        "start": 73.502,
+        "duration": 2.93
+    },
+    {
+        "text": "important, and we hope you'll feel\nthe same way at the end of this.",
+        "start": 76.562,
+        "duration": 4.22
+    },
+    {
+        "text": "Just a brief intro of what the\nThousand Brains Project is, in case",
+        "start": 83.172,
+        "duration": 3.54
+    },
+    {
+        "text": "you haven't heard much about us yet.",
+        "start": 86.712,
+        "duration": 1.93
+    },
+    {
+        "text": "The Thousand Brains Project is a\nnon-profit company that was created",
+        "start": 89.292,
+        "duration": 3.38
+    },
+    {
+        "text": "at the beginning of this year.",
+        "start": 92.702,
+        "duration": 1.42
+    },
+    {
+        "text": "And we believe that the future\nof AI and robotics will be",
+        "start": 94.822,
+        "duration": 3.39
+    },
+    {
+        "text": "based on sensorimotor learning.",
+        "start": 98.282,
+        "duration": 1.71
+    },
+    {
+        "text": "And so we're building a\nsensorimotor AI platform.",
+        "start": 100.622,
+        "duration": 2.56
+    },
+    {
+        "text": "We call it Monty, so if you hear the\nterm Monty throughout today's talks,",
+        "start": 103.392,
+        "duration": 3.92
+    },
+    {
+        "text": "that's what we call our AI platform.",
+        "start": 107.822,
+        "duration": 1.79
+    },
+    {
+        "text": "And this is a new type of machine\nintelligence based on the principles",
+        "start": 110.462,
+        "duration": 3.84
+    },
+    {
+        "text": "of the neocortex, as laid out\nin the Thousand Brains theory.",
+        "start": 114.312,
+        "duration": 3.83
+    },
+    {
+        "text": "It's not deep learning, it's not LLMs,\nit's really a different type of AI that's",
+        "start": 118.572,
+        "duration": 4.78
+    },
+    {
+        "text": "specifically designed for sensorimotor\nlearning, super efficient, both in",
+        "start": 123.362,
+        "duration": 4.67
+    },
+    {
+        "text": "terms of energy use and data use.",
+        "start": 128.032,
+        "duration": 2.29
+    },
+    {
+        "text": "Can do continual learning and\na bunch of other exciting stuff",
+        "start": 130.812,
+        "duration": 2.8
+    },
+    {
+        "text": "that our brain can do, and you'll\nhear a lot about that later.",
+        "start": 133.642,
+        "duration": 3.56
+    },
+    {
+        "text": "And we also want to make it accessible\nto anyone, so it's, everything is open",
+        "start": 138.162,
+        "duration": 4.47
+    },
+    {
+        "text": "source, we upload all our meetings\non YouTube, associated patents are",
+        "start": 142.632,
+        "duration": 4.77
+    },
+    {
+        "text": "under a non-assert pledge, and we're\ntrying to build a really vibrant",
+        "start": 147.402,
+        "duration": 3.67
+    },
+    {
+        "text": "community around this project, and\nreally build this together with",
+        "start": 151.072,
+        "duration": 3.0
+    },
+    {
+        "text": "all of you, if you're interested.",
+        "start": 154.502,
+        "duration": 1.3
+    },
+    {
+        "text": "And, yeah, a lot of talks later will also\ntouch about this part of the project.",
+        "start": 157.892,
+        "duration": 4.48
+    },
+    {
+        "text": "But to start, let me tell you the\nstory of this special project,",
+        "start": 163.922,
+        "duration": 3.13
+    },
+    {
+        "text": "and what we're doing, and how\nwe got to where we are today.",
+        "start": 167.052,
+        "duration": 2.72
+    },
+    {
+        "text": "And to tell this story, I'll\nuse a fun visual analogy.",
+        "start": 170.372,
+        "duration": 3.45
+    },
+    {
+        "text": "we often talk about how the brain\nuses reference frames to efficiently",
+        "start": 174.992,
+        "duration": 3.25
+    },
+    {
+        "text": "represent structured knowledge.",
+        "start": 178.242,
+        "duration": 1.59
+    },
+    {
+        "text": "And you can think of reference frames\nas coordinate systems, or maps, that",
+        "start": 180.332,
+        "duration": 4.45
+    },
+    {
+        "text": "represent how different things in\nthe world are related to each other.",
+        "start": 184.782,
+        "duration": 3.18
+    },
+    {
+        "text": "And here I will use a map as my reference\nframe to lay out the structure of the",
+        "start": 188.542,
+        "duration": 4.19
+    },
+    {
+        "text": "project, and I hope it helps you follow\nalong, or is at least an entertaining",
+        "start": 192.732,
+        "duration": 5.1
+    },
+    {
+        "text": "way to hear the story of the project.",
+        "start": 197.832,
+        "duration": 2.21
+    },
+    {
+        "text": "So without further ado,\nhere's the legend of Monty.",
+        "start": 201.032,
+        "duration": 3.0
+    },
+    {
+        "text": "On a foggy October morning, the\ncrew at Numenta, which is where",
+        "start": 206.292,
+        "duration": 3.76
+    },
+    {
+        "text": "this project started, arrived\nat the shores of Monty Island.",
+        "start": 210.052,
+        "duration": 3.04
+    },
+    {
+        "text": "We didn't know much about this\nisland, but the captain of the ship,",
+        "start": 213.912,
+        "duration": 3.55
+    },
+    {
+        "text": "Jeff Hawkins, had a clear vision.",
+        "start": 217.482,
+        "duration": 1.61
+    },
+    {
+        "text": "One, that we can reverse\nengineer the brain.",
+        "start": 219.912,
+        "duration": 2.48
+    },
+    {
+        "text": "And two, that machine intelligence,\nbased on the brain's principles,",
+        "start": 223.202,
+        "duration": 4.0
+    },
+    {
+        "text": "will be the most important\ntechnology of the 21st century.",
+        "start": 227.202,
+        "duration": 3.08
+    },
+    {
+        "text": "And with that vision we started\nout to explore this island.",
+        "start": 231.092,
+        "duration": 4.24
+    },
+    {
+        "text": "We also had a really useful compass,\nwhich is the Thousand Brains Theory.",
+        "start": 236.212,
+        "duration": 4.5
+    },
+    {
+        "text": "And through almost 20 years of studying\nthe brain, this theory was developed,",
+        "start": 241.022,
+        "duration": 4.43
+    },
+    {
+        "text": "and we used the principles as a guide.",
+        "start": 245.632,
+        "duration": 2.56
+    },
+    {
+        "text": "Scott will talk more about those\nprinciples later, but just at a",
+        "start": 248.682,
+        "duration": 2.87
+    },
+    {
+        "text": "very high level to give you an\nidea of what those are, one is",
+        "start": 251.552,
+        "duration": 4.19
+    },
+    {
+        "text": "sensorimotor learning, so everything\nis about learning through movement.",
+        "start": 255.742,
+        "duration": 3.91
+    },
+    {
+        "text": "Our eyes move about 3 times a\nsecond, our whole bodies move.",
+        "start": 259.692,
+        "duration": 3.81
+    },
+    {
+        "text": "There's really no intelligence on\nthis planet that doesn't move around.",
+        "start": 263.612,
+        "duration": 3.48
+    },
+    {
+        "text": "Everything about the system\nis about learning through",
+        "start": 268.662,
+        "duration": 1.99
+    },
+    {
+        "text": "interacting with the world.",
+        "start": 270.652,
+        "duration": 1.15
+    },
+    {
+        "text": "Second, having a general repeatable\nprocessing unit, modeled after",
+        "start": 273.162,
+        "duration": 4.66
+    },
+    {
+        "text": "cortical columns in the neocortex.",
+        "start": 277.862,
+        "duration": 3.09
+    },
+    {
+        "text": "Third, local information and learning.",
+        "start": 280.982,
+        "duration": 2.66
+    },
+    {
+        "text": "So each of these general processing\nunits only receives very local",
+        "start": 283.792,
+        "duration": 4.08
+    },
+    {
+        "text": "information about a small patch on\nthe retina or a small patch of skin,",
+        "start": 287.872,
+        "duration": 4.1
+    },
+    {
+        "text": "and there's no big picture anywhere.",
+        "start": 291.992,
+        "duration": 2.21
+    },
+    {
+        "text": "And also, learning isn't the kind\nof global process, but very local.",
+        "start": 294.712,
+        "duration": 4.73
+    },
+    {
+        "text": "And fourth, reference frames, so what\nI mentioned earlier, a way to represent",
+        "start": 300.392,
+        "duration": 4.9
+    },
+    {
+        "text": "how knowledge relates to each other.",
+        "start": 305.302,
+        "duration": 1.59
+    },
+    {
+        "text": "And these principles have served us really\nso far as we were exploring this island,",
+        "start": 309.022,
+        "duration": 4.43
+    },
+    {
+        "text": "and we've been using it as a good compass\non any kind of decision point throughout.",
+        "start": 313.852,
+        "duration": 5.18
+    },
+    {
+        "text": "Based on those principles, we build a\nbasic framework for a new AI system,",
+        "start": 320.502,
+        "duration": 3.86
+    },
+    {
+        "text": "and we call it Monty, after Vernon\nMountcastle, neuroscientist that",
+        "start": 324.412,
+        "duration": 4.51
+    },
+    {
+        "text": "first proposed the idea of the general\nrepeatable processing unit in the brain.",
+        "start": 328.932,
+        "duration": 5.61
+    },
+    {
+        "text": "Next, we set out to build\nthe components of Monty.",
+        "start": 337.442,
+        "duration": 2.72
+    },
+    {
+        "text": "We set up a first settlement\nto construct learning modules.",
+        "start": 340.502,
+        "duration": 3.21
+    },
+    {
+        "text": "And we constructed them, after\nwhat's known about cortical",
+        "start": 344.302,
+        "duration": 3.85
+    },
+    {
+        "text": "columns and their architecture and",
+        "start": 348.152,
+        "duration": 1.76
+    },
+    {
+        "text": "connectivity.",
+        "start": 352.902,
+        "duration": 0.01
+    },
+    {
+        "text": "Another settlement specialized in\nthe construction of sensor modules.",
+        "start": 352.972,
+        "duration": 3.61
+    },
+    {
+        "text": "Sensor modules are basically the\ninterface between Monty and the world.",
+        "start": 357.772,
+        "duration": 3.45
+    },
+    {
+        "text": "They take in raw sensory data from\nany kind of modality and translate",
+        "start": 361.272,
+        "duration": 3.91
+    },
+    {
+        "text": "it into a message, into a language\nthat learning modules can understand.",
+        "start": 365.182,
+        "duration": 4.03
+    },
+    {
+        "text": "And we also had to define the\nconnectivity between learning",
+        "start": 371.282,
+        "duration": 2.52
+    },
+    {
+        "text": "modules and sensor modules.",
+        "start": 373.802,
+        "duration": 1.42
+    },
+    {
+        "text": "And so we defined a set of traffic\nrules for messages sent between sensor",
+        "start": 375.922,
+        "duration": 3.73
+    },
+    {
+        "text": "modules and learning modules within\nthe Monty framework, and we call",
+        "start": 379.652,
+        "duration": 4.13
+    },
+    {
+        "text": "that the Cortical messaging protocol.",
+        "start": 383.782,
+        "duration": 1.93
+    },
+    {
+        "text": "We iterated on the learning module design.",
+        "start": 387.602,
+        "duration": 2.03
+    },
+    {
+        "text": "Several times.",
+        "start": 390.212,
+        "duration": 0.87
+    },
+    {
+        "text": "Until an individual learning\nmodule could achieve robust",
+        "start": 391.842,
+        "duration": 3.25
+    },
+    {
+        "text": "object and pose recognition.",
+        "start": 395.172,
+        "duration": 1.55
+    },
+    {
+        "text": "So we could learn an object taking\none path along the object, and then do",
+        "start": 397.332,
+        "duration": 4.34
+    },
+    {
+        "text": "inference on the object in a totally new\norientation, taking a never-before-taken",
+        "start": 401.682,
+        "duration": 4.62
+    },
+    {
+        "text": "path on the object, under noisy\nconditions, which is pretty cool.",
+        "start": 406.302,
+        "duration": 3.38
+    },
+    {
+        "text": "We call this the Evidence Learning\nModule and still use it today.",
+        "start": 410.532,
+        "duration": 3.02
+    },
+    {
+        "text": "Over time, we improved\nsensor module capabilities.",
+        "start": 415.552,
+        "duration": 2.64
+    },
+    {
+        "text": "And built a new settlement specialized\nin the design of intelligent policies.",
+        "start": 418.802,
+        "duration": 4.19
+    },
+    {
+        "text": "thus far, Monty moved largely random, but\nby now, we have several more sophisticated",
+        "start": 423.932,
+        "duration": 7.12
+    },
+    {
+        "text": "model-free and model-based policies that\nMonty can use to efficiently explore",
+        "start": 431.082,
+        "duration": 4.45
+    },
+    {
+        "text": "the world using either the sensory input\nor its learned models and hypotheses.",
+        "start": 435.532,
+        "duration": 3.827
+    },
+    {
+        "text": "A",
+        "start": 439.359,
+        "duration": 0.003
+    },
+    {
+        "text": "new monastery in the forest\nstarted investigating scaling the",
+        "start": 444.032,
+        "duration": 3.16
+    },
+    {
+        "text": "system to more learning modules.",
+        "start": 447.192,
+        "duration": 1.77
+    },
+    {
+        "text": "They implemented and tested the\nfirst versions of voting between",
+        "start": 450.222,
+        "duration": 3.48
+    },
+    {
+        "text": "learning modules to reach rapid\nconsensus during inference.",
+        "start": 453.702,
+        "duration": 3.61
+    },
+    {
+        "text": "Settlement with craftsmen specializing\non optimizing the implementation, led",
+        "start": 459.902,
+        "duration": 4.48
+    },
+    {
+        "text": "to significant speedups of the system.",
+        "start": 464.382,
+        "duration": 2.12
+    },
+    {
+        "text": "Another scouting party ventured off\nto explore the possibility of stacking",
+        "start": 468.652,
+        "duration": 3.63
+    },
+    {
+        "text": "learning modules on top of each other to\nlearn more complex compositional models.",
+        "start": 472.282,
+        "duration": 4.51
+    },
+    {
+        "text": "Through hierarchy.",
+        "start": 478.242,
+        "duration": 0.88
+    },
+    {
+        "text": "We also ventured out to the\nlake and tested the innovations",
+        "start": 481.822,
+        "duration": 4.53
+    },
+    {
+        "text": "so far in the real world.",
+        "start": 486.352,
+        "duration": 1.86
+    },
+    {
+        "text": "This was a week-long hackathon, we termed\nthe project Monty Meets World, and it was",
+        "start": 489.662,
+        "duration": 4.75
+    },
+    {
+        "text": "really exciting to see Monty work outside\nof the simulator for the first time.",
+        "start": 494.412,
+        "duration": 4.58
+    },
+    {
+        "text": "We could put an object in front of\nan iPad camera and recognize it, and",
+        "start": 499.832,
+        "duration": 4.9
+    },
+    {
+        "text": "that felt really special at the time.",
+        "start": 504.762,
+        "duration": 1.55
+    },
+    {
+        "text": "After a lot of the initial infrastructure\nwas put down, we had convinced",
+        "start": 508.542,
+        "duration": 3.94
+    },
+    {
+        "text": "ourselves that this actually works.",
+        "start": 512.482,
+        "duration": 1.76
+    },
+    {
+        "text": "But we have to return to the mainland\nto help on some larger projects there",
+        "start": 515.702,
+        "duration": 3.26
+    },
+    {
+        "text": "and find more resources to return with.",
+        "start": 518.962,
+        "duration": 1.89
+    },
+    {
+        "text": "And after about a year passed, in\nmid-2024, a small team returned back",
+        "start": 521.612,
+        "duration": 5.95
+    },
+    {
+        "text": "to Monty's Island, and the Thousand\nBrains project was officially announced.",
+        "start": 527.562,
+        "duration": 3.34
+    },
+    {
+        "text": "With funding from the Gates\nFoundation, as well as the Korean",
+        "start": 531.582,
+        "duration": 2.75
+    },
+    {
+        "text": "Electronics Technology Institute.",
+        "start": 534.352,
+        "duration": 1.65
+    },
+    {
+        "text": "We grew the team from 2 full-time\nemployees to 8 full-time employees.",
+        "start": 538.052,
+        "duration": 4.51
+    },
+    {
+        "text": "All of you will hear\nfrom all of them today.",
+        "start": 543.232,
+        "duration": 2.02
+    },
+    {
+        "text": "And additionally, we decided to broadcast\nthe existence of this wonderful island.",
+        "start": 546.972,
+        "duration": 4.43
+    },
+    {
+        "text": "And all the work we're doing here.",
+        "start": 552.032,
+        "duration": 1.72
+    },
+    {
+        "text": "And so for that, we set up a small harbor\nvillage in the south of the island,",
+        "start": 554.632,
+        "duration": 3.69
+    },
+    {
+        "text": "where ships from the mainland could\neasily talk in the hopes to build a",
+        "start": 559.102,
+        "duration": 3.38
+    },
+    {
+        "text": "welcoming community around the project.",
+        "start": 562.482,
+        "duration": 2.01
+    },
+    {
+        "text": "Next to the small community, we\nset up a lighthouse to send out",
+        "start": 566.672,
+        "duration": 3.47
+    },
+    {
+        "text": "messages to the boat nearby.",
+        "start": 570.142,
+        "duration": 1.55
+    },
+    {
+        "text": "And this way, we could publish all\nof our past year's advances, and",
+        "start": 572.422,
+        "duration": 4.1
+    },
+    {
+        "text": "interested people could stop by in\nthe Harbor Village to learn more.",
+        "start": 576.522,
+        "duration": 3.22
+    },
+    {
+        "text": "We took our private framework code,\ncleaned it up, and published it under",
+        "start": 581.112,
+        "duration": 3.985
+    },
+    {
+        "text": "the extremely permissive MIT license.",
+        "start": 585.252,
+        "duration": 2.36
+    },
+    {
+        "text": "And also put all related patents\nunder a non-assert pledge, so",
+        "start": 588.812,
+        "duration": 4.74
+    },
+    {
+        "text": "allowing anyone to build on this new\napproach, commercial or otherwise.",
+        "start": 593.552,
+        "duration": 3.68
+    },
+    {
+        "text": "And with the announcement of the project,\nfirst boats started to arrive on the",
+        "start": 599.042,
+        "duration": 3.59
+    },
+    {
+        "text": "shores of the southern community.",
+        "start": 602.632,
+        "duration": 2.18
+    },
+    {
+        "text": "In December 2024, so about this time\nlast year, we hosted our first community",
+        "start": 605.812,
+        "duration": 4.95
+    },
+    {
+        "text": "event around the lighthouse, and today\nwe hope to continue this tradition.",
+        "start": 610.762,
+        "duration": 3.77
+    },
+    {
+        "text": "We also published a white paper\ndescribing the goals of the",
+        "start": 616.542,
+        "duration": 2.7
+    },
+    {
+        "text": "project and the principles of the\nimplementation and the algorithm.",
+        "start": 619.242,
+        "duration": 4.12
+    },
+    {
+        "text": "Additionally, we put together\na range of other resources for",
+        "start": 625.402,
+        "duration": 3.22
+    },
+    {
+        "text": "people who newly arrives on Monty's\nIsland, a lot of documentation.",
+        "start": 628.622,
+        "duration": 5.17
+    },
+    {
+        "text": "YouTube channel, where we published\nalmost 150 videos by now, as well as",
+        "start": 634.792,
+        "duration": 4.57
+    },
+    {
+        "text": "a discourse channel, where people can\nexchange ideas and ask questions on our",
+        "start": 639.362,
+        "duration": 4.77
+    },
+    {
+        "text": "forum, and our team will, answer you guys.",
+        "start": 644.132,
+        "duration": 2.96
+    },
+    {
+        "text": "On January 1st, the Thousand\nBrains Project officially started",
+        "start": 650.492,
+        "duration": 3.67
+    },
+    {
+        "text": "operating as an independent\nnonprofit, separate from Numenta.",
+        "start": 654.202,
+        "duration": 3.21
+    },
+    {
+        "text": "And, we have a 501c status, meaning\nthat donations to the projects",
+        "start": 658.122,
+        "duration": 4.42
+    },
+    {
+        "text": "are tax-deductible, and if you're\ninterested in contributing to this",
+        "start": 662.542,
+        "duration": 3.74
+    },
+    {
+        "text": "exciting research that way, you\ncan find more infos on our website.",
+        "start": 666.292,
+        "duration": 3.37
+    },
+    {
+        "text": "As part of our communication efforts,\nwe set up a large watchtower.",
+        "start": 672.142,
+        "duration": 3.83
+    },
+    {
+        "text": "And sent out a team of surveyors to map\nthe settlements on the island so far.",
+        "start": 676.572,
+        "duration": 4.01
+    },
+    {
+        "text": "Surveying, and reporting all the\ninnovations on Monty's Island,",
+        "start": 681.682,
+        "duration": 4.02
+    },
+    {
+        "text": "was a huge effort this year.",
+        "start": 686.552,
+        "duration": 1.45
+    },
+    {
+        "text": "But we're really happy that, ultimately\nwe were able to send an impressive report",
+        "start": 688.892,
+        "duration": 4.28
+    },
+    {
+        "text": "of Monty's capabilities to the mainland.",
+        "start": 693.192,
+        "duration": 2.13
+    },
+    {
+        "text": "This preprint was just accepted at\nNeuralcomputation, a really great",
+        "start": 696.132,
+        "duration": 4.74
+    },
+    {
+        "text": "journal, so you'll be able to see it\nthere soon, or you can check out the",
+        "start": 700.872,
+        "duration": 4.12
+    },
+    {
+        "text": "preprint, and Niels will cover a lot of\nthe exciting results in there in his talk.",
+        "start": 705.002,
+        "duration": 5.09
+    },
+    {
+        "text": "We also added more checkpoints along the\nroads to measure the traffic on them.",
+        "start": 712.102,
+        "duration": 3.51
+    },
+    {
+        "text": "For instance, we added the\nability to measure the amount of",
+        "start": 715.732,
+        "duration": 2.61
+    },
+    {
+        "text": "floating-point operations that Monty\nuses during learning and inference",
+        "start": 718.732,
+        "duration": 3.64
+    },
+    {
+        "text": "to compare it to transformers.",
+        "start": 722.802,
+        "duration": 1.75
+    },
+    {
+        "text": "Later, we also added an observatory on\ntop of the watchtower to make it easier",
+        "start": 726.042,
+        "duration": 4.42
+    },
+    {
+        "text": "to watch what is happening inside the\nlearning modules and Monty's brain.",
+        "start": 730.462,
+        "duration": 3.51
+    },
+    {
+        "text": "And Ramy will tell you a lot more about\nthese cool interactive visualizations",
+        "start": 735.282,
+        "duration": 4.34
+    },
+    {
+        "text": "of Monty's brain in his talk.",
+        "start": 739.642,
+        "duration": 2.08
+    },
+    {
+        "text": "There's a whole repository, if\nyou want to test these yourself.",
+        "start": 742.712,
+        "duration": 4.53
+    },
+    {
+        "text": "All the while, we documented more and\nmore of the project, and broadcast",
+        "start": 748.852,
+        "duration": 4.29
+    },
+    {
+        "text": "new tutorials and explanations in\nour documentation to the Lighthouse.",
+        "start": 753.212,
+        "duration": 3.9
+    },
+    {
+        "text": "And you can find a variety of\ninformation on all the topics around",
+        "start": 757.682,
+        "duration": 3.83
+    },
+    {
+        "text": "the project here, as well as tutorials.",
+        "start": 761.522,
+        "duration": 2.01
+    },
+    {
+        "text": "You can interactively go\nthrough to get started.",
+        "start": 764.432,
+        "duration": 2.38
+    },
+    {
+        "text": "Over the past years of discussing and\ntesting how to model compositional",
+        "start": 769.672,
+        "duration": 3.29
+    },
+    {
+        "text": "models, the theory solidified.",
+        "start": 772.962,
+        "duration": 2.87
+    },
+    {
+        "text": "And so in our recent preprint,\nwe describe the long-range",
+        "start": 776.532,
+        "duration": 3.4
+    },
+    {
+        "text": "connections in the neocortex and\nthe functions that they could serve.",
+        "start": 779.932,
+        "duration": 3.12
+    },
+    {
+        "text": "And it contains a lot of detailed\ndescriptions of our theoretical advances",
+        "start": 783.762,
+        "duration": 3.57
+    },
+    {
+        "text": "over the past years, like the need for\nreference frames, the role of the thalamus",
+        "start": 787.362,
+        "duration": 6.17
+    },
+    {
+        "text": "in this process, as well as, how the\nbrain could be modeling compositional",
+        "start": 794.042,
+        "duration": 4.61
+    },
+    {
+        "text": "objects using hierarchical connections.",
+        "start": 800.822,
+        "duration": 2.47
+    },
+    {
+        "text": "The theory around modeling compositional\nobjects was also turned into actual code",
+        "start": 807.442,
+        "duration": 4.66
+    },
+    {
+        "text": "and tested, so Monty now has the ability\nto stack learning modules hierarchically.",
+        "start": 812.662,
+        "duration": 4.05
+    },
+    {
+        "text": "And we set up new benchmarks and\nmetrics to measure this ability,",
+        "start": 817.362,
+        "duration": 3.33
+    },
+    {
+        "text": "such as this dataset of different\nlogos on different shaped objects.",
+        "start": 821.052,
+        "duration": 4.04
+    },
+    {
+        "text": "And the team of architects is now\nworking on improving this ability through",
+        "start": 826.072,
+        "duration": 4.83
+    },
+    {
+        "text": "various adjustments to sensor modules,\nlearning modules, and the policy.",
+        "start": 830.902,
+        "duration": 4.95
+    },
+    {
+        "text": "Throughout the year, we also\nimproved the usability and",
+        "start": 837.872,
+        "duration": 2.91
+    },
+    {
+        "text": "accessibility of our implementation.",
+        "start": 840.782,
+        "duration": 1.87
+    },
+    {
+        "text": "Monty is now versioned and\ndistributed on Anaconda.",
+        "start": 843.482,
+        "duration": 2.78
+    },
+    {
+        "text": "And we steadily improved our\ninfrastructure around the",
+        "start": 847.742,
+        "duration": 3.43
+    },
+    {
+        "text": "project, so the roads here.",
+        "start": 851.172,
+        "duration": 1.52
+    },
+    {
+        "text": "That included fixing bugs and\nissues, larger refactors, introducing",
+        "start": 852.982,
+        "duration": 4.15
+    },
+    {
+        "text": "rough formatting, switching to\ndifferent configuration management,",
+        "start": 857.582,
+        "duration": 3.3
+    },
+    {
+        "text": "and many other improvements.",
+        "start": 860.942,
+        "duration": 1.58
+    },
+    {
+        "text": "We also mapped out a plan for how\nwe can turn our current code into",
+        "start": 864.642,
+        "duration": 3.44
+    },
+    {
+        "text": "an easy-to-use platform, and Tristan\nwill talk more about that path",
+        "start": 868.082,
+        "duration": 4.13
+    },
+    {
+        "text": "through a platform later in his talk.",
+        "start": 872.212,
+        "duration": 1.61
+    },
+    {
+        "text": "In May, we held a little robot\nhackathon and built some more",
+        "start": 876.622,
+        "duration": 3.12
+    },
+    {
+        "text": "piers into the lake of reality.",
+        "start": 879.742,
+        "duration": 1.96
+    },
+    {
+        "text": "We tested Monty on\nseveral real-world tasks.",
+        "start": 882.652,
+        "duration": 2.74
+    },
+    {
+        "text": "such as a drone, a mobile ultrasound\ndevice, and here's a Raspberry Pi with",
+        "start": 886.382,
+        "duration": 5.33
+    },
+    {
+        "text": "some motors and camera on a LEGO setup.",
+        "start": 891.712,
+        "duration": 3.2
+    },
+    {
+        "text": "And yeah, it was really exciting\nseeing Monty actually control a motor",
+        "start": 895.412,
+        "duration": 3.98
+    },
+    {
+        "text": "in the real world for the first time,\nand learn and infer objects this way.",
+        "start": 900.122,
+        "duration": 5.1
+    },
+    {
+        "text": "If you are interested to build\nsomething similar, we also documented",
+        "start": 907.562,
+        "duration": 4.22
+    },
+    {
+        "text": "all of this in our documentation.",
+        "start": 911.872,
+        "duration": 1.61
+    },
+    {
+        "text": "We ventured a bit further into the\nlake with our application of Monty",
+        "start": 916.772,
+        "duration": 3.65
+    },
+    {
+        "text": "to ultrasound, and created a small\ndataset to continue evaluating Monty's",
+        "start": 920.422,
+        "duration": 5.66
+    },
+    {
+        "text": "performance on this application.",
+        "start": 926.102,
+        "duration": 1.63
+    },
+    {
+        "text": "So we basically put a bunch of\nhousehold items into a bag of fluid",
+        "start": 928.572,
+        "duration": 3.47
+    },
+    {
+        "text": "and let Monty learn these objects\nthrough one scan on each of them.",
+        "start": 932.042,
+        "duration": 4.77
+    },
+    {
+        "text": "And, yeah, we'll publish that\ndataset soon, if you want to",
+        "start": 937.402,
+        "duration": 3.98
+    },
+    {
+        "text": "check it out and test it yourself.",
+        "start": 941.382,
+        "duration": 2.11
+    },
+    {
+        "text": "We set up a little camp below\nthe magical tree of simulation.",
+        "start": 947.612,
+        "duration": 3.03
+    },
+    {
+        "text": "And did several things with the simulator.",
+        "start": 951.292,
+        "duration": 3.08
+    },
+    {
+        "text": "One is the ongoing work on integrating\nMojoku as a second simulator.",
+        "start": 954.732,
+        "duration": 3.82
+    },
+    {
+        "text": "As well as simplifying Monty's simulator\nprotocol, and prototyping separating",
+        "start": 959.612,
+        "duration": 4.57
+    },
+    {
+        "text": "Monty and the simulator code completely.",
+        "start": 964.182,
+        "duration": 2.21
+    },
+    {
+        "text": "Throughout the year, Learning Module\nTown has been working on improvements",
+        "start": 968.262,
+        "duration": 3.97
+    },
+    {
+        "text": "on how Monty can sample and delete\nhypotheses dynamically, and Ramy will",
+        "start": 973.192,
+        "duration": 3.91
+    },
+    {
+        "text": "give a nice intuition of how Monty's\nhypotheses evolve over time in his talk.",
+        "start": 977.102,
+        "duration": 5.21
+    },
+    {
+        "text": "But at a high level, this led to\nimproved noise robustness, speed, as",
+        "start": 982.672,
+        "duration": 4.14
+    },
+    {
+        "text": "well as the ability to quickly change\nhypotheses and deal with multi-object",
+        "start": 986.812,
+        "duration": 5.41
+    },
+    {
+        "text": "environments, so notice when the\nsensor has moved from one object to",
+        "start": 992.222,
+        "duration": 3.32
+    },
+    {
+        "text": "another object, and quickly update",
+        "start": 995.542,
+        "duration": 3.24
+    },
+    {
+        "text": "hypotheses.",
+        "start": 1002.832,
+        "duration": 0.01
+    },
+    {
+        "text": "We also improved the connectivity between\nsensor modules and the motor system to",
+        "start": 1003.112,
+        "duration": 4.45
+    },
+    {
+        "text": "allow for better model-free policies.",
+        "start": 1007.562,
+        "duration": 2.1
+    },
+    {
+        "text": "And to coordinate between goals coming\nfrom Learning Module Town and goals",
+        "start": 1010.152,
+        "duration": 4.23
+    },
+    {
+        "text": "coming from the sensor module market,\nwe added a little checkpoint before the",
+        "start": 1014.382,
+        "duration": 4.79
+    },
+    {
+        "text": "mortar policy city, and that's called\nthe goal State Selector in Monty.",
+        "start": 1019.172,
+        "duration": 3.62
+    },
+    {
+        "text": "Together with a new sensor module on\nthe market that can detect saliency,",
+        "start": 1024.682,
+        "duration": 4.88
+    },
+    {
+        "text": "Monty can now move much more efficiently\nto interesting parts in the world.",
+        "start": 1029.922,
+        "duration": 3.52
+    },
+    {
+        "text": "And that makes both learning\nand inference more robust and",
+        "start": 1034.072,
+        "duration": 2.64
+    },
+    {
+        "text": "efficient, and this is a feature\nwe're currently extensively testing.",
+        "start": 1036.712,
+        "duration": 4.41
+    },
+    {
+        "text": "We also began constructing another sensor\nmodule stand on the market, specialized",
+        "start": 1042.702,
+        "duration": 4.5
+    },
+    {
+        "text": "in the extraction of 2D features like\nedges and the texture on an object, like",
+        "start": 1047.242,
+        "duration": 5.83
+    },
+    {
+        "text": "here on the Thousand Brains Project logo.",
+        "start": 1053.342,
+        "duration": 1.92
+    },
+    {
+        "text": "We also made several theoretical\nadvances on particularly on how",
+        "start": 1056.672,
+        "duration": 5.53
+    },
+    {
+        "text": "the brain models object behaviors.",
+        "start": 1062.202,
+        "duration": 2.17
+    },
+    {
+        "text": "We published a write-up of those\non our documentation earlier",
+        "start": 1065.042,
+        "duration": 4.43
+    },
+    {
+        "text": "this year, and continually\nrefined it throughout the year.",
+        "start": 1069.472,
+        "duration": 2.88
+    },
+    {
+        "text": "We also published and developed a concrete\nplan of how we could implement this",
+        "start": 1073.172,
+        "duration": 4.51
+    },
+    {
+        "text": "ability in Monty, and basically let Monty\ndeal with a dynamic world where objects",
+        "start": 1077.712,
+        "duration": 5.24
+    },
+    {
+        "text": "can move and have behaviors instead of\njust static objects that never move.",
+        "start": 1082.952,
+        "duration": 4.94
+    },
+    {
+        "text": "We also have been making some progress on",
+        "start": 1092.292,
+        "duration": 1.78
+    },
+    {
+        "text": "Figuring out how we could learn\ncausality and use models to",
+        "start": 1095.742,
+        "duration": 4.06
+    },
+    {
+        "text": "effect change in the world.",
+        "start": 1099.832,
+        "duration": 1.85
+    },
+    {
+        "text": "So, caual interventions.",
+        "start": 1102.242,
+        "duration": 1.44
+    },
+    {
+        "text": "And as part of that, we also\nstarted exploring hierarchical",
+        "start": 1104.282,
+        "duration": 3.43
+    },
+    {
+        "text": "decomposition of goals into subgoals\nand more complex action planning.",
+        "start": 1107.712,
+        "duration": 4.01
+    },
+    {
+        "text": "And that tied together some of\nour theory on hierarchy, as well",
+        "start": 1112.372,
+        "duration": 3.1
+    },
+    {
+        "text": "as behavior models and goals.",
+        "start": 1115.472,
+        "duration": 1.58
+    },
+    {
+        "text": "Our theory discussions also led us\nto explore the concept of attention",
+        "start": 1118.632,
+        "duration": 3.22
+    },
+    {
+        "text": "more, and we got more clarity on\nhow attention could tie into all",
+        "start": 1121.852,
+        "duration": 3.89
+    },
+    {
+        "text": "the other aspects of the theory.",
+        "start": 1125.742,
+        "duration": 1.47
+    },
+    {
+        "text": "In the progress of, thinking about all\nthis, we also explored many related",
+        "start": 1128.762,
+        "duration": 3.94
+    },
+    {
+        "text": "topics, like fast learning, the role of\nthe hippocampus, categories, and time.",
+        "start": 1132.702,
+        "duration": 3.86
+    },
+    {
+        "text": "And, in the past year, we've mapped\nout main new areas of the island,",
+        "start": 1137.722,
+        "duration": 4.02
+    },
+    {
+        "text": "and think we have a much better\nunderstanding of the big picture now,",
+        "start": 1141.772,
+        "duration": 3.26
+    },
+    {
+        "text": "even though many open questions still\nremain towards the east of the island.",
+        "start": 1145.232,
+        "duration": 4.75
+    },
+    {
+        "text": "And if you're curious to how we\ndevelop this theory, we spend a lot",
+        "start": 1151.682,
+        "duration": 5.21
+    },
+    {
+        "text": "of our time in Zoom meetings, in\ndeep thought and intense discussions.",
+        "start": 1156.892,
+        "duration": 5.29
+    },
+    {
+        "text": "We meet every week for up to 4 hours.",
+        "start": 1162.412,
+        "duration": 2.02
+    },
+    {
+        "text": "Every once in a while, we meet in person\nand do this all day on big whiteboards,",
+        "start": 1165.522,
+        "duration": 4.18
+    },
+    {
+        "text": "and every couple of months, we have\nfocused brainstorming weeks where",
+        "start": 1170.502,
+        "duration": 4.75
+    },
+    {
+        "text": "we virtually brainstorm, for 4 to 5\nhours, and, think the rest of the day.",
+        "start": 1175.252,
+        "duration": 6.85
+    },
+    {
+        "text": "a lot of time goes into developing, this\ntheory, and, over time, the simplest ideas",
+        "start": 1183.352,
+        "duration": 9.71
+    },
+    {
+        "text": "stick, and, yeah, key insights evolve.",
+        "start": 1193.072,
+        "duration": 4.49
+    },
+    {
+        "text": "And if you're interested in this\nprocess, we also record all of our",
+        "start": 1197.602,
+        "duration": 3.31
+    },
+    {
+        "text": "meetings and upload them on YouTube\nso you can be a fly on the wall",
+        "start": 1200.912,
+        "duration": 4.58
+    },
+    {
+        "text": "of how these ideas crystallize.",
+        "start": 1205.492,
+        "duration": 2.81
+    },
+    {
+        "text": "And so as these ideas crystallize, we\nmake actions plans of how to implement",
+        "start": 1210.972,
+        "duration": 4.53
+    },
+    {
+        "text": "them in Monty, we prototype them, and\nthen integrate them as new features",
+        "start": 1215.502,
+        "duration": 3.77
+    },
+    {
+        "text": "into Monty, and publish results.",
+        "start": 1219.272,
+        "duration": 2.64
+    },
+    {
+        "text": "Throughout the year, more boats from\ninterested sailors have been arriving",
+        "start": 1224.322,
+        "duration": 3.25
+    },
+    {
+        "text": "at our little island, and it warms our\nhearts to see the many exciting ways",
+        "start": 1227.572,
+        "duration": 4.55
+    },
+    {
+        "text": "in which people decide to contribute\ntheir time and skills to this project.",
+        "start": 1232.132,
+        "duration": 3.29
+    },
+    {
+        "text": "Will is going to talk more\nabout that in his talk.",
+        "start": 1235.842,
+        "duration": 2.1
+    },
+    {
+        "text": "But a big thank you already to anyone\nwho has forked or started our project",
+        "start": 1238.462,
+        "duration": 4.66
+    },
+    {
+        "text": "on GitHub, and especially to those\nwho have contributed to the code.",
+        "start": 1243.132,
+        "duration": 4.16
+    },
+    {
+        "text": "And also, we've had almost 2,000 posts\non discourse, our forum, which have been",
+        "start": 1248.972,
+        "duration": 5.58
+    },
+    {
+        "text": "a pleasure to read and interact with.",
+        "start": 1254.612,
+        "duration": 1.94
+    },
+    {
+        "text": "To make it easier to see different\naspects we could use help on, we",
+        "start": 1258.912,
+        "duration": 3.67
+    },
+    {
+        "text": "turned our project roadmap into an\ninteractive feature work table that's",
+        "start": 1262.582,
+        "duration": 3.31
+    },
+    {
+        "text": "filterable by different aspects, and\nWill is going to talk more about that.",
+        "start": 1265.892,
+        "duration": 3.56
+    },
+    {
+        "text": "As well.",
+        "start": 1270.522,
+        "duration": 0.57
+    },
+    {
+        "text": "looking back, it's been\na really exciting year.",
+        "start": 1272.872,
+        "duration": 2.43
+    },
+    {
+        "text": "We started the Thousand Brains Project\nas an independent nonprofit entity.",
+        "start": 1275.752,
+        "duration": 3.72
+    },
+    {
+        "text": "We published many of\nour exciting advances.",
+        "start": 1279.772,
+        "duration": 2.26
+    },
+    {
+        "text": "We're especially excited about the growth\nof the community, with great conversations",
+        "start": 1282.782,
+        "duration": 3.87
+    },
+    {
+        "text": "happening on our forum, and amazing\ncontributions coming into our codebase.",
+        "start": 1286.652,
+        "duration": 3.36
+    },
+    {
+        "text": "We've made a lot of progress on\nthe theory, all these purple parts.",
+        "start": 1291.242,
+        "duration": 3.83
+    },
+    {
+        "text": "We prototype new ideas and\nintegrate new Monty features.",
+        "start": 1296.252,
+        "duration": 3.18
+    },
+    {
+        "text": "As well as moved Monty closer to\na platform that's easy to use.",
+        "start": 1300.472,
+        "duration": 3.92
+    },
+    {
+        "text": "And we tested Monty in several\nreal-world applications.",
+        "start": 1305.032,
+        "duration": 2.96
+    },
+    {
+        "text": "overall, we're proud of our settlements\non Monty's Island, and really excited",
+        "start": 1309.112,
+        "duration": 4.79
+    },
+    {
+        "text": "for what awaits us in the next year.",
+        "start": 1313.902,
+        "duration": 1.64
+    },
+    {
+        "text": "And\u2026",
+        "start": 1316.652,
+        "duration": 0.48
+    },
+    {
+        "text": "With that, I hand it over to Niels,\nwho will talk about how our approach",
+        "start": 1318.332,
+        "duration": 4.81
+    },
+    {
+        "text": "compares to deep learning, and what Monty\ncan do today, and its many advantages.",
+        "start": 1323.162,
+        "duration": 4.03
+    }
+]

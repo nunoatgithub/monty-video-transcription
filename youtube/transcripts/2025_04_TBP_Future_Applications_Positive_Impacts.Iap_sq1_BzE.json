@@ -1,0 +1,1407 @@
+[
+    {
+        "text": "And I hope my voice will, stay\nwith you through today's meeting.",
+        "start": 8.664,
+        "duration": 5.4
+    },
+    {
+        "text": "this is a bit of a different one, than the\nusual monthly review, but I, originally",
+        "start": 15.444,
+        "duration": 5.61
+    },
+    {
+        "text": "just made an overview for myself.",
+        "start": 21.054,
+        "duration": 2.91
+    },
+    {
+        "text": "Then I felt very inspired\nafterwards and I thought it would",
+        "start": 24.639,
+        "duration": 3.42
+    },
+    {
+        "text": "be cool to share with all of you.",
+        "start": 28.059,
+        "duration": 1.98
+    },
+    {
+        "text": "and it's basically an overview of\nhow the Thousand Brains Project can",
+        "start": 31.029,
+        "duration": 4.35
+    },
+    {
+        "text": "have a positive impact on the world\nin the near, medium and long term.",
+        "start": 35.379,
+        "duration": 4.77
+    },
+    {
+        "text": "And what kind of applications\nwe can already think of.",
+        "start": 40.599,
+        "duration": 4.02
+    },
+    {
+        "text": "we always say we'll probably have tons\nof applications that we can't even",
+        "start": 44.919,
+        "duration": 3.96
+    },
+    {
+        "text": "imagine right now, but there are already\nso many things that we can imagine.",
+        "start": 48.879,
+        "duration": 4.47
+    },
+    {
+        "text": "Are not that far off, and just showing how\nour, the things on our research roadmap",
+        "start": 54.039,
+        "duration": 5.79
+    },
+    {
+        "text": "play into actual impact in the real world.",
+        "start": 60.159,
+        "duration": 3.69
+    },
+    {
+        "text": "So how I kinda structured this\nis that we have a couple of key",
+        "start": 66.174,
+        "duration": 5.85
+    },
+    {
+        "text": "capabilities on the research roadmap.",
+        "start": 72.114,
+        "duration": 2.25
+    },
+    {
+        "text": "You can probably think of, modeling,\ncompositional objects, object behaviors,",
+        "start": 74.394,
+        "duration": 5.34
+    },
+    {
+        "text": "being able to manipulate the world.",
+        "start": 79.734,
+        "duration": 1.68
+    },
+    {
+        "text": "and each of these key capabilities\nunlocks a whole new range of applications.",
+        "start": 82.254,
+        "duration": 5.01
+    },
+    {
+        "text": "And so I tried to structure it.",
+        "start": 87.654,
+        "duration": 1.74
+    },
+    {
+        "text": "by that.",
+        "start": 90.534,
+        "duration": 0.66
+    },
+    {
+        "text": "So currently we can do\nobject and post recognition.",
+        "start": 91.854,
+        "duration": 3.93
+    },
+    {
+        "text": "And in terms of applications, we could do\nthis within existing robotics pipelines",
+        "start": 97.164,
+        "duration": 5.88
+    },
+    {
+        "text": "such as manufacturing where, there are\ntons of papers out there that try to",
+        "start": 103.074,
+        "duration": 4.68
+    },
+    {
+        "text": "solve this just object and post detection.",
+        "start": 107.754,
+        "duration": 3.27
+    },
+    {
+        "text": "And, there are lots of industrial\napplications where you need to detect",
+        "start": 111.024,
+        "duration": 4.11
+    },
+    {
+        "text": "parts and the pose of them, and then\nyou have a gripper that then can pick",
+        "start": 115.134,
+        "duration": 4.02
+    },
+    {
+        "text": "them up, or you detect the pose off\nboxes and then you have something",
+        "start": 119.154,
+        "duration": 3.99
+    },
+    {
+        "text": "that can pick them up and move them\naround in a warehouse, stuff like that.",
+        "start": 123.144,
+        "duration": 3.63
+    },
+    {
+        "text": "so that's, Current solutions.",
+        "start": 127.644,
+        "duration": 2.565
+    },
+    {
+        "text": "there are some current solutions, but\nit's definitely not a solved problem.",
+        "start": 131.079,
+        "duration": 3.9
+    },
+    {
+        "text": "And they particularly struggle with\nlike changes in lighting, objects",
+        "start": 134.979,
+        "duration": 4.44
+    },
+    {
+        "text": "occluding each other, changes from the\ntraining distribution, like a different",
+        "start": 139.449,
+        "duration": 3.69
+    },
+    {
+        "text": "texture on the box, if Amazon suddenly\nprints, differently on its packages.",
+        "start": 143.139,
+        "duration": 4.92
+    },
+    {
+        "text": "And then you need to rearrange the,",
+        "start": 148.059,
+        "duration": 1.56
+    },
+    {
+        "text": "such pipelines Monty could already\nbe plugged into and we can already",
+        "start": 151.839,
+        "duration": 3.69
+    },
+    {
+        "text": "work close that we would be able\nto evaluate on some of these.",
+        "start": 155.979,
+        "duration": 2.61
+    },
+    {
+        "text": "six degree of freedom objected\nand post detection benchmarks.",
+        "start": 159.404,
+        "duration": 3.9
+    },
+    {
+        "text": "and like what we show on in the DMC\npaper, the benefits of our approach",
+        "start": 165.554,
+        "duration": 6.21
+    },
+    {
+        "text": "are the reduced cost and training\nand data collection, being robust,",
+        "start": 171.824,
+        "duration": 5.13
+    },
+    {
+        "text": "being able to do continual learning\nand quickly adapt to new conditions,",
+        "start": 177.494,
+        "duration": 4.53
+    },
+    {
+        "text": "and generalize to objects\nwith similar shapes.",
+        "start": 184.304,
+        "duration": 3.12
+    },
+    {
+        "text": "But then, the next thing on our\nresearch roadmap, something we plan",
+        "start": 188.724,
+        "duration": 4.08
+    },
+    {
+        "text": "on being able to do, in the summer\nis to model compositional objects.",
+        "start": 192.804,
+        "duration": 5.97
+    },
+    {
+        "text": "So actually stacking learning modules\non top of each other and using hierarchy",
+        "start": 198.864,
+        "duration": 4.26
+    },
+    {
+        "text": "to model compositional objects.",
+        "start": 203.124,
+        "duration": 2.01
+    },
+    {
+        "text": "And that then unlocks, much more\ncomplex object recognition tasks.",
+        "start": 205.134,
+        "duration": 4.92
+    },
+    {
+        "text": "So one application we, talked a\nlot about lately is, ultrasound,",
+        "start": 210.414,
+        "duration": 4.77
+    },
+    {
+        "text": "And why is this kind of relevant?",
+        "start": 217.239,
+        "duration": 2.49
+    },
+    {
+        "text": "So a big thing is that in a lot of remote\nareas, there aren't trained physicians",
+        "start": 219.939,
+        "duration": 5.46
+    },
+    {
+        "text": "to actually administer an ultrasound.",
+        "start": 225.909,
+        "duration": 2.52
+    },
+    {
+        "text": "And ultrasound is a really crucial, meta\ntechnique for lots of different diseases,",
+        "start": 228.909,
+        "duration": 6.51
+    },
+    {
+        "text": "but also particularly maternal health.",
+        "start": 235.419,
+        "duration": 2.13
+    },
+    {
+        "text": "checking on that, the baby's healthy\nage of the baby, and it can have a",
+        "start": 238.419,
+        "duration": 4.59
+    },
+    {
+        "text": "lot of implications if you're able to\ndo those scans in remote areas and.",
+        "start": 243.009,
+        "duration": 4.83
+    },
+    {
+        "text": "If you can use these mobile devices\nwith, in combination with ai, they can",
+        "start": 248.514,
+        "duration": 5.31
+    },
+    {
+        "text": "become usable by untrained physicians.",
+        "start": 253.824,
+        "duration": 2.34
+    },
+    {
+        "text": "and there are a couple of existing AI\nsolutions, like blind sweeps where you",
+        "start": 257.874,
+        "duration": 4.59
+    },
+    {
+        "text": "basically scan the belly of the mother in\npre-described movements and then use ai.",
+        "start": 262.494,
+        "duration": 6.12
+    },
+    {
+        "text": "to determine fetal age, for example,\nwhich worked quite well, but they",
+        "start": 269.694,
+        "duration": 5.67
+    },
+    {
+        "text": "require collecting large data sets.",
+        "start": 275.364,
+        "duration": 1.74
+    },
+    {
+        "text": "Niels and, I just talked to someone\nyesterday, who mentioned 10,000",
+        "start": 277.104,
+        "duration": 5.04
+    },
+    {
+        "text": "subjects, to try their, Model on.",
+        "start": 282.144,
+        "duration": 5.175
+    },
+    {
+        "text": "Whereas Monty won't require collecting\nlarge data sets, which means it can",
+        "start": 287.769,
+        "duration": 3.9
+    },
+    {
+        "text": "also be used for more rare conditions.",
+        "start": 291.669,
+        "duration": 2.07
+    },
+    {
+        "text": "and it's generally just much cheaper\nto, train it for other things.",
+        "start": 294.339,
+        "duration": 4.92
+    },
+    {
+        "text": "Besides, fetal age, it can also\nlearn continually and adapt in",
+        "start": 299.559,
+        "duration": 5.1
+    },
+    {
+        "text": "the application to the specific\npopulation where it's being used.",
+        "start": 304.659,
+        "duration": 3.81
+    },
+    {
+        "text": "It can suggest where to move the probe\nto get necessary information instead of",
+        "start": 308.949,
+        "duration": 4.17
+    },
+    {
+        "text": "having these pre-prescribed movements.",
+        "start": 313.119,
+        "duration": 2.22
+    },
+    {
+        "text": "it can detect abnormalities without\ntraining on examples of them.",
+        "start": 317.049,
+        "duration": 3.99
+    },
+    {
+        "text": "That's a big one.",
+        "start": 321.099,
+        "duration": 0.96
+    },
+    {
+        "text": "Because Monty, you could train\nit on only healthy fetuses.",
+        "start": 322.139,
+        "duration": 4.03
+    },
+    {
+        "text": "And Monty makes prediction\nwhen it sees a new fetus.",
+        "start": 326.754,
+        "duration": 2.79
+    },
+    {
+        "text": "And if those predictions are wrong,\nit has a high prediction error.",
+        "start": 329.604,
+        "duration": 2.76
+    },
+    {
+        "text": "It can recognize whether they're\nis abnormality, like something is",
+        "start": 332.364,
+        "duration": 4.86
+    },
+    {
+        "text": "misshaped, and then refer that person\nto a, to a clinic to get further checks,",
+        "start": 337.254,
+        "duration": 6.12
+    },
+    {
+        "text": "without ever needing to train\non, examples of these problems.",
+        "start": 345.654,
+        "duration": 5.4
+    },
+    {
+        "text": "And then it's also much more interpretable\nsince we have these structured models,",
+        "start": 351.654,
+        "duration": 3.96
+    },
+    {
+        "text": "which, is, good in medical applications.",
+        "start": 356.064,
+        "duration": 4.14
+    },
+    {
+        "text": "and yeah, just some examples, yeah, in\nmaternal health would be like determining",
+        "start": 361.404,
+        "duration": 6.24
+    },
+    {
+        "text": "fetal age, the age of the baby.",
+        "start": 367.764,
+        "duration": 1.89
+    },
+    {
+        "text": "Then also things like breach\nbabies, are in the, wrong position.",
+        "start": 369.954,
+        "duration": 4.65
+    },
+    {
+        "text": "Because Monty can actually detect\nthe pose off the object as well.",
+        "start": 375.064,
+        "duration": 3.89
+    },
+    {
+        "text": "It can also detect relative\nlocations of objects.",
+        "start": 379.314,
+        "duration": 2.82
+    },
+    {
+        "text": "So placenta privia, where the\nplacenta is in a wrong position",
+        "start": 382.134,
+        "duration": 4.62
+    },
+    {
+        "text": "relative to the baby or malformation.",
+        "start": 386.754,
+        "duration": 2.94
+    },
+    {
+        "text": "so lots of opportunities that\ncould be explored there that we're",
+        "start": 392.244,
+        "duration": 3.99
+    },
+    {
+        "text": "actually currently looking into more.",
+        "start": 396.234,
+        "duration": 1.74
+    },
+    {
+        "text": "I'll have more on it in\nthe monthly review slides.",
+        "start": 398.034,
+        "duration": 2.67
+    },
+    {
+        "text": "then there are a bunch of other, remote\nsensing applications, particularly",
+        "start": 402.909,
+        "duration": 5.73
+    },
+    {
+        "text": "in healthcare that we recently talked\na bit more about because that's the",
+        "start": 408.639,
+        "duration": 4.35
+    },
+    {
+        "text": "focus of the Gates Foundation as well.",
+        "start": 413.109,
+        "duration": 1.86
+    },
+    {
+        "text": "For example, detecting anemia in pregnant\nwomen, to know whether to give IV fluids",
+        "start": 414.969,
+        "duration": 5.76
+    },
+    {
+        "text": "without having to do a blood draw.",
+        "start": 420.729,
+        "duration": 2.16
+    },
+    {
+        "text": "they take videos of the eye\nand the tongue, and then.",
+        "start": 424.409,
+        "duration": 3.07
+    },
+    {
+        "text": "You can determine from that.",
+        "start": 428.199,
+        "duration": 1.47
+    },
+    {
+        "text": "You could predict whether they have\nanemia, but since they're already",
+        "start": 430.479,
+        "duration": 3.0
+    },
+    {
+        "text": "taking videos, that's something that\nMonty could potentially, improve on.",
+        "start": 433.479,
+        "duration": 5.1
+    },
+    {
+        "text": "Other things would be,",
+        "start": 439.239,
+        "duration": 1.32
+    },
+    {
+        "text": "like the drones for larval source\nmanagement of malaria mosquitoes,",
+        "start": 442.719,
+        "duration": 4.71
+    },
+    {
+        "text": "or drones that serve health and\nwater access in remote communities",
+        "start": 449.049,
+        "duration": 3.96
+    },
+    {
+        "text": "or deliver medicine there.",
+        "start": 453.039,
+        "duration": 1.53
+    },
+    {
+        "text": "This is a bit more of an abstract\none, but that we've tried Monty",
+        "start": 457.734,
+        "duration": 4.15
+    },
+    {
+        "text": "on before, and realized it will\nneed compositional objects.",
+        "start": 461.884,
+        "duration": 3.56
+    },
+    {
+        "text": "It's just one of these, benchmark\ndata sets in the AI community where",
+        "start": 468.092,
+        "duration": 4.92
+    },
+    {
+        "text": "there's very little data available.",
+        "start": 473.012,
+        "duration": 2.16
+    },
+    {
+        "text": "Just a few examples of handwritten\ndigits, and in different alphabets,",
+        "start": 475.172,
+        "duration": 5.61
+    },
+    {
+        "text": "and then it has to learn from them.",
+        "start": 480.782,
+        "duration": 1.8
+    },
+    {
+        "text": "And it's kind of sensorimotor in the\nsense that we follow the strokes,",
+        "start": 482.582,
+        "duration": 3.66
+    },
+    {
+        "text": "or these digits, in the one of these\ndata sets that show how AI can't",
+        "start": 486.392,
+        "duration": 5.73
+    },
+    {
+        "text": "learn from those small, data sets.",
+        "start": 492.122,
+        "duration": 2.76
+    },
+    {
+        "text": "another one just generally mapping\ndisaster zones, with drones or other",
+        "start": 497.072,
+        "duration": 5.25
+    },
+    {
+        "text": "kind of robots that go in there and build\na structured model of what's going on.",
+        "start": 502.502,
+        "duration": 4.32
+    },
+    {
+        "text": "and then also seen understanding in just\nexisting pipelines, like maybe again,",
+        "start": 509.402,
+        "duration": 6.9
+    },
+    {
+        "text": "warehouses, stacking boxes on top of\neach other, understanding of to grab",
+        "start": 516.302,
+        "duration": 4.44
+    },
+    {
+        "text": "the bottom box in a, stack of boxes.",
+        "start": 520.742,
+        "duration": 2.85
+    },
+    {
+        "text": "But the top one.",
+        "start": 523.592,
+        "duration": 1.02
+    },
+    {
+        "text": "and then this one was something I\nalso didn't think about before, but",
+        "start": 527.627,
+        "duration": 3.09
+    },
+    {
+        "text": "apparently like waste management is a\nbig deal that's not really solved yet.",
+        "start": 530.717,
+        "duration": 4.23
+    },
+    {
+        "text": "there are like some automated systems\nthat can reach accuracy of like 85 to 95%",
+        "start": 535.727,
+        "duration": 5.58
+    },
+    {
+        "text": "to identify some types of recyclables,\nbut it's definitely not graded.",
+        "start": 541.547,
+        "duration": 4.17
+    },
+    {
+        "text": "A lot of times still use\nhumans just to sort waste.",
+        "start": 545.717,
+        "duration": 4.08
+    },
+    {
+        "text": "and it particularly has problems\nwith defamations of objects like.",
+        "start": 550.757,
+        "duration": 3.69
+    },
+    {
+        "text": "Crushed coke cans and stuff like that.",
+        "start": 555.032,
+        "duration": 2.58
+    },
+    {
+        "text": "And also like the variety of textures,\nlike you could imagine a can, can have",
+        "start": 557.702,
+        "duration": 4.77
+    },
+    {
+        "text": "so many different labels on it that\nit's just hard to collect a large enough",
+        "start": 562.472,
+        "duration": 3.84
+    },
+    {
+        "text": "data set to recognize all of them.",
+        "start": 566.312,
+        "duration": 1.74
+    },
+    {
+        "text": "Whereas Monty could just\nrecognize the general shape of",
+        "start": 568.592,
+        "duration": 4.17
+    },
+    {
+        "text": "a can, independent of the label.",
+        "start": 572.762,
+        "duration": 2.31
+    },
+    {
+        "text": "and I put this kind of in blue plus\ndeformation here because just adding",
+        "start": 575.732,
+        "duration": 5.01
+    },
+    {
+        "text": "composition s in this case wouldn't\nbe enough because currently we.",
+        "start": 580.742,
+        "duration": 3.36
+    },
+    {
+        "text": "We don't, we can't deal with\nobject deformation either.",
+        "start": 584.402,
+        "duration": 3.42
+    },
+    {
+        "text": "and then, yeah, generally structured\nknowledge representations to have",
+        "start": 593.582,
+        "duration": 3.51
+    },
+    {
+        "text": "better search, making new connections\nand, teaching and learning.",
+        "start": 597.332,
+        "duration": 4.65
+    },
+    {
+        "text": "And I asked ChatGPT to generate an image\nfor, which is this, what it came up with.",
+        "start": 601.982,
+        "duration": 5.88
+    },
+    {
+        "text": "And then I asked it to make it more\nconcrete and put an example on it.",
+        "start": 607.862,
+        "duration": 2.88
+    },
+    {
+        "text": "Which I just included because I thought\nit was such a great example about",
+        "start": 611.222,
+        "duration": 3.03
+    },
+    {
+        "text": "how current AI is not good at this.",
+        "start": 614.252,
+        "duration": 2.07
+    },
+    {
+        "text": "Because it wrote like the apple has\nflavor, red and apple is a concept",
+        "start": 616.602,
+        "duration": 5.12
+    },
+    {
+        "text": "and the plant is made of apple.",
+        "start": 623.282,
+        "duration": 1.68
+    },
+    {
+        "text": "so",
+        "start": 625.772,
+        "duration": 0.39
+    },
+    {
+        "text": "I, think, if Monty can represent\nmore abstract, knowledge and have",
+        "start": 628.202,
+        "duration": 5.25
+    },
+    {
+        "text": "more of associative connections,\nwe could do much better than this.",
+        "start": 633.452,
+        "duration": 3.0
+    },
+    {
+        "text": "I.",
+        "start": 638.057,
+        "duration": 0.12
+    },
+    {
+        "text": "yeah.",
+        "start": 641.027,
+        "duration": 0.27
+    },
+    {
+        "text": "Then the next big kind of watershed\ncapability is, modeling object behaviors",
+        "start": 641.297,
+        "duration": 6.96
+    },
+    {
+        "text": "and the dynamic world, like a world\nwhere objects are actually moving and",
+        "start": 648.257,
+        "duration": 4.41
+    },
+    {
+        "text": "not just recognizing static objects and\nobject behaviors, which is what we're",
+        "start": 652.667,
+        "duration": 5.43
+    },
+    {
+        "text": "currently brainstorming a lot around.",
+        "start": 658.097,
+        "duration": 1.59
+    },
+    {
+        "text": "and that would again, help with\nultrasound, where we actually have",
+        "start": 662.072,
+        "duration": 3.99
+    },
+    {
+        "text": "moving components like a beating heart\nor lungs or, even a fetus moving around.",
+        "start": 666.062,
+        "duration": 6.93
+    },
+    {
+        "text": "and where we need to either\nrecognize the behavior itself or",
+        "start": 674.132,
+        "duration": 3.84
+    },
+    {
+        "text": "at least be able to compensate\nfor the movement of the objects.",
+        "start": 677.972,
+        "duration": 3.75
+    },
+    {
+        "text": "Then, yeah, anything in the kind of\nself-driving cars or transportation",
+        "start": 685.622,
+        "duration": 4.17
+    },
+    {
+        "text": "area where we have lots of moving\nobjects that we need to recognize",
+        "start": 689.792,
+        "duration": 4.23
+    },
+    {
+        "text": "and anticipate and know their pose.",
+        "start": 694.022,
+        "duration": 2.4
+    },
+    {
+        "text": "a grounded language understanding,\nwhich would, Could be used to",
+        "start": 699.362,
+        "duration": 5.64
+    },
+    {
+        "text": "combat misinformation, which might\nbe a prevalent topic, lately.",
+        "start": 705.002,
+        "duration": 4.675
+    },
+    {
+        "text": "But, yeah, also generally just having\na grounded language understanding,",
+        "start": 710.537,
+        "duration": 3.945
+    },
+    {
+        "text": "with less hallucinations or no\nhallucinations, large language model",
+        "start": 716.252,
+        "duration": 3.93
+    },
+    {
+        "text": "models have, would be, really beneficial.",
+        "start": 720.272,
+        "duration": 2.55
+    },
+    {
+        "text": "And then, yeah, big sectors,\ngenerally agriculture at this point.",
+        "start": 724.457,
+        "duration": 5.64
+    },
+    {
+        "text": "So like we detection, disease detection,\npest prevention and detection.",
+        "start": 730.097,
+        "duration": 6.75
+    },
+    {
+        "text": "there are tons of agricultural robots and\nlots of people try to apply AI to it and",
+        "start": 737.447,
+        "duration": 7.17
+    },
+    {
+        "text": "a lot of them are sensorimotor systems.",
+        "start": 745.127,
+        "duration": 2.16
+    },
+    {
+        "text": "so I think.",
+        "start": 748.157,
+        "duration": 0.72
+    },
+    {
+        "text": "Monty could also have a, big impact there.",
+        "start": 749.757,
+        "duration": 2.555
+    },
+    {
+        "text": "And agriculture is so important\nfor the world to supply food.",
+        "start": 752.942,
+        "duration": 3.54
+    },
+    {
+        "text": "that, yeah, could be a\nvery positive impact.",
+        "start": 757.892,
+        "duration": 2.46
+    },
+    {
+        "text": "on a more abstract level cybersecurity,",
+        "start": 762.452,
+        "duration": 2.25
+    },
+    {
+        "text": "Protein dynamics is an interesting one.",
+        "start": 767.188,
+        "duration": 2.04
+    },
+    {
+        "text": "I don't have a lot of\nknowledge about this.",
+        "start": 769.858,
+        "duration": 1.92
+    },
+    {
+        "text": "I supervise like one thesis around it.",
+        "start": 771.778,
+        "duration": 2.46
+    },
+    {
+        "text": "But basically we have big static data\nsets of proteins, but not of their",
+        "start": 774.928,
+        "duration": 6.81
+    },
+    {
+        "text": "dynamic states because they're really\nhard to record and we can do physics",
+        "start": 781.738,
+        "duration": 4.14
+    },
+    {
+        "text": "simulations, but they're very expensive\nand they only work on small time scales.",
+        "start": 785.878,
+        "duration": 4.32
+    },
+    {
+        "text": "and there are some machine learning\nmethods that can do approximations,",
+        "start": 791.803,
+        "duration": 3.27
+    },
+    {
+        "text": "like graph neural networks and\nvariational autoencoders, but they",
+        "start": 795.073,
+        "duration": 4.47
+    },
+    {
+        "text": "kinda lose their physical link very\nquickly and start to hallucinate and",
+        "start": 799.813,
+        "duration": 3.45
+    },
+    {
+        "text": "require large data sets or overfit.",
+        "start": 803.263,
+        "duration": 2.25
+    },
+    {
+        "text": "but being able to model the\ndynamic states of proteins is super",
+        "start": 807.763,
+        "duration": 3.81
+    },
+    {
+        "text": "important for all kinds of medical\nand pharmaceutical applications.",
+        "start": 811.573,
+        "duration": 4.44
+    },
+    {
+        "text": "yeah, I talked, I, this\nis literally a quote.",
+        "start": 817.213,
+        "duration": 2.79
+    },
+    {
+        "text": "it would be a trillion dollar industry\nsolved and change the face of medicine.",
+        "start": 820.513,
+        "duration": 4.05
+    },
+    {
+        "text": "So this is a huge impact.",
+        "start": 824.983,
+        "duration": 1.575
+    },
+    {
+        "text": "I'm not sure if Marty could actually\ndo this because it, it seems like",
+        "start": 827.763,
+        "duration": 3.75
+    },
+    {
+        "text": "a, very complicated area and  I,\ndon't know enough about it to be able",
+        "start": 832.533,
+        "duration": 2.91
+    },
+    {
+        "text": "to say how we would solve it, but,",
+        "start": 835.443,
+        "duration": 1.62
+    },
+    {
+        "text": "it's an interesting one to think about\nif we could model object behaviors,",
+        "start": 839.433,
+        "duration": 3.69
+    },
+    {
+        "text": "whether we could have an impact there.",
+        "start": 843.513,
+        "duration": 1.74
+    },
+    {
+        "text": "And just generally understanding\nhow, these wiggly proteins move and",
+        "start": 846.733,
+        "duration": 3.9
+    },
+    {
+        "text": "interact, is useful to understand\nmisfolding like in Alzheimer's,",
+        "start": 850.723,
+        "duration": 4.95
+    },
+    {
+        "text": "mutation effects and signaling,\nbut also like how pharmaceuticals",
+        "start": 856.273,
+        "duration": 4.59
+    },
+    {
+        "text": "would actually have an effect on the",
+        "start": 860.893,
+        "duration": 2.24
+    },
+    {
+        "text": "body.",
+        "start": 866.923,
+        "duration": 0.21
+    },
+    {
+        "text": ". Not as real world, but I think\nTristan, you shared the second",
+        "start": 867.133,
+        "duration": 6.495
+    },
+    {
+        "text": "version of it yesterday.",
+        "start": 873.628,
+        "duration": 1.14
+    },
+    {
+        "text": "the ARC challenge, which is like this\nbenchmark for AGI, which, yeah, I",
+        "start": 876.358,
+        "duration": 7.355
+    },
+    {
+        "text": "think Monty could do really well on",
+        "start": 883.713,
+        "duration": 1.8
+    },
+    {
+        "text": "once we add this capabilities.",
+        "start": 885.517,
+        "duration": 1.486
+    },
+    {
+        "text": "since it's like, very little data to learn\nfrom a lot of reasoning and structured,",
+        "start": 888.383,
+        "duration": 5.16
+    },
+    {
+        "text": "knowledge that needs to be extrapolated,\nwhich, Monty is really well made for.",
+        "start": 894.263,
+        "duration": 5.58
+    },
+    {
+        "text": "and then yeah, the next big watershed\ncapability manipulating the world.",
+        "start": 902.513,
+        "duration": 4.35
+    },
+    {
+        "text": "And that gets us into all these new\nexciting, things like anything in",
+        "start": 906.863,
+        "duration": 5.58
+    },
+    {
+        "text": "robotics, so like caretaking, where.",
+        "start": 912.443,
+        "duration": 4.38
+    },
+    {
+        "text": "We currently have less and less humans\nwho, wanna do these things and more",
+        "start": 917.123,
+        "duration": 2.85
+    },
+    {
+        "text": "and more people who need care taking.",
+        "start": 919.973,
+        "duration": 1.89
+    },
+    {
+        "text": "that would definitely be something of use.",
+        "start": 922.973,
+        "duration": 2.16
+    },
+    {
+        "text": "home helpers, there's this quote where\nit's I want AI to do my laundry and",
+        "start": 925.943,
+        "duration": 4.98
+    },
+    {
+        "text": "dishes so that I can do art and writing.",
+        "start": 930.923,
+        "duration": 2.16
+    },
+    {
+        "text": "I. Not for AI to do my art and writing\nso that I can do my laundry and dishes.",
+        "start": 933.083,
+        "duration": 4.41
+    },
+    {
+        "text": "so hopefully Monty can be that\nkind of ai, so we can do the things",
+        "start": 939.023,
+        "duration": 5.88
+    },
+    {
+        "text": "that we actually enjoy doing.",
+        "start": 944.903,
+        "duration": 1.86
+    },
+    {
+        "text": "and then, yeah, just, dangerous\njobs, mining, construction,",
+        "start": 949.403,
+        "duration": 4.5
+    },
+    {
+        "text": "firefighters, police, where.",
+        "start": 953.903,
+        "duration": 3.06
+    },
+    {
+        "text": "Some people are dabbling into\nrobotics, but definitely not as",
+        "start": 957.653,
+        "duration": 4.08
+    },
+    {
+        "text": "general solutions as, would be useful.",
+        "start": 961.733,
+        "duration": 3.03
+    },
+    {
+        "text": "and then, yeah, space exploration\nagain, a lot of spaces very hostile",
+        "start": 968.423,
+        "duration": 6.39
+    },
+    {
+        "text": "towards humans, we use a lot of\nrobots for this, especially on Mars.",
+        "start": 974.813,
+        "duration": 5.49
+    },
+    {
+        "text": "so having more intelligent robots\nwould be very useful for that.",
+        "start": 981.818,
+        "duration": 3.87
+    },
+    {
+        "text": "And then again, agriculture, if we can\nactually manipulate the world instead",
+        "start": 986.468,
+        "duration": 3.9
+    },
+    {
+        "text": "of just detecting stuff, it opens up\nall these new things like automated",
+        "start": 990.368,
+        "duration": 4.38
+    },
+    {
+        "text": "picking and sorting and spraying and\npruning and all this kind of stuff.",
+        "start": 994.748,
+        "duration": 4.74
+    },
+    {
+        "text": "And then this one was pretty exciting\ntoo, we talked about before, AI scientists",
+        "start": 1001.348,
+        "duration": 5.94
+    },
+    {
+        "text": "that actually design and run experiments\nand the sensorimotor system is basically",
+        "start": 1007.288,
+        "duration": 6.09
+    },
+    {
+        "text": "coming up with a hypothesis and designing\nan experiment and then running that",
+        "start": 1013.408,
+        "duration": 4.05
+    },
+    {
+        "text": "experiment and looking at the results and\ncoming up with another experiment, which",
+        "start": 1017.458,
+        "duration": 3.15
+    },
+    {
+        "text": "could have all kinds of implications.",
+        "start": 1020.638,
+        "duration": 2.93
+    },
+    {
+        "text": "curing diseases, solutions to climate\nchange, drought resistant crops,",
+        "start": 1024.168,
+        "duration": 3.54
+    },
+    {
+        "text": "renewable energies, developing\nvaccines quickly and so on.",
+        "start": 1027.708,
+        "duration": 4.41
+    },
+    {
+        "text": "And then, yeah, generally tying\ninto that also logical reasoning.",
+        "start": 1034.728,
+        "duration": 3.96
+    },
+    {
+        "text": "Doesn't need to necessarily be\nrunning experiments, but it could be",
+        "start": 1038.718,
+        "duration": 3.66
+    },
+    {
+        "text": "logical reasoning for other things.",
+        "start": 1042.408,
+        "duration": 1.71
+    },
+    {
+        "text": "Sorry, can I interrupt?",
+        "start": 1044.922,
+        "duration": 0.9
+    },
+    {
+        "text": "Can you expand a little bit just\non the, how manipulating the world",
+        "start": 1045.822,
+        "duration": 4.71
+    },
+    {
+        "text": "leads into logical reasoning?",
+        "start": 1050.532,
+        "duration": 1.71
+    },
+    {
+        "text": "Yeah, sure.",
+        "start": 1054.07,
+        "duration": 0.63
+    },
+    {
+        "text": "so yeah, I put it because,",
+        "start": 1055.12,
+        "duration": 1.995
+    },
+    {
+        "text": "it, felt like manipulate,\nlike knowing how to move.",
+        "start": 1060.36,
+        "duration": 3.55
+    },
+    {
+        "text": "Through the world would be\nsimilar to moving through",
+        "start": 1065.755,
+        "duration": 3.15
+    },
+    {
+        "text": "conceptual space internally.",
+        "start": 1068.905,
+        "duration": 2.16
+    },
+    {
+        "text": "So basically manipulating concepts\nin your head and imagining different",
+        "start": 1071.395,
+        "duration": 5.4
+    },
+    {
+        "text": "combinations of them would be similar\nto actually manipulating objects in the",
+        "start": 1076.795,
+        "duration": 5.16
+    },
+    {
+        "text": "world and putting them into different\nconfigurations, if that makes sense.",
+        "start": 1081.955,
+        "duration": 4.44
+    },
+    {
+        "text": "Perfect.",
+        "start": 1087.355,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 1087.715,
+        "duration": 0.09
+    },
+    {
+        "text": "Thanks.",
+        "start": 1087.805,
+        "duration": 0.15
+    },
+    {
+        "text": "yeah, feel free to interrupt.",
+        "start": 1090.322,
+        "duration": 1.41
+    },
+    {
+        "text": "almost done too.",
+        "start": 1095.212,
+        "duration": 0.72
+    },
+    {
+        "text": "yeah, last one.",
+        "start": 1096.562,
+        "duration": 0.69
+    },
+    {
+        "text": "I just put plus, for all the\nother capabilities and I already",
+        "start": 1097.252,
+        "duration": 4.62
+    },
+    {
+        "text": "peppered in a couple of, other\nthings in here with in blue.",
+        "start": 1102.352,
+        "duration": 4.41
+    },
+    {
+        "text": "but yeah, basically having multi-agent\nsystems, which, might be pretty",
+        "start": 1108.502,
+        "duration": 4.08
+    },
+    {
+        "text": "natural generalization since we\nalready have these general learning",
+        "start": 1112.582,
+        "duration": 3.9
+    },
+    {
+        "text": "modules that can talk to each other.",
+        "start": 1116.482,
+        "duration": 1.41
+    },
+    {
+        "text": "So it, it's probably, it can probably\ngeneralize easily to them being separate",
+        "start": 1117.892,
+        "duration": 6.75
+    },
+    {
+        "text": "agents and still talking to each other.",
+        "start": 1124.642,
+        "duration": 1.95
+    },
+    {
+        "text": "but then, yeah, generally, representing\nabstract concepts, which we're",
+        "start": 1128.512,
+        "duration": 3.57
+    },
+    {
+        "text": "also hoping will generalize out of\nour algorithm without us having to",
+        "start": 1132.082,
+        "duration": 5.31
+    },
+    {
+        "text": "add a specific mechanism for it.",
+        "start": 1137.392,
+        "duration": 2.07
+    },
+    {
+        "text": "But we'll have to see a lot that,\nscale and deformations and, theory",
+        "start": 1139.867,
+        "duration": 4.44
+    },
+    {
+        "text": "of mind, which again plays a\nbit into the multi-agent thing.",
+        "start": 1144.307,
+        "duration": 2.845
+    },
+    {
+        "text": "and that's really now this, robots on\nMars example where Mars is really not a",
+        "start": 1149.227,
+        "duration": 5.88
+    },
+    {
+        "text": "place for humans to go and start building,\nstuff there, but more a place where robots",
+        "start": 1155.107,
+        "duration": 5.07
+    },
+    {
+        "text": "would need to go first and build a colony.",
+        "start": 1160.177,
+        "duration": 1.89
+    },
+    {
+        "text": "And I. It's such a different environment\nthat it's hard to imagine how they",
+        "start": 1162.067,
+        "duration": 3.695
+    },
+    {
+        "text": "would be pre-trained on large amounts\nof data, on Earth, and then go",
+        "start": 1165.762,
+        "duration": 5.04
+    },
+    {
+        "text": "there and be able to do the stuff.",
+        "start": 1170.802,
+        "duration": 1.74
+    },
+    {
+        "text": "and it would really need\nmore of an intelligence like",
+        "start": 1173.112,
+        "duration": 2.55
+    },
+    {
+        "text": "ours, that can generalize and\nextrapolate to new environments,",
+        "start": 1175.662,
+        "duration": 3.81
+    },
+    {
+        "text": "to, actually be efficient\nhere, not, break down when they",
+        "start": 1182.452,
+        "duration": 3.95
+    },
+    {
+        "text": "encounter an unknown problem.",
+        "start": 1186.402,
+        "duration": 2.28
+    },
+    {
+        "text": "Education.",
+        "start": 1191.017,
+        "duration": 0.99
+    },
+    {
+        "text": "so one, yeah, potentially actual\nAI teaching, children or, adults.",
+        "start": 1192.577,
+        "duration": 7.59
+    },
+    {
+        "text": "But then also, understanding intelligence\nin humans, which will be one thing that",
+        "start": 1200.617,
+        "duration": 6.24
+    },
+    {
+        "text": "I'm hoping will come out of this whole\nproject as well, like a full understanding",
+        "start": 1206.857,
+        "duration": 3.27
+    },
+    {
+        "text": "of how our brain works, which then.",
+        "start": 1210.367,
+        "duration": 1.47
+    },
+    {
+        "text": "should help treat mental disorders\nand also for us to know the best",
+        "start": 1213.197,
+        "duration": 3.72
+    },
+    {
+        "text": "way to actually teach children,\nand learn about the world.",
+        "start": 1216.917,
+        "duration": 4.11
+    },
+    {
+        "text": "yeah, the, big, theme is, the hope is\nthat this will make the world a safer",
+        "start": 1224.902,
+        "duration": 6.78
+    },
+    {
+        "text": "and healthier place, raise the standard\nof living, solve current problems and",
+        "start": 1231.682,
+        "duration": 5.04
+    },
+    {
+        "text": "existential risks, and also applications\nwe can't even conceive of today.",
+        "start": 1236.722,
+        "duration": 5.76
+    }
+]

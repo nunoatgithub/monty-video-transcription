@@ -1,0 +1,6587 @@
+[
+    {
+        "text": "I will, share the document, Google Doc,\nwhere a lot of people have put a lot of",
+        "start": 7.515,
+        "duration": 5.61
+    },
+    {
+        "text": "comments in, which was pretty exciting.",
+        "start": 13.125,
+        "duration": 2.29
+    },
+    {
+        "text": "and then I will, we'll go from there.",
+        "start": 16.475,
+        "duration": 2.45
+    },
+    {
+        "text": "Okay,",
+        "start": 21.545,
+        "duration": 0.28
+    },
+    {
+        "text": "make the zoom smaller, okay.",
+        "start": 26.235,
+        "duration": 1.23
+    },
+    {
+        "text": "yeah, after the meeting last week, I had.",
+        "start": 29.195,
+        "duration": 4.1
+    },
+    {
+        "text": "Or I wanted to walk through an example of\nmy own, and so I have done that with lots",
+        "start": 34.055,
+        "duration": 6.56
+    },
+    {
+        "text": "of people commenting, and then for today,\nI just went through everybody's, I've been",
+        "start": 40.615,
+        "duration": 4.68
+    },
+    {
+        "text": "on top of the comments, but I've just gone\nthrough and, put together some questions",
+        "start": 45.965,
+        "duration": 6.66
+    },
+    {
+        "text": "that we were, still some open questions,",
+        "start": 52.665,
+        "duration": 3.06
+    },
+    {
+        "text": "yeah, yeah, that's about it, actually.",
+        "start": 58.685,
+        "duration": 3.65
+    },
+    {
+        "text": "just a little refresher, the example that\nI've been working on or, that we started",
+        "start": 64.995,
+        "duration": 7.94
+    },
+    {
+        "text": "to think about last week together as\na group was this hunch only, Keyboard,",
+        "start": 72.935,
+        "duration": 6.14
+    },
+    {
+        "text": "where we can sense what the key is.",
+        "start": 79.105,
+        "duration": 2.45
+    },
+    {
+        "text": "I tried to draw it a little.",
+        "start": 81.955,
+        "duration": 1.63
+    },
+    {
+        "text": "Nice drawing.",
+        "start": 84.845,
+        "duration": 0.97
+    },
+    {
+        "text": "Thank you.",
+        "start": 86.675,
+        "duration": 0.44
+    },
+    {
+        "text": "So this is something that\npresumably we can sense that it's",
+        "start": 88.575,
+        "duration": 3.47
+    },
+    {
+        "text": "an N without having the vision.",
+        "start": 92.045,
+        "duration": 1.52
+    },
+    {
+        "text": "sensor and, we were trying to achieve\nthe goal of typing phone number or, the",
+        "start": 94.825,
+        "duration": 8.55
+    },
+    {
+        "text": "word Numenta, in two hierarchical ls.",
+        "start": 103.375,
+        "duration": 4.92
+    },
+    {
+        "text": "So that's, where we were.",
+        "start": 108.775,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 113.065,
+        "duration": 0.3
+    },
+    {
+        "text": "And, then I think, one of the point\nthat I, we had the most kind of",
+        "start": 113.515,
+        "duration": 4.08
+    },
+    {
+        "text": "conversation or uncertainty about was.",
+        "start": 118.135,
+        "duration": 2.37
+    },
+    {
+        "text": "where is the keyboard model?",
+        "start": 122.41,
+        "duration": 1.26
+    },
+    {
+        "text": "And I think it's different.",
+        "start": 123.72,
+        "duration": 1.97
+    },
+    {
+        "text": "The settings are, I think, different.",
+        "start": 125.91,
+        "duration": 1.5
+    },
+    {
+        "text": "I think what we're learning, I think\nwe can all agree that there is a",
+        "start": 127.41,
+        "duration": 3.78
+    },
+    {
+        "text": "keyboard model that's being learned.",
+        "start": 131.19,
+        "duration": 2.18
+    },
+    {
+        "text": "I, in either of the, learning\nmodules, either in the lower",
+        "start": 134.2,
+        "duration": 3.825
+    },
+    {
+        "text": "level or the upper level.",
+        "start": 138.025,
+        "duration": 1.02
+    },
+    {
+        "text": "I call them R1 and R2.",
+        "start": 139.125,
+        "duration": 1.44
+    },
+    {
+        "text": "but in the case where we have content\nso proficient that we're not really",
+        "start": 141.775,
+        "duration": 4.75
+    },
+    {
+        "text": "thinking about typing each letter,\nbut we're typing the word itself,",
+        "start": 146.585,
+        "duration": 6.72
+    },
+    {
+        "text": "do we still have a keyboard model?",
+        "start": 153.515,
+        "duration": 1.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 156.655,
+        "duration": 0.27
+    },
+    {
+        "text": "No, it was even, I went\neven further than that.",
+        "start": 156.925,
+        "duration": 2.56
+    },
+    {
+        "text": "I was thinking about how we learn to type.",
+        "start": 159.945,
+        "duration": 1.92
+    },
+    {
+        "text": "And, and I'm not saying we don't\nhave a keyboard model, we do,",
+        "start": 162.68,
+        "duration": 5.08
+    },
+    {
+        "text": "but it's not a very accurate one.",
+        "start": 167.79,
+        "duration": 1.59
+    },
+    {
+        "text": "and, how we learned to type, it seemed\nlike we would often use, as human, we",
+        "start": 170.92,
+        "duration": 4.53
+    },
+    {
+        "text": "would use vision to locate the object we\nwant to touch, and then we would touch it.",
+        "start": 175.45,
+        "duration": 4.38
+    },
+    {
+        "text": "and so there was a, so\nthe model came into play.",
+        "start": 181.54,
+        "duration": 3.16
+    },
+    {
+        "text": "That it helped you visually\nfind the key quicker.",
+        "start": 185.12,
+        "duration": 2.64
+    },
+    {
+        "text": "this is just, this is not our, this is\nnot a task we're doing necessarily, but",
+        "start": 189.2,
+        "duration": 3.82
+    },
+    {
+        "text": "this is how a human would solve this task.",
+        "start": 193.02,
+        "duration": 1.45
+    },
+    {
+        "text": "the keyboard model wasn't even\nessential for a human to do this.",
+        "start": 195.67,
+        "duration": 3.31
+    },
+    {
+        "text": "the hunt and peck idea is you hunt.",
+        "start": 199.2,
+        "duration": 2.31
+    },
+    {
+        "text": "You just look around until you find\nthe key you want, and then press",
+        "start": 201.87,
+        "duration": 2.09
+    },
+    {
+        "text": "it, and the keyboard model helps\nyou find that key quicker, at least",
+        "start": 203.96,
+        "duration": 5.74
+    },
+    {
+        "text": "when you're first learning to type.",
+        "start": 209.7,
+        "duration": 1.3
+    },
+    {
+        "text": "So it was interesting.",
+        "start": 211.55,
+        "duration": 0.66
+    },
+    {
+        "text": "yeah, I feel like that's key, I guess\nthat, that it makes it quicker, because",
+        "start": 214.18,
+        "duration": 4.35
+    },
+    {
+        "text": "that's what we're trying to do is, use\nmodels to make learning more efficient,",
+        "start": 218.87,
+        "duration": 4.04
+    },
+    {
+        "text": "otherwise it's essentially like a random\nwalk until you find the key, which",
+        "start": 222.94,
+        "duration": 4.56
+    },
+    {
+        "text": "is what deep learning, reinforcement\nlearning does, but I just want to make",
+        "start": 227.5,
+        "duration": 4.61
+    },
+    {
+        "text": "a point that when we think about what\nthe task is that we're doing here.",
+        "start": 232.11,
+        "duration": 3.09
+    },
+    {
+        "text": "I, just, it's not clear that we have two\nlearning modules, one is going to use",
+        "start": 237.8,
+        "duration": 4.06
+    },
+    {
+        "text": "the keyboard model directly, it's I feel,\noh, I need a, learning module that's",
+        "start": 241.86,
+        "duration": 5.61
+    },
+    {
+        "text": "going to learn the actual movements to\ndo this typing, and that's, that learning",
+        "start": 247.47,
+        "duration": 5.89
+    },
+    {
+        "text": "module, that's like a motor, and one\ntype of learning model, doesn't actually",
+        "start": 253.36,
+        "duration": 4.56
+    },
+    {
+        "text": "have a model of the keyboard in it.",
+        "start": 257.92,
+        "duration": 1.54
+    },
+    {
+        "text": "it doesn't need one.",
+        "start": 261.02,
+        "duration": 0.78
+    },
+    {
+        "text": "it just learns these, behaviors\nrelative to the body position.",
+        "start": 263.16,
+        "duration": 3.34
+    },
+    {
+        "text": "that was the insight I had from this.",
+        "start": 268.1,
+        "duration": 1.28
+    },
+    {
+        "text": "It was like, oh, wow.",
+        "start": 269.39,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm not saying we get rid of the learning\nmodule, but I'm not sure it fits neatly",
+        "start": 271.47,
+        "duration": 2.76
+    },
+    {
+        "text": "into two, get rid of the keyboard module.",
+        "start": 274.23,
+        "duration": 2.08
+    },
+    {
+        "text": "I'm not sure it fits neatly\ninto two learning modules.",
+        "start": 276.31,
+        "duration": 2.43
+    },
+    {
+        "text": "that's, that was my conclusion\nfrom that little study there.",
+        "start": 280.41,
+        "duration": 2.79
+    },
+    {
+        "text": "Like you might need,\nyou need a word model.",
+        "start": 284.31,
+        "duration": 2.28
+    },
+    {
+        "text": "you might, if you want a keyboard\nmodel, but then you also have to",
+        "start": 287.345,
+        "duration": 2.65
+    },
+    {
+        "text": "have the actuator model, which is\na, which doesn't have the keyboard.",
+        "start": 289.995,
+        "duration": 3.34
+    },
+    {
+        "text": "I don't know if that was clear in my\nlittle write up, but I felt wow, that's a",
+        "start": 295.135,
+        "duration": 3.7
+    },
+    {
+        "text": "surprising realization in my case.",
+        "start": 301.165,
+        "duration": 2.1
+    },
+    {
+        "text": "So do you think that we might not\nneed a keyboard, so like in the",
+        "start": 304.24,
+        "duration": 3.7
+    },
+    {
+        "text": "situation where you sit down to a\nkeyboard that has a different spatial",
+        "start": 307.94,
+        "duration": 3.0
+    },
+    {
+        "text": "scale than others, like it's a little\nminiature or a little larger, what,",
+        "start": 310.94,
+        "duration": 4.4
+    },
+    {
+        "text": "do you think a keyboard model would\nhelp you rapidly remap the scale?",
+        "start": 315.35,
+        "duration": 5.05
+    },
+    {
+        "text": "no, I don't, think that's right.",
+        "start": 320.9,
+        "duration": 1.49
+    },
+    {
+        "text": "I think, cause you don't relearn the type.",
+        "start": 322.39,
+        "duration": 3.46
+    },
+    {
+        "text": "What you just try to do is\nscale your movements, right?",
+        "start": 325.85,
+        "duration": 2.88
+    },
+    {
+        "text": "Assume you still touch\ntyping with two hands.",
+        "start": 330.3,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah, that, the more logical, it's\nnot oh, this is a new keyboard.",
+        "start": 332.84,
+        "duration": 5.75
+    },
+    {
+        "text": "I'm going to relearn it.",
+        "start": 338.59,
+        "duration": 0.74
+    },
+    {
+        "text": "Let's go back to my keyboard model.",
+        "start": 339.38,
+        "duration": 1.51
+    },
+    {
+        "text": "It's more oh, these are the\nphysical movements I usually",
+        "start": 341.34,
+        "duration": 2.45
+    },
+    {
+        "text": "do to make these things.",
+        "start": 343.79,
+        "duration": 1.59
+    },
+    {
+        "text": "They're not working quite right.",
+        "start": 345.38,
+        "duration": 1.11
+    },
+    {
+        "text": "And you can scale the whole thing.",
+        "start": 347.03,
+        "duration": 1.28
+    },
+    {
+        "text": "We've talked about this in the\npast, there's ways of scaling,",
+        "start": 348.35,
+        "duration": 2.64
+    },
+    {
+        "text": "object models and, behaviors, and so that,\nI think the more logical thing is you have",
+        "start": 354.01,
+        "duration": 6.0
+    },
+    {
+        "text": "to just apply a slightly scale factor to\nthe whole thing, and then you're, the,",
+        "start": 360.01,
+        "duration": 5.08
+    },
+    {
+        "text": "your movements will be slightly less,\nsomething along those lines, but I don't",
+        "start": 365.98,
+        "duration": 3.16
+    },
+    {
+        "text": "think you have to go back to the keyboard\nmodel because it's I don't do that.",
+        "start": 369.14,
+        "duration": 3.11
+    },
+    {
+        "text": "if I'm just not typing right,\nif something's wrong, you just,",
+        "start": 372.4,
+        "duration": 3.61
+    },
+    {
+        "text": "not by looking at, studying the\nkeyboard and, or thinking about the",
+        "start": 376.02,
+        "duration": 3.34
+    },
+    {
+        "text": "keyboard, you just just move less,",
+        "start": 379.36,
+        "duration": 2.36
+    },
+    {
+        "text": "that's how you do it.",
+        "start": 384.31,
+        "duration": 0.86
+    },
+    {
+        "text": "It almost seems like the typing part is.",
+        "start": 386.6,
+        "duration": 4.86
+    },
+    {
+        "text": "a model free policy at this point, like\nwe're not really using the model anymore",
+        "start": 392.56,
+        "duration": 5.19
+    },
+    {
+        "text": "to do the typing, but then if we do\nuse the, hunt and pack strategy, then",
+        "start": 397.75,
+        "duration": 6.35
+    },
+    {
+        "text": "we switch back to slightly model based\npolicy because we use a rough model of",
+        "start": 404.1,
+        "duration": 5.39
+    },
+    {
+        "text": "the keyboard of like where are the letter\nkeys to constrain where we look for them.",
+        "start": 409.53,
+        "duration": 5.4
+    },
+    {
+        "text": "and also I think that's right, although\nI wouldn't say it's model free, the",
+        "start": 417.895,
+        "duration": 3.69
+    },
+    {
+        "text": "motor behaviors, I mean it's a learning\nmodule, it's playing back a sequence.",
+        "start": 421.585,
+        "duration": 3.56
+    },
+    {
+        "text": "It's more like playing back a melody,\nit's playing back sequences of physical",
+        "start": 425.145,
+        "duration": 5.21
+    },
+    {
+        "text": "movements that it learned, that it\nwas exposed to over and over again.",
+        "start": 430.355,
+        "duration": 4.39
+    },
+    {
+        "text": "So I could say that when\nyou're typing a word.",
+        "start": 434.745,
+        "duration": 3.59
+    },
+    {
+        "text": "there's a model of how to type the word.",
+        "start": 439.075,
+        "duration": 1.49
+    },
+    {
+        "text": "It just isn't a keyboard model,\nand it isn't a word model.",
+        "start": 440.565,
+        "duration": 2.38
+    },
+    {
+        "text": "It's just the motor system is given\nokay, it's time to execute this,",
+        "start": 443.435,
+        "duration": 4.71
+    },
+    {
+        "text": "sequence, and go ahead and do it.",
+        "start": 449.385,
+        "duration": 1.93
+    },
+    {
+        "text": "So I wouldn't say there's no model\nthere, it's just more like a melody.",
+        "start": 452.345,
+        "duration": 2.58
+    },
+    {
+        "text": "But is that, yeah, is that really a model?",
+        "start": 455.095,
+        "duration": 3.2
+    },
+    {
+        "text": "Or I appreciate it's a representation,\nlike depending on the linguistics, you",
+        "start": 458.335,
+        "duration": 5.375
+    },
+    {
+        "text": "could argue it's a model, but it feels\nlike the kind of, like the whole point",
+        "start": 463.75,
+        "duration": 4.64
+    },
+    {
+        "text": "of a model is how you can reuse it in\ndifferent ways, where if it's like a",
+        "start": 468.39,
+        "duration": 2.74
+    },
+    {
+        "text": "sequence, that's like a very fixed thing.",
+        "start": 471.13,
+        "duration": 1.8
+    },
+    {
+        "text": "And that's it feels like a\nmodel free, like current model",
+        "start": 472.93,
+        "duration": 4.38
+    },
+    {
+        "text": "free systems could learn that.",
+        "start": 477.31,
+        "duration": 1.11
+    },
+    {
+        "text": "do that.",
+        "start": 479.14,
+        "duration": 0.35
+    },
+    {
+        "text": "okay.",
+        "start": 480.0,
+        "duration": 0.19
+    },
+    {
+        "text": "I guess what I would say is that I\nthink it's happening in the cortex.",
+        "start": 480.35,
+        "duration": 2.99
+    },
+    {
+        "text": "It's happening in a learning module.",
+        "start": 483.73,
+        "duration": 1.57
+    },
+    {
+        "text": "It's just like playing back a melody and\none could, you can argue, is that a model?",
+        "start": 485.67,
+        "duration": 5.03
+    },
+    {
+        "text": "I said, it's not the sort of, the\nmodel, it's not the kind of dimensional",
+        "start": 490.7,
+        "duration": 4.91
+    },
+    {
+        "text": "model we, we typical think about.",
+        "start": 495.62,
+        "duration": 1.74
+    },
+    {
+        "text": "in Monty, but it's, a type of, it's\ncertainly happening in one of the layers",
+        "start": 498.325,
+        "duration": 3.67
+    },
+    {
+        "text": "in the cortex, and it's just basically\nsaying, I'm, I've learned a sequence",
+        "start": 501.995,
+        "duration": 3.85
+    },
+    {
+        "text": "of SDRs, and I'm just playing it back.",
+        "start": 505.845,
+        "duration": 3.42
+    },
+    {
+        "text": "I, just don't want anyone to think this is\noutside of the realm of learning modules.",
+        "start": 509.935,
+        "duration": 2.99
+    },
+    {
+        "text": "I think it's inside of it.",
+        "start": 512.975,
+        "duration": 0.67
+    },
+    {
+        "text": "I think learning modules do this.",
+        "start": 513.915,
+        "duration": 1.43
+    },
+    {
+        "text": "So we're going back to it.",
+        "start": 515.635,
+        "duration": 1.97
+    },
+    {
+        "text": "so just, in fact, we started by studying\nmelodies, and we never really got, we",
+        "start": 518.025,
+        "duration": 5.28
+    },
+    {
+        "text": "made a lot of progress on it, but we never\nreally got it figured out completely, with",
+        "start": 523.305,
+        "duration": 2.93
+    },
+    {
+        "text": "this whole issue about, Pitch invariants\nand other things, which, but, but",
+        "start": 526.235,
+        "duration": 6.765
+    },
+    {
+        "text": "anyway, I think, okay, it's a sequence.",
+        "start": 533.0,
+        "duration": 1.92
+    },
+    {
+        "text": "Anyway, I'm just saying, if I were to\nbuild the system now, I wouldn't say",
+        "start": 534.93,
+        "duration": 3.87
+    },
+    {
+        "text": "there's just two learning modules.",
+        "start": 538.8,
+        "duration": 1.22
+    },
+    {
+        "text": "I'd say, if there's a keyboard\nmodel, that's one, that's in one",
+        "start": 540.02,
+        "duration": 2.25
+    },
+    {
+        "text": "learning module, a keyboard model.",
+        "start": 542.27,
+        "duration": 2.2
+    },
+    {
+        "text": "If there's a word model, that's going\nto be in another learning module, and",
+        "start": 544.47,
+        "duration": 3.8
+    },
+    {
+        "text": "then a third learning module is going to\nactually execute the sequence, whether",
+        "start": 548.27,
+        "duration": 3.48
+    },
+    {
+        "text": "we think that's, It, if it's just doing\na replay of a melody type of thing, fine,",
+        "start": 551.75,
+        "duration": 6.33
+    },
+    {
+        "text": "but it's still a third learning module.",
+        "start": 558.08,
+        "duration": 1.9
+    },
+    {
+        "text": "It'll do other things in other situations.",
+        "start": 560.56,
+        "duration": 1.82
+    },
+    {
+        "text": "I think so.",
+        "start": 563.51,
+        "duration": 1.24
+    },
+    {
+        "text": "Anyway, that's, couldn't the\nsequence be learned in the word?",
+        "start": 564.8,
+        "duration": 3.75
+    },
+    {
+        "text": "One, I was thinking the word is like a\nparticular word would be like a state",
+        "start": 569.09,
+        "duration": 6.34
+    },
+    {
+        "text": "in a learning module or the id in the\nlearning module that models words.",
+        "start": 575.45,
+        "duration": 4.82
+    },
+    {
+        "text": "And so it's going to carry out the actions\nuntil it's, state satisfies that word.",
+        "start": 580.85,
+        "duration": 6.15
+    },
+    {
+        "text": "I didn't follow that.",
+        "start": 589.14,
+        "duration": 0.71
+    },
+    {
+        "text": "Your first question I got, but\nthe rest of it I didn't get.",
+        "start": 590.31,
+        "duration": 2.19
+    },
+    {
+        "text": "I think, I would say, that the, in\nthe model that's actually moving",
+        "start": 594.49,
+        "duration": 5.48
+    },
+    {
+        "text": "the finger, making the motions,",
+        "start": 599.97,
+        "duration": 1.61
+    },
+    {
+        "text": "that is, it has no concept of word.",
+        "start": 604.965,
+        "duration": 3.91
+    },
+    {
+        "text": "it just says, given this, you've\nasked me to execute a sequence, I'll",
+        "start": 609.675,
+        "duration": 3.49
+    },
+    {
+        "text": "execute it, but any other definition\nof meaning of the word isn't there.",
+        "start": 613.165,
+        "duration": 4.1
+    },
+    {
+        "text": "It doesn't know the letters.",
+        "start": 617.445,
+        "duration": 1.58
+    },
+    {
+        "text": "it just says, to type this word, I\nwill, Move my finger in the following",
+        "start": 620.785,
+        "duration": 5.795
+    },
+    {
+        "text": "ways, but it doesn't know that those\nmovements constitute letters in a word.",
+        "start": 626.63,
+        "duration": 7.06
+    },
+    {
+        "text": "It's just a playback of, yeah,\nthe concept of a word disappears",
+        "start": 634.5,
+        "duration": 7.99
+    },
+    {
+        "text": "as soon as it starts sending a\nletter at a time to someone else.",
+        "start": 642.49,
+        "duration": 2.83
+    },
+    {
+        "text": "Yeah, so one way I was thinking is if\nyou had higher up You had, yeah, some",
+        "start": 647.9,
+        "duration": 6.395
+    },
+    {
+        "text": "learning module that models words.",
+        "start": 654.295,
+        "duration": 1.51
+    },
+    {
+        "text": "And so that's like in an abstract space.",
+        "start": 655.955,
+        "duration": 1.7
+    },
+    {
+        "text": "So it's like a sequence\nof letters on a 1D thing.",
+        "start": 657.665,
+        "duration": 3.85
+    },
+    {
+        "text": "And then it say passes a goal state\nof like to the keyboard learning",
+        "start": 662.155,
+        "duration": 5.19
+    },
+    {
+        "text": "module, be in the state of a letter\nbeing pressed, a particular letter.",
+        "start": 667.345,
+        "duration": 5.27
+    },
+    {
+        "text": "So it sends like an abstract letter.",
+        "start": 672.685,
+        "duration": 2.87
+    },
+    {
+        "text": "And then the keyboard model knows\napproximately, not perfectly,",
+        "start": 676.29,
+        "duration": 3.68
+    },
+    {
+        "text": "and this is before we have\nlearned the model free version.",
+        "start": 680.49,
+        "duration": 2.51
+    },
+    {
+        "text": "It knows approximately where that key\nis, and then it sends a motor command.",
+        "start": 683.76,
+        "duration": 3.4
+    },
+    {
+        "text": "either directly subcortically or\nto, a learning module for a finger.",
+        "start": 688.04,
+        "duration": 4.34
+    },
+    {
+        "text": "That's close.",
+        "start": 692.76,
+        "duration": 0.63
+    },
+    {
+        "text": "I think, the keyboard model\nwouldn't send a, it would send, it",
+        "start": 693.87,
+        "duration": 3.27
+    },
+    {
+        "text": "basically would send a location.",
+        "start": 697.17,
+        "duration": 1.71
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 699.97,
+        "duration": 0.45
+    },
+    {
+        "text": "Like a goal, yeah.",
+        "start": 700.44,
+        "duration": 1.22
+    },
+    {
+        "text": "Move your finger to this location\nrelative to the, this allocentric,",
+        "start": 702.85,
+        "duration": 3.88
+    },
+    {
+        "text": "this egocentric location.",
+        "start": 706.99,
+        "duration": 0.73
+    },
+    {
+        "text": "I feel not even necessarily\nmove your finger, just.",
+        "start": 707.72,
+        "duration": 3.17
+    },
+    {
+        "text": "Someone be applying\npressure at this location.",
+        "start": 711.425,
+        "duration": 3.24
+    },
+    {
+        "text": "Okay, if I send it to, if we only have one\nmotor It could be achieved by different",
+        "start": 715.155,
+        "duration": 5.04
+    },
+    {
+        "text": "But in this case, So you're right,\nlet's go down hierarchically.",
+        "start": 722.235,
+        "duration": 4.04
+    },
+    {
+        "text": "We start with this, somebody\nknows what a word is in terms",
+        "start": 726.315,
+        "duration": 3.07
+    },
+    {
+        "text": "of its compositional letters.",
+        "start": 729.385,
+        "duration": 1.6
+    },
+    {
+        "text": "And then it says, okay, it starts out\nsending a letter at a time to someone",
+        "start": 731.845,
+        "duration": 3.95
+    },
+    {
+        "text": "that's you have to actually do this.",
+        "start": 735.795,
+        "duration": 1.92
+    },
+    {
+        "text": "Okay.",
+        "start": 737.715,
+        "duration": 0.055
+    },
+    {
+        "text": "but, it could be like that letter was\nspoken, it could be the letter was typed,",
+        "start": 739.05,
+        "duration": 3.8
+    },
+    {
+        "text": "it could be the letter was written, so as\nyou point out, there's a lot of different",
+        "start": 742.85,
+        "duration": 2.58
+    },
+    {
+        "text": "ways that letter can get instantiated.",
+        "start": 745.43,
+        "duration": 1.73
+    },
+    {
+        "text": "And the word model doesn't\nknow, doesn't know any of the",
+        "start": 747.69,
+        "duration": 3.08
+    },
+    {
+        "text": "details about how those different\ninstantiations are going to occur.",
+        "start": 750.78,
+        "duration": 2.8
+    },
+    {
+        "text": "somehow it gets directed to, the\nsystem we're talking about, which",
+        "start": 754.75,
+        "duration": 4.36
+    },
+    {
+        "text": "says, okay, this is going to be\ntyping on the keyboard and, and now",
+        "start": 759.11,
+        "duration": 5.62
+    },
+    {
+        "text": "I have to figure out, where in space,",
+        "start": 764.77,
+        "duration": 4.32
+    },
+    {
+        "text": "this thing is that the\nfinger has to press.",
+        "start": 771.31,
+        "duration": 1.98
+    },
+    {
+        "text": "And we've talked about\ntwo ways of doing that.",
+        "start": 773.99,
+        "duration": 1.99
+    },
+    {
+        "text": "One, you can have a model of the keyboard\nand says, oh, using my model of the",
+        "start": 775.98,
+        "duration": 2.92
+    },
+    {
+        "text": "keyboard, I know where to put my finger.",
+        "start": 778.9,
+        "duration": 2.09
+    },
+    {
+        "text": "And the other, I think what we\nactually do in humans is we often",
+        "start": 780.99,
+        "duration": 3.68
+    },
+    {
+        "text": "just, we'll use a visual system\nto locate something in space.",
+        "start": 784.67,
+        "duration": 2.76
+    },
+    {
+        "text": "It's more find the letter A and\nthen tell the motor model to move",
+        "start": 788.155,
+        "duration": 4.73
+    },
+    {
+        "text": "to that location and press it.",
+        "start": 792.915,
+        "duration": 1.45
+    },
+    {
+        "text": "But it could have told someone else\nto move to that location and press it.",
+        "start": 794.835,
+        "duration": 3.07
+    },
+    {
+        "text": "it could have done that too.",
+        "start": 798.545,
+        "duration": 1.49
+    },
+    {
+        "text": "If I, if you're following all this,\nI'd like to keep going on for a second.",
+        "start": 802.935,
+        "duration": 2.49
+    },
+    {
+        "text": "We talked now about just like\ndoing one letter at a time, right?",
+        "start": 806.495,
+        "duration": 2.99
+    },
+    {
+        "text": "You're decomposing the word one letter\nat a time, but clearly Learning moves",
+        "start": 809.485,
+        "duration": 3.53
+    },
+    {
+        "text": "down the hierarchy, and we don't\nwant to do one letter at a time.",
+        "start": 813.015,
+        "duration": 2.56
+    },
+    {
+        "text": "So we just talk to, okay, we're sending\na letter at a time to someone else,",
+        "start": 816.105,
+        "duration": 3.76
+    },
+    {
+        "text": "but ultimately, we want to just be\nable to send them the whole word and",
+        "start": 819.865,
+        "duration": 2.62
+    },
+    {
+        "text": "say, take care of the whole word.",
+        "start": 822.485,
+        "duration": 1.06
+    },
+    {
+        "text": "so I think that's easy, but it\nmeans that there's two messages",
+        "start": 825.415,
+        "duration": 3.14
+    },
+    {
+        "text": "going down, down the hierarchy.",
+        "start": 828.565,
+        "duration": 1.61
+    },
+    {
+        "text": "One is here's the letter, but you\nalso know the context of the word.",
+        "start": 830.175,
+        "duration": 3.12
+    },
+    {
+        "text": "So when you learn the sequence, I don't\nhave to tell you the letters anymore.",
+        "start": 833.295,
+        "duration": 2.95
+    },
+    {
+        "text": "You can, I just, as soon as\nI give you the word, you'll,",
+        "start": 836.545,
+        "duration": 2.03
+    },
+    {
+        "text": "know what sequence to play out.",
+        "start": 838.575,
+        "duration": 1.16
+    },
+    {
+        "text": "okay.",
+        "start": 841.355,
+        "duration": 0.27
+    },
+    {
+        "text": "You know what I'm talking about?",
+        "start": 842.04,
+        "duration": 0.7
+    },
+    {
+        "text": "It's like this.",
+        "start": 842.74,
+        "duration": 0.74
+    },
+    {
+        "text": "It's like a trick.",
+        "start": 843.98,
+        "duration": 0.33
+    },
+    {
+        "text": "You have to have two signals\ngoing down the hierarchy.",
+        "start": 844.31,
+        "duration": 2.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 848.86,
+        "duration": 0.21
+    },
+    {
+        "text": "I guess with the, I was just thinking\nwhen you, yeah, with the way it was",
+        "start": 849.15,
+        "duration": 4.35
+    },
+    {
+        "text": "described, like with the hunt and\npeck, I feel like that could still,",
+        "start": 853.59,
+        "duration": 4.19
+    },
+    {
+        "text": "that's still probably supported by the\nkeyboard model, but the goal state it's",
+        "start": 857.98,
+        "duration": 4.81
+    },
+    {
+        "text": "sending rather than apply pressure here.",
+        "start": 862.79,
+        "duration": 2.13
+    },
+    {
+        "text": "It's look, or rather move sensors here,\nto confirm my hypothesis that this",
+        "start": 865.29,
+        "duration": 8.36
+    },
+    {
+        "text": "is approximately where the letter is.",
+        "start": 873.66,
+        "duration": 1.3
+    },
+    {
+        "text": "And then you would saccade there,\nsee what there is there, and then",
+        "start": 875.525,
+        "duration": 4.9
+    },
+    {
+        "text": "that would that keyboard model would\nthen be basically updated based on,",
+        "start": 880.425,
+        "duration": 3.92
+    },
+    {
+        "text": "Maybe, Again, I was impressed by\nhow poor our keyboard models are.",
+        "start": 886.045,
+        "duration": 3.27
+    },
+    {
+        "text": "I used to think, yeah, I have a\nperfect model of the keyboard,",
+        "start": 889.315,
+        "duration": 1.83
+    },
+    {
+        "text": "but it's really not at all.",
+        "start": 891.625,
+        "duration": 0.92
+    },
+    {
+        "text": "I think, the whole system could\nwork without a keyboard model, but",
+        "start": 892.795,
+        "duration": 4.6
+    },
+    {
+        "text": "I'm not saying there isn't one.",
+        "start": 897.675,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm just saying, because really\nwhat was, what, we could try",
+        "start": 899.015,
+        "duration": 3.77
+    },
+    {
+        "text": "to decompose this further.",
+        "start": 902.785,
+        "duration": 0.88
+    },
+    {
+        "text": "Someone says we need to type this word.",
+        "start": 904.165,
+        "duration": 1.55
+    },
+    {
+        "text": "Here's what, let's do\nit one letter at a time.",
+        "start": 905.725,
+        "duration": 1.63
+    },
+    {
+        "text": "and, then we decide we're going to do\nit this means, meaning with a finger.",
+        "start": 909.445,
+        "duration": 3.4
+    },
+    {
+        "text": "then, so someone, basically\nwhat the system does is, okay,",
+        "start": 914.285,
+        "duration": 2.86
+    },
+    {
+        "text": "I have to find that thing.",
+        "start": 917.145,
+        "duration": 1.14
+    },
+    {
+        "text": "you could use a model, but\nthis seems like we, personally,",
+        "start": 919.825,
+        "duration": 2.13
+    },
+    {
+        "text": "we don't do this very well.",
+        "start": 921.955,
+        "duration": 2.02
+    },
+    {
+        "text": "But we have to find where that thing\nis, locate it in the space of the",
+        "start": 924.565,
+        "duration": 3.91
+    },
+    {
+        "text": "hand, and, and tell the hand to\nmove to that location and press.",
+        "start": 928.475,
+        "duration": 3.91
+    },
+    {
+        "text": "so in the end, the hands part and the\nfinger part doesn't actually know that",
+        "start": 933.965,
+        "duration": 3.54
+    },
+    {
+        "text": "it's typing an A, it's just being told to\ngo someplace in the context of some word.",
+        "start": 937.505,
+        "duration": 5.45
+    },
+    {
+        "text": "It's given a context of a word which\nit doesn't understand, it's just some",
+        "start": 943.425,
+        "duration": 2.67
+    },
+    {
+        "text": "SDR, and it says go to this location,\nnow go to this location, now go to",
+        "start": 946.105,
+        "duration": 4.66
+    },
+    {
+        "text": "this location, now go to this location.",
+        "start": 950.765,
+        "duration": 1.61
+    },
+    {
+        "text": "And in this context, you could, if\nyou do this enough, you'll learn",
+        "start": 952.605,
+        "duration": 2.53
+    },
+    {
+        "text": "how to do these things in sequence.",
+        "start": 955.135,
+        "duration": 1.44
+    },
+    {
+        "text": "So if I just give you the word, I don't\nhave to give you the letters anymore.",
+        "start": 957.145,
+        "duration": 2.62
+    },
+    {
+        "text": "That's how it feels to me.",
+        "start": 961.345,
+        "duration": 1.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 965.015,
+        "duration": 0.31
+    },
+    {
+        "text": "Yeah, so it's odd that the motor\nmodel has actually no idea, other",
+        "start": 965.86,
+        "duration": 4.25
+    },
+    {
+        "text": "than it's getting a word SDR, it has\nno idea what it's actually doing.",
+        "start": 970.11,
+        "duration": 4.64
+    },
+    {
+        "text": "it's just playing back a sequence.",
+        "start": 976.33,
+        "duration": 1.92
+    },
+    {
+        "text": "It was pretty, pretty bizarre.",
+        "start": 979.34,
+        "duration": 1.66
+    },
+    {
+        "text": "So I guess.",
+        "start": 981.96,
+        "duration": 2.31
+    },
+    {
+        "text": "Oh, go ahead.",
+        "start": 985.155,
+        "duration": 0.81
+    },
+    {
+        "text": "No, you go ahead, Viviane.",
+        "start": 986.295,
+        "duration": 1.7
+    },
+    {
+        "text": "Just zooming out a little bit, So given\nthat it seems like a lot of typing is",
+        "start": 988.975,
+        "duration": 5.78
+    },
+    {
+        "text": "not using the keyboard model anymore,",
+        "start": 995.415,
+        "duration": 2.74
+    },
+    {
+        "text": "it's definitely a cool example to talk\nthrough and I feel like we talked through",
+        "start": 1001.195,
+        "duration": 4.05
+    },
+    {
+        "text": "a lot of issues and different aspects\nof it, but And if we actually start",
+        "start": 1005.245,
+        "duration": 4.525
+    },
+    {
+        "text": "to implement something, do you still\nthink this is a good example to go with?",
+        "start": 1009.77,
+        "duration": 6.01
+    },
+    {
+        "text": "I don't know.",
+        "start": 1016.37,
+        "duration": 0.4
+    },
+    {
+        "text": "maybe, not.",
+        "start": 1019.74,
+        "duration": 0.61
+    },
+    {
+        "text": "So we could implement, so all I wrote\nup was like, oh, this is an interesting",
+        "start": 1020.81,
+        "duration": 4.15
+    },
+    {
+        "text": "observation that humans don't use\nthe keyboard model very much, right?",
+        "start": 1024.96,
+        "duration": 3.81
+    },
+    {
+        "text": "It doesn't mean that we couldn't\ndesign the system to use the keyboard",
+        "start": 1030.2,
+        "duration": 2.44
+    },
+    {
+        "text": "model because that was our first,\nall of our first explanations.",
+        "start": 1032.64,
+        "duration": 2.79
+    },
+    {
+        "text": "So we could design one that says,\nokay, we're going to learn the",
+        "start": 1036.92,
+        "duration": 2.68
+    },
+    {
+        "text": "keyboard model and we're going to\nuse it to figure out how to move the",
+        "start": 1039.6,
+        "duration": 3.12
+    },
+    {
+        "text": "finger to the different locations.",
+        "start": 1042.72,
+        "duration": 1.31
+    },
+    {
+        "text": "That would be a good problem to\nanalyze from a, like a test problem.",
+        "start": 1044.4,
+        "duration": 6.12
+    },
+    {
+        "text": "Yeah, I liked our dinner table\nexample that we came up with.",
+        "start": 1051.48,
+        "duration": 4.285
+    },
+    {
+        "text": "A while ago, because there we had\nlike explicit compositional structure.",
+        "start": 1056.445,
+        "duration": 5.7
+    },
+    {
+        "text": "We had the different objects on the\ntable, the cup, the plate, the, cutlery,",
+        "start": 1062.145,
+        "duration": 5.77
+    },
+    {
+        "text": "and then the arrangement of relative\nto each other as the set dinner table.",
+        "start": 1068.035,
+        "duration": 4.49
+    },
+    {
+        "text": "I think it's a great problem.",
+        "start": 1073.235,
+        "duration": 1.01
+    },
+    {
+        "text": "But the problem is that\nwe move the objects.",
+        "start": 1074.805,
+        "duration": 3.51
+    },
+    {
+        "text": "But the problem I was trying to\ndo like an end to end analysis.",
+        "start": 1079.465,
+        "duration": 3.23
+    },
+    {
+        "text": "Okay, like, how are we actually going to\nbuild something to move the plates and",
+        "start": 1083.385,
+        "duration": 3.63
+    },
+    {
+        "text": "pick it up and, there's a lot of stuff\nthat's got to go on for us to do that.",
+        "start": 1087.015,
+        "duration": 5.63
+    },
+    {
+        "text": "We're, that's not really described in\nthat problem or it's Yeah, I think in",
+        "start": 1092.645,
+        "duration": 3.67
+    },
+    {
+        "text": "the first iteration we said we just want\nto look at decomposing goal states and",
+        "start": 1096.315,
+        "duration": 4.65
+    },
+    {
+        "text": "basically the lowest learning module\nwould just output its goal state of",
+        "start": 1100.965,
+        "duration": 3.81
+    },
+    {
+        "text": "moving that object to this location\nand then the actual moving part of it.",
+        "start": 1104.815,
+        "duration": 4.62
+    },
+    {
+        "text": "would be like just setting the\nenvironment to that state instead of",
+        "start": 1109.715,
+        "duration": 4.68
+    },
+    {
+        "text": "Yeah, like we basically said it would\nbe like a subcortical or like a robotic.",
+        "start": 1114.395,
+        "duration": 3.95
+    },
+    {
+        "text": "That's just okay, so plate\nneeds to be in X state.",
+        "start": 1119.725,
+        "duration": 3.17
+    },
+    {
+        "text": "I guess I feel I, I don't disagree\nwith any of that, but I feel like",
+        "start": 1124.19,
+        "duration": 4.72
+    },
+    {
+        "text": "we're just shoveling off some of\nthe hardest stuff to subcortical.",
+        "start": 1128.91,
+        "duration": 3.3
+    },
+    {
+        "text": "not subcortical.",
+        "start": 1133.79,
+        "duration": 0.96
+    },
+    {
+        "text": "It would be more like, like the lowest\nlevel learning module would need to have",
+        "start": 1134.75,
+        "duration": 3.99
+    },
+    {
+        "text": "some kind of robotics approach to do this\npath planning of how to move the object.",
+        "start": 1138.74,
+        "duration": 5.83
+    },
+    {
+        "text": "But it could still be happening\nin the learning module.",
+        "start": 1144.96,
+        "duration": 2.27
+    },
+    {
+        "text": "It was more like as a first step\nto focus on decomposing your goal",
+        "start": 1147.49,
+        "duration": 3.62
+    },
+    {
+        "text": "into subgoals instead of focusing\non how to actually execute it.",
+        "start": 1151.11,
+        "duration": 3.25
+    },
+    {
+        "text": "I'm not going to object to that.",
+        "start": 1154.94,
+        "duration": 1.14
+    },
+    {
+        "text": "I just, I found from, and it's just maybe\nmy personal needs and biases, that, often",
+        "start": 1156.44,
+        "duration": 7.09
+    },
+    {
+        "text": "starting with what seems like a trivial,\nvery simple problem, Exposes all these",
+        "start": 1163.53,
+        "duration": 5.7
+    },
+    {
+        "text": "difficult issues that if you start with\na more high level problem, you're going",
+        "start": 1169.23,
+        "duration": 6.46
+    },
+    {
+        "text": "to get bitten by it later because you\ndidn't really think through the whole",
+        "start": 1175.69,
+        "duration": 3.18
+    },
+    {
+        "text": "stack of things that have to be done.",
+        "start": 1178.88,
+        "duration": 1.54
+    },
+    {
+        "text": "Oh, I guess to me, the dinner table\nexample is the simpler problem.",
+        "start": 1181.1,
+        "duration": 3.62
+    },
+    {
+        "text": "Like the keyboard example seems to\nhave all these extra things in it.",
+        "start": 1184.73,
+        "duration": 3.26
+    },
+    {
+        "text": "like model free policies and\nlearning sequences and associating.",
+        "start": 1189.17,
+        "duration": 4.67
+    },
+    {
+        "text": "It's funny.",
+        "start": 1194.67,
+        "duration": 0.28
+    },
+    {
+        "text": "I think it's just the opposite because.",
+        "start": 1194.95,
+        "duration": 1.52
+    },
+    {
+        "text": "There, I can actually imagine building\nsomething that moves in types, right?",
+        "start": 1196.985,
+        "duration": 5.08
+    },
+    {
+        "text": "And I could actually make the whole\nthing work, where we talk about the",
+        "start": 1202.7,
+        "duration": 4.63
+    },
+    {
+        "text": "table example, we can talk about\nthe goals and the hierarchical",
+        "start": 1207.36,
+        "duration": 2.75
+    },
+    {
+        "text": "compositional goals, which is great.",
+        "start": 1210.19,
+        "duration": 2.26
+    },
+    {
+        "text": "But I'm, I feel like there's a whole bunch\nof stuff that we haven't really solved",
+        "start": 1212.92,
+        "duration": 3.05
+    },
+    {
+        "text": "some of the hardest, they seem simple,\nbut some of the hardest problems of like,",
+        "start": 1215.98,
+        "duration": 4.44
+    },
+    {
+        "text": "how does that somebody actually pick up\nthe plate and hold it and move it and,",
+        "start": 1220.43,
+        "duration": 4.96
+    },
+    {
+        "text": "all that kind of stuff.",
+        "start": 1227.55,
+        "duration": 1.24
+    },
+    {
+        "text": "I feel.",
+        "start": 1229.665,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 1230.265,
+        "duration": 0.36
+    },
+    {
+        "text": "'cause in the keyboard example,\nyou wouldn't actually be",
+        "start": 1231.675,
+        "duration": 2.16
+    },
+    {
+        "text": "manipulating the word, the world.",
+        "start": 1233.835,
+        "duration": 2.01
+    },
+    {
+        "text": "You, would just be moving the sensor.",
+        "start": 1236.205,
+        "duration": 1.65
+    },
+    {
+        "text": "but you do, 'cause you need to press\nthe key, I feel like they both, like",
+        "start": 1239.025,
+        "duration": 6.46
+    },
+    {
+        "text": "both of them have this, I feel like\nthe hardest problem is yeah, how do",
+        "start": 1245.755,
+        "duration": 3.3
+    },
+    {
+        "text": "you coordinate the, finger or whatever.",
+        "start": 1249.055,
+        "duration": 2.28
+    },
+    {
+        "text": "I think we have a pretty good idea\nof like how we generate goal states",
+        "start": 1252.175,
+        "duration": 2.88
+    },
+    {
+        "text": "to satisfy like some learned model\nor whatever, or learned sequence.",
+        "start": 1255.055,
+        "duration": 5.45
+    },
+    {
+        "text": "But it's like the motor coordination part.",
+        "start": 1261.505,
+        "duration": 1.74
+    },
+    {
+        "text": "That's the, hard part.",
+        "start": 1265.005,
+        "duration": 0.65
+    },
+    {
+        "text": "And it's maybe a bit easier\nwith the keyboard, but I",
+        "start": 1265.655,
+        "duration": 4.18
+    },
+    {
+        "text": "feel like even there, it's,",
+        "start": 1269.835,
+        "duration": 1.0
+    },
+    {
+        "text": "yeah, maybe actually that's a good\ntime to, because, I know Hojae, you'd",
+        "start": 1273.685,
+        "duration": 5.14
+    },
+    {
+        "text": "also written a bit about learning\nmodules focused on, motor systems.",
+        "start": 1278.825,
+        "duration": 6.04
+    },
+    {
+        "text": "So I thought I could\njust like recap of it.",
+        "start": 1285.795,
+        "duration": 2.31
+    },
+    {
+        "text": "About what we've discussed in\nthe past on that, and then we",
+        "start": 1288.54,
+        "duration": 2.379
+    },
+    {
+        "text": "could maybe discuss that more.",
+        "start": 1290.919,
+        "duration": 0.921
+    },
+    {
+        "text": "Who's drawing right now?",
+        "start": 1292.43,
+        "duration": 0.92
+    },
+    {
+        "text": "I can't tell who's drawing.",
+        "start": 1293.36,
+        "duration": 0.73
+    },
+    {
+        "text": "I'm drawing.",
+        "start": 1294.35,
+        "duration": 0.34
+    },
+    {
+        "text": "okay.",
+        "start": 1296.75,
+        "duration": 0.16
+    },
+    {
+        "text": "I have a sort of a quick comment on, I\nthink, both of these approaches, which is,",
+        "start": 1298.94,
+        "duration": 6.5
+    },
+    {
+        "text": "I think about, that step where, let's say\nyou, you don't see a word on the screen.",
+        "start": 1305.44,
+        "duration": 6.21
+    },
+    {
+        "text": "And you want there to\nbe a word on the screen.",
+        "start": 1312.675,
+        "duration": 1.83
+    },
+    {
+        "text": "And it's this mismatch that\ndrives something, right?",
+        "start": 1315.085,
+        "duration": 2.93
+    },
+    {
+        "text": "I wouldn't, go there.",
+        "start": 1319.985,
+        "duration": 0.8
+    },
+    {
+        "text": "What mismatch drives something?",
+        "start": 1320.805,
+        "duration": 1.43
+    },
+    {
+        "text": "Where's there a mismatch?",
+        "start": 1323.205,
+        "duration": 1.05
+    },
+    {
+        "text": "Between the current state of the\nworld and the goal state, which",
+        "start": 1324.865,
+        "duration": 3.71
+    },
+    {
+        "text": "is to have had that word typed.",
+        "start": 1328.575,
+        "duration": 1.3
+    },
+    {
+        "text": "Okay, I would use the word\nmismatch for something else.",
+        "start": 1330.125,
+        "duration": 2.15
+    },
+    {
+        "text": "To me, a mismatch means I actually expect\nsomething to happen and be there, and it's",
+        "start": 1332.9,
+        "duration": 3.98
+    },
+    {
+        "text": "not there, versus that's not the same as\nsaying, oh, I want something to be there.",
+        "start": 1336.88,
+        "duration": 4.6
+    },
+    {
+        "text": "That's not a mismatch to me.",
+        "start": 1341.86,
+        "duration": 1.14
+    },
+    {
+        "text": "That's a desired goal state.",
+        "start": 1343.0,
+        "duration": 1.51
+    },
+    {
+        "text": "It's not like something's wrong.",
+        "start": 1344.51,
+        "duration": 1.57
+    },
+    {
+        "text": "I don't type a word because it's wrong.",
+        "start": 1346.55,
+        "duration": 1.72
+    },
+    {
+        "text": "I think it's a mismatch because\nthe action is what brings those",
+        "start": 1348.27,
+        "duration": 5.115
+    },
+    {
+        "text": "two things into alignment, even if,\nmy goal is to have my hand up here",
+        "start": 1353.385,
+        "duration": 6.19
+    },
+    {
+        "text": "and it's here, it's the distance.",
+        "start": 1359.585,
+        "duration": 2.83
+    },
+    {
+        "text": "I'm not, I don't see it\nbecause I'm not looking at it.",
+        "start": 1362.425,
+        "duration": 2.08
+    },
+    {
+        "text": "hand here versus hand here, we're at,\neven something that simple, I can compute",
+        "start": 1365.225,
+        "duration": 5.08
+    },
+    {
+        "text": "the difference between what I want the\ngoal state to be and the current state",
+        "start": 1370.375,
+        "duration": 3.48
+    },
+    {
+        "text": "and use that to guide the actual motion.",
+        "start": 1373.865,
+        "duration": 2.28
+    },
+    {
+        "text": "I'm just minimizing.",
+        "start": 1376.845,
+        "duration": 1.33
+    },
+    {
+        "text": "I guess I just, I would just.",
+        "start": 1378.245,
+        "duration": 1.2
+    },
+    {
+        "text": "Personally, I wouldn't\nuse the word mismatch.",
+        "start": 1379.76,
+        "duration": 1.62
+    },
+    {
+        "text": "Okay, I can reframe the vocabulary.",
+        "start": 1381.74,
+        "duration": 1.88
+    },
+    {
+        "text": "It's it's that's a, that's like a,\nI have a current state and a desired",
+        "start": 1383.63,
+        "duration": 5.41
+    },
+    {
+        "text": "state, and how do I get from the\ncurrent state to the desired state?",
+        "start": 1389.04,
+        "duration": 2.57
+    },
+    {
+        "text": "A mismatch, we've always used the word\nlike a mismatch to mean there's an error.",
+        "start": 1392.53,
+        "duration": 5.33
+    },
+    {
+        "text": "Your model is incorrect.",
+        "start": 1397.92,
+        "duration": 1.24
+    },
+    {
+        "text": "You've got an expectation\nthat's not correct.",
+        "start": 1399.42,
+        "duration": 2.28
+    },
+    {
+        "text": "that's, this is not the case.",
+        "start": 1403.37,
+        "duration": 1.37
+    },
+    {
+        "text": "This is a case where I have a goal\nstate, a desired state, And I have",
+        "start": 1404.79,
+        "duration": 4.195
+    },
+    {
+        "text": "to calculate how do I get from the\ncurrent state to the desired state.",
+        "start": 1408.985,
+        "duration": 2.47
+    },
+    {
+        "text": "Maybe discrepancy?",
+        "start": 1411.545,
+        "duration": 1.47
+    },
+    {
+        "text": "Or just difference?",
+        "start": 1413.245,
+        "duration": 1.41
+    },
+    {
+        "text": "It's just a difference in representations.",
+        "start": 1415.675,
+        "duration": 2.36
+    },
+    {
+        "text": "There's a desired representation and then\nthere's the current actual representation.",
+        "start": 1418.69,
+        "duration": 3.63
+    },
+    {
+        "text": "I just think it's more, it's not\na discrepancy, it's just if I'm in",
+        "start": 1423.04,
+        "duration": 5.41
+    },
+    {
+        "text": "my kitchen and I want to go to my\nliving room, it's not a discrepancy,",
+        "start": 1428.45,
+        "duration": 6.25
+    },
+    {
+        "text": "it's just I have a goal and then\nI say where am I now and then how",
+        "start": 1434.7,
+        "duration": 3.14
+    },
+    {
+        "text": "do I execute to get to that goal?",
+        "start": 1437.84,
+        "duration": 1.825
+    },
+    {
+        "text": "This is,",
+        "start": 1440.305,
+        "duration": 0.5
+    },
+    {
+        "text": "we can take a difference\nbetween these representations.",
+        "start": 1444.135,
+        "duration": 2.0
+    },
+    {
+        "text": "But that's, the calculation that's\ndone to achieve the goal state.",
+        "start": 1447.145,
+        "duration": 3.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 1451.035,
+        "duration": 0.2
+    },
+    {
+        "text": "It's not something I measure.",
+        "start": 1451.235,
+        "duration": 1.6
+    },
+    {
+        "text": "It's not yes, I have to\ndetermine what that delta is.",
+        "start": 1452.835,
+        "duration": 3.74
+    },
+    {
+        "text": "But to describe it as some sort of\nerror or difference, it's more like,",
+        "start": 1457.355,
+        "duration": 4.8
+    },
+    {
+        "text": "how do I get from one location to\nanother location, from my current",
+        "start": 1463.255,
+        "duration": 3.79
+    },
+    {
+        "text": "location to a desired location?",
+        "start": 1467.045,
+        "duration": 1.4
+    },
+    {
+        "text": "I just don't think we should\ncall that just a discrepancy.",
+        "start": 1469.085,
+        "duration": 2.7
+    },
+    {
+        "text": "it is a difference calculation,\nthe reverse of path integration.",
+        "start": 1472.285,
+        "duration": 3.72
+    },
+    {
+        "text": "It's the inverse of path integration.",
+        "start": 1476.075,
+        "duration": 1.69
+    },
+    {
+        "text": "how do I get from point A to point B?",
+        "start": 1478.765,
+        "duration": 2.08
+    },
+    {
+        "text": "I calculate that.",
+        "start": 1481.215,
+        "duration": 0.91
+    },
+    {
+        "text": "Yeah, it's a difference, but, I just",
+        "start": 1482.125,
+        "duration": 3.2
+    },
+    {
+        "text": "whatever the, term is, like the next\nstep is really critical, which is that",
+        "start": 1487.575,
+        "duration": 5.58
+    },
+    {
+        "text": "we've assumed at this point that we\njust know that the cause of letters",
+        "start": 1493.255,
+        "duration": 5.7
+    },
+    {
+        "text": "going on the screen is key presses.",
+        "start": 1498.955,
+        "duration": 2.78
+    },
+    {
+        "text": "At some point, you have to\nlearn, the causes of the things",
+        "start": 1502.445,
+        "duration": 4.07
+    },
+    {
+        "text": "that change in the world.",
+        "start": 1506.515,
+        "duration": 1.09
+    },
+    {
+        "text": "So in this case pressing keys\nor moving things on a table.",
+        "start": 1508.075,
+        "duration": 5.28
+    },
+    {
+        "text": "So I wonder if when we actually\ntrain a system, it would be, we would",
+        "start": 1513.365,
+        "duration": 4.67
+    },
+    {
+        "text": "actually need to have these like\nexploratory periods where hands are",
+        "start": 1518.035,
+        "duration": 5.23
+    },
+    {
+        "text": "just moving objects around on the table.",
+        "start": 1523.265,
+        "duration": 1.92
+    },
+    {
+        "text": "even if there's no goal or whatever,\nin order to create that association",
+        "start": 1525.885,
+        "duration": 3.71
+    },
+    {
+        "text": "between, hand on objects moving\naround, now we have a cause.",
+        "start": 1529.595,
+        "duration": 6.46
+    },
+    {
+        "text": "We know what type of motor action\nin the world creates the desired,",
+        "start": 1536.475,
+        "duration": 4.72
+    },
+    {
+        "text": "creates changes in states.",
+        "start": 1542.275,
+        "duration": 1.5
+    },
+    {
+        "text": "yeah, that part seems it's interesting,\nNiels talked about this a lot, if I just",
+        "start": 1546.365,
+        "duration": 7.39
+    },
+    {
+        "text": "want to move something, I want to move\nthe fork from one location to the other,",
+        "start": 1553.755,
+        "duration": 3.85
+    },
+    {
+        "text": "that's like a, you could say the cause,\nit's a direct movement type of thing.",
+        "start": 1557.635,
+        "duration": 5.96
+    },
+    {
+        "text": "When it comes to typing, it's a little\nweird because it's not clear up front",
+        "start": 1563.825,
+        "duration": 4.3
+    },
+    {
+        "text": "that if you push on this key that A\nletter will appear someplace else.",
+        "start": 1568.135,
+        "duration": 3.725
+    },
+    {
+        "text": "that's not something you can just\nlearn by exploration too easily, right?",
+        "start": 1574.28,
+        "duration": 4.05
+    },
+    {
+        "text": "We don't just put children in\nfront of a keyboard and say, just",
+        "start": 1578.81,
+        "duration": 2.65
+    },
+    {
+        "text": "play with it and see what happens.",
+        "start": 1581.47,
+        "duration": 1.22
+    },
+    {
+        "text": "What children do, pick up objects\nand move them around and learn,",
+        "start": 1583.235,
+        "duration": 3.55
+    },
+    {
+        "text": "that's like a direct cause and event.",
+        "start": 1586.805,
+        "duration": 1.4
+    },
+    {
+        "text": "The key typing one is weird, it's like\nyou have to do one thing here to get",
+        "start": 1588.435,
+        "duration": 3.32
+    },
+    {
+        "text": "something else to happen over there.",
+        "start": 1591.755,
+        "duration": 1.48
+    },
+    {
+        "text": "And the thing, if I press this\nkey, the thing that happens",
+        "start": 1593.795,
+        "duration": 2.23
+    },
+    {
+        "text": "is not tactical, it's visual.",
+        "start": 1596.025,
+        "duration": 1.4
+    },
+    {
+        "text": "I was thinking, we don't, we don't just\nplay around when we, learn to type.",
+        "start": 1599.845,
+        "duration": 5.01
+    },
+    {
+        "text": "We have an instructor or somebody\nsits there and says, this is a",
+        "start": 1605.215,
+        "duration": 2.91
+    },
+    {
+        "text": "keyboard, when you press the key\nhere, you have, the letter appears",
+        "start": 1608.125,
+        "duration": 2.86
+    },
+    {
+        "text": "here, someone has to tell you that.",
+        "start": 1610.985,
+        "duration": 1.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 1614.84,
+        "duration": 0.25
+    },
+    {
+        "text": "So I guess, firstly, yeah, I\nthink that's a really interesting",
+        "start": 1615.09,
+        "duration": 2.74
+    },
+    {
+        "text": "point to bring up, Scott.",
+        "start": 1617.83,
+        "duration": 0.87
+    },
+    {
+        "text": "And yeah, I agree.",
+        "start": 1618.71,
+        "duration": 1.24
+    },
+    {
+        "text": "That's definitely important.",
+        "start": 1619.95,
+        "duration": 0.76
+    },
+    {
+        "text": "I think, yeah, I guess this one's",
+        "start": 1620.96,
+        "duration": 3.47
+    },
+    {
+        "text": "in terms of someone\ninstructing you, I agree.",
+        "start": 1626.47,
+        "duration": 2.11
+    },
+    {
+        "text": "that's how it's normally happens, but\nI guess in principle, a human who's put",
+        "start": 1628.76,
+        "duration": 3.1
+    },
+    {
+        "text": "in a room with a, say a 15th century\nperson who's never seen a typewriter or a",
+        "start": 1631.86,
+        "duration": 5.24
+    },
+    {
+        "text": "keyboard, like they may go up to and start\ninteracting with it and then discover",
+        "start": 1637.1,
+        "duration": 4.54
+    },
+    {
+        "text": "that kind of effect of that action.",
+        "start": 1641.64,
+        "duration": 3.03
+    },
+    {
+        "text": "It definitely doesn't take long for a\nkid to figure this out from right, I",
+        "start": 1645.49,
+        "duration": 5.46
+    },
+    {
+        "text": "think there's just a lot of advancements\nand that's the same principle.",
+        "start": 1650.97,
+        "duration": 3.477
+    },
+    {
+        "text": "I'm just bringing up that a lot of these\ncause and effect things are multimodal.",
+        "start": 1655.784,
+        "duration": 3.896
+    },
+    {
+        "text": "Yeah, definitely.",
+        "start": 1661.31,
+        "duration": 0.88
+    },
+    {
+        "text": "It's a weird thing sometimes.",
+        "start": 1662.51,
+        "duration": 0.55
+    },
+    {
+        "text": "Yeah, and in terms of, which also\nmakes it interesting, like how you",
+        "start": 1663.06,
+        "duration": 2.59
+    },
+    {
+        "text": "verify the effect and how that gets\nintegrated is another complication, yeah.",
+        "start": 1665.65,
+        "duration": 5.54
+    },
+    {
+        "text": "I, think this idea, this multimodal\nstuff is actually gonna be really,",
+        "start": 1672.105,
+        "duration": 3.51
+    },
+    {
+        "text": "important, in our goal and behavior.",
+        "start": 1675.615,
+        "duration": 2.35
+    },
+    {
+        "text": "'cause it came up already\nin the typing example.",
+        "start": 1677.965,
+        "duration": 2.64
+    },
+    {
+        "text": "you, visually locate the key, then\nyou then the visual system says where",
+        "start": 1681.355,
+        "duration": 4.71
+    },
+    {
+        "text": "the move in body space and then, and\ntheir finger decides to move there.",
+        "start": 1686.095,
+        "duration": 3.36
+    },
+    {
+        "text": "the same thing, it just seems like all\nthese things, it, there's a lot of things",
+        "start": 1691.85,
+        "duration": 5.23
+    },
+    {
+        "text": "in the world where you take some action\nand you do some physical action and the",
+        "start": 1697.08,
+        "duration": 4.8
+    },
+    {
+        "text": "result is completely elsewhere, different,",
+        "start": 1701.89,
+        "duration": 2.27
+    },
+    {
+        "text": "and so it just brings up the fact\nthat, a multimodal example is, might",
+        "start": 1706.64,
+        "duration": 4.09
+    },
+    {
+        "text": "be important here, to, do these things.",
+        "start": 1710.73,
+        "duration": 3.57
+    },
+    {
+        "text": "Like when we're doing the plate,\nRearranging the table, do we have a body",
+        "start": 1714.3,
+        "duration": 5.655
+    },
+    {
+        "text": "that's moving things and a, physical thing\nthat's touching and moving things and we",
+        "start": 1720.015,
+        "duration": 4.34
+    },
+    {
+        "text": "have a visual system that's seeing things?",
+        "start": 1724.355,
+        "duration": 1.93
+    },
+    {
+        "text": "probably, yeah, that's\nalso like typing, right?",
+        "start": 1728.075,
+        "duration": 3.71
+    },
+    {
+        "text": "if I'm setting a table, I suppose\nI could learn to do it blind.",
+        "start": 1732.695,
+        "duration": 3.89
+    },
+    {
+        "text": "and blind people do, but, it's a hell\nof a lot easier to do it visually.",
+        "start": 1738.95,
+        "duration": 4.53
+    },
+    {
+        "text": "You're visually deciding if the\nplate's in the right position and",
+        "start": 1743.78,
+        "duration": 3.8
+    },
+    {
+        "text": "the vision system is guiding the\nhand to move things a little bit",
+        "start": 1747.58,
+        "duration": 3.51
+    },
+    {
+        "text": "this way, a little bit that way.",
+        "start": 1751.09,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm, just speaking out loud,\nI'm thinking out loud here.",
+        "start": 1753.71,
+        "duration": 2.55
+    },
+    {
+        "text": "When you're learning to type, you start\nwith the visual hunting and pecking",
+        "start": 1756.32,
+        "duration": 5.13
+    },
+    {
+        "text": "for keys, and over time you distill\nthat down into, a concrete model where",
+        "start": 1761.45,
+        "duration": 5.52
+    },
+    {
+        "text": "you don't have to look at it, Yeah.",
+        "start": 1766.97,
+        "duration": 1.835
+    },
+    {
+        "text": "Did you just join the\nconversation, Michael?",
+        "start": 1768.825,
+        "duration": 1.64
+    },
+    {
+        "text": "I've been here, but I\ndidn't read your thing.",
+        "start": 1771.275,
+        "duration": 2.03
+    },
+    {
+        "text": "Okay.",
+        "start": 1773.725,
+        "duration": 0.38
+    },
+    {
+        "text": "All right.",
+        "start": 1774.105,
+        "duration": 0.22
+    },
+    {
+        "text": "Yeah.",
+        "start": 1774.325,
+        "duration": 0.05
+    },
+    {
+        "text": "That's what we were talking about.",
+        "start": 1774.585,
+        "duration": 1.06
+    },
+    {
+        "text": "That was your exact example.",
+        "start": 1775.645,
+        "duration": 0.91
+    },
+    {
+        "text": "Yeah.",
+        "start": 1776.565,
+        "duration": 0.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 1776.795,
+        "duration": 0.29
+    },
+    {
+        "text": "Exactly.",
+        "start": 1777.135,
+        "duration": 0.44
+    },
+    {
+        "text": "The hunt and peck is like\nyou hunt and find the key.",
+        "start": 1777.635,
+        "duration": 2.59
+    },
+    {
+        "text": "The visual system tells, locates, it's\nworth walking through these a little",
+        "start": 1780.745,
+        "duration": 5.0
+    },
+    {
+        "text": "bit, even if we don't do this example.",
+        "start": 1785.745,
+        "duration": 1.37
+    },
+    {
+        "text": "the visual system says, This is the\nthing that needs to be actuated.",
+        "start": 1788.475,
+        "duration": 3.55
+    },
+    {
+        "text": "And at that point, a lot of different\nbody parts could do it, right?",
+        "start": 1792.445,
+        "duration": 3.67
+    },
+    {
+        "text": "You could use any one of your fingers\nto press that key or you could use",
+        "start": 1796.575,
+        "duration": 2.9
+    },
+    {
+        "text": "your nose or a pencil or And you\ndo when you're learning, right?",
+        "start": 1799.475,
+        "duration": 3.5
+    },
+    {
+        "text": "Like you use your dominant\nfingers initially and someone",
+        "start": 1802.995,
+        "duration": 2.91
+    },
+    {
+        "text": "forces you to not use them.",
+        "start": 1805.905,
+        "duration": 1.41
+    },
+    {
+        "text": "That's what I wrote.",
+        "start": 1808.155,
+        "duration": 0.59
+    },
+    {
+        "text": "Like it's the training.",
+        "start": 1808.745,
+        "duration": 1.36
+    },
+    {
+        "text": "The training is to say,\ndon't use your index finger.",
+        "start": 1810.115,
+        "duration": 2.27
+    },
+    {
+        "text": "you have to use some other\nfingers, which are not usually",
+        "start": 1813.25,
+        "duration": 2.39
+    },
+    {
+        "text": "very good at things like this.",
+        "start": 1815.64,
+        "duration": 1.75
+    },
+    {
+        "text": "exactly.",
+        "start": 1819.75,
+        "duration": 0.64
+    },
+    {
+        "text": "So, there too, this compositional\nbreakdown is you've got a concept",
+        "start": 1821.15,
+        "duration": 3.77
+    },
+    {
+        "text": "of typing, or not typing, a\nconcept of expressing a word that's",
+        "start": 1825.82,
+        "duration": 4.78
+    },
+    {
+        "text": "turned into expressing letters.",
+        "start": 1830.6,
+        "duration": 1.86
+    },
+    {
+        "text": "if you're in the learning phase here,\nthat gets then translated to what is",
+        "start": 1833.485,
+        "duration": 6.26
+    },
+    {
+        "text": "the physical means we're doing this?",
+        "start": 1839.745,
+        "duration": 1.33
+    },
+    {
+        "text": "Am I speaking?",
+        "start": 1841.075,
+        "duration": 0.81
+    },
+    {
+        "text": "Am I typing?",
+        "start": 1841.895,
+        "duration": 0.66
+    },
+    {
+        "text": "Am I writing?",
+        "start": 1842.555,
+        "duration": 0.67
+    },
+    {
+        "text": "Am I signing in sign language?",
+        "start": 1843.225,
+        "duration": 1.52
+    },
+    {
+        "text": "then you have to then say, now that\nI'm doing typing, which is the actual",
+        "start": 1845.87,
+        "duration": 4.49
+    },
+    {
+        "text": "physical thing that's implementing the,\ninteracting with the world, is it my index",
+        "start": 1850.63,
+        "duration": 4.47
+    },
+    {
+        "text": "finger or some other finger or, your nose?",
+        "start": 1855.1,
+        "duration": 2.34
+    },
+    {
+        "text": "all these, and this, of course, this\nis, when we solve problems, we can",
+        "start": 1859.01,
+        "duration": 3.19
+    },
+    {
+        "text": "solve them in lots of different ways.",
+        "start": 1862.2,
+        "duration": 0.86
+    },
+    {
+        "text": "So I think somehow capturing that\nis important in this task, Just on",
+        "start": 1863.07,
+        "duration": 6.33
+    },
+    {
+        "text": "something that was said earlier too,\nI think it's not that, in my mind,",
+        "start": 1869.45,
+        "duration": 3.24
+    },
+    {
+        "text": "it's not that there isn't a model.",
+        "start": 1872.69,
+        "duration": 1.11
+    },
+    {
+        "text": "It's just that the models.",
+        "start": 1873.8,
+        "duration": 1.05
+    },
+    {
+        "text": "Not singular that it's spread out\nacross the, let's say the hierarchy key.",
+        "start": 1875.38,
+        "duration": 3.595
+    },
+    {
+        "text": "The model When you say a model of what?",
+        "start": 1878.975,
+        "duration": 1.4
+    },
+    {
+        "text": "The model of the keyboard.",
+        "start": 1880.47,
+        "duration": 0.99
+    },
+    {
+        "text": "Like it, oh, I don't know.",
+        "start": 1882.54,
+        "duration": 0.78
+    },
+    {
+        "text": "It's not in one place necessarily.",
+        "start": 1883.35,
+        "duration": 2.13
+    },
+    {
+        "text": "It's, across that thing of why\nthat translating word into.",
+        "start": 1886.23,
+        "duration": 4.64
+    },
+    {
+        "text": "Letters typed on the screen.",
+        "start": 1891.25,
+        "duration": 1.44
+    },
+    {
+        "text": "So I think we, I think most of us on\nthe call would disagree with that.",
+        "start": 1893.1,
+        "duration": 2.61
+    },
+    {
+        "text": "We'd say that there is\na model of the keyboard.",
+        "start": 1895.71,
+        "duration": 2.2
+    },
+    {
+        "text": "The model of the keyboard is just a\nphysical model of various features",
+        "start": 1898.23,
+        "duration": 3.47
+    },
+    {
+        "text": "at locations, those features happen\nto be keys, but we're just calling",
+        "start": 1901.7,
+        "duration": 3.01
+    },
+    {
+        "text": "them features at some location.",
+        "start": 1904.72,
+        "duration": 1.9
+    },
+    {
+        "text": "That model of the keyboard\ndoesn't know words.",
+        "start": 1906.62,
+        "duration": 3.49
+    },
+    {
+        "text": "It doesn't even know letters.",
+        "start": 1910.38,
+        "duration": 1.28
+    },
+    {
+        "text": "It just knows features\non, at some location.",
+        "start": 1911.67,
+        "duration": 4.14
+    },
+    {
+        "text": "It's like a physical\nmodel of the keyboard.",
+        "start": 1916.81,
+        "duration": 2.37
+    },
+    {
+        "text": "Yeah, and I'm not disagreeing with\nthat, I'm just saying that model may",
+        "start": 1920.305,
+        "duration": 2.9
+    },
+    {
+        "text": "not exist in one learning module.",
+        "start": 1923.205,
+        "duration": 1.58
+    },
+    {
+        "text": "I'm saying it could, so I'm not, I'm\npushing back a bit and saying, why do",
+        "start": 1925.725,
+        "duration": 3.44
+    },
+    {
+        "text": "it could, it's, this is the, I made a\nlittle comment at the end of my notes,",
+        "start": 1929.535,
+        "duration": 4.31
+    },
+    {
+        "text": "it's I had this sort of epiphany about\nabstraction, that I, thinking about this",
+        "start": 1933.855,
+        "duration": 5.3
+    },
+    {
+        "text": "problem made me realize that all these\ndifferent learning modules have completely",
+        "start": 1939.165,
+        "duration": 3.37
+    },
+    {
+        "text": "different knowledge of the world, and\nthe same thing means different things to",
+        "start": 1942.535,
+        "duration": 2.7
+    },
+    {
+        "text": "different people, we're already achieving\nabstract concepts, like a concept of a",
+        "start": 1945.235,
+        "duration": 4.48
+    },
+    {
+        "text": "letter is an abstract concept that can\nbe implemented in lots of different ways.",
+        "start": 1949.715,
+        "duration": 3.78
+    },
+    {
+        "text": "and the people implementing it\ndon't know what they're doing.",
+        "start": 1955.57,
+        "duration": 1.965
+    },
+    {
+        "text": "A letter eos or a layers,\nthey're just doing something.",
+        "start": 1957.995,
+        "duration": 2.75
+    },
+    {
+        "text": "They're being told to do something.",
+        "start": 1960.805,
+        "duration": 1.65
+    },
+    {
+        "text": "I'm spewing course randomly here.",
+        "start": 1963.625,
+        "duration": 1.91
+    },
+    {
+        "text": "I would say, look, I think you don't\nneed a hierarchical model of a keyboard.",
+        "start": 1967.295,
+        "duration": 2.85
+    },
+    {
+        "text": "You have a keyboard model.",
+        "start": 1970.155,
+        "duration": 0.93
+    },
+    {
+        "text": "You have a model of words.",
+        "start": 1971.095,
+        "duration": 1.1
+    },
+    {
+        "text": "You have a visual model that can say\nlocate also can locate a particular",
+        "start": 1972.745,
+        "duration": 4.74
+    },
+    {
+        "text": "object in space and say where is it.",
+        "start": 1977.485,
+        "duration": 1.855
+    },
+    {
+        "text": "And then you have some, and you have\na bunch of actuators, like a finger",
+        "start": 1979.6,
+        "duration": 2.93
+    },
+    {
+        "text": "that could then go to that location.",
+        "start": 1982.53,
+        "duration": 1.98
+    },
+    {
+        "text": "And my point is that if you have\nall of that, and you just zoom out",
+        "start": 1984.51,
+        "duration": 5.0
+    },
+    {
+        "text": "to like the level of viewing all of\nthat, you have a model of a keyboard.",
+        "start": 1989.71,
+        "duration": 3.63
+    },
+    {
+        "text": "I think these semantics, these\nwords are really important, I think,",
+        "start": 1994.99,
+        "duration": 3.53
+    },
+    {
+        "text": "Michael, so we should explore them.",
+        "start": 1998.52,
+        "duration": 1.65
+    },
+    {
+        "text": "To me, the model of the keyboard is not\nthe model of the entire process of typing.",
+        "start": 2000.89,
+        "duration": 4.15
+    },
+    {
+        "text": "It's just the physical keyboard.",
+        "start": 2005.62,
+        "duration": 1.69
+    },
+    {
+        "text": "okay.",
+        "start": 2008.23,
+        "duration": 0.12
+    },
+    {
+        "text": "And if you want to say we have a model of\ntyping And so you're saying we can have",
+        "start": 2009.05,
+        "duration": 3.77
+    },
+    {
+        "text": "a system that lets us do the physical\nprocesses of typing without having",
+        "start": 2013.27,
+        "duration": 4.12
+    },
+    {
+        "text": "that physical model of the keyboard.",
+        "start": 2017.39,
+        "duration": 2.87
+    },
+    {
+        "text": "Instead we have models\nof how to move fingers.",
+        "start": 2020.35,
+        "duration": 2.6
+    },
+    {
+        "text": "Okay, and I'm agreeing.",
+        "start": 2024.33,
+        "duration": 1.07
+    },
+    {
+        "text": "I'm just saying at some level you can view\nthe system as having An understanding of a",
+        "start": 2025.7,
+        "duration": 6.01
+    },
+    {
+        "text": "keyboard, even though it has no model of a\nkeyboard, which I think is the same thing.",
+        "start": 2031.71,
+        "duration": 4.35
+    },
+    {
+        "text": "One of the things about the thousand\nbrains theory, or this whole cortical",
+        "start": 2037.25,
+        "duration": 3.14
+    },
+    {
+        "text": "column theory, is that every learning\nmodule builds its own models.",
+        "start": 2040.39,
+        "duration": 4.42
+    },
+    {
+        "text": "And they're self contained.",
+        "start": 2045.865,
+        "duration": 1.13
+    },
+    {
+        "text": "the models that a cortical\ncolumn have to be self contained.",
+        "start": 2047.675,
+        "duration": 3.58
+    },
+    {
+        "text": "They don't have to be anything else.",
+        "start": 2051.305,
+        "duration": 1.3
+    },
+    {
+        "text": "they're not, a model, by definition,\nwe're going to define a model as",
+        "start": 2053.625,
+        "duration": 3.45
+    },
+    {
+        "text": "something that's inside a learning module.",
+        "start": 2057.075,
+        "duration": 1.65
+    },
+    {
+        "text": "And then these models can be connected\ntogether in hierarchical ways, but",
+        "start": 2059.205,
+        "duration": 5.03
+    },
+    {
+        "text": "even if I have a higher, even if I have\na compositional structure, like the",
+        "start": 2064.255,
+        "duration": 2.94
+    },
+    {
+        "text": "coffee cup with the logo, The model of\nthe coffee cup doesn't know the logo.",
+        "start": 2067.195,
+        "duration": 4.195
+    },
+    {
+        "text": "It doesn't know anything about logos.",
+        "start": 2071.41,
+        "duration": 1.17
+    },
+    {
+        "text": "It's just a feature.",
+        "start": 2072.59,
+        "duration": 0.93
+    },
+    {
+        "text": "It's some bits.",
+        "start": 2073.61,
+        "duration": 1.61
+    },
+    {
+        "text": "It doesn't have any idea what\nthat feature is or what it means.",
+        "start": 2075.23,
+        "duration": 2.95
+    },
+    {
+        "text": "It just says at this location on the cup,\nthere is something that someone's told me.",
+        "start": 2078.6,
+        "duration": 4.0
+    },
+    {
+        "text": "It's this vector or this, SDR.",
+        "start": 2082.6,
+        "duration": 2.33
+    },
+    {
+        "text": "and I would just say, yeah, it's\nmaybe worth revisiting on that point.",
+        "start": 2085.97,
+        "duration": 5.57
+    },
+    {
+        "text": "Like one of the key points of the cortical\nmessaging protocol is that like we",
+        "start": 2091.55,
+        "duration": 4.01
+    },
+    {
+        "text": "don't pass bold models as information.",
+        "start": 2095.56,
+        "duration": 2.9
+    },
+    {
+        "text": "at any point, that we pass objects,\nat poses, and and that's just key.",
+        "start": 2099.535,
+        "duration": 8.09
+    },
+    {
+        "text": "So like a one learning module can't\nbe like, Oh, by the way, I have",
+        "start": 2107.625,
+        "duration": 3.31
+    },
+    {
+        "text": "this model of a keyboard or whatever\nit happens to be like, do you",
+        "start": 2110.935,
+        "duration": 2.94
+    },
+    {
+        "text": "want to take a look kind of thing?",
+        "start": 2113.875,
+        "duration": 1.85
+    },
+    {
+        "text": "It's you only send these,\nobjects at poses, but, composed",
+        "start": 2116.175,
+        "duration": 6.76
+    },
+    {
+        "text": "correctly that's very flexible.",
+        "start": 2122.935,
+        "duration": 2.29
+    },
+    {
+        "text": "and it actually helps constrain it.",
+        "start": 2126.435,
+        "duration": 1.51
+    },
+    {
+        "text": "It's a somewhat custom vocabulary.",
+        "start": 2128.365,
+        "duration": 3.29
+    },
+    {
+        "text": "I'm not saying that you should change\nit, I'm just saying it's slightly",
+        "start": 2131.735,
+        "duration": 3.79
+    },
+    {
+        "text": "counterintuitive to what like the deep\nlearning world would view as a model where",
+        "start": 2135.525,
+        "duration": 4.39
+    },
+    {
+        "text": "the whole system represents the model.",
+        "start": 2139.915,
+        "duration": 1.98
+    },
+    {
+        "text": "I think you're right.",
+        "start": 2142.245,
+        "duration": 0.89
+    },
+    {
+        "text": "It's exactly, you hit a nail\non the head there, Michael.",
+        "start": 2143.135,
+        "duration": 2.86
+    },
+    {
+        "text": "we could call it custom vocabulary,\nbut it's in the language of brains and",
+        "start": 2147.775,
+        "duration": 4.25
+    },
+    {
+        "text": "thousand brains theory and Monty, Models\nare, things that learning modules do, and",
+        "start": 2152.025,
+        "duration": 7.295
+    },
+    {
+        "text": "they, and then as Niels just said, they\ncommunicate with each other, but we should",
+        "start": 2159.57,
+        "duration": 4.23
+    },
+    {
+        "text": "avoid saying, models span, multiple levels\nand multiple columns, it's very misleading",
+        "start": 2163.8,
+        "duration": 6.62
+    },
+    {
+        "text": "to, I think it would be really confusing\nto people, so it may be counterintuitive,",
+        "start": 2170.42,
+        "duration": 3.53
+    },
+    {
+        "text": "but that's I think we, I'm arguing\nwe should stick with that language,",
+        "start": 2174.51,
+        "duration": 3.49
+    },
+    {
+        "text": "we should be very precise about it, I\nguess my thought was just to, yeah, to,",
+        "start": 2178.41,
+        "duration": 5.06
+    },
+    {
+        "text": "This is where every time I\nreread the thousand brains thing,",
+        "start": 2186.34,
+        "duration": 2.55
+    },
+    {
+        "text": "I've come to a new perspective.",
+        "start": 2188.89,
+        "duration": 1.73
+    },
+    {
+        "text": "But that seems like key\nstuff to say in a glossary.",
+        "start": 2193.14,
+        "duration": 2.83
+    },
+    {
+        "text": "Maybe, There are a lot of\ncounterintuitive ideas here.",
+        "start": 2197.21,
+        "duration": 3.5
+    },
+    {
+        "text": "we all struggle with it.",
+        "start": 2202.97,
+        "duration": 0.96
+    },
+    {
+        "text": "I struggled with this probably\nmore than any of you guys did.",
+        "start": 2204.52,
+        "duration": 1.85
+    },
+    {
+        "text": "went through all these same things.",
+        "start": 2207.72,
+        "duration": 1.09
+    },
+    {
+        "text": "Anyway, just that seems important to me.",
+        "start": 2211.03,
+        "duration": 1.62
+    },
+    {
+        "text": "We have Think about these learning models\nas isolated units, they contain their own",
+        "start": 2212.66,
+        "duration": 4.345
+    },
+    {
+        "text": "models but they're self contained and that\nhow do they work together is the question.",
+        "start": 2217.005,
+        "duration": 4.77
+    },
+    {
+        "text": "anyway, so nobody else knows\nabout a letter outside of",
+        "start": 2223.815,
+        "duration": 2.6
+    },
+    {
+        "text": "the, the, model of words.",
+        "start": 2226.615,
+        "duration": 3.33
+    },
+    {
+        "text": "After that, everybody else is, because\nthose letters could be different",
+        "start": 2230.435,
+        "duration": 6.159
+    },
+    {
+        "text": "things and different instantiation.",
+        "start": 2236.594,
+        "duration": 1.166
+    },
+    {
+        "text": "All right.",
+        "start": 2239.03,
+        "duration": 0.27
+    },
+    {
+        "text": "anyway, we lost track.",
+        "start": 2239.35,
+        "duration": 1.68
+    },
+    {
+        "text": "We were starting to talk about\nthe document that Hojae wrote.",
+        "start": 2241.22,
+        "duration": 5.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 2249.31,
+        "duration": 0.24
+    },
+    {
+        "text": "Hojae, do you want to walk through\nthe figure that you were drawing?",
+        "start": 2249.55,
+        "duration": 2.59
+    },
+    {
+        "text": "Yeah, sure.",
+        "start": 2252.14,
+        "duration": 1.57
+    },
+    {
+        "text": "I was just,",
+        "start": 2254.32,
+        "duration": 0.49
+    },
+    {
+        "text": "sorry, I lost my track of thought.",
+        "start": 2257.76,
+        "duration": 1.32
+    },
+    {
+        "text": "I was just trying to going back to\nthe hierarchy things again, but,",
+        "start": 2262.93,
+        "duration": 4.44
+    },
+    {
+        "text": "I mostly had a question about how.",
+        "start": 2267.59,
+        "duration": 2.4
+    },
+    {
+        "text": "we have some, this kind of sensor\nmodules, learning module that we like",
+        "start": 2271.52,
+        "duration": 4.05
+    },
+    {
+        "text": "represent as like long rectangles,\nbut how the kind of motor system",
+        "start": 2275.58,
+        "duration": 3.07
+    },
+    {
+        "text": "comes in, that was the first one.",
+        "start": 2278.65,
+        "duration": 3.24
+    },
+    {
+        "text": "I had a different or better\nthought just now, but I forgot.",
+        "start": 2281.89,
+        "duration": 3.51
+    },
+    {
+        "text": "So let me try to walk through this one\nfirst and then maybe I'll go for that one.",
+        "start": 2285.4,
+        "duration": 3.79
+    },
+    {
+        "text": "So I'll try to walk through what I wrote\non the document as well, because that",
+        "start": 2290.215,
+        "duration": 4.72
+    },
+    {
+        "text": "will also help me refresh my memory.",
+        "start": 2294.935,
+        "duration": 2.54
+    },
+    {
+        "text": "So basically I was thinking about\nthe learning phase, so when we",
+        "start": 2299.385,
+        "duration": 4.13
+    },
+    {
+        "text": "have, when we're learning to type\nfor the first time, and the goal",
+        "start": 2303.515,
+        "duration": 4.6
+    },
+    {
+        "text": "is to, type, let's say Numenta,",
+        "start": 2308.115,
+        "duration": 2.5
+    },
+    {
+        "text": "put it this way, and then",
+        "start": 2315.015,
+        "duration": 3.27
+    },
+    {
+        "text": "this R2 will send R1, okay, type\nN, Or is, let's back up for that.",
+        "start": 2320.395,
+        "duration": 6.945
+    },
+    {
+        "text": "Actually, I think, I don't\nknow if it would say type,",
+        "start": 2328.39,
+        "duration": 2.21
+    },
+    {
+        "text": "it doesn't know about typing.",
+        "start": 2330.66,
+        "duration": 1.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 2332.29,
+        "duration": 0.3
+    },
+    {
+        "text": "It says we want the letter\nN Yeah, we want the, but I,",
+        "start": 2333.16,
+        "duration": 5.04
+    },
+    {
+        "text": "this learning module can't\nknow about typing and sign",
+        "start": 2340.48,
+        "duration": 2.67
+    },
+    {
+        "text": "language and speech production.",
+        "start": 2343.15,
+        "duration": 2.51
+    },
+    {
+        "text": "It.",
+        "start": 2345.72,
+        "duration": 0.24
+    },
+    {
+        "text": "We can't expect it to know that.",
+        "start": 2346.5,
+        "duration": 1.41
+    },
+    {
+        "text": "It just says.",
+        "start": 2347.94,
+        "duration": 0.75
+    },
+    {
+        "text": "My next state I want is an N.",
+        "start": 2349.275,
+        "duration": 2.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 2354.405,
+        "duration": 0.31
+    },
+    {
+        "text": "So not, instead of type, like\nB, have state of Produce N.",
+        "start": 2354.715,
+        "duration": 5.55
+    },
+    {
+        "text": "make an N someplace.",
+        "start": 2361.615,
+        "duration": 1.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 2364.105,
+        "duration": 0.4
+    },
+    {
+        "text": "And then the sub tool that will get\npast your R1 will be Change, be in the",
+        "start": 2364.955,
+        "duration": 8.135
+    },
+    {
+        "text": "present, have the state of N, of Numenta.",
+        "start": 2373.09,
+        "duration": 3.56
+    },
+    {
+        "text": "okay, but, going back, just, even\ngoing back further than this,",
+        "start": 2378.74,
+        "duration": 4.4
+    },
+    {
+        "text": "when we're learning, there's, just\nno goal, just pure exploration.",
+        "start": 2383.14,
+        "duration": 3.39
+    },
+    {
+        "text": "That R1 will,",
+        "start": 2386.81,
+        "duration": 0.98
+    },
+    {
+        "text": "move around, sense, and the idea\nthat I wrote on the document was",
+        "start": 2391.12,
+        "duration": 5.36
+    },
+    {
+        "text": "that it will have, A model of a\nsingle key, like N, a model of a",
+        "start": 2396.49,
+        "duration": 6.245
+    },
+    {
+        "text": "single key N, and then a single\nkey U somewhere out there,",
+        "start": 2404.885,
+        "duration": 3.97
+    },
+    {
+        "text": "single key N somewhere out there,",
+        "start": 2408.965,
+        "duration": 1.87
+    },
+    {
+        "text": "and then, but So this is a keyboard model?",
+        "start": 2413.075,
+        "duration": 2.83
+    },
+    {
+        "text": "This is a, R1 is a model of the keyboard?",
+        "start": 2415.905,
+        "duration": 2.22
+    },
+    {
+        "text": "of a single key.",
+        "start": 2419.325,
+        "duration": 1.26
+    },
+    {
+        "text": "A single key?",
+        "start": 2421.595,
+        "duration": 1.08
+    },
+    {
+        "text": "Yeah.",
+        "start": 2423.225,
+        "duration": 0.51
+    },
+    {
+        "text": "I don't know that.",
+        "start": 2424.235,
+        "duration": 0.72
+    },
+    {
+        "text": "Is this for a three level hierarchy?",
+        "start": 2426.405,
+        "duration": 1.57
+    },
+    {
+        "text": "Is this below the model\nof the keyboard, or?",
+        "start": 2427.975,
+        "duration": 2.21
+    },
+    {
+        "text": "I'm still thinking about, just two where\nwe're just exploring, no, there's no gold.",
+        "start": 2431.395,
+        "duration": 6.14
+    },
+    {
+        "text": "It's just I am just moving around in space\nand I'm sensing N, I'm sensing U and I'm",
+        "start": 2437.535,
+        "duration": 4.91
+    },
+    {
+        "text": "sensing M and putting it into my, memory.",
+        "start": 2442.855,
+        "duration": 5.18
+    },
+    {
+        "text": "And then what would make, are you\nstoring these keys at locations or are",
+        "start": 2451.695,
+        "duration": 4.69
+    },
+    {
+        "text": "you just storing features of the keys?",
+        "start": 2456.385,
+        "duration": 2.83
+    },
+    {
+        "text": "I haven't really, I know that you've\nmade a comment about the locations,",
+        "start": 2462.96,
+        "duration": 2.63
+    },
+    {
+        "text": "at first I thought that I was\nstoring them in their locations as",
+        "start": 2465.61,
+        "duration": 3.79
+    },
+    {
+        "text": "well, but, it can't do that, right?",
+        "start": 2469.4,
+        "duration": 2.97
+    },
+    {
+        "text": "but I think it comes together as a\nkeyboard when we have the goal of",
+        "start": 2474.695,
+        "duration": 4.17
+    },
+    {
+        "text": "now I want the state of Numenta and\nwhen R2 tells N, okay, create N or",
+        "start": 2478.965,
+        "duration": 11.31
+    },
+    {
+        "text": "like sense N, then somehow the motor\nsystem, I'm just assuming that somehow",
+        "start": 2490.275,
+        "duration": 4.21
+    },
+    {
+        "text": "the motor system will know Like,\nwhere to go to press this N, for now.",
+        "start": 2494.675,
+        "duration": 5.075
+    },
+    {
+        "text": "So that needs a model of the keyboard\nto store where the key N is, not just",
+        "start": 2499.76,
+        "duration": 5.82
+    },
+    {
+        "text": "knowing how the key N feels because,\nthe keyboard might be anywhere in the",
+        "start": 2505.58,
+        "duration": 4.96
+    },
+    {
+        "text": "world, you, just You have to know where\nthe key is relative to the keyboard",
+        "start": 2510.54,
+        "duration": 6.48
+    },
+    {
+        "text": "to be able to move there, right?",
+        "start": 2517.02,
+        "duration": 1.45
+    },
+    {
+        "text": "I guess you could, do without\nthe keyboard, but yeah, it",
+        "start": 2520.19,
+        "duration": 4.77
+    },
+    {
+        "text": "just feels less efficient.",
+        "start": 2524.96,
+        "duration": 1.54
+    },
+    {
+        "text": "But I guess just to recap, like\nthe location of the Like for the",
+        "start": 2526.53,
+        "duration": 4.655
+    },
+    {
+        "text": "N learning module, or like the key\nspecific learning module, its output",
+        "start": 2531.195,
+        "duration": 4.19
+    },
+    {
+        "text": "is going to be like the letter at a\npose in like body centric coordinates.",
+        "start": 2535.395,
+        "duration": 5.16
+    },
+    {
+        "text": "So that's not fixed, like that'll\ndepend, as you say, Viviane, on like",
+        "start": 2541.065,
+        "duration": 4.75
+    },
+    {
+        "text": "where the keyboard is in the world.",
+        "start": 2545.825,
+        "duration": 1.61
+    },
+    {
+        "text": "I guess in theory, like you could,\nthen that keyboard could have a",
+        "start": 2549.315,
+        "duration": 4.73
+    },
+    {
+        "text": "goal state, like press somewhere\nspecifically on my, on this key, which",
+        "start": 2554.045,
+        "duration": 4.36
+    },
+    {
+        "text": "is also in body centric coordinates.",
+        "start": 2558.405,
+        "duration": 1.76
+    },
+    {
+        "text": "Okay.",
+        "start": 2560.165,
+        "duration": 0.06
+    },
+    {
+        "text": "But I think my issue with that, I don't\nthink there's anything wrong with that.",
+        "start": 2560.815,
+        "duration": 3.54
+    },
+    {
+        "text": "I just think this would be a lower level\nin the hierarchy and you would still",
+        "start": 2564.795,
+        "duration": 2.63
+    },
+    {
+        "text": "have the model of the keyboard just\nto more efficiently, find the keys.",
+        "start": 2567.425,
+        "duration": 3.9
+    },
+    {
+        "text": "What I type, I depend heavily on\nthose little ribs that are on the,",
+        "start": 2574.095,
+        "duration": 4.9
+    },
+    {
+        "text": "That's like an anchor coordinate, right?",
+        "start": 2583.865,
+        "duration": 1.88
+    },
+    {
+        "text": "we had a lot of discussion about it.",
+        "start": 2586.145,
+        "duration": 1.33
+    },
+    {
+        "text": "On that?",
+        "start": 2587.655,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay.",
+        "start": 2588.095,
+        "duration": 0.29
+    },
+    {
+        "text": "We can bring it up again.",
+        "start": 2590.085,
+        "duration": 0.77
+    },
+    {
+        "text": "But it anchors in body centered\ncoordinates where the keyboard is.",
+        "start": 2591.525,
+        "duration": 2.82
+    },
+    {
+        "text": "And where your finger needs, where\nyour relative finger moves are.",
+        "start": 2594.685,
+        "duration": 2.99
+    },
+    {
+        "text": "this is the clue that, that this\nbit, when you learn to do rote",
+        "start": 2598.715,
+        "duration": 3.3
+    },
+    {
+        "text": "things like typing, that you do it\nall in body centric coordinates.",
+        "start": 2602.025,
+        "duration": 4.42
+    },
+    {
+        "text": "that's where the one.",
+        "start": 2608.725,
+        "duration": 0.67
+    },
+    {
+        "text": "model of typing, moving your fingers in\nbody centric coordinates, and it's not",
+        "start": 2609.565,
+        "duration": 3.3
+    },
+    {
+        "text": "using an allocentric model, because that's\nwhat those little divots are for, so that",
+        "start": 2612.865,
+        "duration": 4.56
+    },
+    {
+        "text": "you can, you get your hands in the correct\nposition, and then that's it, you're done.",
+        "start": 2617.425,
+        "duration": 3.95
+    },
+    {
+        "text": "To be devil's advocate, could\nit be a local coordinate",
+        "start": 2621.405,
+        "duration": 3.74
+    },
+    {
+        "text": "system just for the hands?",
+        "start": 2625.145,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah, of course.",
+        "start": 2627.14,
+        "duration": 0.67
+    },
+    {
+        "text": "When I, yes, you're right.",
+        "start": 2627.84,
+        "duration": 1.24
+    },
+    {
+        "text": "When I say that, it's, I don't mean\nit's, I use the term body centric.",
+        "start": 2629.15,
+        "duration": 4.23
+    },
+    {
+        "text": "Yeah, but body's not always the torso.",
+        "start": 2633.38,
+        "duration": 1.96
+    },
+    {
+        "text": "It could even be, like, the\neye, or, yeah, or a hand, and,",
+        "start": 2636.2,
+        "duration": 4.05
+    },
+    {
+        "text": "yeah, there's different neurons.",
+        "start": 2640.44,
+        "duration": 0.76
+    },
+    {
+        "text": "We haven't figured this all out yet,\nbut the point was there's no model that,",
+        "start": 2641.2,
+        "duration": 5.64
+    },
+    {
+        "text": "at that point, When you've learned to\ntype, you're not using a keyboard model.",
+        "start": 2647.11,
+        "duration": 5.645
+    },
+    {
+        "text": "A keyboard model would\nbe an allocentric model.",
+        "start": 2652.765,
+        "duration": 1.98
+    },
+    {
+        "text": "Like the keyboards can be different places\nin the world and different orientations.",
+        "start": 2654.745,
+        "duration": 3.91
+    },
+    {
+        "text": "Once your fingers are registered\non the keys, there's no",
+        "start": 2658.685,
+        "duration": 3.04
+    },
+    {
+        "text": "allocentric calculations going on.",
+        "start": 2661.725,
+        "duration": 2.17
+    },
+    {
+        "text": "It's all relative to hands and it's\njust playing back motor sequences.",
+        "start": 2663.895,
+        "duration": 6.05
+    },
+    {
+        "text": "So, actually, so about the location,\nlike where to go, let's say like when",
+        "start": 2670.565,
+        "duration": 5.82
+    },
+    {
+        "text": "we're learning, we start the hand at,\nlet's say zero, zero, whatever that is.",
+        "start": 2676.385,
+        "duration": 3.71
+    },
+    {
+        "text": "And then, we go around, for the most part\nwe don't sense anything, and then it gets",
+        "start": 2680.985,
+        "duration": 4.23
+    },
+    {
+        "text": "to N, can it keep track of, the overall\ndisplacement so that it has the location",
+        "start": 2685.215,
+        "duration": 7.96
+    },
+    {
+        "text": "of N, relative to where it started?",
+        "start": 2693.175,
+        "duration": 2.42
+    },
+    {
+        "text": "okay, we started at 0, 0, and then da,\ngone, turned around, and then finally",
+        "start": 2696.415,
+        "duration": 3.84
+    },
+    {
+        "text": "at N, it's oh, this is, I know I\nstarted at 0, 0, this is Based on, all",
+        "start": 2700.255,
+        "duration": 5.02
+    },
+    {
+        "text": "the vector calculations of movement,",
+        "start": 2705.275,
+        "duration": 2.77
+    },
+    {
+        "text": "maybe the location of N is stored,\nin the motor system, maybe?",
+        "start": 2710.175,
+        "duration": 4.73
+    },
+    {
+        "text": "we are introducing complexities,\nHojae, which we, I was hoping",
+        "start": 2716.805,
+        "duration": 2.81
+    },
+    {
+        "text": "we'd, your hand is moving around in\nspace, randomly sampling stuff, and",
+        "start": 2719.615,
+        "duration": 4.89
+    },
+    {
+        "text": "then, I'm not, sure that kind of\nquestion is going to be fruitful at",
+        "start": 2727.46,
+        "duration": 4.12
+    },
+    {
+        "text": "this point in time, but I don't know.",
+        "start": 2731.58,
+        "duration": 1.11
+    },
+    {
+        "text": "I'm just, again, I was trying to like\nreally isolate some components of this",
+        "start": 2733.75,
+        "duration": 5.4
+    },
+    {
+        "text": "overall problem, and, that's why having\nthis sort of grounded hand on the",
+        "start": 2739.15,
+        "duration": 5.07
+    },
+    {
+        "text": "little nibs on the keys was helpful,\nand I, that's why, I, don't think we",
+        "start": 2744.22,
+        "duration": 7.18
+    },
+    {
+        "text": "just randomly explore looking for keys.",
+        "start": 2751.4,
+        "duration": 1.73
+    },
+    {
+        "text": "it's,",
+        "start": 2754.955,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah, maybe just to,",
+        "start": 2759.205,
+        "duration": 1.62
+    },
+    {
+        "text": "a child looking at, a young person,\nanybody starting to type, the first time",
+        "start": 2765.675,
+        "duration": 4.44
+    },
+    {
+        "text": "you see a keyboard, you actually make a\nvisual model of the keyboard, you're not",
+        "start": 2770.115,
+        "duration": 2.97
+    },
+    {
+        "text": "making a tactile model, you're making\na visual model, you're looking at the",
+        "start": 2773.085,
+        "duration": 3.47
+    },
+    {
+        "text": "different features of it, it's very\ndifficult to learn all the arrangement",
+        "start": 2776.555,
+        "duration": 4.34
+    },
+    {
+        "text": "of the keys, there's quite a lot of them,\nand they're very close together, so it's",
+        "start": 2780.895,
+        "duration": 2.85
+    },
+    {
+        "text": "not a very good, easy thing to learn.",
+        "start": 2783.755,
+        "duration": 1.63
+    },
+    {
+        "text": "But you make a visual\nmodel of the keyboard,",
+        "start": 2787.155,
+        "duration": 2.29
+    },
+    {
+        "text": "and then, I don't, I actually don't\nthink you actually have a, it's not",
+        "start": 2791.465,
+        "duration": 5.74
+    },
+    {
+        "text": "clear you have a tactile model of\nthe keyboard, only when you start,",
+        "start": 2797.205,
+        "duration": 3.29
+    },
+    {
+        "text": "the visual model of the keyboard is\ninstructing the fingers where to move.",
+        "start": 2800.725,
+        "duration": 3.05
+    },
+    {
+        "text": "Go to this location, go to this\nlocation, go to this location, which,",
+        "start": 2804.405,
+        "duration": 3.44
+    },
+    {
+        "text": "by the way, is a very common task in\nsetting tables, doing anything, right?",
+        "start": 2807.895,
+        "duration": 4.27
+    },
+    {
+        "text": "You use your visual system to locate\nwhere you need to go and implement things.",
+        "start": 2812.215,
+        "duration": 4.23
+    },
+    {
+        "text": "so I just, I'm just pointing out\nthat we have a visual model of the",
+        "start": 2817.975,
+        "duration": 2.41
+    },
+    {
+        "text": "keyboard, the visual model of the\nkeyboard is locating, places that, we",
+        "start": 2820.385,
+        "duration": 4.74
+    },
+    {
+        "text": "want to go based on what letter we're\nlooking for, and then it instructs",
+        "start": 2825.125,
+        "duration": 3.8
+    },
+    {
+        "text": "them how some part, different parts\nof the body to move, to that location.",
+        "start": 2828.925,
+        "duration": 6.1
+    },
+    {
+        "text": "So fingers aren't just roaming around\nfinding letters, we, look at a keyboard",
+        "start": 2837.06,
+        "duration": 3.95
+    },
+    {
+        "text": "and we study it, and then we try to\nremember where different, letters are.",
+        "start": 2841.02,
+        "duration": 4.84
+    },
+    {
+        "text": "Yeah, I guess the question, so let's say\nwe have the keyboard model, so that we",
+        "start": 2849.06,
+        "duration": 5.71
+    },
+    {
+        "text": "know the locations of individual keys.",
+        "start": 2854.8,
+        "duration": 2.31
+    },
+    {
+        "text": "So this would be a visual model?",
+        "start": 2857.43,
+        "duration": 1.32
+    },
+    {
+        "text": "sure.",
+        "start": 2861.9,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah, I think, it is.",
+        "start": 2863.31,
+        "duration": 1.41
+    },
+    {
+        "text": "then I guess the question of first, how\ndo, how does the hand know to go to, and",
+        "start": 2865.705,
+        "duration": 6.23
+    },
+    {
+        "text": "I guess I'm confused about like locations\nprobably and how the, I, yeah, it seems",
+        "start": 2872.715,
+        "duration": 7.27
+    },
+    {
+        "text": "to me once, if the visual system has\nto be able to locate something in, in",
+        "start": 2879.985,
+        "duration": 4.92
+    },
+    {
+        "text": "body centric coordinates, whatever that\nmeans, it's, it's, somehow relative",
+        "start": 2884.915,
+        "duration": 5.74
+    },
+    {
+        "text": "to, and then it has to say, how do I\nmove a part of my body to that thing?",
+        "start": 2890.655,
+        "duration": 4.52
+    },
+    {
+        "text": "It's basically, it's, the, finger that's\ngoing to touch the key does not know that",
+        "start": 2897.37,
+        "duration": 6.71
+    },
+    {
+        "text": "it's touching an end key at that time.",
+        "start": 2904.08,
+        "duration": 1.68
+    },
+    {
+        "text": "In the visual system it says,\nyou just go here and press that.",
+        "start": 2906.66,
+        "duration": 3.02
+    },
+    {
+        "text": "And so the finger goes\nthere and presses that.",
+        "start": 2910.28,
+        "duration": 1.94
+    },
+    {
+        "text": "there is, that's, we were earlier,\nViviane was saying, that's trivial",
+        "start": 2914.87,
+        "duration": 5.38
+    },
+    {
+        "text": "or something like that, but, I don't\nknow, this is the way it works.",
+        "start": 2920.25,
+        "duration": 2.72
+    },
+    {
+        "text": "I had some thoughts about\nthis, translation step.",
+        "start": 2923.51,
+        "duration": 2.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 2926.33,
+        "duration": 1.11
+    },
+    {
+        "text": "It's, it would, yeah, start\nwith, there's this key in",
+        "start": 2927.92,
+        "duration": 4.08
+    },
+    {
+        "text": "space that needs to be pressed.",
+        "start": 2932.0,
+        "duration": 1.53
+    },
+    {
+        "text": "And so the desired state is to\nhave that key down, basically.",
+        "start": 2934.5,
+        "duration": 4.22
+    },
+    {
+        "text": "Now, the motor system, as you pointed\nout in the doc, Jeff, you could do",
+        "start": 2939.575,
+        "duration": 6.68
+    },
+    {
+        "text": "this with chopsticks, you could do this\nwith your left hand, you could do this",
+        "start": 2946.255,
+        "duration": 2.35
+    },
+    {
+        "text": "with your right hand, but if you think\nabout computing the distance between",
+        "start": 2948.865,
+        "duration": 4.66
+    },
+    {
+        "text": "a current state and a goal state, In\nspace, the right hand, let's say I'm",
+        "start": 2953.525,
+        "duration": 5.42
+    },
+    {
+        "text": "flipping a light switch over here.",
+        "start": 2959.015,
+        "duration": 2.15
+    },
+    {
+        "text": "Yeah.",
+        "start": 2961.655,
+        "duration": 0.37
+    },
+    {
+        "text": "The right of my body, the actual distance\nbetween current state and goal state in",
+        "start": 2962.435,
+        "duration": 5.0
+    },
+    {
+        "text": "space is smaller than with my left hand.",
+        "start": 2967.435,
+        "duration": 2.06
+    },
+    {
+        "text": "So many of these things in the motor\nsystem could be saying, I can do that.",
+        "start": 2970.495,
+        "duration": 4.19
+    },
+    {
+        "text": "and here's like the length of the\ntrajectory it would take to do it.",
+        "start": 2976.065,
+        "duration": 4.04
+    },
+    {
+        "text": "And what actually ends up doing\nit is the system that says, That's",
+        "start": 2980.685,
+        "duration": 4.395
+    },
+    {
+        "text": "the smallest possible definition.",
+        "start": 2985.08,
+        "duration": 2.05
+    },
+    {
+        "text": "That would seem to be often the case.",
+        "start": 2987.96,
+        "duration": 1.97
+    },
+    {
+        "text": "But then again you're going up, to\nthe thing and now you're holding",
+        "start": 2990.24,
+        "duration": 3.59
+    },
+    {
+        "text": "a coffee cup in your right hand.",
+        "start": 2993.83,
+        "duration": 1.26
+    },
+    {
+        "text": "And so then you don't want to\nput it down so you can't reach",
+        "start": 2995.09,
+        "duration": 2.77
+    },
+    {
+        "text": "across with your left hand, right?",
+        "start": 2997.86,
+        "duration": 1.36
+    },
+    {
+        "text": "yeah.",
+        "start": 3000.28,
+        "duration": 0.33
+    },
+    {
+        "text": "it feels to me that, it's pretty obvious\nto me actually, that if you have a,",
+        "start": 3002.36,
+        "duration": 5.53
+    },
+    {
+        "text": "that somehow the body can say, there's\na, I've located a point in space I'm",
+        "start": 3008.37,
+        "duration": 5.88
+    },
+    {
+        "text": "not sure what it's relative to yet.",
+        "start": 3014.25,
+        "duration": 1.51
+    },
+    {
+        "text": "It's, some body centric coordinate.",
+        "start": 3015.97,
+        "duration": 1.4
+    },
+    {
+        "text": "And then I want to say, how do\nI, what is the trajectory from",
+        "start": 3017.37,
+        "duration": 3.87
+    },
+    {
+        "text": "a part of my body to that point?",
+        "start": 3021.32,
+        "duration": 1.61
+    },
+    {
+        "text": "I could, it could be from my right hand,\nmy left hand, it could be my foot, my toe.",
+        "start": 3023.48,
+        "duration": 3.16
+    },
+    {
+        "text": "we're able to do this very quickly\njust by thinking about, one part of",
+        "start": 3027.69,
+        "duration": 3.39
+    },
+    {
+        "text": "your body at some point in space, and\nthen you know what trajectory, then",
+        "start": 3031.08,
+        "duration": 4.56
+    },
+    {
+        "text": "your body knows how to get there.",
+        "start": 3035.64,
+        "duration": 1.26
+    },
+    {
+        "text": "it calculates this, automatically, right?",
+        "start": 3038.26,
+        "duration": 3.34
+    },
+    {
+        "text": "and so you can reach with one hand, the\nother hand, you can use your knee, you can",
+        "start": 3043.81,
+        "duration": 3.17
+    },
+    {
+        "text": "use your elbow on a doorknob as a lever.",
+        "start": 3046.98,
+        "duration": 2.03
+    },
+    {
+        "text": "all these things, it's Yeah, I don't\nknow, Let's say you do consciously make",
+        "start": 3050.57,
+        "duration": 6.365
+    },
+    {
+        "text": "a choice to use your left hand, even\nthough it's further away, maybe you",
+        "start": 3056.935,
+        "duration": 2.69
+    },
+    {
+        "text": "have a coffee cup in your right hand.",
+        "start": 3059.625,
+        "duration": 1.7
+    },
+    {
+        "text": "I don't know how to think about that\nyet, but if I just think about like",
+        "start": 3062.895,
+        "duration": 3.83
+    },
+    {
+        "text": "the typing case, where like the letter\nU is closer to my right index finger,",
+        "start": 3066.785,
+        "duration": 7.27
+    },
+    {
+        "text": "that's, what most people do when\nthey hunt, hunt and peck, right?",
+        "start": 3076.285,
+        "duration": 2.24
+    },
+    {
+        "text": "They use just the two, index\nfingers, whatever's closest.",
+        "start": 3078.785,
+        "duration": 2.73
+    },
+    {
+        "text": "Yeah.",
+        "start": 3081.94,
+        "duration": 0.36
+    },
+    {
+        "text": "I'm just thinking about it.",
+        "start": 3082.49,
+        "duration": 1.82
+    },
+    {
+        "text": "So yeah, I'm just thinking about if\nwe are actually trying to implement",
+        "start": 3085.67,
+        "duration": 2.37
+    },
+    {
+        "text": "some system, this is like a potential\nmechanism that you could use.",
+        "start": 3088.05,
+        "duration": 4.8
+    },
+    {
+        "text": "You're just computing like deltas, like\nI can, get you in that state, but I'm X",
+        "start": 3092.86,
+        "duration": 6.53
+    },
+    {
+        "text": "distance away from being able to do it.",
+        "start": 3099.4,
+        "duration": 1.45
+    },
+    {
+        "text": "And this column says I can get you\nin that state and I'm Z distance.",
+        "start": 3100.89,
+        "duration": 4.12
+    },
+    {
+        "text": "Certainly.",
+        "start": 3105.59,
+        "duration": 0.48
+    },
+    {
+        "text": "And the question is, what is\nthe policy for deciding this?",
+        "start": 3106.07,
+        "duration": 2.47
+    },
+    {
+        "text": "I could tell you, I could say,\nScott, your job is to type",
+        "start": 3109.16,
+        "duration": 2.24
+    },
+    {
+        "text": "everything with your left pinky.",
+        "start": 3111.4,
+        "duration": 1.19
+    },
+    {
+        "text": "Okay.",
+        "start": 3112.84,
+        "duration": 0.37
+    },
+    {
+        "text": "I can do that.",
+        "start": 3113.25,
+        "duration": 0.57
+    },
+    {
+        "text": "I would say, you'd be slow, right?",
+        "start": 3115.39,
+        "duration": 3.04
+    },
+    {
+        "text": "You would, you'd go around and go, look\nat each key as you're doing, just like",
+        "start": 3118.5,
+        "duration": 3.78
+    },
+    {
+        "text": "hunt and peck, but use your left pinky.",
+        "start": 3122.28,
+        "duration": 1.51
+    },
+    {
+        "text": "And then the question you're bringing\nup is what do I naturally do?",
+        "start": 3125.07,
+        "duration": 2.68
+    },
+    {
+        "text": "What's the first thing I, oh, I, maybe I\npicked the thing that's closest or maybe",
+        "start": 3127.76,
+        "duration": 3.8
+    },
+    {
+        "text": "I pick always my right hand, even if it's\nnot closest, because it's more dexterous.",
+        "start": 3131.56,
+        "duration": 3.61
+    },
+    {
+        "text": "I don't know the answer to that question.",
+        "start": 3136.23,
+        "duration": 1.6
+    },
+    {
+        "text": "But clearly we can do it\nwith any body part, right?",
+        "start": 3138.34,
+        "duration": 3.01
+    },
+    {
+        "text": "There's no question we can\ndo it with any body part.",
+        "start": 3141.38,
+        "duration": 1.65
+    },
+    {
+        "text": "Yeah, it feels like it's natural that\nyeah, the goal state that's okay, someone",
+        "start": 3145.14,
+        "duration": 6.33
+    },
+    {
+        "text": "is pressing here or someone is picking\nup here or whatever, you project that",
+        "start": 3151.47,
+        "duration": 4.99
+    },
+    {
+        "text": "widely and then, yeah, I think that's,\nit's intuitive that, if there's like",
+        "start": 3156.46,
+        "duration": 6.87
+    },
+    {
+        "text": "a low kind of delta or whatever, then,\na learning module might answer that.",
+        "start": 3163.33,
+        "duration": 3.95
+    },
+    {
+        "text": "But in general.",
+        "start": 3167.69,
+        "duration": 0.72
+    },
+    {
+        "text": "It seems natural that like a learning\nmodule, when it receives a goal state,",
+        "start": 3168.84,
+        "duration": 2.83
+    },
+    {
+        "text": "it, because it knows the models it\nknows, it has some sense of whether it",
+        "start": 3173.17,
+        "duration": 3.2
+    },
+    {
+        "text": "can basically achieve that goal state.",
+        "start": 3176.37,
+        "duration": 1.36
+    },
+    {
+        "text": "And so if it's in the state of I'm\nalready holding something or whatever,",
+        "start": 3177.74,
+        "duration": 4.47
+    },
+    {
+        "text": "like it's just not going to answer that.",
+        "start": 3182.81,
+        "duration": 1.66
+    },
+    {
+        "text": "That feels like maybe the, more, slightly\nmore unconscious, like why you would use",
+        "start": 3185.47,
+        "duration": 5.64
+    },
+    {
+        "text": "one hand rather than another or whatever.",
+        "start": 3191.11,
+        "duration": 1.92
+    },
+    {
+        "text": "And then there's probably some like\nprefrontal cortex that recruits",
+        "start": 3193.03,
+        "duration": 6.31
+    },
+    {
+        "text": "the basal ganglia or something.",
+        "start": 3199.34,
+        "duration": 1.18
+    },
+    {
+        "text": "If you want to.",
+        "start": 3200.53,
+        "duration": 0.49
+    },
+    {
+        "text": "Specifically say avoid using this\nthing just arbitrarily, like that's",
+        "start": 3201.425,
+        "duration": 4.78
+    },
+    {
+        "text": "more like inhibition rather than\nit's oh, I can't answer that call.",
+        "start": 3206.205,
+        "duration": 3.68
+    },
+    {
+        "text": "It's like some other part of the\nbrain that's don't use these things.",
+        "start": 3210.095,
+        "duration": 3.67
+    },
+    {
+        "text": "this brings up a really\ninteresting mechanism, right?",
+        "start": 3214.785,
+        "duration": 2.6
+    },
+    {
+        "text": "So imagine we're, we've said over and over\nagain, we're saying, okay, we're going",
+        "start": 3217.485,
+        "duration": 3.77
+    },
+    {
+        "text": "to try to, we'll try to express a letter.",
+        "start": 3221.255,
+        "duration": 2.75
+    },
+    {
+        "text": "And there's all these modalities, right?",
+        "start": 3224.845,
+        "duration": 2.01
+    },
+    {
+        "text": "You can speak it, you can sign it,\nyou can type it, You can type it",
+        "start": 3226.915,
+        "duration": 3.265
+    },
+    {
+        "text": "on different types of keyboards.",
+        "start": 3230.18,
+        "duration": 1.27
+    },
+    {
+        "text": "There's all these different\nways you can do it.",
+        "start": 3231.45,
+        "duration": 1.68
+    },
+    {
+        "text": "I can, I could even say, ask, I\nsaid, my hands are busy, Niels.",
+        "start": 3233.49,
+        "duration": 4.17
+    },
+    {
+        "text": "Would you touch the end key for me?",
+        "start": 3237.67,
+        "duration": 1.88
+    },
+    {
+        "text": "That's another way of doing it.",
+        "start": 3239.83,
+        "duration": 1.0
+    },
+    {
+        "text": "and so you can imagine that there's\nthis sort of big fan out that are not",
+        "start": 3242.36,
+        "duration": 3.82
+    },
+    {
+        "text": "a fan out, but this, message must be.",
+        "start": 3246.18,
+        "duration": 2.07
+    },
+    {
+        "text": "Must be transmitted to a lot of learning\nmodules in different modalities, and",
+        "start": 3248.66,
+        "duration": 5.48
+    },
+    {
+        "text": "somehow the brain is able to either\ndirect it, somehow it's able to direct,",
+        "start": 3254.14,
+        "duration": 4.59
+    },
+    {
+        "text": "pick one, like which one am I, which\none am I supposed to use right now?",
+        "start": 3258.82,
+        "duration": 3.97
+    },
+    {
+        "text": "Am I supposed to speak the letter?",
+        "start": 3262.8,
+        "duration": 1.14
+    },
+    {
+        "text": "Am I supposed to type the letter?",
+        "start": 3263.94,
+        "duration": 1.19
+    },
+    {
+        "text": "it's a mystery.",
+        "start": 3266.76,
+        "duration": 0.94
+    },
+    {
+        "text": "It's we, somehow, we have these abilities\nto do all these things, but at any moment",
+        "start": 3267.73,
+        "duration": 6.495
+    },
+    {
+        "text": "in time, we're only doing one of them.",
+        "start": 3274.225,
+        "duration": 1.33
+    },
+    {
+        "text": "And even then we brought the situation,\neven if I'm trying to do one of",
+        "start": 3276.015,
+        "duration": 2.99
+    },
+    {
+        "text": "them, there might be an obstacle\nwhich forces me to use another one.",
+        "start": 3279.005,
+        "duration": 2.44
+    },
+    {
+        "text": "I think that's got to be part\nof the architecture here.",
+        "start": 3284.505,
+        "duration": 2.06
+    },
+    {
+        "text": "The overall architecture has to include\nthis idea that there's many different ways",
+        "start": 3287.115,
+        "duration": 3.62
+    },
+    {
+        "text": "you can implement this particular task.",
+        "start": 3290.735,
+        "duration": 2.54
+    },
+    {
+        "text": "and then there has to be some\nsort of policies about deciding,",
+        "start": 3295.51,
+        "duration": 2.57
+    },
+    {
+        "text": "which one we're using right now.",
+        "start": 3298.29,
+        "duration": 1.52
+    },
+    {
+        "text": "So I'm just adding this to our list\nof things we might want to solve,",
+        "start": 3300.27,
+        "duration": 3.2
+    },
+    {
+        "text": "in a particular, as we get into this\nproblem, is we might want to have at",
+        "start": 3304.15,
+        "duration": 5.3
+    },
+    {
+        "text": "least two ways of implementing the\nsame goal of letters, or whatever it",
+        "start": 3309.45,
+        "duration": 4.9
+    },
+    {
+        "text": "is, Yeah, I guess if we were gonna\ntry and implement the keyboard thing,",
+        "start": 3314.35,
+        "duration": 4.94
+    },
+    {
+        "text": "it might be useful to say okay, we've\ngot a left finger and a right finger.",
+        "start": 3319.29,
+        "duration": 2.98
+    },
+    {
+        "text": "Okay.",
+        "start": 3322.27,
+        "duration": 0.33
+    },
+    {
+        "text": "And then, so that's like the simplest\nversion of and then, we only learn",
+        "start": 3324.29,
+        "duration": 4.79
+    },
+    {
+        "text": "with the left finger, or the right\nfinger, but the left finger, so that",
+        "start": 3329.08,
+        "duration": 4.2
+    },
+    {
+        "text": "eventually develops the model free one.",
+        "start": 3333.31,
+        "duration": 1.65
+    },
+    {
+        "text": "I think, finger is also able to\nrespond, and then so we show that,",
+        "start": 3335.01,
+        "duration": 4.7
+    },
+    {
+        "text": "okay, if you inhibit the right finger,\nor the right finger Cannot respond,",
+        "start": 3339.74,
+        "duration": 4.205
+    },
+    {
+        "text": "then the left finger can be recruited.",
+        "start": 3344.265,
+        "duration": 1.5
+    },
+    {
+        "text": "So something like that, let's\nget back to Some sort of action",
+        "start": 3345.915,
+        "duration": 2.49
+    },
+    {
+        "text": "policies to decide which one to do.",
+        "start": 3348.405,
+        "duration": 1.41
+    },
+    {
+        "text": "But I think having the ability to\nswitch between these would be a key",
+        "start": 3349.815,
+        "duration": 3.84
+    },
+    {
+        "text": "component of any goal oriented system.",
+        "start": 3353.655,
+        "duration": 2.58
+    },
+    {
+        "text": "And whether we call 'em two\nfingers or just two actuators,",
+        "start": 3356.845,
+        "duration": 2.73
+    },
+    {
+        "text": "it doesn't really matter.",
+        "start": 3359.575,
+        "duration": 0.9
+    },
+    {
+        "text": "They're independent means of doing this.",
+        "start": 3360.855,
+        "duration": 2.19
+    },
+    {
+        "text": "yeah, I think that's pretty\nimportant to have that in there.",
+        "start": 3364.615,
+        "duration": 2.49
+    },
+    {
+        "text": "as part of the solution here to this.",
+        "start": 3367.885,
+        "duration": 1.89
+    },
+    {
+        "text": "It strikes me from an earlier comment\nthat, these sort of seemingly basic things",
+        "start": 3370.105,
+        "duration": 6.32
+    },
+    {
+        "text": "of moving limbs and sensors around in\nspace, solving or searching the space",
+        "start": 3376.425,
+        "duration": 7.71
+    },
+    {
+        "text": "of possible things for the one you're\nactually going to execute, dealing with",
+        "start": 3384.135,
+        "duration": 4.95
+    },
+    {
+        "text": "constraints of space, and these are\nall fairly big problems in robotics.",
+        "start": 3389.155,
+        "duration": 6.87
+    },
+    {
+        "text": "and we're going to solve it.",
+        "start": 3397.125,
+        "duration": 1.06
+    },
+    {
+        "text": "But I'm just saying, so getting these\nbasics right, and even as a human,",
+        "start": 3399.985,
+        "duration": 4.35
+    },
+    {
+        "text": "before I, you never, or maybe you can,\nyou probably don't learn to type at",
+        "start": 3404.575,
+        "duration": 5.28
+    },
+    {
+        "text": "less than five years old, because you\nneed a whole lot of just learning about",
+        "start": 3410.805,
+        "duration": 4.17
+    },
+    {
+        "text": "how things in the world are connected.",
+        "start": 3414.975,
+        "duration": 1.715
+    },
+    {
+        "text": "Learning how to move your body, etc.",
+        "start": 3417.34,
+        "duration": 2.58
+    },
+    {
+        "text": "Solving some of these lower level\nproblems of just locating limbs in space.",
+        "start": 3419.93,
+        "duration": 4.57
+    },
+    {
+        "text": "one of the, we have to be a little\nbit careful, there's a little",
+        "start": 3425.45,
+        "duration": 1.91
+    },
+    {
+        "text": "tangent here, Michael, but a large\npart of why it takes humans so long",
+        "start": 3427.36,
+        "duration": 5.97
+    },
+    {
+        "text": "To develop, is that our bodies are\nchanging during that whole time?",
+        "start": 3433.8,
+        "duration": 3.34
+    },
+    {
+        "text": "We're growing?",
+        "start": 3437.56,
+        "duration": 0.83
+    },
+    {
+        "text": "And so all these, anything we learn\nchanges the next month when you're bigger.",
+        "start": 3438.74,
+        "duration": 5.15
+    },
+    {
+        "text": "You have to relearn these things over and\nover again because your body is changing.",
+        "start": 3444.64,
+        "duration": 4.32
+    },
+    {
+        "text": "So just bear in mind, it's not\nlike we have some fixed body.",
+        "start": 3449.25,
+        "duration": 2.41
+    },
+    {
+        "text": "It just takes years and years for us\nto learn how to manipulate things.",
+        "start": 3451.66,
+        "duration": 3.2
+    },
+    {
+        "text": "It's like everything is changing.",
+        "start": 3454.86,
+        "duration": 2.01
+    },
+    {
+        "text": "The brain is growing, the body is growing.",
+        "start": 3456.88,
+        "duration": 1.43
+    },
+    {
+        "text": "So I think we can assume.",
+        "start": 3458.31,
+        "duration": 1.66
+    },
+    {
+        "text": "That, we, I think we can\nshortchange that attempt somehow.",
+        "start": 3460.56,
+        "duration": 3.18
+    },
+    {
+        "text": "We can come up with problems where we\nhave, we've endowed the system with",
+        "start": 3463.74,
+        "duration": 4.91
+    },
+    {
+        "text": "some, abilities that aren't going to\nchange, that are baked in, model free,",
+        "start": 3469.63,
+        "duration": 4.6
+    },
+    {
+        "text": "subcortical stuff, whatever, I don't know.",
+        "start": 3474.23,
+        "duration": 2.57
+    },
+    {
+        "text": "Yeah, that, I would counter that\nwith the example of the deer that",
+        "start": 3476.86,
+        "duration": 3.23
+    },
+    {
+        "text": "learns to walk in an hour or two,\nand its body is still growing, so",
+        "start": 3480.25,
+        "duration": 4.72
+    },
+    {
+        "text": "it's solved, that problem very early.",
+        "start": 3485.64,
+        "duration": 1.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 3487.515,
+        "duration": 0.25
+    },
+    {
+        "text": "But again, that's true.",
+        "start": 3487.765,
+        "duration": 2.03
+    },
+    {
+        "text": "Although that is a non cortical thing.",
+        "start": 3490.025,
+        "duration": 1.92
+    },
+    {
+        "text": "Walking doesn't really take the cortex.",
+        "start": 3491.945,
+        "duration": 1.64
+    },
+    {
+        "text": "It doesn't.",
+        "start": 3493.605,
+        "duration": 0.24
+    },
+    {
+        "text": "Yeah.",
+        "start": 3493.895,
+        "duration": 0.57
+    },
+    {
+        "text": "I guess I'm just saying that I think\nsome of the reason as humans takes a",
+        "start": 3494.515,
+        "duration": 4.46
+    },
+    {
+        "text": "long to learn is because we've, we come\nwith so little innate knowledge or so.",
+        "start": 3498.975,
+        "duration": 5.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 3504.605,
+        "duration": 0.21
+    },
+    {
+        "text": "Partly that's like a deliberate,\nkind of tabula rasa on the part of",
+        "start": 3506.605,
+        "duration": 4.29
+    },
+    {
+        "text": "evolution, but I think part of it is\njust We've basically, as developed",
+        "start": 3510.965,
+        "duration": 6.09
+    },
+    {
+        "text": "as we can be to squeeze through\nthe birth canal of a human being.",
+        "start": 3517.055,
+        "duration": 2.68
+    },
+    {
+        "text": "And so if we could, we would probably\nbe like two years old or something",
+        "start": 3520.635,
+        "duration": 5.1
+    },
+    {
+        "text": "like that before we were born.",
+        "start": 3525.735,
+        "duration": 1.25
+    },
+    {
+        "text": "and that's what happens to\nanimals, but our brain can't,",
+        "start": 3527.96,
+        "duration": 3.96
+    },
+    {
+        "text": "like our skull wouldn't fit.",
+        "start": 3532.44,
+        "duration": 1.51
+    },
+    {
+        "text": "Two year olds run around\nreally well, as I know.",
+        "start": 3536.06,
+        "duration": 3.43
+    },
+    {
+        "text": "Yeah, but, so, yeah, I think a lot of\nthat development happens in utero that",
+        "start": 3539.88,
+        "duration": 4.89
+    },
+    {
+        "text": "has to happen afterwards for humans.",
+        "start": 3544.86,
+        "duration": 2.49
+    },
+    {
+        "text": "And my bigger point is maybe work\nrather than worrying about keyboards.",
+        "start": 3549.18,
+        "duration": 5.27
+    },
+    {
+        "text": "And it's a good end goal and a good way to\nthink about this, maybe it's the simpler,",
+        "start": 3555.07,
+        "duration": 5.2
+    },
+    {
+        "text": "the more narrowly focused problem of just\nlike moving a finger to a point in space.",
+        "start": 3560.9,
+        "duration": 5.35
+    },
+    {
+        "text": "Okay, I would, my preference would be to\nsay that is a subcortical, no, the actual",
+        "start": 3566.765,
+        "duration": 7.52
+    },
+    {
+        "text": "coordination of muscles to move anything\nis really complicated, and a lot of that's",
+        "start": 3574.285,
+        "duration": 5.74
+    },
+    {
+        "text": "subcortical, and I think it's okay for us\nto, assume that we don't have to do that.",
+        "start": 3580.025,
+        "duration": 6.615
+    },
+    {
+        "text": "Learn that, we, it would be great\njust to assume that we have a system",
+        "start": 3587.03,
+        "duration": 4.41
+    },
+    {
+        "text": "that can do certain basic functions.",
+        "start": 3591.44,
+        "duration": 1.92
+    },
+    {
+        "text": "I'm not sure whether that , I\nthought that wasn't okay.",
+        "start": 3594.53,
+        "duration": 1.801
+    },
+    {
+        "text": "what?",
+        "start": 3597.275,
+        "duration": 0.29
+    },
+    {
+        "text": "We talked about that earlier.",
+        "start": 3597.62,
+        "duration": 1.14
+    },
+    {
+        "text": "no, like things like, like,\nto move a finger it requires.",
+        "start": 3599.84,
+        "duration": 3.99
+    },
+    {
+        "text": "lots of different muscles\nthat are contracting.",
+        "start": 3605.635,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah, the coordination of the limb.",
+        "start": 3607.435,
+        "duration": 2.08
+    },
+    {
+        "text": "Sort of the inverse\nkinematics part, we can say.",
+        "start": 3610.385,
+        "duration": 3.03
+    },
+    {
+        "text": "But the constraint solving, I feel like,\nyou've got to move your finger to pick",
+        "start": 3614.185,
+        "duration": 3.5
+    },
+    {
+        "text": "up the glass, but there's a wine glass in\nthe way, so you've got to go around it.",
+        "start": 3617.685,
+        "duration": 2.98
+    },
+    {
+        "text": "Oh, that's definitely cortical, right?",
+        "start": 3621.135,
+        "duration": 1.55
+    },
+    {
+        "text": "totally, right?",
+        "start": 3623.485,
+        "duration": 0.81
+    },
+    {
+        "text": "We have to solve that problem.",
+        "start": 3624.295,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah, that would be like a\nscene level understanding.",
+        "start": 3627.055,
+        "duration": 2.99
+    },
+    {
+        "text": "it's also, But yeah, that doesn't\neasily solve it because you have to",
+        "start": 3631.155,
+        "duration": 3.51
+    },
+    {
+        "text": "have an understanding of like where\nyour arm is in space and what space",
+        "start": 3634.665,
+        "duration": 3.6
+    },
+    {
+        "text": "it takes up and stuff like that.",
+        "start": 3638.275,
+        "duration": 0.89
+    },
+    {
+        "text": "and that's almost all\ndone visually, right?",
+        "start": 3640.035,
+        "duration": 1.69
+    },
+    {
+        "text": "you don't",
+        "start": 3642.395,
+        "duration": 0.54
+    },
+    {
+        "text": "if I'm, so much of what we do is we\nlocate things visually and then we",
+        "start": 3645.035,
+        "duration": 4.46
+    },
+    {
+        "text": "move our limbs to those locations,\nand the visual system is, verifying",
+        "start": 3649.495,
+        "duration": 5.84
+    },
+    {
+        "text": "that we're doing the tasks correctly.",
+        "start": 3655.335,
+        "duration": 1.78
+    },
+    {
+        "text": "So we have to, that has to be sort\nof part of this, or almost certainly",
+        "start": 3659.075,
+        "duration": 2.92
+    },
+    {
+        "text": "has to be part of this kind of\nproblem, solution we're looking for.",
+        "start": 3662.005,
+        "duration": 3.45
+    },
+    {
+        "text": "Is like a first person `shooter a\ngood starting point, simple model?",
+        "start": 3665.485,
+        "duration": 5.18
+    },
+    {
+        "text": "You've, you've got a target on the\nscreen, you've got to adjust your",
+        "start": 3670.665,
+        "duration": 5.21
+    },
+    {
+        "text": "cannon to move the target on the screen\nand fire at the thing you're trying",
+        "start": 3675.875,
+        "duration": 4.52
+    },
+    {
+        "text": "to know, I think we're looking for",
+        "start": 3680.395,
+        "duration": 1.92
+    },
+    {
+        "text": "tasks that can be solved in different ways\nand have, compositional structure to them.",
+        "start": 3684.58,
+        "duration": 6.04
+    },
+    {
+        "text": "Niels example of making coffee is a,\nthere's a multi step, multi, task.",
+        "start": 3692.35,
+        "duration": 6.76
+    },
+    {
+        "text": "Decompositional problem, which it seems\nto me much more easy, much better than",
+        "start": 3700.4,
+        "duration": 3.79
+    },
+    {
+        "text": "to say, hey, can I, you can train at\nany neural network to be a really good",
+        "start": 3704.19,
+        "duration": 3.71
+    },
+    {
+        "text": "first shooter, first person shooter.",
+        "start": 3707.9,
+        "duration": 2.01
+    },
+    {
+        "text": "It doesn't take a model at all.",
+        "start": 3709.91,
+        "duration": 2.32
+    },
+    {
+        "text": "You can just run it through\na deep learning network.",
+        "start": 3712.24,
+        "duration": 1.63
+    },
+    {
+        "text": "But, to achieve it within this\nmodel system and then, yeah, it's,",
+        "start": 3714.68,
+        "duration": 4.52
+    },
+    {
+        "text": "I think the coffee's a good one.",
+        "start": 3719.23,
+        "duration": 0.92
+    },
+    {
+        "text": "Yeah, the coffee's a good one.",
+        "start": 3720.15,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah, go ahead, Jeff.",
+        "start": 3726.33,
+        "duration": 0.73
+    },
+    {
+        "text": "Oh, yeah, just another twist on the\nkeyboard example that I've been thinking",
+        "start": 3728.945,
+        "duration": 4.15
+    },
+    {
+        "text": "about that might simplify a few of\nthe problems is, or at least with the",
+        "start": 3733.095,
+        "duration": 5.41
+    },
+    {
+        "text": "keyboard, it feels like we're very,\ntrained on typing the keyboard already.",
+        "start": 3738.505,
+        "duration": 4.27
+    },
+    {
+        "text": "So just as another thought example,\ncould be to think through playing the",
+        "start": 3743.335,
+        "duration": 3.71
+    },
+    {
+        "text": "piano where you also have a keyboard.",
+        "start": 3747.045,
+        "duration": 2.82
+    },
+    {
+        "text": "whenever you press a key, you\nhear a different note, so you can",
+        "start": 3751.415,
+        "duration": 2.63
+    },
+    {
+        "text": "immediately tell which key you pressed.",
+        "start": 3754.055,
+        "duration": 1.85
+    },
+    {
+        "text": "It's pretty clear that we have a\nmodel of the keyboard because it",
+        "start": 3756.54,
+        "duration": 4.09
+    },
+    {
+        "text": "has a very repetitive structure.",
+        "start": 3760.63,
+        "duration": 2.06
+    },
+    {
+        "text": "but still,",
+        "start": 3764.24,
+        "duration": 0.83
+    },
+    {
+        "text": "if you, need to play a new melody, you\ncan, it's pretty much a slow process.",
+        "start": 3768.61,
+        "duration": 4.17
+    },
+    {
+        "text": "Like even if you have sheet music,\nit's pretty slow in the beginning.",
+        "start": 3772.78,
+        "duration": 2.79
+    },
+    {
+        "text": "But then if you've practiced it\nmany, times, you can play the",
+        "start": 3775.855,
+        "duration": 2.93
+    },
+    {
+        "text": "melody very fast, similar to\nhow we can type words very fast.",
+        "start": 3778.785,
+        "duration": 3.92
+    },
+    {
+        "text": "If we know the words, if it's\nlike just random sequence of",
+        "start": 3782.705,
+        "duration": 3.57
+    },
+    {
+        "text": "letters, like Scott posted that\nexample, then we are much slower.",
+        "start": 3786.275,
+        "duration": 4.44
+    },
+    {
+        "text": "So maybe that's another.",
+        "start": 3791.095,
+        "duration": 0.94
+    },
+    {
+        "text": "I think the keyboard example is, almost\nidentical to, the piano example is almost",
+        "start": 3792.215,
+        "duration": 5.19
+    },
+    {
+        "text": "identical to typing on the keyboard.",
+        "start": 3797.425,
+        "duration": 1.35
+    },
+    {
+        "text": "It, to me, it has all the same.",
+        "start": 3799.025,
+        "duration": 1.12
+    },
+    {
+        "text": "Yeah, it's just a bit less.",
+        "start": 3800.415,
+        "duration": 1.62
+    },
+    {
+        "text": "model free, like we're less\npracticed at playing it than we are.",
+        "start": 3802.635,
+        "duration": 3.39
+    },
+    {
+        "text": "unless you're a piano player,\nthen it's not the case.",
+        "start": 3808.175,
+        "duration": 2.11
+    },
+    {
+        "text": "it always struck me as odd about,\nplaying piano, which I've done on and",
+        "start": 3811.675,
+        "duration": 5.59
+    },
+    {
+        "text": "off of it is, when you get good at it,\nYou, it's like, in language, a word,",
+        "start": 3817.325,
+        "duration": 9.43
+    },
+    {
+        "text": "we know, oh, I know a word, I know all\nthese words, a word's a word, and in,",
+        "start": 3826.755,
+        "duration": 5.33
+    },
+    {
+        "text": "on the piano, the structure that you\nlearn that's equivalent to a word is,",
+        "start": 3834.645,
+        "duration": 4.33
+    },
+    {
+        "text": "is, it's a little bit more flexible,\nthe better you get, you can see",
+        "start": 3841.005,
+        "duration": 5.16
+    },
+    {
+        "text": "Some sort of an entire bar of music\nthat has maybe some sort of there's",
+        "start": 3846.615,
+        "duration": 6.11
+    },
+    {
+        "text": "various riffs that you learn and\nand you see the whole thing at once.",
+        "start": 3852.725,
+        "duration": 3.75
+    },
+    {
+        "text": "So a really expert piano player\ncan just look at several bars",
+        "start": 3856.485,
+        "duration": 4.58
+    },
+    {
+        "text": "of music and recognize it as\nsomething and play it back.",
+        "start": 3861.065,
+        "duration": 3.49
+    },
+    {
+        "text": "they don't have to think about any of it.",
+        "start": 3864.915,
+        "duration": 1.03
+    },
+    {
+        "text": "They don't think about all these\nthousands of notes on the page.",
+        "start": 3866.005,
+        "duration": 2.18
+    },
+    {
+        "text": "They just look and see this\nwhole structure of like,",
+        "start": 3868.205,
+        "duration": 2.47
+    },
+    {
+        "text": "a very complicated word.",
+        "start": 3870.675,
+        "duration": 1.39
+    },
+    {
+        "text": "but it's not, but there's\nmany of them and you just.",
+        "start": 3873.425,
+        "duration": 3.24
+    },
+    {
+        "text": "I'm just saying it's very similar, but\nit's harder, because the word equivalents",
+        "start": 3877.43,
+        "duration": 3.98
+    },
+    {
+        "text": "you're learning are not well demarcated,\nYeah, I just thought it was interesting",
+        "start": 3881.41,
+        "duration": 6.0
+    },
+    {
+        "text": "to think through because it makes it\neasier for us to imagine like typing",
+        "start": 3887.44,
+        "duration": 4.22
+    },
+    {
+        "text": "a new word, like how you would play a\nnew melody or learn to play the piano.",
+        "start": 3891.66,
+        "duration": 5.7
+    },
+    {
+        "text": "It's a tedious process where you\nuse the model of the piano to figure",
+        "start": 3897.37,
+        "duration": 3.47
+    },
+    {
+        "text": "out where you need to press next.",
+        "start": 3900.84,
+        "duration": 1.54
+    },
+    {
+        "text": "And that's, I feel like, where we\nwant to start with the learning",
+        "start": 3902.955,
+        "duration": 3.03
+    },
+    {
+        "text": "module, to use the model to, go\nto the correct key and press it.",
+        "start": 3905.985,
+        "duration": 6.12
+    },
+    {
+        "text": "I think the piano is identical\nto the typing on the keyboard,",
+        "start": 3913.425,
+        "duration": 4.01
+    },
+    {
+        "text": "it's just more difficult.",
+        "start": 3917.435,
+        "duration": 0.96
+    },
+    {
+        "text": "that's how I view it.",
+        "start": 3920.295,
+        "duration": 0.68
+    },
+    {
+        "text": "I'm thinking about it right now,\nwalking it through, and it's",
+        "start": 3921.795,
+        "duration": 2.48
+    },
+    {
+        "text": "it's got all the same attributes.",
+        "start": 3924.585,
+        "duration": 1.18
+    },
+    {
+        "text": "Yeah.",
+        "start": 3927.13,
+        "duration": 0.29
+    },
+    {
+        "text": "That, yeah, that's why I'm\nbringing it up because yeah.",
+        "start": 3927.42,
+        "duration": 2.655
+    },
+    {
+        "text": "yeah.",
+        "start": 3936.245,
+        "duration": 0.54
+    },
+    {
+        "text": "Even",
+        "start": 3937.735,
+        "duration": 0.33
+    },
+    {
+        "text": "even if I was, if I gave you some new\nword you hadn't learned before, or",
+        "start": 3940.245,
+        "duration": 4.26
+    },
+    {
+        "text": "even, there's a lot of long words, so\nyou may not, have 'em all memorized.",
+        "start": 3944.505,
+        "duration": 5.13
+    },
+    {
+        "text": "It's a single sequence, and what you\ndo is you, just go through them in a",
+        "start": 3949.635,
+        "duration": 3.36
+    },
+    {
+        "text": "piecemeal, like a, syllable at a time,",
+        "start": 3952.995,
+        "duration": 2.13
+    },
+    {
+        "text": "and, music piano's just like that too.",
+        "start": 3959.065,
+        "duration": 1.89
+    },
+    {
+        "text": "Not a piano player myself, but\nlike the keyboard as a touch typer,",
+        "start": 3961.03,
+        "duration": 6.58
+    },
+    {
+        "text": "I locate that little nib, and I\nnever need to look at the keyboard.",
+        "start": 3968.14,
+        "duration": 3.4
+    },
+    {
+        "text": "I'm assuming as a piano player.",
+        "start": 3971.54,
+        "duration": 1.43
+    },
+    {
+        "text": "Because of the size of the keyboard and\nthe fact that you're moving your hands",
+        "start": 3974.525,
+        "duration": 3.01
+    },
+    {
+        "text": "freely you have to visually locate.",
+        "start": 3977.855,
+        "duration": 2.51
+    },
+    {
+        "text": "If you're, a beginner or intermediate\nplayer, the amount you have to look",
+        "start": 3981.595,
+        "duration": 4.42
+    },
+    {
+        "text": "keeps going down, the better you\nare, a real expert piano player does",
+        "start": 3986.305,
+        "duration": 4.07
+    },
+    {
+        "text": "not look at the keyboard at all.",
+        "start": 3990.375,
+        "duration": 1.02
+    },
+    {
+        "text": "Even when they make a large hand movement?",
+        "start": 3991.395,
+        "duration": 2.83
+    },
+    {
+        "text": "Even when they make a large hand movement.",
+        "start": 3994.905,
+        "duration": 1.14
+    },
+    {
+        "text": "You can just look at them.",
+        "start": 3996.245,
+        "duration": 1.11
+    },
+    {
+        "text": "They don't look at it.",
+        "start": 3997.365,
+        "duration": 0.84
+    },
+    {
+        "text": "If they had to look, it'd take too long.",
+        "start": 3998.965,
+        "duration": 1.81
+    },
+    {
+        "text": "They also have to be able\nto read the sheet music.",
+        "start": 4002.655,
+        "duration": 1.81
+    },
+    {
+        "text": "But they don't read every note.",
+        "start": 4005.555,
+        "duration": 1.23
+    },
+    {
+        "text": "That's my point.",
+        "start": 4006.825,
+        "duration": 0.65
+    },
+    {
+        "text": "They don't even read everything.",
+        "start": 4007.715,
+        "duration": 1.03
+    },
+    {
+        "text": "They don't have to look at the\nkeyboard while they're reading.",
+        "start": 4008.745,
+        "duration": 1.82
+    },
+    {
+        "text": "Piano players, the good ones, they\njust, unless there's something",
+        "start": 4012.935,
+        "duration": 3.29
+    },
+    {
+        "text": "odd, something unusual, different\nmovement that's typical, they",
+        "start": 4016.235,
+        "duration": 3.4
+    },
+    {
+        "text": "would never look at the keyboard.",
+        "start": 4019.635,
+        "duration": 1.12
+    },
+    {
+        "text": "That's quite, that's\nquite impressive from a,",
+        "start": 4021.125,
+        "duration": 2.51
+    },
+    {
+        "text": "Robotic manipulation precision,\nbecause you have to make",
+        "start": 4026.32,
+        "duration": 2.51
+    },
+    {
+        "text": "large moves with precision.",
+        "start": 4028.84,
+        "duration": 1.6
+    },
+    {
+        "text": "But I imagine for, even an expert\npiano player, it would be hard",
+        "start": 4033.67,
+        "duration": 5.01
+    },
+    {
+        "text": "to, have their fingers at central,\ncenter C or whatever, and just say,",
+        "start": 4038.69,
+        "duration": 4.86
+    },
+    {
+        "text": "okay, play, highest D or whatever.",
+        "start": 4044.1,
+        "duration": 3.42
+    },
+    {
+        "text": "And just go all the way over\nand press the exact right key.",
+        "start": 4047.88,
+        "duration": 3.44
+    },
+    {
+        "text": "It's more that you tend to evolve.",
+        "start": 4051.32,
+        "duration": 1.89
+    },
+    {
+        "text": "You walk up and down.",
+        "start": 4053.22,
+        "duration": 1.14
+    },
+    {
+        "text": "And so you're re anchored as you go along.",
+        "start": 4054.53,
+        "duration": 2.18
+    },
+    {
+        "text": "No, it's more it's like saying, the\nequivalent there is saying, if I ask",
+        "start": 4056.87,
+        "duration": 4.81
+    },
+    {
+        "text": "you to type random letters, you've\ngot to think about them, right?",
+        "start": 4061.69,
+        "duration": 2.89
+    },
+    {
+        "text": "Or I find the numbers at the\ntop of the keyboard hard.",
+        "start": 4065.7,
+        "duration": 3.12
+    },
+    {
+        "text": "But I know the arrangement, I generally,\nI can't type those as proficiently",
+        "start": 4068.82,
+        "duration": 5.39
+    },
+    {
+        "text": "as I can the normal letters.",
+        "start": 4074.21,
+        "duration": 1.47
+    },
+    {
+        "text": "Because they're bigger movements.",
+        "start": 4075.68,
+        "duration": 0.84
+    },
+    {
+        "text": "I would argue it's bigger distance,\nand it's also, I would argue,",
+        "start": 4079.38,
+        "duration": 3.61
+    },
+    {
+        "text": "how often you have to type them.",
+        "start": 4084.28,
+        "duration": 1.62
+    },
+    {
+        "text": "for example, some of my passwords\nhave numbers in them, and when",
+        "start": 4088.56,
+        "duration": 4.01
+    },
+    {
+        "text": "I type those numbers, I do it, I\ncan often do it without looking.",
+        "start": 4092.57,
+        "duration": 4.34
+    },
+    {
+        "text": "Because you tape it every day.",
+        "start": 4098.87,
+        "duration": 1.24
+    },
+    {
+        "text": "Yeah, I tape it every day.",
+        "start": 4100.2,
+        "duration": 1.16
+    },
+    {
+        "text": "So I, think, Michael, you bring up\na good point, there's a, it's, a",
+        "start": 4101.4,
+        "duration": 3.76
+    },
+    {
+        "text": "physically impressive feat that a,\nan expert piano player can move their",
+        "start": 4105.16,
+        "duration": 4.08
+    },
+    {
+        "text": "hand two feet in, leaning across\nthe keyboard and land on the right",
+        "start": 4109.24,
+        "duration": 4.46
+    },
+    {
+        "text": "key with the right finger, right?",
+        "start": 4113.7,
+        "duration": 1.46
+    },
+    {
+        "text": "Because you're having to use all those.",
+        "start": 4115.16,
+        "duration": 1.77
+    },
+    {
+        "text": "I forget.",
+        "start": 4117.47,
+        "duration": 0.44
+    },
+    {
+        "text": "All the inner body senses to get you.",
+        "start": 4118.22,
+        "duration": 2.57
+    },
+    {
+        "text": "It's it there.",
+        "start": 4121.65,
+        "duration": 0.88
+    },
+    {
+        "text": "It's just your body's been\ntuned to do this very precisely.",
+        "start": 4122.59,
+        "duration": 3.05
+    },
+    {
+        "text": "It's like an athlete, right?",
+        "start": 4125.64,
+        "duration": 0.97
+    },
+    {
+        "text": "An athlete has to do very\nprecise movements to achieve.",
+        "start": 4126.61,
+        "duration": 4.02
+    },
+    {
+        "text": "performance, whether you're playing,\ntable tennis or something like that,",
+        "start": 4131.49,
+        "duration": 2.84
+    },
+    {
+        "text": "very, precise movements very quickly.",
+        "start": 4135.08,
+        "duration": 1.63
+    },
+    {
+        "text": "Yeah, I think in this case.",
+        "start": 4137.03,
+        "duration": 1.1
+    },
+    {
+        "text": "I like this idea of the long stretch\nout to hit a key that's far off.",
+        "start": 4140.15,
+        "duration": 5.45
+    },
+    {
+        "text": "I think most pros are going to\nlook to some extent, a quick glance",
+        "start": 4145.65,
+        "duration": 5.31
+    },
+    {
+        "text": "if they're going a long ways.",
+        "start": 4151.0,
+        "duration": 1.34
+    },
+    {
+        "text": "And it does seem like this could be\npart of just the physical restrictions",
+        "start": 4153.13,
+        "duration": 3.9
+    },
+    {
+        "text": "of if we're talking grid cells.",
+        "start": 4157.05,
+        "duration": 2.5
+    },
+    {
+        "text": "Grid cells have a certain, different\nmodules have different degrees of",
+        "start": 4159.985,
+        "duration": 4.26
+    },
+    {
+        "text": "granularity, and when I'm here, I'm\njust dedicating a lot of the most",
+        "start": 4164.245,
+        "duration": 4.38
+    },
+    {
+        "text": "granular grid cell modules to the\nsmaller area, but the stuff out",
+        "start": 4168.625,
+        "duration": 3.68
+    },
+    {
+        "text": "here, it's like, it's just coarser in\nterms of the spatial representation.",
+        "start": 4172.305,
+        "duration": 4.78
+    },
+    {
+        "text": "Yeah, and also, the path integration\ngets noisy and you, your proper reception",
+        "start": 4178.56,
+        "duration": 6.33
+    },
+    {
+        "text": "is just not that exact that you could\ntell, if I'm moving my hand through space",
+        "start": 4184.89,
+        "duration": 4.95
+    },
+    {
+        "text": "without feeling anything in between except\nfor how my muscles are, contracting, it's",
+        "start": 4189.84,
+        "duration": 6.85
+    },
+    {
+        "text": "really hard to do that, precise enough.",
+        "start": 4196.7,
+        "duration": 3.38
+    },
+    {
+        "text": "So let's, go back, from Monty's point\nof view, This is the problem we don't",
+        "start": 4200.45,
+        "duration": 3.995
+    },
+    {
+        "text": "have to solve because, we're not\nbuilding these things out of, muscles",
+        "start": 4204.445,
+        "duration": 4.8
+    },
+    {
+        "text": "and bones and tendons and stuff.",
+        "start": 4209.805,
+        "duration": 1.75
+    },
+    {
+        "text": "we can assume, I think we can assume\nthat if we can locate something in",
+        "start": 4213.055,
+        "duration": 3.9
+    },
+    {
+        "text": "space, a location in space, that we can\naccurately and quickly move an appendage.",
+        "start": 4216.955,
+        "duration": 4.98
+    },
+    {
+        "text": "to that location, I don't think we\nhave to worry about like how piano",
+        "start": 4224.54,
+        "duration": 3.04
+    },
+    {
+        "text": "players move their hands so far.",
+        "start": 4227.58,
+        "duration": 1.51
+    },
+    {
+        "text": "Which is like you're moving a robot with\nhigh quality sensors and reproducibility.",
+        "start": 4231.58,
+        "duration": 5.38
+    },
+    {
+        "text": "Cause I, that, that, is almost\ncertainly subcortical in in a brain.",
+        "start": 4237.01,
+        "duration": 6.35
+    },
+    {
+        "text": "It's probably involving the\ncerebellum more than anything.",
+        "start": 4243.37,
+        "duration": 2.67
+    },
+    {
+        "text": "but it's not cortical.",
+        "start": 4247.79,
+        "duration": 1.31
+    },
+    {
+        "text": "The cortex doesn't do\nanything precise, right?",
+        "start": 4249.11,
+        "duration": 3.02
+    },
+    {
+        "text": "so I think we can avoid that problem.",
+        "start": 4253.475,
+        "duration": 2.5
+    },
+    {
+        "text": "We can marvel that human ability,\nbut we can avoid that problem here.",
+        "start": 4255.985,
+        "duration": 4.52
+    },
+    {
+        "text": "we can just assume that if I can give\nyou the location, we can accurately",
+        "start": 4262.305,
+        "duration": 4.04
+    },
+    {
+        "text": "move something to that location somehow.",
+        "start": 4266.665,
+        "duration": 3.42
+    },
+    {
+        "text": "What were you saying, Hojae?",
+        "start": 4279.285,
+        "duration": 0.86
+    },
+    {
+        "text": "yeah, I just said, I just wanted to\nask you, Niels, if you wanted to say",
+        "start": 4281.87,
+        "duration": 4.93
+    },
+    {
+        "text": "something about the motor system, 20\nminutes ago, you mentioned something.",
+        "start": 4286.8,
+        "duration": 5.03
+    },
+    {
+        "text": "yeah, that's right.",
+        "start": 4292.02,
+        "duration": 0.8
+    },
+    {
+        "text": "Yeah, just because you\nbrought it up in the document.",
+        "start": 4293.54,
+        "duration": 1.66
+    },
+    {
+        "text": "I just thought I'd mention,\nyeah, that, what kind of the open",
+        "start": 4295.44,
+        "duration": 5.08
+    },
+    {
+        "text": "questions were and, what we briefly\ndiscussed, which was, yeah, just how,",
+        "start": 4300.61,
+        "duration": 3.11
+    },
+    {
+        "text": "yeah, I guess the kind of key anatomy\nor whatever to recap is that, every.",
+        "start": 4307.01,
+        "duration": 4.98
+    },
+    {
+        "text": "Cortical column, and therefore every\nlearning module has direct motor outputs,",
+        "start": 4312.355,
+        "duration": 3.47
+    },
+    {
+        "text": "but those are in some sense going\nto be like potentially primitive, or",
+        "start": 4317.475,
+        "duration": 3.94
+    },
+    {
+        "text": "that's of course like going to recruit\nwhatever kind of, that's connected to,",
+        "start": 4323.675,
+        "duration": 3.3
+    },
+    {
+        "text": "and then I guess the, other way to do some\npolicy is the kind of goal state, which",
+        "start": 4327.675,
+        "duration": 5.22
+    },
+    {
+        "text": "is probably like L6 top down feedback,\ngoing to, to other learning modules.",
+        "start": 4332.895,
+        "duration": 5.29
+    },
+    {
+        "text": "and that's potentially recruiting motor\ncortex learning modules, for example.",
+        "start": 4339.78,
+        "duration": 5.56
+    },
+    {
+        "text": "And then those, learning modules,\nor sorry, cortical columns and motor",
+        "start": 4345.34,
+        "duration": 3.83
+    },
+    {
+        "text": "cortex would be modeling rather\nthan external objects in the world,",
+        "start": 4349.5,
+        "duration": 3.71
+    },
+    {
+        "text": "like objects of the body, like the\nstructure of the hand, the structure",
+        "start": 4353.86,
+        "duration": 3.52
+    },
+    {
+        "text": "of the arm, and things like that.",
+        "start": 4357.38,
+        "duration": 1.77
+    },
+    {
+        "text": "that's of course a very like high level,",
+        "start": 4361.25,
+        "duration": 2.24
+    },
+    {
+        "text": "Description.",
+        "start": 4365.525,
+        "duration": 0.47
+    },
+    {
+        "text": "But yeah, anyways, it's yeah, that's\nsomething we've talked about, but",
+        "start": 4365.995,
+        "duration": 5.05
+    },
+    {
+        "text": "then how exactly you coordinate\nit is gets to the difficulties",
+        "start": 4371.045,
+        "duration": 4.18
+    },
+    {
+        "text": "we've been talking about today.",
+        "start": 4375.225,
+        "duration": 2.27
+    },
+    {
+        "text": "yeah, okay, you've projected that\ngoal state of I want pressure here.",
+        "start": 4380.165,
+        "duration": 3.43
+    },
+    {
+        "text": "personally, there's the question\nof okay, how do we know which",
+        "start": 4385.505,
+        "duration": 2.034
+    },
+    {
+        "text": "learning module answers it?",
+        "start": 4387.539,
+        "duration": 1.046
+    },
+    {
+        "text": "But then if it's",
+        "start": 4389.345,
+        "duration": 0.61
+    },
+    {
+        "text": "some really complex movement where\nit's okay, you need to wrap your arms",
+        "start": 4392.005,
+        "duration": 3.26
+    },
+    {
+        "text": "around something and you need to press\nsomewhere or, something like that.",
+        "start": 4395.265,
+        "duration": 3.66
+    },
+    {
+        "text": "Like how, did all of them get coordinated\nand, but I was thinking maybe one",
+        "start": 4399.265,
+        "duration": 8.26
+    },
+    {
+        "text": "example that I think could be useful\nis just like grasping objects, which,",
+        "start": 4407.525,
+        "duration": 5.61
+    },
+    {
+        "text": "like we were talking about last time,\nhow like for infants to learn to do",
+        "start": 4414.7,
+        "duration": 2.82
+    },
+    {
+        "text": "just like the pincer grasp takes a while\nor whatever, but let's say you were",
+        "start": 4417.54,
+        "duration": 3.57
+    },
+    {
+        "text": "given some like really weird object.",
+        "start": 4421.11,
+        "duration": 2.3
+    },
+    {
+        "text": "Oh, actually, I've got the perfect.",
+        "start": 4423.45,
+        "duration": 1.44
+    },
+    {
+        "text": "a piece of coral, so now you\nwant to grasp this or whatever.",
+        "start": 4428.875,
+        "duration": 4.04
+    },
+    {
+        "text": "okay.",
+        "start": 4433.225,
+        "duration": 0.39
+    },
+    {
+        "text": "I have a lot of subcortical policies\nso that I can leverage to a certain",
+        "start": 4434.605,
+        "duration": 4.03
+    },
+    {
+        "text": "degree, but let's say I was younger,\nI'm still developing that or whatever.",
+        "start": 4438.635,
+        "duration": 3.03
+    },
+    {
+        "text": "Like it feels like to a certain\ndegree, like as long as we're doing it",
+        "start": 4442.575,
+        "duration": 3.07
+    },
+    {
+        "text": "sequentially simplifies the problem a\nlittle bit that it could be like, okay,",
+        "start": 4445.655,
+        "duration": 4.11
+    },
+    {
+        "text": "you put one finger, another finger.",
+        "start": 4449.765,
+        "duration": 2.81
+    },
+    {
+        "text": "We still need to learn the kind of cause\neffect thing that Scott was bringing up.",
+        "start": 4452.955,
+        "duration": 2.81
+    },
+    {
+        "text": "Like, how do we understand that?",
+        "start": 4455.765,
+        "duration": 1.24
+    },
+    {
+        "text": "Pressure is needed to grasp, or\nlike this will now enable us to",
+        "start": 4457.385,
+        "duration": 4.32
+    },
+    {
+        "text": "manipulate it and things like that.",
+        "start": 4461.705,
+        "duration": 1.23
+    },
+    {
+        "text": "but yeah, so that could be model based\ndirected that okay, there's a location in",
+        "start": 4464.365,
+        "duration": 3.87
+    },
+    {
+        "text": "space, but some finger needs to be there.",
+        "start": 4468.235,
+        "duration": 2.28
+    },
+    {
+        "text": "And then maybe, the model for the fingers,\nthe direct motor output, what that could",
+        "start": 4471.105,
+        "duration": 5.51
+    },
+    {
+        "text": "help with in this case is as I touch it,\nI might feel that oh, okay, this finger",
+        "start": 4476.615,
+        "duration": 4.89
+    },
+    {
+        "text": "doesn't really have very good contact.",
+        "start": 4481.505,
+        "duration": 1.7
+    },
+    {
+        "text": "And that finger might then decide,\nokay, I'm going to readjust",
+        "start": 4483.915,
+        "duration": 2.53
+    },
+    {
+        "text": "to get a, better, like better\npressure or something like that.",
+        "start": 4486.455,
+        "duration": 3.42
+    },
+    {
+        "text": "and so it might be like a mixture of\ngetting your fingers basically into",
+        "start": 4491.845,
+        "duration": 3.67
+    },
+    {
+        "text": "the course correct position is what\nthe, like sequential planning does.",
+        "start": 4495.515,
+        "duration": 5.3
+    },
+    {
+        "text": "But then, then there's a\ndegree of like direct motor",
+        "start": 4501.295,
+        "duration": 3.53
+    },
+    {
+        "text": "output that helps you readjust.",
+        "start": 4504.825,
+        "duration": 1.2
+    },
+    {
+        "text": "And then I guess then the final thing\nis if you do that a lot, if I had,",
+        "start": 4506.515,
+        "duration": 2.95
+    },
+    {
+        "text": "for whatever reason, I wanted to pick\nthis up every day, And that's where",
+        "start": 4509.625,
+        "duration": 3.365
+    },
+    {
+        "text": "it becomes more model free, whether\nthat's cortical or subcortical, and",
+        "start": 4512.99,
+        "duration": 3.43
+    },
+    {
+        "text": "you just your hands naturally form to\nthat thing in parallel without having",
+        "start": 4516.43,
+        "duration": 4.71
+    },
+    {
+        "text": "to think about it finger by finger.",
+        "start": 4521.14,
+        "duration": 2.06
+    },
+    {
+        "text": "that's a perfect example, that coral\nis a perfect example of something",
+        "start": 4524.54,
+        "duration": 3.7
+    },
+    {
+        "text": "that's so novel that you don't even\nknow how to begin interacting with",
+        "start": 4528.25,
+        "duration": 5.96
+    },
+    {
+        "text": "it, you have to think about it very\ncarefully, like, where am I going",
+        "start": 4534.21,
+        "duration": 2.99
+    },
+    {
+        "text": "to put my fingers, to pick this up?",
+        "start": 4537.2,
+        "duration": 2.76
+    },
+    {
+        "text": "That's exactly how it is when\nI try and play piano because I",
+        "start": 4541.16,
+        "duration": 2.05
+    },
+    {
+        "text": "never was good at playing piano.",
+        "start": 4543.7,
+        "duration": 1.5
+    },
+    {
+        "text": "So I have to do like finger by finger.",
+        "start": 4545.2,
+        "duration": 2.17
+    },
+    {
+        "text": "Okay.",
+        "start": 4547.97,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah I think this is everything.",
+        "start": 4549.72,
+        "duration": 2.39
+    },
+    {
+        "text": "This is way typing is too, right?",
+        "start": 4552.14,
+        "duration": 1.5
+    },
+    {
+        "text": "so it's, really, I think this\nwe're getting at some really core",
+        "start": 4554.55,
+        "duration": 3.34
+    },
+    {
+        "text": "ideas here that You've got, we have\nnovel ways of expressing behaviors",
+        "start": 4557.89,
+        "duration": 5.35
+    },
+    {
+        "text": "that require a lot of attention.",
+        "start": 4563.24,
+        "duration": 1.58
+    },
+    {
+        "text": "We have to decompose it thoroughly\ninto, one step at a time, and then",
+        "start": 4565.6,
+        "duration": 4.93
+    },
+    {
+        "text": "we're able to combine them quickly.",
+        "start": 4570.53,
+        "duration": 2.94
+    },
+    {
+        "text": "I want to go back to this idea.",
+        "start": 4573.64,
+        "duration": 1.26
+    },
+    {
+        "text": "I'm just stating it so\nI don't forget it, okay?",
+        "start": 4574.94,
+        "duration": 2.07
+    },
+    {
+        "text": "So just bear with me.",
+        "start": 4577.04,
+        "duration": 1.66
+    },
+    {
+        "text": "This idea that what we have to pass\ndown the hierarchy is both this specific",
+        "start": 4579.24,
+        "duration": 3.69
+    },
+    {
+        "text": "thing that we want to achieve, and\nthen And the overall goal, because,",
+        "start": 4582.94,
+        "duration": 4.445
+    },
+    {
+        "text": "you need the overall goals, the\nsubcortical, the next region down, not",
+        "start": 4587.385,
+        "duration": 3.75
+    },
+    {
+        "text": "subcortical, the next region down can\nactually associate, learn a sequence",
+        "start": 4591.135,
+        "duration": 4.7
+    },
+    {
+        "text": "of individual elements as, one thing.",
+        "start": 4595.845,
+        "duration": 3.81
+    },
+    {
+        "text": "it wouldn't be, it's not sufficient\nto pass letter to letter.",
+        "start": 4601.155,
+        "duration": 2.38
+    },
+    {
+        "text": "I also have to pass down.",
+        "start": 4603.835,
+        "duration": 1.225
+    },
+    {
+        "text": "We're trying to implement this\nword meaning just some SDR.",
+        "start": 4605.29,
+        "duration": 2.62
+    },
+    {
+        "text": "It doesn't mean anything.",
+        "start": 4607.91,
+        "duration": 0.88
+    },
+    {
+        "text": "It's just an SDR.",
+        "start": 4608.79,
+        "duration": 0.77
+    },
+    {
+        "text": "This is the overall\nrepresentation of the thing.",
+        "start": 4609.58,
+        "duration": 2.55
+    },
+    {
+        "text": "It's just like the object ID, the goal\nID, and then here's the individual",
+        "start": 4612.13,
+        "duration": 4.56
+    },
+    {
+        "text": "elements in sequence, so that, so that\nthe lower region can now say, okay, I",
+        "start": 4616.7,
+        "duration": 5.96
+    },
+    {
+        "text": "can handle the whole sequence my own.",
+        "start": 4622.66,
+        "duration": 1.47
+    },
+    {
+        "text": "I don't, I'll just take care\nof the whole thing, so you",
+        "start": 4624.18,
+        "duration": 3.91
+    },
+    {
+        "text": "don't have to think about it.",
+        "start": 4628.09,
+        "duration": 1.14
+    },
+    {
+        "text": "That's what we do when we type,\nthat's what we do when we key.",
+        "start": 4629.625,
+        "duration": 1.89
+    },
+    {
+        "text": "Isn't that passing, I felt the\nsequence learning happens at, within",
+        "start": 4631.545,
+        "duration": 4.84
+    },
+    {
+        "text": "one thing, because otherwise we're\npassing, two levels of object.",
+        "start": 4636.385,
+        "duration": 4.96
+    },
+    {
+        "text": "We're passing, a feature and an object.",
+        "start": 4641.345,
+        "duration": 1.75
+    },
+    {
+        "text": "I, we are, because I'm, that's my\nobservation, because otherwise, how would",
+        "start": 4644.365,
+        "duration": 4.21
+    },
+    {
+        "text": "I, if I learn a sequence, let's say I, the\nsequence is A, B, C, D, okay, or Numenta,",
+        "start": 4648.575,
+        "duration": 8.38
+    },
+    {
+        "text": "whatever you are, the word Numenta.",
+        "start": 4656.985,
+        "duration": 1.12
+    },
+    {
+        "text": "I want, in the beginning, the word\nmodel has to say an N, then a U, then",
+        "start": 4660.71,
+        "duration": 5.82
+    },
+    {
+        "text": "an M, and an E, and a T, and so on.",
+        "start": 4666.53,
+        "duration": 2.44
+    },
+    {
+        "text": "But I, ultimately, I want the, lower\nmodel to do the whole thing on its own.",
+        "start": 4669.64,
+        "duration": 4.69
+    },
+    {
+        "text": "But I can't know what that is,\njust, if I say type an N, it doesn't",
+        "start": 4674.77,
+        "duration": 4.05
+    },
+    {
+        "text": "know that's the word Numenta.",
+        "start": 4678.82,
+        "duration": 1.38
+    },
+    {
+        "text": "It doesn't know anything.",
+        "start": 4680.94,
+        "duration": 0.8
+    },
+    {
+        "text": "And so I have to also tell it, hey, by the\nway, in the context of this, is this SDR?",
+        "start": 4681.74,
+        "duration": 4.75
+    },
+    {
+        "text": "don't, you don't worry about what\nit is, but the context is this SDR,",
+        "start": 4687.945,
+        "duration": 3.27
+    },
+    {
+        "text": "we'll say it's the word Numenta,\nbut I'm going to pass you down",
+        "start": 4691.215,
+        "duration": 3.32
+    },
+    {
+        "text": "the individual elements for it.",
+        "start": 4694.545,
+        "duration": 1.28
+    },
+    {
+        "text": "Already doing with the\nfeedback connections, right?",
+        "start": 4698.685,
+        "duration": 2.89
+    },
+    {
+        "text": "we were thinking of them before in\nterms of object recognition that the",
+        "start": 4702.365,
+        "duration": 3.43
+    },
+    {
+        "text": "higher level module passes down if\nthe object it is sensing, like, all",
+        "start": 4705.795,
+        "duration": 4.43
+    },
+    {
+        "text": "right, the word Numenta and then a\nlower level module can use that as",
+        "start": 4710.505,
+        "duration": 3.98
+    },
+    {
+        "text": "context for the letters it's sensing.",
+        "start": 4714.485,
+        "duration": 3.73
+    },
+    {
+        "text": "But it would fit perfectly with this since\nwe're passing the high level object, but",
+        "start": 4718.565,
+        "duration": 5.39
+    },
+    {
+        "text": "also the goal states for the individual\ncomponents of it, the sequence of letters.",
+        "start": 4723.965,
+        "duration": 5.41
+    },
+    {
+        "text": "Yeah, you mean, it's like the\ninformation that goes to L1 versus",
+        "start": 4730.44,
+        "duration": 3.33
+    },
+    {
+        "text": "the location L6 on the site.",
+        "start": 4733.77,
+        "duration": 1.97
+    },
+    {
+        "text": "exactly.",
+        "start": 4737.99,
+        "duration": 0.54
+    },
+    {
+        "text": "Oh, there it is, L6 and L1.",
+        "start": 4738.53,
+        "duration": 1.75
+    },
+    {
+        "text": "Wow.",
+        "start": 4740.28,
+        "duration": 0.23
+    },
+    {
+        "text": "Yeah, so we did.",
+        "start": 4740.84,
+        "duration": 0.95
+    },
+    {
+        "text": "Okay.",
+        "start": 4742.68,
+        "duration": 0.17
+    },
+    {
+        "text": "Nice.",
+        "start": 4743.99,
+        "duration": 0.43
+    },
+    {
+        "text": "it's, yes, it just, it has to do that.",
+        "start": 4746.35,
+        "duration": 3.195
+    },
+    {
+        "text": "and, sometimes if you don't do\nsomething over and over again, it's not",
+        "start": 4751.655,
+        "duration": 2.48
+    },
+    {
+        "text": "going to be able to learn it, right?",
+        "start": 4754.135,
+        "duration": 1.33
+    },
+    {
+        "text": "But if you do something over\nand over again, it's okay.",
+        "start": 4755.525,
+        "duration": 2.85
+    },
+    {
+        "text": "I've seen this pattern before.",
+        "start": 4758.445,
+        "duration": 1.23
+    },
+    {
+        "text": "I'll learn it.",
+        "start": 4761.745,
+        "duration": 0.61
+    },
+    {
+        "text": "to avoid all the complicated motor\nstuff, could you just make a simplified",
+        "start": 4766.145,
+        "duration": 5.67
+    },
+    {
+        "text": "keyboard and keyboard controller where,\nyou have like the notion of a finger and",
+        "start": 4772.325,
+        "duration": 5.71
+    },
+    {
+        "text": "a finger can reach a certain set of keys?",
+        "start": 4778.035,
+        "duration": 3.07
+    },
+    {
+        "text": "And so you still have a system with a\nbunch of constraints, but the higher",
+        "start": 4781.625,
+        "duration": 3.13
+    },
+    {
+        "text": "level part has to figure out, okay,\nto get a U, I have to activate the",
+        "start": 4784.755,
+        "duration": 4.5
+    },
+    {
+        "text": "left index finger to position three.",
+        "start": 4789.735,
+        "duration": 2.42
+    },
+    {
+        "text": "I think that's the way I've\nbeen thinking about it, Michael.",
+        "start": 4793.355,
+        "duration": 1.96
+    },
+    {
+        "text": "In my mind, we talked about, we\nused this example of the keyboard.",
+        "start": 4796.025,
+        "duration": 3.14
+    },
+    {
+        "text": "I'm not Thinking we physically\ndo a keyboard like this.",
+        "start": 4799.605,
+        "duration": 2.245
+    },
+    {
+        "text": "I'm thinking it's just a\nplaceholder to think about concepts.",
+        "start": 4801.89,
+        "duration": 2.73
+    },
+    {
+        "text": "yeah, so I, in my mind, I was already\nthinking this is some abstract object,",
+        "start": 4806.83,
+        "duration": 4.19
+    },
+    {
+        "text": "which has got features at locations.",
+        "start": 4811.04,
+        "duration": 1.52
+    },
+    {
+        "text": "We can call that a keyboard\nthat helps to think about it.",
+        "start": 4812.56,
+        "duration": 2.55
+    },
+    {
+        "text": "And then we have some actuator.",
+        "start": 4815.43,
+        "duration": 1.83
+    },
+    {
+        "text": "Which can move to different locations,\nthat it's been told to move to,",
+        "start": 4817.56,
+        "duration": 4.66
+    },
+    {
+        "text": "and we can call that a finger.",
+        "start": 4822.45,
+        "duration": 1.35
+    },
+    {
+        "text": "Okay.",
+        "start": 4825.33,
+        "duration": 0.24
+    },
+    {
+        "text": "Yeah, but it's not like we're really\nbuilding a keyboard and a finger.",
+        "start": 4826.4,
+        "duration": 3.43
+    },
+    {
+        "text": "These are placeholders that\ndescribe concepts in my mind.",
+        "start": 4830.57,
+        "duration": 3.38
+    }
+]

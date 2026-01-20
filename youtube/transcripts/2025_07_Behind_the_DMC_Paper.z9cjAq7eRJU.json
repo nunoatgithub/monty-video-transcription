@@ -1,0 +1,577 @@
+[
+    {
+        "text": "I just thought it would be nice given\nthat this was, a huge effort to get this",
+        "start": 8.597,
+        "duration": 6.36
+    },
+    {
+        "text": "out to just kinda revisit because, yeah,\nit, it's definitely been a big, milestone",
+        "start": 14.957,
+        "duration": 6.69
+    },
+    {
+        "text": "and, it's ended up being a, big project\nthat we worked on for a long time.",
+        "start": 21.647,
+        "duration": 4.05
+    },
+    {
+        "text": "But I think also, everyone's really\nproud of, what we've put together",
+        "start": 25.697,
+        "duration": 4.17
+    },
+    {
+        "text": "and rightly because yeah, our\nambitions grew as, this unfolded.",
+        "start": 30.287,
+        "duration": 6.39
+    },
+    {
+        "text": "and the original kind\nof motivation was to.",
+        "start": 38.147,
+        "duration": 2.46
+    },
+    {
+        "text": "Essentially establish Monte these\ncapabilities, show that to the community",
+        "start": 41.057,
+        "duration": 3.84
+    },
+    {
+        "text": "and kind of communi communicate that\nto others and what the current state of",
+        "start": 44.897,
+        "duration": 4.35
+    },
+    {
+        "text": "the art of a thousand brain system is.",
+        "start": 49.247,
+        "duration": 2.22
+    },
+    {
+        "text": "and of course there's a variety\nof reasons, would want to do that.",
+        "start": 52.727,
+        "duration": 2.97
+    },
+    {
+        "text": "But amongst other things, one of the\nmain kind of aims of the TBP is to",
+        "start": 55.697,
+        "duration": 5.22
+    },
+    {
+        "text": "get people excited about and using, a\nthousand brain systems in this approach.",
+        "start": 60.917,
+        "duration": 4.77
+    },
+    {
+        "text": "And of course, showing what it's\nactually capable of is a big part of",
+        "start": 65.687,
+        "duration": 3.51
+    },
+    {
+        "text": "that, especially the academic community.",
+        "start": 69.197,
+        "duration": 2.16
+    },
+    {
+        "text": "but along the way, I think it\nwas just surprising how many",
+        "start": 73.067,
+        "duration": 3.54
+    },
+    {
+        "text": "kind of new things that came out.",
+        "start": 76.637,
+        "duration": 2.31
+    },
+    {
+        "text": "So new metrics, new understandings of\nwhat Monty's kind of actually capable of,",
+        "start": 78.947,
+        "duration": 3.84
+    },
+    {
+        "text": "that we hadn't act, really conceptualized\nwhen we kinda first decided to write this.",
+        "start": 83.597,
+        "duration": 4.11
+    },
+    {
+        "text": "and also just lots of kind of\nfixes and general improvements",
+        "start": 88.397,
+        "duration": 2.7
+    },
+    {
+        "text": "to, Monty's implementation.",
+        "start": 91.097,
+        "duration": 2.31
+    },
+    {
+        "text": "And, many of those were\ndefinitely not, trivial.",
+        "start": 93.887,
+        "duration": 1.975
+    },
+    {
+        "text": "and so it's, been a huge team effort,\neveryone at The Thousand Brains Project.",
+        "start": 98.207,
+        "duration": 3.81
+    },
+    {
+        "text": "And also, like I said, on Wednesday,\na lot of the groundwork for this even",
+        "start": 102.017,
+        "duration": 2.91
+    },
+    {
+        "text": "started at Menta, as been saying,\nalthough we've been working on the DMC",
+        "start": 104.927,
+        "duration": 5.67
+    },
+    {
+        "text": "paper for maybe eight months, really\nthis started more than three years",
+        "start": 110.597,
+        "duration": 4.35
+    },
+    {
+        "text": "ago, with the actual kind of, initial\nwork on the thousand, on, kinda Monty.",
+        "start": 114.947,
+        "duration": 5.85
+    },
+    {
+        "text": "but, definitely special shout out to\nScott and Hojae for the, huge amount",
+        "start": 121.877,
+        "duration": 5.1
+    },
+    {
+        "text": "of effort they've put into this.",
+        "start": 126.977,
+        "duration": 1.08
+    },
+    {
+        "text": "I think when you guys joined, the\nidea was this was gonna be like a two,",
+        "start": 128.627,
+        "duration": 3.42
+    },
+    {
+        "text": "maybe three month project that would\nbe a nice way of getting to familiar",
+        "start": 132.347,
+        "duration": 4.92
+    },
+    {
+        "text": "with Monty's, experiments and how\nto run those and things like that.",
+        "start": 137.267,
+        "duration": 3.15
+    },
+    {
+        "text": "And, thank you for, all\nthe effort you've put in.",
+        "start": 140.417,
+        "duration": 5.85
+    },
+    {
+        "text": "despite it being a actually a much\nbigger, project we ended up doing.",
+        "start": 146.837,
+        "duration": 4.05
+    },
+    {
+        "text": "and so yeah, To rewind back to when we\nkinda started on this, what we had at the",
+        "start": 153.527,
+        "duration": 4.92
+    },
+    {
+        "text": "time was, of course, Monty, certainly a\nsimilar version to what we have now, but,",
+        "start": 158.447,
+        "duration": 5.67
+    },
+    {
+        "text": "but with some, as I said, bugs and things\nlike that, that we'd later discover.",
+        "start": 164.357,
+        "duration": 3.72
+    },
+    {
+        "text": "And we had some benchmarks gauging\napproximately things like accuracy,",
+        "start": 168.377,
+        "duration": 3.93
+    },
+    {
+        "text": "in the context of certain amounts\nof noise and things like that.",
+        "start": 173.057,
+        "duration": 2.16
+    },
+    {
+        "text": "And we had some, visualizations,\nbut nothing particularly, glamorous.",
+        "start": 175.397,
+        "duration": 4.68
+    },
+    {
+        "text": "and so when we were doing initial scoping\nwork, I said it started, fairly simple,",
+        "start": 181.877,
+        "duration": 5.19
+    },
+    {
+        "text": "but then eventually grew, quite a bit\nambition, and I'm not gonna spend a long",
+        "start": 187.067,
+        "duration": 5.435
+    },
+    {
+        "text": "time on it, but just to put into a bit of\ncontext, of the amount of work that went",
+        "start": 192.617,
+        "duration": 3.96
+    },
+    {
+        "text": "into, some of these figures, we had these\nalii draw boards where this is just a",
+        "start": 196.577,
+        "duration": 4.89
+    },
+    {
+        "text": "version three where you can see there's,\na huge amount of, variations and comments",
+        "start": 201.467,
+        "duration": 5.61
+    },
+    {
+        "text": "and all this kind of stuff, going on.",
+        "start": 207.077,
+        "duration": 2.22
+    },
+    {
+        "text": "and this was version four.",
+        "start": 210.647,
+        "duration": 1.35
+    },
+    {
+        "text": "And, I think it went all\nthe way up to, version five.",
+        "start": 212.057,
+        "duration": 3.42
+    },
+    {
+        "text": "but we, what we ended up with\nwas these six, I think, really",
+        "start": 216.947,
+        "duration": 4.41
+    },
+    {
+        "text": "beautiful, results figures that do a\nreally nice job of just showing how",
+        "start": 221.357,
+        "duration": 5.25
+    },
+    {
+        "text": "diverse Monty's capabilities are.",
+        "start": 226.607,
+        "duration": 2.01
+    },
+    {
+        "text": "and that's, I think what's so exciting\nabout this is that any one of these",
+        "start": 229.277,
+        "duration": 3.84
+    },
+    {
+        "text": "would be an impressive result.",
+        "start": 233.117,
+        "duration": 1.95
+    },
+    {
+        "text": "but the fact that all of these\ncapabilities fall out almost automatically",
+        "start": 236.027,
+        "duration": 4.56
+    },
+    {
+        "text": "from developing sensorimotor ai, informed\nby the cortex is, pretty exciting.",
+        "start": 240.737,
+        "duration": 6.03
+    },
+    {
+        "text": "And I, a pretty, it feels like a\npretty strong, kinda signal that, what",
+        "start": 246.767,
+        "duration": 5.55
+    },
+    {
+        "text": "we're doing is on the right track.",
+        "start": 252.317,
+        "duration": 1.14
+    },
+    {
+        "text": "and, along the way, this resulted in two,\nnew repositories, which, are providing",
+        "start": 256.697,
+        "duration": 6.96
+    },
+    {
+        "text": "comprehensive kinda support for anyone\nwho wants to replicate these experiments.",
+        "start": 263.717,
+        "duration": 3.12
+    },
+    {
+        "text": "that's really important from the\npoint of view of open science.",
+        "start": 268.112,
+        "duration": 3.21
+    },
+    {
+        "text": "and it should also really, build trust\nin, in what we've done and, increase the",
+        "start": 271.952,
+        "duration": 4.35
+    },
+    {
+        "text": "likelihood that people build off of this.",
+        "start": 276.302,
+        "duration": 2.07
+    },
+    {
+        "text": "And, but yeah, these, this was a huge\namount of effort when 30,000 lines of",
+        "start": 278.372,
+        "duration": 4.65
+    },
+    {
+        "text": "code and experiment configurations for\nthe kind of main paper repository and",
+        "start": 283.022,
+        "duration": 4.65
+    },
+    {
+        "text": "then this epic repository that, Hojae\nput together TPP floppy, which for the",
+        "start": 287.672,
+        "duration": 5.55
+    },
+    {
+        "text": "first time enabled us to quantify the\namount of flops, that, the amount of",
+        "start": 293.222,
+        "duration": 4.32
+    },
+    {
+        "text": "compute essentially, that Monty, consumes\nand, enable us to benchmark that n bts.",
+        "start": 297.542,
+        "duration": 5.52
+    },
+    {
+        "text": "but, this doesn't capture all this\nother stuff as, was highlighting before.",
+        "start": 303.902,
+        "duration": 3.63
+    },
+    {
+        "text": "even just things like replicating\nthe experiments, not to mention,",
+        "start": 308.042,
+        "duration": 2.37
+    },
+    {
+        "text": "running them in the first place and\nrunning them many times, I should say.",
+        "start": 310.952,
+        "duration": 3.75
+    },
+    {
+        "text": "Every time we'd realize some kind of\nchange we should make to the figure or.",
+        "start": 314.972,
+        "duration": 4.35
+    },
+    {
+        "text": "some bug had been identified or whatever\nit happened to be that kind of led to",
+        "start": 320.267,
+        "duration": 3.96
+    },
+    {
+        "text": "a cascade of running all this again.",
+        "start": 324.227,
+        "duration": 1.59
+    },
+    {
+        "text": "So a huge amount of effort.",
+        "start": 325.817,
+        "duration": 1.35
+    },
+    {
+        "text": "and just a quick kind of summary of\nsome things in terms of new evaluations",
+        "start": 329.597,
+        "duration": 5.4
+    },
+    {
+        "text": "and metrics and things like that.",
+        "start": 335.087,
+        "duration": 1.23
+    },
+    {
+        "text": "We added, better visualizations of\nmovement sequences for the first",
+        "start": 336.317,
+        "duration": 4.86
+    },
+    {
+        "text": "time we properly quantified symmetry.",
+        "start": 341.177,
+        "duration": 2.28
+    },
+    {
+        "text": "and found a way of verifying that we\nlooked at adversarial color robustness.",
+        "start": 343.997,
+        "duration": 4.2
+    },
+    {
+        "text": "we looked at the kind of stepwise\neffects of the model-based policy.",
+        "start": 348.797,
+        "duration": 2.61
+    },
+    {
+        "text": "looked at scaling of voting for the\nfirst time, and figured out tie breaking,",
+        "start": 352.307,
+        "duration": 4.32
+    },
+    {
+        "text": "quantified learning efficiency.",
+        "start": 358.967,
+        "duration": 1.38
+    },
+    {
+        "text": "And also versus VIT, we had no\ncomparisons before at all to",
+        "start": 360.347,
+        "duration": 3.42
+    },
+    {
+        "text": "deep learning architectures.",
+        "start": 363.767,
+        "duration": 1.02
+    },
+    {
+        "text": "And that was a huge, effort, particularly\non ho j's effort to, get that.",
+        "start": 364.787,
+        "duration": 4.29
+    },
+    {
+        "text": "Also comparing flops and quantifying\nthat versus the VIT also looking",
+        "start": 369.737,
+        "duration": 3.69
+    },
+    {
+        "text": "at qu continual learning and\ncomparing that against the VIT.",
+        "start": 373.427,
+        "duration": 2.335
+    },
+    {
+        "text": "Plus, outside of that stuff, we\ngot updated professional diagrams.",
+        "start": 377.357,
+        "duration": 3.75
+    },
+    {
+        "text": "we did a literature review\non related approaches.",
+        "start": 381.587,
+        "duration": 2.16
+    },
+    {
+        "text": "had a whole bunch of\nimprovements to the configs.",
+        "start": 385.247,
+        "duration": 2.43
+    },
+    {
+        "text": "Just simple things like specifying\na voting, system in Monty where you",
+        "start": 387.677,
+        "duration": 4.2
+    },
+    {
+        "text": "have multiple learning modules in a\ngrid, was not trivial at all before.",
+        "start": 391.877,
+        "duration": 3.69
+    },
+    {
+        "text": "Scott made lots of nice\nimprovements to that.",
+        "start": 396.677,
+        "duration": 1.89
+    },
+    {
+        "text": "we have now a comprehensive mathematical\ndescription of how Monty works,",
+        "start": 399.647,
+        "duration": 3.42
+    },
+    {
+        "text": "which we didn't have at all before.",
+        "start": 403.067,
+        "duration": 1.35
+    },
+    {
+        "text": "and notation for that and then fixed a\nwhole bunch of bugs, which yeah, I said",
+        "start": 404.897,
+        "duration": 4.35
+    },
+    {
+        "text": "none of these were, trivial things.",
+        "start": 409.247,
+        "duration": 1.83
+    },
+    {
+        "text": "Like when we started this voting only\nworked with, learning modules and",
+        "start": 411.077,
+        "duration": 4.77
+    },
+    {
+        "text": "sensorimotor modules basically aligned\nin a one dimensional grid, or, aligned.",
+        "start": 415.847,
+        "duration": 5.04
+    },
+    {
+        "text": "We, couldn't have kind\nof other arrangements.",
+        "start": 421.262,
+        "duration": 2.265
+    },
+    {
+        "text": "something with the X percent threshold.",
+        "start": 424.907,
+        "duration": 1.35
+    },
+    {
+        "text": "We fixed patch off object.",
+        "start": 426.257,
+        "duration": 1.62
+    },
+    {
+        "text": "that was getting a huge effort on Scott's\npart and then semantic sensorimotor.",
+        "start": 428.747,
+        "duration": 3.3
+    },
+    {
+        "text": "This was a thing that\nwas leaking into our.",
+        "start": 432.047,
+        "duration": 2.07
+    },
+    {
+        "text": "experiments that we didn't want to.",
+        "start": 435.452,
+        "duration": 1.32
+    },
+    {
+        "text": "So I'm sure I've missed some stuff.",
+        "start": 437.672,
+        "duration": 2.13
+    },
+    {
+        "text": "so it was, a lot of, things.",
+        "start": 440.702,
+        "duration": 2.76
+    },
+    {
+        "text": "and of course, I think all these metrics\nand evaluations that we've now developed",
+        "start": 444.212,
+        "duration": 4.14
+    },
+    {
+        "text": "and the pipeline for visualizing them,\nall this stuff is, work that we can",
+        "start": 448.352,
+        "duration": 5.07
+    },
+    {
+        "text": "reuse, when Monty's capabilities grow\nand we want to communicate that again.",
+        "start": 453.422,
+        "duration": 3.66
+    },
+    {
+        "text": "so it's definitely not\na one-off, use case.",
+        "start": 458.432,
+        "duration": 3.42
+    },
+    {
+        "text": "And of course now we have this 32\npage paper that we can share with",
+        "start": 461.882,
+        "duration": 3.63
+    },
+    {
+        "text": "everyone, and talk about when they\nask what can Monty actually do.",
+        "start": 465.512,
+        "duration": 4.17
+    },
+    {
+        "text": "so yeah.",
+        "start": 471.482,
+        "duration": 0.33
+    },
+    {
+        "text": "Thanks everyone for their hard work.",
+        "start": 472.082,
+        "duration": 1.95
+    },
+    {
+        "text": "Yeah.",
+        "start": 474.722,
+        "duration": 0.27
+    }
+]

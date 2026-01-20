@@ -1,0 +1,6037 @@
+[
+    {
+        "text": "Okay,",
+        "start": 8.567,
+        "duration": 0.03
+    },
+    {
+        "text": "great.",
+        "start": 11.707,
+        "duration": 0.26
+    },
+    {
+        "text": "yeah, thanks everyone again for tuning in.",
+        "start": 12.707,
+        "duration": 1.9
+    },
+    {
+        "text": "And, this is a follow up from\nyesterday's presentation.",
+        "start": 14.607,
+        "duration": 2.72
+    },
+    {
+        "text": "so apologies.",
+        "start": 18.177,
+        "duration": 0.75
+    },
+    {
+        "text": "I think to, I guess everyone except\nfor maybe Christian was there.",
+        "start": 19.287,
+        "duration": 3.31
+    },
+    {
+        "text": "So sorry if not everything is super clear,\nbut if you were at the journal club.",
+        "start": 22.607,
+        "duration": 5.12
+    },
+    {
+        "text": "that I did two weeks or a week\nand a half ago, then hopefully",
+        "start": 28.862,
+        "duration": 3.13
+    },
+    {
+        "text": "most of this will make sense.",
+        "start": 32.382,
+        "duration": 0.79
+    },
+    {
+        "text": "but anyways, going to be looking at, yeah,\ncarrying on the discussion about view",
+        "start": 34.982,
+        "duration": 4.88
+    },
+    {
+        "text": "spheres and these preferred views and\ntying this in with this kind of motivating",
+        "start": 39.862,
+        "duration": 4.71
+    },
+    {
+        "text": "question of rotation invariance.",
+        "start": 44.572,
+        "duration": 1.26
+    },
+    {
+        "text": "And then the that will be the first half\nand then the second half will look at what",
+        "start": 46.632,
+        "duration": 4.19
+    },
+    {
+        "text": "do we do when we're sampling points of the\ninput space that are not familiar that we",
+        "start": 50.822,
+        "duration": 5.46
+    },
+    {
+        "text": "don't have a learned representation for.",
+        "start": 56.482,
+        "duration": 1.72
+    },
+    {
+        "text": "And yeah, so for rotation variance,\nthe kind of general approach that",
+        "start": 59.672,
+        "duration": 4.26
+    },
+    {
+        "text": "I'm describing isn't fully rotation\ninvariant in the sense that you have",
+        "start": 65.112,
+        "duration": 4.32
+    },
+    {
+        "text": "to test multiple possibilities in order\nto arrive at a solution, it doesn't",
+        "start": 69.432,
+        "duration": 4.42
+    },
+    {
+        "text": "automatically handle rotation variance.",
+        "start": 73.882,
+        "duration": 2.66
+    },
+    {
+        "text": "Thanks.",
+        "start": 76.542,
+        "duration": 0.185
+    },
+    {
+        "text": "perfectly, and I'll explain\nmaybe why, to do that.",
+        "start": 79.257,
+        "duration": 4.38
+    },
+    {
+        "text": "and then how to do this, but in an\nefficient way with basically some kind",
+        "start": 84.157,
+        "duration": 4.31
+    },
+    {
+        "text": "of heuristics, experience and then also\nhow view spheres can help with this.",
+        "start": 88.467,
+        "duration": 4.65
+    },
+    {
+        "text": "And then I'm not really going to talk much\nabout this, but just the kind of particle",
+        "start": 94.007,
+        "duration": 3.07
+    },
+    {
+        "text": "filters that, come up a few times.",
+        "start": 97.077,
+        "duration": 2.47
+    },
+    {
+        "text": "This could be a potentially useful way to",
+        "start": 99.897,
+        "duration": 1.95
+    },
+    {
+        "text": "handle the sort of more brute force nature\nof this problem, just because particles",
+        "start": 104.027,
+        "duration": 4.39
+    },
+    {
+        "text": "can be, parallelized, quite easily.",
+        "start": 108.417,
+        "duration": 2.61
+    },
+    {
+        "text": "Can I just ask about the\nparticle filter things?",
+        "start": 111.692,
+        "duration": 1.69
+    },
+    {
+        "text": "I made a comment in Slack.",
+        "start": 113.412,
+        "duration": 1.93
+    },
+    {
+        "text": "I watched that video and it struck\nme that in that video where they",
+        "start": 115.612,
+        "duration": 4.58
+    },
+    {
+        "text": "described particle filters, it was\nvery, much like the union property",
+        "start": 120.192,
+        "duration": 3.94
+    },
+    {
+        "text": "we do in sparse representations.",
+        "start": 124.132,
+        "duration": 2.76
+    },
+    {
+        "text": "Had we talked about that before?",
+        "start": 127.402,
+        "duration": 1.65
+    },
+    {
+        "text": "I think we have a little bit,\nnot, explicitly, it's, yeah,",
+        "start": 133.527,
+        "duration": 5.57
+    },
+    {
+        "text": "there's definitely analogies.",
+        "start": 139.097,
+        "duration": 1.32
+    },
+    {
+        "text": "I just based on what that video showed.",
+        "start": 141.587,
+        "duration": 1.51
+    },
+    {
+        "text": "I don't know, I think I was part of it.",
+        "start": 143.277,
+        "duration": 1.19
+    },
+    {
+        "text": "But in that video, I'm saying that's\nexactly what we're doing with unions.",
+        "start": 145.307,
+        "duration": 2.43
+    },
+    {
+        "text": "Yet the multiple hypotheses are being\nbasically occupied simultaneously.",
+        "start": 148.397,
+        "duration": 4.41
+    },
+    {
+        "text": "It's not a, it's not a\nprobability distribution,",
+        "start": 152.807,
+        "duration": 2.2
+    },
+    {
+        "text": "but it's multiple hypotheses.",
+        "start": 155.007,
+        "duration": 1.34
+    },
+    {
+        "text": "And, and, they're being narrowed\ndown through this movement,",
+        "start": 156.837,
+        "duration": 4.05
+    },
+    {
+        "text": "sensory movement experience.",
+        "start": 161.547,
+        "duration": 1.11
+    },
+    {
+        "text": "Yeah, I think the one difference is you do\nneed to be able to read out each particle",
+        "start": 162.737,
+        "duration": 3.92
+    },
+    {
+        "text": "separately to be able to do things.",
+        "start": 166.927,
+        "duration": 2.05
+    },
+    {
+        "text": "maybe that's the way they implement\nit in particles, but with But",
+        "start": 170.207,
+        "duration": 3.525
+    },
+    {
+        "text": "the, but in the union you do\nsimultaneously because of the union",
+        "start": 173.732,
+        "duration": 3.67
+    },
+    {
+        "text": "of the, because of sparse properties.",
+        "start": 177.442,
+        "duration": 1.18
+    },
+    {
+        "text": "But other than that, it's\nbasically the same hypothesis.",
+        "start": 179.232,
+        "duration": 4.08
+    },
+    {
+        "text": "You have multiple hypotheses, multiple\npossibilities are being narrowed",
+        "start": 183.312,
+        "duration": 2.71
+    },
+    {
+        "text": "down through, continued inputs.",
+        "start": 186.032,
+        "duration": 2.04
+    },
+    {
+        "text": "I just thought, wow, that is exactly\nwhat we do in the temporal memory.",
+        "start": 189.292,
+        "duration": 3.69
+    },
+    {
+        "text": "it just struck me, it struck me.",
+        "start": 194.012,
+        "duration": 2.81
+    },
+    {
+        "text": "But they also resample,\naround the most likely ones?",
+        "start": 197.102,
+        "duration": 3.98
+    },
+    {
+        "text": "Yeah, they do, but,\nthose are Details, right?",
+        "start": 201.422,
+        "duration": 5.215
+    },
+    {
+        "text": "yeah, some of those would\nbe that's what I meant.",
+        "start": 207.477,
+        "duration": 2.28
+    },
+    {
+        "text": "Some of that kind of thing is hard to\ndo with unions because you can't read",
+        "start": 210.367,
+        "duration": 2.8
+    },
+    {
+        "text": "out each pattern independently, but\nthere may be ways of doing something.",
+        "start": 213.167,
+        "duration": 3.55
+    },
+    {
+        "text": "I assume that in the park\nfilters are like, these are.",
+        "start": 218.417,
+        "duration": 2.47
+    },
+    {
+        "text": "These are probably, I don't know, some\nfloating point numbers and they're",
+        "start": 221.262,
+        "duration": 2.77
+    },
+    {
+        "text": "very precise and if they have to re\nsample or something, I don't know, but",
+        "start": 224.032,
+        "duration": 3.81
+    },
+    {
+        "text": "but so there are those differences.",
+        "start": 228.832,
+        "duration": 2.83
+    },
+    {
+        "text": "I'm not, but the idea that you've got\nmultiple hypotheses, accurate ones,",
+        "start": 231.782,
+        "duration": 4.01
+    },
+    {
+        "text": "and you can start out with a lot of\nthem and then you just get narrowing",
+        "start": 235.812,
+        "duration": 2.49
+    },
+    {
+        "text": "down and you're doing them in parallel.",
+        "start": 238.302,
+        "duration": 1.82
+    },
+    {
+        "text": "maybe in the actual particle\nfilter code, they do them one",
+        "start": 241.637,
+        "duration": 2.58
+    },
+    {
+        "text": "at a time, but theoretically\nthey're being done in parallel,",
+        "start": 244.217,
+        "duration": 3.07
+    },
+    {
+        "text": "and that's what unions are doing.",
+        "start": 247.667,
+        "duration": 2.15
+    },
+    {
+        "text": "And the fact that the union is not\na distribution in the sense of a",
+        "start": 249.847,
+        "duration": 3.59
+    },
+    {
+        "text": "normal probability distribution,\nit's multiple hypotheses.",
+        "start": 253.437,
+        "duration": 3.74
+    },
+    {
+        "text": "anyway, the language in that video,\nit was a very clear video, it was",
+        "start": 258.687,
+        "duration": 3.36
+    },
+    {
+        "text": "simple, but the language was like,\nwow, that's very similar to Tumblr.",
+        "start": 262.057,
+        "duration": 3.35
+    },
+    {
+        "text": "Anyway, I thought that was\ngood, so just wanted to point",
+        "start": 266.607,
+        "duration": 2.33
+    },
+    {
+        "text": "that out before we go on here.",
+        "start": 268.937,
+        "duration": 1.27
+    },
+    {
+        "text": "Yeah, No, I, yeah.",
+        "start": 272.227,
+        "duration": 1.64
+    },
+    {
+        "text": "And I think Marcus at least has\ndiscussed some of the similarities,",
+        "start": 273.927,
+        "duration": 3.65
+    },
+    {
+        "text": "at least when I've spoken to him.",
+        "start": 277.637,
+        "duration": 1.11
+    },
+    {
+        "text": "And, and I think in, the kind of columns\nplus paper, he has a paragraph about",
+        "start": 278.747,
+        "duration": 5.65
+    },
+    {
+        "text": "the similarities, but that's funny.",
+        "start": 284.397,
+        "duration": 4.07
+    },
+    {
+        "text": "I don't remember that\nI've posted on slack.",
+        "start": 288.467,
+        "duration": 3.93
+    },
+    {
+        "text": "I think in the thread.",
+        "start": 292.877,
+        "duration": 1.24
+    },
+    {
+        "text": "But, yeah.",
+        "start": 294.912,
+        "duration": 1.53
+    },
+    {
+        "text": "but I think it could be helpful because\nthere may be some, it's still unclear, but",
+        "start": 297.132,
+        "duration": 4.1
+    },
+    {
+        "text": "there may be some very efficient libraries\nfor particle filters that we could use.",
+        "start": 301.232,
+        "duration": 3.0
+    },
+    {
+        "text": "And, that might be a, just an\nalternative . Or, either, temporal",
+        "start": 304.912,
+        "duration": 4.2
+    },
+    {
+        "text": "membrane could be an efficient method\nfor particle filters, , it's like that's",
+        "start": 309.112,
+        "duration": 4.38
+    },
+    {
+        "text": "an efficient mechanism for doing it.",
+        "start": 313.492,
+        "duration": 1.44
+    },
+    {
+        "text": "if you could combine those two.",
+        "start": 315.562,
+        "duration": 1.11
+    },
+    {
+        "text": "Alright.",
+        "start": 317.682,
+        "duration": 0.18
+    },
+    {
+        "text": "I just wanna point out brute four\nsounds like it's not desirable.",
+        "start": 317.862,
+        "duration": 2.64
+    },
+    {
+        "text": "But, when I thought about, hey,\ntemporal memory does this, and it's,",
+        "start": 321.097,
+        "duration": 3.89
+    },
+    {
+        "text": "it can be very, efficient, I think.",
+        "start": 325.167,
+        "duration": 2.07
+    },
+    {
+        "text": "So anyway, I just want to mention that.",
+        "start": 327.937,
+        "duration": 2.36
+    },
+    {
+        "text": "so yeah, so why even debate whether\nwe want to, maybe on some level",
+        "start": 332.177,
+        "duration": 4.97
+    },
+    {
+        "text": "you'd think, surely we want to find\nsome elegant, perfectly, rotation",
+        "start": 337.147,
+        "duration": 4.78
+    },
+    {
+        "text": "invariant representation of objects.",
+        "start": 341.927,
+        "duration": 1.95
+    },
+    {
+        "text": "But, in general, invariance comes at\nsome sort of cost and sensitivity.",
+        "start": 344.467,
+        "duration": 5.21
+    },
+    {
+        "text": "So a classic example of\nthis is max pooling in CNNs.",
+        "start": 349.697,
+        "duration": 3.39
+    },
+    {
+        "text": "Reduces the kind of spatial sensitivity\nof the feature representation, which",
+        "start": 353.937,
+        "duration": 4.21
+    },
+    {
+        "text": "helps with translation invariance,\nbut it also coercions the spatial",
+        "start": 358.147,
+        "duration": 4.74
+    },
+    {
+        "text": "code of features and potentially makes\nthem have these kind of undesirable",
+        "start": 362.927,
+        "duration": 4.03
+    },
+    {
+        "text": "properties, like being approximately\nbag of feature detectors and so forth.",
+        "start": 366.957,
+        "duration": 5.38
+    },
+    {
+        "text": "and so I thought, if humans seem to use\nkind of a search based solution, or at",
+        "start": 373.857,
+        "duration": 5.63
+    },
+    {
+        "text": "least semi kind of search based solution.",
+        "start": 379.487,
+        "duration": 2.03
+    },
+    {
+        "text": "Rather than solving this problem.",
+        "start": 383.047,
+        "duration": 2.14
+    },
+    {
+        "text": "Test perfectly, then that might\nrepresent the fact that biology has",
+        "start": 385.512,
+        "duration": 4.15
+    },
+    {
+        "text": "found it to be a good trade off.",
+        "start": 389.662,
+        "duration": 1.35
+    },
+    {
+        "text": "and, yeah, and then that way we can\nfocus on the representations being able",
+        "start": 392.662,
+        "duration": 4.29
+    },
+    {
+        "text": "to handle other, equally challenging\nadvances like translation scale",
+        "start": 396.952,
+        "duration": 4.76
+    },
+    {
+        "text": "and just novel examples of objects.",
+        "start": 401.972,
+        "duration": 2.35
+    },
+    {
+        "text": "the kind of this isn't a new idea.",
+        "start": 408.237,
+        "duration": 2.22
+    },
+    {
+        "text": "The kind of one obvious thing to do is\nto just test the most likely orientations",
+        "start": 410.857,
+        "duration": 5.6
+    },
+    {
+        "text": "when you come across an object.",
+        "start": 416.897,
+        "duration": 1.24
+    },
+    {
+        "text": "and but just to get into this a bit more.",
+        "start": 419.927,
+        "duration": 2.4
+    },
+    {
+        "text": "so most likely can be a combination\nof experience heuristics based on",
+        "start": 423.767,
+        "duration": 5.4
+    },
+    {
+        "text": "local features that I'll get into.",
+        "start": 429.177,
+        "duration": 1.92
+    },
+    {
+        "text": "and in order to talk about this.",
+        "start": 432.687,
+        "duration": 2.44
+    },
+    {
+        "text": "I'm going to loosely define it\nis principal access of an object.",
+        "start": 435.642,
+        "duration": 5.36
+    },
+    {
+        "text": "And so every object will have this.",
+        "start": 441.522,
+        "duration": 1.74
+    },
+    {
+        "text": "And it basically is just with\nreference to how the objects is",
+        "start": 443.282,
+        "duration": 3.41
+    },
+    {
+        "text": "normally placed in the world.",
+        "start": 446.692,
+        "duration": 2.43
+    },
+    {
+        "text": "due to the constraints\nof, for example, gravity.",
+        "start": 450.232,
+        "duration": 1.89
+    },
+    {
+        "text": "So a coffee cup.",
+        "start": 452.172,
+        "duration": 0.97
+    },
+    {
+        "text": "and it doesn't specify rotation\naround the principal access.",
+        "start": 455.282,
+        "duration": 5.97
+    },
+    {
+        "text": "So Kafka can obviously be oriented\naround that in various ways, but at",
+        "start": 461.742,
+        "duration": 4.21
+    },
+    {
+        "text": "least the principal axis tells us if\nit's right way up, upside down, or",
+        "start": 465.952,
+        "duration": 3.05
+    },
+    {
+        "text": "on its side, or in some kind of more\nimplausible orientation like this.",
+        "start": 469.002,
+        "duration": 4.26
+    },
+    {
+        "text": "And, as you'd imagine with experience,\nyou'd come to learn that some of",
+        "start": 473.292,
+        "duration": 5.16
+    },
+    {
+        "text": "these are more likely than others,\nand should be tested, it should",
+        "start": 478.452,
+        "duration": 5.99
+    },
+    {
+        "text": "form a kind of, denser part of the\ndistribution over possible rotations.",
+        "start": 484.442,
+        "duration": 4.4
+    },
+    {
+        "text": "and interestingly, humans do\nseem to do something like this.",
+        "start": 492.367,
+        "duration": 3.05
+    },
+    {
+        "text": "this is a study where they looked at,\nhow quickly people are able to recognize.",
+        "start": 496.357,
+        "duration": 6.11
+    },
+    {
+        "text": "So this was just line drawing.",
+        "start": 502.497,
+        "duration": 1.32
+    },
+    {
+        "text": "So to the images.",
+        "start": 503.817,
+        "duration": 0.91
+    },
+    {
+        "text": "things like airplanes and, yeah,\nboats that were oriented, in",
+        "start": 505.337,
+        "duration": 5.9
+    },
+    {
+        "text": "the plane, at various angles.",
+        "start": 511.237,
+        "duration": 1.89
+    },
+    {
+        "text": "And this is how quickly\npeople recognize it.",
+        "start": 513.157,
+        "duration": 3.09
+    },
+    {
+        "text": "lower down is faster, is better.",
+        "start": 516.627,
+        "duration": 2.5
+    },
+    {
+        "text": "And at kind of an upright, typical\norientation, people are very fast.",
+        "start": 519.537,
+        "duration": 3.29
+    },
+    {
+        "text": "They're able to tolerate\nslight deviations from this.",
+        "start": 523.387,
+        "duration": 3.17
+    },
+    {
+        "text": "And of course, if you turn it completely\nupside down, then people are much slower.",
+        "start": 527.107,
+        "duration": 3.26
+    },
+    {
+        "text": "What's interesting, though, is that\nthe kind of worst ones are these kind",
+        "start": 530.897,
+        "duration": 3.93
+    },
+    {
+        "text": "of deviations from the, so Upside down\nis seems to be better than upside down",
+        "start": 534.827,
+        "duration": 4.325
+    },
+    {
+        "text": "and slightly skewed and similarly being\nat 90 degrees seems to be better than",
+        "start": 539.152,
+        "duration": 5.39
+    },
+    {
+        "text": "these slight deviations from that.",
+        "start": 545.072,
+        "duration": 1.34
+    },
+    {
+        "text": "So that does suggest that, yeah, we\nmight have these sort of non uniform",
+        "start": 547.182,
+        "duration": 4.73
+    },
+    {
+        "text": "priors over what the kind of typical\norientations of objects in the world are",
+        "start": 551.912,
+        "duration": 3.44
+    },
+    {
+        "text": "when we're trying to recognize something\nwe're Parsing through this feature",
+        "start": 555.882,
+        "duration": 4.305
+    },
+    {
+        "text": "space and, testing hypotheses, with\ngreater likelihood that correspond to",
+        "start": 560.187,
+        "duration": 5.92
+    },
+    {
+        "text": "these kind of more common orientations.",
+        "start": 566.107,
+        "duration": 1.47
+    },
+    {
+        "text": "but of course, sometimes the\nobjects, won't be, in its typical",
+        "start": 571.877,
+        "duration": 4.47
+    },
+    {
+        "text": "orientation and it'd be nice to have\nsome other way to cons constrain the",
+        "start": 576.347,
+        "duration": 3.93
+    },
+    {
+        "text": "hypothesis space and make it faster.",
+        "start": 580.367,
+        "duration": 1.92
+    },
+    {
+        "text": "one thing I was thinking was that the kind\nof local features in particular principle",
+        "start": 584.897,
+        "duration": 4.44
+    },
+    {
+        "text": "curvature can give us some information.",
+        "start": 589.337,
+        "duration": 2.66
+    },
+    {
+        "text": "some, sense potentially of\nthe kind of orientation.",
+        "start": 593.317,
+        "duration": 2.32
+    },
+    {
+        "text": "but essentially a flat surface will\ngenerally be, or often be, in objects",
+        "start": 598.207,
+        "duration": 4.94
+    },
+    {
+        "text": "either parallel or perpendicular to, this\nkind of principal axis, often because",
+        "start": 603.147,
+        "duration": 4.87
+    },
+    {
+        "text": "it represents the base or because it\nrepresents the side of some object.",
+        "start": 608.017,
+        "duration": 4.51
+    },
+    {
+        "text": "Obviously this does not always hold.",
+        "start": 612.547,
+        "duration": 1.44
+    },
+    {
+        "text": "if you had a polyhedral dice or\nsomething, there's, many examples",
+        "start": 614.862,
+        "duration": 4.33
+    },
+    {
+        "text": "where, this doesn't hold, but, but\nthis could, as I'll get into a bit",
+        "start": 619.192,
+        "duration": 4.68
+    },
+    {
+        "text": "more concretely, be one way to suggest,\nokay, the axis might be in one of these.",
+        "start": 623.872,
+        "duration": 5.4
+    },
+    {
+        "text": "directions.",
+        "start": 629.972,
+        "duration": 0.65
+    },
+    {
+        "text": "and even if the local feature and the\nprincipal axes aren't flat, they give us,",
+        "start": 633.032,
+        "duration": 5.85
+    },
+    {
+        "text": "sorry, the principal curvature isn't flat.",
+        "start": 639.112,
+        "duration": 1.5
+    },
+    {
+        "text": "It gives us, the maximal and minimal\ncurvature and one of these is also again",
+        "start": 640.922,
+        "duration": 6.18
+    },
+    {
+        "text": "typically oriented, so either parallel\nor perpendicular to this, principal axis.",
+        "start": 647.132,
+        "duration": 5.17
+    },
+    {
+        "text": "Are you defining this principal axis\nwith respect to gravity, purely?",
+        "start": 652.372,
+        "duration": 6.95
+    },
+    {
+        "text": "Essentially, yeah.",
+        "start": 660.672,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah, because this cucumber or whatever\nit is, you could argue the principal",
+        "start": 661.742,
+        "duration": 3.05
+    },
+    {
+        "text": "axis is actually, almost horizontal.",
+        "start": 664.792,
+        "duration": 2.72
+    },
+    {
+        "text": "yeah, and yeah, I haven't decided for\nsure if that's the best way to do it,",
+        "start": 668.234,
+        "duration": 6.878
+    },
+    {
+        "text": "but I think Yeah, but, in general,\nit doesn't matter too much in the",
+        "start": 675.162,
+        "duration": 5.6
+    },
+    {
+        "text": "sense that normally, normally, yeah,\nif the principal access isn't, like",
+        "start": 680.762,
+        "duration": 7.7
+    },
+    {
+        "text": "that way, it's, gonna be that way.",
+        "start": 688.472,
+        "duration": 2.66
+    },
+    {
+        "text": "It's if you see what I mean, it's\nnot gonna be any of the kind of.",
+        "start": 691.302,
+        "duration": 3.21
+    },
+    {
+        "text": "Angles in between, right?",
+        "start": 695.417,
+        "duration": 1.67
+    },
+    {
+        "text": "but yeah, but, but when I was thinking\nabout it, I thought just a natural",
+        "start": 698.627,
+        "duration": 5.24
+    },
+    {
+        "text": "way of defining it because you\ncan have very kind of asymmetrical",
+        "start": 703.867,
+        "duration": 2.69
+    },
+    {
+        "text": "objects and things like that.",
+        "start": 706.557,
+        "duration": 1.08
+    },
+    {
+        "text": "So actually, maybe just a natural\nway of defining it would be when you",
+        "start": 707.957,
+        "duration": 2.42
+    },
+    {
+        "text": "encounter this object in the environment.",
+        "start": 710.377,
+        "duration": 1.53
+    },
+    {
+        "text": "What is its most typical orientation?",
+        "start": 711.927,
+        "duration": 2.81
+    },
+    {
+        "text": "Yeah, in some ways it's simpler\nthan thinking of it as shape based.",
+        "start": 716.257,
+        "duration": 3.82
+    },
+    {
+        "text": "It's more gravity based.",
+        "start": 720.577,
+        "duration": 1.12
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 723.907,
+        "duration": 0.62
+    },
+    {
+        "text": "And because the problem is, if it's\nshape based, you at some point you have",
+        "start": 724.637,
+        "duration": 4.66
+    },
+    {
+        "text": "to decide, you then have to first learn,\nokay, what is the shape of the object?",
+        "start": 729.297,
+        "duration": 4.37
+    },
+    {
+        "text": "And then decide, and,\nand how you parse that.",
+        "start": 734.337,
+        "duration": 3.6
+    },
+    {
+        "text": "And,",
+        "start": 737.957,
+        "duration": 0.49
+    },
+    {
+        "text": "so then bringing all this back to, view\nspheres, The idea is then, so yeah, for a",
+        "start": 743.717,
+        "duration": 5.815
+    },
+    {
+        "text": "view sphere like this, teapot, you have,\nthe features, are on this view sphere",
+        "start": 749.542,
+        "duration": 7.49
+    },
+    {
+        "text": "relative to the learned principal axis.",
+        "start": 757.032,
+        "duration": 1.73
+    },
+    {
+        "text": "And when you're inferring an\nobject, of course, it can be at any",
+        "start": 759.842,
+        "duration": 4.03
+    },
+    {
+        "text": "orientation in the natural world.",
+        "start": 763.872,
+        "duration": 1.77
+    },
+    {
+        "text": "So you need to not only infer where\nyou are on the object, as in where",
+        "start": 766.202,
+        "duration": 5.14
+    },
+    {
+        "text": "you are on the view sphere, but also,\nwhat the orientation of the object",
+        "start": 771.342,
+        "duration": 5.99
+    },
+    {
+        "text": "is, that you're actually studying.",
+        "start": 777.352,
+        "duration": 1.72
+    },
+    {
+        "text": "and so this can also be, conceptualized\nas a sphere where you, the point on",
+        "start": 780.732,
+        "duration": 6.34
+    },
+    {
+        "text": "the sphere is basically if you take\nthe principal axis out of the object.",
+        "start": 787.072,
+        "duration": 3.1
+    },
+    {
+        "text": "It's pointing to wherever it is\noriented on the sphere surface.",
+        "start": 790.597,
+        "duration": 4.43
+    },
+    {
+        "text": "And so this is just a single\nexample of a, orientation",
+        "start": 795.477,
+        "duration": 4.59
+    },
+    {
+        "text": "hypothesis that you might have.",
+        "start": 800.077,
+        "duration": 1.13
+    },
+    {
+        "text": "And, so what this means then is, for\nexample, if you were to see a feature,",
+        "start": 805.667,
+        "duration": 4.28
+    },
+    {
+        "text": "and the idea is you would have multiple\nhypotheses that you're running in",
+        "start": 810.077,
+        "duration": 3.57
+    },
+    {
+        "text": "parallel about this orientation.",
+        "start": 813.707,
+        "duration": 1.4
+    },
+    {
+        "text": "So this is what I mean\nthat it's search based.",
+        "start": 815.997,
+        "duration": 1.76
+    },
+    {
+        "text": "You're just testing in one,\nalong one axis, so you don't,",
+        "start": 820.577,
+        "duration": 4.07
+    },
+    {
+        "text": "represent rotation, around?",
+        "start": 825.587,
+        "duration": 2.77
+    },
+    {
+        "text": "Yeah, so I'll, exactly, so I'll get\nto orientation, because, if you have",
+        "start": 828.397,
+        "duration": 6.05
+    },
+    {
+        "text": "an estimate of the principal axis,\nof course that estimate may be wrong,",
+        "start": 834.447,
+        "duration": 4.38
+    },
+    {
+        "text": "but it, let's say this is one of your\nhypotheses, is, the first one, and this",
+        "start": 839.877,
+        "duration": 4.33
+    },
+    {
+        "text": "is another one, if you see a spout,\nThat tells you, essentially what your,",
+        "start": 844.207,
+        "duration": 8.335
+    },
+    {
+        "text": "what the rotation is about the principal\naxis, because, and this is one of the,",
+        "start": 852.762,
+        "duration": 6.35
+    },
+    {
+        "text": "benefits of the view sphere is because\nyou can only see a feature, yeah, from",
+        "start": 859.412,
+        "duration": 5.17
+    },
+    {
+        "text": "one particular side, then as long as you\nhave an estimate of the, axis, which again",
+        "start": 864.582,
+        "duration": 6.19
+    },
+    {
+        "text": "could be wrong, then, Seeing a feature\nis going to give you some information",
+        "start": 870.772,
+        "duration": 5.19
+    },
+    {
+        "text": "about, the rotation about the, the axis.",
+        "start": 875.962,
+        "duration": 3.16
+    },
+    {
+        "text": "But isn't that feature, isn't that\nthe same problem as the whole object?",
+        "start": 879.502,
+        "duration": 3.06
+    },
+    {
+        "text": "I'm looking at the spout.",
+        "start": 883.182,
+        "duration": 1.09
+    },
+    {
+        "text": "I have to figure out the\norientation of the spout.",
+        "start": 884.642,
+        "duration": 2.01
+    },
+    {
+        "text": "It's, it's, So I'm, assuming here that\nthe, spout representation So if the spout",
+        "start": 887.142,
+        "duration": 8.08
+    },
+    {
+        "text": "representation tells you some information\nabout orientation As well, as in, whether",
+        "start": 895.222,
+        "duration": 5.82
+    },
+    {
+        "text": "the spout itself is upside down or right\nside up, that just gives more information.",
+        "start": 901.042,
+        "duration": 4.2
+    },
+    {
+        "text": "It makes it easier.",
+        "start": 905.242,
+        "duration": 0.57
+    },
+    {
+        "text": "I'm assuming that the spout\nrepresentation is invariant to",
+        "start": 905.812,
+        "duration": 3.09
+    },
+    {
+        "text": "rotation, but why would it be?",
+        "start": 908.912,
+        "duration": 2.59
+    },
+    {
+        "text": "it seems established as another\nobject and it seems just the",
+        "start": 912.012,
+        "duration": 4.17
+    },
+    {
+        "text": "same problem as a whole topic.",
+        "start": 916.182,
+        "duration": 1.11
+    },
+    {
+        "text": "The whole teapot.",
+        "start": 917.362,
+        "duration": 0.83
+    },
+    {
+        "text": "It's",
+        "start": 918.432,
+        "duration": 0.06
+    },
+    {
+        "text": "I haven't figured out how to do this.",
+        "start": 921.982,
+        "duration": 1.74
+    },
+    {
+        "text": "Yeah, that's, a fair point.",
+        "start": 924.962,
+        "duration": 1.83
+    },
+    {
+        "text": "I guess, I was imagining, yeah, a\nlocal, feature detector that could.",
+        "start": 926.792,
+        "duration": 5.06
+    },
+    {
+        "text": "Recognize, the things from, yeah, because\nit's, a smaller feature, generally",
+        "start": 932.512,
+        "duration": 4.81
+    },
+    {
+        "text": "simpler features you've encountered\nmore often in the environment.",
+        "start": 937.322,
+        "duration": 3.08
+    },
+    {
+        "text": "And so you'll have encountered\nthat more orientation.",
+        "start": 940.402,
+        "duration": 4.15
+    },
+    {
+        "text": "So this would be more\ndependent on training base.",
+        "start": 944.552,
+        "duration": 2.36
+    },
+    {
+        "text": "I'm not sure I buy that.",
+        "start": 948.122,
+        "duration": 1.04
+    },
+    {
+        "text": "So what I was saying yesterday, I think\nyou have to assume this is in some sort of",
+        "start": 950.512,
+        "duration": 2.98
+    },
+    {
+        "text": "a hierarchy or multiple cortical columns\nand every cortical column is doing this.",
+        "start": 953.492,
+        "duration": 4.55
+    },
+    {
+        "text": "So you might have a cortical column that.",
+        "start": 958.052,
+        "duration": 1.74
+    },
+    {
+        "text": "Knows about spouts and it's\ndoing the exact same thing,",
+        "start": 960.122,
+        "duration": 2.34
+    },
+    {
+        "text": "but at the level of the spout.",
+        "start": 962.462,
+        "duration": 1.11
+    },
+    {
+        "text": "And then you have a higher level,\nmaybe a V4 IT or something like that's",
+        "start": 964.212,
+        "duration": 4.33
+    },
+    {
+        "text": "operating at the level of the full\nMaybe, I don't know why It's the",
+        "start": 968.872,
+        "duration": 3.22
+    },
+    {
+        "text": "same operations, it's the same thing.",
+        "start": 972.092,
+        "duration": 1.805
+    },
+    {
+        "text": "It may be, I think, but the\nproblem is that it has to",
+        "start": 973.897,
+        "duration": 2.325
+    },
+    {
+        "text": "occur at each column, or yeah.",
+        "start": 976.222,
+        "duration": 2.95
+    },
+    {
+        "text": "Whatever it is, we don't want to rely\non hierarchy, but the point is, that",
+        "start": 979.172,
+        "duration": 2.47
+    },
+    {
+        "text": "spout is not really easily recognized.",
+        "start": 981.652,
+        "duration": 2.33
+    },
+    {
+        "text": "in fact, if I isolated it from\nthe teapot, in this view, I'm not",
+        "start": 985.247,
+        "duration": 4.21
+    },
+    {
+        "text": "sure I'd figure out what it is.",
+        "start": 989.457,
+        "duration": 1.1
+    },
+    {
+        "text": "it's certainly not oh, there's\nan oriented spout, they already",
+        "start": 993.547,
+        "duration": 2.46
+    },
+    {
+        "text": "know the orientation of the whole\nthing, it's, I don't think so.",
+        "start": 996.007,
+        "duration": 2.77
+    },
+    {
+        "text": "Yeah, I think if you isolated the\nspout to rotate it 180 degrees, you",
+        "start": 998.807,
+        "duration": 3.66
+    },
+    {
+        "text": "wouldn't be able to recognize it.",
+        "start": 1002.467,
+        "duration": 0.56
+    },
+    {
+        "text": "in this picture, I don't think I'd\nbe able to recognize it there at all,",
+        "start": 1003.907,
+        "duration": 2.53
+    },
+    {
+        "text": "it's, if I just isolated the spout,",
+        "start": 1006.757,
+        "duration": 2.66
+    },
+    {
+        "text": "anyway, yeah, no, it's you can make\na hypothesis based On the symmetry",
+        "start": 1011.877,
+        "duration": 7.535
+    },
+    {
+        "text": "of that image, that would work, or\nthere's an implied principal axis of",
+        "start": 1019.412,
+        "duration": 7.15
+    },
+    {
+        "text": "the symmetry of that image, but I don't\nthink I could get it from this table.",
+        "start": 1026.562,
+        "duration": 5.69
+    },
+    {
+        "text": "I'm not sure this is a problem because,\nagain, you have lots of cortical columns",
+        "start": 1034.652,
+        "duration": 4.48
+    },
+    {
+        "text": "at different scales that are operating\ntogether and voting on things, and the",
+        "start": 1039.132,
+        "duration": 5.59
+    },
+    {
+        "text": "only self consistent view is this thing.",
+        "start": 1044.752,
+        "duration": 2.93
+    },
+    {
+        "text": "all right, so you're saying\norientation would be voted on,",
+        "start": 1048.232,
+        "duration": 2.93
+    },
+    {
+        "text": "and Yeah, I'm assuming that, yeah.",
+        "start": 1051.492,
+        "duration": 3.4
+    },
+    {
+        "text": "But Because you have multiple\nhypotheses for orientations.",
+        "start": 1055.012,
+        "duration": 4.28
+    },
+    {
+        "text": "Yeah, but we still have to ask how\neach column's hypothesis is generated.",
+        "start": 1059.482,
+        "duration": 4.23
+    },
+    {
+        "text": "Everybody's rotated here, so\nall inputs are rotated, so",
+        "start": 1066.677,
+        "duration": 3.53
+    },
+    {
+        "text": "everyone would be confused.",
+        "start": 1070.217,
+        "duration": 1.28
+    },
+    {
+        "text": "Everyone has to solve.",
+        "start": 1071.537,
+        "duration": 0.82
+    },
+    {
+        "text": "I don't know.",
+        "start": 1074.757,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah, I think, yeah, I think at some\nlevel I'm approaching it from, sorry.",
+        "start": 1075.237,
+        "duration": 5.33
+    },
+    {
+        "text": "Yeah, but that gets back, it's not like\nit happens instantly, it happens over",
+        "start": 1081.427,
+        "duration": 4.4
+    },
+    {
+        "text": "time because these unusual orientations\ndo take time, as, Neil showed earlier.",
+        "start": 1085.827,
+        "duration": 3.84
+    },
+    {
+        "text": "So there is a some sort of a\nsearch process or settling process.",
+        "start": 1090.402,
+        "duration": 3.68
+    },
+    {
+        "text": "there's two different things.",
+        "start": 1094.572,
+        "duration": 0.64
+    },
+    {
+        "text": "One is, one is the brain could literally\nbe trying different orientations.",
+        "start": 1095.222,
+        "duration": 3.97
+    },
+    {
+        "text": "You could still be voting on it,\nbut you might be going through",
+        "start": 1099.722,
+        "duration": 2.47
+    },
+    {
+        "text": "them surreptitiously as opposed to,\nOh, there's this distribution of",
+        "start": 1102.192,
+        "duration": 2.6
+    },
+    {
+        "text": "orientations and the right one comes out.",
+        "start": 1104.802,
+        "duration": 1.89
+    },
+    {
+        "text": "That doesn't seem right to me.",
+        "start": 1107.382,
+        "duration": 1.23
+    },
+    {
+        "text": "It's more like it seems like\nwe, because it takes longer.",
+        "start": 1108.752,
+        "duration": 2.62
+    },
+    {
+        "text": "It's not just a voting thing.",
+        "start": 1112.262,
+        "duration": 1.62
+    },
+    {
+        "text": "It seemed like there might be, like you\nmight be doing multiple orientations.",
+        "start": 1113.892,
+        "duration": 4.26
+    },
+    {
+        "text": "But yeah, it can still take longer,\neven if, yeah, even if you're doing",
+        "start": 1119.622,
+        "duration": 2.75
+    },
+    {
+        "text": "multiple, trying multiple orientations.",
+        "start": 1122.372,
+        "duration": 2.24
+    },
+    {
+        "text": "It could be both.",
+        "start": 1125.722,
+        "duration": 0.62
+    },
+    {
+        "text": "This could be some combination.",
+        "start": 1126.362,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah, it could be a combination.",
+        "start": 1127.632,
+        "duration": 0.97
+    },
+    {
+        "text": "Yeah.",
+        "start": 1128.622,
+        "duration": 0.29
+    },
+    {
+        "text": "I would agree that there is some\nvoting and settling going on, but",
+        "start": 1129.222,
+        "duration": 2.4
+    },
+    {
+        "text": "it, still seems like it wouldn't be\nlike, oh, some of these guys have",
+        "start": 1132.392,
+        "duration": 3.53
+    },
+    {
+        "text": "got it right from the beginning.",
+        "start": 1135.922,
+        "duration": 0.98
+    },
+    {
+        "text": "Everyone's going to be confused by this.",
+        "start": 1136.902,
+        "duration": 1.68
+    },
+    {
+        "text": "It's a pretty confusing image, Yeah,\nI think, I guess that would be part",
+        "start": 1139.182,
+        "duration": 3.64
+    },
+    {
+        "text": "of this, if we go down this road\nof testing some of this stuff out.",
+        "start": 1142.822,
+        "duration": 5.5
+    },
+    {
+        "text": "how would this happen in\nparallel, across cortical columns?",
+        "start": 1148.882,
+        "duration": 4.67
+    },
+    {
+        "text": "It seems like it's plausible.",
+        "start": 1153.552,
+        "duration": 3.21
+    },
+    {
+        "text": "What is plausible?",
+        "start": 1156.992,
+        "duration": 0.95
+    },
+    {
+        "text": "Multiple quarter book columns\ncould figure out these unusual.",
+        "start": 1159.872,
+        "duration": 3.6
+    },
+    {
+        "text": "Yeah, but are you saying that\nsome of them guessed right to",
+        "start": 1163.802,
+        "duration": 2.4
+    },
+    {
+        "text": "begin with and they went out?",
+        "start": 1166.202,
+        "duration": 1.54
+    },
+    {
+        "text": "Or are you saying Or\neventually it will guess right.",
+        "start": 1167.762,
+        "duration": 2.57
+    },
+    {
+        "text": "It could be some combination of parallel.",
+        "start": 1170.762,
+        "duration": 1.64
+    },
+    {
+        "text": "I think, it seems to me that\nit has to be some combination.",
+        "start": 1172.752,
+        "duration": 2.83
+    },
+    {
+        "text": "Yeah.",
+        "start": 1175.692,
+        "duration": 0.23
+    },
+    {
+        "text": "If I look at this teapot, Ken\nInterspecton's one I've read so much,",
+        "start": 1175.922,
+        "duration": 3.7
+    },
+    {
+        "text": "and I said, what, really clues me in on\nwhat the orientation is of the teapot?",
+        "start": 1180.212,
+        "duration": 3.75
+    },
+    {
+        "text": "I think it's the little knob on the top.",
+        "start": 1183.962,
+        "duration": 1.96
+    },
+    {
+        "text": "That's a very, that piece itself\nis, it's it's got more shape",
+        "start": 1186.567,
+        "duration": 5.45
+    },
+    {
+        "text": "to it than the other stuff.",
+        "start": 1192.037,
+        "duration": 0.92
+    },
+    {
+        "text": "So I focused in on that one.",
+        "start": 1192.957,
+        "duration": 1.94
+    },
+    {
+        "text": "I like the spout itself is very confusing.",
+        "start": 1194.907,
+        "duration": 2.24
+    },
+    {
+        "text": "It's yeah, I agree.",
+        "start": 1197.167,
+        "duration": 2.32
+    },
+    {
+        "text": "Oh, it's like very touches the table.",
+        "start": 1199.707,
+        "duration": 2.08
+    },
+    {
+        "text": "Is it touching the table?",
+        "start": 1203.242,
+        "duration": 1.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 1204.842,
+        "duration": 0.49
+    },
+    {
+        "text": "I don't see a table.",
+        "start": 1205.772,
+        "duration": 1.38
+    },
+    {
+        "text": "The table is on the top right.",
+        "start": 1207.152,
+        "duration": 1.25
+    },
+    {
+        "text": "I don't see a table.",
+        "start": 1208.402,
+        "duration": 3.06
+    },
+    {
+        "text": "Yeah, I see it.",
+        "start": 1211.552,
+        "duration": 0.55
+    },
+    {
+        "text": "I don't see that at all.",
+        "start": 1212.102,
+        "duration": 4.34
+    },
+    {
+        "text": "I just saw the teapot floating in space.",
+        "start": 1216.552,
+        "duration": 1.84
+    },
+    {
+        "text": "Interesting.",
+        "start": 1218.602,
+        "duration": 0.39
+    },
+    {
+        "text": "It's difficult when, obviously,\nbecause also, yeah, here we're",
+        "start": 1220.352,
+        "duration": 3.47
+    },
+    {
+        "text": "looking at the whole object.",
+        "start": 1223.822,
+        "duration": 1.48
+    },
+    {
+        "text": "Yeah, at once.",
+        "start": 1227.237,
+        "duration": 0.76
+    },
+    {
+        "text": "And how?",
+        "start": 1228.017,
+        "duration": 0.86
+    },
+    {
+        "text": "Yeah.",
+        "start": 1229.017,
+        "duration": 0.2
+    },
+    {
+        "text": "How well we would do this?",
+        "start": 1229.217,
+        "duration": 1.77
+    },
+    {
+        "text": "because, yeah, all these kind of, task\nlooking at people recognizing objects",
+        "start": 1231.287,
+        "duration": 4.52
+    },
+    {
+        "text": "that weird orientations that is showing\nthe object in its entirety at once.",
+        "start": 1235.807,
+        "duration": 4.36
+    },
+    {
+        "text": "It's not requiring that\nthey cicade over a tiny.",
+        "start": 1240.167,
+        "duration": 3.17
+    },
+    {
+        "text": "Are they able to cicade or do\nthey just get a flash in it?",
+        "start": 1243.357,
+        "duration": 3.93
+    },
+    {
+        "text": "I'm assuming they're able to cicade\nbecause, How much time is involved?",
+        "start": 1249.197,
+        "duration": 3.93
+    },
+    {
+        "text": "Yeah, actually, no, not\nin this, case, yeah.",
+        "start": 1253.137,
+        "duration": 3.59
+    },
+    {
+        "text": "Yeah, that's funny.",
+        "start": 1258.647,
+        "duration": 2.18
+    },
+    {
+        "text": "Very quickly.",
+        "start": 1260.827,
+        "duration": 0.56
+    },
+    {
+        "text": "but yeah, but they're basically\nprocessing it in parallel.",
+        "start": 1266.097,
+        "duration": 4.35
+    },
+    {
+        "text": "And so that's, of course, going\nto give additional signals",
+        "start": 1270.867,
+        "duration": 3.24
+    },
+    {
+        "text": "about orientation of an object.",
+        "start": 1274.107,
+        "duration": 1.87
+    },
+    {
+        "text": "Also, my subjective experience based\non introspection is, if I look at this",
+        "start": 1277.007,
+        "duration": 4.92
+    },
+    {
+        "text": "thing, I feel like I like to rotate it.",
+        "start": 1281.927,
+        "duration": 2.06
+    },
+    {
+        "text": "It feels more comfortable.",
+        "start": 1283.987,
+        "duration": 1.65
+    },
+    {
+        "text": "That's why, that's the question, right?",
+        "start": 1287.127,
+        "duration": 1.35
+    },
+    {
+        "text": "Why does it feel like you want to rotate?",
+        "start": 1288.757,
+        "duration": 1.37
+    },
+    {
+        "text": "you've got, there is an implied principal\naxis in that image, symmetry, and, and",
+        "start": 1291.447,
+        "duration": 6.89
+    },
+    {
+        "text": "that would imply that it's not right.",
+        "start": 1298.367,
+        "duration": 1.79
+    },
+    {
+        "text": "principal access boundaries\nof the image itself.",
+        "start": 1302.482,
+        "duration": 2.78
+    },
+    {
+        "text": "So yeah, the way it's that's true.",
+        "start": 1305.262,
+        "duration": 2.7
+    },
+    {
+        "text": "I'm not trying to ignore that.",
+        "start": 1307.962,
+        "duration": 2.28
+    },
+    {
+        "text": "There's something that\nwasn't part of the test here.",
+        "start": 1310.502,
+        "duration": 3.54
+    },
+    {
+        "text": "you may better cut the images around,\njust give away the orientation.",
+        "start": 1314.962,
+        "duration": 4.1
+    },
+    {
+        "text": "Yeah.",
+        "start": 1320.472,
+        "duration": 0.38
+    },
+    {
+        "text": "but in 100 milliseconds, you don't\nreally get a chance to do much at all.",
+        "start": 1323.042,
+        "duration": 3.11
+    },
+    {
+        "text": "Yeah, the maximum two\nseconds, I don't think.",
+        "start": 1328.102,
+        "duration": 3.56
+    },
+    {
+        "text": "you typically get three\nto five and a second.",
+        "start": 1331.952,
+        "duration": 2.44
+    },
+    {
+        "text": "And so you, I don't think you in a\nhundred milliseconds, you would not",
+        "start": 1335.142,
+        "duration": 4.44
+    },
+    {
+        "text": "be able to be just one presentation.",
+        "start": 1339.642,
+        "duration": 3.6
+    },
+    {
+        "text": "interesting.",
+        "start": 1347.657,
+        "duration": 0.41
+    },
+    {
+        "text": "I don't know.",
+        "start": 1348.067,
+        "duration": 0.37
+    },
+    {
+        "text": "Okay.",
+        "start": 1348.507,
+        "duration": 0.45
+    },
+    {
+        "text": "but yeah, but anyways, but so I, guess\nthe whole desire or kind of motivation for",
+        "start": 1351.557,
+        "duration": 5.6
+    },
+    {
+        "text": "this is that the hope is that potentially\nthe, or one of the benefits of the view",
+        "start": 1357.157,
+        "duration": 5.45
+    },
+    {
+        "text": "sphere, maybe that it reduces the degrees\nof freedom, of testing orientations of",
+        "start": 1362.607,
+        "duration": 5.36
+    },
+    {
+        "text": "the object, because I said, yeah, in\nthis case where you're You're getting a",
+        "start": 1367.977,
+        "duration": 5.055
+    },
+    {
+        "text": "sensation, which in the reference frame\nof the view sphere is along the side.",
+        "start": 1373.032,
+        "duration": 5.35
+    },
+    {
+        "text": "Then you, you just have to test\nall the hypotheses about the",
+        "start": 1379.052,
+        "duration": 3.05
+    },
+    {
+        "text": "orientation of the principal axis.",
+        "start": 1382.102,
+        "duration": 1.4
+    },
+    {
+        "text": "You know where you are, with respect\nto around the, the principal axis.",
+        "start": 1383.512,
+        "duration": 6.95
+    },
+    {
+        "text": "If you, on your first sensation,\nyou, experience the lid, then you",
+        "start": 1391.017,
+        "duration": 5.46
+    },
+    {
+        "text": "need to test, all the hypotheses\nabout the orientation about the,",
+        "start": 1396.477,
+        "duration": 5.03
+    },
+    {
+        "text": "about the principal axis, but you\nknow the orientation of the principal",
+        "start": 1403.517,
+        "duration": 3.85
+    },
+    {
+        "text": "axis because it's pointing at you.",
+        "start": 1407.367,
+        "duration": 1.61
+    },
+    {
+        "text": "if that makes sense, and then if you\ntest somewhere in between kind of along",
+        "start": 1410.297,
+        "duration": 6.44
+    },
+    {
+        "text": "these surfaces, then you generally get\nmore information about both because",
+        "start": 1417.197,
+        "duration": 4.63
+    },
+    {
+        "text": "you'll get some information about the\nprinciple, assuming that features, are,",
+        "start": 1421.827,
+        "duration": 4.72
+    },
+    {
+        "text": "are not symmetric on every surface.",
+        "start": 1427.367,
+        "duration": 1.34
+    },
+    {
+        "text": "If obviously if features are\nsymmetric on every surface, then",
+        "start": 1428.737,
+        "duration": 2.15
+    },
+    {
+        "text": "it's the typical issue of just you'll\nhave to test for all the different",
+        "start": 1430.887,
+        "duration": 4.19
+    },
+    {
+        "text": "features that coincide with that.",
+        "start": 1435.417,
+        "duration": 1.91
+    },
+    {
+        "text": "But at least.",
+        "start": 1437.327,
+        "duration": 0.58
+    },
+    {
+        "text": "This constrains the or should\nconstrain the number of",
+        "start": 1438.622,
+        "duration": 3.08
+    },
+    {
+        "text": "orientations that you have to test.",
+        "start": 1441.712,
+        "duration": 1.42
+    },
+    {
+        "text": "and, yeah, the kind of this example where\nyou first feel it spout and you have, for",
+        "start": 1446.492,
+        "duration": 6.44
+    },
+    {
+        "text": "example, these two hypotheses and then you\nand rotate the object like that with one",
+        "start": 1452.932,
+        "duration": 4.66
+    },
+    {
+        "text": "hypothesis, you then see flat, which is\ninconsistent with the other hypothesis.",
+        "start": 1457.592,
+        "duration": 3.38
+    },
+    {
+        "text": "You see the lid.",
+        "start": 1461.042,
+        "duration": 0.77
+    },
+    {
+        "text": "And then so you know that principle\naccess was the correct one.",
+        "start": 1462.227,
+        "duration": 3.73
+    },
+    {
+        "text": "and it's Yeah, it's\njust the standard idea.",
+        "start": 1467.807,
+        "duration": 2.14
+    },
+    {
+        "text": "But, so what I think this would\nthen basically help limit the",
+        "start": 1470.327,
+        "duration": 5.05
+    },
+    {
+        "text": "total degrees of freedom of, pose.",
+        "start": 1475.387,
+        "duration": 3.58
+    },
+    {
+        "text": "And, so both location on the view\nsphere and orientation of the object.",
+        "start": 1478.987,
+        "duration": 6.7
+    },
+    {
+        "text": "So the kind of general pose to, four\ndegrees of freedom, to basically the",
+        "start": 1486.027,
+        "duration": 4.96
+    },
+    {
+        "text": "azimuth and the elevation, on the view\nsphere, and then the azimuth and elevation",
+        "start": 1490.987,
+        "duration": 4.19
+    },
+    {
+        "text": "of The either the principal axis or the\northogonal axis, whichever it is that",
+        "start": 1495.207,
+        "duration": 6.175
+    },
+    {
+        "text": "you're trying to work out, depending\non what you first started feeling.",
+        "start": 1501.382,
+        "duration": 3.33
+    },
+    {
+        "text": "I'm lost now.",
+        "start": 1506.792,
+        "duration": 1.04
+    },
+    {
+        "text": "Okay, we're trying to figure out\nthe orientation of the object and",
+        "start": 1509.132,
+        "duration": 2.63
+    },
+    {
+        "text": "you're, seeing you're limiting it\nnow to four degrees of freedom,",
+        "start": 1512.122,
+        "duration": 2.63
+    },
+    {
+        "text": "but that seems like a lot.",
+        "start": 1515.372,
+        "duration": 1.45
+    },
+    {
+        "text": "I typically think of orientation\nas three degrees of freedom.",
+        "start": 1518.647,
+        "duration": 2.49
+    },
+    {
+        "text": "so four degrees of freedom also includes\non where you are on the object, so it",
+        "start": 1522.657,
+        "duration": 3.81
+    },
+    {
+        "text": "would be six degrees of freedom if you\nwere both the orientation of the object",
+        "start": 1526.467,
+        "duration": 3.68
+    },
+    {
+        "text": "and where you are in x, y, z space.",
+        "start": 1530.157,
+        "duration": 1.65
+    },
+    {
+        "text": "If I just think of the object as a\nwhole, not like what part I'm focused on,",
+        "start": 1533.047,
+        "duration": 3.9
+    },
+    {
+        "text": "it's orientation.",
+        "start": 1539.327,
+        "duration": 0.76
+    },
+    {
+        "text": "So orientation is only\ntwo degrees of freedom.",
+        "start": 1540.497,
+        "duration": 2.03
+    },
+    {
+        "text": "it, that's, yeah, I guess it,\nyeah, it bundles them together.",
+        "start": 1545.182,
+        "duration": 6.31
+    },
+    {
+        "text": "you, you get a course orientation\nwith two degrees of freedom.",
+        "start": 1552.722,
+        "duration": 2.38
+    },
+    {
+        "text": "You get full description as well\nas of the orientation, as well",
+        "start": 1555.322,
+        "duration": 2.89
+    },
+    {
+        "text": "as where you are on the object.",
+        "start": 1558.212,
+        "duration": 1.17
+    },
+    {
+        "text": "in general, just to be clear, I'm\nmaking sure I'm thinking straight here.",
+        "start": 1560.512,
+        "duration": 2.99
+    },
+    {
+        "text": "In general, orientations in 3D is\nthree degrees of freedom, right?",
+        "start": 1563.502,
+        "duration": 2.88
+    },
+    {
+        "text": "Yeah.",
+        "start": 1566.762,
+        "duration": 0.44
+    },
+    {
+        "text": "And, your location is\nthree degrees of freedom.",
+        "start": 1568.422,
+        "duration": 2.631
+    },
+    {
+        "text": "Yeah.",
+        "start": 1571.053,
+        "duration": 0.314
+    },
+    {
+        "text": "So this is trying to do both with in total\nfewer, but yeah, you're having to describe",
+        "start": 1573.787,
+        "duration": 6.44
+    },
+    {
+        "text": "orientation with if that's all you cared\nabout, then yeah, it's using more degrees.",
+        "start": 1580.237,
+        "duration": 4.88
+    },
+    {
+        "text": "It assumes you're centered\non the object somehow, right?",
+        "start": 1585.117,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 1589.067,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 1589.577,
+        "duration": 0.25
+    },
+    {
+        "text": "That you're like holding it at a, a\nfairly frequent, or common distance.",
+        "start": 1589.827,
+        "duration": 5.02
+    },
+    {
+        "text": "if I am actually the distance\ndoesn't hopefully doesn't",
+        "start": 1597.717,
+        "duration": 3.56
+    },
+    {
+        "text": "necessarily matter so much.",
+        "start": 1601.277,
+        "duration": 0.9
+    },
+    {
+        "text": "It's more that you're Yeah.",
+        "start": 1602.177,
+        "duration": 1.365
+    },
+    {
+        "text": "Rotating it consistently with\nrespect to your eye, you're not",
+        "start": 1603.542,
+        "duration": 3.62
+    },
+    {
+        "text": "moving it all over the place.",
+        "start": 1607.362,
+        "duration": 1.1
+    },
+    {
+        "text": "if I'm presenting this to the eye\nall at once in a flash, and we",
+        "start": 1609.882,
+        "duration": 3.25
+    },
+    {
+        "text": "have to assume that there's, voting\ngoing on, there's multiple models",
+        "start": 1613.132,
+        "duration": 3.42
+    },
+    {
+        "text": "trying to model this at once.",
+        "start": 1616.572,
+        "duration": 1.01
+    },
+    {
+        "text": "otherwise I have to think about\nOh, I can only see a small part",
+        "start": 1619.172,
+        "duration": 2.46
+    },
+    {
+        "text": "of the object through a straw in\nwhich I'd have to move my eyes.",
+        "start": 1621.632,
+        "duration": 3.03
+    },
+    {
+        "text": "So we're looking at a situation where you\nhave multiple models, multiple columns.",
+        "start": 1624.672,
+        "duration": 4.53
+    },
+    {
+        "text": "Each sampling object in different places,\nthey have to vote to reach a consensus.",
+        "start": 1629.702,
+        "duration": 5.37
+    },
+    {
+        "text": "they're not going to, in\nthis 100 millisecond example,",
+        "start": 1635.572,
+        "duration": 2.25
+    },
+    {
+        "text": "there's no, saccading going on.",
+        "start": 1637.822,
+        "duration": 2.68
+    },
+    {
+        "text": "I'm just stating things I think\nare facts in this situation.",
+        "start": 1642.352,
+        "duration": 2.88
+    },
+    {
+        "text": "I'm not drawing any conclusions from it.",
+        "start": 1645.232,
+        "duration": 2.11
+    },
+    {
+        "text": "And,",
+        "start": 1649.722,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah, I think, yeah, this, so\nthis won't be able to tell.",
+        "start": 1655.502,
+        "duration": 4.48
+    },
+    {
+        "text": "This doesn't say anything about rotations\nabout the principal axis, right?",
+        "start": 1661.627,
+        "duration": 4.15
+    },
+    {
+        "text": "That's the degree of freedom\nthat's, is that true?",
+        "start": 1665.807,
+        "duration": 2.94
+    },
+    {
+        "text": "That's what's missing here.",
+        "start": 1668.747,
+        "duration": 1.23
+    },
+    {
+        "text": "So that's what, but that's what\ncomes with the view sphere.",
+        "start": 1670.937,
+        "duration": 3.31
+    },
+    {
+        "text": "With the position, it comes with\nthe position of the view sphere.",
+        "start": 1674.747,
+        "duration": 2.34
+    },
+    {
+        "text": "Yeah, the position on the view sphere.",
+        "start": 1677.117,
+        "duration": 1.37
+    },
+    {
+        "text": "Yeah, It's because we've\ntaken this complex object and",
+        "start": 1678.777,
+        "duration": 4.66
+    },
+    {
+        "text": "flattened it out to a sphere.",
+        "start": 1683.517,
+        "duration": 1.3
+    },
+    {
+        "text": "And you can only move along the surface.",
+        "start": 1686.717,
+        "duration": 1.96
+    },
+    {
+        "text": "yeah, doing this without movement,\nisn't something I've, I'm assuming",
+        "start": 1695.012,
+        "duration": 7.77
+    },
+    {
+        "text": "at this point that This is being\nsolved by, yeah, rotating the object.",
+        "start": 1702.782,
+        "duration": 5.42
+    },
+    {
+        "text": "I, I have, I, have a approach\nthis with the idea of, how to",
+        "start": 1709.522,
+        "duration": 3.54
+    },
+    {
+        "text": "do this with, flash inference.",
+        "start": 1713.062,
+        "duration": 1.68
+    },
+    {
+        "text": "Okay.",
+        "start": 1715.722,
+        "duration": 0.03
+    },
+    {
+        "text": "but that earlier, experimental data\nwas with flash inference, right?",
+        "start": 1716.052,
+        "duration": 3.84
+    },
+    {
+        "text": "yeah.",
+        "start": 1720.432,
+        "duration": 0.51
+    },
+    {
+        "text": "I'd have to double check because\nthat could have, for example, been",
+        "start": 1721.122,
+        "duration": 3.36
+    },
+    {
+        "text": "a corrected, estimate of how long it\ntakes them to respond as opposed to how",
+        "start": 1724.482,
+        "duration": 5.73
+    },
+    {
+        "text": "long the stimulus was presented for.",
+        "start": 1730.212,
+        "duration": 1.29
+    },
+    {
+        "text": "I assume that, was how long\nit took them to respond.",
+        "start": 1734.597,
+        "duration": 1.86
+    },
+    {
+        "text": "That was my assumption.",
+        "start": 1736.467,
+        "duration": 0.74
+    },
+    {
+        "text": "Okay.",
+        "start": 1738.197,
+        "duration": 0.36
+    },
+    {
+        "text": "So after stimulus onset, yeah, they flash\nan image and how quickly can you push",
+        "start": 1739.117,
+        "duration": 4.37
+    },
+    {
+        "text": "the button, or identify or something?",
+        "start": 1743.487,
+        "duration": 2.21
+    },
+    {
+        "text": "no, it has to be an offset\nbecause you can't have zero.",
+        "start": 1745.907,
+        "duration": 2.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 1750.067,
+        "duration": 0.29
+    },
+    {
+        "text": "Oh, so the shortest time that a person\ncan pursue something is 60 milliseconds.",
+        "start": 1751.767,
+        "duration": 4.465
+    },
+    {
+        "text": "Yeah.",
+        "start": 1756.692,
+        "duration": 0.37
+    },
+    {
+        "text": "could you show it again?",
+        "start": 1758.812,
+        "duration": 0.78
+    },
+    {
+        "text": "yeah, you asked me today is going\nto do a press or whatever it is.",
+        "start": 1760.652,
+        "duration": 4.53
+    },
+    {
+        "text": "Okay, it is stimulus duration.",
+        "start": 1765.262,
+        "duration": 1.82
+    },
+    {
+        "text": "It is mean stimulus duration.",
+        "start": 1767.232,
+        "duration": 1.77
+    },
+    {
+        "text": "Oh, it's stimulus duration.",
+        "start": 1769.682,
+        "duration": 1.39
+    },
+    {
+        "text": "So what, does it mean?",
+        "start": 1771.982,
+        "duration": 0.82
+    },
+    {
+        "text": "It means",
+        "start": 1772.802,
+        "duration": 0.36
+    },
+    {
+        "text": "How do you mention it?",
+        "start": 1776.152,
+        "duration": 0.77
+    },
+    {
+        "text": "This means if I gave you, if I,\nif the stimulus was any shorter",
+        "start": 1777.472,
+        "duration": 3.87
+    },
+    {
+        "text": "period of time than this, you\nwouldn't be able to recognize it?",
+        "start": 1781.342,
+        "duration": 2.22
+    },
+    {
+        "text": "Is that what that means?",
+        "start": 1783.562,
+        "duration": 0.75
+    },
+    {
+        "text": "This is the, time it takes to which\nyou can then recognize the object?",
+        "start": 1785.362,
+        "duration": 2.61
+    },
+    {
+        "text": "Up to some accuracy level, probably.",
+        "start": 1788.022,
+        "duration": 1.85
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 1790.582,
+        "duration": 0.77
+    },
+    {
+        "text": "Probably something like that.",
+        "start": 1791.372,
+        "duration": 0.9
+    },
+    {
+        "text": "I need to look again, to be sure.",
+        "start": 1793.762,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay.",
+        "start": 1796.082,
+        "duration": 0.39
+    },
+    {
+        "text": "But yeah, it would be something like that.",
+        "start": 1796.682,
+        "duration": 1.09
+    },
+    {
+        "text": "So just to be clear, is the\nresponse identification the",
+        "start": 1799.162,
+        "duration": 2.46
+    },
+    {
+        "text": "object or identification the\norientation of the object?",
+        "start": 1801.642,
+        "duration": 2.22
+    },
+    {
+        "text": "the object.",
+        "start": 1805.052,
+        "duration": 0.5
+    },
+    {
+        "text": "Okay, so you could, presumably,\nassuming that there's some verbal",
+        "start": 1806.727,
+        "duration": 7.6
+    },
+    {
+        "text": "omission involved, rather than\nit's purely phobia omission, you",
+        "start": 1814.337,
+        "duration": 3.01
+    },
+    {
+        "text": "might get a general impression.",
+        "start": 1817.357,
+        "duration": 1.25
+    },
+    {
+        "text": "Exactly, yeah.",
+        "start": 1819.707,
+        "duration": 1.37
+    },
+    {
+        "text": "Yeah, you're gonna get the whole\nimage, the whole thing's gonna be",
+        "start": 1821.077,
+        "duration": 2.21
+    },
+    {
+        "text": "presented to you, but but it's, I'm\ngoing to assume that a soda straw is",
+        "start": 1823.287,
+        "duration": 6.01
+    },
+    {
+        "text": "just not enough to, solve the problem.",
+        "start": 1829.297,
+        "duration": 2.793
+    },
+    {
+        "text": "Yeah, It has to be, involving\nvoting of some sort.",
+        "start": 1832.09,
+        "duration": 4.272
+    },
+    {
+        "text": "Otherwise, you just, because you can't\ndo it with a straw, therefore, and",
+        "start": 1836.412,
+        "duration": 4.53
+    },
+    {
+        "text": "we're not moving the eyes, because\nthis is a stimulus presentation,",
+        "start": 1840.942,
+        "duration": 2.72
+    },
+    {
+        "text": "you don't have the option to move\nthe eyes in this purge of time.",
+        "start": 1845.142,
+        "duration": 2.62
+    },
+    {
+        "text": "okay.",
+        "start": 1852.532,
+        "duration": 0.43
+    },
+    {
+        "text": "but yeah, basically, what I'm trying\nto get across is that it may be that,",
+        "start": 1856.812,
+        "duration": 5.86
+    },
+    {
+        "text": "so, they the, first stuff I, discussed\nabout testing most likely orientations",
+        "start": 1863.302,
+        "duration": 5.31
+    },
+    {
+        "text": "and heuristics, that It's more general\nthat isn't specific to the view sphere.",
+        "start": 1868.612,
+        "duration": 4.41
+    },
+    {
+        "text": "But, yeah, what I was just trying to\nget across was that it may be that",
+        "start": 1874.647,
+        "duration": 4.17
+    },
+    {
+        "text": "if we adopt this approach, we can\nreduce the degrees of freedom, that",
+        "start": 1878.817,
+        "duration": 4.68
+    },
+    {
+        "text": "basically need to be considered,\nwhich can make the system faster.",
+        "start": 1883.497,
+        "duration": 3.6
+    },
+    {
+        "text": "no matter how it's, yeah, implemented.",
+        "start": 1888.807,
+        "duration": 3.03
+    },
+    {
+        "text": "and this is just",
+        "start": 1895.387,
+        "duration": 0.73
+    },
+    {
+        "text": "hopefully making it a bit\nclearer, Yeah, how you can test,",
+        "start": 1898.857,
+        "duration": 3.26
+    },
+    {
+        "text": "with this kind of probability\ndistribution, for example, with, particles",
+        "start": 1904.267,
+        "duration": 4.14
+    },
+    {
+        "text": "where, initially you might have this prior\nthat the Principle axis is either at the",
+        "start": 1908.787,
+        "duration": 6.115
+    },
+    {
+        "text": "kind of upright or inverted or on its\nside, which is anywhere along the equator.",
+        "start": 1915.002,
+        "duration": 4.86
+    },
+    {
+        "text": "But then, for example, you get a, a sensed\nkind of curvature feature, which has the",
+        "start": 1920.972,
+        "duration": 6.05
+    },
+    {
+        "text": "principal curvatures oriented like this.",
+        "start": 1927.052,
+        "duration": 2.17
+    },
+    {
+        "text": "And so that gives you some low evidence\nthat principal axis might be actually",
+        "start": 1929.602,
+        "duration": 3.93
+    },
+    {
+        "text": "oriented like that, or, I forgot to\ninclude it there, or around that equator.",
+        "start": 1933.532,
+        "duration": 5.39
+    },
+    {
+        "text": "And then you just update your sampling.",
+        "start": 1939.292,
+        "duration": 1.71
+    },
+    {
+        "text": "based on that, Neils, I just one\nthing about, because when I, we",
+        "start": 1942.372,
+        "duration": 5.12
+    },
+    {
+        "text": "went to the four dimensional thing.",
+        "start": 1947.492,
+        "duration": 1.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 1948.902,
+        "duration": 0.06
+    },
+    {
+        "text": "Are you assuming it is possible for the\nprincipal axis to pointing head on at you?",
+        "start": 1949.562,
+        "duration": 5.46
+    },
+    {
+        "text": "Yeah, that's what I'm,\nthat's what I was saying.",
+        "start": 1955.892,
+        "duration": 1.86
+    },
+    {
+        "text": "That if, that's what happens, then,\nwhat you need to, then you know",
+        "start": 1957.752,
+        "duration": 3.81
+    },
+    {
+        "text": "exactly what the principal axi.",
+        "start": 1961.562,
+        "duration": 1.355
+    },
+    {
+        "text": "Because the feature you're seeing\nis associated with the exact",
+        "start": 1963.412,
+        "duration": 5.19
+    },
+    {
+        "text": "direction of the principal axis.",
+        "start": 1968.602,
+        "duration": 1.19
+    },
+    {
+        "text": "But then you need to test the\norientation about the principal axis.",
+        "start": 1970.382,
+        "duration": 4.28
+    },
+    {
+        "text": "if the principal axis is head on\nto you, you don't have any features",
+        "start": 1975.322,
+        "duration": 3.23
+    },
+    {
+        "text": "in line with it to validate it.",
+        "start": 1978.582,
+        "duration": 1.79
+    },
+    {
+        "text": "What do you mean?",
+        "start": 1982.192,
+        "duration": 0.55
+    },
+    {
+        "text": "So in this case it would be the lid.",
+        "start": 1983.132,
+        "duration": 2.58
+    },
+    {
+        "text": "if you're looking directly at the lid, you\nmay or may not have enough information.",
+        "start": 1987.587,
+        "duration": 6.53
+    },
+    {
+        "text": "I'm assuming there's more information\nif the principal axis is somehow,",
+        "start": 1995.447,
+        "duration": 4.69
+    },
+    {
+        "text": "parallel to the plane of vision,\nrather than perpendicular to it.",
+        "start": 2001.677,
+        "duration": 3.54
+    },
+    {
+        "text": "if that was the case, then, is that true?",
+        "start": 2008.587,
+        "duration": 3.3
+    },
+    {
+        "text": "What do you mean about\nmore information, sorry?",
+        "start": 2012.417,
+        "duration": 1.63
+    },
+    {
+        "text": "when the if you're used to seeing the\nobject with the principal axis vertical.",
+        "start": 2016.452,
+        "duration": 8.85
+    },
+    {
+        "text": "Okay, yeah, it's not perpendicular to you.",
+        "start": 2025.802,
+        "duration": 2.67
+    },
+    {
+        "text": "Yeah, it's parallel to the plane of view.",
+        "start": 2029.902,
+        "duration": 2.09
+    },
+    {
+        "text": "that's your, if you wish, your most common\nviewing position with gravity obtaining",
+        "start": 2032.822,
+        "duration": 4.78
+    },
+    {
+        "text": "and you're coming in from the side.",
+        "start": 2037.602,
+        "duration": 1.56
+    },
+    {
+        "text": "it takes a little bit of mental leisure\nto me to say if all of a sudden I'm,",
+        "start": 2041.462,
+        "duration": 6.71
+    },
+    {
+        "text": "I've not seen the thing from the top\nand all of a sudden I'm being shown the",
+        "start": 2048.792,
+        "duration": 3.07
+    },
+    {
+        "text": "picture with the lid being the foremost\nthing, it might take a little bit more",
+        "start": 2051.872,
+        "duration": 5.04
+    },
+    {
+        "text": "effort to actually recognize that because\nthe principal axis is now head on and",
+        "start": 2056.992,
+        "duration": 4.35
+    },
+    {
+        "text": "all the features that we've seen so\nfar have been oriented with respect.",
+        "start": 2061.352,
+        "duration": 3.58
+    },
+    {
+        "text": "Isn't that the same as saying if I'm\nseeing the object from a viewpoint",
+        "start": 2066.022,
+        "duration": 3.025
+    },
+    {
+        "text": "I've never seen it before, I may not\nbe able to recognize it at all, right?",
+        "start": 2069.047,
+        "duration": 3.22
+    },
+    {
+        "text": "It's because I just haven't seen it\nfrom that direction, or Potentially,",
+        "start": 2072.297,
+        "duration": 3.24
+    },
+    {
+        "text": "but the, I guess what I'm trying to\nsay is that it's not the most common.",
+        "start": 2075.577,
+        "duration": 3.976
+    },
+    {
+        "text": "Yeah, but the most common means\nI haven't seen it very often.",
+        "start": 2079.553,
+        "duration": 2.504
+    },
+    {
+        "text": "It might, it may or may\nnot have a lot of features.",
+        "start": 2082.057,
+        "duration": 1.74
+    },
+    {
+        "text": "For example, if I look\nat the bottom of a car.",
+        "start": 2083.827,
+        "duration": 1.88
+    },
+    {
+        "text": "there's a lot of stuff there that could\nidentify the bottom of a card, but",
+        "start": 2086.972,
+        "duration": 3.05
+    },
+    {
+        "text": "unless you spend some time underneath the\ncards, you may not recognize it at all.",
+        "start": 2090.022,
+        "duration": 2.89
+    },
+    {
+        "text": "Where, I'm trying to head\nwith this is that if, the,",
+        "start": 2093.872,
+        "duration": 4.93
+    },
+    {
+        "text": "capability of recognizing the,",
+        "start": 2098.832,
+        "duration": 2.53
+    },
+    {
+        "text": "principal access is only one dimensional.",
+        "start": 2103.452,
+        "duration": 2.64
+    },
+    {
+        "text": "In other words, it's\nrotation in the plane.",
+        "start": 2106.132,
+        "duration": 2.45
+    },
+    {
+        "text": "It still gives you a lot of affordance in\ntrying to figure out what the object is.",
+        "start": 2108.872,
+        "duration": 5.11
+    },
+    {
+        "text": "it takes in my mind.",
+        "start": 2115.002,
+        "duration": 2.46
+    },
+    {
+        "text": "If you're allowing the principal\naccess to come out of the plane",
+        "start": 2117.522,
+        "duration": 3.54
+    },
+    {
+        "text": "of the viewing direction, you're\nasking a lot more in the system.",
+        "start": 2121.212,
+        "duration": 4.09
+    },
+    {
+        "text": "you would expect it to be slower axis.",
+        "start": 2127.637,
+        "duration": 2.7
+    },
+    {
+        "text": "So, yeah.",
+        "start": 2132.987,
+        "duration": 0.33
+    },
+    {
+        "text": "With, this approach, you\nwould expect it to be slower.",
+        "start": 2133.587,
+        "duration": 2.01
+    },
+    {
+        "text": "If the principal axis is coming out of\nthe image at the f the I by definition,",
+        "start": 2135.597,
+        "duration": 4.53
+    },
+    {
+        "text": "if that's the case, then you're looking\nat an uncommon view by definition.",
+        "start": 2140.127,
+        "duration": 3.99
+    },
+    {
+        "text": "so I'm saying that you might get.",
+        "start": 2146.187,
+        "duration": 1.525
+    },
+    {
+        "text": "A way in a lot of situations with just\nhaving one dimension of the principal",
+        "start": 2148.702,
+        "duration": 4.59
+    },
+    {
+        "text": "axis, identifying that it's going to\nbe somewhat easier task than the case",
+        "start": 2153.292,
+        "duration": 5.86
+    },
+    {
+        "text": "where it's foreshortened in your right.",
+        "start": 2159.152,
+        "duration": 2.2
+    },
+    {
+        "text": "But, yeah, it'll definitely be\neasier and that would be preferable.",
+        "start": 2161.352,
+        "duration": 4.02
+    },
+    {
+        "text": "But of course, there's going\nto be the possibility that the",
+        "start": 2166.272,
+        "duration": 3.58
+    },
+    {
+        "text": "object will be oriented that way.",
+        "start": 2169.852,
+        "duration": 1.43
+    },
+    {
+        "text": "There's a possibility but\nit might be you might.",
+        "start": 2172.612,
+        "duration": 2.55
+    },
+    {
+        "text": "Bring other mechanisms\nto bear to resolve that.",
+        "start": 2176.187,
+        "duration": 2.67
+    },
+    {
+        "text": "In other words, you might not be able\nto do it in a flash recognition, but you",
+        "start": 2179.337,
+        "duration": 2.85
+    },
+    {
+        "text": "might be able to do secondary mechanism.",
+        "start": 2182.187,
+        "duration": 2.46
+    },
+    {
+        "text": "Okay.",
+        "start": 2186.337,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah, I see what you're saying.",
+        "start": 2186.817,
+        "duration": 0.74
+    },
+    {
+        "text": "Yeah.",
+        "start": 2187.557,
+        "duration": 0.17
+    },
+    {
+        "text": "So just basically consider.",
+        "start": 2187.727,
+        "duration": 1.6
+    },
+    {
+        "text": "Yeah, whether it needs some other kind\nof, yeah, step involved when that happens.",
+        "start": 2189.327,
+        "duration": 4.73
+    },
+    {
+        "text": "Yeah, there are definitely times, I\ncan, easily imagine situations where",
+        "start": 2194.657,
+        "duration": 4.03
+    },
+    {
+        "text": "a flash inference is not going to work\nand then you have to, start attending",
+        "start": 2198.687,
+        "duration": 4.01
+    },
+    {
+        "text": "the different features and figuring out\nwhat those features are and, but there's",
+        "start": 2202.707,
+        "duration": 3.81
+    },
+    {
+        "text": "other times where you can do it in flash,\ninference, at different orientations.",
+        "start": 2206.517,
+        "duration": 4.08
+    },
+    {
+        "text": "So it seems as we were saying earlier,\nit's a combination of both, right?",
+        "start": 2211.247,
+        "duration": 2.57
+    },
+    {
+        "text": "There are times when you have\nto break apart the system and",
+        "start": 2213.857,
+        "duration": 3.0
+    },
+    {
+        "text": "attend to different components.",
+        "start": 2216.937,
+        "duration": 1.08
+    },
+    {
+        "text": "Other times you don't have to, Yeah,\nI'm actually, in some ways I'm surprised",
+        "start": 2218.027,
+        "duration": 6.72
+    },
+    {
+        "text": "by how well this works, because\nthere's classic examples that, for",
+        "start": 2224.747,
+        "duration": 3.79
+    },
+    {
+        "text": "example, distinguishing T's and L's\nand recognizing those in periphery,",
+        "start": 2228.537,
+        "duration": 5.63
+    },
+    {
+        "text": "with very short presentation times,",
+        "start": 2235.467,
+        "duration": 1.69
+    },
+    {
+        "text": "if the T's and L's are oriented right\nside up, the familiar orientation, then",
+        "start": 2239.237,
+        "duration": 4.67
+    },
+    {
+        "text": "you can do that pre attentively, and\nvery quickly, but if you, if they're",
+        "start": 2243.907,
+        "duration": 5.14
+    },
+    {
+        "text": "skewed at 45 degrees angles, 45 degree\nangles, then you can't so you're fixing",
+        "start": 2249.047,
+        "duration": 5.91
+    },
+    {
+        "text": "at a point your fixation at a point they\nshowed in the periphery and you have to.",
+        "start": 2254.957,
+        "duration": 3.75
+    },
+    {
+        "text": "Yeah.",
+        "start": 2258.707,
+        "duration": 0.37
+    },
+    {
+        "text": "Okay.",
+        "start": 2259.427,
+        "duration": 0.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 2259.747,
+        "duration": 0.32
+    },
+    {
+        "text": "And basically, yeah, so there is an effect\nof kind of the familiarity of an object.",
+        "start": 2261.917,
+        "duration": 4.91
+    },
+    {
+        "text": "And being able to in parallel, process it.",
+        "start": 2267.297,
+        "duration": 4.56
+    },
+    {
+        "text": "Interesting.",
+        "start": 2273.277,
+        "duration": 0.58
+    },
+    {
+        "text": "What puzzles me about this experiment\nyou've shown is, it's, if it's, if",
+        "start": 2274.227,
+        "duration": 4.87
+    },
+    {
+        "text": "there's some mental process going on,\nit takes longer if it's at an angle.",
+        "start": 2279.097,
+        "duration": 3.81
+    },
+    {
+        "text": "Why does it matter how long\nit's presented on screen?",
+        "start": 2284.017,
+        "duration": 2.4
+    },
+    {
+        "text": "Because what you show here on the\ny axis is the presentation time.",
+        "start": 2286.597,
+        "duration": 3.97
+    },
+    {
+        "text": "Because what they typically do\nis, I think, that's probably what",
+        "start": 2290.567,
+        "duration": 3.52
+    },
+    {
+        "text": "happened here is once the stimulus\nis gone, they mask it with some.",
+        "start": 2294.097,
+        "duration": 3.22
+    },
+    {
+        "text": "Random dos or some mask thing, and that\nwipes out your, processing completely.",
+        "start": 2297.697,
+        "duration": 5.83
+    },
+    {
+        "text": "So if you, it's not like the image\nis gone and you can still think",
+        "start": 2304.237,
+        "duration": 3.3
+    },
+    {
+        "text": "about it in your V one and V two.",
+        "start": 2307.807,
+        "duration": 1.5
+    },
+    {
+        "text": "It's like they",
+        "start": 2309.307,
+        "duration": 0.45
+    },
+    {
+        "text": "is being disrupted.",
+        "start": 2311.857,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 2312.577,
+        "duration": 0.21
+    },
+    {
+        "text": "So I imagine that's, I'm not sure\nthat's typically what they do.",
+        "start": 2313.387,
+        "duration": 4.14
+    },
+    {
+        "text": "Yeah.",
+        "start": 2317.797,
+        "duration": 0.27
+    },
+    {
+        "text": "Otherwise, you're right, you can\njust keep imagine playing it.",
+        "start": 2319.232,
+        "duration": 3.24
+    },
+    {
+        "text": "If you didn't do that, which is\ninteresting, like, where is that?",
+        "start": 2322.472,
+        "duration": 4.05
+    },
+    {
+        "text": "Where's that image reside?",
+        "start": 2326.732,
+        "duration": 1.42
+    },
+    {
+        "text": "I guess the cells keep\nfiring or something.",
+        "start": 2328.842,
+        "duration": 1.61
+    },
+    {
+        "text": "Yeah.",
+        "start": 2330.582,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 2330.992,
+        "duration": 0.18
+    },
+    {
+        "text": "But they keep firing away.",
+        "start": 2331.812,
+        "duration": 1.36
+    },
+    {
+        "text": "that if I didn't mask it, they keep firing\naway that I can mentally manipulate still.",
+        "start": 2333.632,
+        "duration": 4.19
+    },
+    {
+        "text": "So, it's like, you've got this\nimpression, but somehow I'm still able",
+        "start": 2338.842,
+        "duration": 2.89
+    },
+    {
+        "text": "to manipulate that, even though I'm\nnot getting it, it's you'd be trying to",
+        "start": 2341.732,
+        "duration": 3.16
+    },
+    {
+        "text": "give it the neural mechanisms for that.",
+        "start": 2344.892,
+        "duration": 1.2
+    },
+    {
+        "text": "It's weird.",
+        "start": 2346.092,
+        "duration": 0.72
+    },
+    {
+        "text": "to, visualize things too, when\nthere's no signals at all.",
+        "start": 2352.752,
+        "duration": 3.16
+    },
+    {
+        "text": "So there is circuitry for doing both.",
+        "start": 2356.052,
+        "duration": 4.82
+    },
+    {
+        "text": "They did their column.",
+        "start": 2360.922,
+        "duration": 1.11
+    },
+    {
+        "text": "that experiment is pretty\nconsistent with that.",
+        "start": 2365.002,
+        "duration": 2.16
+    },
+    {
+        "text": "idea we presented a couple of months\nago, where you have each cortical column",
+        "start": 2368.312,
+        "duration": 6.99
+    },
+    {
+        "text": "maybe having a few different orientations\nthat it's exploring in parallel and",
+        "start": 2375.352,
+        "duration": 3.95
+    },
+    {
+        "text": "different cortical columns at different\norientations that they together figure",
+        "start": 2379.342,
+        "duration": 4.43
+    },
+    {
+        "text": "out which is the best one without\nany, additional sensory equipment.",
+        "start": 2383.772,
+        "duration": 6.155
+    },
+    {
+        "text": "Yeah, and if you just have more cortical\ncolumns representing the more likely",
+        "start": 2391.187,
+        "duration": 3.31
+    },
+    {
+        "text": "orientations, then it's more likely\nthat those will converge quicker.",
+        "start": 2394.497,
+        "duration": 3.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 2398.307,
+        "duration": 0.29
+    },
+    {
+        "text": "yeah.",
+        "start": 2402.397,
+        "duration": 0.23
+    },
+    {
+        "text": "just the kind of last thing to say on\nthe rotation invariance is just that,",
+        "start": 2403.397,
+        "duration": 3.35
+    },
+    {
+        "text": "one thing I haven't addressed is how do\nyou actually learn the principal axis?",
+        "start": 2407.127,
+        "duration": 3.38
+    },
+    {
+        "text": "I mentioned that it was relative to\nhow the object normally sits in the",
+        "start": 2410.697,
+        "duration": 3.11
+    },
+    {
+        "text": "environment, but, yeah, I was talking to\nsuper tire about this the other day, and",
+        "start": 2413.807,
+        "duration": 4.56
+    },
+    {
+        "text": "yeah, he was just maybe there's something\nwhere we can initialize it randomly.",
+        "start": 2419.027,
+        "duration": 3.91
+    },
+    {
+        "text": "And then, yeah, iteratively update this\nand that's something to do with the kind",
+        "start": 2423.452,
+        "duration": 4.56
+    },
+    {
+        "text": "of frequency of encounter orientations or,\nsomething along those lines, I think, but",
+        "start": 2428.012,
+        "duration": 4.61
+    },
+    {
+        "text": "the way you phrase it as being dependent\non gravity makes it actually easier.",
+        "start": 2433.062,
+        "duration": 4.26
+    },
+    {
+        "text": "It's not.",
+        "start": 2438.282,
+        "duration": 0.42
+    },
+    {
+        "text": "Making it shape based is a\nlittle bit trickier, I think.",
+        "start": 2439.392,
+        "duration": 2.24
+    },
+    {
+        "text": "yeah, I think the gravity would\ndefinitely be a good starting point.",
+        "start": 2444.132,
+        "duration": 3.86
+    },
+    {
+        "text": "Just assume that the thing is, your\nfirst impression is assume the thing",
+        "start": 2448.032,
+        "duration": 3.11
+    },
+    {
+        "text": "is oriented vertically relative to\ngravity, is that what you're saying?",
+        "start": 2451.142,
+        "duration": 2.26
+    },
+    {
+        "text": "That would happen most of the time.",
+        "start": 2454.142,
+        "duration": 1.24
+    },
+    {
+        "text": "Yeah, some of the time you might see this\nfirst time on its angle, but very likely",
+        "start": 2455.382,
+        "duration": 4.58
+    },
+    {
+        "text": "the first time you see it, it's oriented\nin a natural way if it's gravity based.",
+        "start": 2460.342,
+        "duration": 3.32
+    },
+    {
+        "text": "And, if you, yeah, I'm assuming that over\nmultiple sessions you would encounter",
+        "start": 2464.532,
+        "duration": 4.84
+    },
+    {
+        "text": "an object, you wouldn't necessarily.",
+        "start": 2469.372,
+        "duration": 1.34
+    },
+    {
+        "text": "I suppose your, principal axis on the,\nif the first time you encountered it,",
+        "start": 2471.662,
+        "duration": 3.28
+    },
+    {
+        "text": "if that's some weird angle, then maybe\nyour principal axis is initialized",
+        "start": 2475.002,
+        "duration": 3.69
+    },
+    {
+        "text": "at that angle, but, that it could be\nupdated as, a more common orientation.",
+        "start": 2478.692,
+        "duration": 4.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 2483.782,
+        "duration": 0.28
+    },
+    {
+        "text": "And we typically, learn to the world\nwe, experienced things multiple",
+        "start": 2486.482,
+        "duration": 5.89
+    },
+    {
+        "text": "times, even a single time I'll\nhold something around or, it seems.",
+        "start": 2492.372,
+        "duration": 4.43
+    },
+    {
+        "text": "It's hard to imagine, oh, I only\nsaw the copy cup once and it",
+        "start": 2497.867,
+        "duration": 2.28
+    },
+    {
+        "text": "was at this weird angle, and I\nnever saw it again, or I didn't",
+        "start": 2500.147,
+        "duration": 2.04
+    },
+    {
+        "text": "manipulate it when it was like that.",
+        "start": 2502.197,
+        "duration": 1.31
+    },
+    {
+        "text": "But in the columns paper and columns,\nwe just randomly did it in the very",
+        "start": 2503.577,
+        "duration": 5.69
+    },
+    {
+        "text": "beginning, and then we never updated it,\neven if We only did one at the beginning.",
+        "start": 2509.267,
+        "duration": 4.662
+    },
+    {
+        "text": "The anchor, the orientation,\nthe object's reference frame.",
+        "start": 2513.929,
+        "duration": 3.398
+    },
+    {
+        "text": "The object's reference frame, yeah.",
+        "start": 2517.707,
+        "duration": 1.05
+    },
+    {
+        "text": "Including orientation,\nrandomly initialized.",
+        "start": 2519.937,
+        "duration": 2.61
+    },
+    {
+        "text": "Yeah, That's a subtlety of But we\nwere, we didn't even do orientation",
+        "start": 2524.097,
+        "duration": 6.1
+    },
+    {
+        "text": "in the cons plate, but we just\ndid anchoring the grid cells.",
+        "start": 2530.197,
+        "duration": 2.27
+    },
+    {
+        "text": "We assumed the orientation, we always\nassumed orientation was the same, right?",
+        "start": 2532.467,
+        "duration": 3.01
+    },
+    {
+        "text": "And just, yeah, we didn't really\nsolve a bunch of these problems.",
+        "start": 2535.487,
+        "duration": 3.45
+    },
+    {
+        "text": "Yeah, it's an interesting exercise\nto think of this without movement,",
+        "start": 2542.267,
+        "duration": 3.16
+    },
+    {
+        "text": "just as a flash of, that forces\nyou to think about the loading.",
+        "start": 2545.457,
+        "duration": 3.19
+    },
+    {
+        "text": "Yeah,",
+        "start": 2549.267,
+        "duration": 0.43
+    },
+    {
+        "text": "And I guess on the flip side,\nit also has to work with just",
+        "start": 2553.257,
+        "duration": 2.87
+    },
+    {
+        "text": "a single cortical column.",
+        "start": 2556.147,
+        "duration": 1.0
+    },
+    {
+        "text": "With movement.",
+        "start": 2558.272,
+        "duration": 0.99
+    },
+    {
+        "text": "It has to work in both scenarios.",
+        "start": 2559.262,
+        "duration": 2.24
+    },
+    {
+        "text": "It's the same, it's just voting\nin parallel or voting over time.",
+        "start": 2565.002,
+        "duration": 2.95
+    },
+    {
+        "text": "It's the same thing.",
+        "start": 2569.042,
+        "duration": 0.64
+    },
+    {
+        "text": "It's still not clear to me, and maybe\nthis is just a misunderstanding, Mike,",
+        "start": 2572.202,
+        "duration": 4.04
+    },
+    {
+        "text": "but how voting really deals with the\nspatial arrangement of the columns,",
+        "start": 2576.242,
+        "duration": 3.58
+    },
+    {
+        "text": "because Generally, I feel like from my\nunderstanding, that's the key difference",
+        "start": 2579.842,
+        "duration": 4.94
+    },
+    {
+        "text": "is that generally with the, obviously with\ninference, you're doing path integration.",
+        "start": 2584.782,
+        "duration": 4.9
+    },
+    {
+        "text": "And so you're taking account of the\nspatial arrangement of features, whereas.",
+        "start": 2589.682,
+        "duration": 2.83
+    },
+    {
+        "text": "Voting, it's more about, okay, what is,\nthe hypo hypothesis at this location.",
+        "start": 2592.987,
+        "duration": 5.87
+    },
+    {
+        "text": "But when the voting is taking place,\nthe columns don't have any sense of",
+        "start": 2599.767,
+        "duration": 3.42
+    },
+    {
+        "text": "where they are relative to one another.",
+        "start": 2603.697,
+        "duration": 1.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 2605.352,
+        "duration": 0.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 2605.622,
+        "duration": 0.12
+    },
+    {
+        "text": "And they need to, no.",
+        "start": 2605.742,
+        "duration": 0.72
+    },
+    {
+        "text": "they would They need to.",
+        "start": 2606.732,
+        "duration": 1.465
+    },
+    {
+        "text": "We didn't.",
+        "start": 2608.197,
+        "duration": 0.33
+    },
+    {
+        "text": "We didn't show that in\nany of our papers, right?",
+        "start": 2608.527,
+        "duration": 1.68
+    },
+    {
+        "text": "no.",
+        "start": 2610.267,
+        "duration": 0.33
+    },
+    {
+        "text": "But we talked about it\nin Monty, every column.",
+        "start": 2610.597,
+        "duration": 2.37
+    },
+    {
+        "text": "the position of the sensor relative\nto the body and, this sort of thing",
+        "start": 2614.447,
+        "duration": 4.83
+    },
+    {
+        "text": "that is still being accounted for.",
+        "start": 2619.547,
+        "duration": 1.41
+    },
+    {
+        "text": "That's been, yeah.",
+        "start": 2620.997,
+        "duration": 0.76
+    },
+    {
+        "text": "Yeah.",
+        "start": 2621.817,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 2622.237,
+        "duration": 0.18
+    },
+    {
+        "text": "Okay.",
+        "start": 2622.417,
+        "duration": 0.25
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 2622.907,
+        "duration": 0.28
+    },
+    {
+        "text": "That makes it more simple.",
+        "start": 2623.227,
+        "duration": 1.18
+    },
+    {
+        "text": "I even have it, even in the\nThousand Brains book I wrote, right?",
+        "start": 2624.797,
+        "duration": 3.17
+    },
+    {
+        "text": "I was saying it's these little\nagents in the town, but now the",
+        "start": 2628.377,
+        "duration": 2.21
+    },
+    {
+        "text": "agents know where they are relative.",
+        "start": 2630.637,
+        "duration": 1.01
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 2631.837,
+        "duration": 0.42
+    },
+    {
+        "text": "Okay.",
+        "start": 2632.257,
+        "duration": 0.21
+    },
+    {
+        "text": "I remember that bit, actually.",
+        "start": 2632.467,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah.",
+        "start": 2633.487,
+        "duration": 0.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 2633.717,
+        "duration": 1.08
+    },
+    {
+        "text": "We never implemented this, I don't think.",
+        "start": 2634.797,
+        "duration": 2.34
+    },
+    {
+        "text": "No, but it is a core piece of Munty.",
+        "start": 2638.127,
+        "duration": 1.71
+    },
+    {
+        "text": "Yeah.",
+        "start": 2639.907,
+        "duration": 0.28
+    },
+    {
+        "text": "Every module.",
+        "start": 2640.187,
+        "duration": 0.9
+    },
+    {
+        "text": "Every cortical column knows its\nposition relative to the body.",
+        "start": 2641.377,
+        "duration": 3.25
+    },
+    {
+        "text": "Yeah, because otherwise it's just going\nto become another bag of features.",
+        "start": 2645.977,
+        "duration": 2.9
+    },
+    {
+        "text": "yeah.",
+        "start": 2651.157,
+        "duration": 0.31
+    },
+    {
+        "text": "And this allows it to work, whether\nit's touch plus vision or, one",
+        "start": 2651.857,
+        "duration": 4.2
+    },
+    {
+        "text": "cortical, one visual field versus\nanother visual area, it all works out.",
+        "start": 2656.057,
+        "duration": 4.59
+    },
+    {
+        "text": "It",
+        "start": 2660.647,
+        "duration": 1.94
+    },
+    {
+        "text": "has, you're estimating.",
+        "start": 2665.677,
+        "duration": 1.39
+    },
+    {
+        "text": "At the end of the day, you're estimating\nthe orientation, the pose of the object",
+        "start": 2667.382,
+        "duration": 4.07
+    },
+    {
+        "text": "relative to the body, and you know\nthe pose of the sensor relative to the",
+        "start": 2671.452,
+        "duration": 3.89
+    },
+    {
+        "text": "body, and now you just have to figure\nout the pose, and, you have the pose",
+        "start": 2675.342,
+        "duration": 7.55
+    },
+    {
+        "text": "of the sensor relative to the object.",
+        "start": 2682.892,
+        "duration": 1.55
+    },
+    {
+        "text": "Those are the three quantities\nthat you're working with.",
+        "start": 2684.732,
+        "duration": 1.69
+    },
+    {
+        "text": "In terms of,",
+        "start": 2686.422,
+        "duration": 1.121
+    },
+    {
+        "text": "Just random again, I'm just thinking\nout loud, so I just hope you don't mind.",
+        "start": 2691.397,
+        "duration": 3.05
+    },
+    {
+        "text": "I keep coming back to this idea that\nI, there's a really good chance in",
+        "start": 2695.907,
+        "duration": 3.02
+    },
+    {
+        "text": "my mind that, this orientation, a lot\nof, a good portion of the orientation",
+        "start": 2698.927,
+        "duration": 3.64
+    },
+    {
+        "text": "is being handled in the thalamus.",
+        "start": 2702.637,
+        "duration": 1.93
+    },
+    {
+        "text": "And one of the things about the\nthalamus is it takes, it is a",
+        "start": 2705.297,
+        "duration": 3.1
+    },
+    {
+        "text": "way for many, large areas of the\ncortex to be processed at once.",
+        "start": 2708.397,
+        "duration": 3.91
+    },
+    {
+        "text": "because it's all close together there.",
+        "start": 2712.967,
+        "duration": 1.29
+    },
+    {
+        "text": "it's not as distributed, this\nlarge area would be one, but the,",
+        "start": 2714.697,
+        "duration": 3.82
+    },
+    {
+        "text": "equivalent, processing center in\nthe thalamus is close enough that",
+        "start": 2718.637,
+        "duration": 3.41
+    },
+    {
+        "text": "they can all be connected directly.",
+        "start": 2722.227,
+        "duration": 1.26
+    },
+    {
+        "text": "And so that would imply somehow that\nthis that the orientation resolution",
+        "start": 2723.977,
+        "duration": 4.66
+    },
+    {
+        "text": "is being done, it's being applied\nequal to every, all the columns.",
+        "start": 2728.647,
+        "duration": 4.26
+    },
+    {
+        "text": "It's not like each column is\nindependently solving the orientation.",
+        "start": 2732.967,
+        "duration": 3.54
+    },
+    {
+        "text": "It's like they're solving it together.",
+        "start": 2736.527,
+        "duration": 1.46
+    },
+    {
+        "text": "you can have multiple, you can't,\nyou can have multiple hypotheses,",
+        "start": 2740.567,
+        "duration": 3.47
+    },
+    {
+        "text": "but there's only one to be tested\nat a time, something like that.",
+        "start": 2744.087,
+        "duration": 2.65
+    },
+    {
+        "text": "I'm just, again, thinking out loud.",
+        "start": 2748.177,
+        "duration": 1.46
+    },
+    {
+        "text": "Yeah.",
+        "start": 2750.377,
+        "duration": 0.18
+    },
+    {
+        "text": "And we thought about the processing\nspeed of the it seems like It should",
+        "start": 2750.557,
+        "duration": 4.085
+    },
+    {
+        "text": "be all at the same time, right?",
+        "start": 2754.652,
+        "duration": 2.27
+    },
+    {
+        "text": "it's just specific orientations.",
+        "start": 2757.282,
+        "duration": 1.45
+    },
+    {
+        "text": "I wasn't thinking about speed.",
+        "start": 2759.212,
+        "duration": 1.31
+    },
+    {
+        "text": "I was just thinking in terms\nof, the thalamus is a way of,",
+        "start": 2760.522,
+        "duration": 3.99
+    },
+    {
+        "text": "it's one of the questions I've always\nasked is why, why is the thalamus, why,",
+        "start": 2767.202,
+        "duration": 4.19
+    },
+    {
+        "text": "if it's, many people think of it as an\nextension of the cortex, but why isn't",
+        "start": 2771.432,
+        "duration": 4.0
+    },
+    {
+        "text": "it distributed throughout the cortex?",
+        "start": 2775.432,
+        "duration": 1.47
+    },
+    {
+        "text": "One of the reasons is if you bring it all\ntogether, then you can Do a simultaneous",
+        "start": 2777.082,
+        "duration": 3.83
+    },
+    {
+        "text": "process that affects everybody and so\nall the columns, it's a way of applying",
+        "start": 2780.952,
+        "duration": 4.73
+    },
+    {
+        "text": "something quickly to all the columns.",
+        "start": 2785.742,
+        "duration": 1.41
+    },
+    {
+        "text": "So again, it just suggests that from,\nit would suggest that the individual",
+        "start": 2787.622,
+        "duration": 4.78
+    },
+    {
+        "text": "columns aren't independently trying out\ndifferent hypotheses about orientation.",
+        "start": 2792.402,
+        "duration": 3.41
+    },
+    {
+        "text": "There's going to be a single\nattempt, that applies to everyone.",
+        "start": 2796.862,
+        "duration": 4.04
+    },
+    {
+        "text": "If that doesn't work, there's\ngoing to be another one.",
+        "start": 2800.902,
+        "duration": 1.741
+    },
+    {
+        "text": "It goes away from, the classic\nvoting on orientation, more towards",
+        "start": 2802.643,
+        "duration": 7.019
+    },
+    {
+        "text": "it's going to be, everyone can,\ncontribute a guess, but the",
+        "start": 2812.142,
+        "duration": 3.5
+    },
+    {
+        "text": "Thalmus is going to try one.",
+        "start": 2815.642,
+        "duration": 0.99
+    },
+    {
+        "text": "It's not going to, it's not\ngoing to multiply the hypothesis",
+        "start": 2816.632,
+        "duration": 1.78
+    },
+    {
+        "text": "going out at the same time.",
+        "start": 2818.482,
+        "duration": 0.94
+    },
+    {
+        "text": "The paper I read, might have been\nless for anatomy and more of a",
+        "start": 2820.192,
+        "duration": 7.323
+    },
+    {
+        "text": "hypothesis, but the notion was that\nfor the LGN, that a certain amount",
+        "start": 2827.515,
+        "duration": 5.237
+    },
+    {
+        "text": "of edge detection was going on.",
+        "start": 2832.832,
+        "duration": 1.69
+    },
+    {
+        "text": "Does that correspond to your thinking?",
+        "start": 2834.982,
+        "duration": 1.35
+    },
+    {
+        "text": "No, That's not related to\nwhat I was just saying.",
+        "start": 2836.382,
+        "duration": 3.495
+    },
+    {
+        "text": "I'm not going to make a relation,\nbut I'm just asking, is that",
+        "start": 2840.417,
+        "duration": 2.85
+    },
+    {
+        "text": "the case in your knowledge?",
+        "start": 2843.267,
+        "duration": 1.26
+    },
+    {
+        "text": "no, actually it's not\nthe case in my knowledge.",
+        "start": 2845.257,
+        "duration": 1.68
+    },
+    {
+        "text": "I wouldn't be surprised if\nsomeone made that claim.",
+        "start": 2847.007,
+        "duration": 2.26
+    },
+    {
+        "text": "It seems like someone makes\na claim about everything.",
+        "start": 2849.277,
+        "duration": 1.54
+    },
+    {
+        "text": "but the general view is still\nthat, oh, it depends on the animal.",
+        "start": 2852.227,
+        "duration": 4.88
+    },
+    {
+        "text": "I'll think about it.",
+        "start": 2857.167,
+        "duration": 0.56
+    },
+    {
+        "text": "I think they've discovered\nthat in some animals.",
+        "start": 2857.787,
+        "duration": 1.95
+    },
+    {
+        "text": "But in primate B1 or, even, I\nbelieve they have not seen that.",
+        "start": 2861.502,
+        "duration": 5.05
+    },
+    {
+        "text": "So I think that was true, for\nrodents or something like that.",
+        "start": 2866.922,
+        "duration": 2.99
+    },
+    {
+        "text": "But in primate B1, like a monkey, or I\nthink even cats, they don't see that.",
+        "start": 2870.252,
+        "duration": 5.35
+    },
+    {
+        "text": "They see only center\nsurround respond properly.",
+        "start": 2875.672,
+        "duration": 2.32
+    },
+    {
+        "text": "Okay, because There's a, the paper kind of\nwent on to it was more image processing,",
+        "start": 2878.652,
+        "duration": 9.2
+    },
+    {
+        "text": "but the notion would be that you could\ncome up with the notion of orientation",
+        "start": 2887.892,
+        "duration": 5.86
+    },
+    {
+        "text": "by voting on the frequent, the number\nof edges in a particular orientation.",
+        "start": 2893.802,
+        "duration": 5.18
+    },
+    {
+        "text": "Yeah, I think in general in primary\nvision, you don't have that, you",
+        "start": 2899.612,
+        "duration": 3.31
+    },
+    {
+        "text": "can't, it's just centered around.",
+        "start": 2902.922,
+        "duration": 1.69
+    },
+    {
+        "text": "And I just don't appear until you get\nthe couple and see it gets the fortune.",
+        "start": 2906.142,
+        "duration": 3.72
+    },
+    {
+        "text": "I think it's a pretty solid result.",
+        "start": 2911.112,
+        "duration": 1.65
+    },
+    {
+        "text": "It will be a nice voting result.",
+        "start": 2913.012,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah, I don't see it as voting\nnecessarily, but it seems I",
+        "start": 2916.402,
+        "duration": 5.26
+    },
+    {
+        "text": "don't think Nathalos could vote.",
+        "start": 2921.872,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah, it's more like it's just\ndoing a transform on the input.",
+        "start": 2923.212,
+        "duration": 3.38
+    },
+    {
+        "text": "And no, I agree.",
+        "start": 2927.212,
+        "duration": 1.02
+    },
+    {
+        "text": "I was not saying the\nvoting was occurring there.",
+        "start": 2928.232,
+        "duration": 1.69
+    },
+    {
+        "text": "I'm saying they're producing\ninputs that could be voted.",
+        "start": 2929.922,
+        "duration": 2.87
+    },
+    {
+        "text": "you can produce the edge in the thalamus.",
+        "start": 2933.042,
+        "duration": 2.53
+    },
+    {
+        "text": "You can produce the edge in the retina,\nyou can produce the edge in the cortex.",
+        "start": 2935.582,
+        "duration": 2.35
+    },
+    {
+        "text": "but if you're trying to center\nthe notion of orientations on the",
+        "start": 2939.522,
+        "duration": 3.45
+    },
+    {
+        "text": "thalamus, if they're basically, I\nthink that's what I'm saying is the",
+        "start": 2943.672,
+        "duration": 3.54
+    },
+    {
+        "text": "thalamus could test, could, is at\nleast as capable, it seems capable of.",
+        "start": 2947.232,
+        "duration": 3.74
+    },
+    {
+        "text": "Our hypothesis is that it would be able\nto, to reorient the input and in a sense",
+        "start": 2952.502,
+        "duration": 7.15
+    },
+    {
+        "text": "give you a chance to try it out, say, hey,\nwhat if I rotate this thing 30 degrees?",
+        "start": 2959.652,
+        "duration": 3.22
+    },
+    {
+        "text": "and, then the cortex looks at it and\nsays, oh, that looks normal, right?",
+        "start": 2964.252,
+        "duration": 2.72
+    },
+    {
+        "text": "it's more of an implement, a\ndeorientation mechanism than it would",
+        "start": 2968.602,
+        "duration": 4.45
+    },
+    {
+        "text": "be, But we don't have a necessary\nmechanism for hypotheses to produce.",
+        "start": 2973.052,
+        "duration": 6.495
+    },
+    {
+        "text": "the cortex would have to provide those\nbecause it's through the pediatric form.",
+        "start": 2980.357,
+        "duration": 3.09
+    },
+    {
+        "text": "Okay.",
+        "start": 2983.607,
+        "duration": 0.28
+    },
+    {
+        "text": "Okay.",
+        "start": 2985.027,
+        "duration": 0.28
+    },
+    {
+        "text": "Got it.",
+        "start": 2985.947,
+        "duration": 0.25
+    },
+    {
+        "text": "Yeah, I'm always struck, and I've been\nthis many times before, is that your head",
+        "start": 2986.247,
+        "duration": 3.22
+    },
+    {
+        "text": "is constantly tilting left and right.",
+        "start": 2989.467,
+        "duration": 2.32
+    },
+    {
+        "text": "When you're reading, when you're\ndoing anything, and you just",
+        "start": 2991.787,
+        "duration": 2.36
+    },
+    {
+        "text": "don't even know it at all.",
+        "start": 2994.287,
+        "duration": 0.8
+    },
+    {
+        "text": "There's no, it's just totally compensated,\neven though the input's on the retinas.",
+        "start": 2995.087,
+        "duration": 4.03
+    },
+    {
+        "text": "It's getting wonky and twisted\nall around as you do this.",
+        "start": 2999.407,
+        "duration": 3.05
+    },
+    {
+        "text": "So there's got to be a very ready\nmechanism for compensating for",
+        "start": 3003.117,
+        "duration": 3.11
+    },
+    {
+        "text": "that kind of orientation change.",
+        "start": 3006.227,
+        "duration": 1.54
+    },
+    {
+        "text": "And you think that this would be\nsomething that was discovered a long",
+        "start": 3008.207,
+        "duration": 2.5
+    },
+    {
+        "text": "time ago, and animals started moving\naround, because they move around.",
+        "start": 3010.707,
+        "duration": 3.99
+    },
+    {
+        "text": "So it would be a sort of pretty\nfundamental mechanism, to overcome",
+        "start": 3015.267,
+        "duration": 3.92
+    },
+    {
+        "text": "these orientation differences.",
+        "start": 3019.257,
+        "duration": 1.06
+    },
+    {
+        "text": "Now we're trying to extend it\nto complete objects from upside",
+        "start": 3021.282,
+        "duration": 2.44
+    },
+    {
+        "text": "down and things like that.",
+        "start": 3023.732,
+        "duration": 0.78
+    },
+    {
+        "text": "Talking about animals, how old is\nevolutionarily speaking, the thumbs?",
+        "start": 3025.592,
+        "duration": 4.8
+    },
+    {
+        "text": "I don't know that.",
+        "start": 3031.042,
+        "duration": 0.89
+    },
+    {
+        "text": "It's very tied in, at least\nin mammals, to the neocortex.",
+        "start": 3035.122,
+        "duration": 3.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 3038.672,
+        "duration": 0.4
+    },
+    {
+        "text": "I don't know.",
+        "start": 3039.572,
+        "duration": 0.16
+    },
+    {
+        "text": "It was birds.",
+        "start": 3042.827,
+        "duration": 1.1
+    },
+    {
+        "text": "They seem to have on a physical level,\na compensation for the body orientation.",
+        "start": 3043.927,
+        "duration": 4.635
+    },
+    {
+        "text": "They're very good at keeping\ntheir heads really straight.",
+        "start": 3048.562,
+        "duration": 2.565
+    },
+    {
+        "text": "I would argue the opposite.",
+        "start": 3051.707,
+        "duration": 1.81
+    },
+    {
+        "text": "birds, you look at a pigeon, their\nheads are going back and forth.",
+        "start": 3053.807,
+        "duration": 2.99
+    },
+    {
+        "text": "And I've heard people say,\nlike, how do they see?",
+        "start": 3056.797,
+        "duration": 2.36
+    },
+    {
+        "text": "Aren't they going crazy?",
+        "start": 3059.167,
+        "duration": 1.0
+    },
+    {
+        "text": "And I said to myself, no, the perception\nof the bird is the world is stable.",
+        "start": 3060.457,
+        "duration": 3.86
+    },
+    {
+        "text": "It's the same like our eyes are moving\nall around, but we don't notice.",
+        "start": 3064.407,
+        "duration": 2.44
+    },
+    {
+        "text": "It doesn't bother us.",
+        "start": 3066.857,
+        "duration": 0.82
+    },
+    {
+        "text": "And the chickens or the, the\npigeon's heads going back and forth.",
+        "start": 3068.047,
+        "duration": 3.31
+    },
+    {
+        "text": "They don't even see that.",
+        "start": 3071.367,
+        "duration": 0.85
+    },
+    {
+        "text": "They just, the world seems stable to them.",
+        "start": 3072.287,
+        "duration": 1.28
+    },
+    {
+        "text": "It's just like a cicada for them.",
+        "start": 3073.567,
+        "duration": 1.3
+    },
+    {
+        "text": "There seems to be pretty strong\nhomologues between bird structures",
+        "start": 3083.592,
+        "duration": 4.11
+    },
+    {
+        "text": "and hortical structures.",
+        "start": 3087.702,
+        "duration": 0.64
+    },
+    {
+        "text": "So there's these blobs that seem to be\nlike a section of cortex in some ways.",
+        "start": 3088.452,
+        "duration": 5.845
+    },
+    {
+        "text": "I think there's going to be very\nsimilar neural mechanisms going on, even",
+        "start": 3095.767,
+        "duration": 3.47
+    },
+    {
+        "text": "though they don't have a cortex at all.",
+        "start": 3099.237,
+        "duration": 1.31
+    },
+    {
+        "text": "But multiple people have\nmade this analogy now.",
+        "start": 3101.427,
+        "duration": 2.24
+    },
+    {
+        "text": "that, hey, these blobs, but they\nliterally call them blobs in some of these",
+        "start": 3104.967,
+        "duration": 3.22
+    },
+    {
+        "text": "programs, that, hey, they look like they\nmight be in some other coral structure.",
+        "start": 3108.297,
+        "duration": 3.57
+    },
+    {
+        "text": "But they're not all that many sheep.",
+        "start": 3112.047,
+        "duration": 1.84
+    },
+    {
+        "text": "They're just blobs.",
+        "start": 3114.747,
+        "duration": 0.51
+    },
+    {
+        "text": "I was going to say, yeah, so the,\nlast bit of the kind of presentation",
+        "start": 3121.227,
+        "duration": 4.75
+    },
+    {
+        "text": "is just to go through then, So the\npatchwise representations, and in",
+        "start": 3125.977,
+        "duration": 4.12
+    },
+    {
+        "text": "particular, this is an issue not just\nto use views, but in general, if we've",
+        "start": 3130.097,
+        "duration": 5.72
+    },
+    {
+        "text": "learned nodes or kind of viewpoints,\nwhatever you want to call them, and",
+        "start": 3135.817,
+        "duration": 5.34
+    },
+    {
+        "text": "we have features associated with that.",
+        "start": 3141.157,
+        "duration": 1.17
+    },
+    {
+        "text": "What happens when we sample at\ninference nodes that we're not",
+        "start": 3142.337,
+        "duration": 4.73
+    },
+    {
+        "text": "familiar with and how to handle that.",
+        "start": 3147.067,
+        "duration": 2.94
+    },
+    {
+        "text": "so this is just an exploration.",
+        "start": 3150.677,
+        "duration": 1.78
+    },
+    {
+        "text": "Are you saying we're seeing the\nobjects and we're seeing parts of",
+        "start": 3152.527,
+        "duration": 2.75
+    },
+    {
+        "text": "the objects we've never seen before?",
+        "start": 3155.277,
+        "duration": 1.65
+    },
+    {
+        "text": "Or we're just seeing From an\nangle that we've not seen before.",
+        "start": 3156.997,
+        "duration": 2.79
+    },
+    {
+        "text": "An angle we haven't seen before.",
+        "start": 3160.777,
+        "duration": 1.2
+    },
+    {
+        "text": "for example, you've, you've\nprimarily studied these kind",
+        "start": 3162.617,
+        "duration": 3.0
+    },
+    {
+        "text": "of principal viewpoints.",
+        "start": 3165.617,
+        "duration": 1.43
+    },
+    {
+        "text": "And then, but you may not have seen it\nfrom a very particular angle, or this",
+        "start": 3167.732,
+        "duration": 4.65
+    },
+    {
+        "text": "could or, or this could be a new features.",
+        "start": 3172.382,
+        "duration": 3.28
+    },
+    {
+        "text": "It's just a different orientation.",
+        "start": 3175.692,
+        "duration": 1.46
+    },
+    {
+        "text": "Exactly.",
+        "start": 3177.662,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 3178.022,
+        "duration": 0.23
+    },
+    {
+        "text": "Okay.",
+        "start": 3178.692,
+        "duration": 0.34
+    },
+    {
+        "text": "So that's.",
+        "start": 3179.042,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 3180.722,
+        "duration": 0.27
+    },
+    {
+        "text": "Okay.",
+        "start": 3180.992,
+        "duration": 0.38
+    },
+    {
+        "text": "I thought that's what we're\ntalking about all along here.",
+        "start": 3181.462,
+        "duration": 2.1
+    },
+    {
+        "text": "the, but the thing is, when\nyou learned the objects.",
+        "start": 3187.392,
+        "duration": 2.7
+    },
+    {
+        "text": "You'll have learned features associated\nwith certain viewpoints, but ultimately",
+        "start": 3190.797,
+        "duration": 5.34
+    },
+    {
+        "text": "that's a, it's going to be a semi\ndiscrete representation of space,",
+        "start": 3196.137,
+        "duration": 4.47
+    },
+    {
+        "text": "whether it's a grid mesh or it's\na view sphere, or even a 2D plane.",
+        "start": 3200.867,
+        "duration": 4.65
+    },
+    {
+        "text": "and but you need some way of kind\nof handling the continuous space",
+        "start": 3207.347,
+        "duration": 3.07
+    },
+    {
+        "text": "between these sort of points where\nyou actually subscribe to memory.",
+        "start": 3210.417,
+        "duration": 4.22
+    },
+    {
+        "text": "a particular representation.",
+        "start": 3215.807,
+        "duration": 1.13
+    },
+    {
+        "text": "Okay.",
+        "start": 3217.767,
+        "duration": 0.38
+    },
+    {
+        "text": "So there's like a\nmechanism for doing this.",
+        "start": 3218.177,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 3221.497,
+        "duration": 0.2
+    },
+    {
+        "text": "So what I'm going to focus on is,\nthe feature representation and",
+        "start": 3221.977,
+        "duration": 3.36
+    },
+    {
+        "text": "just how to maybe make that kind of\nrobust to or able to handle this.",
+        "start": 3225.577,
+        "duration": 5.0
+    },
+    {
+        "text": "Okay.",
+        "start": 3231.257,
+        "duration": 0.39
+    },
+    {
+        "text": "and yeah, and cause basically the\ndesire is to, it's not plausible",
+        "start": 3233.137,
+        "duration": 4.09
+    },
+    {
+        "text": "or, desirable to learn every single\npossible orientation of an object.",
+        "start": 3237.767,
+        "duration": 5.6
+    },
+    {
+        "text": "Sure.",
+        "start": 3243.817,
+        "duration": 0.18
+    },
+    {
+        "text": "You might then be able to recognize it\nfrom any orientation, but it's just, yeah,",
+        "start": 3243.997,
+        "duration": 3.555
+    },
+    {
+        "text": "memory wise and Efficiency of learning.",
+        "start": 3247.622,
+        "duration": 2.66
+    },
+    {
+        "text": "It doesn't make sense to do that.",
+        "start": 3250.282,
+        "duration": 1.47
+    },
+    {
+        "text": "So how can we sub sample the\nspace and still generalize",
+        "start": 3251.752,
+        "duration": 6.25
+    },
+    {
+        "text": "this idea.",
+        "start": 3260.042,
+        "duration": 0.5
+    },
+    {
+        "text": "And and, we seem to be able to do some\nsort of interpolation of features,",
+        "start": 3261.282,
+        "duration": 5.9
+    },
+    {
+        "text": "even for completely novel objects.",
+        "start": 3267.212,
+        "duration": 1.58
+    },
+    {
+        "text": "I'm assuming you've never seen these\nparticular objects before, but you can",
+        "start": 3269.262,
+        "duration": 4.16
+    },
+    {
+        "text": "make a reasonable guess in your head of\nwhat you're going to see if I move these.",
+        "start": 3273.422,
+        "duration": 4.61
+    },
+    {
+        "text": "It's not this.",
+        "start": 3278.572,
+        "duration": 1.54
+    },
+    {
+        "text": "that wasn't what you probably\npredicted in your head.",
+        "start": 3281.885,
+        "duration": 2.707
+    },
+    {
+        "text": "It was probably something more like this.",
+        "start": 3284.602,
+        "duration": 1.65
+    },
+    {
+        "text": "the ring and the fur continue.",
+        "start": 3286.642,
+        "duration": 2.8
+    },
+    {
+        "text": "You may have also predicted these\nkind of little bumps, that there",
+        "start": 3289.802,
+        "duration": 2.5
+    },
+    {
+        "text": "would have been more of those.",
+        "start": 3292.302,
+        "duration": 1.07
+    },
+    {
+        "text": "but yeah, the basic idea is, we can,\neven for novel objects, we can do a",
+        "start": 3295.352,
+        "duration": 3.82
+    },
+    {
+        "text": "reasonable job just given a set of local\nfeatures of predicting, a nearby feature.",
+        "start": 3299.172,
+        "duration": 6.12
+    },
+    {
+        "text": "And, there's some work from DeepMind\nin 2018 where They were doing something",
+        "start": 3306.987,
+        "duration": 4.84
+    },
+    {
+        "text": "that I think is a related problem where\nthey had this, room full of 3D objects.",
+        "start": 3311.827,
+        "duration": 5.08
+    },
+    {
+        "text": "So a simulated room.",
+        "start": 3316.917,
+        "duration": 1.02
+    },
+    {
+        "text": "And basically the agent\nreceived, multiple viewpoints.",
+        "start": 3318.527,
+        "duration": 4.51
+    },
+    {
+        "text": "So this view, and this view, say.",
+        "start": 3323.187,
+        "duration": 1.85
+    },
+    {
+        "text": "And it would then learn to, given,\nand, with those viewpoints, it",
+        "start": 3325.727,
+        "duration": 4.16
+    },
+    {
+        "text": "was also given their orientation.",
+        "start": 3329.887,
+        "duration": 1.49
+    },
+    {
+        "text": "So it would get, a view and an\norientation, view and orientation.",
+        "start": 3332.197,
+        "duration": 3.58
+    },
+    {
+        "text": "And then its task was to predict, given\nan arbitrary viewpoint in the room.",
+        "start": 3335.777,
+        "duration": 3.43
+    },
+    {
+        "text": "what it would see from that angle.",
+        "start": 3339.567,
+        "duration": 2.09
+    },
+    {
+        "text": "And it could, it could learn to do\nthis, using a deep neural network.",
+        "start": 3342.607,
+        "duration": 3.5
+    },
+    {
+        "text": "and so the idea was that it developed a\nrepresentation that was both invariant",
+        "start": 3347.207,
+        "duration": 4.01
+    },
+    {
+        "text": "to particular orientations and able\nto process, the particular orientation",
+        "start": 3351.227,
+        "duration": 5.46
+    },
+    {
+        "text": "to give a particular viewpoint.",
+        "start": 3356.687,
+        "duration": 1.47
+    },
+    {
+        "text": "And so the kind of thought is\njust that to learn, a long term",
+        "start": 3359.047,
+        "duration": 5.355
+    },
+    {
+        "text": "function that approximates given a\nfew local viewpoints what you would",
+        "start": 3364.402,
+        "duration": 5.37
+    },
+    {
+        "text": "see at an unknown point on that.",
+        "start": 3369.772,
+        "duration": 3.6
+    },
+    {
+        "text": "This can then be used in conjunction\nwith Kind of temporal memory principles.",
+        "start": 3373.372,
+        "duration": 4.23
+    },
+    {
+        "text": "on an experiment like this, there's\ntwo ways, I don't know how the",
+        "start": 3379.162,
+        "duration": 4.36
+    },
+    {
+        "text": "deep learning network does this.",
+        "start": 3383.522,
+        "duration": 1.67
+    },
+    {
+        "text": "There's two ways, one way is you\ngive it a very few set of images,",
+        "start": 3385.372,
+        "duration": 3.87
+    },
+    {
+        "text": "and it builds an internal model\nthat allows it to rotate this stuff.",
+        "start": 3389.292,
+        "duration": 3.16
+    },
+    {
+        "text": "Or, you've given it a gazillion images,\nand now your novel one is just a little",
+        "start": 3393.252,
+        "duration": 5.84
+    },
+    {
+        "text": "bit different than the one it saw before.",
+        "start": 3399.092,
+        "duration": 2.07
+    },
+    {
+        "text": "which is it?",
+        "start": 3402.632,
+        "duration": 1.54
+    },
+    {
+        "text": "So yeah, it's probably\na combination of both.",
+        "start": 3404.552,
+        "duration": 2.11
+    },
+    {
+        "text": "So they did show some examples,\nfor example, that this worked",
+        "start": 3406.802,
+        "duration": 2.33
+    },
+    {
+        "text": "with objects had not seen before.",
+        "start": 3409.132,
+        "duration": 2.23
+    },
+    {
+        "text": "and, and also it could generalize\nto some degree for it's a",
+        "start": 3413.072,
+        "duration": 3.61
+    },
+    {
+        "text": "different numbers of objects.",
+        "start": 3416.682,
+        "duration": 1.08
+    },
+    {
+        "text": "For example, but it did eventually break.",
+        "start": 3418.167,
+        "duration": 2.29
+    },
+    {
+        "text": "but yes, more like how much\ntraining does it get right?",
+        "start": 3422.537,
+        "duration": 3.07
+    },
+    {
+        "text": "I think a lot.",
+        "start": 3426.557,
+        "duration": 0.64
+    },
+    {
+        "text": "Yeah,",
+        "start": 3427.207,
+        "duration": 0.3
+    },
+    {
+        "text": "yeah, I think it's in\nthe millions of images.",
+        "start": 3429.637,
+        "duration": 1.79
+    },
+    {
+        "text": "Yeah.",
+        "start": 3431.627,
+        "duration": 0.25
+    },
+    {
+        "text": "So then, we're trying to figure out a\nmore mechanistic way of doing this, where",
+        "start": 3431.877,
+        "duration": 6.71
+    },
+    {
+        "text": "there's these internal representations\nfor orientation and location and so on.",
+        "start": 3438.587,
+        "duration": 4.69
+    },
+    {
+        "text": "which I'm pretty sure the brain is doing,\nbut I generally think of deep learning",
+        "start": 3444.477,
+        "duration": 3.89
+    },
+    {
+        "text": "networks as not having anything like\nthat, although some practitioners will",
+        "start": 3448.877,
+        "duration": 3.11
+    },
+    {
+        "text": "claim, they're going to learn that stuff.",
+        "start": 3451.997,
+        "duration": 1.53
+    },
+    {
+        "text": "but, so it makes a real big difference.",
+        "start": 3455.347,
+        "duration": 2.7
+    },
+    {
+        "text": "the example we use all the time here, so\nI've used many times, is you walk into",
+        "start": 3458.447,
+        "duration": 4.3
+    },
+    {
+        "text": "a room and you see the arrangement of\nfurniture, and then you leave the room,",
+        "start": 3462.747,
+        "duration": 4.52
+    },
+    {
+        "text": "and then you approach the room from a\ndifferent direction, and You can imagine",
+        "start": 3468.157,
+        "duration": 3.86
+    },
+    {
+        "text": "what the room would look like, and you\ncan recognize it right away, and it's",
+        "start": 3472.017,
+        "duration": 2.77
+    },
+    {
+        "text": "it's just a couple of presentations,\nand, I can do that, or I can do it from",
+        "start": 3475.207,
+        "duration": 6.41
+    },
+    {
+        "text": "a novel, and I can imagine what a room\nwould look like from the ceiling, and",
+        "start": 3481.617,
+        "duration": 2.91
+    },
+    {
+        "text": "I've never seen it from the ceiling, ever.",
+        "start": 3484.547,
+        "duration": 1.81
+    },
+    {
+        "text": "No, I don't think so.",
+        "start": 3487.567,
+        "duration": 4.02
+    },
+    {
+        "text": "my point is, I can do this\nfor very novel situations.",
+        "start": 3492.007,
+        "duration": 2.86
+    },
+    {
+        "text": "I'm saying that I don't think\nan infant has that capability.",
+        "start": 3495.417,
+        "duration": 2.78
+    },
+    {
+        "text": "of course not.",
+        "start": 3499.197,
+        "duration": 0.48
+    },
+    {
+        "text": "You have to learn, right?",
+        "start": 3499.687,
+        "duration": 0.93
+    },
+    {
+        "text": "No, that's what I'm saying.",
+        "start": 3500.627,
+        "duration": 0.74
+    },
+    {
+        "text": "Yeah, but, I don't learn it in\nby, Presenting me with millions of",
+        "start": 3501.447,
+        "duration": 4.285
+    },
+    {
+        "text": "different my point was I can learn\nthis on a novel situation with one",
+        "start": 3505.732,
+        "duration": 4.62
+    },
+    {
+        "text": "from one direction I don't want to be\npresented lots of different directions.",
+        "start": 3510.402,
+        "duration": 2.99
+    },
+    {
+        "text": "I just do it from one direction Okay,\nso I don't have millions of training.",
+        "start": 3513.392,
+        "duration": 3.61
+    },
+    {
+        "text": "I just know I'm saying no\ntraining on All right, let's.",
+        "start": 3517.002,
+        "duration": 4.39
+    },
+    {
+        "text": "Representing space.",
+        "start": 3521.412,
+        "duration": 1.21
+    },
+    {
+        "text": "So fine, let's just put it aside.",
+        "start": 3522.632,
+        "duration": 1.61
+    },
+    {
+        "text": "There's a mechanism in the\nbrain that's either learned or",
+        "start": 3524.242,
+        "duration": 3.51
+    },
+    {
+        "text": "evolved, it doesn't really matter.",
+        "start": 3527.962,
+        "duration": 1.17
+    },
+    {
+        "text": "Now I present this new thing\nit's never seen before.",
+        "start": 3529.162,
+        "duration": 2.81
+    },
+    {
+        "text": "I give one presentation, I very quickly\nscan on it, then I come from a completely",
+        "start": 3532.172,
+        "duration": 3.752
+    },
+    {
+        "text": "different direction and I recognize that\nand I can make predictions about it.",
+        "start": 3535.924,
+        "duration": 4.04
+    },
+    {
+        "text": "So,",
+        "start": 3540.586,
+        "duration": 0.311
+    },
+    {
+        "text": "I didn't do that by receiving\nknowledge of those rooms, right?",
+        "start": 3542.947,
+        "duration": 3.22
+    },
+    {
+        "text": "No, but he's saying, I think he's\nsaying that this thing can do that,",
+        "start": 3546.207,
+        "duration": 4.03
+    },
+    {
+        "text": "but only to a limited extent, right?",
+        "start": 3550.297,
+        "duration": 3.2
+    },
+    {
+        "text": "Exactly.",
+        "start": 3553.547,
+        "duration": 0.53
+    },
+    {
+        "text": "Yeah, it's much more limited\nand it's much more low level.",
+        "start": 3554.587,
+        "duration": 2.36
+    },
+    {
+        "text": "It's what I'm trying to show here.",
+        "start": 3556.957,
+        "duration": 1.44
+    },
+    {
+        "text": "this is a completely novel\nobject, but just given You know,",
+        "start": 3558.527,
+        "duration": 4.29
+    },
+    {
+        "text": "continuity of color, continuity\nof texture, continuity of edges.",
+        "start": 3562.837,
+        "duration": 3.96
+    },
+    {
+        "text": "You're able to do a basic job of\ninferring what you're going to see.",
+        "start": 3566.997,
+        "duration": 4.06
+    },
+    {
+        "text": "It has nothing to do with the\nfact that you're familiar with",
+        "start": 3571.057,
+        "duration": 1.97
+    },
+    {
+        "text": "this object, or how it changes.",
+        "start": 3573.027,
+        "duration": 2.18
+    },
+    {
+        "text": "It just has to do with low\nlevel, essentially statistics of.",
+        "start": 3575.217,
+        "duration": 3.02
+    },
+    {
+        "text": "I would make an objection to this\nparticular example, just to be",
+        "start": 3582.277,
+        "duration": 2.91
+    },
+    {
+        "text": "clear on the one on the left.",
+        "start": 3585.217,
+        "duration": 1.87
+    },
+    {
+        "text": "I clearly envisioned it being a\nring and I know what rings are.",
+        "start": 3587.557,
+        "duration": 3.87
+    },
+    {
+        "text": "And and so if it was even\nslightly different from that",
+        "start": 3591.457,
+        "duration": 2.2
+    },
+    {
+        "text": "ring, I would know it was wrong.",
+        "start": 3593.657,
+        "duration": 1.48
+    },
+    {
+        "text": "On the one on the right, I can't\nmake any predictions about the",
+        "start": 3595.647,
+        "duration": 2.16
+    },
+    {
+        "text": "individual bumps and stuff in there.",
+        "start": 3597.807,
+        "duration": 1.55
+    },
+    {
+        "text": "All I can do is basically some sort\nof general, if you show me a different",
+        "start": 3599.367,
+        "duration": 3.83
+    },
+    {
+        "text": "arrangement of bumps than that\nsquare, I wouldn't know what's wrong.",
+        "start": 3603.197,
+        "duration": 2.23
+    },
+    {
+        "text": "So there's a difference.",
+        "start": 3605.817,
+        "duration": 0.51
+    },
+    {
+        "text": "That's fine.",
+        "start": 3607.667,
+        "duration": 0.79
+    },
+    {
+        "text": "so what I'm going to describe,\nit's fine if it was a",
+        "start": 3609.017,
+        "duration": 3.28
+    },
+    {
+        "text": "different arrangement of bumps.",
+        "start": 3612.297,
+        "duration": 1.19
+    },
+    {
+        "text": "What we don't want is for the\npredicted representation to be as",
+        "start": 3613.927,
+        "duration": 3.7
+    },
+    {
+        "text": "meaningless as the smiley face.",
+        "start": 3617.637,
+        "duration": 1.47
+    },
+    {
+        "text": "we want it to be something, right?",
+        "start": 3619.742,
+        "duration": 1.2
+    },
+    {
+        "text": "I'm, I just wonder the one on the\nleft is not based on statistics.",
+        "start": 3620.972,
+        "duration": 2.97
+    },
+    {
+        "text": "The one on the left is based on\nthe fact that I recognize a ring.",
+        "start": 3623.947,
+        "duration": 2.215
+    },
+    {
+        "text": "If it was based on statistics, I might\nhave just as well assumed that the brown",
+        "start": 3626.462,
+        "duration": 3.0
+    },
+    {
+        "text": "fuzzy stuff is where the, block is.",
+        "start": 3629.462,
+        "duration": 1.885
+    },
+    {
+        "text": "yeah.",
+        "start": 3631.652,
+        "duration": 0.36
+    },
+    {
+        "text": "I don't argue against that.",
+        "start": 3632.312,
+        "duration": 1.41
+    },
+    {
+        "text": "I think, yeah, I agree.",
+        "start": 3634.082,
+        "duration": 1.53
+    },
+    {
+        "text": "I guess the problem is, at some point\nwe need to deal with the, fact that",
+        "start": 3635.612,
+        "duration": 5.03
+    },
+    {
+        "text": "we're sampling space discreetly and we\nneed to kinda interpolate between it.",
+        "start": 3640.702,
+        "duration": 2.925
+    },
+    {
+        "text": "And, yeah, and so I don't know.",
+        "start": 3644.472,
+        "duration": 3.82
+    },
+    {
+        "text": "I just think when I think about\nthings, it might be careful.",
+        "start": 3649.862,
+        "duration": 4.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 3655.072,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 3655.482,
+        "duration": 0.23
+    },
+    {
+        "text": "So it may help if I motivate a bit\nmore what this is trying to do.",
+        "start": 3655.712,
+        "duration": 3.61
+    },
+    {
+        "text": "of course, this is a course example, but\njust let's say when we studied it, we'd",
+        "start": 3659.612,
+        "duration": 4.16
+    },
+    {
+        "text": "seen the teapot from the view of the\nhandle and the view from the lid and we'd.",
+        "start": 3663.772,
+        "duration": 4.08
+    },
+    {
+        "text": "Memorize those and wrote this memory.",
+        "start": 3668.257,
+        "duration": 2.21
+    },
+    {
+        "text": "but now we're getting a view from\nthis angle, and we're trying to so",
+        "start": 3671.777,
+        "duration": 4.71
+    },
+    {
+        "text": "we have the kind of pose, and we're\ntrying to estimate what we're going to",
+        "start": 3676.487,
+        "duration": 4.73
+    },
+    {
+        "text": "see there because, they're not going\nto be anything written to memory.",
+        "start": 3681.217,
+        "duration": 6.08
+    },
+    {
+        "text": "And if we just try and\nuse the nearest node.",
+        "start": 3687.587,
+        "duration": 2.04
+    },
+    {
+        "text": "That we do have in memory\nthat may not work that well.",
+        "start": 3691.022,
+        "duration": 2.43
+    },
+    {
+        "text": "So here, obviously, this is a great course\nthat we just have a feature represented",
+        "start": 3693.872,
+        "duration": 4.08
+    },
+    {
+        "text": "here and a feature represented here.",
+        "start": 3697.952,
+        "duration": 0.99
+    },
+    {
+        "text": "Of course, we have some in between.",
+        "start": 3698.942,
+        "duration": 2.11
+    },
+    {
+        "text": "But the point is that, they're\ngonna be in many situations where we",
+        "start": 3701.422,
+        "duration": 3.45
+    },
+    {
+        "text": "move off of the learned points on.",
+        "start": 3704.872,
+        "duration": 3.98
+    },
+    {
+        "text": "We want to estimate what's there.",
+        "start": 3708.852,
+        "duration": 1.19
+    },
+    {
+        "text": "And for example, in this case, this\nis where we currently believe we are",
+        "start": 3710.732,
+        "duration": 3.51
+    },
+    {
+        "text": "based on our, Kind of history of inputs.",
+        "start": 3714.242,
+        "duration": 4.87
+    },
+    {
+        "text": "And we also in memory have this\nrepresentation of the lid at this pose.",
+        "start": 3719.542,
+        "duration": 3.71
+    },
+    {
+        "text": "and so the question is, how can\nwe use this information together?",
+        "start": 3724.272,
+        "duration": 2.73
+    },
+    {
+        "text": "To, make a kind of guess about\nwhat the view is going to be.",
+        "start": 3727.437,
+        "duration": 5.18
+    },
+    {
+        "text": "And,",
+        "start": 3732.637,
+        "duration": 0.25
+    },
+    {
+        "text": "what I'm suggesting is to use a neural\nnetwork, which is, at the end of the day,",
+        "start": 3734.917,
+        "duration": 5.23
+    },
+    {
+        "text": "a function approximator to, essentially\napproximate given these data points.",
+        "start": 3740.147,
+        "duration": 6.62
+    },
+    {
+        "text": "So these, the views and the poses.",
+        "start": 3746.767,
+        "duration": 2.6
+    },
+    {
+        "text": "Both from memory and from, our\ninput history, as well as the pose",
+        "start": 3749.702,
+        "duration": 4.16
+    },
+    {
+        "text": "of where we're going to be to then,\nestimate this, possible viewpoint.",
+        "start": 3753.882,
+        "duration": 5.83
+    },
+    {
+        "text": "And then, when we move there, we\ncan compare the internal estimate",
+        "start": 3759.732,
+        "duration": 4.37
+    },
+    {
+        "text": "to what we actually experience.",
+        "start": 3764.342,
+        "duration": 1.26
+    },
+    {
+        "text": "And that can give us some, sense of, okay,\nwe are actually at this query point, or",
+        "start": 3766.022,
+        "duration": 4.64
+    },
+    {
+        "text": "actually, no, this is completely wrong.",
+        "start": 3770.732,
+        "duration": 1.54
+    },
+    {
+        "text": "We're potentially on another object.",
+        "start": 3772.712,
+        "duration": 1.38
+    },
+    {
+        "text": "and, But then the, kind of key point\nthen is how do you train it to actually,",
+        "start": 3777.392,
+        "duration": 5.055
+    },
+    {
+        "text": "approximate this function, and I\nthink, what would be useful is to",
+        "start": 3783.167,
+        "duration": 4.77
+    },
+    {
+        "text": "combine ideas from both, so contrastive\nsemi supervised learning, which is",
+        "start": 3787.937,
+        "duration": 5.9
+    },
+    {
+        "text": "essentially what these top two, terms\nare showing, and then a, term that's, a",
+        "start": 3793.857,
+        "duration": 8.21
+    },
+    {
+        "text": "bit more like what the, DeepMind paper\nwas doing, So just to break this down,",
+        "start": 3802.067,
+        "duration": 5.64
+    },
+    {
+        "text": "so this is the loss function, so this\nis what the neural network is being",
+        "start": 3808.027,
+        "duration": 3.01
+    },
+    {
+        "text": "trained through, say, back propagation\nto minimize, and it has three terms.",
+        "start": 3811.037,
+        "duration": 5.83
+    },
+    {
+        "text": "These gamma parameters are just scalars\nthat determine how much influence a",
+        "start": 3817.537,
+        "duration": 4.66
+    },
+    {
+        "text": "particular term has on the whole equation.",
+        "start": 3822.197,
+        "duration": 3.22
+    },
+    {
+        "text": "the first one,",
+        "start": 3826.557,
+        "duration": 0.77
+    },
+    {
+        "text": "and yeah, simim is just a similarity\nmeasure where the higher it is, the",
+        "start": 3829.717,
+        "duration": 3.61
+    },
+    {
+        "text": "more similar two representations are.",
+        "start": 3833.327,
+        "duration": 2.08
+    },
+    {
+        "text": "So for example, so for this first\none, this is about getting the",
+        "start": 3837.897,
+        "duration": 4.05
+    },
+    {
+        "text": "features to be invariant to noise.",
+        "start": 3841.947,
+        "duration": 2.01
+    },
+    {
+        "text": "So this isn't actually about\nthe interpolation question.",
+        "start": 3843.967,
+        "duration": 2.81
+    },
+    {
+        "text": "This is just, the first two are about\njust having useful features generally,",
+        "start": 3846.777,
+        "duration": 3.73
+    },
+    {
+        "text": "because interpolation isn't the only\nproblem that they need to handle.",
+        "start": 3851.367,
+        "duration": 3.42
+    },
+    {
+        "text": "So yeah, so basically what this\nis saying is that you get given",
+        "start": 3855.157,
+        "duration": 3.3
+    },
+    {
+        "text": "a viewpoint and you perturb it in\nsome way, you add Gaussian noise.",
+        "start": 3858.457,
+        "duration": 3.04
+    },
+    {
+        "text": "You maybe flip it around, a mirror\naccess or you, change the color slightly.",
+        "start": 3861.857,
+        "duration": 5.93
+    },
+    {
+        "text": "And basically you just want\nthe, representation still be,",
+        "start": 3868.347,
+        "duration": 3.22
+    },
+    {
+        "text": "relatively similar and invariant.",
+        "start": 3871.987,
+        "duration": 1.73
+    },
+    {
+        "text": "the second one is, basically saying\nthat you want representations of",
+        "start": 3875.727,
+        "duration": 3.34
+    },
+    {
+        "text": "different features to be different.",
+        "start": 3879.217,
+        "duration": 1.77
+    },
+    {
+        "text": "So if you take a viewpoint at\none point and a completely random",
+        "start": 3881.367,
+        "duration": 4.18
+    },
+    {
+        "text": "viewpoint, ideally from a different\nobject, then those, representations",
+        "start": 3885.547,
+        "duration": 4.55
+    },
+    {
+        "text": "should be different feature space.",
+        "start": 3890.107,
+        "duration": 1.83
+    },
+    {
+        "text": "Again, and sorry, just to clarify,\nso F is a neural network as well.",
+        "start": 3892.602,
+        "duration": 3.24
+    },
+    {
+        "text": "This is after it's been transformed\nby the neural network, that the",
+        "start": 3896.372,
+        "duration": 3.11
+    },
+    {
+        "text": "representation should be different.",
+        "start": 3899.492,
+        "duration": 1.06
+    },
+    {
+        "text": "And then the last one is the key\none for interpolation, which is.",
+        "start": 3901.782,
+        "duration": 3.08
+    },
+    {
+        "text": "You have this, other neural network,\nwhich is sitting on top of, the first",
+        "start": 3905.492,
+        "duration": 5.96
+    },
+    {
+        "text": "one, and it's taking these transformed\nfeatures as well as their poses, and",
+        "start": 3911.452,
+        "duration": 5.29
+    },
+    {
+        "text": "potentially taking an arbitrary number,\ndepending on how many you have to work",
+        "start": 3917.042,
+        "duration": 3.26
+    },
+    {
+        "text": "with, so up to K, representations, and\nthen the, query point, and then it, you",
+        "start": 3920.302,
+        "duration": 6.34
+    },
+    {
+        "text": "want it to then give you, okay, what\nis the viewpoint at that, yeah, what",
+        "start": 3926.642,
+        "duration": 4.46
+    },
+    {
+        "text": "are you going to see at that viewpoint,",
+        "start": 3931.102,
+        "duration": 1.1
+    },
+    {
+        "text": "and based on, yeah, The history of,\npapers in machine learning or kind",
+        "start": 3934.562,
+        "duration": 7.075
+    },
+    {
+        "text": "of recent developments in the last\nfew years, something like this should",
+        "start": 3941.637,
+        "duration": 3.36
+    },
+    {
+        "text": "develop representations that, can do a\ndecent job of giving a few viewpoints",
+        "start": 3945.007,
+        "duration": 5.62
+    },
+    {
+        "text": "from memory, as well as from the, what\nwe're actually seeing, predicting,",
+        "start": 3950.627,
+        "duration": 5.15
+    },
+    {
+        "text": "what we'd see in an unknown space,",
+        "start": 3956.487,
+        "duration": 1.79
+    },
+    {
+        "text": "and it could be interesting\nwhether introducing sparsity",
+        "start": 3961.707,
+        "duration": 3.0
+    },
+    {
+        "text": "into these representations could\nalso help with Making the kind of",
+        "start": 3964.717,
+        "duration": 3.395
+    },
+    {
+        "text": "compositionality a bit more direct.",
+        "start": 3968.172,
+        "duration": 2.24
+    },
+    {
+        "text": "of course, a handle and\na lid are very different.",
+        "start": 3971.422,
+        "duration": 2.85
+    },
+    {
+        "text": "ideally the representation that combines\nthem, and from that novel viewpoint",
+        "start": 3975.662,
+        "duration": 4.9
+    },
+    {
+        "text": "would have both of those aspects.",
+        "start": 3980.562,
+        "duration": 1.92
+    },
+    {
+        "text": "And having sparsity may help with this.",
+        "start": 3982.492,
+        "duration": 3.11
+    },
+    {
+        "text": "but I wonder whether we want to\nmove away to some degree from",
+        "start": 3986.352,
+        "duration": 3.8
+    },
+    {
+        "text": "STRs and have real valued neurons.",
+        "start": 3990.382,
+        "duration": 2.1
+    },
+    {
+        "text": "at least for this particular\npoint, because yeah, having, SDRs",
+        "start": 3993.222,
+        "duration": 4.81
+    },
+    {
+        "text": "causes problems with, gradients.",
+        "start": 3998.092,
+        "duration": 1.97
+    },
+    {
+        "text": "You can't do gradient passes\nthrough, binary representations,",
+        "start": 4000.332,
+        "duration": 3.32
+    },
+    {
+        "text": "and,",
+        "start": 4005.692,
+        "duration": 0.37
+    },
+    {
+        "text": "but so it could be a mix of,\nSDRs and real valued neurons.",
+        "start": 4008.292,
+        "duration": 4.01
+    },
+    {
+        "text": "and so just connecting this\nback to some of the early ideas.",
+        "start": 4016.717,
+        "duration": 2.65
+    },
+    {
+        "text": "So the idea is that, the fact that\nhumans have these preferred views could",
+        "start": 4019.377,
+        "duration": 3.93
+    },
+    {
+        "text": "just be a parsimonious way of kind of\ncapturing useful views, without having",
+        "start": 4023.307,
+        "duration": 5.26
+    },
+    {
+        "text": "to store all possible views and memory.",
+        "start": 4028.567,
+        "duration": 2.07
+    },
+    {
+        "text": "and then, these kind of\ninterpolation, this interpolation",
+        "start": 4032.337,
+        "duration": 3.04
+    },
+    {
+        "text": "function could then handle.",
+        "start": 4035.377,
+        "duration": 1.03
+    },
+    {
+        "text": "More novel orientations.",
+        "start": 4037.577,
+        "duration": 1.36
+    },
+    {
+        "text": "it's important to say that, yeah,\nalthough this is all based on long",
+        "start": 4042.037,
+        "duration": 3.0
+    },
+    {
+        "text": "term learning and deep learning,\nthis is still all dependent on also",
+        "start": 4045.037,
+        "duration": 4.2
+    },
+    {
+        "text": "dependent on path integration and.",
+        "start": 4049.237,
+        "duration": 2.53
+    },
+    {
+        "text": "Rapid learning with heavy\nstyle feature representation.",
+        "start": 4052.377,
+        "duration": 2.75
+    },
+    {
+        "text": "So it's a mixture of the two.",
+        "start": 4055.137,
+        "duration": 2.19
+    },
+    {
+        "text": "and then, yeah, it's as I said before.",
+        "start": 4060.547,
+        "duration": 3.13
+    },
+    {
+        "text": "yeah.",
+        "start": 4067.327,
+        "duration": 0.27
+    },
+    {
+        "text": "And then, at the neural level, if we're\nimplementing this as kind of columns,",
+        "start": 4067.597,
+        "duration": 5.06
+    },
+    {
+        "text": "it may be that the kind of if you\nmove somewhere and there are no known",
+        "start": 4072.677,
+        "duration": 4.628
+    },
+    {
+        "text": "features based on the movement, then.",
+        "start": 4077.305,
+        "duration": 1.662
+    },
+    {
+        "text": "I don't know, maybe a lack of\ndendritic input initiates this",
+        "start": 4079.547,
+        "duration": 2.65
+    },
+    {
+        "text": "kind of interpolation, which could\nbe a more top down, feedback.",
+        "start": 4082.197,
+        "duration": 4.18
+    },
+    {
+        "text": "and it's, yeah, one thing that I haven't\nincluded in the kind of interpolation",
+        "start": 4088.167,
+        "duration": 4.12
+    },
+    {
+        "text": "equation, but which might be interesting\nis a global hypothesis about the",
+        "start": 4092.287,
+        "duration": 3.47
+    },
+    {
+        "text": "particular object, which might also\nconstrain, Or inform what you're",
+        "start": 4095.757,
+        "duration": 6.29
+    },
+    {
+        "text": "going to see at a particular pose, and\nand this might actually benefit from",
+        "start": 4102.047,
+        "duration": 5.09
+    },
+    {
+        "text": "something like the, continual learning\ndendrites paper approach where you have",
+        "start": 4107.147,
+        "duration": 3.77
+    },
+    {
+        "text": "context applied to the, neural network.",
+        "start": 4110.937,
+        "duration": 2.73
+    },
+    {
+        "text": "and yeah, I'm, almost done.",
+        "start": 4117.047,
+        "duration": 1.46
+    },
+    {
+        "text": "but just to say, yeah, the one\ndifficulty of this is what happens if",
+        "start": 4119.627,
+        "duration": 4.19
+    },
+    {
+        "text": "inference starts at an unfamiliar point.",
+        "start": 4123.847,
+        "duration": 2.01
+    },
+    {
+        "text": "Because, I've described works if we've\nvisited nodes that we are familiar with,",
+        "start": 4126.562,
+        "duration": 5.09
+    },
+    {
+        "text": "and we're visiting one that we don't know.",
+        "start": 4132.022,
+        "duration": 1.88
+    },
+    {
+        "text": "But, but it's not clear what we do\nif we start and then a junior point.",
+        "start": 4134.852,
+        "duration": 4.39
+    },
+    {
+        "text": "this is going to be most\nimportant for the first instance.",
+        "start": 4141.702,
+        "duration": 2.74
+    },
+    {
+        "text": "First instance.",
+        "start": 4144.592,
+        "duration": 0.7
+    },
+    {
+        "text": "First sensation.",
+        "start": 4145.762,
+        "duration": 1.11
+    },
+    {
+        "text": "but what you could potentially\ndo is interpolate location.",
+        "start": 4147.452,
+        "duration": 2.87
+    },
+    {
+        "text": "So basically, you're given your\ncentury input, and you have the",
+        "start": 4150.602,
+        "duration": 3.69
+    },
+    {
+        "text": "storage features in memory, and\nyou could find the K nearest.",
+        "start": 4154.292,
+        "duration": 4.69
+    },
+    {
+        "text": "Features in feature space and then\nbasically interpret the pose way in",
+        "start": 4159.817,
+        "duration": 4.63
+    },
+    {
+        "text": "the, contribution from each feature\nbased on how similar they are.",
+        "start": 4164.477,
+        "duration": 3.9
+    },
+    {
+        "text": "and if, yeah, for example, we're\ndoing something like particle",
+        "start": 4170.257,
+        "duration": 2.06
+    },
+    {
+        "text": "filters, then, your estimated\npose would be probabilistic.",
+        "start": 4172.317,
+        "duration": 3.8
+    },
+    {
+        "text": "it wouldn't have to be\njust a single point.",
+        "start": 4176.797,
+        "duration": 1.67
+    },
+    {
+        "text": "And this would, Yeah, basically mean\nthat you could, start doing path",
+        "start": 4179.067,
+        "duration": 4.2
+    },
+    {
+        "text": "integration from a point on the sphere\nor point on a graph without having",
+        "start": 4183.267,
+        "duration": 4.27
+    },
+    {
+        "text": "necessarily ever visited it before.",
+        "start": 4187.757,
+        "duration": 2.03
+    },
+    {
+        "text": "I imagine this might be\nquite computationally slow",
+        "start": 4190.907,
+        "duration": 2.04
+    },
+    {
+        "text": "to compare to all these.",
+        "start": 4192.947,
+        "duration": 1.79
+    },
+    {
+        "text": "Possible features, but, you would\nhopefully only have to do this for the",
+        "start": 4195.367,
+        "duration": 3.65
+    },
+    {
+        "text": "very first sensation, and you could\nmaybe have some sort of threshold.",
+        "start": 4199.017,
+        "duration": 4.79
+    },
+    {
+        "text": "So it's only if the first\nsensation is very unfamiliar",
+        "start": 4203.807,
+        "duration": 2.94
+    },
+    {
+        "text": "that you begin this process.",
+        "start": 4206.877,
+        "duration": 1.03
+    },
+    {
+        "text": "If it's very familiar, then you just\nassociate your location with the node that",
+        "start": 4207.957,
+        "duration": 4.38
+    },
+    {
+        "text": "is associated with that familiar feature.",
+        "start": 4212.337,
+        "duration": 1.43
+    },
+    {
+        "text": "I'm missing something here.",
+        "start": 4214.247,
+        "duration": 0.8
+    },
+    {
+        "text": "I'm feeling something that's unfamiliar.",
+        "start": 4215.187,
+        "duration": 1.48
+    },
+    {
+        "text": "Why wouldn't I just move and try\nto find something that's familiar?",
+        "start": 4216.667,
+        "duration": 2.27
+    },
+    {
+        "text": "You can also do that.",
+        "start": 4220.017,
+        "duration": 0.89
+    },
+    {
+        "text": "You can also do that.",
+        "start": 4221.922,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 4222.552,
+        "duration": 0.15
+    },
+    {
+        "text": "That seems like the simplest thing to do,",
+        "start": 4223.582,
+        "duration": 1.71
+    },
+    {
+        "text": "Yeah.",
+        "start": 4228.022,
+        "duration": 0.27
+    },
+    {
+        "text": "you can also do that.",
+        "start": 4228.692,
+        "duration": 0.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 4229.492,
+        "duration": 0.27
+    },
+    {
+        "text": "seems so what I would do, but\nyeah, I guess sometimes it,",
+        "start": 4233.592,
+        "duration": 3.76
+    },
+    {
+        "text": "yeah, I dunno.",
+        "start": 4239.902,
+        "duration": 0.54
+    },
+    {
+        "text": "A lot of the, yeah, I think it, it'll just\ndepend on how sensitive, the features are.",
+        "start": 4240.442,
+        "duration": 6.5
+    },
+    {
+        "text": "I think in practice to, matching,",
+        "start": 4248.732,
+        "duration": 2.25
+    },
+    {
+        "text": "whether, yeah, whether that's, I don't\nknow, in, in how close you actually have",
+        "start": 4254.392,
+        "duration": 3.65
+    },
+    {
+        "text": "to be to, for it to count as familiar.",
+        "start": 4258.042,
+        "duration": 1.91
+    },
+    {
+        "text": "that's true.",
+        "start": 4259.982,
+        "duration": 0.47
+    },
+    {
+        "text": "There's still, there's always that\nquestion, how do you deal with variances?",
+        "start": 4260.742,
+        "duration": 3.13
+    },
+    {
+        "text": "but as a general principle, it seems\nlike if I see something that I don't",
+        "start": 4264.802,
+        "duration": 3.04
+    },
+    {
+        "text": "understand, I keep looking around to\nfind some part of it I do understand.",
+        "start": 4267.842,
+        "duration": 2.87
+    },
+    {
+        "text": "Yeah, that's true.",
+        "start": 4271.602,
+        "duration": 1.4
+    },
+    {
+        "text": "and yeah, and that would avoid this, slow,",
+        "start": 4273.452,
+        "duration": 2.64
+    },
+    {
+        "text": "Mostly for this.",
+        "start": 4278.442,
+        "duration": 0.43
+    },
+    {
+        "text": "but yeah, but so that's, that's\neverything I want to talk about.",
+        "start": 4282.982,
+        "duration": 4.25
+    },
+    {
+        "text": "yeah, the next question is then,\nwhether we want to, at least for the",
+        "start": 4287.942,
+        "duration": 4.65
+    },
+    {
+        "text": "HCM work, yeah, do something like\nview spheres, and or planar views.",
+        "start": 4292.722,
+        "duration": 5.3
+    },
+    {
+        "text": "but, yeah, to my mind, still, the planar\nviews would, it would be useful for",
+        "start": 4299.752,
+        "duration": 3.97
+    },
+    {
+        "text": "translation and variance, but I'm not.",
+        "start": 4303.722,
+        "duration": 1.29
+    },
+    {
+        "text": "I think it'll require some form of kind\nof sphere like coordinates in order",
+        "start": 4305.442,
+        "duration": 4.81
+    },
+    {
+        "text": "to deal with rotation and variance.",
+        "start": 4310.252,
+        "duration": 2.02
+    },
+    {
+        "text": "and yeah, that's everything.",
+        "start": 4314.657,
+        "duration": 1.86
+    },
+    {
+        "text": "Thanks very much.",
+        "start": 4317.267,
+        "duration": 0.55
+    }
+]

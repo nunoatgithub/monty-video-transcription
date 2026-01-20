@@ -1,0 +1,5482 @@
+[
+    {
+        "text": "Yeah.",
+        "start": 8.301,
+        "duration": 0.27
+    },
+    {
+        "text": "the official title of, one of the\ntwo papers that we are publishing",
+        "start": 9.471,
+        "duration": 4.83
+    },
+    {
+        "text": "right now is called Thousand Brain\nSystems, sensorimotor Intelligence for",
+        "start": 14.301,
+        "duration": 3.75
+    },
+    {
+        "text": "Rapid Robust Learning and Inference.",
+        "start": 18.051,
+        "duration": 2.22
+    },
+    {
+        "text": "But as Viviane said, we often\nhave referred to it as the",
+        "start": 20.961,
+        "duration": 3.06
+    },
+    {
+        "text": "demonstrating Monty's capabilities\npaper for DMC for sure.",
+        "start": 24.021,
+        "duration": 3.45
+    },
+    {
+        "text": "and this paper is really a\nculmination of a huge amount of",
+        "start": 29.871,
+        "duration": 3.66
+    },
+    {
+        "text": "work, I'd argue around three years.",
+        "start": 33.531,
+        "duration": 2.19
+    },
+    {
+        "text": "going back even further though, to, when\nJeff and together with researchers at",
+        "start": 37.011,
+        "duration": 4.62
+    },
+    {
+        "text": "Numenta laid out the principles a Thousand\nBrains Theory, those were what, Jeff wrote",
+        "start": 41.631,
+        "duration": 4.86
+    },
+    {
+        "text": "about in his book, A Thousand Brains.",
+        "start": 46.491,
+        "duration": 1.59
+    },
+    {
+        "text": "these ideas were then taken to,\nboth at Menta originally and then",
+        "start": 49.341,
+        "duration": 5.07
+    },
+    {
+        "text": "the Thousand Brains Project, to try\nand develop a system that actually",
+        "start": 54.441,
+        "duration": 3.15
+    },
+    {
+        "text": "implemented these, concepts.",
+        "start": 57.591,
+        "duration": 2.13
+    },
+    {
+        "text": "And, that is what became TPP Monty.",
+        "start": 59.931,
+        "duration": 2.94
+    },
+    {
+        "text": "so the first kind of code implementation\nof a Thousand Brains System, that",
+        "start": 63.561,
+        "duration": 5.7
+    },
+    {
+        "text": "is a system that implements, the\nconcepts and, the algorithms, described",
+        "start": 69.261,
+        "duration": 5.16
+    },
+    {
+        "text": "in the Thousand Brains Theory.",
+        "start": 74.421,
+        "duration": 0.93
+    },
+    {
+        "text": "but we had that kind of system there,\nand we had, benchmarks that we ran",
+        "start": 78.111,
+        "duration": 3.63
+    },
+    {
+        "text": "internally to look at it, but what\nwe really wanted to do was to compile",
+        "start": 81.741,
+        "duration": 3.9
+    },
+    {
+        "text": "an overview of all the things it was\ncapable of, into one kind of paper, at",
+        "start": 86.061,
+        "duration": 3.87
+    },
+    {
+        "text": "least all the things it's capable of.",
+        "start": 89.931,
+        "duration": 1.38
+    },
+    {
+        "text": "today, of course, we're constantly\nworking on new features and the like.",
+        "start": 91.881,
+        "duration": 3.27
+    },
+    {
+        "text": "and so that's what kind\nof became the, DMC paper.",
+        "start": 95.931,
+        "duration": 3.51
+    },
+    {
+        "text": "and it's been a, a huge effort from really\neveryone on the team, but particular",
+        "start": 101.931,
+        "duration": 3.87
+    },
+    {
+        "text": "shout out to, Scott and Hojae for all\nthis work, that they put into this.",
+        "start": 105.801,
+        "duration": 3.9
+    },
+    {
+        "text": "And, the kind of main things that we\nreally wanted to emphasize in this",
+        "start": 111.606,
+        "duration": 3.33
+    },
+    {
+        "text": "paper was the capabilities of robust\ninference, rapid inference, and",
+        "start": 114.936,
+        "duration": 5.19
+    },
+    {
+        "text": "rapid continual efficient learning.",
+        "start": 120.126,
+        "duration": 2.37
+    },
+    {
+        "text": "which is a bit of a mouthful, but\nwe'll break this all down, shortly.",
+        "start": 123.276,
+        "duration": 3.42
+    },
+    {
+        "text": "It's also maybe worth emphasizing\nthat kind of what I'm presenting today",
+        "start": 128.796,
+        "duration": 3.42
+    },
+    {
+        "text": "is gonna be focused on the results\nin the paper, and in particular,",
+        "start": 132.216,
+        "duration": 3.48
+    },
+    {
+        "text": "trying to give an intuition around\nthe experiments we ran, what sort of",
+        "start": 135.966,
+        "duration": 2.91
+    },
+    {
+        "text": "metrics we used, what the results were,\nand any kind of implications of those.",
+        "start": 138.876,
+        "duration": 3.36
+    },
+    {
+        "text": "but I'm gonna assume you\nhave a working understanding.",
+        "start": 143.586,
+        "duration": 2.58
+    },
+    {
+        "text": "If, you're watching this, I'm gonna assume\nyou have a working understanding of Monty.",
+        "start": 146.341,
+        "duration": 3.695
+    },
+    {
+        "text": "and if you're new to Monty and new\nto the Thousand Brains Project, these",
+        "start": 151.086,
+        "duration": 3.96
+    },
+    {
+        "text": "are the kind of resources I would\nrecommend starting with to get that",
+        "start": 155.046,
+        "duration": 3.0
+    },
+    {
+        "text": "kind of background knowledge first.",
+        "start": 158.046,
+        "duration": 1.44
+    },
+    {
+        "text": "so things like the December symposium,\nwe did last year, documentation",
+        "start": 160.176,
+        "duration": 3.66
+    },
+    {
+        "text": "on our readme io and the methods\nsection in this paper for kind of",
+        "start": 163.836,
+        "duration": 4.68
+    },
+    {
+        "text": "a especially detailed description.",
+        "start": 168.516,
+        "duration": 2.49
+    },
+    {
+        "text": "But, very briefly, just as\na kind of broad reminder.",
+        "start": 174.366,
+        "duration": 3.33
+    },
+    {
+        "text": "So Monty is an architecture defined by\na series of, semi-independent learning",
+        "start": 177.846,
+        "duration": 5.67
+    },
+    {
+        "text": "modules, that work together and receive\ninformation from sensorimotor modules",
+        "start": 183.516,
+        "duration": 4.44
+    },
+    {
+        "text": "and output goals via a, motor system.",
+        "start": 188.016,
+        "duration": 3.54
+    },
+    {
+        "text": "these semi-independent\nunits communicate via a.",
+        "start": 193.146,
+        "duration": 3.81
+    },
+    {
+        "text": "Kind of common communication protocol\nwe call the cortical messaging protocol.",
+        "start": 197.856,
+        "duration": 4.14
+    },
+    {
+        "text": "And this is defined by features that have\na pose in space in a shared coordinate",
+        "start": 202.776,
+        "duration": 6.69
+    },
+    {
+        "text": "system, as well as other features like\nthings like color object ID and so forth.",
+        "start": 209.466,
+        "duration": 4.83
+    },
+    {
+        "text": "And so this gives an overview of what\nMonty System looks like when it's",
+        "start": 214.296,
+        "duration": 3.99
+    },
+    {
+        "text": "perceiving something like a cup here.",
+        "start": 218.286,
+        "duration": 3.27
+    },
+    {
+        "text": "And the input Monty gets is from\na very small region of space.",
+        "start": 222.846,
+        "duration": 3.87
+    },
+    {
+        "text": "So you can think of kind of the receptive\nfield of any given learning module",
+        "start": 226.806,
+        "duration": 3.42
+    },
+    {
+        "text": "being defined by the sensorimotor\nmodule that it's getting input from.",
+        "start": 230.616,
+        "duration": 2.91
+    },
+    {
+        "text": "And typically this will be a\nsmall patch relative to the size",
+        "start": 234.036,
+        "duration": 2.97
+    },
+    {
+        "text": "of a total object sensorimotor.",
+        "start": 237.006,
+        "duration": 2.31
+    },
+    {
+        "text": "Modules responsibility is,\noutputting, pose and features.",
+        "start": 239.316,
+        "duration": 3.96
+    },
+    {
+        "text": "And so that's the C MP signal that\ngets sent to learning modules.",
+        "start": 243.816,
+        "duration": 3.12
+    },
+    {
+        "text": "And then the learning module is where\nthe pose and features are received.",
+        "start": 248.226,
+        "duration": 4.23
+    },
+    {
+        "text": "these are then learned\nin, reference frames.",
+        "start": 253.326,
+        "duration": 2.67
+    },
+    {
+        "text": "we'll talk briefly about learning\nlater, but as the system moves, it",
+        "start": 257.316,
+        "duration": 2.97
+    },
+    {
+        "text": "builds up a representation of where\nthese poses and features are sensed.",
+        "start": 260.586,
+        "duration": 3.18
+    },
+    {
+        "text": "and then these same reference frames\ncan be used during inference to develop",
+        "start": 264.696,
+        "duration": 3.24
+    },
+    {
+        "text": "hypotheses about on which object and where\non which object, the system might be.",
+        "start": 267.936,
+        "duration": 5.16
+    },
+    {
+        "text": "but it can also then gather this\ninformation to have a hypothesis about",
+        "start": 274.206,
+        "duration": 5.4
+    },
+    {
+        "text": "what, the most likely ad it is, of the\nkind of objects it's perceiving is,",
+        "start": 279.636,
+        "duration": 4.53
+    },
+    {
+        "text": "as well as generate kind goal states.",
+        "start": 284.886,
+        "duration": 1.56
+    },
+    {
+        "text": "Enable it to act\nintelligently in the world.",
+        "start": 286.821,
+        "duration": 2.31
+    },
+    {
+        "text": "So basically, how does it want the\nkind of state of the motor system to",
+        "start": 289.131,
+        "duration": 3.6
+    },
+    {
+        "text": "be in order to achieve a certain goal?",
+        "start": 292.731,
+        "duration": 2.31
+    },
+    {
+        "text": "And this is just showing that the,\nthis kinda up here is just showing",
+        "start": 297.081,
+        "duration": 3.18
+    },
+    {
+        "text": "that the learning module changes\nover time as it receives new sensory",
+        "start": 300.261,
+        "duration": 3.15
+    },
+    {
+        "text": "input and outputs goal states.",
+        "start": 303.411,
+        "duration": 2.43
+    },
+    {
+        "text": "So that's a whistle stop tour.",
+        "start": 307.701,
+        "duration": 1.17
+    },
+    {
+        "text": "I said, please check out\nthose other resources if all",
+        "start": 308.871,
+        "duration": 2.94
+    },
+    {
+        "text": "of that was kinda unfamiliar.",
+        "start": 311.811,
+        "duration": 1.08
+    },
+    {
+        "text": "But this paper was really about,\nstarting with these, principles,",
+        "start": 313.671,
+        "duration": 4.29
+    },
+    {
+        "text": "sensorimotor modules with reference\nframes that perform learning and",
+        "start": 318.141,
+        "duration": 4.02
+    },
+    {
+        "text": "examining what is the, broad range\nof capabilities, that this gives you.",
+        "start": 322.221,
+        "duration": 4.41
+    },
+    {
+        "text": "And before I talk about our first\nresults with inference, it's worth just",
+        "start": 329.271,
+        "duration": 4.17
+    },
+    {
+        "text": "emphasizing that, Monty as a Century\nMotor system is all about moving.",
+        "start": 333.441,
+        "duration": 4.05
+    },
+    {
+        "text": "And whether it's learning or performing\ninference, it's constantly on the move.",
+        "start": 337.551,
+        "duration": 3.72
+    },
+    {
+        "text": "and this is what this kind of\nanimation is showing in here.",
+        "start": 341.931,
+        "duration": 2.04
+    },
+    {
+        "text": "Just an example of Monty\nas a finger-like system.",
+        "start": 343.971,
+        "duration": 3.45
+    },
+    {
+        "text": "You're seeing a trace of its\nmovement going along, the handle of",
+        "start": 347.481,
+        "duration": 3.54
+    },
+    {
+        "text": "something and then jumping over here.",
+        "start": 351.021,
+        "duration": 1.62
+    },
+    {
+        "text": "And so during learning, this might\nconsist of a policy that's particularly",
+        "start": 354.591,
+        "duration": 5.64
+    },
+    {
+        "text": "good at densely sampling an object.",
+        "start": 360.231,
+        "duration": 1.65
+    },
+    {
+        "text": "if it's familiar.",
+        "start": 363.051,
+        "duration": 1.11
+    },
+    {
+        "text": "And with this kind of camera like agent\nwe have, for example, we would look at",
+        "start": 364.461,
+        "duration": 5.04
+    },
+    {
+        "text": "an object like this mug doing a, scan.",
+        "start": 369.501,
+        "duration": 2.73
+    },
+    {
+        "text": "And then Monty would develop,\npart of a model of this object.",
+        "start": 372.291,
+        "duration": 3.6
+    },
+    {
+        "text": "Then it might observe it again, for\nexample, from a, if the optic rotated",
+        "start": 376.446,
+        "duration": 3.27
+    },
+    {
+        "text": "from a different angle, and then use\nits observations from that second",
+        "start": 379.716,
+        "duration": 3.81
+    },
+    {
+        "text": "encounter to update, its memory",
+        "start": 383.526,
+        "duration": 2.1
+    },
+    {
+        "text": "and during inference it also moves.",
+        "start": 388.806,
+        "duration": 1.5
+    },
+    {
+        "text": "But in general, it might move\nin a more unstructured way.",
+        "start": 390.306,
+        "duration": 3.42
+    },
+    {
+        "text": "Certainly does in the case of, this paper,\nbecause here the goal is different from",
+        "start": 393.726,
+        "duration": 4.35
+    },
+    {
+        "text": "learning here the goal is about rapidly\nrecognizing what objects it's seen rather",
+        "start": 398.076,
+        "duration": 4.47
+    },
+    {
+        "text": "than developing a new representation.",
+        "start": 402.546,
+        "duration": 2.25
+    },
+    {
+        "text": "and so you see for example, this kind\nof path as the system moves over the",
+        "start": 405.666,
+        "duration": 3.75
+    },
+    {
+        "text": "surface of the object before jumping\nover to, the handle, of the kind of the",
+        "start": 409.416,
+        "duration": 6.24
+    },
+    {
+        "text": "mug, as well as then the kind of rim.",
+        "start": 415.656,
+        "duration": 1.62
+    },
+    {
+        "text": "And, kinda one of the first figures\nshowing actual results in the",
+        "start": 420.786,
+        "duration": 3.75
+    },
+    {
+        "text": "paper is just trying to give you an\nintuition of what kind of imprints",
+        "start": 424.536,
+        "duration": 2.58
+    },
+    {
+        "text": "in Monty actually looks like.",
+        "start": 427.116,
+        "duration": 1.17
+    },
+    {
+        "text": "so that's what's, this is showing\nhere where we have the kinda internal",
+        "start": 429.036,
+        "duration": 3.78
+    },
+    {
+        "text": "model, that Monty has of a mug, as\nwell as a representation of where",
+        "start": 432.816,
+        "duration": 6.12
+    },
+    {
+        "text": "in space its sensorimotor module\nactually is, at that point in time.",
+        "start": 438.936,
+        "duration": 4.35
+    },
+    {
+        "text": "So what it seen is, as you can\nsee, it's a extremely ambiguous",
+        "start": 443.346,
+        "duration": 3.33
+    },
+    {
+        "text": "sensation at that given point.",
+        "start": 446.676,
+        "duration": 1.47
+    },
+    {
+        "text": "That's equivalent to if you were touching\nthis mug with your finger or if you",
+        "start": 448.416,
+        "duration": 3.57
+    },
+    {
+        "text": "were looking at it through a straw.",
+        "start": 451.986,
+        "duration": 1.23
+    },
+    {
+        "text": "and then on the right is the kind\nof evidence values associated with",
+        "start": 455.106,
+        "duration": 3.99
+    },
+    {
+        "text": "different objects that Monte knows about.",
+        "start": 459.216,
+        "duration": 2.19
+    },
+    {
+        "text": "And so what you see kinda at the top is\nthat the first step, it initializes some",
+        "start": 462.366,
+        "duration": 3.93
+    },
+    {
+        "text": "hypotheses about what object it might\nbe on based on what it's just seen.",
+        "start": 466.296,
+        "duration": 3.81
+    },
+    {
+        "text": "And so given this kind of red, color and\nthe curvature of the surface, this seems",
+        "start": 470.826,
+        "duration": 4.98
+    },
+    {
+        "text": "to match reasonably, quite well with, the\nside of a mug to a certain degree with",
+        "start": 475.806,
+        "duration": 4.98
+    },
+    {
+        "text": "the side of a bowl, and not particularly\nwell with the side of a white golf ball.",
+        "start": 480.786,
+        "duration": 3.72
+    },
+    {
+        "text": "Then over a series of movements, Monty\nintegrates that, kind of movement that's",
+        "start": 486.396,
+        "duration": 4.83
+    },
+    {
+        "text": "taking place, to update these hypotheses\nand then receives new information.",
+        "start": 491.226,
+        "duration": 4.29
+    },
+    {
+        "text": "And over a kind of a course of an,\nepisode, it then narrows down its",
+        "start": 496.236,
+        "duration": 4.56
+    },
+    {
+        "text": "hypotheses about where it might be.",
+        "start": 500.826,
+        "duration": 1.32
+    },
+    {
+        "text": "And so you can see how it gradually\neliminates the bowl and quickly eliminates",
+        "start": 502.146,
+        "duration": 4.14
+    },
+    {
+        "text": "the golf ball as possible, locations.",
+        "start": 506.286,
+        "duration": 2.4
+    },
+    {
+        "text": "And then in the case of the mug,\nnarrows down in space where it might",
+        "start": 508.686,
+        "duration": 3.66
+    },
+    {
+        "text": "be, based on what it's observing.",
+        "start": 512.346,
+        "duration": 1.74
+    },
+    {
+        "text": "And the, dataset we used for all\nof our experiments was the 77,",
+        "start": 517.866,
+        "duration": 4.62
+    },
+    {
+        "text": "objects in the YCB data sets.",
+        "start": 522.786,
+        "duration": 1.59
+    },
+    {
+        "text": "This is a collection of household\nobjects such as like a fork, banana",
+        "start": 524.376,
+        "duration": 3.36
+    },
+    {
+        "text": "screwdriver, and so forth, that have\nbeen 3D scanned, and made available.",
+        "start": 527.796,
+        "duration": 5.19
+    },
+    {
+        "text": "And during learning, Monty is presented,\nin general unless kind of noted otherwise.",
+        "start": 534.546,
+        "duration": 5.49
+    },
+    {
+        "text": "These objects at sort of 14 canonical\nrotations, and what we mean by that is the",
+        "start": 540.036,
+        "duration": 5.28
+    },
+    {
+        "text": "six rotations corresponding to the faces\nof a cube, as well as the eight rotations",
+        "start": 545.316,
+        "duration": 4.38
+    },
+    {
+        "text": "corresponding to the corners of a cube.",
+        "start": 549.696,
+        "duration": 1.38
+    },
+    {
+        "text": "For a total of 14.",
+        "start": 552.111,
+        "duration": 1.02
+    },
+    {
+        "text": "and you can see we have this kind of\ndistant agent that does that more kind",
+        "start": 554.061,
+        "duration": 3.27
+    },
+    {
+        "text": "of scan like policy, the representation\nthat develops across these views.",
+        "start": 557.331,
+        "duration": 4.35
+    },
+    {
+        "text": "And then the surface agent, which kind of\nmoves more freely across the surface of",
+        "start": 562.101,
+        "duration": 3.33
+    },
+    {
+        "text": "the object, develops representations all\nover the object when given a single view.",
+        "start": 565.431,
+        "duration": 5.76
+    },
+    {
+        "text": "but because it does these narrow\npaths, it also benefits from multiple",
+        "start": 572.001,
+        "duration": 4.59
+    },
+    {
+        "text": "exposures to develop a good model.",
+        "start": 576.591,
+        "duration": 2.67
+    },
+    {
+        "text": "So that's the kind of preamble.",
+        "start": 582.531,
+        "duration": 1.44
+    },
+    {
+        "text": "I should also maybe say that.",
+        "start": 584.421,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 585.891,
+        "duration": 0.18
+    },
+    {
+        "text": "maybe it makes sense to leave\nkinda any discussion to the end.",
+        "start": 586.641,
+        "duration": 2.97
+    },
+    {
+        "text": "obviously if anyone on the kind of\nresearch team or otherwise, kinda",
+        "start": 590.811,
+        "duration": 4.29
+    },
+    {
+        "text": "notices I, I left something out,\nfeel free to jump in and mention it.",
+        "start": 595.101,
+        "duration": 4.26
+    },
+    {
+        "text": "So the kind of first main result in\nthe paper is looking at inference and",
+        "start": 601.521,
+        "duration": 3.66
+    },
+    {
+        "text": "in particular the robustness of this.",
+        "start": 605.181,
+        "duration": 1.65
+    },
+    {
+        "text": "And so those same, 77 objects, that\nMonty has learned on are now used to",
+        "start": 607.041,
+        "duration": 6.09
+    },
+    {
+        "text": "evaluate the performance of the model.",
+        "start": 613.131,
+        "duration": 1.38
+    },
+    {
+        "text": "And we were looking at\nclassification accuracy.",
+        "start": 614.901,
+        "duration": 1.77
+    },
+    {
+        "text": "So does it correctly recognize what\nobject it's seen and also rotation",
+        "start": 616.671,
+        "duration": 4.11
+    },
+    {
+        "text": "error between measuring degrees.",
+        "start": 620.781,
+        "duration": 1.47
+    },
+    {
+        "text": "so how well is the predicted rotation?",
+        "start": 622.851,
+        "duration": 2.73
+    },
+    {
+        "text": "How well does that align to the\nactual rotation of the object in",
+        "start": 625.581,
+        "duration": 3.33
+    },
+    {
+        "text": "the environment when Monty sees it?",
+        "start": 628.911,
+        "duration": 1.5
+    },
+    {
+        "text": "And this very first kind of base condition\nin this figure, although it's the",
+        "start": 631.941,
+        "duration": 4.29
+    },
+    {
+        "text": "simplest, it's worth pointing out that.",
+        "start": 636.231,
+        "duration": 1.95
+    },
+    {
+        "text": "Although the object is presented at one\nof those 14 rotations that Monty has seen",
+        "start": 638.541,
+        "duration": 4.2
+    },
+    {
+        "text": "before because of the way kind of random\nseeds and policies work and so forth,",
+        "start": 642.741,
+        "duration": 3.99
+    },
+    {
+        "text": "the sensory path that Monty will follow\non that object is actually different.",
+        "start": 647.091,
+        "duration": 3.3
+    },
+    {
+        "text": "and so it still needs to generalize,\nat least to a certain degree in",
+        "start": 651.321,
+        "duration": 4.5
+    },
+    {
+        "text": "the sense that it's not getting the\nexact same observations it's seen,",
+        "start": 655.821,
+        "duration": 2.64
+    },
+    {
+        "text": "before as it moves over the object.",
+        "start": 658.701,
+        "duration": 1.8
+    },
+    {
+        "text": "and as you can see, the\naccuracy is extremely high,",
+        "start": 661.791,
+        "duration": 3.09
+    },
+    {
+        "text": "close to a hundred percent.",
+        "start": 665.511,
+        "duration": 0.81
+    },
+    {
+        "text": "And the rotation error, the distribution\nshown, in this violin plot is, very low.",
+        "start": 666.321,
+        "duration": 5.49
+    },
+    {
+        "text": "But, we obviously wanted to\nmake things more interesting.",
+        "start": 673.731,
+        "duration": 2.64
+    },
+    {
+        "text": "so that's where we then\nstarted introducing, noise.",
+        "start": 676.941,
+        "duration": 3.0
+    },
+    {
+        "text": "and we added this noise to a variety\nof features, of the model, or rather",
+        "start": 680.601,
+        "duration": 5.25
+    },
+    {
+        "text": "the kind of, perception that, Monty\nis getting in informed the CMP signal.",
+        "start": 685.851,
+        "duration": 5.4
+    },
+    {
+        "text": "That was things like the location of\nthat, signal, as well as the color",
+        "start": 691.761,
+        "duration": 3.54
+    },
+    {
+        "text": "associated with the color feature.",
+        "start": 695.511,
+        "duration": 1.95
+    },
+    {
+        "text": "And you can see how this certainly\nstarts to obscure some of the finer",
+        "start": 699.261,
+        "duration": 3.42
+    },
+    {
+        "text": "grained, details of the models,\nthings like the rim, as well as",
+        "start": 702.681,
+        "duration": 2.85
+    },
+    {
+        "text": "the general shape of the handle.",
+        "start": 705.531,
+        "duration": 1.26
+    },
+    {
+        "text": "but fortunately Monty, still shows\nit's robust to this in terms of",
+        "start": 707.691,
+        "duration": 4.92
+    },
+    {
+        "text": "the accuracy and rotation error.",
+        "start": 713.001,
+        "duration": 1.14
+    },
+    {
+        "text": "It's not much change.",
+        "start": 714.381,
+        "duration": 0.78
+    },
+    {
+        "text": "The, noise is not just applied to\ncolor and location, which is visualized",
+        "start": 715.191,
+        "duration": 3.57
+    },
+    {
+        "text": "here, but also to the point normals and\ncurvature directions and to the amount",
+        "start": 718.761,
+        "duration": 4.65
+    },
+    {
+        "text": "of curvature that is being sensed.",
+        "start": 723.411,
+        "duration": 1.68
+    },
+    {
+        "text": "And yeah, basically all the features\nthat come into the learning module Yeah.",
+        "start": 726.066,
+        "duration": 4.92
+    },
+    {
+        "text": "That are important.",
+        "start": 730.986,
+        "duration": 0.57
+    },
+    {
+        "text": "No, good point.",
+        "start": 732.006,
+        "duration": 0.57
+    },
+    {
+        "text": "But to yeah, really test, Monty's limit.",
+        "start": 735.606,
+        "duration": 3.42
+    },
+    {
+        "text": "We then introduced new rotations,\nso these are rotations that Monty",
+        "start": 739.086,
+        "duration": 3.6
+    },
+    {
+        "text": "has not seen at all, at any point\nin training data for any object.",
+        "start": 742.686,
+        "duration": 3.63
+    },
+    {
+        "text": "as well as, combining those new\nrotations with sensorimotor noise.",
+        "start": 747.366,
+        "duration": 4.32
+    },
+    {
+        "text": "And then finally adding in a new\ncolor where we basically set all",
+        "start": 752.076,
+        "duration": 4.26
+    },
+    {
+        "text": "the objects, all the observations\nthat a Monte gets for any object",
+        "start": 756.336,
+        "duration": 3.12
+    },
+    {
+        "text": "to this kind of intense blue color.",
+        "start": 759.876,
+        "duration": 1.56
+    },
+    {
+        "text": "so it loses any kind of visual texture\ninformation it might otherwise get.",
+        "start": 762.096,
+        "duration": 4.26
+    },
+    {
+        "text": "from the object surface, you can\nsee that there is a, kind of some",
+        "start": 767.016,
+        "duration": 5.49
+    },
+    {
+        "text": "drop in performance, but it's worth\nemphasizing that, this is a data set",
+        "start": 772.506,
+        "duration": 4.29
+    },
+    {
+        "text": "with 77 objects, five novel rotations.",
+        "start": 776.796,
+        "duration": 3.63
+    },
+    {
+        "text": "chance performance is very\nlow in the order of kinda 1%.",
+        "start": 781.026,
+        "duration": 3.66
+    },
+    {
+        "text": "and, Monty in general is doing quite\nwell on this, given that even for a",
+        "start": 786.156,
+        "duration": 5.25
+    },
+    {
+        "text": "human, you can imagine that if you start,\nkinda obscuring information like color",
+        "start": 791.406,
+        "duration": 5.67
+    },
+    {
+        "text": "as well as adding noise to, the kind\nof locations of where things are being",
+        "start": 797.076,
+        "duration": 4.47
+    },
+    {
+        "text": "sensed, that becomes very difficult.",
+        "start": 801.546,
+        "duration": 1.44
+    },
+    {
+        "text": "Things like the fork and the spoon,\nthe prongs, the fork become this kind",
+        "start": 802.986,
+        "duration": 3.78
+    },
+    {
+        "text": "of cloud of points, things like that.",
+        "start": 806.766,
+        "duration": 1.89
+    },
+    {
+        "text": "And there's also certain objects\nin the dataset, these series of",
+        "start": 808.656,
+        "duration": 3.36
+    },
+    {
+        "text": "cups, which are pretty much only\ndistinguished by, their color.",
+        "start": 812.016,
+        "duration": 3.36
+    },
+    {
+        "text": "So the fact that, Monty gets such a\nhigh accuracy and, reasonable rotation",
+        "start": 816.396,
+        "duration": 3.45
+    },
+    {
+        "text": "error actually quite, encouraging.",
+        "start": 819.846,
+        "duration": 2.04
+    },
+    {
+        "text": "I think this is, doubly because all\nof this noise that we're adding at",
+        "start": 823.206,
+        "duration": 4.2
+    },
+    {
+        "text": "inference time is out of distribution.",
+        "start": 827.406,
+        "duration": 2.28
+    },
+    {
+        "text": "which is to say Monty is never trained\non any of these perturbations in order",
+        "start": 830.466,
+        "duration": 4.14
+    },
+    {
+        "text": "to increase its robustness to these.",
+        "start": 834.606,
+        "duration": 1.89
+    },
+    {
+        "text": "and this is in general a very challenging\nthing to, to achieve, robustness often",
+        "start": 838.176,
+        "duration": 6.42
+    },
+    {
+        "text": "relies on a degree of interpolations.",
+        "start": 844.596,
+        "duration": 2.01
+    },
+    {
+        "text": "as long as you've densely sampled the\nspace and then test something in between",
+        "start": 846.996,
+        "duration": 4.32
+    },
+    {
+        "text": "those points, then you can generalize.",
+        "start": 851.316,
+        "duration": 2.76
+    },
+    {
+        "text": "But here we're really seeing\ngeneralization that goes out of, the",
+        "start": 854.076,
+        "duration": 4.5
+    },
+    {
+        "text": "distribution that Monte has seen before.",
+        "start": 858.576,
+        "duration": 1.5
+    },
+    {
+        "text": "So, yeah, so this is the first, result\nwe were really excited to, to share.",
+        "start": 862.626,
+        "duration": 4.56
+    },
+    {
+        "text": "and we'll talk a bit more about how\nthis relates, how is Monte actually",
+        "start": 870.516,
+        "duration": 4.47
+    },
+    {
+        "text": "achieving this and how this relates\nto this concept of kind of, shape bias",
+        "start": 874.986,
+        "duration": 4.38
+    },
+    {
+        "text": "and, using shape to recognize objects.",
+        "start": 879.526,
+        "duration": 2.42
+    },
+    {
+        "text": "in order to understand that a bit\nbetter, we then wanted to look at",
+        "start": 884.256,
+        "duration": 4.38
+    },
+    {
+        "text": "the kind of internal representations\nthat Monty develops, and how",
+        "start": 888.696,
+        "duration": 3.06
+    },
+    {
+        "text": "these, relate to different objects\nand, the shapes of those objects.",
+        "start": 891.756,
+        "duration": 5.4
+    },
+    {
+        "text": "So in order to do this, one thing\nwe can do is look at the evidence",
+        "start": 897.156,
+        "duration": 4.98
+    },
+    {
+        "text": "values associated with objects.",
+        "start": 902.136,
+        "duration": 1.68
+    },
+    {
+        "text": "So what I mean by that is.",
+        "start": 903.876,
+        "duration": 1.17
+    },
+    {
+        "text": "Monty, when it's sensing an object,\nit has a series of hypotheses",
+        "start": 905.766,
+        "duration": 3.9
+    },
+    {
+        "text": "inside each learning module, that\nincrement over time based on movement",
+        "start": 910.236,
+        "duration": 4.02
+    },
+    {
+        "text": "and the next sensory observation.",
+        "start": 914.256,
+        "duration": 1.32
+    },
+    {
+        "text": "and that's what we're plotting here,\nis for a particular learning module.",
+        "start": 916.806,
+        "duration": 2.94
+    },
+    {
+        "text": "It has these, different\nhypotheses, and you can see how",
+        "start": 920.196,
+        "duration": 3.72
+    },
+    {
+        "text": "they're increasing over time.",
+        "start": 923.916,
+        "duration": 1.08
+    },
+    {
+        "text": "And, for the point of view of this\ndiagram, this kind of gold point is, the",
+        "start": 926.046,
+        "duration": 6.12
+    },
+    {
+        "text": "point at which the spoon head is sensed.",
+        "start": 932.166,
+        "duration": 2.49
+    },
+    {
+        "text": "And so the, learning module becomes\nquite confident that it's seen the",
+        "start": 934.656,
+        "duration": 3.72
+    },
+    {
+        "text": "spoon as opposed to, something else.",
+        "start": 938.376,
+        "duration": 2.22
+    },
+    {
+        "text": "But you can see up until that point,\nthe amount of evidence it has for",
+        "start": 941.376,
+        "duration": 4.11
+    },
+    {
+        "text": "these objects is quite similar.",
+        "start": 945.486,
+        "duration": 1.53
+    },
+    {
+        "text": "and these objects all have, as we'll\nget to in a moment, an elongated,",
+        "start": 948.156,
+        "duration": 4.53
+    },
+    {
+        "text": "narrow portion of their, shape.",
+        "start": 953.406,
+        "duration": 2.13
+    },
+    {
+        "text": "And so what I'll show on the next\nslide is we can look at these evidence",
+        "start": 956.766,
+        "duration": 4.11
+    },
+    {
+        "text": "values across a series of experiments,\nand in particular kind of see if",
+        "start": 960.876,
+        "duration": 4.2
+    },
+    {
+        "text": "mon is recognizing and actually\nsensing one object like the spoon.",
+        "start": 965.076,
+        "duration": 3.33
+    },
+    {
+        "text": "What other objects does it have\nsimilarly high evidence values",
+        "start": 968.856,
+        "duration": 4.5
+    },
+    {
+        "text": "for versus what objects does it\nhave very low evidence values for?",
+        "start": 973.356,
+        "duration": 3.15
+    },
+    {
+        "text": "And that's what is shown in this figure of\nthe paper where we cluster, the different",
+        "start": 978.876,
+        "duration": 5.37
+    },
+    {
+        "text": "objects, these 10 different objects based\non the evidence values that Monty has",
+        "start": 984.246,
+        "duration": 4.77
+    },
+    {
+        "text": "when it's recognizing a particular object.",
+        "start": 989.046,
+        "duration": 1.98
+    },
+    {
+        "text": "And what this shows is that.",
+        "start": 992.556,
+        "duration": 1.35
+    },
+    {
+        "text": "Quant naturally clusters, these objects\nbased on shape or morphology that humans",
+        "start": 994.776,
+        "duration": 5.28
+    },
+    {
+        "text": "would also naturally, identify in these.",
+        "start": 1000.086,
+        "duration": 3.66
+    },
+    {
+        "text": "So you have these kind of cutlery objects\nthat are elongated with this, end to them.",
+        "start": 1003.746,
+        "duration": 4.74
+    },
+    {
+        "text": "You have these box-like objects, and\nthen you have these cup like objects.",
+        "start": 1008.726,
+        "duration": 3.18
+    },
+    {
+        "text": "And, it's important that to emphasize that\nMonty doesn't have a kind of objective",
+        "start": 1013.256,
+        "duration": 5.85
+    },
+    {
+        "text": "function with some supervised label\nthat encourages this kind of clustering.",
+        "start": 1019.106,
+        "duration": 4.53
+    },
+    {
+        "text": "This just naturally emerges, in the kind\nof representations it develops, from",
+        "start": 1023.966,
+        "duration": 4.65
+    },
+    {
+        "text": "how it the hypotheses that it has when\nit's recognizing a particular object.",
+        "start": 1028.676,
+        "duration": 5.1
+    },
+    {
+        "text": "It also just kinda shows some of\nthe things like, the dec cup here",
+        "start": 1036.446,
+        "duration": 3.48
+    },
+    {
+        "text": "is a largely or is a yellow object\nas is, the most part the sugar box.",
+        "start": 1040.166,
+        "duration": 5.43
+    },
+    {
+        "text": "You can see they are very far apart\nin this kind of clustering space.",
+        "start": 1045.806,
+        "duration": 4.05
+    },
+    {
+        "text": "whereas the, mug like\nobjects, are much closer.",
+        "start": 1050.846,
+        "duration": 4.53
+    },
+    {
+        "text": "And then this mug, which has this\nkind of distinct handle that seems",
+        "start": 1055.376,
+        "duration": 3.48
+    },
+    {
+        "text": "to lead to a more significant\nseparation from these other cuffs.",
+        "start": 1058.856,
+        "duration": 4.5
+    },
+    {
+        "text": "So there's a lot of almost, semantic,\nconsistency it seems, in this clustering.",
+        "start": 1064.286,
+        "duration": 5.55
+    },
+    {
+        "text": "Then the kind of significance of all this\nis that, this emphasizes that Monty, uses,",
+        "start": 1074.846,
+        "duration": 6.63
+    },
+    {
+        "text": "or is sensitive to the shape of objects.",
+        "start": 1081.926,
+        "duration": 2.07
+    },
+    {
+        "text": "And this is almost certainly the kind of\nsource of its robustness to noise that",
+        "start": 1084.896,
+        "duration": 3.45
+    },
+    {
+        "text": "we saw earlier, including that situation\nwhere it had an entirely new color.",
+        "start": 1088.346,
+        "duration": 3.09
+    },
+    {
+        "text": "Because if Monty is using global\nstructure, and even if we perturb",
+        "start": 1092.426,
+        "duration": 4.05
+    },
+    {
+        "text": "locations a bit, even if we add an\nentirely d different color, even if",
+        "start": 1096.506,
+        "duration": 4.56
+    },
+    {
+        "text": "we rotate the object entirely, none of\nthose, perturbations are changing the",
+        "start": 1101.066,
+        "duration": 4.14
+    },
+    {
+        "text": "global, kinda structure of the object.",
+        "start": 1105.206,
+        "duration": 1.8
+    },
+    {
+        "text": "Its shape.",
+        "start": 1107.006,
+        "duration": 0.45
+    },
+    {
+        "text": "Obviously, if we added a huge amount\nof noise to those locations and it",
+        "start": 1107.966,
+        "duration": 2.79
+    },
+    {
+        "text": "just became a random point cloud, then\nMonty's performance would dramatically",
+        "start": 1110.756,
+        "duration": 3.48
+    },
+    {
+        "text": "fall in the same way that, that to a\nhuman, it would no longer look like,",
+        "start": 1114.236,
+        "duration": 3.93
+    },
+    {
+        "text": "the kind of original object it was.",
+        "start": 1118.526,
+        "duration": 1.53
+    },
+    {
+        "text": "And this is something that's worth\ndwelling on because, recognizing",
+        "start": 1122.666,
+        "duration": 5.61
+    },
+    {
+        "text": "objects by their shape and using that\nas the primary, basis of recognition",
+        "start": 1128.276,
+        "duration": 5.22
+    },
+    {
+        "text": "is something that humans do naturally.",
+        "start": 1133.496,
+        "duration": 1.86
+    },
+    {
+        "text": "but it has not been, property has emerged\nnaturally in deep learning systems in",
+        "start": 1136.196,
+        "duration": 6.27
+    },
+    {
+        "text": "the sense that already back in 2019,\nit was noted that, if you took a image",
+        "start": 1142.466,
+        "duration": 6.87
+    },
+    {
+        "text": "like this cat and replaced the texture\nof the image, with something else like",
+        "start": 1149.336,
+        "duration": 5.85
+    },
+    {
+        "text": "this elephant skin, but preserve the\nkind of global shape, deep learning",
+        "start": 1155.186,
+        "duration": 3.63
+    },
+    {
+        "text": "systems would confidently classify it\nbased on the texture, not on the shape.",
+        "start": 1158.816,
+        "duration": 4.53
+    },
+    {
+        "text": "and this beca became referred to as\nthis kind of texture versus shape bias.",
+        "start": 1164.216,
+        "duration": 3.63
+    },
+    {
+        "text": "fast forward to today and despite training\non, Virtually the entire Internet's worth",
+        "start": 1169.676,
+        "duration": 5.535
+    },
+    {
+        "text": "of, kind of images, huge amount more\ndata than, than humans, are exposed to.",
+        "start": 1175.241,
+        "duration": 6.42
+    },
+    {
+        "text": "in the same way these systems\nstill show this kind of",
+        "start": 1182.561,
+        "duration": 3.12
+    },
+    {
+        "text": "texture shaped bias, obviously.",
+        "start": 1185.681,
+        "duration": 2.28
+    },
+    {
+        "text": "Monty is looking at objects in 3D here,\nbut, prior work with, kind of reference",
+        "start": 1188.231,
+        "duration": 6.72
+    },
+    {
+        "text": "frames in 2D grid cells showed a similar\neffect where when you use reference",
+        "start": 1194.951,
+        "duration": 4.83
+    },
+    {
+        "text": "frames with a sensorimotor system that\nmoves through that reference frame and",
+        "start": 1199.781,
+        "duration": 3.78
+    },
+    {
+        "text": "kind of binds observations to locations,\nyou get this much stronger kind of",
+        "start": 1203.561,
+        "duration": 4.14
+    },
+    {
+        "text": "reliance on shape and the kind of global,",
+        "start": 1207.701,
+        "duration": 2.88
+    },
+    {
+        "text": "the global arrangement of features rather\nthan this kind of sensitivity to high",
+        "start": 1212.981,
+        "duration": 5.28
+    },
+    {
+        "text": "frequency textures that, seem to correlate\nwith object classes and therefore seem",
+        "start": 1218.261,
+        "duration": 5.85
+    },
+    {
+        "text": "to be picked up by deep learning systems.",
+        "start": 1224.111,
+        "duration": 2.13
+    },
+    {
+        "text": "I should maybe, sorry, clarify that.",
+        "start": 1228.251,
+        "duration": 1.38
+    },
+    {
+        "text": "So this figure here, what this is\nshowing is the degree of texture bias.",
+        "start": 1229.751,
+        "duration": 4.32
+    },
+    {
+        "text": "So over here is classifying\nentirely based on texture, and",
+        "start": 1234.071,
+        "duration": 3.36
+    },
+    {
+        "text": "over here is based on shape.",
+        "start": 1237.431,
+        "duration": 1.86
+    },
+    {
+        "text": "And you can see humans are\nessentially entirely based on shape.",
+        "start": 1239.291,
+        "duration": 3.39
+    },
+    {
+        "text": "And this is just showing\nwhere different, deep learning",
+        "start": 1243.251,
+        "duration": 2.64
+    },
+    {
+        "text": "systems fall on that spectrum.",
+        "start": 1245.951,
+        "duration": 1.23
+    },
+    {
+        "text": "and this is, an exciting result even if we\nhaven't gone all the way down of applying.",
+        "start": 1251.051,
+        "duration": 5.73
+    },
+    {
+        "text": "Different textures to the objects\nlike, was done in this prior study.",
+        "start": 1257.186,
+        "duration": 3.33
+    },
+    {
+        "text": "this is still an exciting result\nbecause of, what it implies and,",
+        "start": 1261.446,
+        "duration": 2.941
+    },
+    {
+        "text": "what we can look at in the future.",
+        "start": 1264.392,
+        "duration": 1.134
+    },
+    {
+        "text": "Because adversarial examples are these\nkind of bizarre instances where you can",
+        "start": 1265.526,
+        "duration": 5.16
+    },
+    {
+        "text": "add a imperceptible amount of, noise,\ntargeted noise to an image such as this.",
+        "start": 1270.686,
+        "duration": 5.37
+    },
+    {
+        "text": "And a deep learning system will\nconfidently classify it as something else.",
+        "start": 1276.326,
+        "duration": 3.03
+    },
+    {
+        "text": "and just like that texture bias,\nthis is something that scaling",
+        "start": 1280.136,
+        "duration": 3.51
+    },
+    {
+        "text": "deep learning systems, giving them\nmore and more data has not solved.",
+        "start": 1283.646,
+        "duration": 3.27
+    },
+    {
+        "text": "and it's almost certainly related.",
+        "start": 1288.086,
+        "duration": 1.83
+    },
+    {
+        "text": "There's already good evidence, but it's\nalmost certainly related to, shape bias",
+        "start": 1290.036,
+        "duration": 3.6
+    },
+    {
+        "text": "because of course, by adding this, kind\ntargeted noise, you are perturbing, the",
+        "start": 1293.636,
+        "duration": 5.67
+    },
+    {
+        "text": "pixels in a very high frequency way.",
+        "start": 1299.306,
+        "duration": 1.92
+    },
+    {
+        "text": "But the global shape to a human\nhas remained entirely unal altered.",
+        "start": 1301.676,
+        "duration": 3.78
+    },
+    {
+        "text": "it's not something we looked at in\nthis paper, but, you could imagine",
+        "start": 1306.866,
+        "duration": 2.94
+    },
+    {
+        "text": "there are ways you could create\nan adversarial example for Monty.",
+        "start": 1309.806,
+        "duration": 2.91
+    },
+    {
+        "text": "But what that adversarial example would\nconsist of would be rearranging the",
+        "start": 1313.076,
+        "duration": 4.11
+    },
+    {
+        "text": "locations of the features, to convince\nit that it's seen a different object",
+        "start": 1317.186,
+        "duration": 4.53
+    },
+    {
+        "text": "and the end effect would be changing.",
+        "start": 1321.746,
+        "duration": 2.85
+    },
+    {
+        "text": "The actual identity of the\nobject is something else.",
+        "start": 1324.596,
+        "duration": 1.83
+    },
+    {
+        "text": "So essentially something that would\nalso fool a human and therefore, a",
+        "start": 1326.426,
+        "duration": 4.8
+    },
+    {
+        "text": "totally different, type of phenomenon\nfrom these adversarial examples.",
+        "start": 1331.316,
+        "duration": 3.57
+    },
+    {
+        "text": "so, far, we've been looking at robustness\nin this, sort of umbrella of noise,",
+        "start": 1339.146,
+        "duration": 5.55
+    },
+    {
+        "text": "but that's not the kind of only.",
+        "start": 1344.696,
+        "duration": 1.83
+    },
+    {
+        "text": "And, various kind of types\nof noise and perturbation.",
+        "start": 1347.561,
+        "duration": 2.01
+    },
+    {
+        "text": "but robustness goes beyond that.",
+        "start": 1350.351,
+        "duration": 1.53
+    },
+    {
+        "text": "And in particular, it's really\nimportant for a good representation",
+        "start": 1351.911,
+        "duration": 3.54
+    },
+    {
+        "text": "to have these properties of what are\nknown as equ variance and in variants.",
+        "start": 1355.451,
+        "duration": 3.57
+    },
+    {
+        "text": "And basically, equ variant means that\nit changes a representation changes",
+        "start": 1359.591,
+        "duration": 4.11
+    },
+    {
+        "text": "as, the state of the world changes.",
+        "start": 1363.761,
+        "duration": 1.77
+    },
+    {
+        "text": "And variant means it doesn't change.",
+        "start": 1365.591,
+        "duration": 1.5
+    },
+    {
+        "text": "And for an intelligent system to be\nuseful, it should have a mixture of equ",
+        "start": 1367.781,
+        "duration": 4.77
+    },
+    {
+        "text": "variant and invariant representations\nunder different conditions.",
+        "start": 1372.551,
+        "duration": 2.22
+    },
+    {
+        "text": "and I'll try and make\nthat a bit more concrete.",
+        "start": 1375.731,
+        "duration": 2.04
+    },
+    {
+        "text": "So you can imagine if you were looking\nat these, pencils, although the one",
+        "start": 1378.671,
+        "duration": 4.26
+    },
+    {
+        "text": "on the right has a different color\nand a slightly different shape, it's",
+        "start": 1382.931,
+        "duration": 3.21
+    },
+    {
+        "text": "shorter and so forth, and a bit, wider,\nyou still recognize these as pencils.",
+        "start": 1386.141,
+        "duration": 4.56
+    },
+    {
+        "text": "And so your representation of a pencil\nis inva to these, changes in details such",
+        "start": 1390.701,
+        "duration": 6.12
+    },
+    {
+        "text": "as color or certain changes in shape.",
+        "start": 1396.821,
+        "duration": 3.36
+    },
+    {
+        "text": "and you would also be robust\nto, for example, seeing",
+        "start": 1401.231,
+        "duration": 2.43
+    },
+    {
+        "text": "this pencil in a dark room.",
+        "start": 1403.661,
+        "duration": 1.32
+    },
+    {
+        "text": "but if you turn the pencil, like this,\nthese two different kind of ways of",
+        "start": 1407.741,
+        "duration": 4.59
+    },
+    {
+        "text": "holding it in a hand, your representation\nof where the pencil is in, in space",
+        "start": 1412.331,
+        "duration": 4.95
+    },
+    {
+        "text": "and how it's oriented, changes.",
+        "start": 1417.281,
+        "duration": 2.145
+    },
+    {
+        "text": "So that means that\nrepresentation is equ variant.",
+        "start": 1419.426,
+        "duration": 2.085
+    },
+    {
+        "text": "On the other hand, if you rotate it on\nthe kind of long axis of the pencil,",
+        "start": 1421.886,
+        "duration": 5.625
+    },
+    {
+        "text": "then as far as you're concerned, it's\nbasically in the same orientation.",
+        "start": 1428.051,
+        "duration": 3.75
+    },
+    {
+        "text": "And so those rotations are symmetric.",
+        "start": 1431.951,
+        "duration": 2.07
+    },
+    {
+        "text": "So for certain rotations,\nyou want the system to be in",
+        "start": 1434.921,
+        "duration": 3.39
+    },
+    {
+        "text": "variant to recognize symmetry.",
+        "start": 1438.311,
+        "duration": 1.65
+    },
+    {
+        "text": "but for others you want\nit to be equ variant.",
+        "start": 1440.711,
+        "duration": 2.25
+    },
+    {
+        "text": "That's a, it sounds simple because\nit's something that humans do",
+        "start": 1443.861,
+        "duration": 3.12
+    },
+    {
+        "text": "naturally, all the time, but it's\nactually a really difficult property",
+        "start": 1447.251,
+        "duration": 3.54
+    },
+    {
+        "text": "to bake into, a learning system.",
+        "start": 1450.791,
+        "duration": 2.4
+    },
+    {
+        "text": "And another really exciting, result,\nwith Monty was that we found that",
+        "start": 1453.761,
+        "duration": 4.41
+    },
+    {
+        "text": "these kind of symmetry representations\nemerge essentially naturally.",
+        "start": 1458.171,
+        "duration": 3.54
+    },
+    {
+        "text": "and in particular, you can imagine having\nan object like this, cup made up of,",
+        "start": 1463.871,
+        "duration": 4.29
+    },
+    {
+        "text": "points, and it can have a variety of\nrotations which are inherently ambiguous.",
+        "start": 1468.641,
+        "duration": 6.36
+    },
+    {
+        "text": "So these, different kind of ones here are\nshowing the same model, but rotated by",
+        "start": 1475.001,
+        "duration": 6.27
+    },
+    {
+        "text": "these different amounts, represented here.",
+        "start": 1481.271,
+        "duration": 2.01
+    },
+    {
+        "text": "And as far as a human is concerned, these\nlook like they're the same rotation.",
+        "start": 1484.091,
+        "duration": 3.03
+    },
+    {
+        "text": "but a rotation like this looks different.",
+        "start": 1488.051,
+        "duration": 2.25
+    },
+    {
+        "text": "What's, interesting about Monty is as\nit's recognizing an object and sensing",
+        "start": 1492.071,
+        "duration": 5.16
+    },
+    {
+        "text": "it, it has these hypotheses about the\npotential rotation of the object, and",
+        "start": 1497.231,
+        "duration": 3.51
+    },
+    {
+        "text": "those are informed by what it's sensing.",
+        "start": 1500.741,
+        "duration": 1.89
+    },
+    {
+        "text": "So it's, this is a detail that's maybe\nbest necessarily if you look at the",
+        "start": 1502.631,
+        "duration": 4.08
+    },
+    {
+        "text": "paper, but it's not like Monty has a\nlist of rotations that has experienced",
+        "start": 1506.711,
+        "duration": 4.05
+    },
+    {
+        "text": "before and it's only going to look\nat those, that list of rotations.",
+        "start": 1510.761,
+        "duration": 3.93
+    },
+    {
+        "text": "It's it senses the object based on that.",
+        "start": 1514.721,
+        "duration": 2.37
+    },
+    {
+        "text": "It can, have a hypothesis about\nwhere it would be oriented,",
+        "start": 1517.481,
+        "duration": 3.09
+    },
+    {
+        "text": "but as it's moving across this.",
+        "start": 1521.531,
+        "duration": 1.47
+    },
+    {
+        "text": "It's going to have a series of hypotheses\nthat are all valid, that are all getting",
+        "start": 1523.811,
+        "duration": 4.5
+    },
+    {
+        "text": "sensory observations that are consistent\nwith the model, with that rotation.",
+        "start": 1528.311,
+        "duration": 3.96
+    },
+    {
+        "text": "On the other hand, the hypothesis\nassociated with this rotation",
+        "start": 1533.231,
+        "duration": 3.84
+    },
+    {
+        "text": "of the object would not be\ngetting consistent evidence.",
+        "start": 1537.076,
+        "duration": 2.035
+    },
+    {
+        "text": "And so the evidence value associated with\nthis would quickly decay and decrease.",
+        "start": 1539.441,
+        "duration": 4.71
+    },
+    {
+        "text": "What happens in Monty then is if it has a\nseries of these kinds of hypotheses that",
+        "start": 1545.591,
+        "duration": 4.41
+    },
+    {
+        "text": "are persistent together for a long time,\nso for one object, a set of rotations",
+        "start": 1550.001,
+        "duration": 4.8
+    },
+    {
+        "text": "that are all persistently active, it then\neventually reaches a kind of threshold,",
+        "start": 1554.801,
+        "duration": 4.53
+    },
+    {
+        "text": "a state at which it says, okay, I\nbelieve these objects to be, symmetric.",
+        "start": 1559.331,
+        "duration": 3.69
+    },
+    {
+        "text": "and so this was what we called\nsensorimotor symmetric because the way",
+        "start": 1564.611,
+        "duration": 4.86
+    },
+    {
+        "text": "that symmetry is, determined, is through\nsensorimotor exploration of the object.",
+        "start": 1569.471,
+        "duration": 3.72
+    },
+    {
+        "text": "and Monty can continue sensorimotor\nexploration as to as long as it",
+        "start": 1573.881,
+        "duration": 5.67
+    },
+    {
+        "text": "would like in order to verify\nwith greater and greater certainty",
+        "start": 1579.551,
+        "duration": 3.45
+    },
+    {
+        "text": "the existence of symmetry.",
+        "start": 1583.331,
+        "duration": 1.47
+    },
+    {
+        "text": "in order to then examine this\na bit further in the paper, we",
+        "start": 1588.761,
+        "duration": 4.56
+    },
+    {
+        "text": "wanted to use an additional metric.",
+        "start": 1593.321,
+        "duration": 1.74
+    },
+    {
+        "text": "So I mentioned earlier that we\nuse rotation error, generally when",
+        "start": 1595.061,
+        "duration": 3.48
+    },
+    {
+        "text": "reporting how good Monte is at\npredicting the rotation object.",
+        "start": 1598.541,
+        "duration": 3.18
+    },
+    {
+        "text": "That's because it's very intuitive metric.",
+        "start": 1601.931,
+        "duration": 1.56
+    },
+    {
+        "text": "but a kind of common metric in\nthe literature for measuring more",
+        "start": 1604.601,
+        "duration": 3.27
+    },
+    {
+        "text": "symmetry type, properties is something\nknown as the chamfer distance.",
+        "start": 1607.871,
+        "duration": 3.39
+    },
+    {
+        "text": "Which you can basically think\nof as a kind of metric for the",
+        "start": 1612.026,
+        "duration": 2.52
+    },
+    {
+        "text": "distance between two sets of points.",
+        "start": 1614.546,
+        "duration": 1.8
+    },
+    {
+        "text": "So if you had a point cloud, like\nthis blue one and this orange one,",
+        "start": 1616.736,
+        "duration": 3.06
+    },
+    {
+        "text": "you would basically for each point\nin the orange one, find its nearest",
+        "start": 1620.606,
+        "duration": 3.27
+    },
+    {
+        "text": "neighbor in the blue set of points,\ncalculate that distance and then do the",
+        "start": 1623.876,
+        "duration": 5.19
+    },
+    {
+        "text": "same thing for all the other points.",
+        "start": 1629.066,
+        "duration": 1.38
+    },
+    {
+        "text": "Sum those up and then do the same thing\nfor the blue one, comparing to the orange.",
+        "start": 1630.446,
+        "duration": 3.42
+    },
+    {
+        "text": "and what you'd end up with is a\nmetric that's high for two kind of",
+        "start": 1635.336,
+        "duration": 4.5
+    },
+    {
+        "text": "sets of points like these and low\nfor two sets of points like these.",
+        "start": 1639.836,
+        "duration": 3.42
+    },
+    {
+        "text": "What, the kind of advantage of using\nthis metric is that if an objects,",
+        "start": 1645.296,
+        "duration": 4.05
+    },
+    {
+        "text": "model is kinda symmetric, and then\nyou apply different rotations, as",
+        "start": 1649.586,
+        "duration": 5.16
+    },
+    {
+        "text": "long as that symmetry is true, then\nyou would get a, low cha distance.",
+        "start": 1654.746,
+        "duration": 5.13
+    },
+    {
+        "text": "And so that's what this figure\nin the paper, was looking at.",
+        "start": 1661.346,
+        "duration": 2.61
+    },
+    {
+        "text": "So what you're seeing here is a\nsingle example of this particular",
+        "start": 1663.956,
+        "duration": 4.53
+    },
+    {
+        "text": "object, this green cup, excuse me.",
+        "start": 1668.486,
+        "duration": 3.03
+    },
+    {
+        "text": "This is its ground truth rotation.",
+        "start": 1671.516,
+        "duration": 1.56
+    },
+    {
+        "text": "And then, there are a series of\nrotations we kinda report here.",
+        "start": 1673.826,
+        "duration": 4.17
+    },
+    {
+        "text": "on the left is the rotation error\nin degrees, which again is what we",
+        "start": 1679.346,
+        "duration": 3.03
+    },
+    {
+        "text": "generally report throughout the pa paper.",
+        "start": 1682.376,
+        "duration": 2.04
+    },
+    {
+        "text": "And then on the right is\nthe cham for distance.",
+        "start": 1684.656,
+        "duration": 1.44
+    },
+    {
+        "text": "I was just describing the kind of\ndifferent types of rotations we",
+        "start": 1686.096,
+        "duration": 4.71
+    },
+    {
+        "text": "have here are what's called min.\nSo this is of all the rotations",
+        "start": 1690.806,
+        "duration": 4.92
+    },
+    {
+        "text": "that Monty has a hypothesis about.",
+        "start": 1695.726,
+        "duration": 1.98
+    },
+    {
+        "text": "this is the one with the smallest,\nrotation error to, the ground truth",
+        "start": 1698.441,
+        "duration": 4.77
+    },
+    {
+        "text": "one, the most likely hypo hypothesis.",
+        "start": 1703.211,
+        "duration": 3.09
+    },
+    {
+        "text": "This is just the rotation that\nhappens to have the most evidence",
+        "start": 1706.301,
+        "duration": 3.48
+    },
+    {
+        "text": "at that, given point in time.",
+        "start": 1709.871,
+        "duration": 1.53
+    },
+    {
+        "text": "Although in general, what we would find,\nif you were to look at the evidence",
+        "start": 1711.701,
+        "duration": 2.64
+    },
+    {
+        "text": "values for these different rotations,\nthey would all be extremely similar.",
+        "start": 1714.341,
+        "duration": 2.73
+    },
+    {
+        "text": "and then a symmetric rotation here is\njust ano an example of another rotation in",
+        "start": 1718.661,
+        "duration": 5.22
+    },
+    {
+        "text": "these, in the set of symmetric rotations.",
+        "start": 1723.881,
+        "duration": 2.07
+    },
+    {
+        "text": "According to Monty, it's just one of these\nother rotations, that is deemed symmetric.",
+        "start": 1725.951,
+        "duration": 4.59
+    },
+    {
+        "text": "that doesn't happen to be the minimum one\nrelative to ground truth, and it doesn't",
+        "start": 1731.351,
+        "duration": 5.19
+    },
+    {
+        "text": "happen to be the most likely hypothesis.",
+        "start": 1736.601,
+        "duration": 1.71
+    },
+    {
+        "text": "And then lastly, this is just\na random rotation, which Monty",
+        "start": 1739.331,
+        "duration": 3.12
+    },
+    {
+        "text": "does not believe to be symmetric.",
+        "start": 1742.451,
+        "duration": 1.56
+    },
+    {
+        "text": "And what this shows is that we get\na, very low cha distance associated",
+        "start": 1745.061,
+        "duration": 5.4
+    },
+    {
+        "text": "with all three of these rotations.",
+        "start": 1750.461,
+        "duration": 1.41
+    },
+    {
+        "text": "when we apply these to the kind of\nlearn model consistent with those",
+        "start": 1752.801,
+        "duration": 3.48
+    },
+    {
+        "text": "having some true symmetry, and\nconsistent with human perception.",
+        "start": 1756.281,
+        "duration": 4.14
+    },
+    {
+        "text": "whereas the random rotation, the kinda\npurple bar here, the champion distance,",
+        "start": 1761.171,
+        "duration": 3.84
+    },
+    {
+        "text": "does not on the other hand, this figure\nalso shows that the rotation error,",
+        "start": 1765.491,
+        "duration": 5.25
+    },
+    {
+        "text": "can vary wildly, depending on, which,\nparticular rotation is, reported.",
+        "start": 1771.341,
+        "duration": 7.38
+    },
+    {
+        "text": "and so this is why in the\npaper we actually report the",
+        "start": 1779.681,
+        "duration": 2.25
+    },
+    {
+        "text": "minimum, rotation of this set.",
+        "start": 1781.931,
+        "duration": 2.22
+    },
+    {
+        "text": "In order to essentially, capture\nthe, true error associated, while",
+        "start": 1785.981,
+        "duration": 6.72
+    },
+    {
+        "text": "avoiding the kind of, lack of intuition\nthat the champ for distance gives,",
+        "start": 1792.701,
+        "duration": 5.55
+    },
+    {
+        "text": "but as a additional sanity check.",
+        "start": 1799.511,
+        "duration": 2.73
+    },
+    {
+        "text": "So this is from one example, we,\nran the same metric over many",
+        "start": 1802.241,
+        "duration": 4.23
+    },
+    {
+        "text": "different objects that Monty sees.",
+        "start": 1806.471,
+        "duration": 1.59
+    },
+    {
+        "text": "and again, looked at the rotation error\nand the cha distance associated with",
+        "start": 1808.961,
+        "duration": 4.26
+    },
+    {
+        "text": "the, these kinds of different hypotheses\nthat Monty developed, and in particular",
+        "start": 1813.431,
+        "duration": 4.02
+    },
+    {
+        "text": "the ones that it believe were symmetric.",
+        "start": 1817.451,
+        "duration": 1.77
+    },
+    {
+        "text": "And what you see here is, again, across\nall of these different examples, the",
+        "start": 1819.911,
+        "duration": 4.23
+    },
+    {
+        "text": "cha distance associated with kind of\nany rotation that Monty de symmetric",
+        "start": 1824.146,
+        "duration": 4.795
+    },
+    {
+        "text": "is very similar to the kind of one\nwith the, minimal, rotation error",
+        "start": 1829.271,
+        "duration": 4.71
+    },
+    {
+        "text": "versus the, ground truth, which kind of\nsupports the, metric we ultimately used.",
+        "start": 1833.981,
+        "duration": 5.55
+    },
+    {
+        "text": "So",
+        "start": 1839.531,
+        "duration": 0.06
+    },
+    {
+        "text": "that was getting into a lot of\ndetails about how we measure",
+        "start": 1843.401,
+        "duration": 3.12
+    },
+    {
+        "text": "symmetry and that sort of thing.",
+        "start": 1846.521,
+        "duration": 1.23
+    },
+    {
+        "text": "But I think it's worth taking a step\nback and just emphasizing, how exciting",
+        "start": 1847.781,
+        "duration": 4.38
+    },
+    {
+        "text": "it is that, that Monty developed this.",
+        "start": 1852.341,
+        "duration": 1.5
+    },
+    {
+        "text": "And again, this wasn't something where\nwe have a specific objective function",
+        "start": 1853.841,
+        "duration": 5.1
+    },
+    {
+        "text": "where Monty needs to, report symmetry\nor where it has access to ground",
+        "start": 1858.941,
+        "duration": 5.85
+    },
+    {
+        "text": "truth models in order to measure,\nits ability to detect symmetry.",
+        "start": 1864.791,
+        "duration": 4.2
+    },
+    {
+        "text": "This is just something that emerged\nnaturally through having a sensorimotor",
+        "start": 1868.991,
+        "duration": 2.94
+    },
+    {
+        "text": "system kinda move over an object.",
+        "start": 1871.931,
+        "duration": 1.92
+    },
+    {
+        "text": "Try and recognize its rotation and\nthe hypotheses that it was developing.",
+        "start": 1874.166,
+        "duration": 3.51
+    },
+    {
+        "text": "and this is, a really, great, attribute\nto have in the system in terms of",
+        "start": 1879.746,
+        "duration": 4.92
+    },
+    {
+        "text": "kind of long-term future capabilities.",
+        "start": 1884.666,
+        "duration": 2.25
+    },
+    {
+        "text": "So you can imagine going back to that\npencil example, that depending on its",
+        "start": 1886.916,
+        "duration": 4.62
+    },
+    {
+        "text": "orientation, if you're learning to do\nsomething like writing or erasing, that",
+        "start": 1891.536,
+        "duration": 5.58
+    },
+    {
+        "text": "will depend a lot on the orientation\nof the pencil along certain axes, along",
+        "start": 1897.116,
+        "duration": 4.5
+    },
+    {
+        "text": "certain kind of, rotations of symmetry.",
+        "start": 1901.616,
+        "duration": 3.21
+    },
+    {
+        "text": "On the other hand, if you again, spin the,\npencil in your hand, that has no effect on",
+        "start": 1905.636,
+        "duration": 5.88
+    },
+    {
+        "text": "the ability of this pencil tip to write.",
+        "start": 1911.516,
+        "duration": 2.19
+    },
+    {
+        "text": "And so it's really important that every\ntime you spin the pencil, your system",
+        "start": 1914.186,
+        "duration": 3.75
+    },
+    {
+        "text": "doesn't say, oh, this is a new rotation.",
+        "start": 1917.936,
+        "duration": 1.71
+    },
+    {
+        "text": "I have to now relearn how to\nuse this, particular object.",
+        "start": 1919.676,
+        "duration": 3.81
+    },
+    {
+        "text": "in this particular case, it's\nabout kind of behavior and how",
+        "start": 1925.286,
+        "duration": 2.28
+    },
+    {
+        "text": "you interact with an object, but\nthis also applies to compositional",
+        "start": 1927.566,
+        "duration": 3.72
+    },
+    {
+        "text": "representations where one object is\npart of another object and so forth.",
+        "start": 1931.286,
+        "duration": 3.69
+    },
+    {
+        "text": "we were really happy to see, this kind\nof symmetry emerge, the way it did.",
+        "start": 1936.416,
+        "duration": 3.78
+    },
+    {
+        "text": "So that was a lot about, robust inference.",
+        "start": 1944.936,
+        "duration": 2.73
+    },
+    {
+        "text": "next I'm gonna be talking about rapid\ninference, and how quickly kind Monty can",
+        "start": 1948.506,
+        "duration": 4.59
+    },
+    {
+        "text": "recognize what it's seen in the world.",
+        "start": 1953.126,
+        "duration": 1.26
+    },
+    {
+        "text": "And it's worth, kinda starting by just\nemphasizing, biological perception is",
+        "start": 1956.276,
+        "duration": 4.02
+    },
+    {
+        "text": "inherently about movement, and When\nwe look around the world, only a tiny",
+        "start": 1960.296,
+        "duration": 5.19
+    },
+    {
+        "text": "fraction at the center of our visual\nfield is actually in high acuity.",
+        "start": 1965.486,
+        "duration": 4.17
+    },
+    {
+        "text": "if our, that part of our eye, the, kind\nof foia, if it had the same visual acuity",
+        "start": 1971.336,
+        "duration": 3.87
+    },
+    {
+        "text": "just a few degrees out, we would be\nlegally blind in terms of, the amount of",
+        "start": 1975.206,
+        "duration": 6.57
+    },
+    {
+        "text": "sensory impairment that would give us.",
+        "start": 1981.806,
+        "duration": 1.5
+    },
+    {
+        "text": "So we're hugely dependent on being\nable to rapidly move our eyes, but",
+        "start": 1983.306,
+        "duration": 3.81
+    },
+    {
+        "text": "of course, this applies to other,\nmodalities, like our hands and so forth.",
+        "start": 1987.116,
+        "duration": 3.57
+    },
+    {
+        "text": "this is, naturally baked into to Monty,\nbut up until now we've not talked a lot",
+        "start": 1993.176,
+        "duration": 5.07
+    },
+    {
+        "text": "about, how Monty is actually moving.",
+        "start": 1998.246,
+        "duration": 2.49
+    },
+    {
+        "text": "and so one of the other kind of\nexciting things, that we kind we're",
+        "start": 2002.506,
+        "duration": 3.87
+    },
+    {
+        "text": "showing in this paper is how it can\nuse, policies to act intelligently,",
+        "start": 2006.436,
+        "duration": 4.92
+    },
+    {
+        "text": "and a mixture of what known as kinda\nmodel free and model-based policies.",
+        "start": 2011.956,
+        "duration": 3.27
+    },
+    {
+        "text": "So model free policies are where you are\njust taking the kind sensory information",
+        "start": 2017.266,
+        "duration": 3.87
+    },
+    {
+        "text": "coming in and without an explicit\nmodel deciding how to act in the world.",
+        "start": 2021.136,
+        "duration": 4.41
+    },
+    {
+        "text": "and so in the paper we look at this\nkind of surface curvature guided",
+        "start": 2026.416,
+        "duration": 5.25
+    },
+    {
+        "text": "exploration policy where Monty kind\nof follows along, the kind of surface",
+        "start": 2031.666,
+        "duration": 5.55
+    },
+    {
+        "text": "of an object, maintaining contact\nwith it based on what it's sensing.",
+        "start": 2037.216,
+        "duration": 3.21
+    },
+    {
+        "text": "And also when it identifies areas of\nprominent curvature, like the rim of",
+        "start": 2040.906,
+        "duration": 3.93
+    },
+    {
+        "text": "this glass or the kind of bottom of this\ncup, it'll, it, sometimes then follows",
+        "start": 2044.836,
+        "duration": 4.08
+    },
+    {
+        "text": "that for kind of a period of time.",
+        "start": 2048.916,
+        "duration": 1.29
+    },
+    {
+        "text": "This was our kind of model free one.",
+        "start": 2051.421,
+        "duration": 1.44
+    },
+    {
+        "text": "And so this is the kind of, thing\nthat, older parts of the brain can",
+        "start": 2053.221,
+        "duration": 4.02
+    },
+    {
+        "text": "be kinda responsible for in humans,\nbut can still be, quite powerful.",
+        "start": 2057.241,
+        "duration": 5.19
+    },
+    {
+        "text": "but the other kind of policy we look\nat is this model-based one that we",
+        "start": 2063.991,
+        "duration": 3.18
+    },
+    {
+        "text": "call the hypothesis testing policy.",
+        "start": 2067.171,
+        "duration": 1.8
+    },
+    {
+        "text": "the reason it has this name is\nbecause Monty essentially has",
+        "start": 2070.231,
+        "duration": 3.09
+    },
+    {
+        "text": "a series of hypotheses and it's\ngoing to act in a way to test those",
+        "start": 2073.321,
+        "duration": 4.35
+    },
+    {
+        "text": "hypotheses and eliminate one of them.",
+        "start": 2077.671,
+        "duration": 1.89
+    },
+    {
+        "text": "and so what this figure in the paper was\nshowing is, this is the actual object that",
+        "start": 2080.881,
+        "duration": 5.4
+    },
+    {
+        "text": "Monty is sensing as it is in the world.",
+        "start": 2086.281,
+        "duration": 1.71
+    },
+    {
+        "text": "So in this case, this spoon, it\nstarts on this part of the, starts",
+        "start": 2087.991,
+        "duration": 3.6
+    },
+    {
+        "text": "on this part of the handle, moves\nalong the bottom of the handle.",
+        "start": 2091.591,
+        "duration": 2.7
+    },
+    {
+        "text": "And then at that point, Monty, or\nrather the one of the learning modules",
+        "start": 2095.071,
+        "duration": 4.44
+    },
+    {
+        "text": "in Monty, outputs a goal state to move\nto the head of the spoon, in order to",
+        "start": 2099.511,
+        "duration": 7.08
+    },
+    {
+        "text": "disambiguate it from another object.",
+        "start": 2106.621,
+        "duration": 1.8
+    },
+    {
+        "text": "How does it decide to move\nto the head of the spoon?",
+        "start": 2109.261,
+        "duration": 1.74
+    },
+    {
+        "text": "This is where it's making use\nof its internal models, hence",
+        "start": 2111.751,
+        "duration": 3.24
+    },
+    {
+        "text": "the term model-based policy.",
+        "start": 2114.991,
+        "duration": 1.74
+    },
+    {
+        "text": "And in particular, Monty has, at this\npoint a strong hypothesis for the spoon",
+        "start": 2117.331,
+        "duration": 5.16
+    },
+    {
+        "text": "in this particular orientation and the\nfork in this particular orientation.",
+        "start": 2122.491,
+        "duration": 3.66
+    },
+    {
+        "text": "And it can, mentally compare these two\nhypotheses and through that determine",
+        "start": 2127.621,
+        "duration": 4.98
+    },
+    {
+        "text": "that the kind of largest distance\nbetween these models, the kind of,",
+        "start": 2132.601,
+        "duration": 4.95
+    },
+    {
+        "text": "biggest anomaly between their structure.",
+        "start": 2137.851,
+        "duration": 2.07
+    },
+    {
+        "text": "Is, here at the kind of head of the\nobject, at the kind of tip of the spoon.",
+        "start": 2140.701,
+        "duration": 4.08
+    },
+    {
+        "text": "And so that would be\nthe best place to, move.",
+        "start": 2145.171,
+        "duration": 2.61
+    },
+    {
+        "text": "You can imagine if it moved to say,\nthis location, the neck, which it",
+        "start": 2147.781,
+        "duration": 4.14
+    },
+    {
+        "text": "hasn't explored yet, it's going\nto observe the same thing whether",
+        "start": 2151.921,
+        "duration": 3.24
+    },
+    {
+        "text": "it's on, the fork or the spoon.",
+        "start": 2155.161,
+        "duration": 1.71
+    },
+    {
+        "text": "And so that's a less useful\nobservation to get next.",
+        "start": 2156.871,
+        "duration": 2.46
+    },
+    {
+        "text": "And I've shifted the figure over, and\nthen this is showing the next part of",
+        "start": 2161.881,
+        "duration": 4.41
+    },
+    {
+        "text": "that figure where we, plotted the evidence\nvalues that Monty had, internally as a",
+        "start": 2166.291,
+        "duration": 5.97
+    },
+    {
+        "text": "function of the kinda step in the episode.",
+        "start": 2172.261,
+        "duration": 2.07
+    },
+    {
+        "text": "And when it takes, this\nkind of goal, driven step.",
+        "start": 2174.901,
+        "duration": 4.44
+    },
+    {
+        "text": "So you can see that the hypotheses for\nmost of these objects are, that have",
+        "start": 2180.241,
+        "duration": 4.89
+    },
+    {
+        "text": "a similar shape, a similar morphology\nlike spoon, the fork, the knife,",
+        "start": 2185.341,
+        "duration": 3.6
+    },
+    {
+        "text": "and a marker get a reasonable amount\nof, increase as, time is going by.",
+        "start": 2188.941,
+        "duration": 5.13
+    },
+    {
+        "text": "But at this point at which, Monty\ncan executes this, gold state, it",
+        "start": 2194.701,
+        "duration": 5.85
+    },
+    {
+        "text": "suddenly gets this kind of divergence\nin the hypothesis because now all",
+        "start": 2200.551,
+        "duration": 4.26
+    },
+    {
+        "text": "of the observations after this point\nare corresponding to this head of",
+        "start": 2204.811,
+        "duration": 2.97
+    },
+    {
+        "text": "the spoon, and are not consistent\nbasically with a for or a knife.",
+        "start": 2207.781,
+        "duration": 4.53
+    },
+    {
+        "text": "what this then, next figure in\nthe paper is showing is that same",
+        "start": 2216.331,
+        "duration": 3.63
+    },
+    {
+        "text": "thing can also be done for poses.",
+        "start": 2219.961,
+        "duration": 1.44
+    },
+    {
+        "text": "You can imagine rather than disin,\nvigorating, two different objects.",
+        "start": 2222.361,
+        "duration": 4.17
+    },
+    {
+        "text": "If Monty is pretty confident it's on\nthe mug, but it's not actually sure",
+        "start": 2226.741,
+        "duration": 3.51
+    },
+    {
+        "text": "where the mug is or how the mug is\noriented in space, it can use the same",
+        "start": 2230.461,
+        "duration": 4.41
+    },
+    {
+        "text": "principles to, to yeah, infer, this.",
+        "start": 2234.871,
+        "duration": 5.73
+    },
+    {
+        "text": "And in this case, the two\nhypothesized rotations, that",
+        "start": 2240.601,
+        "duration": 4.68
+    },
+    {
+        "text": "are deemed most likely result in\ndifferent orientations of the handle.",
+        "start": 2245.281,
+        "duration": 3.72
+    },
+    {
+        "text": "And so based on one of these\nhypotheses, Monty's going to",
+        "start": 2249.571,
+        "duration": 3.39
+    },
+    {
+        "text": "attempt to move to that handle.",
+        "start": 2252.961,
+        "duration": 1.83
+    },
+    {
+        "text": "and you see again that once it goes to\nthat location and executes the skull",
+        "start": 2255.871,
+        "duration": 4.32
+    },
+    {
+        "text": "state, all of the hypotheses associated\nwith incompatible observations,",
+        "start": 2260.191,
+        "duration": 6.03
+    },
+    {
+        "text": "suddenly start losing, evidence.",
+        "start": 2266.581,
+        "duration": 2.49
+    },
+    {
+        "text": "and so we then looked at what effect\nthis has on imprints as a whole.",
+        "start": 2272.911,
+        "duration": 4.5
+    },
+    {
+        "text": "And in particular, if we kinda look at\naccuracy as well as number of steps in",
+        "start": 2277.471,
+        "duration": 4.71
+    },
+    {
+        "text": "a total episode, we can see that with,\nbaseline policy where we're performing",
+        "start": 2282.181,
+        "duration": 4.95
+    },
+    {
+        "text": "more like a random walk, without kind\nof any, kind of consistent direction",
+        "start": 2287.401,
+        "duration": 4.53
+    },
+    {
+        "text": "or being informed by, curvature.",
+        "start": 2291.931,
+        "duration": 2.97
+    },
+    {
+        "text": "This is the kinda model three policy here.",
+        "start": 2295.081,
+        "duration": 2.34
+    },
+    {
+        "text": "and also without, the kind of\nmodel based goal states, we get a",
+        "start": 2298.681,
+        "duration": 3.93
+    },
+    {
+        "text": "reasonable accuracy, but we get a lot\nof instances of timed out episodes.",
+        "start": 2302.611,
+        "duration": 3.78
+    },
+    {
+        "text": "These are instances where Monty\nstill had the correct hypothesis",
+        "start": 2307.351,
+        "duration": 3.21
+    },
+    {
+        "text": "at the end of the episode.",
+        "start": 2310.561,
+        "duration": 0.96
+    },
+    {
+        "text": "So if it was sensing the mug, it believes\nthe most likely object is the mug, but",
+        "start": 2311.581,
+        "duration": 4.26
+    },
+    {
+        "text": "it's in a low confidence state about that.",
+        "start": 2315.841,
+        "duration": 1.86
+    },
+    {
+        "text": "likely because it hasn't\nseen a feature that would",
+        "start": 2318.721,
+        "duration": 2.64
+    },
+    {
+        "text": "without a doubt disambiguate\nit from other objects.",
+        "start": 2323.581,
+        "duration": 2.49
+    },
+    {
+        "text": "And we set a max of 500\nsteps for each episode.",
+        "start": 2326.431,
+        "duration": 3.81
+    },
+    {
+        "text": "And so these kind of times out\nepisodes are what correspond to",
+        "start": 2330.721,
+        "duration": 2.94
+    },
+    {
+        "text": "these kinds of, episodes appear that\nessentially continue until the end.",
+        "start": 2333.661,
+        "duration": 5.37
+    },
+    {
+        "text": "On the other hand, if Monty becomes\nvery confident about what it's",
+        "start": 2339.841,
+        "duration": 2.43
+    },
+    {
+        "text": "observing, it can then terminate,\nthe episode and, declare this",
+        "start": 2342.271,
+        "duration": 4.83
+    },
+    {
+        "text": "is the object, I believe it is.",
+        "start": 2347.101,
+        "duration": 1.05
+    },
+    {
+        "text": "And that's what we see here is\na significant increase in these",
+        "start": 2348.811,
+        "duration": 3.27
+    },
+    {
+        "text": "kind of converged episodes when\nwe introduce the model free and",
+        "start": 2352.086,
+        "duration": 3.055
+    },
+    {
+        "text": "then the model-based policies.",
+        "start": 2355.141,
+        "duration": 1.17
+    },
+    {
+        "text": "and that's reflected over here\nin terms of the kind of number of",
+        "start": 2358.471,
+        "duration": 2.88
+    },
+    {
+        "text": "steps associated with the, episode.",
+        "start": 2361.351,
+        "duration": 2.46
+    },
+    {
+        "text": "It's interesting that, we already get\nsuch strong performance with the Model",
+        "start": 2364.801,
+        "duration": 3.63
+    },
+    {
+        "text": "three policy, that the model-based\npolicy only gives kind of some",
+        "start": 2368.431,
+        "duration": 4.35
+    },
+    {
+        "text": "incremental improvements in inaccuracy.",
+        "start": 2373.051,
+        "duration": 2.22
+    },
+    {
+        "text": "it's not, a huge change, at that point,\nbut, we're still really excited about",
+        "start": 2375.961,
+        "duration": 5.16
+    },
+    {
+        "text": "kind of implications of this policy\nbecause of what it means in terms of,",
+        "start": 2381.361,
+        "duration": 3.66
+    },
+    {
+        "text": "acting intelligently in the world.",
+        "start": 2385.501,
+        "duration": 1.53
+    },
+    {
+        "text": "So it seems to be the case that for\nthe benchmarks we have at the moment,",
+        "start": 2387.481,
+        "duration": 2.82
+    },
+    {
+        "text": "being able to efficiently do something\nlike move to the head of the spoon.",
+        "start": 2390.871,
+        "duration": 3.93
+    },
+    {
+        "text": "it doesn't result in dramatic change in\nimprovement, but as you introduce more",
+        "start": 2395.596,
+        "duration": 4.86
+    },
+    {
+        "text": "noise, or, need to act more quickly,\nto carry out certain goals, then",
+        "start": 2400.456,
+        "duration": 6.9
+    },
+    {
+        "text": "this kind of distinguishing, benefit\nis likely to become more apparent.",
+        "start": 2407.416,
+        "duration": 4.98
+    },
+    {
+        "text": "and one of the kind of other elements\nabout the sort of model-based policy that",
+        "start": 2414.376,
+        "duration": 3.84
+    },
+    {
+        "text": "we're quite happy with was all of this\nlearning of the model is taking place",
+        "start": 2418.636,
+        "duration": 4.68
+    },
+    {
+        "text": "independently of kind of explicit rewards.",
+        "start": 2423.346,
+        "duration": 2.49
+    },
+    {
+        "text": "that is to say, Monte is just exploring\nthese objects and learning about it in",
+        "start": 2426.736,
+        "duration": 4.08
+    },
+    {
+        "text": "the same way that if you were in a new,\ncity, or if you were given a new object",
+        "start": 2430.816,
+        "duration": 5.19
+    },
+    {
+        "text": "to hold, you would, very quickly learn its\nproperties without necessarily being told",
+        "start": 2436.006,
+        "duration": 5.31
+    },
+    {
+        "text": "by someone that you know, you're going\nto be, paid or have some sort of task",
+        "start": 2441.316,
+        "duration": 3.99
+    },
+    {
+        "text": "to complete, that requires you, solving\nthat it's just this kind of natural,",
+        "start": 2445.306,
+        "duration": 3.99
+    },
+    {
+        "text": "ability to quickly learn about the world.",
+        "start": 2450.016,
+        "duration": 2.1
+    },
+    {
+        "text": "and this fits really well with what was\nobserved by, Tolman all the way back",
+        "start": 2452.806,
+        "duration": 3.81
+    },
+    {
+        "text": "in 1948 when he studied learning in\nrats, where if you put them, in a maze,",
+        "start": 2456.616,
+        "duration": 4.89
+    },
+    {
+        "text": "they will just naturally learn a lot of\nthe structure of this maze, even when",
+        "start": 2461.746,
+        "duration": 3.99
+    },
+    {
+        "text": "they don't have a reward such as food.",
+        "start": 2465.736,
+        "duration": 2.43
+    },
+    {
+        "text": "and so this kind of is key really to,\nif you're going to be able to develop",
+        "start": 2469.636,
+        "duration": 5.13
+    },
+    {
+        "text": "representations that can enable flexible\nbehavior, because the reality is.",
+        "start": 2474.766,
+        "duration": 3.27
+    },
+    {
+        "text": "Reward signals in the world are\nsparse, and rarely perceived.",
+        "start": 2478.591,
+        "duration": 3.12
+    },
+    {
+        "text": "what you really want is a system\nthat naturally goes out there and",
+        "start": 2482.461,
+        "duration": 3.33
+    },
+    {
+        "text": "just learns about, what there is.",
+        "start": 2485.791,
+        "duration": 2.61
+    },
+    {
+        "text": "So that was all the stuff about\nrapid inference and, policies.",
+        "start": 2492.061,
+        "duration": 4.65
+    },
+    {
+        "text": "the next bit I'll be talking\nabout rapid inference and voting.",
+        "start": 2497.041,
+        "duration": 2.73
+    },
+    {
+        "text": "Voting is this particular algorithm\nthat, Numenta had originally proposed",
+        "start": 2500.221,
+        "duration": 4.53
+    },
+    {
+        "text": "in the, context of, cortical columns\nand has then been adapted in Monty and",
+        "start": 2504.751,
+        "duration": 6.18
+    },
+    {
+        "text": "also, evolved to, enable it to work well.",
+        "start": 2510.931,
+        "duration": 4.71
+    },
+    {
+        "text": "and to motivated or,\njust put it into context.",
+        "start": 2517.651,
+        "duration": 3.54
+    },
+    {
+        "text": "So we've been talking a lot about the\nimportance of movement and how, biological",
+        "start": 2521.191,
+        "duration": 3.72
+    },
+    {
+        "text": "perception is inherently, sensorimotor.",
+        "start": 2524.911,
+        "duration": 2.61
+    },
+    {
+        "text": "It's all about, movement really.",
+        "start": 2527.521,
+        "duration": 1.59
+    },
+    {
+        "text": "But give, with that said, of course,\nwe are also able to integrate,",
+        "start": 2530.191,
+        "duration": 5.01
+    },
+    {
+        "text": "inputs from, multiple sensory organs,\neither from different parts of, for",
+        "start": 2535.831,
+        "duration": 4.83
+    },
+    {
+        "text": "example, our retina or from, for\nexample, our hand, our, our eyes.",
+        "start": 2540.661,
+        "duration": 5.4
+    },
+    {
+        "text": "It's not the case, that we actually\nperceive the world in kind of",
+        "start": 2546.421,
+        "duration": 3.24
+    },
+    {
+        "text": "total, straw world, way like this.",
+        "start": 2549.661,
+        "duration": 3.21
+    },
+    {
+        "text": "and so the question is, okay, how\ndo you integrate this information in",
+        "start": 2553.951,
+        "duration": 3.81
+    },
+    {
+        "text": "a way that still gives, robustness,\nand enables more rapid inference?",
+        "start": 2557.971,
+        "duration": 6.87
+    },
+    {
+        "text": "The voting algorithms, fairly involved.",
+        "start": 2567.451,
+        "duration": 2.76
+    },
+    {
+        "text": "and so I won't go into\nthe full details here.",
+        "start": 2570.601,
+        "duration": 2.34
+    },
+    {
+        "text": "there's hopefully, a helpful\ndescription in the, method section of",
+        "start": 2573.781,
+        "duration": 2.67
+    },
+    {
+        "text": "the paper, that goes into the details.",
+        "start": 2576.451,
+        "duration": 2.04
+    },
+    {
+        "text": "But, at a high level, you have different\nlearning modules that are receiving,",
+        "start": 2578.491,
+        "duration": 4.38
+    },
+    {
+        "text": "inputs from different sensory modules.",
+        "start": 2583.681,
+        "duration": 1.5
+    },
+    {
+        "text": "So for example, a left\nhand and a right hand here.",
+        "start": 2585.181,
+        "duration": 2.22
+    },
+    {
+        "text": "And each of these learning\nmodules has some hypotheses",
+        "start": 2588.391,
+        "duration": 2.55
+    },
+    {
+        "text": "about what objects it seemed.",
+        "start": 2590.941,
+        "duration": 1.38
+    },
+    {
+        "text": "And with voting, they're basically\nable to share those hypotheses.",
+        "start": 2592.861,
+        "duration": 2.79
+    },
+    {
+        "text": "But one important thing is when\nthose hypotheses are sent, we",
+        "start": 2596.761,
+        "duration": 4.14
+    },
+    {
+        "text": "account for the sensory displacement\nbetween, the sensorimotor modules,",
+        "start": 2600.991,
+        "duration": 4.8
+    },
+    {
+        "text": "when transforming them to be usable\nby the other learning module.",
+        "start": 2606.331,
+        "duration": 3.48
+    },
+    {
+        "text": "This is important because we don't\nwant to just vote on say object, it",
+        "start": 2610.501,
+        "duration": 5.34
+    },
+    {
+        "text": "just that Okay, I think I'm on a mug.",
+        "start": 2615.841,
+        "duration": 1.8
+    },
+    {
+        "text": "Are you on a mug as well?",
+        "start": 2618.181,
+        "duration": 1.14
+    },
+    {
+        "text": "What that would result in is a bag of\nfeatures type, form of recognition,",
+        "start": 2619.741,
+        "duration": 3.99
+    },
+    {
+        "text": "where as long as they're sensing\nlocally something that could be a",
+        "start": 2623.731,
+        "duration": 4.38
+    },
+    {
+        "text": "mug, they will all agree it's a mug,\neven if it was totally scrambled.",
+        "start": 2628.111,
+        "duration": 3.3
+    },
+    {
+        "text": "and that's exactly the kind of more\nsort of texture bias, lack of shape,",
+        "start": 2631.981,
+        "duration": 4.2
+    },
+    {
+        "text": "robustness, that humans don't have\nand that we don't want Monty to have.",
+        "start": 2636.181,
+        "duration": 4.26
+    },
+    {
+        "text": "And so that's why there's this,\nkinda use of the sensorimotor",
+        "start": 2640.891,
+        "duration": 2.775
+    },
+    {
+        "text": "displacement, when, carrying out voting.",
+        "start": 2643.741,
+        "duration": 3.06
+    },
+    {
+        "text": "Practically what this means is that, you\ncan have kinda multiple sensory patches.",
+        "start": 2650.626,
+        "duration": 4.14
+    },
+    {
+        "text": "So for example, here you have\ndifferent sensory patches",
+        "start": 2654.766,
+        "duration": 2.67
+    },
+    {
+        "text": "ranged in an approximate grid.",
+        "start": 2657.496,
+        "duration": 1.41
+    },
+    {
+        "text": "and those are each seen a different part\nof an object at a given point in time.",
+        "start": 2659.746,
+        "duration": 3.42
+    },
+    {
+        "text": "They're each connected to a learning\nmodule, and then those learning",
+        "start": 2663.586,
+        "duration": 3.96
+    },
+    {
+        "text": "modules are able to communicate\nwith one another via voting.",
+        "start": 2667.546,
+        "duration": 2.91
+    },
+    {
+        "text": "and by each scene part of the object\nand also sharing their votes, we",
+        "start": 2671.716,
+        "duration": 3.99
+    },
+    {
+        "text": "can dramatically speed up inference.",
+        "start": 2675.706,
+        "duration": 1.95
+    },
+    {
+        "text": "and so this animation is just\nshowing how at any given point in",
+        "start": 2678.856,
+        "duration": 2.43
+    },
+    {
+        "text": "time, a particular learning module\ncan be seen something different.",
+        "start": 2681.286,
+        "duration": 3.72
+    },
+    {
+        "text": "no learning module is seen.",
+        "start": 2686.206,
+        "duration": 1.68
+    },
+    {
+        "text": "This, is a kind of viewfinder\nview that's just for the, kind of",
+        "start": 2688.216,
+        "duration": 2.85
+    },
+    {
+        "text": "benefit of, us as the experimenter.",
+        "start": 2691.066,
+        "duration": 2.28
+    },
+    {
+        "text": "And when we're doing voting,\nwe can parameterize how many",
+        "start": 2696.196,
+        "duration": 3.42
+    },
+    {
+        "text": "of these patches we have.",
+        "start": 2699.616,
+        "duration": 1.14
+    },
+    {
+        "text": "So you can imagine at least in\nthis kind of vision, like case,",
+        "start": 2700.756,
+        "duration": 3.33
+    },
+    {
+        "text": "this is the size of the grid.",
+        "start": 2704.086,
+        "duration": 1.47
+    },
+    {
+        "text": "so the number of C modules and,\nassociated learning modules,",
+        "start": 2706.876,
+        "duration": 3.24
+    },
+    {
+        "text": "the number of pairs of these.",
+        "start": 2710.116,
+        "duration": 0.96
+    },
+    {
+        "text": "And here there's five.",
+        "start": 2711.406,
+        "duration": 1.5
+    },
+    {
+        "text": "in this example, there are eight.",
+        "start": 2713.656,
+        "duration": 1.68
+    },
+    {
+        "text": "the other thing we can parameterize\nis how many of those learning",
+        "start": 2717.766,
+        "duration": 3.12
+    },
+    {
+        "text": "modules must converge for the Monty\nsystem as a whole to converge?",
+        "start": 2720.886,
+        "duration": 3.45
+    },
+    {
+        "text": "So we don't necessarily want to wait for\nall of, the learning modules to say I'm",
+        "start": 2724.816,
+        "duration": 5.07
+    },
+    {
+        "text": "confident in what I'm seeing, because some\nof them may not be getting much input.",
+        "start": 2729.886,
+        "duration": 3.39
+    },
+    {
+        "text": "And so in this paper,\nwe just, set this two.",
+        "start": 2733.921,
+        "duration": 3.93
+    },
+    {
+        "text": "So we need two learning modules to,\nconverge for Monty as a whole to converge.",
+        "start": 2737.851,
+        "duration": 3.66
+    },
+    {
+        "text": "We then look at what kind of agreement\nthey have on, the classification.",
+        "start": 2741.841,
+        "duration": 3.87
+    },
+    {
+        "text": "And then the experiment we did was\nto vary the total number of these,",
+        "start": 2746.611,
+        "duration": 3.72
+    },
+    {
+        "text": "essentially the size of this, grid.",
+        "start": 2751.111,
+        "duration": 2.1
+    },
+    {
+        "text": "And so that's what's shown here where we\nsee the number of steps, until convergence",
+        "start": 2755.491,
+        "duration": 5.43
+    },
+    {
+        "text": "as a function of the number of learning\nmodules, and exactly as we would've hoped.",
+        "start": 2760.951,
+        "duration": 5.49
+    },
+    {
+        "text": "we see kinda a, very rapid, reduction\nin how many steps are required,",
+        "start": 2767.101,
+        "duration": 4.56
+    },
+    {
+        "text": "for the system to converge, as\nwe add in more learning modules.",
+        "start": 2772.561,
+        "duration": 4.2
+    },
+    {
+        "text": "almost immediately eliminating many\nof these timeout episodes associated",
+        "start": 2778.381,
+        "duration": 3.15
+    },
+    {
+        "text": "with 500 steps, and getting down to\nclose to, we actually have a minimum",
+        "start": 2781.531,
+        "duration": 5.67
+    },
+    {
+        "text": "number of steps that are required\nbefore an episode can converge.",
+        "start": 2787.201,
+        "duration": 2.88
+    },
+    {
+        "text": "And, it essentially reaches that point.",
+        "start": 2790.501,
+        "duration": 2.07
+    },
+    {
+        "text": "at the same time, we don't want this rapid\ninference to be at the cost of accuracy.",
+        "start": 2795.091,
+        "duration": 4.44
+    },
+    {
+        "text": "And so this plot on the right is\nbasically reassurance that we can",
+        "start": 2799.891,
+        "duration": 3.81
+    },
+    {
+        "text": "achieve this without, having this\nkind of reduction in robustness.",
+        "start": 2803.701,
+        "duration": 4.32
+    },
+    {
+        "text": "If, as I mentioned earlier, we use a\nmore, more naive algorithm like that bag",
+        "start": 2808.561,
+        "duration": 3.93
+    },
+    {
+        "text": "of features, we would almost certainly\nsee, a decrease in accuracy as we",
+        "start": 2812.491,
+        "duration": 4.56
+    },
+    {
+        "text": "started adding in these kinds of, non\nmeaningful, hypotheses, being shared.",
+        "start": 2817.051,
+        "duration": 5.4
+    },
+    {
+        "text": "to then wrap up the kind of\ndiscussion voting, I think it's",
+        "start": 2827.026,
+        "duration": 3.12
+    },
+    {
+        "text": "worth pointing out that, this is\na great thing for Monty to have to",
+        "start": 2830.146,
+        "duration": 4.56
+    },
+    {
+        "text": "be able to benefit from a multitude\nof sensory inputs coming at once.",
+        "start": 2834.706,
+        "duration": 5.13
+    },
+    {
+        "text": "but it's important to emphasize\nthat while Monty benefits from",
+        "start": 2840.616,
+        "duration": 2.76
+    },
+    {
+        "text": "it, it is not reliant on it.",
+        "start": 2843.376,
+        "duration": 1.26
+    },
+    {
+        "text": "So in the same way that you can feel a\ncoffee mug with one finger or look at the",
+        "start": 2845.176,
+        "duration": 4.65
+    },
+    {
+        "text": "world through a straw and still recognize\nand understand what you're seeing,",
+        "start": 2849.826,
+        "duration": 3.33
+    },
+    {
+        "text": "Monty can operate in this kind of single\nlearning module, regime without issue.",
+        "start": 2853.546,
+        "duration": 4.41
+    },
+    {
+        "text": "It's just that it benefits from,\nhaving these multiple inputs.",
+        "start": 2858.316,
+        "duration": 3.51
+    },
+    {
+        "text": "And this is a really important kind\nof, not really assumption, but more",
+        "start": 2862.546,
+        "duration": 4.92
+    },
+    {
+        "text": "like defining characteristic of\nMonty, that we want to maintain.",
+        "start": 2867.706,
+        "duration": 3.45
+    },
+    {
+        "text": "Because no matter how, no matter how\nartificial the setup may be, if you",
+        "start": 2871.156,
+        "duration": 5.7
+    },
+    {
+        "text": "are in the real world, your sensors\nare inherently going to be limited",
+        "start": 2876.856,
+        "duration": 3.54
+    },
+    {
+        "text": "in terms of sampling information.",
+        "start": 2880.396,
+        "duration": 1.47
+    },
+    {
+        "text": "You're never going to be able\nto sample everything at once.",
+        "start": 2881.866,
+        "duration": 2.46
+    },
+    {
+        "text": "So the sooner you get out of that\nframe of mind and accept that",
+        "start": 2884.326,
+        "duration": 3.9
+    },
+    {
+        "text": "information needs to be integrated\nover time, the more you know, I",
+        "start": 2888.646,
+        "duration": 3.75
+    },
+    {
+        "text": "believe you converge to architectures\nlike Monty, where movement is the",
+        "start": 2892.396,
+        "duration": 4.89
+    },
+    {
+        "text": "kind of central motif of the system.",
+        "start": 2897.286,
+        "duration": 1.89
+    },
+    {
+        "text": "Alright, so that was, we talked\nfirst about robust imprints",
+        "start": 2903.166,
+        "duration": 3.24
+    },
+    {
+        "text": "and then about rapid learning.",
+        "start": 2906.406,
+        "duration": 1.14
+    },
+    {
+        "text": "Sorry, rapid inference.",
+        "start": 2907.966,
+        "duration": 1.14
+    },
+    {
+        "text": "now, the kind of final main section of\nthe paper was then looking at rapid,",
+        "start": 2909.406,
+        "duration": 3.81
+    },
+    {
+        "text": "continual and efficient learning.",
+        "start": 2913.306,
+        "duration": 2.04
+    },
+    {
+        "text": "yeah, a bit of a mouthful,\nbut I will break that down.",
+        "start": 2916.966,
+        "duration": 2.64
+    },
+    {
+        "text": "it's worth noting that in this part\nof the paper we do compare to, VIT,",
+        "start": 2921.766,
+        "duration": 3.75
+    },
+    {
+        "text": "so vision transformer networks form\nof deep learning, architectures,",
+        "start": 2925.756,
+        "duration": 3.39
+    },
+    {
+        "text": "to really ground the results.",
+        "start": 2929.746,
+        "duration": 1.53
+    },
+    {
+        "text": "we're not trying to imply that\ndeep learning doesn't have useful",
+        "start": 2932.926,
+        "duration": 3.03
+    },
+    {
+        "text": "applications we use, deep learning\nsystems ourselves all the time.",
+        "start": 2935.956,
+        "duration": 3.75
+    },
+    {
+        "text": "but the point really with these results\nis that, Monty is a fundamentally",
+        "start": 2940.756,
+        "duration": 3.63
+    },
+    {
+        "text": "different approach, with some really\nunique advantages, which is what we're",
+        "start": 2944.386,
+        "duration": 3.63
+    },
+    {
+        "text": "kinda excited to talk about today.",
+        "start": 2948.136,
+        "duration": 1.92
+    },
+    {
+        "text": "for the kind of first thing we looked\nat was, how rapidly Monty could, learn",
+        "start": 2954.316,
+        "duration": 4.8
+    },
+    {
+        "text": "what's sometimes referred to as few shot\nlearning in particular, how quickly can it",
+        "start": 2959.236,
+        "duration": 4.62
+    },
+    {
+        "text": "develop good representations given only a\nfew observations of a particular object.",
+        "start": 2963.856,
+        "duration": 4.77
+    },
+    {
+        "text": "So in order to evaluate this, we\ntake, all the objects in the YCB",
+        "start": 2970.156,
+        "duration": 5.46
+    },
+    {
+        "text": "dataset, and we present each one\nat a fixed number of rotations.",
+        "start": 2975.616,
+        "duration": 3.93
+    },
+    {
+        "text": "for example, when, the system\neither VIT or Monty is given one",
+        "start": 2979.786,
+        "duration": 4.95
+    },
+    {
+        "text": "object view across all YCB objects,\nit will just get a single view.",
+        "start": 2984.736,
+        "duration": 4.5
+    },
+    {
+        "text": "If it's given two views across all\nYCB objects, it will get two views.",
+        "start": 2989.926,
+        "duration": 3.87
+    },
+    {
+        "text": "Then so forth to 16 views, up until 32.",
+        "start": 2994.531,
+        "duration": 3.84
+    },
+    {
+        "text": "And after each of these conditions we\nlook at, given that amount of training",
+        "start": 2999.031,
+        "duration": 3.63
+    },
+    {
+        "text": "data, how well does the system perform\nboth in terms of classification,",
+        "start": 3002.661,
+        "duration": 4.23
+    },
+    {
+        "text": "accuracy and, rotation error.",
+        "start": 3006.891,
+        "duration": 2.7
+    },
+    {
+        "text": "What we find is monthly learns extremely\nrapidly getting so Monty here in blue,",
+        "start": 3012.861,
+        "duration": 6.99
+    },
+    {
+        "text": "50% classification accuracy after only a\nsingle observation very quickly reaches",
+        "start": 3020.241,
+        "duration": 6.57
+    },
+    {
+        "text": "close to, its kinda optimal performance.",
+        "start": 3026.811,
+        "duration": 2.67
+    },
+    {
+        "text": "The systems we compare to are VITs\nunder a variety of conditions.",
+        "start": 3030.651,
+        "duration": 4.5
+    },
+    {
+        "text": "So the strongest performing VIT is this\npre-trained one, which only needs 25",
+        "start": 3035.151,
+        "duration": 4.71
+    },
+    {
+        "text": "epochs of training to perform at its best.",
+        "start": 3039.861,
+        "duration": 1.95
+    },
+    {
+        "text": "but this model has been trained,\npre-trained rather on 14 million images",
+        "start": 3042.951,
+        "duration": 4.95
+    },
+    {
+        "text": "scraped from the internet and with labels.",
+        "start": 3048.141,
+        "duration": 1.53
+    },
+    {
+        "text": "So classification of household\nobjects is definitely not out of",
+        "start": 3050.271,
+        "duration": 4.29
+    },
+    {
+        "text": "distribution, for this network.",
+        "start": 3054.561,
+        "duration": 2.16
+    },
+    {
+        "text": "and so it's, yeah, telling I guess\nthat Monty, which, knows nothing",
+        "start": 3058.041,
+        "duration": 4.59
+    },
+    {
+        "text": "about these objects, can achieve\nessentially comparable performance.",
+        "start": 3062.631,
+        "duration": 3.36
+    },
+    {
+        "text": "And in a moment, we'll see, firstly\nhow they differ on the rotation",
+        "start": 3066.201,
+        "duration": 4.44
+    },
+    {
+        "text": "error, but also, how Monty does in\nterms of computational efficiency.",
+        "start": 3070.641,
+        "duration": 4.59
+    },
+    {
+        "text": "if the VIT is trained from scratch.",
+        "start": 3076.971,
+        "duration": 2.1
+    },
+    {
+        "text": "for 70 feet of five epoch.",
+        "start": 3080.031,
+        "duration": 1.47
+    },
+    {
+        "text": "So it's seen, although it's only\ngetting a certain number of rotations,",
+        "start": 3081.501,
+        "duration": 3.69
+    },
+    {
+        "text": "it's revisiting those rotations.",
+        "start": 3085.401,
+        "duration": 1.38
+    },
+    {
+        "text": "many times we get better performance, but\nstill, significantly below, Monty, which",
+        "start": 3086.991,
+        "duration": 7.98
+    },
+    {
+        "text": "importantly only sees each object once.",
+        "start": 3095.031,
+        "duration": 2.82
+    },
+    {
+        "text": "and so in the same way that humans\ncan learn extremely rapidly, we",
+        "start": 3098.541,
+        "duration": 4.26
+    },
+    {
+        "text": "don't need to, pick up a new object\nand look at it close to a hundred",
+        "start": 3102.801,
+        "duration": 3.75
+    },
+    {
+        "text": "times before we can recognize it.",
+        "start": 3106.551,
+        "duration": 2.34
+    },
+    {
+        "text": "Monty really just needs\nto see, something once.",
+        "start": 3110.001,
+        "duration": 3.03
+    },
+    {
+        "text": "And so as a comparison, we include\na v it, with one ePEP of training.",
+        "start": 3113.421,
+        "duration": 4.98
+    },
+    {
+        "text": "And this is the only it that\ngets the exact same amount",
+        "start": 3118.461,
+        "duration": 3.42
+    },
+    {
+        "text": "of data exposure at Monty.",
+        "start": 3121.881,
+        "duration": 1.41
+    },
+    {
+        "text": "And as you can see, it performs,\napproximately around chance.",
+        "start": 3123.861,
+        "duration": 4.05
+    },
+    {
+        "text": "it's just not nearly enough data\nfor a deep learning system to learn.",
+        "start": 3128.361,
+        "duration": 3.15
+    },
+    {
+        "text": "A stark difference appears when we\nlook at the rotation error, which",
+        "start": 3134.541,
+        "duration": 4.17
+    },
+    {
+        "text": "isn't too surprising because in\nthis case, even for the pre-trained",
+        "start": 3138.711,
+        "duration": 3.63
+    },
+    {
+        "text": "VIT, it's, never had an objective to\nexplicitly, predict rotation error.",
+        "start": 3142.341,
+        "duration": 5.82
+    },
+    {
+        "text": "and so for the kind of network to develop\ndisability, it's just not feasible,",
+        "start": 3148.851,
+        "duration": 5.64
+    },
+    {
+        "text": "with this amount of training data.",
+        "start": 3154.731,
+        "duration": 1.05
+    },
+    {
+        "text": "But again, Monty, shows this really rapid\nlearning, as it sees more rotations.",
+        "start": 3156.291,
+        "duration": 5.85
+    },
+    {
+        "text": "Understanding a bit more where\nthis generalization comes from.",
+        "start": 3167.466,
+        "duration": 2.73
+    },
+    {
+        "text": "And one of the kinda key aspects is what\nI was talking about before, that Monte",
+        "start": 3170.316,
+        "duration": 4.62
+    },
+    {
+        "text": "naturally infers the potential rotation\nof the object based on what it's sensing.",
+        "start": 3174.936,
+        "duration": 4.35
+    },
+    {
+        "text": "So if it senses, this kind of corner\nhere, for example, at the start of an",
+        "start": 3179.286,
+        "duration": 6.0
+    },
+    {
+        "text": "episode that could be consistent with\nthe spam can in this orientation or",
+        "start": 3185.286,
+        "duration": 5.37
+    },
+    {
+        "text": "in this orientation because there's\nthis kind of similar edge here.",
+        "start": 3190.656,
+        "duration": 2.97
+    },
+    {
+        "text": "those kind of hypotheses will both, exist\nand then Monty will move over the object.",
+        "start": 3196.266,
+        "duration": 4.65
+    },
+    {
+        "text": "But importantly, this hypothesis of\nthe kind of can being inverted is",
+        "start": 3201.846,
+        "duration": 4.53
+    },
+    {
+        "text": "not dependent on having ever seen the\ncan inverted in the same way that you",
+        "start": 3206.376,
+        "duration": 4.47
+    },
+    {
+        "text": "could recognize an object upside down\nthat you have never seen upside down.",
+        "start": 3210.846,
+        "duration": 3.45
+    },
+    {
+        "text": "by just inferring that it's\nin that orientation, Monty",
+        "start": 3215.346,
+        "duration": 3.51
+    },
+    {
+        "text": "is able to, do the same.",
+        "start": 3218.856,
+        "duration": 1.47
+    },
+    {
+        "text": "And so after seeing only a single\nrotation, only a single view of",
+        "start": 3221.226,
+        "duration": 5.28
+    },
+    {
+        "text": "each object in the dataset, Monty\nalready gets 50% classification",
+        "start": 3226.506,
+        "duration": 4.47
+    },
+    {
+        "text": "on a dataset with 77 objects.",
+        "start": 3231.036,
+        "duration": 2.4
+    },
+    {
+        "text": "and the, these are shown\nat novel rotations.",
+        "start": 3234.156,
+        "duration": 2.49
+    },
+    {
+        "text": "the kind of other element to this is\nthat of course many objects have, natural",
+        "start": 3238.476,
+        "duration": 5.76
+    },
+    {
+        "text": "symmetry that is, even if we present\ndifferent views, some of their kind of,",
+        "start": 3244.236,
+        "duration": 4.29
+    },
+    {
+        "text": "aspects will be similar to the view that,\nMonty or the VIT saw on the first one.",
+        "start": 3249.546,
+        "duration": 4.14
+    },
+    {
+        "text": "But it's really important\nto emphasize that.",
+        "start": 3253.746,
+        "duration": 1.83
+    },
+    {
+        "text": "Without this handling of rotation,\ngenerally a system cannot just",
+        "start": 3255.951,
+        "duration": 5.34
+    },
+    {
+        "text": "rely on this sort of natural\nsymmetry of faces to do well.",
+        "start": 3261.291,
+        "duration": 3.81
+    },
+    {
+        "text": "and so that's why we, don't\nsee similar performance in",
+        "start": 3266.511,
+        "duration": 2.85
+    },
+    {
+        "text": "the BIT, trained from scratch.",
+        "start": 3269.361,
+        "duration": 2.04
+    },
+    {
+        "text": "It's also maybe helpful to understand\nhow is Monty able to learn, so quickly.",
+        "start": 3275.001,
+        "duration": 4.98
+    },
+    {
+        "text": "and so I think a useful intuition for\nthis is to think about, to conceptualize",
+        "start": 3280.791,
+        "duration": 4.83
+    },
+    {
+        "text": "the reference frames as Matt.",
+        "start": 3285.621,
+        "duration": 1.26
+    },
+    {
+        "text": "And in the same way that if you were\ntraveling around, city, let's say",
+        "start": 3287.511,
+        "duration": 3.93
+    },
+    {
+        "text": "you were a tourist visiting Rome, and\nyou went to say Peter's basilica, you",
+        "start": 3291.441,
+        "duration": 5.49
+    },
+    {
+        "text": "visited there and then you travel,\nyou see kinda a bridge, as you go",
+        "start": 3297.141,
+        "duration": 5.07
+    },
+    {
+        "text": "east of the city and then eventually,\nreach kinda another landmark.",
+        "start": 3302.511,
+        "duration": 4.44
+    },
+    {
+        "text": "As you're going through and seeing\nthese different, parts of the city,",
+        "start": 3307.671,
+        "duration": 3.66
+    },
+    {
+        "text": "you will just kinda associate what\nyou have seen with that location.",
+        "start": 3311.781,
+        "duration": 4.5
+    },
+    {
+        "text": "This is something you'll just do\ntotally naturally and extremely quickly.",
+        "start": 3316.911,
+        "duration": 2.52
+    },
+    {
+        "text": "with kind of spatial navigation.",
+        "start": 3320.601,
+        "duration": 1.47
+    },
+    {
+        "text": "A lot of this relies on, an slightly older\nstructure, in mammals, the hippocampal",
+        "start": 3322.131,
+        "duration": 5.73
+    },
+    {
+        "text": "complex, but the kind of principles\nare the same that you are performing",
+        "start": 3327.891,
+        "duration": 4.5
+    },
+    {
+        "text": "movement and then essentially binding\ninformation to a location in a map.",
+        "start": 3332.391,
+        "duration": 4.41
+    },
+    {
+        "text": "In this case, the map is the reference\nframe that the learning module or in",
+        "start": 3337.281,
+        "duration": 4.05
+    },
+    {
+        "text": "humans, cortical column, is using.",
+        "start": 3341.331,
+        "duration": 2.4
+    },
+    {
+        "text": "And It's very unambiguous where,\nthe system has to update its",
+        "start": 3344.631,
+        "duration": 6.435
+    },
+    {
+        "text": "representation when, learning something\nnew because of this use of a map.",
+        "start": 3351.066,
+        "duration": 4.83
+    },
+    {
+        "text": "And this is going to lead to other\nbenefits, which I'll touch on in a",
+        "start": 3356.346,
+        "duration": 3.06
+    },
+    {
+        "text": "moment in terms of continual learning,\nand computational efficiency.",
+        "start": 3359.406,
+        "duration": 3.72
+    },
+    {
+        "text": "longstanding, problem in, machine\nlearning, deep learning in particular,",
+        "start": 3368.346,
+        "duration": 4.68
+    },
+    {
+        "text": "is this issue of catastrophic forgetting\nwhere if you train a system, on kind",
+        "start": 3373.806,
+        "duration": 4.65
+    },
+    {
+        "text": "of one task, and then you use, for\nexample, deep learning network with back",
+        "start": 3378.456,
+        "duration": 4.08
+    },
+    {
+        "text": "propagation of error, and then you gen\nkinda get it to learn a different task,",
+        "start": 3382.536,
+        "duration": 3.42
+    },
+    {
+        "text": "you will perform all of these global dates\nto its weights, essentially entirely.",
+        "start": 3386.436,
+        "duration": 4.2
+    },
+    {
+        "text": "Forget about the, task it, it knew before.",
+        "start": 3390.636,
+        "duration": 2.58
+    },
+    {
+        "text": "and this is the kind of\ncatastrophic forgetting, phenomenon.",
+        "start": 3393.966,
+        "duration": 3.69
+    },
+    {
+        "text": "Continual learning then is\nthe kinda inverse of this.",
+        "start": 3398.016,
+        "duration": 2.31
+    },
+    {
+        "text": "If you are resistant to\ncatastrophic forgetting, you",
+        "start": 3400.326,
+        "duration": 2.1
+    },
+    {
+        "text": "were able to learn continually.",
+        "start": 3402.426,
+        "duration": 1.26
+    },
+    {
+        "text": "and this is something that we,\nfound, in Monty when, when we looked",
+        "start": 3404.586,
+        "duration": 4.41
+    },
+    {
+        "text": "and it was actually something that\nwe expected to be there simply",
+        "start": 3408.996,
+        "duration": 4.71
+    },
+    {
+        "text": "from how the kind of system works.",
+        "start": 3413.706,
+        "duration": 1.65
+    },
+    {
+        "text": "so to more concretely show what\nthe, task setup we have is, so",
+        "start": 3417.756,
+        "duration": 6.84
+    },
+    {
+        "text": "I'll start by describing it.",
+        "start": 3424.836,
+        "duration": 0.99
+    },
+    {
+        "text": "So we, in order to, assess continual\nlearning, we have the 77 objects and.",
+        "start": 3425.826,
+        "duration": 7.02
+    },
+    {
+        "text": "We break this up into kind of 77 tasks.",
+        "start": 3433.356,
+        "duration": 2.43
+    },
+    {
+        "text": "And so any given task, Monty will\nlearn one object or the VIT will",
+        "start": 3436.176,
+        "duration": 4.77
+    },
+    {
+        "text": "learn one object given all of its\nkind of canonical rotations, those",
+        "start": 3440.946,
+        "duration": 3.51
+    },
+    {
+        "text": "14 rotations I discussed before.",
+        "start": 3444.576,
+        "duration": 1.59
+    },
+    {
+        "text": "And then we're going to\nevaluate on all the objects",
+        "start": 3447.216,
+        "duration": 2.7
+    },
+    {
+        "text": "that have been seen until then.",
+        "start": 3449.916,
+        "duration": 1.11
+    },
+    {
+        "text": "so in order for the system to do well,\nit has to both learn about the objects.",
+        "start": 3452.226,
+        "duration": 3.06
+    },
+    {
+        "text": "It's just seen as well as retain\na memory and information about",
+        "start": 3455.286,
+        "duration": 4.17
+    },
+    {
+        "text": "the objects it saw before.",
+        "start": 3459.456,
+        "duration": 1.17
+    },
+    {
+        "text": "We then learn on the next\nobject and then repeat.",
+        "start": 3461.616,
+        "duration": 2.61
+    },
+    {
+        "text": "and so to show this kinda more\nconcretely you can imagine.",
+        "start": 3466.326,
+        "duration": 2.82
+    },
+    {
+        "text": "So if the first object is the Lego\ndataset, kinda learn it on 14 rotations.",
+        "start": 3469.146,
+        "duration": 5.58
+    },
+    {
+        "text": "The rotations aren't shown here.",
+        "start": 3475.146,
+        "duration": 1.29
+    },
+    {
+        "text": "and then we're gonna infer with some\nnovel rotations and see how the system",
+        "start": 3477.096,
+        "duration": 4.23
+    },
+    {
+        "text": "performs again, either the VIT or Monty.",
+        "start": 3481.326,
+        "duration": 2.46
+    },
+    {
+        "text": "For the, second task, we're going to learn\non the fork, but this time we're going",
+        "start": 3484.716,
+        "duration": 4.71
+    },
+    {
+        "text": "to infer and assess kind of performance\non both the Lego object and the fourth,",
+        "start": 3489.426,
+        "duration": 4.05
+    },
+    {
+        "text": "because both of those have been observed.",
+        "start": 3493.536,
+        "duration": 1.44
+    },
+    {
+        "text": "The third task, it learns the banana,\nbut it has to then, perform recognition",
+        "start": 3495.756,
+        "duration": 4.83
+    },
+    {
+        "text": "on all three of these objects.",
+        "start": 3500.586,
+        "duration": 1.23
+    },
+    {
+        "text": "So with that kind of line out,\nand you see here the actual",
+        "start": 3504.636,
+        "duration": 3.63
+    },
+    {
+        "text": "performance that we observed.",
+        "start": 3508.266,
+        "duration": 1.14
+    },
+    {
+        "text": "So on the Y axis we have the\naccuracy on all observed objects.",
+        "start": 3509.706,
+        "duration": 3.9
+    },
+    {
+        "text": "how the system kind of performs is\ndependent on, how many objects it's seen.",
+        "start": 3515.766,
+        "duration": 3.75
+    },
+    {
+        "text": "Then on the X axis, we have the number of\nobjects that have actually been learned.",
+        "start": 3521.001,
+        "duration": 3.6
+    },
+    {
+        "text": "And what we see with Monty is what\nwe would expect, where, it does",
+        "start": 3525.711,
+        "duration": 4.17
+    },
+    {
+        "text": "really well, to start because it\nonly knows about a few objects.",
+        "start": 3529.881,
+        "duration": 3.3
+    },
+    {
+        "text": "And so it quickly, decides that,\nthe object that's observing.",
+        "start": 3533.181,
+        "duration": 4.68
+    },
+    {
+        "text": "And then over the course of the,\nkind of task, it gets a little bit",
+        "start": 3538.521,
+        "duration": 5.25
+    },
+    {
+        "text": "of interference because naturally it\nwill learn about a new object, say the",
+        "start": 3543.771,
+        "duration": 4.05
+    },
+    {
+        "text": "peach, that is similar to an object\nthat already knows about the apple.",
+        "start": 3547.821,
+        "duration": 3.36
+    },
+    {
+        "text": "And so that's inherently going to\nmake future inference more difficult,",
+        "start": 3551.571,
+        "duration": 3.09
+    },
+    {
+        "text": "but it is not catastrophic, which is,\nwhat we see with the, pre-trained VIT.",
+        "start": 3555.171,
+        "duration": 6.09
+    },
+    {
+        "text": "so we used the pre-trained once\nsince it was the most, the kind",
+        "start": 3561.951,
+        "duration": 2.67
+    },
+    {
+        "text": "of strongest performing network in\nthe previous, rapid learning task.",
+        "start": 3564.621,
+        "duration": 3.39
+    },
+    {
+        "text": "And, for the very first task, it only has\none object it can possibly classify as.",
+        "start": 3569.271,
+        "duration": 4.71
+    },
+    {
+        "text": "so it, achieves a hundred percent,\nbut then almost immediately it, begins",
+        "start": 3574.821,
+        "duration": 5.49
+    },
+    {
+        "text": "consistently overriding its weights to\npredict the new, object that it is seen.",
+        "start": 3580.881,
+        "duration": 5.31
+    },
+    {
+        "text": "and then obliterates information,\nit has in its weights about",
+        "start": 3586.971,
+        "duration": 3.27
+    },
+    {
+        "text": "recognizing other objects.",
+        "start": 3590.631,
+        "duration": 1.56
+    },
+    {
+        "text": "And this is shown in a kind of,\nalternative view, where, we have",
+        "start": 3594.771,
+        "duration": 5.85
+    },
+    {
+        "text": "the number of objects that have been\nlearned and then the target object.",
+        "start": 3601.161,
+        "duration": 3.87
+    },
+    {
+        "text": "and Along the kind of diagonal is\nthe performance, on the current task.",
+        "start": 3606.081,
+        "duration": 5.31
+    },
+    {
+        "text": "And so in general, you would expect\nif the system can learn the current",
+        "start": 3611.781,
+        "duration": 2.85
+    },
+    {
+        "text": "task, the diagonal should be green.",
+        "start": 3614.631,
+        "duration": 2.04
+    },
+    {
+        "text": "And that's what we see, for both models.",
+        "start": 3617.241,
+        "duration": 2.22
+    },
+    {
+        "text": "But if we look below the diagonal, this\nis the performance of the system on",
+        "start": 3620.481,
+        "duration": 4.38
+    },
+    {
+        "text": "all the objects that it's seen, before.",
+        "start": 3624.861,
+        "duration": 2.91
+    },
+    {
+        "text": "And so what this kind of shows is that\nbasically Monty is able to retain,",
+        "start": 3629.631,
+        "duration": 6.06
+    },
+    {
+        "text": "a memory of many of these objects.",
+        "start": 3636.591,
+        "duration": 1.26
+    },
+    {
+        "text": "It seems like there's maybe certain\nobjects that are just difficult for",
+        "start": 3637.851,
+        "duration": 3.33
+    },
+    {
+        "text": "Monty to learn for various reasons,\nperhaps ambiguous shape, and so forth.",
+        "start": 3641.181,
+        "duration": 5.19
+    },
+    {
+        "text": "Whereas the VIT again is catastrophically\noverriding its weights and shows",
+        "start": 3647.121,
+        "duration": 3.69
+    },
+    {
+        "text": "almost no evidence of being able\nto recall these previous objects.",
+        "start": 3650.811,
+        "duration": 3.48
+    },
+    {
+        "text": "It's learned,",
+        "start": 3654.291,
+        "duration": 0.45
+    },
+    {
+        "text": "and it, I think it's worth\njust emphasizing the importance",
+        "start": 3658.701,
+        "duration": 2.7
+    },
+    {
+        "text": "of continual learning.",
+        "start": 3661.401,
+        "duration": 0.96
+    },
+    {
+        "text": "as a task structure, it's, especially\neven this extreme case we consider",
+        "start": 3663.471,
+        "duration": 5.04
+    },
+    {
+        "text": "here where each task consists\nof an all, only a single object.",
+        "start": 3668.511,
+        "duration": 3.09
+    },
+    {
+        "text": "So deep learning systems are inherently\ndependent on very kind of contrastive",
+        "start": 3671.631,
+        "duration": 4.47
+    },
+    {
+        "text": "learning in order to develop\nrepresentations, in order to distinguish",
+        "start": 3676.131,
+        "duration": 3.78
+    },
+    {
+        "text": "kind of two objects needs to see one and\nthen the other, and essentially learn to",
+        "start": 3679.911,
+        "duration": 3.93
+    },
+    {
+        "text": "separate those representations and do this\nconstantly in kind of a shuffled order.",
+        "start": 3684.021,
+        "duration": 4.32
+    },
+    {
+        "text": "But of course, when you're\nmoving through the world.",
+        "start": 3689.151,
+        "duration": 1.8
+    },
+    {
+        "text": "the statistics are, constantly changing\npersonally and so constantly leading",
+        "start": 3692.166,
+        "duration": 4.23
+    },
+    {
+        "text": "to the problem of catastrophic getting.",
+        "start": 3696.396,
+        "duration": 1.77
+    },
+    {
+        "text": "but the kind of inputs are also\nhighly temporarily correlated.",
+        "start": 3699.816,
+        "duration": 3.96
+    },
+    {
+        "text": "if you were learning about an edible\nfruit, and you were a hunter gatherer or",
+        "start": 3704.646,
+        "duration": 4.29
+    },
+    {
+        "text": "another animal, you would, naturally find\nthese kinds of things clustered together.",
+        "start": 3709.146,
+        "duration": 5.4
+    },
+    {
+        "text": "You're not going to get a lineup of all\npossible fruit that you might want to eat",
+        "start": 3714.546,
+        "duration": 3.57
+    },
+    {
+        "text": "and all fruit that might be poisonous.",
+        "start": 3718.326,
+        "duration": 1.38
+    },
+    {
+        "text": "and then be able to hold those\nside by side and compare them.",
+        "start": 3720.516,
+        "duration": 2.88
+    },
+    {
+        "text": "and so being able to learn in\nisolation, just given what's in front",
+        "start": 3724.326,
+        "duration": 3.36
+    },
+    {
+        "text": "of you, through, movement and, what we\nexplored with Monte, is, really crucial",
+        "start": 3727.686,
+        "duration": 6.87
+    },
+    {
+        "text": "to then understand how Monte is, why\nis Monte robust to continual learning?",
+        "start": 3738.486,
+        "duration": 5.46
+    },
+    {
+        "text": "I think it's, again, useful to\nconsider this, math analogy.",
+        "start": 3744.006,
+        "duration": 3.24
+    },
+    {
+        "text": "So let's say again, you are\nin, Rome, you're going around,",
+        "start": 3747.726,
+        "duration": 3.66
+    },
+    {
+        "text": "you're seeing some new things.",
+        "start": 3751.626,
+        "duration": 1.17
+    },
+    {
+        "text": "If you then see something new and\nyou are making a note to remember",
+        "start": 3754.416,
+        "duration": 3.45
+    },
+    {
+        "text": "that, you're in Rome, so you're only\ngoing to update your kind of internal",
+        "start": 3757.866,
+        "duration": 4.89
+    },
+    {
+        "text": "representation of, your kind of map.",
+        "start": 3762.756,
+        "duration": 3.15
+    },
+    {
+        "text": "You're not going to make changes\nto all these other maps you have",
+        "start": 3766.416,
+        "duration": 3.27
+    },
+    {
+        "text": "for other cities, that may be\npartially or are very familiar to.",
+        "start": 3769.716,
+        "duration": 4.8
+    },
+    {
+        "text": "Targeted what could be\ncalled local or sparse.",
+        "start": 3776.511,
+        "duration": 2.67
+    },
+    {
+        "text": "Updating to the model is\nexactly what Monty is doing,",
+        "start": 3779.421,
+        "duration": 2.73
+    },
+    {
+        "text": "when it sees something new.",
+        "start": 3782.781,
+        "duration": 1.83
+    },
+    {
+        "text": "and this means that we don't get this\nkind of issue of catastrophic, forgetting.",
+        "start": 3785.301,
+        "duration": 4.17
+    },
+    {
+        "text": "as we'll see in the moment, we\nalso get some benefits in terms",
+        "start": 3790.311,
+        "duration": 2.76
+    },
+    {
+        "text": "of computational efficiency.",
+        "start": 3793.071,
+        "duration": 1.38
+    },
+    {
+        "text": "and in particular, we see some\nreally dramatic improvements in,",
+        "start": 3798.591,
+        "duration": 4.74
+    },
+    {
+        "text": "the computational efficiency of\nMonty when it comes to learning,",
+        "start": 3804.861,
+        "duration": 2.31
+    },
+    {
+        "text": "when compared to these VIT models.",
+        "start": 3807.711,
+        "duration": 1.44
+    },
+    {
+        "text": "and actually some decent, performance as\nwell, in the kind of domain of, imprints.",
+        "start": 3809.991,
+        "duration": 5.07
+    },
+    {
+        "text": "And in order to look at the,\nkinda computational efficiency,",
+        "start": 3817.341,
+        "duration": 3.9
+    },
+    {
+        "text": "we quantify these, this with\nfloating point operations.",
+        "start": 3821.241,
+        "duration": 3.09
+    },
+    {
+        "text": "So you can think of this as, any kind\nof, as the name implies, floating point",
+        "start": 3824.331,
+        "duration": 4.35
+    },
+    {
+        "text": "operation happening in the computer.",
+        "start": 3828.681,
+        "duration": 1.68
+    },
+    {
+        "text": "And so a variety of algorithms, whether\nit is a VIT, a deep pointing system,",
+        "start": 3830.721,
+        "duration": 5.01
+    },
+    {
+        "text": "or, it's, how we've implemented Monty.",
+        "start": 3836.001,
+        "duration": 3.21
+    },
+    {
+        "text": "These algorithms need to execute\nthese operations on a computer",
+        "start": 3839.721,
+        "duration": 2.97
+    },
+    {
+        "text": "in order to carry out a task.",
+        "start": 3842.691,
+        "duration": 1.86
+    },
+    {
+        "text": "And so we're basically just\ncounting how many of these,",
+        "start": 3844.611,
+        "duration": 2.76
+    },
+    {
+        "text": "flops in total are being done.",
+        "start": 3847.641,
+        "duration": 1.74
+    },
+    {
+        "text": "we're not concerned with\nhow many happen per second.",
+        "start": 3849.951,
+        "duration": 1.89
+    },
+    {
+        "text": "Just to clarify, sometimes flops\nwith an s refers to per second.",
+        "start": 3852.171,
+        "duration": 3.84
+    },
+    {
+        "text": "Here we're just counting the total\nnumber of floating point operations.",
+        "start": 3856.221,
+        "duration": 2.61
+    },
+    {
+        "text": "At learning, we see a huge, difference\nbetween Monty and these other systems.",
+        "start": 3861.036,
+        "duration": 5.13
+    },
+    {
+        "text": "so we have training floss along, the\nxxs here, and this is a logarithmic",
+        "start": 3866.916,
+        "duration": 5.49
+    },
+    {
+        "text": "scale, going up to 10 to the power\nof 20, where Monty is all the way",
+        "start": 3872.406,
+        "duration": 5.4
+    },
+    {
+        "text": "down here at 10 to the power of 11.",
+        "start": 3877.806,
+        "duration": 1.68
+    },
+    {
+        "text": "and this is all the\nlearning that Monty does.",
+        "start": 3880.206,
+        "duration": 1.95
+    },
+    {
+        "text": "The VIT here, which if you recall\nfrom earlier, did significantly",
+        "start": 3882.876,
+        "duration": 4.89
+    },
+    {
+        "text": "worth both in terms of accuracy,\nclassification and also, rotation error.",
+        "start": 3887.766,
+        "duration": 6.39
+    },
+    {
+        "text": "still uses, a huge amount\nforwarders magnitude more, flops",
+        "start": 3894.786,
+        "duration": 4.29
+    },
+    {
+        "text": "in order to perform learning.",
+        "start": 3899.076,
+        "duration": 0.93
+    },
+    {
+        "text": "The pre-trained VIT, which was the\nonly one that could do comparably on",
+        "start": 3900.666,
+        "duration": 3.78
+    },
+    {
+        "text": "the classification task, uses both\na, far more flops in the kind of",
+        "start": 3904.446,
+        "duration": 5.7
+    },
+    {
+        "text": "fine tuning stage, but particularly\nstaggering is the amount of acute",
+        "start": 3910.146,
+        "duration": 4.5
+    },
+    {
+        "text": "needed for the pre-training stage.",
+        "start": 3914.646,
+        "duration": 1.86
+    },
+    {
+        "text": "so this is where, yeah, Monty\nreally stands out in terms",
+        "start": 3918.576,
+        "duration": 2.79
+    },
+    {
+        "text": "of, computational efficiency.",
+        "start": 3921.366,
+        "duration": 1.95
+    },
+    {
+        "text": "if kind of inference, we can\ndo kinda a similar comparison.",
+        "start": 3926.496,
+        "duration": 3.42
+    },
+    {
+        "text": "and what we show here is a\nvariety of kind of different",
+        "start": 3931.026,
+        "duration": 2.52
+    },
+    {
+        "text": "VIT models of different sizes.",
+        "start": 3933.546,
+        "duration": 2.25
+    },
+    {
+        "text": "So generally as you go along the\nright towards, more flops, these are",
+        "start": 3935.796,
+        "duration": 5.67
+    },
+    {
+        "text": "VIT models that have more parameters\nand, often more parameters and deep",
+        "start": 3941.706,
+        "duration": 4.53
+    },
+    {
+        "text": "learning results in better performance.",
+        "start": 3946.236,
+        "duration": 1.77
+    },
+    {
+        "text": "and these are either the kind\nof pre-trained variant, if",
+        "start": 3950.646,
+        "duration": 2.73
+    },
+    {
+        "text": "they have the filled in circle\nor from scratch for Monty.",
+        "start": 3953.376,
+        "duration": 4.62
+    },
+    {
+        "text": "Then we look at, a system\nthat has a random walk.",
+        "start": 3957.996,
+        "duration": 3.96
+    },
+    {
+        "text": "So this is the kind of distant agent that\nis kinda like a camera performing a random",
+        "start": 3961.956,
+        "duration": 3.84
+    },
+    {
+        "text": "walk in all our VIT comparisons until now.",
+        "start": 3965.796,
+        "duration": 4.08
+    },
+    {
+        "text": "And also here, this is the agent we\nuse, even though this is definitely",
+        "start": 3969.876,
+        "duration": 3.84
+    },
+    {
+        "text": "the worst performing, Monty system.",
+        "start": 3973.716,
+        "duration": 2.19
+    },
+    {
+        "text": "The reason we did that was to make\nthe comparison fair because the",
+        "start": 3976.296,
+        "duration": 3.45
+    },
+    {
+        "text": "VIT sees the object from one side.",
+        "start": 3979.746,
+        "duration": 2.28
+    },
+    {
+        "text": "and so Monty also sees it from one side.",
+        "start": 3982.746,
+        "duration": 1.98
+    },
+    {
+        "text": "However, Monty is a sensorimotor system.",
+        "start": 3985.866,
+        "duration": 2.49
+    },
+    {
+        "text": "It's much more natural for it\nto engage its policies to act",
+        "start": 3988.386,
+        "duration": 3.36
+    },
+    {
+        "text": "intelligently in the world.",
+        "start": 3991.746,
+        "duration": 0.96
+    },
+    {
+        "text": "And that's what we see here with\nthis, system that has access to",
+        "start": 3993.096,
+        "duration": 3.93
+    },
+    {
+        "text": "the hypothesis test and policy.",
+        "start": 3997.056,
+        "duration": 1.35
+    },
+    {
+        "text": "And what's, really nice is even\nthe baseline, does extremely well",
+        "start": 3999.486,
+        "duration": 5.43
+    },
+    {
+        "text": "in terms of kind of the accuracy\nversus flops straight off.",
+        "start": 4004.916,
+        "duration": 2.82
+    },
+    {
+        "text": "particularly with the rotation error.",
+        "start": 4008.786,
+        "duration": 1.2
+    },
+    {
+        "text": "But when we add in this policy, rather\nthan making the system more complex and",
+        "start": 4010.406,
+        "duration": 5.91
+    },
+    {
+        "text": "resulting in more flops, it actually\ndramatically reduces the number of",
+        "start": 4016.316,
+        "duration": 3.81
+    },
+    {
+        "text": "flops, while also improving the accuracy\nand reducing the rotation error.",
+        "start": 4020.126,
+        "duration": 4.8
+    },
+    {
+        "text": "So it's just a, nice demonstration of\nthe real kind of benefits of bringing",
+        "start": 4025.796,
+        "duration": 4.17
+    },
+    {
+        "text": "in these kinds of sensorimotor concepts,\ninto, yeah, learning, intelligent systems.",
+        "start": 4029.966,
+        "duration": 7.11
+    },
+    {
+        "text": "to then understand the flop\nefficiency is a very similar",
+        "start": 4040.151,
+        "duration": 2.85
+    },
+    {
+        "text": "concept to before, at learning.",
+        "start": 4043.001,
+        "duration": 3.24
+    },
+    {
+        "text": "again, if you, are in Rome and\nyou're laying down a representation,",
+        "start": 4047.051,
+        "duration": 5.04
+    },
+    {
+        "text": "you're only going to do that,\nlaying down kinda a memory.",
+        "start": 4052.721,
+        "duration": 2.76
+    },
+    {
+        "text": "You're only going to do that in your map.",
+        "start": 4055.481,
+        "duration": 1.65
+    },
+    {
+        "text": "That means you don't have to\nupdate all of the other firstly.",
+        "start": 4057.461,
+        "duration": 3.03
+    },
+    {
+        "text": "And, where, sorry.",
+        "start": 4060.641,
+        "duration": 1.35
+    },
+    {
+        "text": "And I should say, you know\nwhere in Rome you are as well.",
+        "start": 4062.021,
+        "duration": 1.98
+    },
+    {
+        "text": "So you don't have to make changes to\nall these other locations on your map,",
+        "start": 4064.001,
+        "duration": 3.93
+    },
+    {
+        "text": "and you don't have to make locations\nto all the other maps for other cities.",
+        "start": 4068.291,
+        "duration": 3.51
+    },
+    {
+        "text": "So to very, a local, again, very\nsparse, change to the system.",
+        "start": 4072.761,
+        "duration": 3.99
+    },
+    {
+        "text": "That means, very few\nfloating point operations.",
+        "start": 4077.351,
+        "duration": 2.43
+    },
+    {
+        "text": "and during inference, what tends to\nhappen is, even though Monty has a",
+        "start": 4081.641,
+        "duration": 3.99
+    },
+    {
+        "text": "relatively broad, search space of\nhypotheses that it's considering, at the",
+        "start": 4085.631,
+        "duration": 4.95
+    },
+    {
+        "text": "first sensation, it generally considers\nall 77 objects relatively, possible",
+        "start": 4090.581,
+        "duration": 5.91
+    },
+    {
+        "text": "because, if you just felt the surface\nof something you wouldn't really have a",
+        "start": 4096.491,
+        "duration": 3.66
+    },
+    {
+        "text": "good idea of what it is you're touching.",
+        "start": 4100.151,
+        "duration": 1.62
+    },
+    {
+        "text": "And also many rotations\nare gonna be possible.",
+        "start": 4102.581,
+        "duration": 2.46
+    },
+    {
+        "text": "so it gen tends to begin with a large\nsearch space, which does involve a",
+        "start": 4105.641,
+        "duration": 4.2
+    },
+    {
+        "text": "lot of, floating point operations.",
+        "start": 4109.841,
+        "duration": 2.07
+    },
+    {
+        "text": "But as it senses more of the object\nand becomes more confident, it can",
+        "start": 4112.391,
+        "duration": 3.15
+    },
+    {
+        "text": "quickly rule out, a lot of hypotheses.",
+        "start": 4115.541,
+        "duration": 2.79
+    },
+    {
+        "text": "And that's visualized here, where, this\nis now during inference, you're trying",
+        "start": 4118.781,
+        "duration": 4.38
+    },
+    {
+        "text": "to figure out what city you're in.",
+        "start": 4123.161,
+        "duration": 1.17
+    },
+    {
+        "text": "Because of the, landmarks you've already\nseen and the movement you've done, you're",
+        "start": 4124.976,
+        "duration": 3.78
+    },
+    {
+        "text": "pretty accompanied somewhere in Rome.",
+        "start": 4128.756,
+        "duration": 1.53
+    },
+    {
+        "text": "You're just trying to figure out where,\nand you can eliminate, all of these other",
+        "start": 4130.286,
+        "duration": 3.78
+    },
+    {
+        "text": "hypotheses as ones that need testing.",
+        "start": 4134.066,
+        "duration": 1.77
+    },
+    {
+        "text": "And so that significantly reduces,\nthe amount of, flops that accrue.",
+        "start": 4136.796,
+        "duration": 3.57
+    },
+    {
+        "text": "I think to conclude this section on the\nsort of rapid, continual and efficient",
+        "start": 4143.696,
+        "duration": 3.63
+    },
+    {
+        "text": "learning, I think it's, really important\nto emphasize that these are all kind",
+        "start": 4147.326,
+        "duration": 3.69
+    },
+    {
+        "text": "of natural consequences that emerged\nwhen we were working with sensorimotor",
+        "start": 4151.016,
+        "duration": 3.72
+    },
+    {
+        "text": "learning with reference frames.",
+        "start": 4154.736,
+        "duration": 1.29
+    },
+    {
+        "text": "So it wasn't the case that we carried out\nsome laborious or targeted optimization to",
+        "start": 4156.326,
+        "duration": 5.52
+    },
+    {
+        "text": "extract or bake these sort of properties.",
+        "start": 4162.266,
+        "duration": 3.0
+    },
+    {
+        "text": "It just naturally emerges from\nthe way, learning happens.",
+        "start": 4165.626,
+        "duration": 3.42
+    },
+    {
+        "text": "And I think this is one of the reasons,\nwe're so excited about the direction",
+        "start": 4169.046,
+        "duration": 3.78
+    },
+    {
+        "text": "that Thousand Brains Projects is,\ntaking and, the progress it's making.",
+        "start": 4172.826,
+        "duration": 2.91
+    },
+    {
+        "text": "Because all of this was originally\ninformed by, hypotheses about",
+        "start": 4175.736,
+        "duration": 4.47
+    },
+    {
+        "text": "how the brain, works, how the\ncortex, where it's based on no",
+        "start": 4180.536,
+        "duration": 4.53
+    },
+    {
+        "text": "neuroanatomy, no neurophysiology.",
+        "start": 4185.066,
+        "duration": 1.8
+    },
+    {
+        "text": "We then kinda implemented the system\nas said to kinda be able to achieve",
+        "start": 4187.586,
+        "duration": 3.57
+    },
+    {
+        "text": "some basic properties like recognizing\nobjects and very naturally, properties",
+        "start": 4191.156,
+        "duration": 5.76
+    },
+    {
+        "text": "that have been, very difficult to\nachieve in, machine learning from,",
+        "start": 4196.916,
+        "duration": 4.32
+    },
+    {
+        "text": "shape bias to, symmetry detection,\nto continual learning, to efficient",
+        "start": 4201.896,
+        "duration": 5.28
+    },
+    {
+        "text": "learning are all naturally, popping out.",
+        "start": 4207.176,
+        "duration": 2.85
+    },
+    {
+        "text": "So we think that's, A good\nindication that, we're,",
+        "start": 4210.026,
+        "duration": 4.905
+    },
+    {
+        "text": "approximately on the right track.",
+        "start": 4214.931,
+        "duration": 0.99
+    },
+    {
+        "text": "I think it's also worth emphasizing\nthat lifelong learning is, a huge",
+        "start": 4218.411,
+        "duration": 5.16
+    },
+    {
+        "text": "thing that, we want to be able to\ndevelop to have, intelligent systems.",
+        "start": 4223.571,
+        "duration": 4.68
+    },
+    {
+        "text": "And often this focuses on the\nproblem of continual learning",
+        "start": 4228.251,
+        "duration": 3.36
+    },
+    {
+        "text": "because that is such a, kinda major\nhurdle, that hasn't been overcome.",
+        "start": 4231.611,
+        "duration": 3.81
+    },
+    {
+        "text": "But I think it's important to\nemphasize that continual learning",
+        "start": 4235.811,
+        "duration": 2.37
+    },
+    {
+        "text": "and avoiding constructive getting\nis just one element of that.",
+        "start": 4238.451,
+        "duration": 3.09
+    },
+    {
+        "text": "Being able to learn rapidly so\nvery quickly, and also being",
+        "start": 4241.571,
+        "duration": 3.18
+    },
+    {
+        "text": "able to learn efficiently.",
+        "start": 4244.751,
+        "duration": 1.38
+    },
+    {
+        "text": "So not needing to use, entire GPU\nclusters every time you want to train",
+        "start": 4246.251,
+        "duration": 4.62
+    },
+    {
+        "text": "your model, is extremely important\nto unlocking that capability.",
+        "start": 4250.871,
+        "duration": 4.5
+    },
+    {
+        "text": "And it's, exciting that Monty\nseems to, show evidence of kind",
+        "start": 4255.371,
+        "duration": 4.74
+    },
+    {
+        "text": "of all three of those, already,",
+        "start": 4260.111,
+        "duration": 1.56
+    },
+    {
+        "text": "this, the images here where it gets to\nshow some lifelong learners, some adults.",
+        "start": 4263.801,
+        "duration": 4.32
+    },
+    {
+        "text": "And then this is just, an example of\na totally novel object you've never",
+        "start": 4268.361,
+        "duration": 3.36
+    },
+    {
+        "text": "seen before, but probably after a\nfew glances, you already had a kinda",
+        "start": 4271.721,
+        "duration": 3.3
+    },
+    {
+        "text": "reasonable representation, of what it was.",
+        "start": 4275.021,
+        "duration": 2.28
+    },
+    {
+        "text": "You didn't need to compare it to\nsome other objects that you may have",
+        "start": 4277.751,
+        "duration": 4.32
+    },
+    {
+        "text": "seen before or sleep in order to\ninitiate recall type, contrastive",
+        "start": 4282.071,
+        "duration": 6.15
+    },
+    {
+        "text": "learning or do any of these things.",
+        "start": 4288.221,
+        "duration": 1.77
+    },
+    {
+        "text": "you were able to just, learn it.",
+        "start": 4290.531,
+        "duration": 1.56
+    },
+    {
+        "text": "Yeah, almost instantaneously.",
+        "start": 4292.181,
+        "duration": 1.44
+    },
+    {
+        "text": "So that kind of concludes the, results,\nthat we kinda discussed in the paper.",
+        "start": 4296.801,
+        "duration": 4.41
+    },
+    {
+        "text": "I just thought I'd very briefly\ndiscuss, what we talk about conclusion,",
+        "start": 4301.301,
+        "duration": 4.02
+    },
+    {
+        "text": "which is, the future research\nwe're working on at the moment.",
+        "start": 4305.321,
+        "duration": 2.91
+    },
+    {
+        "text": "One of the key things we're really\nexcited about is compositional objects.",
+        "start": 4309.191,
+        "duration": 3.6
+    },
+    {
+        "text": "So this is something which the\nPaper Viviane is gonna separately",
+        "start": 4312.911,
+        "duration": 3.81
+    },
+    {
+        "text": "be talking about, in a bit.",
+        "start": 4316.721,
+        "duration": 1.59
+    },
+    {
+        "text": "our hierarchy paper, which looks\nat neuroanatomy, has, a lot",
+        "start": 4319.031,
+        "duration": 3.72
+    },
+    {
+        "text": "of interesting ideas for how\nthe brain might be doing this.",
+        "start": 4322.751,
+        "duration": 2.31
+    },
+    {
+        "text": "And so in the same way that Monty\nis a manifestation of the Thousand",
+        "start": 4325.061,
+        "duration": 4.41
+    },
+    {
+        "text": "Brains Theory from a couple years\nago, now we're taking some of these,",
+        "start": 4329.471,
+        "duration": 4.98
+    },
+    {
+        "text": "kind newer neuroscience theory\nideas, and bringing them into kind",
+        "start": 4334.991,
+        "duration": 3.87
+    },
+    {
+        "text": "of the latest version of Monty.",
+        "start": 4338.861,
+        "duration": 1.11
+    },
+    {
+        "text": "And this is where we're going to\nbe able to develop, more complex,",
+        "start": 4340.421,
+        "duration": 4.65
+    },
+    {
+        "text": "more interesting, hierarchical\nrepresentations of objects, a",
+        "start": 4345.071,
+        "duration": 4.95
+    },
+    {
+        "text": "love, like a mug with a logo on it.",
+        "start": 4350.021,
+        "duration": 1.89
+    },
+    {
+        "text": "and then the other kind of thing\nwe're working on, the main other",
+        "start": 4354.431,
+        "duration": 2.31
+    },
+    {
+        "text": "main kind of, research we're\ndoing is on object behaviors.",
+        "start": 4356.741,
+        "duration": 4.14
+    },
+    {
+        "text": "this is more in the, theoretical stage\nwhere we're still figuring out exactly",
+        "start": 4361.151,
+        "duration": 4.86
+    },
+    {
+        "text": "how we believe the brain figures out and\nrepresents objects that move and objects",
+        "start": 4366.011,
+        "duration": 5.34
+    },
+    {
+        "text": "that can be interacted with, and so forth.",
+        "start": 4371.351,
+        "duration": 2.16
+    },
+    {
+        "text": "But we think, we've made some\ninteresting progress and look forward",
+        "start": 4373.511,
+        "duration": 3.78
+    },
+    {
+        "text": "to sharing more with everyone soon.",
+        "start": 4377.291,
+        "duration": 2.49
+    },
+    {
+        "text": "Then the last thing to, mention\nis, all this has been very kind,",
+        "start": 4381.881,
+        "duration": 3.84
+    },
+    {
+        "text": "fundamental research, but of course\nour long-term hope is it's gonna have",
+        "start": 4385.721,
+        "duration": 3.99
+    },
+    {
+        "text": "a variety of beneficial, applications\ndownstream in the real world.",
+        "start": 4389.711,
+        "duration": 4.68
+    },
+    {
+        "text": "everything from agricultural\nrobotics to, the kind of energy,",
+        "start": 4394.931,
+        "duration": 4.95
+    },
+    {
+        "text": "sector and kind of ensuring that,\nequipment, is kept, maintained to",
+        "start": 4400.301,
+        "duration": 6.27
+    },
+    {
+        "text": "things like medical ultrasound.",
+        "start": 4406.571,
+        "duration": 1.29
+    },
+    {
+        "text": "these are in general instances\nwhere you may not have much data,",
+        "start": 4408.761,
+        "duration": 3.57
+    },
+    {
+        "text": "where again, the distribution of the\nreal world can constantly change.",
+        "start": 4413.171,
+        "duration": 3.42
+    },
+    {
+        "text": "you cannot, rely on",
+        "start": 4417.341,
+        "duration": 1.56
+    },
+    {
+        "text": "features that may change as\na, result of lighting and,",
+        "start": 4421.661,
+        "duration": 3.24
+    },
+    {
+        "text": "wind, rain, weather, so forth.",
+        "start": 4425.741,
+        "duration": 1.44
+    },
+    {
+        "text": "You really need to rely on things\nlike shape all these things that",
+        "start": 4427.181,
+        "duration": 3.0
+    },
+    {
+        "text": "kinda Monty was showing in this paper\nshould really, be useful in kind",
+        "start": 4430.181,
+        "duration": 4.98
+    },
+    {
+        "text": "of these downstream applications.",
+        "start": 4435.161,
+        "duration": 1.35
+    },
+    {
+        "text": "So that's something\nwe're looking forward to.",
+        "start": 4436.511,
+        "duration": 1.62
+    },
+    {
+        "text": "Thanks very much for listening.",
+        "start": 4440.141,
+        "duration": 1.26
+    }
+]

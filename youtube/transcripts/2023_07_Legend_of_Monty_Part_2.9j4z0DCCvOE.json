@@ -1,0 +1,747 @@
+[
+    {
+        "text": "All right, so here's another\nvideo from our archives.",
+        "start": 8.442,
+        "duration": 2.94
+    },
+    {
+        "text": "It's from July, 2023, and it's the\nsecond part of the Legend of Monty.",
+        "start": 11.802,
+        "duration": 6.03
+    },
+    {
+        "text": "And although it's from 2023, it's actually\nnot that far off from where we are today.",
+        "start": 18.522,
+        "duration": 5.655
+    },
+    {
+        "text": "Because shortly after that presentation,\nthe whole Monty team was pulled into",
+        "start": 25.092,
+        "duration": 4.53
+    },
+    {
+        "text": "some other work at Numenta and we took\nabout a year's break from work on Monty.",
+        "start": 29.622,
+        "duration": 5.82
+    },
+    {
+        "text": "So if you look at the in future roadmap\ntowards the end of the presentation, this",
+        "start": 35.832,
+        "duration": 8.025
+    },
+    {
+        "text": "is still pretty much all future work.",
+        "start": 44.057,
+        "duration": 3.355
+    },
+    {
+        "text": "and some of our next goals have changed\nsince then, and you can find a more up to",
+        "start": 48.222,
+        "duration": 4.35
+    },
+    {
+        "text": "date version of what we're working on in\nthe near term future on our documentation",
+        "start": 52.572,
+        "duration": 5.385
+    },
+    {
+        "text": "website in the future work section.",
+        "start": 57.957,
+        "duration": 1.98
+    },
+    {
+        "text": "Unfortunately, we forgot to start\nthe recording for this presentation,",
+        "start": 60.807,
+        "duration": 4.53
+    },
+    {
+        "text": "and only remembered it a little\nbit into the presentation.",
+        "start": 66.177,
+        "duration": 2.91
+    },
+    {
+        "text": "So I'm just gonna go through\nthe first slides that are",
+        "start": 69.447,
+        "duration": 2.64
+    },
+    {
+        "text": "missing, in that presentation.",
+        "start": 72.087,
+        "duration": 2.97
+    },
+    {
+        "text": "All right, so legend of Monty chapter two.",
+        "start": 76.79,
+        "duration": 3.48
+    },
+    {
+        "text": "As you may recall, a while\nago, the Monty team washed up",
+        "start": 83.18,
+        "duration": 3.39
+    },
+    {
+        "text": "on the shores of NuPIC Island",
+        "start": 86.57,
+        "duration": 1.74
+    },
+    {
+        "text": "there.",
+        "start": 92.15,
+        "duration": 0.42
+    },
+    {
+        "text": "In the beginning, they had nothing besides\na few principles they wanted to follow.",
+        "start": 94.43,
+        "duration": 4.17
+    },
+    {
+        "text": "There was sensorimotor learning and\ninference, so there's always active",
+        "start": 100.85,
+        "duration": 5.4
+    },
+    {
+        "text": "interaction with the environment\nto learn and perceive the world.",
+        "start": 106.25,
+        "duration": 3.63
+    },
+    {
+        "text": "Another principle is using reference\nframes, so not just a bag of features, but",
+        "start": 110.66,
+        "duration": 5.13
+    },
+    {
+        "text": "that we actually have structured models\nwith a 2 or 3D or 4D inductive bias.",
+        "start": 115.79,
+        "duration": 6.54
+    },
+    {
+        "text": "another one is modular structure.",
+        "start": 124.49,
+        "duration": 2.19
+    },
+    {
+        "text": "So an easy plug and play\nextensible system, with learning",
+        "start": 127.13,
+        "duration": 5.28
+    },
+    {
+        "text": "modules and sensorimotor modules.",
+        "start": 132.41,
+        "duration": 1.68
+    },
+    {
+        "text": "And importantly also, no\nsensor perceives everything.",
+        "start": 134.15,
+        "duration": 3.33
+    },
+    {
+        "text": "There isn't just one input image.",
+        "start": 137.51,
+        "duration": 1.92
+    },
+    {
+        "text": "There are a bunch of little\npatches that move in the world.",
+        "start": 139.88,
+        "duration": 2.52
+    },
+    {
+        "text": "And fourth, the common communication\nprotocol, which we now call the Cortical",
+        "start": 143.675,
+        "duration": 4.71
+    },
+    {
+        "text": "Messaging Protocol, which is the messaging\nformat that learning modules use to",
+        "start": 148.385,
+        "duration": 6.15
+    },
+    {
+        "text": "communicate with each other through\nvoting, but also in a hierarchical way,",
+        "start": 154.535,
+        "duration": 4.68
+    },
+    {
+        "text": "and that they expect as input and output",
+        "start": 159.545,
+        "duration": 2.82
+    },
+    {
+        "text": "with these principles, they made\ntheir way across the island and",
+        "start": 165.755,
+        "duration": 2.94
+    },
+    {
+        "text": "collected much knowledge on the way.",
+        "start": 168.695,
+        "duration": 1.74
+    },
+    {
+        "text": "They set up the Monty framework.",
+        "start": 173.69,
+        "duration": 2.13
+    },
+    {
+        "text": "They set up a test environment.",
+        "start": 176.09,
+        "duration": 1.89
+    },
+    {
+        "text": "They introduce rotation,\ntranslation invariant recognition.",
+        "start": 179.69,
+        "duration": 4.26
+    },
+    {
+        "text": "They got multi to the point\nwhere it could sample arbitrary",
+        "start": 186.05,
+        "duration": 3.765
+    },
+    {
+        "text": "displacement, added voting and speed.",
+        "start": 189.815,
+        "duration": 4.21
+    },
+    {
+        "text": "They introduced sampling invariance.",
+        "start": 196.295,
+        "duration": 2.44
+    },
+    {
+        "text": "So now any, point on the object can\nbe sampled in any order and objects",
+        "start": 198.755,
+        "duration": 4.72
+    },
+    {
+        "text": "are still being recognized correctly.",
+        "start": 203.495,
+        "duration": 1.86
+    },
+    {
+        "text": "They added robustness and basic\ngeneralization capabilities.",
+        "start": 206.285,
+        "duration": 5.46
+    },
+    {
+        "text": "And for a more detailed view,\nyou can have a read or look at,",
+        "start": 211.985,
+        "duration": 4.14
+    },
+    {
+        "text": "the legend of multi chapter one.",
+        "start": 216.365,
+        "duration": 1.77
+    },
+    {
+        "text": "We ended the last chapter in evidence\nlearning module town with much",
+        "start": 221.975,
+        "duration": 3.48
+    },
+    {
+        "text": "of the island still to explore.",
+        "start": 225.455,
+        "duration": 1.74
+    },
+    {
+        "text": "We had explored and learned much about\nNuPIC island, but much of NuPIC island",
+        "start": 227.915,
+        "duration": 4.38
+    },
+    {
+        "text": "still stretched out far in front of us and\nwe did not know what was waiting up ahead.",
+        "start": 232.295,
+        "duration": 4.48
+    },
+    {
+        "text": "So the Monty team ventured\nforth into the unknown and made",
+        "start": 238.395,
+        "duration": 3.83
+    },
+    {
+        "text": "their way to the next town.",
+        "start": 242.225,
+        "duration": 1.56
+    },
+    {
+        "text": "The next town was a partner city\nof Evidence LM Town, Action town.",
+        "start": 250.4,
+        "duration": 4.2
+    },
+    {
+        "text": "Here, they worked with the\nlocal tradesmen on developing",
+        "start": 255.26,
+        "duration": 2.58
+    },
+    {
+        "text": "intelligent policies for Monty.",
+        "start": 257.84,
+        "duration": 1.77
+    },
+    {
+        "text": "So for instance, we have policies that\nuse model free signals to move along",
+        "start": 262.82,
+        "duration": 5.955
+    },
+    {
+        "text": "the principle curvature directions for\nmore efficient coverage of objects.",
+        "start": 268.925,
+        "duration": 3.72
+    },
+    {
+        "text": "And we also have model-based\npolicies that use internal models",
+        "start": 272.975,
+        "duration": 4.14
+    },
+    {
+        "text": "and hypotheses to figure out where\nto sense next to resolve ambiguity.",
+        "start": 277.205,
+        "duration": 5.22
+    },
+    {
+        "text": "Together these new policies make Monty\nmove much more efficiently through",
+        "start": 284.675,
+        "duration": 3.63
+    },
+    {
+        "text": "space and recognize objects faster.",
+        "start": 288.305,
+        "duration": 2.49
+    },
+    {
+        "text": "After some regrouping and\ncareful planning, the Monty team",
+        "start": 292.83,
+        "duration": 3.38
+    },
+    {
+        "text": "decided to split up and explore\ndifferent areas around them.",
+        "start": 296.21,
+        "duration": 3.06
+    },
+    {
+        "text": "They kept in touch with each other through\nfrequent messenger birds and runners.",
+        "start": 299.99,
+        "duration": 3.96
+    },
+    {
+        "text": "so I'll let you go over to the actual\nrecording from back then and enjoy",
+        "start": 305.448,
+        "duration": 6.51
+    },
+    {
+        "text": "the rest of the legend of Monty.",
+        "start": 311.958,
+        "duration": 1.68
+    },
+    {
+        "text": "Have fun.",
+        "start": 314.988,
+        "duration": 0.39
+    },
+    {
+        "text": "One part of the party started walking east\ntowards the tower of multiple objects.",
+        "start": 318.869,
+        "duration": 4.38
+    },
+    {
+        "text": "Another part of the party took the\nnorthern road, passed the lake towards",
+        "start": 324.119,
+        "duration": 3.36
+    },
+    {
+        "text": "the castle of compositionality.",
+        "start": 327.479,
+        "duration": 3.46
+    },
+    {
+        "text": "Another part of the group split off North\nto scope out the small Fisher Village",
+        "start": 331.709,
+        "duration": 3.69
+    },
+    {
+        "text": "that specializes in robust sensors.",
+        "start": 335.399,
+        "duration": 1.565
+    },
+    {
+        "text": "At the Fisher Village, they improved\nthe design of their sensor modules.",
+        "start": 340.424,
+        "duration": 4.125
+    },
+    {
+        "text": "They worked on smoothing depth values and\nimproving the point normal and curvature",
+        "start": 347.999,
+        "duration": 4.17
+    },
+    {
+        "text": "estimates to get a higher accuracy\nwhen faced with raw sensorimotor noise.",
+        "start": 352.169,
+        "duration": 3.51
+    },
+    {
+        "text": "In the Castle of Composition,\nthey implemented the basic",
+        "start": 361.289,
+        "duration": 3.07
+    },
+    {
+        "text": "framework for hierarchy.",
+        "start": 364.359,
+        "duration": 2.02
+    },
+    {
+        "text": "To be able to experiments with the\nhierarchical system, they implemented",
+        "start": 369.489,
+        "duration": 3.11
+    },
+    {
+        "text": "new information routing and processing.",
+        "start": 372.599,
+        "duration": 1.89
+    },
+    {
+        "text": "They also implemented constrained\nobject models to force Monty to make",
+        "start": 376.169,
+        "duration": 3.59
+    },
+    {
+        "text": "use and composition models of objects",
+        "start": 379.759,
+        "duration": 3.97
+    },
+    {
+        "text": "in Tower of Multiple Objects,\nthey set up the foundations for",
+        "start": 387.314,
+        "duration": 3.225
+    },
+    {
+        "text": "dealing with multiple, potentially\ntouching or overlapping objects.",
+        "start": 390.539,
+        "duration": 3.24
+    },
+    {
+        "text": "First, they set up an environment which\nthey could, within which they could",
+        "start": 397.259,
+        "duration": 3.6
+    },
+    {
+        "text": "run multiple object experiments, as\nwell as evaluate, these, experiments.",
+        "start": 400.859,
+        "duration": 5.31
+    },
+    {
+        "text": "These are objects that touch\neach other, or they called,",
+        "start": 407.669,
+        "duration": 2.73
+    },
+    {
+        "text": "they're very close to each other.",
+        "start": 410.699,
+        "duration": 1.14
+    },
+    {
+        "text": "Okay.",
+        "start": 411.899,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 412.619,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah, definitely feel free to ask.",
+        "start": 413.009,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 418.959,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 419.249,
+        "duration": 0.16
+    },
+    {
+        "text": "Like a Potted Meat Can.",
+        "start": 420.199,
+        "duration": 1.46
+    },
+    {
+        "text": "Yeah.",
+        "start": 421.724,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 422.114,
+        "duration": 0.06
+    },
+    {
+        "text": "Ted's, it's a weird, ridiculously complex\nwe can do, it's a, it's like a dinner",
+        "start": 422.659,
+        "duration": 7.735
+    },
+    {
+        "text": "table, a weird dinner table in and abyss,\nwith a, yeah, variety of optics, but we",
+        "start": 430.394,
+        "duration": 5.04
+    },
+    {
+        "text": "intentionally make it adversarial so that\nthe objects are very close to each other.",
+        "start": 435.734,
+        "duration": 3.15
+    },
+    {
+        "text": "So first they set up this environment\nand then, yeah, then they implemented",
+        "start": 441.449,
+        "duration": 3.63
+    },
+    {
+        "text": "an approach to detect when an LM\nhas moved onto new object based",
+        "start": 445.079,
+        "duration": 3.78
+    },
+    {
+        "text": "on a sudden shift of evidence.",
+        "start": 448.859,
+        "duration": 1.74
+    },
+    {
+        "text": "this detected shift can then\nbe used to move back onto the",
+        "start": 453.149,
+        "duration": 2.82
+    },
+    {
+        "text": "object, improving accuracy.",
+        "start": 455.969,
+        "duration": 1.44
+    },
+    {
+        "text": "During the individual missions, they\nmet up at the lake of reality for a",
+        "start": 461.279,
+        "duration": 5.34
+    },
+    {
+        "text": "little boat trip where they tested\ntheir system and acquired knowledge",
+        "start": 466.619,
+        "duration": 3.72
+    },
+    {
+        "text": "in the real world for the first time.",
+        "start": 470.339,
+        "duration": 1.845
+    },
+    {
+        "text": "It took Monty for it's first test\ndrive using an iPad camera, and a",
+        "start": 478.634,
+        "duration": 3.39
+    },
+    {
+        "text": "new data set of real world objects.",
+        "start": 482.024,
+        "duration": 1.845
+    },
+    {
+        "text": "Most recently, during their journey, they\nhave ventured into the grotto of dynamic",
+        "start": 487.754,
+        "duration": 4.27
+    },
+    {
+        "text": "environments and the surrounding forest.",
+        "start": 492.024,
+        "duration": 2.7
+    },
+    {
+        "text": "They set up an environment that\nmodels dynamic objects where",
+        "start": 501.194,
+        "duration": 3.3
+    },
+    {
+        "text": "they will be able to test Monty",
+        "start": 504.494,
+        "duration": 1.52
+    },
+    {
+        "text": "on their venture into the forest towards\nthe town of dynamic environments.",
+        "start": 509.054,
+        "duration": 3.63
+    },
+    {
+        "text": "They investigated potential ways\nto model and recognize object",
+        "start": 512.744,
+        "duration": 3.48
+    },
+    {
+        "text": "states and behaviors in Monty.",
+        "start": 516.224,
+        "duration": 2.02
+    },
+    {
+        "text": "Over time, the cities they have reached\nhave been thriving and there has been",
+        "start": 523.244,
+        "duration": 3.39
+    },
+    {
+        "text": "more and more trade between them.",
+        "start": 526.659,
+        "duration": 1.295
+    },
+    {
+        "text": "The team has steadily reinforced the\ninfrastructure by refactoring and cleaning",
+        "start": 528.944,
+        "duration": 3.81
+    },
+    {
+        "text": "up, adding many speed improvements and\noptimizing their communication process.",
+        "start": 532.754,
+        "duration": 5.7
+    },
+    {
+        "text": "They've also put down a concrete\ndefinition of the common communication",
+        "start": 539.979,
+        "duration": 4.2
+    },
+    {
+        "text": "protocol, Recently, there has been\nmuch exchange, between action towns",
+        "start": 544.179,
+        "duration": 5.401
+    },
+    {
+        "text": "and the Castle of Compositionality.",
+        "start": 549.67,
+        "duration": 5.39
+    },
+    {
+        "text": "they have conceptualized and\nstarted a big construction project",
+        "start": 555.085,
+        "duration": 2.97
+    },
+    {
+        "text": "on hierarchical action policies.",
+        "start": 558.115,
+        "duration": 1.98
+    },
+    {
+        "text": "Looking back at what they accomplished\nin the past half year, they",
+        "start": 565.285,
+        "duration": 3.3
+    },
+    {
+        "text": "wonder what path to take next.",
+        "start": 568.585,
+        "duration": 1.71
+    },
+    {
+        "text": "We might do in the next half year.",
+        "start": 581.59,
+        "duration": 1.65
+    },
+    {
+        "text": "So we had ventured far and learned\nmuch about NuPIC Island stretched,",
+        "start": 586.66,
+        "duration": 3.66
+    },
+    {
+        "text": "but NuPIC Island stretched out even\nfurther ahead of us and we did not",
+        "start": 590.59,
+        "duration": 3.54
+    },
+    {
+        "text": "know what was waiting up ahead.",
+        "start": 594.13,
+        "duration": 1.405
+    },
+    {
+        "text": "This was a rough thought of what was\ngonna happen in the next half year.",
+        "start": 596.445,
+        "duration": 3.625
+    },
+    {
+        "text": "That actually changed a\nbit in the past half year.",
+        "start": 600.46,
+        "duration": 2.87
+    },
+    {
+        "text": "Not too much.",
+        "start": 603.33,
+        "duration": 0.94
+    },
+    {
+        "text": "Most of the things we did plan\non, we did get on this map.",
+        "start": 604.27,
+        "duration": 4.14
+    },
+    {
+        "text": "By now we have a clear idea about where\nwe are and where we may want to go next.",
+        "start": 611.69,
+        "duration": 4.415
+    },
+    {
+        "text": "So these yellow boxes that up\nhere now are current tasks in",
+        "start": 617.785,
+        "duration": 5.49
+    },
+    {
+        "text": "progress about to be started.",
+        "start": 623.275,
+        "duration": 1.59
+    },
+    {
+        "text": "So as Niels already mentioned, we're\nstarting to work on hierarchical",
+        "start": 625.495,
+        "duration": 4.23
+    },
+    {
+        "text": "action policies and generally making\nactions much more sophisticated",
+        "start": 629.725,
+        "duration": 5.43
+    },
+    {
+        "text": "where every learning module kind\nof proposes its own goal states.",
+        "start": 635.245,
+        "duration": 3.51
+    },
+    {
+        "text": "We can compose goals into sub goals and,\nyeah, generate hierarchical policies.",
+        "start": 639.665,
+        "duration": 6.26
+    },
+    {
+        "text": "then we're also working on testing\nand improving hierarchy on new",
+        "start": 647.935,
+        "duration": 4.41
+    },
+    {
+        "text": "and sophisticated data sets with\nactual compositional objects.",
+        "start": 653.005,
+        "duration": 4.2
+    },
+    {
+        "text": "We've started conceptually\nto investigate how we might",
+        "start": 662.245,
+        "duration": 3.12
+    },
+    {
+        "text": "model dynamic environments and",
+        "start": 665.545,
+        "duration": 1.73
+    },
+    {
+        "text": "how we want to test that, but something,",
+        "start": 668.465,
+        "duration": 5.03
+    },
+    {
+        "text": "and then also \"multiple objects\" currently\nstill in progress, there's stuff done",
+        "start": 676.495,
+        "duration": 4.895
+    },
+    {
+        "text": "there already, but still a bit, that\nwe need to get better to actually work",
+        "start": 681.39,
+        "duration": 4.345
+    },
+    {
+        "text": "in an environment with many objects.",
+        "start": 685.735,
+        "duration": 2.16
+    }
+]

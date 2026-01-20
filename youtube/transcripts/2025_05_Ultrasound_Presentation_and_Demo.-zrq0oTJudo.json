@@ -1,0 +1,2767 @@
+[
+    {
+        "text": "so this is the, ultrasound\nthat we've been using.",
+        "start": 8.689,
+        "duration": 2.16
+    },
+    {
+        "text": "we got this online from\nbutterfly ultrasound.",
+        "start": 11.059,
+        "duration": 2.61
+    },
+    {
+        "text": "so this is it in my hand, for scale.",
+        "start": 14.719,
+        "duration": 2.22
+    },
+    {
+        "text": "and on the right is an\nactual, ultrasound at the top.",
+        "start": 17.779,
+        "duration": 4.23
+    },
+    {
+        "text": "You can see the bit of the probe.",
+        "start": 22.009,
+        "duration": 1.14
+    },
+    {
+        "text": "and then down here you can see\nsomething that's definitely not a tumor.",
+        "start": 24.229,
+        "duration": 2.64
+    },
+    {
+        "text": "This is the cross section of\na. French is mustard bottle.",
+        "start": 26.899,
+        "duration": 3.645
+    },
+    {
+        "text": "So that's your primer for\nwhat ultrasounds look like.",
+        "start": 31.084,
+        "duration": 2.67
+    },
+    {
+        "text": "Good luck.",
+        "start": 33.754,
+        "duration": 0.33
+    },
+    {
+        "text": "You weren't able to tell.",
+        "start": 34.894,
+        "duration": 1.32
+    },
+    {
+        "text": "It's pretty obvious.",
+        "start": 36.574,
+        "duration": 0.99
+    },
+    {
+        "text": "It's pretty obvious.",
+        "start": 37.564,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 41.824,
+        "duration": 0.15
+    },
+    {
+        "text": "And what's exciting about ultrasound\nis obviously it has a huge number of",
+        "start": 41.974,
+        "duration": 3.87
+    },
+    {
+        "text": "applications, medical being one of the\nmain ones, and it's an inherently a",
+        "start": 45.844,
+        "duration": 3.78
+    },
+    {
+        "text": "very sensorimotor, way of clinicians\nunderstanding, what they're seeing.",
+        "start": 49.624,
+        "duration": 5.4
+    },
+    {
+        "text": "and it's very challenging to use AI for\nthis because in the medical field you",
+        "start": 55.864,
+        "duration": 4.41
+    },
+    {
+        "text": "generally don't have large data sets.",
+        "start": 60.274,
+        "duration": 1.29
+    },
+    {
+        "text": "There's lots of reasons that Monty would\nbe perfect for this kind of use case.",
+        "start": 62.179,
+        "duration": 2.94
+    },
+    {
+        "text": "but ultrasound is not a very\nintuitive, modality, at least",
+        "start": 66.049,
+        "duration": 3.93
+    },
+    {
+        "text": "if you're first dealing with it.",
+        "start": 69.979,
+        "duration": 0.93
+    },
+    {
+        "text": "this is for example, what, the\nThousand Brains Project Mug.",
+        "start": 71.779,
+        "duration": 3.39
+    },
+    {
+        "text": "Looks like in, ultrasound\nor part of it, rather.",
+        "start": 75.874,
+        "duration": 2.88
+    },
+    {
+        "text": "and what you need to bear in mind is\nthat ultrasound, the probe is producing",
+        "start": 79.624,
+        "duration": 4.41
+    },
+    {
+        "text": "a two dimensional beam like a fan.",
+        "start": 84.034,
+        "duration": 2.46
+    },
+    {
+        "text": "but that two dimensional fan\nis moving in three dimensional",
+        "start": 87.394,
+        "duration": 2.55
+    },
+    {
+        "text": "space, going through, a structure.",
+        "start": 89.944,
+        "duration": 3.18
+    },
+    {
+        "text": "And as the name implies,\nthe probe is emitting, sound",
+        "start": 93.544,
+        "duration": 3.87
+    },
+    {
+        "text": "waves, ultrasonic sound waves.",
+        "start": 97.414,
+        "duration": 1.56
+    },
+    {
+        "text": "Basically the time it takes,\nfor that to bounce back tells",
+        "start": 99.409,
+        "duration": 3.84
+    },
+    {
+        "text": "you how far away something is.",
+        "start": 103.249,
+        "duration": 1.41
+    },
+    {
+        "text": "And the intensity tells\nyou how, white that is.",
+        "start": 104.959,
+        "duration": 3.66
+    },
+    {
+        "text": "So something like bone or metal, or\nceramic like we were dealing with tends",
+        "start": 108.619,
+        "duration": 4.23
+    },
+    {
+        "text": "to show up as really intense, really\nwhite, whereas kind of soft tissue and",
+        "start": 112.849,
+        "duration": 4.17
+    },
+    {
+        "text": "things like that appears, more gray.",
+        "start": 117.019,
+        "duration": 2.04
+    },
+    {
+        "text": "and, and then water would just\ngenerally appear like black.",
+        "start": 120.949,
+        "duration": 2.705
+    },
+    {
+        "text": "And so that can give you a huge\namount of information, but it",
+        "start": 124.804,
+        "duration": 2.82
+    },
+    {
+        "text": "is challenging to work with.",
+        "start": 127.624,
+        "duration": 0.93
+    },
+    {
+        "text": "So you know, for example, the TBP mug,\nas I of saying, this is an image of",
+        "start": 128.554,
+        "duration": 4.17
+    },
+    {
+        "text": "it, and in particular it's an image,\na 2D plane going through the side",
+        "start": 132.724,
+        "duration": 4.95
+    },
+    {
+        "text": "of the mug and side of the handle.",
+        "start": 137.674,
+        "duration": 2.55
+    },
+    {
+        "text": "And so what you're seeing here,\nfor example, this is the top of",
+        "start": 140.824,
+        "duration": 3.0
+    },
+    {
+        "text": "the cross section of the handle.",
+        "start": 143.824,
+        "duration": 1.41
+    },
+    {
+        "text": "If you can imagine, you had a very sharp\nsaw that went straight through here.",
+        "start": 145.504,
+        "duration": 4.29
+    },
+    {
+        "text": "This would be what the top of that would\nlook like, and this would be the top",
+        "start": 150.379,
+        "duration": 3.27
+    },
+    {
+        "text": "of the, side of the mug, but you don't\nnecessarily see everything you would",
+        "start": 153.709,
+        "duration": 5.07
+    },
+    {
+        "text": "expect because, for example, you get\nwhat are called acoustic shadows where",
+        "start": 158.779,
+        "duration": 4.08
+    },
+    {
+        "text": "the sound, cannot continue to propagate.",
+        "start": 162.859,
+        "duration": 2.31
+    },
+    {
+        "text": "And so it's black behind this, edge.",
+        "start": 165.169,
+        "duration": 2.58
+    },
+    {
+        "text": "and you also get lots of artifacts.",
+        "start": 169.369,
+        "duration": 1.8
+    },
+    {
+        "text": "So these can be caused by various\nreasons, if sound wave gets delayed, if",
+        "start": 171.169,
+        "duration": 4.08
+    },
+    {
+        "text": "it gets reflected multiple times, all\nthis kind of stuff, you can basically,",
+        "start": 175.249,
+        "duration": 3.48
+    },
+    {
+        "text": "the image kind of hallucinates, as far\nas the probe is concerned, it thinks",
+        "start": 180.109,
+        "duration": 3.63
+    },
+    {
+        "text": "there's objects out there in the world.",
+        "start": 183.739,
+        "duration": 1.53
+    },
+    {
+        "text": "And so this is, these were some\nof the things we had to, deal with",
+        "start": 185.599,
+        "duration": 3.24
+    },
+    {
+        "text": "when, when interpreting these images.",
+        "start": 188.839,
+        "duration": 2.46
+    },
+    {
+        "text": "Yeah, so it also turned out to be quite\na lot of moving parts to setting this up.",
+        "start": 193.264,
+        "duration": 3.39
+    },
+    {
+        "text": "So I'm just gonna talk you through the\narchitecture diagram really quickly.",
+        "start": 196.654,
+        "duration": 2.82
+    },
+    {
+        "text": "so over on the left we have\nthe ultrasound device to it.",
+        "start": 200.164,
+        "duration": 3.12
+    },
+    {
+        "text": "We strapped an HTC Vive location\ncontroller, with just a piece of Velcro.",
+        "start": 203.284,
+        "duration": 4.86
+    },
+    {
+        "text": "When you click the button on the probe,\nit captures what the probe is currently",
+        "start": 209.264,
+        "duration": 4.08
+    },
+    {
+        "text": "looking at and sends it to Monty with\nsome metadata about the depth, the scale",
+        "start": 213.344,
+        "duration": 4.95
+    },
+    {
+        "text": "that we were looking at on the image.",
+        "start": 218.294,
+        "duration": 1.47
+    },
+    {
+        "text": "At the same time, the HTC vi controller\nis streaming its location to, two.",
+        "start": 220.154,
+        "duration": 6.81
+    },
+    {
+        "text": "Two sensors on the floor, which then send\nthem to, not pictured here because it",
+        "start": 227.324,
+        "duration": 3.36
+    },
+    {
+        "text": "was even more complicated, which is then\nstreamed to the HT V Vive service where",
+        "start": 230.684,
+        "duration": 3.63
+    },
+    {
+        "text": "it stores the current orientation and\nthree dimensional location of the probe.",
+        "start": 234.314,
+        "duration": 3.84
+    },
+    {
+        "text": "as Monty processes it, gets that image and\nthen it asks the VI service for the data.",
+        "start": 239.024,
+        "duration": 5.34
+    },
+    {
+        "text": "And then, it visualizes that over here so\nwe can see what we're actually looking at.",
+        "start": 244.604,
+        "duration": 3.96
+    },
+    {
+        "text": "It will also suggest, where\nyou should move to next.",
+        "start": 249.049,
+        "duration": 3.3
+    },
+    {
+        "text": "So Monty can't move us, but it could\ntell us where the next best view to get",
+        "start": 252.559,
+        "duration": 3.81
+    },
+    {
+        "text": "the next best inference would be from.",
+        "start": 256.369,
+        "duration": 1.62
+    },
+    {
+        "text": "and then also, and visualization\nof, how Monty is doing what",
+        "start": 258.919,
+        "duration": 7.29
+    },
+    {
+        "text": "it's learning as we go.",
+        "start": 266.209,
+        "duration": 0.84
+    },
+    {
+        "text": "And so you'll see all of this in the demo.",
+        "start": 267.079,
+        "duration": 1.32
+    },
+    {
+        "text": "We wanna just give you a quick overview.",
+        "start": 268.399,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah.",
+        "start": 273.034,
+        "duration": 0.39
+    },
+    {
+        "text": "And so one thing just to give\nyou a bit of a sense of, what",
+        "start": 273.424,
+        "duration": 3.69
+    },
+    {
+        "text": "the whole thing looks like.",
+        "start": 277.114,
+        "duration": 0.9
+    },
+    {
+        "text": "So we had what was called a phantom.",
+        "start": 278.014,
+        "duration": 1.89
+    },
+    {
+        "text": "So phantom is when you're\ntesting ultrasound or someone's",
+        "start": 280.114,
+        "duration": 2.97
+    },
+    {
+        "text": "learning how to use ultrasound.",
+        "start": 283.084,
+        "duration": 1.17
+    },
+    {
+        "text": "And so you have an artificial\nstructure, that can be scanned.",
+        "start": 284.254,
+        "duration": 3.51
+    },
+    {
+        "text": "might have an obstetric phantom.",
+        "start": 288.154,
+        "duration": 1.59
+    },
+    {
+        "text": "But since we were dealing with objects\nthat Monte has learned in kind of",
+        "start": 290.359,
+        "duration": 3.63
+    },
+    {
+        "text": "simulation like the YCB objects, we\ncreated this setup with essentially",
+        "start": 293.989,
+        "duration": 3.51
+    },
+    {
+        "text": "a plastic bag filled with water.",
+        "start": 297.499,
+        "duration": 1.47
+    },
+    {
+        "text": "So you don't, you can imagine\nit's something like an amniotic",
+        "start": 298.999,
+        "duration": 1.92
+    },
+    {
+        "text": "sack with objects suspended inside\nof it, and then all of this kind",
+        "start": 300.919,
+        "duration": 4.29
+    },
+    {
+        "text": "of set up with some tripods so\nthat we can, kind move around it.",
+        "start": 305.209,
+        "duration": 3.24
+    },
+    {
+        "text": "And then, oh, sorry.",
+        "start": 308.899,
+        "duration": 1.11
+    },
+    {
+        "text": "We're basically putting the probe on\nthe surface of this, bag with some,",
+        "start": 310.009,
+        "duration": 4.17
+    },
+    {
+        "text": "ultrasound gel, so that it gets a\nconsistent, propagation of the signal.",
+        "start": 314.479,
+        "duration": 5.28
+    },
+    {
+        "text": "and of course the task is to determine\nwhat object is inside the bag.",
+        "start": 321.664,
+        "duration": 3.42
+    },
+    {
+        "text": "and as Will mentioned, we were\ntracking the position of the probe.",
+        "start": 326.584,
+        "duration": 3.57
+    },
+    {
+        "text": "The way we did this was with\nthese, What are called kind of",
+        "start": 330.154,
+        "duration": 3.45
+    },
+    {
+        "text": "base stations, these are actually\ndesigned for virtual reality gaming.",
+        "start": 333.604,
+        "duration": 3.24
+    },
+    {
+        "text": "And so people have already spent a lot of\ntime engineering a good solution to this.",
+        "start": 336.844,
+        "duration": 3.57
+    },
+    {
+        "text": "And basically this tracker, it\nactually is, look, this tracker,",
+        "start": 340.954,
+        "duration": 4.41
+    },
+    {
+        "text": "looks fairly what do you call it?",
+        "start": 345.814,
+        "duration": 2.28
+    },
+    {
+        "text": "Static, like it's not doing much, but\nit's actually looking for, invisible",
+        "start": 348.124,
+        "duration": 4.14
+    },
+    {
+        "text": "lasers that are coming out of these\ntwo base stations on either side of it.",
+        "start": 352.264,
+        "duration": 3.21
+    },
+    {
+        "text": "And that tells where it is, and as\nwell as its orientation in the world.",
+        "start": 355.864,
+        "duration": 4.26
+    },
+    {
+        "text": "and.",
+        "start": 360.514,
+        "duration": 0.001
+    },
+    {
+        "text": "Quite a good amount of, sensitivity.",
+        "start": 360.919,
+        "duration": 2.01
+    },
+    {
+        "text": "so that was really useful for, this task.",
+        "start": 363.799,
+        "duration": 2.7
+    },
+    {
+        "text": "And so after we basically get the\nultrasound images plus the tracking",
+        "start": 367.819,
+        "duration": 5.43
+    },
+    {
+        "text": "data of where the probe is in the\nworld, we now need to extract some",
+        "start": 373.249,
+        "duration": 4.32
+    },
+    {
+        "text": "more information from the image.",
+        "start": 377.569,
+        "duration": 1.62
+    },
+    {
+        "text": "And so this is the processing pipeline.",
+        "start": 379.594,
+        "duration": 2.01
+    },
+    {
+        "text": "First, we have the environment class\nfrom Monty that we customized so",
+        "start": 381.814,
+        "duration": 3.51
+    },
+    {
+        "text": "that it, gets both of these types of\ninformation and synchronizes them.",
+        "start": 385.324,
+        "duration": 4.8
+    },
+    {
+        "text": "then in the data loader, it actually looks\nat the, we look at the full image and",
+        "start": 391.804,
+        "duration": 5.79
+    },
+    {
+        "text": "try to find a small patch in there, which\nshould be on the surface of the object.",
+        "start": 397.594,
+        "duration": 4.41
+    },
+    {
+        "text": "So how we do that is we basically\nstart in the middle, and move downwards",
+        "start": 402.514,
+        "duration": 4.89
+    },
+    {
+        "text": "until we detect a significant edge, and\nthen we extract a patch around that.",
+        "start": 407.494,
+        "duration": 5.16
+    },
+    {
+        "text": "And then from that patch we detect,\nsome point normal and curvature, and",
+        "start": 413.014,
+        "duration": 4.65
+    },
+    {
+        "text": "we combine that information plus the\ndistance from the top to the patch",
+        "start": 417.664,
+        "duration": 5.04
+    },
+    {
+        "text": "plus the tracker post to get a CMP\nmessage to send to the learning module.",
+        "start": 423.004,
+        "duration": 3.9
+    },
+    {
+        "text": "so in the demo you're gonna\nsee this iPhone, iPad app,",
+        "start": 430.084,
+        "duration": 3.27
+    },
+    {
+        "text": "just to orientate each to it.",
+        "start": 433.804,
+        "duration": 1.05
+    },
+    {
+        "text": "So we have, the image here and then we\nhave the depth that we're shooting at",
+        "start": 434.854,
+        "duration": 3.93
+    },
+    {
+        "text": "and the gain is how white this image is.",
+        "start": 438.784,
+        "duration": 1.83
+    },
+    {
+        "text": "and then we have the number of,\nimages we've captured so far.",
+        "start": 441.244,
+        "duration": 3.57
+    },
+    {
+        "text": "It starts at minus two 'cause\nobviously the first two don't count.",
+        "start": 444.814,
+        "duration": 2.28
+    },
+    {
+        "text": "as we all found out.",
+        "start": 447.634,
+        "duration": 0.93
+    },
+    {
+        "text": "and I dunno, like a manual\ncapture button here.",
+        "start": 449.434,
+        "duration": 2.25
+    },
+    {
+        "text": "We are set to the default, type\nof musculoskeletal, which was,",
+        "start": 451.754,
+        "duration": 5.34
+    },
+    {
+        "text": "we found was like the best for\nidentifying the kind of hard objects",
+        "start": 457.094,
+        "duration": 3.36
+    },
+    {
+        "text": "that we have to in, in the demo.",
+        "start": 460.454,
+        "duration": 1.53
+    },
+    {
+        "text": "so that's gone.",
+        "start": 462.554,
+        "duration": 0.39
+    },
+    {
+        "text": "The iPad app, just so you've seen it.",
+        "start": 462.944,
+        "duration": 1.59
+    },
+    {
+        "text": "yeah, so a bit more detail\non extracting the patch.",
+        "start": 467.869,
+        "duration": 2.64
+    },
+    {
+        "text": "So there were several, difficulties.",
+        "start": 470.509,
+        "duration": 2.49
+    },
+    {
+        "text": "so like the acoustic shadows and artifacts\nwere really giving us some trouble.",
+        "start": 473.419,
+        "duration": 4.17
+    },
+    {
+        "text": "for example, sometimes the highest\npeak in the kind of edge detection",
+        "start": 477.799,
+        "duration": 5.07
+    },
+    {
+        "text": "is not actually the object.",
+        "start": 483.259,
+        "duration": 1.71
+    },
+    {
+        "text": "So in this case, we actually\nwant the patch here and not here.",
+        "start": 484.969,
+        "duration": 3.9
+    },
+    {
+        "text": "'cause this is a, an artifact.",
+        "start": 488.929,
+        "duration": 1.77
+    },
+    {
+        "text": "So we had to do quite a bit of\nfiddling to figure out the right",
+        "start": 492.454,
+        "duration": 3.03
+    },
+    {
+        "text": "settings and right kind of algorithm\nto get the patch of the surface.",
+        "start": 495.484,
+        "duration": 4.71
+    },
+    {
+        "text": "And the next, we basically, figure out\na bunch of points on that surface, and",
+        "start": 500.674,
+        "duration": 7.32
+    },
+    {
+        "text": "try to fit a circle through those points.",
+        "start": 507.994,
+        "duration": 2.28
+    },
+    {
+        "text": "And that circle tells us about\nthe curvature at that point.",
+        "start": 510.454,
+        "duration": 3.03
+    },
+    {
+        "text": "and then we also try to estimate a\npoint normal at that center location.",
+        "start": 514.534,
+        "duration": 3.9
+    },
+    {
+        "text": "Which can tell us about\nthe pose of the patch.",
+        "start": 519.064,
+        "duration": 2.19
+    },
+    {
+        "text": "And that also took a bit of fiddling\nbecause, again, there are all",
+        "start": 521.524,
+        "duration": 3.3
+    },
+    {
+        "text": "these little artifacts that, that\nsometimes get these blue dots to",
+        "start": 524.824,
+        "duration": 3.63
+    },
+    {
+        "text": "show up in the wrong locations.",
+        "start": 528.484,
+        "duration": 1.59
+    },
+    {
+        "text": "we had to sometimes limit the\nrange in which we try to fit, the",
+        "start": 530.734,
+        "duration": 5.22
+    },
+    {
+        "text": "circle because, like surfaces,\nlike on the brain are very, bent.",
+        "start": 535.954,
+        "duration": 5.13
+    },
+    {
+        "text": "but yeah, eventually, I think\nnow it works reasonably well.",
+        "start": 542.974,
+        "duration": 2.64
+    },
+    {
+        "text": "And then we have to combine the depth,\nthe sensorimotor and the agent location.",
+        "start": 547.189,
+        "duration": 3.33
+    },
+    {
+        "text": "So if we just look at the agent location,\nso just what the HTC wife returns, we",
+        "start": 550.519,
+        "duration": 4.8
+    },
+    {
+        "text": "basically get the shape of the bag.",
+        "start": 555.319,
+        "duration": 1.83
+    },
+    {
+        "text": "And then after we add the, depth that\nwe extracted from the patch and the.",
+        "start": 557.959,
+        "duration": 6.57
+    },
+    {
+        "text": "Kind of, offset between\nthe probe and the tracker.",
+        "start": 565.444,
+        "duration": 3.66
+    },
+    {
+        "text": "We get more something\nthat's, shaped like a mug.",
+        "start": 569.434,
+        "duration": 2.58
+    },
+    {
+        "text": "if you have seen it many times,\nyou see the mug, but this is",
+        "start": 573.154,
+        "duration": 4.29
+    },
+    {
+        "text": "the first time you see this.",
+        "start": 577.444,
+        "duration": 1.35
+    },
+    {
+        "text": "You might not recognize it.",
+        "start": 578.794,
+        "duration": 1.95
+    },
+    {
+        "text": "it's not a tumor.",
+        "start": 582.244,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 583.079,
+        "duration": 0.29
+    },
+    {
+        "text": "And then.",
+        "start": 584.149,
+        "duration": 0.34
+    },
+    {
+        "text": "Yeah, but it could, it, it could be\na lot of other things besides a mug.",
+        "start": 585.784,
+        "duration": 3.51
+    },
+    {
+        "text": "yeah.",
+        "start": 590.224,
+        "duration": 0.24
+    },
+    {
+        "text": "So if you, visualize it at 3D,\nso you can kinda rotate it.",
+        "start": 590.464,
+        "duration": 4.68
+    },
+    {
+        "text": "You can't see it on the slide, but if you\nrotate it, that this is the body of the",
+        "start": 595.174,
+        "duration": 3.72
+    },
+    {
+        "text": "mug and then down here is the handle, it's\na bit hard to get a good screenshot of it.",
+        "start": 598.894,
+        "duration": 4.83
+    },
+    {
+        "text": "Yeah, it does look like a mug.",
+        "start": 605.839,
+        "duration": 1.59
+    },
+    {
+        "text": "and then we added a bit more, vis live\nvisualization that we can run during an",
+        "start": 608.239,
+        "duration": 4.53
+    },
+    {
+        "text": "experiment so we can see what's going on.",
+        "start": 612.769,
+        "duration": 1.83
+    },
+    {
+        "text": "So we have the input image and\nwe have the extracted patch.",
+        "start": 614.599,
+        "duration": 3.57
+    },
+    {
+        "text": "You see how we fitted a circle\nthrough that patch and, point",
+        "start": 618.169,
+        "duration": 4.05
+    },
+    {
+        "text": "normal there that we extracted.",
+        "start": 622.219,
+        "duration": 1.68
+    },
+    {
+        "text": "Then that gets combined into locations and\norientations in a common reference frame.",
+        "start": 624.529,
+        "duration": 5.43
+    },
+    {
+        "text": "So like relative to the world.",
+        "start": 629.959,
+        "duration": 1.59
+    },
+    {
+        "text": "And over time while we move the probes.",
+        "start": 631.879,
+        "duration": 1.98
+    },
+    {
+        "text": "So each of these blue dots here\nis basically, Neil's moving",
+        "start": 633.859,
+        "duration": 3.33
+    },
+    {
+        "text": "the probe to a new location\nand taking new another picture.",
+        "start": 637.189,
+        "duration": 3.03
+    },
+    {
+        "text": "So over time you have a bunch\nof points and they update our",
+        "start": 640.549,
+        "duration": 4.35
+    },
+    {
+        "text": "hypothesis space and then eventually.",
+        "start": 644.989,
+        "duration": 1.89
+    },
+    {
+        "text": "Like you have a most likely hypothesis\nand a couple of other possible",
+        "start": 647.824,
+        "duration": 3.36
+    },
+    {
+        "text": "objects, and eventually you hopefully\nrecognize the object, which in this",
+        "start": 651.184,
+        "duration": 4.59
+    },
+    {
+        "text": "case we actually did even recognized\nsome symmetry, in the potted meat.",
+        "start": 655.774,
+        "duration": 4.92
+    },
+    {
+        "text": "Can,",
+        "start": 660.694,
+        "duration": 0.42
+    },
+    {
+        "text": "yeah.",
+        "start": 663.364,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 664.639,
+        "duration": 0.18
+    },
+    {
+        "text": "And another thing that we wanted was\nto be able to show to the user, the",
+        "start": 664.819,
+        "duration": 4.77
+    },
+    {
+        "text": "person who's operating this, where\nthe probe is, relative to this bag.",
+        "start": 669.589,
+        "duration": 4.8
+    },
+    {
+        "text": "This that's suspending the objects.",
+        "start": 674.389,
+        "duration": 2.79
+    },
+    {
+        "text": "And the reason we wanna be able to\nshow this is because, as you'll see in",
+        "start": 677.299,
+        "duration": 3.27
+    },
+    {
+        "text": "a moment, we also want to be able to\ndirect the user, where to move the probe.",
+        "start": 680.569,
+        "duration": 4.2
+    },
+    {
+        "text": "And, going into the farther\nfuture, if Monty was ever used.",
+        "start": 684.769,
+        "duration": 4.59
+    },
+    {
+        "text": "You can imagine, someone who isn't,\ndoesn't have a huge amount of training",
+        "start": 689.619,
+        "duration": 4.23
+    },
+    {
+        "text": "in sonography, if they can just figure\nout how to move the probe, and they",
+        "start": 693.849,
+        "duration": 4.26
+    },
+    {
+        "text": "can get some direction about where\nthe probe should move, then that could",
+        "start": 698.109,
+        "duration": 3.09
+    },
+    {
+        "text": "enable them to acquire some quite high\nquality images with guidance from Monty.",
+        "start": 701.199,
+        "duration": 3.69
+    },
+    {
+        "text": "but the first step in, in this is\nactually showing it, okay, where the",
+        "start": 705.669,
+        "duration": 3.06
+    },
+    {
+        "text": "user, where's the probe right now?",
+        "start": 708.729,
+        "duration": 1.47
+    },
+    {
+        "text": "and so that's what you're seeing here,\nhow we have this, visualization of the.",
+        "start": 710.979,
+        "duration": 4.08
+    },
+    {
+        "text": "Kind of bag as this, cereal box,\nwhite rectangle, and then the",
+        "start": 715.369,
+        "duration": 5.31
+    },
+    {
+        "text": "probe as this blue rectangle.",
+        "start": 720.679,
+        "duration": 1.71
+    },
+    {
+        "text": "And, you'll see this kinda live\nsoon, but as the probe moves in",
+        "start": 723.289,
+        "duration": 3.87
+    },
+    {
+        "text": "space, the position of the probe\nin the, visualization gets updated.",
+        "start": 727.159,
+        "duration": 5.34
+    },
+    {
+        "text": "but in addition to this, we can,\noccasionally Monty reaches a state at",
+        "start": 734.539,
+        "duration": 4.62
+    },
+    {
+        "text": "which it, thinks there might be a goal\nstate that if it moved to it could",
+        "start": 739.159,
+        "duration": 4.2
+    },
+    {
+        "text": "reduce uncertainty about what it's seen.",
+        "start": 743.359,
+        "duration": 1.89
+    },
+    {
+        "text": "and this is what we call a goal state.",
+        "start": 746.029,
+        "duration": 1.59
+    },
+    {
+        "text": "And so that's what's, the visualization\nis showing here, is that, at that point,",
+        "start": 747.919,
+        "duration": 4.83
+    },
+    {
+        "text": "this new blue arrow comes in and that's\nbasically telling the user, you should",
+        "start": 752.749,
+        "duration": 4.29
+    },
+    {
+        "text": "move the probe, into this location.",
+        "start": 757.039,
+        "duration": 2.1
+    },
+    {
+        "text": "And basically that blue arrow will\ncontinue to be there until the",
+        "start": 759.469,
+        "duration": 2.94
+    },
+    {
+        "text": "user has, moved the probe there.",
+        "start": 762.409,
+        "duration": 1.92
+    },
+    {
+        "text": "It's still up to the user to\ndecide whether they acquire",
+        "start": 764.629,
+        "duration": 2.46
+    },
+    {
+        "text": "an image there or not.",
+        "start": 767.089,
+        "duration": 1.11
+    },
+    {
+        "text": "Monte doesn't force them to do that,\nbut it's at least giving some kind of",
+        "start": 768.739,
+        "duration": 2.85
+    },
+    {
+        "text": "guidance about where an interesting\nview, of the object might be to",
+        "start": 771.589,
+        "duration": 4.02
+    },
+    {
+        "text": "disambiguate, what's being observed.",
+        "start": 775.639,
+        "duration": 1.68
+    },
+    {
+        "text": "yeah.",
+        "start": 780.454,
+        "duration": 0.24
+    },
+    {
+        "text": "Issues encountered, as Neil's\nalready showed, it's quite hard to",
+        "start": 780.694,
+        "duration": 3.96
+    },
+    {
+        "text": "work with ultrasound data when Will\nand I first got the first images.",
+        "start": 784.654,
+        "duration": 4.59
+    },
+    {
+        "text": "We were not very optimistic about\nthis week, going well for us.",
+        "start": 789.244,
+        "duration": 3.78
+    },
+    {
+        "text": "but with Neil's expertise,\nwe got something working.",
+        "start": 794.104,
+        "duration": 4.2
+    },
+    {
+        "text": "then second one, coordinate transforms are\nwell as usual a huge pain, to figure out.",
+        "start": 799.039,
+        "duration": 6.6
+    },
+    {
+        "text": "yeah, Tristan and Rami you mentioned\nlike having good visualizations",
+        "start": 806.569,
+        "duration": 3.99
+    },
+    {
+        "text": "help but still spend a good amount\nof frustration and time on that.",
+        "start": 810.559,
+        "duration": 3.66
+    },
+    {
+        "text": "And then the data streaming\nwas a bit tedious.",
+        "start": 814.609,
+        "duration": 3.09
+    },
+    {
+        "text": "in the Airbnb.",
+        "start": 818.059,
+        "duration": 1.05
+    },
+    {
+        "text": "The IP addresses would\nrandomly change sometimes and.",
+        "start": 819.109,
+        "duration": 3.21
+    },
+    {
+        "text": "Internet would drop out and\nthings would go to sleep.",
+        "start": 822.844,
+        "duration": 2.73
+    },
+    {
+        "text": "the trackers kept falling\nasleep or batteries dying.",
+        "start": 825.724,
+        "duration": 3.12
+    },
+    {
+        "text": "Yeah.",
+        "start": 828.874,
+        "duration": 0.45
+    },
+    {
+        "text": "Forgot to, so just all the\ncommunication, was a bit shaky",
+        "start": 829.414,
+        "duration": 3.39
+    },
+    {
+        "text": "between the four different components.",
+        "start": 832.804,
+        "duration": 2.25
+    },
+    {
+        "text": "we also tried to do a bit more AI\nassisted coding, which sometimes",
+        "start": 836.434,
+        "duration": 3.96
+    },
+    {
+        "text": "helped to get hacky solutions, but\nalso sometimes really did not help.",
+        "start": 840.394,
+        "duration": 4.65
+    },
+    {
+        "text": "it tried to import a\nmodule called Monty Python.",
+        "start": 845.824,
+        "duration": 2.82
+    },
+    {
+        "text": "And would just hallucinate\nsome funny things.",
+        "start": 849.109,
+        "duration": 3.0
+    },
+    {
+        "text": "not, we could not resist\nthat temptation to eat.",
+        "start": 853.939,
+        "duration": 2.85
+    },
+    {
+        "text": "Some of the dataset",
+        "start": 856.789,
+        "duration": 1.02
+    },
+    {
+        "text": "tried to make a good case for\nwhy it doesn't matter if the",
+        "start": 861.139,
+        "duration": 3.15
+    },
+    {
+        "text": "hot sauce is filled or not.",
+        "start": 864.289,
+        "duration": 1.44
+    },
+    {
+        "text": "So",
+        "start": 865.729,
+        "duration": 0.06
+    },
+    {
+        "text": "it was open.",
+        "start": 868.789,
+        "duration": 0.81
+    },
+    {
+        "text": "Doesn't affect the ultrasound image.",
+        "start": 870.289,
+        "duration": 1.335
+    },
+    {
+        "text": "Yeah.",
+        "start": 871.814,
+        "duration": 0.29
+    },
+    {
+        "text": "We also had a magnitude 6.4, 6.2\nearthquake at 6:00 AM in the morning",
+        "start": 874.954,
+        "duration": 4.41
+    },
+    {
+        "text": "that woke us up And, for a couple\nof hours we were debating whether",
+        "start": 879.364,
+        "duration": 3.6
+    },
+    {
+        "text": "we should go into the mountains\n'cause there might be a tsunami.",
+        "start": 882.964,
+        "duration": 2.94
+    },
+    {
+        "text": "Luckily, there was not.",
+        "start": 886.384,
+        "duration": 1.35
+    },
+    {
+        "text": "and some fa family emergencies\nof, kids falling down the stairs.",
+        "start": 890.194,
+        "duration": 4.44
+    },
+    {
+        "text": "Downstairs.",
+        "start": 894.664,
+        "duration": 0.84
+    },
+    {
+        "text": "Downstairs.",
+        "start": 895.504,
+        "duration": 0.001
+    },
+    {
+        "text": "Oh my, she's got a black eye now.",
+        "start": 895.984,
+        "duration": 3.12
+    },
+    {
+        "text": "Yeah.",
+        "start": 903.814,
+        "duration": 0.45
+    },
+    {
+        "text": "And, I guess there's a lot of kind\nof interesting things you could do in",
+        "start": 904.264,
+        "duration": 3.99
+    },
+    {
+        "text": "the future in terms of shorter term\nthings that we'd love to look into.",
+        "start": 908.254,
+        "duration": 3.99
+    },
+    {
+        "text": "a big thing is, the challenge of\ngetting kind of reliable features",
+        "start": 913.714,
+        "duration": 3.12
+    },
+    {
+        "text": "extracted from those images.",
+        "start": 916.834,
+        "duration": 1.41
+    },
+    {
+        "text": "And as kinda Viviane was alluding to, if\nit picks up on an artifact and it thinks",
+        "start": 918.274,
+        "duration": 4.29
+    },
+    {
+        "text": "that's the edge of the object, then in\ngeneral the representation's totally off.",
+        "start": 922.564,
+        "duration": 4.05
+    },
+    {
+        "text": "and there's a variety of ways\nwe could handle that better.",
+        "start": 927.724,
+        "duration": 2.73
+    },
+    {
+        "text": "One thing we don't have at all is,\nwe're just looking at the ultrasound",
+        "start": 930.949,
+        "duration": 4.23
+    },
+    {
+        "text": "as these kinds of images in 3D\nspace, or, sorry, edges in 3D space.",
+        "start": 935.179,
+        "duration": 4.86
+    },
+    {
+        "text": "And that is important for how\nhumans understand ultrasound",
+        "start": 940.429,
+        "duration": 2.76
+    },
+    {
+        "text": "images, but it's also.",
+        "start": 943.189,
+        "duration": 0.84
+    },
+    {
+        "text": "Only part of it.",
+        "start": 944.614,
+        "duration": 0.78
+    },
+    {
+        "text": "We also look a lot at what is the kind\nof actual texture of what you're seeing.",
+        "start": 945.424,
+        "duration": 3.6
+    },
+    {
+        "text": "whether it's a, lung or gallbladder\nor whatever, all these things",
+        "start": 951.304,
+        "duration": 3.75
+    },
+    {
+        "text": "will look very different.",
+        "start": 955.054,
+        "duration": 0.87
+    },
+    {
+        "text": "and it's true of the objects\nwe were scanning as well,",
+        "start": 956.284,
+        "duration": 2.28
+    },
+    {
+        "text": "but that's not accounted for.",
+        "start": 958.564,
+        "duration": 1.38
+    },
+    {
+        "text": "curvature was something we didn't\nget to being fully integrated.",
+        "start": 960.754,
+        "duration": 3.21
+    },
+    {
+        "text": "We measure it, but it, wasn't in a way\nthat we can compare it to the simulated",
+        "start": 963.964,
+        "duration": 4.62
+    },
+    {
+        "text": "or the, models learned in simulation.",
+        "start": 968.824,
+        "duration": 2.01
+    },
+    {
+        "text": "and then.",
+        "start": 972.514,
+        "duration": 0.87
+    },
+    {
+        "text": "Yeah, we had some ideas for how we could\nmake sure we get this thing called the",
+        "start": 973.674,
+        "duration": 3.78
+    },
+    {
+        "text": "kind of maximum curvature dimension.",
+        "start": 977.454,
+        "duration": 2.19
+    },
+    {
+        "text": "which again was working in principle,\nbut, just needs to be made more robust.",
+        "start": 980.184,
+        "duration": 5.4
+    },
+    {
+        "text": "and then some of the things that we're\nactually working on the research side,",
+        "start": 987.094,
+        "duration": 3.36
+    },
+    {
+        "text": "like for example, Rami's working on\nwith kind of resetting, re-anchoring",
+        "start": 990.454,
+        "duration": 2.4
+    },
+    {
+        "text": "hypotheses, would really help with\nthe kind of robustness of the system.",
+        "start": 992.854,
+        "duration": 4.98
+    },
+    {
+        "text": "So one of the things we're excited about\nis we've collected a lot of the images",
+        "start": 997.834,
+        "duration": 3.6
+    },
+    {
+        "text": "along with the positioning information,\nand save that, which would be the start",
+        "start": 1001.434,
+        "duration": 4.95
+    },
+    {
+        "text": "of a new data set where as Monty improves\non the research side, we can actually",
+        "start": 1006.384,
+        "duration": 4.17
+    },
+    {
+        "text": "rerun it on this kind of real world data\nset, and see how it, how it improves.",
+        "start": 1010.554,
+        "duration": 4.125
+    },
+    {
+        "text": "yeah, it's a tuna.",
+        "start": 1020.919,
+        "duration": 1.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 1022.599,
+        "duration": 0.27
+    },
+    {
+        "text": "But, yeah, there was a\ntuna can in the dataset.",
+        "start": 1023.619,
+        "duration": 2.58
+    },
+    {
+        "text": "that was, I guess one of the things\nwe were practicing on, this is 20,",
+        "start": 1027.969,
+        "duration": 3.87
+    },
+    {
+        "text": "having, you can't see it on the screen,\nbut it's most likely hypothesis is the",
+        "start": 1032.199,
+        "duration": 3.75
+    },
+    {
+        "text": "tuna can, which is what's in the bag.",
+        "start": 1035.949,
+        "duration": 2.82
+    },
+    {
+        "text": "And here you can see on the iPad screen,\nyou see the depth, the ultrasound image.",
+        "start": 1039.819,
+        "duration": 4.5
+    },
+    {
+        "text": "Niels is holding the probe against\nthe bag, and then the data gets",
+        "start": 1044.874,
+        "duration": 3.33
+    },
+    {
+        "text": "streamed to the Windows laptop and\nto the Mac and Monty runs here.",
+        "start": 1048.204,
+        "duration": 4.53
+    },
+    {
+        "text": "So that's the, whole setup plus a\nbucket to collect, water potentially",
+        "start": 1053.184,
+        "duration": 5.46
+    },
+    {
+        "text": "leaking out of this, what's\nactually a urinary catheter bag.",
+        "start": 1058.644,
+        "duration": 4.14
+    },
+    {
+        "text": "So is Monty actually running on the\nWindows machine or on the Mac machine?",
+        "start": 1065.634,
+        "duration": 3.0
+    },
+    {
+        "text": "On the Mac.",
+        "start": 1069.144,
+        "duration": 0.48
+    },
+    {
+        "text": "The windows is only for, so open\nvr, which is what, is used to track",
+        "start": 1070.284,
+        "duration": 4.56
+    },
+    {
+        "text": "the, the, marker, the tracker,\ndoesn't really support, Mac or",
+        "start": 1075.399,
+        "duration": 5.505
+    },
+    {
+        "text": "definitely doesn't support Mac and\ndoesn't really support Linux either.",
+        "start": 1080.904,
+        "duration": 2.67
+    },
+    {
+        "text": "especially like a headless Raspberry\nPi without a GPU and all that stuff.",
+        "start": 1084.504,
+        "duration": 3.81
+    },
+    {
+        "text": "Okay,",
+        "start": 1088.464,
+        "duration": 0.03
+    },
+    {
+        "text": "good.",
+        "start": 1092.969,
+        "duration": 0.29
+    },
+    {
+        "text": "Okay, so how about\nanswering the two questions?",
+        "start": 1094.854,
+        "duration": 3.69
+    },
+    {
+        "text": "can you please how it shows\nMonte's, capabilities is that it's",
+        "start": 1101.409,
+        "duration": 5.34
+    },
+    {
+        "text": "like a, very kinda shape based\napproach to recognizing objects.",
+        "start": 1106.869,
+        "duration": 4.32
+    },
+    {
+        "text": "It's not just like low level\nfeatures that it picks up,",
+        "start": 1111.189,
+        "duration": 2.37
+    },
+    {
+        "text": "which it couldn't do much with.",
+        "start": 1113.709,
+        "duration": 1.77
+    },
+    {
+        "text": "in this ultrasound data, it's\nreally about moving a sensorimotor",
+        "start": 1115.809,
+        "duration": 3.81
+    },
+    {
+        "text": "in space and getting, locations\nrelative to each other in space.",
+        "start": 1119.619,
+        "duration": 3.9
+    },
+    {
+        "text": "Which Monte is uniquely made for.",
+        "start": 1123.924,
+        "duration": 2.34
+    },
+    {
+        "text": "then also this kind of gold\nstate generator that Neil showed",
+        "start": 1127.044,
+        "duration": 2.61
+    },
+    {
+        "text": "with the point that tells the\nuser where to move to the probe.",
+        "start": 1129.654,
+        "duration": 2.88
+    },
+    {
+        "text": "Next is Montes Intelligent Action\nPolicy, where it uses its internal",
+        "start": 1132.534,
+        "duration": 4.47
+    },
+    {
+        "text": "models to tell you which view would\nhelp most recognize the object.",
+        "start": 1137.004,
+        "duration": 6.12
+    },
+    {
+        "text": "So it's not just like a\nrandom policy or like a.",
+        "start": 1143.514,
+        "duration": 2.73
+    },
+    {
+        "text": "Methodical scan as, any current,\nultrasound AI solutions are.",
+        "start": 1146.874,
+        "duration": 4.89
+    },
+    {
+        "text": "but it's like very methodical about\nacquiring the information it needs.",
+        "start": 1152.544,
+        "duration": 3.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 1157.404,
+        "duration": 0.3
+    },
+    {
+        "text": "And, then in terms of the kind of\nthe long-term future applications,",
+        "start": 1157.854,
+        "duration": 3.15
+    },
+    {
+        "text": "so of course it's not ready to be\nused now, with improvements and",
+        "start": 1161.004,
+        "duration": 4.47
+    },
+    {
+        "text": "with improvements to Monty, this\ncould be a huge, help for kind of.",
+        "start": 1165.474,
+        "duration": 4.77
+    },
+    {
+        "text": "Bringing ultrasound to parts of the world\nwhere any kind of me medical imaging",
+        "start": 1170.874,
+        "duration": 4.53
+    },
+    {
+        "text": "is hard to do, ultrasound's amazing\nbecause you can hold it in your hand,",
+        "start": 1175.404,
+        "duration": 2.73
+    },
+    {
+        "text": "you can connect it to a smart device.",
+        "start": 1178.134,
+        "duration": 1.71
+    },
+    {
+        "text": "something you cannot do at all.",
+        "start": 1180.894,
+        "duration": 1.14
+    },
+    {
+        "text": "Of course, with something like a CT\nscanner, an MRI, and it's generally safe.",
+        "start": 1182.034,
+        "duration": 4.41
+    },
+    {
+        "text": "It, there's no eye radiation\nand all these things, so it's an",
+        "start": 1186.444,
+        "duration": 3.481
+    },
+    {
+        "text": "amazing technology in that sense.",
+        "start": 1189.93,
+        "duration": 1.494
+    },
+    {
+        "text": "The real hurdle is that you need\nsomeone who is had years of training",
+        "start": 1191.814,
+        "duration": 4.29
+    },
+    {
+        "text": "to know how to use it and interpret it.",
+        "start": 1196.284,
+        "duration": 1.74
+    },
+    {
+        "text": "and There have been efforts to\nuse kind of current deep learning",
+        "start": 1198.864,
+        "duration": 3.825
+    },
+    {
+        "text": "systems to, help with that, but\nthey require huge amounts of data.",
+        "start": 1202.689,
+        "duration": 3.9
+    },
+    {
+        "text": "They don't have this kind of inherently\nsensorimotor or spatial understanding",
+        "start": 1206.799,
+        "duration": 3.66
+    },
+    {
+        "text": "that enables them to suggest, acquiring\ndata the way we've, shown here.",
+        "start": 1210.489,
+        "duration": 5.49
+    },
+    {
+        "text": "and so yeah, this would basically be\na way to bring, the kinda benefits",
+        "start": 1216.849,
+        "duration": 5.58
+    },
+    {
+        "text": "of ultrasound to, many parts of the\nworld, that currently, don't have it.",
+        "start": 1222.429,
+        "duration": 5.37
+    },
+    {
+        "text": "I would, echo that like the cost\nof the ultrasound was like a",
+        "start": 1229.059,
+        "duration": 4.68
+    },
+    {
+        "text": "thousand dollars for an ultrasound.",
+        "start": 1233.739,
+        "duration": 1.89
+    },
+    {
+        "text": "Cost of training a doctor\nis like $200,000 per year.",
+        "start": 1235.929,
+        "duration": 3.21
+    },
+    {
+        "text": "And then hiring and da,\nThat's a lot of money.",
+        "start": 1239.139,
+        "duration": 2.31
+    },
+    {
+        "text": "And so the, ultrasound device is gonna\nget cheaper and it's very easy to get",
+        "start": 1241.899,
+        "duration": 3.45
+    },
+    {
+        "text": "them out to places where they need them.",
+        "start": 1245.349,
+        "duration": 1.62
+    },
+    {
+        "text": "And I think highlight a point\nthat Neil's made about the lack",
+        "start": 1247.029,
+        "duration": 4.11
+    },
+    {
+        "text": "of training data as well, is that.",
+        "start": 1251.139,
+        "duration": 1.17
+    },
+    {
+        "text": "medical data isn't very available, but\nespecially abnormal medical data where",
+        "start": 1253.404,
+        "duration": 5.07
+    },
+    {
+        "text": "there is a problem, like if there's a\ntumor on the heart, like we don't have",
+        "start": 1258.474,
+        "duration": 2.55
+    },
+    {
+        "text": "any scans of those 'cause they're so\nrare, but you need a device or a system",
+        "start": 1261.024,
+        "duration": 4.44
+    },
+    {
+        "text": "that'll be able to say, Hey, this looks\nlike a heart apart from that bit there.",
+        "start": 1265.464,
+        "duration": 2.94
+    },
+    {
+        "text": "so while we didn't get to that in, in\nour, hackathon, like it was part of the",
+        "start": 1269.094,
+        "duration": 3.54
+    },
+    {
+        "text": "stretch goals and we think it would be\nenormously beneficial for being able to",
+        "start": 1272.634,
+        "duration": 3.36
+    },
+    {
+        "text": "scan a healthy thing and then be able to\ntell the difference between an unhealthy",
+        "start": 1275.994,
+        "duration": 2.91
+    },
+    {
+        "text": "thing without having any additional\ntraining data would be really cool.",
+        "start": 1278.904,
+        "duration": 2.58
+    },
+    {
+        "text": "okay.",
+        "start": 1288.174,
+        "duration": 0.51
+    },
+    {
+        "text": "Does that answer your questions?",
+        "start": 1290.304,
+        "duration": 1.11
+    },
+    {
+        "text": "Yeah, that answer my questions?",
+        "start": 1292.074,
+        "duration": 1.77
+    },
+    {
+        "text": "All right.",
+        "start": 1295.044,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 1296.514,
+        "duration": 0.21
+    },
+    {
+        "text": "Then it's time for demos.",
+        "start": 1296.724,
+        "duration": 1.44
+    },
+    {
+        "text": "should we start and we go\nbackwards in the water or?",
+        "start": 1300.864,
+        "duration": 2.01
+    },
+    {
+        "text": "Sure.",
+        "start": 1302.874,
+        "duration": 0.09
+    },
+    {
+        "text": "Okay.",
+        "start": 1304.404,
+        "duration": 0.27
+    },
+    {
+        "text": "Since we're already on mute, maybe we\ncan show the, the Benny Hill music.",
+        "start": 1304.674,
+        "duration": 3.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 1309.174,
+        "duration": 0.3
+    },
+    {
+        "text": "So I'll show around the setup while\nWill and Niels get everything ready.",
+        "start": 1309.474,
+        "duration": 5.04
+    },
+    {
+        "text": "yeah, here's our, windows laptop that,\ncommunicates with the vibe trackers.",
+        "start": 1316.044,
+        "duration": 6.51
+    },
+    {
+        "text": "The bike trackers are set up down here.",
+        "start": 1323.634,
+        "duration": 2.01
+    },
+    {
+        "text": "There's one I hope you can see, and\nthen there's another one over there.",
+        "start": 1326.364,
+        "duration": 4.23
+    },
+    {
+        "text": "This is just wrapping the\ntracker to the ultrasound device.",
+        "start": 1331.434,
+        "duration": 3.33
+    },
+    {
+        "text": "so you can, this is indicating\nit's on, and then this is,",
+        "start": 1337.224,
+        "duration": 5.58
+    },
+    {
+        "text": "connected to the iPad over here.",
+        "start": 1343.224,
+        "duration": 1.74
+    },
+    {
+        "text": "It's a, it was sufficiently complex\nsetup that we ended up creating like",
+        "start": 1345.444,
+        "duration": 3.6
+    },
+    {
+        "text": "a surgical checklist that we would\ngo through every time to make sure",
+        "start": 1349.044,
+        "duration": 5.07
+    },
+    {
+        "text": "that everything is, is running.",
+        "start": 1354.114,
+        "duration": 1.83
+    },
+    {
+        "text": "because yeah, we also have a few.",
+        "start": 1356.814,
+        "duration": 1.5
+    },
+    {
+        "text": "We have the windows basically\nrunning the server providing",
+        "start": 1359.349,
+        "duration": 3.18
+    },
+    {
+        "text": "the, location information.",
+        "start": 1362.529,
+        "duration": 2.01
+    },
+    {
+        "text": "So yeah, so panel blah, blah, blah.",
+        "start": 1365.349,
+        "duration": 1.71
+    },
+    {
+        "text": "iPad.",
+        "start": 1367.119,
+        "duration": 0.3
+    },
+    {
+        "text": "While we're setting up, Terry,\ndo you have an object that",
+        "start": 1368.199,
+        "duration": 2.58
+    },
+    {
+        "text": "you would like us to test on?",
+        "start": 1370.779,
+        "duration": 1.5
+    },
+    {
+        "text": "Okay, what about first?",
+        "start": 1372.999,
+        "duration": 0.93
+    },
+    {
+        "text": "What are my choices?",
+        "start": 1374.289,
+        "duration": 1.11
+    },
+    {
+        "text": "so we have the TBP mug, we have the tuna.",
+        "start": 1377.259,
+        "duration": 3.03
+    },
+    {
+        "text": "Can we have a mustard bottle?",
+        "start": 1380.289,
+        "duration": 1.77
+    },
+    {
+        "text": "The spam can we have a\npackage of Rat Ramen noodles.",
+        "start": 1382.059,
+        "duration": 3.96
+    },
+    {
+        "text": "We have hot sauce.",
+        "start": 1386.109,
+        "duration": 1.2
+    },
+    {
+        "text": "We have a heart and the little\nmenta brain stress ball.",
+        "start": 1389.139,
+        "duration": 4.95
+    },
+    {
+        "text": "yeah, I think those are the object.",
+        "start": 1397.599,
+        "duration": 2.85
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 1400.449,
+        "duration": 1.95
+    },
+    {
+        "text": "So why don't we,",
+        "start": 1402.399,
+        "duration": 1.32
+    },
+    {
+        "text": "and these are all in your data set sets.",
+        "start": 1406.929,
+        "duration": 1.98
+    },
+    {
+        "text": "You already have these Yes.",
+        "start": 1408.909,
+        "duration": 0.93
+    },
+    {
+        "text": "These are the ones you can use.",
+        "start": 1409.839,
+        "duration": 0.93
+    },
+    {
+        "text": "You would do us a big favor if you\npicked an object that doesn't float.",
+        "start": 1411.324,
+        "duration": 3.27
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 1416.244,
+        "duration": 1.2
+    },
+    {
+        "text": "Okay.",
+        "start": 1417.594,
+        "duration": 0.36
+    },
+    {
+        "text": "the heart probably floats.",
+        "start": 1418.224,
+        "duration": 1.62
+    },
+    {
+        "text": "Yes.",
+        "start": 1420.534,
+        "duration": 0.39
+    },
+    {
+        "text": "The brain probably floats.",
+        "start": 1422.064,
+        "duration": 1.68
+    },
+    {
+        "text": "Yes.",
+        "start": 1423.954,
+        "duration": 0.36
+    },
+    {
+        "text": "does the mustard float a bit?",
+        "start": 1425.454,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah, a little bit.",
+        "start": 1428.094,
+        "duration": 0.57
+    },
+    {
+        "text": "But we can try it.",
+        "start": 1428.964,
+        "duration": 0.93
+    },
+    {
+        "text": "what does, what, let me ask you this.",
+        "start": 1431.514,
+        "duration": 1.98
+    },
+    {
+        "text": "What doesn't flow?",
+        "start": 1433.494,
+        "duration": 1.08
+    },
+    {
+        "text": "The spam?",
+        "start": 1435.774,
+        "duration": 0.48
+    },
+    {
+        "text": "Can the mug, the tuna.",
+        "start": 1436.254,
+        "duration": 2.13
+    },
+    {
+        "text": "Oh yeah, we also have some Issa sauce.",
+        "start": 1440.889,
+        "duration": 2.43
+    },
+    {
+        "text": "Oh,",
+        "start": 1445.354,
+        "duration": 0.22
+    },
+    {
+        "text": "let's go tomato soup.",
+        "start": 1448.989,
+        "duration": 1.35
+    },
+    {
+        "text": "Can,",
+        "start": 1450.339,
+        "duration": 0.39
+    },
+    {
+        "text": "let's go with the tomato soup.",
+        "start": 1452.829,
+        "duration": 1.14
+    },
+    {
+        "text": "Can.",
+        "start": 1453.969,
+        "duration": 0.33
+    },
+    {
+        "text": "All right.",
+        "start": 1454.779,
+        "duration": 0.57
+    },
+    {
+        "text": "We have never tested on that.",
+        "start": 1455.529,
+        "duration": 1.32
+    },
+    {
+        "text": "So let's see.",
+        "start": 1456.849,
+        "duration": 0.87
+    },
+    {
+        "text": "It's, no, I'm just, I was just gonna\nsay the tomato soup can is it doesn't",
+        "start": 1457.929,
+        "duration": 4.92
+    },
+    {
+        "text": "have a distinguishing feature.",
+        "start": 1462.849,
+        "duration": 1.38
+    },
+    {
+        "text": "Oh, that's true.",
+        "start": 1465.129,
+        "duration": 0.69
+    },
+    {
+        "text": "And it looks like the cup.",
+        "start": 1465.819,
+        "duration": 1.05
+    },
+    {
+        "text": "So let's go with something.",
+        "start": 1467.784,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 1468.924,
+        "duration": 0.13
+    },
+    {
+        "text": "the cup has the advantage\nthat has the handle.",
+        "start": 1469.284,
+        "duration": 1.92
+    },
+    {
+        "text": "That kind of, okay.",
+        "start": 1471.294,
+        "duration": 0.6
+    },
+    {
+        "text": "How does the hot sauce float?",
+        "start": 1471.894,
+        "duration": 2.91
+    },
+    {
+        "text": "no, the hot sauce might\nbe a good one actually.",
+        "start": 1476.034,
+        "duration": 1.71
+    },
+    {
+        "text": "Let's do the hot sauce 'cause\nit has a different shape.",
+        "start": 1477.954,
+        "duration": 2.49
+    },
+    {
+        "text": "And how, empty is the sauce?",
+        "start": 1483.894,
+        "duration": 2.1
+    },
+    {
+        "text": "Hot sauce.",
+        "start": 1486.234,
+        "duration": 0.75
+    },
+    {
+        "text": "Nails, no comment.",
+        "start": 1487.074,
+        "duration": 2.82
+    },
+    {
+        "text": "You may need to hold it, but I\nthink that's a good one actually.",
+        "start": 1491.529,
+        "duration": 2.43
+    },
+    {
+        "text": "Let me just fill out water.",
+        "start": 1493.959,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah.",
+        "start": 1495.189,
+        "duration": 0.24
+    },
+    {
+        "text": "Neil said that he wanted to be\nlike a normal person for once and",
+        "start": 1495.429,
+        "duration": 3.27
+    },
+    {
+        "text": "travel without hot sauce, and then\nhe ended up eating our dataset.",
+        "start": 1498.699,
+        "duration": 4.17
+    },
+    {
+        "text": "Not much control there, Neil, but\nI was on holiday for two weeks in",
+        "start": 1507.429,
+        "duration": 5.67
+    },
+    {
+        "text": "America as well, so it was a long\ntime without, America has hot sauce.",
+        "start": 1513.099,
+        "duration": 4.95
+    },
+    {
+        "text": "Everywhere when he told us that\nit doesn't matter for ultrasound,",
+        "start": 1519.039,
+        "duration": 3.54
+    },
+    {
+        "text": "it was a bit like an addict trying\nto convince us that yes, it, yeah,",
+        "start": 1522.579,
+        "duration": 4.5
+    },
+    {
+        "text": "you still have the visualization.",
+        "start": 1527.829,
+        "duration": 1.38
+    },
+    {
+        "text": "so yeah, as things are\nshaping up here, you can see.",
+        "start": 1529.719,
+        "duration": 3.84
+    },
+    {
+        "text": "So while you guys get set up, I\nguess it seems to me all three",
+        "start": 1533.559,
+        "duration": 4.44
+    },
+    {
+        "text": "demo, all three projects are rely\nheavily on networking network.",
+        "start": 1537.999,
+        "duration": 5.1
+    },
+    {
+        "text": "Yeah, I think that's like a\nrobotics inherent kind of problem.",
+        "start": 1544.704,
+        "duration": 4.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 1549.864,
+        "duration": 0.6
+    },
+    {
+        "text": "Okay.",
+        "start": 1550.494,
+        "duration": 0.51
+    },
+    {
+        "text": "Because that kind of eliminates you being\nable to go to different places in the",
+        "start": 1551.304,
+        "duration": 4.05
+    },
+    {
+        "text": "world with your, if you don't have good\nnetwork 'cause of all the data coming in.",
+        "start": 1555.354,
+        "duration": 5.58
+    },
+    {
+        "text": "yeah, if you would Okay.",
+        "start": 1563.214,
+        "duration": 1.65
+    },
+    {
+        "text": "Design like a full\nfledged product solution.",
+        "start": 1564.864,
+        "duration": 2.37
+    },
+    {
+        "text": "I'm sure you could also work with\njust cables to connect stuff.",
+        "start": 1567.234,
+        "duration": 2.82
+    },
+    {
+        "text": "so yeah, this is more like\nthe quick hacky version.",
+        "start": 1571.689,
+        "duration": 3.66
+    },
+    {
+        "text": "Okay.",
+        "start": 1578.139,
+        "duration": 0.3
+    },
+    {
+        "text": "So we're gonna start, inference,\nare you sharing your screen?",
+        "start": 1578.439,
+        "duration": 5.07
+    },
+    {
+        "text": "Yes, I am.",
+        "start": 1583.599,
+        "duration": 0.42
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 1584.319,
+        "duration": 0.48
+    },
+    {
+        "text": "Okay.",
+        "start": 1585.069,
+        "duration": 0.39
+    },
+    {
+        "text": "And then, so did you calibrate the track?",
+        "start": 1585.459,
+        "duration": 2.22
+    },
+    {
+        "text": "Yeah.",
+        "start": 1587.829,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 1588.309,
+        "duration": 0.36
+    },
+    {
+        "text": "We've been through the text.",
+        "start": 1589.719,
+        "duration": 1.08
+    },
+    {
+        "text": "So you'll, right now, you'll be\nseeing the, you can see the probe.",
+        "start": 1591.159,
+        "duration": 4.29
+    },
+    {
+        "text": "Sometimes it gets a bit\nlaggy when we're on Zoom.",
+        "start": 1595.509,
+        "duration": 1.92
+    },
+    {
+        "text": "Unfortunately, there's just.",
+        "start": 1597.429,
+        "duration": 0.665
+    },
+    {
+        "text": "Too many devices running, but\nthe can probe moving relative.",
+        "start": 1598.974,
+        "duration": 3.63
+    },
+    {
+        "text": "And then maybe if you switch\nover will to the other view.",
+        "start": 1602.904,
+        "duration": 2.46
+    },
+    {
+        "text": "What we have here is a view of\ntry and make it full screen.",
+        "start": 1606.474,
+        "duration": 4.74
+    },
+    {
+        "text": "What do you call it?",
+        "start": 1616.434,
+        "duration": 0.75
+    },
+    {
+        "text": "The, yeah, on the top left you see\nthe full ultrasound image, and then",
+        "start": 1617.604,
+        "duration": 3.63
+    },
+    {
+        "text": "next to it you see the extracted patch\nand the features that we extracted,",
+        "start": 1621.234,
+        "duration": 3.78
+    },
+    {
+        "text": "and then to the side of that.",
+        "start": 1625.404,
+        "duration": 1.68
+    },
+    {
+        "text": "You saw, the relative locations\nin the world that it estimated.",
+        "start": 1627.474,
+        "duration": 4.98
+    },
+    {
+        "text": "and then on the bottom row you\ncan see Monty's current hypothesis",
+        "start": 1634.554,
+        "duration": 3.24
+    },
+    {
+        "text": "of what it thinks it is sensing.",
+        "start": 1637.794,
+        "duration": 1.98
+    },
+    {
+        "text": "so they're still, almost all of\nthe objects are still possible,",
+        "start": 1641.694,
+        "duration": 4.32
+    },
+    {
+        "text": "but the most likely hypothesis\nright now is Monte's heart.",
+        "start": 1646.359,
+        "duration": 3.075
+    },
+    {
+        "text": "what did we actually put in change that?",
+        "start": 1650.874,
+        "duration": 1.68
+    },
+    {
+        "text": "The hot sauce.",
+        "start": 1652.794,
+        "duration": 0.24
+    },
+    {
+        "text": "Hot sauce.",
+        "start": 1653.034,
+        "duration": 0.72
+    },
+    {
+        "text": "Okay.",
+        "start": 1654.139,
+        "duration": 0.24
+    },
+    {
+        "text": "So we have, in our kind of experiments\nset up, we have 30 steps to try and,",
+        "start": 1658.749,
+        "duration": 5.07
+    },
+    {
+        "text": "correctly.",
+        "start": 1666.849,
+        "duration": 0.72
+    },
+    {
+        "text": "A, b, c. You have a gold state?",
+        "start": 1668.199,
+        "duration": 1.2
+    },
+    {
+        "text": "Gold state up?",
+        "start": 1669.399,
+        "duration": 0.63
+    },
+    {
+        "text": "Huge.",
+        "start": 1670.029,
+        "duration": 0.33
+    },
+    {
+        "text": "Oh yeah, not yet.",
+        "start": 1670.599,
+        "duration": 1.8
+    },
+    {
+        "text": "Okay.",
+        "start": 1673.329,
+        "duration": 0.15
+    },
+    {
+        "text": "Sorry.",
+        "start": 1673.479,
+        "duration": 0.57
+    },
+    {
+        "text": "the ultrasound just needs a lot of\njelly and fluid to, work properly,",
+        "start": 1674.409,
+        "duration": 6.27
+    },
+    {
+        "text": "any air, and it doesn't say anything.",
+        "start": 1680.679,
+        "duration": 2.07
+    },
+    {
+        "text": "We're not a hundred percent sure\nyet that all of the coordinate",
+        "start": 1683.739,
+        "duration": 2.73
+    },
+    {
+        "text": "transforms are correct.",
+        "start": 1686.469,
+        "duration": 1.29
+    },
+    {
+        "text": "Yeah, there's definitely a, so there\nmight be some room for improvement.",
+        "start": 1687.969,
+        "duration": 3.63
+    },
+    {
+        "text": "can you use Vaseline?",
+        "start": 1694.269,
+        "duration": 1.05
+    },
+    {
+        "text": "Sorry.",
+        "start": 1697.844,
+        "duration": 0.35
+    },
+    {
+        "text": "Sorry.",
+        "start": 1698.289,
+        "duration": 0.45
+    },
+    {
+        "text": "nevermind.",
+        "start": 1700.209,
+        "duration": 0.57
+    },
+    {
+        "text": "What top hypothesis do\nwe have at the moment?",
+        "start": 1705.939,
+        "duration": 1.595
+    },
+    {
+        "text": "Look interesting.",
+        "start": 1708.164,
+        "duration": 1.33
+    },
+    {
+        "text": "That's surprising.",
+        "start": 1712.659,
+        "duration": 0.87
+    },
+    {
+        "text": "Yeah.",
+        "start": 1717.159,
+        "duration": 0.24
+    },
+    {
+        "text": "It probably is the case that\nthe coordinate transforms",
+        "start": 1717.399,
+        "duration": 2.79
+    },
+    {
+        "text": "aren't totally right.",
+        "start": 1720.189,
+        "duration": 0.81
+    },
+    {
+        "text": "'cause this should be doable for Monty.",
+        "start": 1720.999,
+        "duration": 4.44
+    },
+    {
+        "text": "Yeah.",
+        "start": 1725.589,
+        "duration": 0.27
+    },
+    {
+        "text": "we just have a few more,\nlike a few more observations.",
+        "start": 1726.069,
+        "duration": 3.57
+    },
+    {
+        "text": "Oh yeah.",
+        "start": 1729.639,
+        "duration": 1.05
+    },
+    {
+        "text": "Did we show the goal state?",
+        "start": 1730.689,
+        "duration": 0.99
+    },
+    {
+        "text": "Sorry.",
+        "start": 1731.679,
+        "duration": 0.18
+    },
+    {
+        "text": "If you go back,",
+        "start": 1731.859,
+        "duration": 0.72
+    },
+    {
+        "text": "see one.",
+        "start": 1734.649,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 1735.279,
+        "duration": 0.15
+    },
+    {
+        "text": "Okay.",
+        "start": 1735.459,
+        "duration": 0.48
+    },
+    {
+        "text": "Am.",
+        "start": 1736.569,
+        "duration": 0.3
+    },
+    {
+        "text": "Seems like the tracker prob\nis not calibrated, right?",
+        "start": 1738.699,
+        "duration": 3.21
+    },
+    {
+        "text": "It's oh.",
+        "start": 1742.749,
+        "duration": 1.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 1744.609,
+        "duration": 0.24
+    },
+    {
+        "text": "Let's, for what it's worth, that's\njust for the human, it doesn't",
+        "start": 1744.939,
+        "duration": 3.78
+    },
+    {
+        "text": "affect the data collection.",
+        "start": 1748.719,
+        "duration": 1.47
+    },
+    {
+        "text": "No.",
+        "start": 1751.329,
+        "duration": 0.09
+    },
+    {
+        "text": "there is a, suggested pose up here.",
+        "start": 1752.139,
+        "duration": 2.67
+    },
+    {
+        "text": "You wanna have a look at it?",
+        "start": 1754.809,
+        "duration": 0.57
+    },
+    {
+        "text": "Okay.",
+        "start": 1755.439,
+        "duration": 0.24
+    },
+    {
+        "text": "Yeah.",
+        "start": 1755.679,
+        "duration": 0.18
+    },
+    {
+        "text": "If you rotate.",
+        "start": 1755.859,
+        "duration": 0.57
+    },
+    {
+        "text": "yeah, I guess that was before\ncalibrating, so maybe it's, yeah.",
+        "start": 1757.629,
+        "duration": 4.29
+    },
+    {
+        "text": "Really off.",
+        "start": 1762.399,
+        "duration": 0.36
+    },
+    {
+        "text": "But anyways, you can see this.",
+        "start": 1762.759,
+        "duration": 1.32
+    },
+    {
+        "text": "You can see the principles operating as\nwell as the coordinate transforms that",
+        "start": 1766.134,
+        "duration": 3.045
+    },
+    {
+        "text": "are clearly still in need of debugging.",
+        "start": 1769.179,
+        "duration": 3.33
+    },
+    {
+        "text": "how many steps are we on now?",
+        "start": 1773.829,
+        "duration": 1.11
+    },
+    {
+        "text": "Okay, we're all try and be a bit quicker.",
+        "start": 1775.209,
+        "duration": 2.1
+    },
+    {
+        "text": "You can see on the ultrasound image, like\nat the top, these like zebra stripes.",
+        "start": 1780.069,
+        "duration": 4.5
+    },
+    {
+        "text": "that's just one of the kind\nof artifacts that comes in.",
+        "start": 1784.689,
+        "duration": 3.03
+    },
+    {
+        "text": "And",
+        "start": 1787.719,
+        "duration": 0.27
+    },
+    {
+        "text": "we have to are those\nreflections or something.",
+        "start": 1790.929,
+        "duration": 2.73
+    },
+    {
+        "text": "There we go.",
+        "start": 1794.619,
+        "duration": 0.39
+    },
+    {
+        "text": "And we finished.",
+        "start": 1795.009,
+        "duration": 0.63
+    },
+    {
+        "text": "yeah, it's like bouncing back\nand forth and creating like a",
+        "start": 1797.049,
+        "duration": 3.99
+    },
+    {
+        "text": "false image at a certain depth.",
+        "start": 1801.039,
+        "duration": 1.56
+    },
+    {
+        "text": "So what did it categorize?",
+        "start": 1803.979,
+        "duration": 1.32
+    },
+    {
+        "text": "Monte's heart.",
+        "start": 1811.059,
+        "duration": 0.63
+    },
+    {
+        "text": "Auntie's heart.",
+        "start": 1811.929,
+        "duration": 0.425
+    },
+    {
+        "text": "Oh.",
+        "start": 1812.859,
+        "duration": 0.54
+    },
+    {
+        "text": "Oh, that's a shame.",
+        "start": 1813.489,
+        "duration": 0.66
+    },
+    {
+        "text": "Oh, next we can try multiple times, right?",
+        "start": 1815.469,
+        "duration": 3.27
+    },
+    {
+        "text": "We can try another object, but\nmaybe you first demo yours.",
+        "start": 1820.734,
+        "duration": 4.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 1825.119,
+        "duration": 0.26
+    },
+    {
+        "text": "If you also get it wrong,\nthen we can have a tiebreaker.",
+        "start": 1827.544,
+        "duration": 2.505
+    }
+]

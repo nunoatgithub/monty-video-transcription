@@ -1,0 +1,6867 @@
+[
+    {
+        "text": "All right.",
+        "start": 7.49,
+        "duration": 0.75
+    },
+    {
+        "text": "So this is a really high level overview.",
+        "start": 8.36,
+        "duration": 2.97
+    },
+    {
+        "text": "and yeah, as I said, I don't\nhave experience with real robots,",
+        "start": 12.82,
+        "duration": 3.78
+    },
+    {
+        "text": "but only with simulated, robots.",
+        "start": 16.6,
+        "duration": 3.42
+    },
+    {
+        "text": "for that I can reference\nsomewhat papers or work groups",
+        "start": 22.05,
+        "duration": 4.05
+    },
+    {
+        "text": "that work with actual robots.",
+        "start": 26.1,
+        "duration": 1.29
+    },
+    {
+        "text": "But I thought, Since we don't have robots\neither, it's, not that applicable anyways.",
+        "start": 27.39,
+        "duration": 7.025
+    },
+    {
+        "text": "but yeah, if you want me to go into\nmore details on a specific topic,",
+        "start": 36.425,
+        "duration": 3.4
+    },
+    {
+        "text": "I can also do that at a later time.",
+        "start": 39.825,
+        "duration": 2.64
+    },
+    {
+        "text": "So this is really high level.",
+        "start": 42.475,
+        "duration": 2.08
+    },
+    {
+        "text": "okay.",
+        "start": 47.825,
+        "duration": 0.32
+    },
+    {
+        "text": "So just as a short overview, that we're\non the same page with all the terms,",
+        "start": 48.145,
+        "duration": 6.44
+    },
+    {
+        "text": "for sensory motor learning, there's\nan environment and an agent and the",
+        "start": 55.815,
+        "duration": 5.83
+    },
+    {
+        "text": "environment, is in a certain state, which\nthe agent receives and then the agent",
+        "start": 61.665,
+        "duration": 6.065
+    },
+    {
+        "text": "decides on an action and performs this\naction in the environment, which leads",
+        "start": 68.1,
+        "duration": 4.92
+    },
+    {
+        "text": "to a new state, such that there's like a\nclosed loop between action and perception.",
+        "start": 73.07,
+        "duration": 6.2
+    },
+    {
+        "text": "And then the environment can also\nemit rewards, or, punishments.",
+        "start": 80.55,
+        "duration": 5.65
+    },
+    {
+        "text": "depending how you define it, and\nthe agent can use that to learn,",
+        "start": 86.775,
+        "duration": 3.88
+    },
+    {
+        "text": "to perform optimal actions.",
+        "start": 91.525,
+        "duration": 2.82
+    },
+    {
+        "text": "And in many applied situations,\nor in general in the real world,",
+        "start": 95.525,
+        "duration": 5.47
+    },
+    {
+        "text": "you don't have access to the true\nunderlying state of the world.",
+        "start": 101.015,
+        "duration": 3.29
+    },
+    {
+        "text": "But actually just have a partial\nobservation of the world, which may be",
+        "start": 104.79,
+        "duration": 4.78
+    },
+    {
+        "text": "noisy or wrong or missing information.",
+        "start": 109.71,
+        "duration": 2.92
+    },
+    {
+        "text": "so with your eyes, you can only see\nin front of you, not what's the state",
+        "start": 114.56,
+        "duration": 4.23
+    },
+    {
+        "text": "of the room behind you, for instance.",
+        "start": 118.79,
+        "duration": 2.74
+    },
+    {
+        "text": "And this can be described as a Markov\ndecision process, which is defined as",
+        "start": 123.58,
+        "duration": 5.71
+    },
+    {
+        "text": "a set of states, all possible states of\nthe world, a set of actions, a set of all",
+        "start": 130.51,
+        "duration": 7.45
+    },
+    {
+        "text": "the transition probabilities of, going\nfrom state S to state S bar performing",
+        "start": 137.96,
+        "duration": 7.97
+    },
+    {
+        "text": "action A, and then a set of all the\nrewards associated to these, transitions.",
+        "start": 145.931,
+        "duration": 8.769
+    },
+    {
+        "text": "And the goal of optimal control is to find\na good policy pi, which is a function of,",
+        "start": 157.855,
+        "duration": 7.8
+    },
+    {
+        "text": "often it's a probabilistic, so it would be\na probability of action A given state S.",
+        "start": 167.235,
+        "duration": 6.01
+    },
+    {
+        "text": "And this policy should\noptimize the future reward.",
+        "start": 174.135,
+        "duration": 3.72
+    },
+    {
+        "text": "Often people use a discounted return,\nwhich means that Immediate rewards",
+        "start": 179.165,
+        "duration": 7.115
+    },
+    {
+        "text": "are valued higher than, rewards\nset up far delayed into the future.",
+        "start": 186.33,
+        "duration": 5.09
+    },
+    {
+        "text": "Okay, that's the general setup.",
+        "start": 193.25,
+        "duration": 1.72
+    },
+    {
+        "text": "Do you have any questions yet?",
+        "start": 195.8,
+        "duration": 1.95
+    },
+    {
+        "text": "Yeah, one question.",
+        "start": 197.76,
+        "duration": 1.24
+    },
+    {
+        "text": "It seems like this formulation is\nalready limiting what's possible.",
+        "start": 199.08,
+        "duration": 4.28
+    },
+    {
+        "text": "look, the field could, if like\neveryone in the field uses this",
+        "start": 204.575,
+        "duration": 4.6
+    },
+    {
+        "text": "formalism and you're already limiting\nthe types of possible solutions and",
+        "start": 209.175,
+        "duration": 5.52
+    },
+    {
+        "text": "things like that, that you might do.",
+        "start": 214.895,
+        "duration": 1.65
+    },
+    {
+        "text": "What are you thinking\nof when you say that?",
+        "start": 216.775,
+        "duration": 2.4
+    },
+    {
+        "text": "again, I don't know if this is",
+        "start": 221.505,
+        "duration": 1.59
+    },
+    {
+        "text": "So it's a Markov decision process,\nwhich means that you're only",
+        "start": 225.195,
+        "duration": 4.44
+    },
+    {
+        "text": "looking at the current state and\nyou're not considering the set of",
+        "start": 229.635,
+        "duration": 3.56
+    },
+    {
+        "text": "states you were looking at before.",
+        "start": 233.205,
+        "duration": 1.13
+    },
+    {
+        "text": "Yeah.",
+        "start": 235.125,
+        "duration": 0.56
+    },
+    {
+        "text": "you're not, we used to call these high\norder sequences and stuff like that.",
+        "start": 237.195,
+        "duration": 3.47
+    },
+    {
+        "text": "So that's, it's just, okay.",
+        "start": 240.666,
+        "duration": 0.609
+    },
+    {
+        "text": "Markov decision process implies that?",
+        "start": 241.275,
+        "duration": 2.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 245.015,
+        "duration": 0.18
+    },
+    {
+        "text": "Yeah.",
+        "start": 245.295,
+        "duration": 0.47
+    },
+    {
+        "text": "It basically says that Markov property,\nwhich means that the future is independent",
+        "start": 246.055,
+        "duration": 6.39
+    },
+    {
+        "text": "of the past, given the present.",
+        "start": 252.445,
+        "duration": 1.53
+    },
+    {
+        "text": "And there are approaches in RL that\ntry to relax this property since",
+        "start": 256.095,
+        "duration": 5.65
+    },
+    {
+        "text": "it obviously doesn't always apply.",
+        "start": 262.385,
+        "duration": 1.92
+    },
+    {
+        "text": "and also techniques like using\nrecurrency or memory, try to",
+        "start": 265.695,
+        "duration": 6.63
+    },
+    {
+        "text": "relax this property a bit.",
+        "start": 272.795,
+        "duration": 1.6
+    },
+    {
+        "text": "and, there are also other formulations\nlike POMDPs, which are Partially",
+        "start": 275.045,
+        "duration": 4.49
+    },
+    {
+        "text": "Observable Markov Decision\nProcesses, and there are some",
+        "start": 279.535,
+        "duration": 4.91
+    },
+    {
+        "text": "extensions of this out there as well.",
+        "start": 284.445,
+        "duration": 1.87
+    },
+    {
+        "text": "That would be a big\nrestriction, I know that.",
+        "start": 286.985,
+        "duration": 3.79
+    },
+    {
+        "text": "Just listening to it, that would be\na huge dis In some sense, much of the",
+        "start": 290.935,
+        "duration": 3.58
+    },
+    {
+        "text": "state of the world would be hidden from\nyou, much more of the state of the world",
+        "start": 294.515,
+        "duration": 2.82
+    },
+    {
+        "text": "would be hidden, because the past is\nsome sort of a state, or your attentions,",
+        "start": 297.335,
+        "duration": 2.68
+    },
+    {
+        "text": "or what you did is some sort of state\nyou can't even observe, at this point.",
+        "start": 300.015,
+        "duration": 5.78
+    },
+    {
+        "text": "And, that would be very limiting.",
+        "start": 306.005,
+        "duration": 3.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 310.665,
+        "duration": 0.6
+    },
+    {
+        "text": "a common trick, for example, in\nreinforcement learning is that People",
+        "start": 312.675,
+        "duration": 4.42
+    },
+    {
+        "text": "give some of the past observations\nas part of the current state.",
+        "start": 317.095,
+        "duration": 4.29
+    },
+    {
+        "text": "So for example, with Atari, people\noften give the last four frames",
+        "start": 321.385,
+        "duration": 4.42
+    },
+    {
+        "text": "stacked together as the current\nobservation, to go around this a bit.",
+        "start": 326.065,
+        "duration": 6.71
+    },
+    {
+        "text": "Yeah, these are like very very\nanalogous to just sequence learning",
+        "start": 334.07,
+        "duration": 3.78
+    },
+    {
+        "text": "and some of the other stuff, you can\ngive the last few states as input.",
+        "start": 337.85,
+        "duration": 4.3
+    },
+    {
+        "text": "But of course, in long, range\ntemporal dependencies become hard.",
+        "start": 342.61,
+        "duration": 4.61
+    },
+    {
+        "text": "It just explodes in complexity\nas you add more and more.",
+        "start": 347.22,
+        "duration": 4.06
+    },
+    {
+        "text": "time.",
+        "start": 354.665,
+        "duration": 0.23
+    },
+    {
+        "text": "So that is just one of my observations.",
+        "start": 354.895,
+        "duration": 2.57
+    },
+    {
+        "text": "One more,",
+        "start": 357.465,
+        "duration": 0.51
+    },
+    {
+        "text": "just a note to everyone that this\nis, we don't always have to think",
+        "start": 360.525,
+        "duration": 3.8
+    },
+    {
+        "text": "of it this way, but this is just\na common way people look at it.",
+        "start": 364.325,
+        "duration": 4.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 369.305,
+        "duration": 0.55
+    },
+    {
+        "text": "Yeah.",
+        "start": 370.925,
+        "duration": 0.22
+    },
+    {
+        "text": "Yeah.",
+        "start": 372.875,
+        "duration": 0.21
+    },
+    {
+        "text": "Current solutions.",
+        "start": 373.995,
+        "duration": 0.85
+    },
+    {
+        "text": "have broken that Markov\nproperty more often than not.",
+        "start": 375.75,
+        "duration": 3.6
+    },
+    {
+        "text": "And it's very, usual to use things\nlike LSTMs to pre process this",
+        "start": 379.68,
+        "duration": 5.46
+    },
+    {
+        "text": "state and LSTMs will keep a memory.",
+        "start": 385.15,
+        "duration": 2.03
+    },
+    {
+        "text": "So",
+        "start": 388.22,
+        "duration": 0.78
+    },
+    {
+        "text": "it is a restriction of the mathematical\nframework, but I wouldn't say it's a",
+        "start": 391.01,
+        "duration": 3.32
+    },
+    {
+        "text": "restriction of reinforcement learning\nsince most people are going to break",
+        "start": 394.33,
+        "duration": 3.82
+    },
+    {
+        "text": "that in a way or another, even if replay\nbuffers are breaking the property.",
+        "start": 398.17,
+        "duration": 3.53
+    },
+    {
+        "text": "yeah,",
+        "start": 403.945,
+        "duration": 0.43
+    },
+    {
+        "text": "yeah.",
+        "start": 408.295,
+        "duration": 0.22
+    },
+    {
+        "text": "And in general, you usually can\nlearn long term dependencies in",
+        "start": 408.515,
+        "duration": 4.65
+    },
+    {
+        "text": "the value function that is learned.",
+        "start": 413.165,
+        "duration": 2.75
+    },
+    {
+        "text": "So you, after learning, it's not\nlike you always have this extreme",
+        "start": 416.645,
+        "duration": 5.33
+    },
+    {
+        "text": "short term memory and can never\nreally learn long range dependencies.",
+        "start": 421.975,
+        "duration": 3.86
+    },
+    {
+        "text": "It just takes a while to do that.",
+        "start": 425.835,
+        "duration": 1.81
+    },
+    {
+        "text": "because you have to propagate\nthe reward through the whole",
+        "start": 429.755,
+        "duration": 4.09
+    },
+    {
+        "text": "timeline of the value function.",
+        "start": 433.895,
+        "duration": 2.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 437.705,
+        "duration": 0.23
+    },
+    {
+        "text": "One other,",
+        "start": 437.935,
+        "duration": 0.5
+    },
+    {
+        "text": "it's phrased as finding a good action\nbased on the state, but I guess you could",
+        "start": 441.22,
+        "duration": 4.75
+    },
+    {
+        "text": "include the agent state as part of it too.",
+        "start": 445.97,
+        "duration": 2.16
+    },
+    {
+        "text": "What is, here is phrased just as\nthe external state, but there's",
+        "start": 448.72,
+        "duration": 5.09
+    },
+    {
+        "text": "an internal state as well that\nyou could base the action on.",
+        "start": 453.82,
+        "duration": 2.9
+    },
+    {
+        "text": "True.",
+        "start": 457.55,
+        "duration": 0.35
+    },
+    {
+        "text": "Yeah.",
+        "start": 458.07,
+        "duration": 0.38
+    },
+    {
+        "text": "You",
+        "start": 458.611,
+        "duration": 2.739
+    },
+    {
+        "text": "hear the state is coming\nfrom the environment.",
+        "start": 464.01,
+        "duration": 1.59
+    },
+    {
+        "text": "This is literally just\nwhat's on the screen.",
+        "start": 466.08,
+        "duration": 2.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 468.501,
+        "duration": 1.929
+    },
+    {
+        "text": "So the state could include also\nan internal state of the agent.",
+        "start": 473.39,
+        "duration": 4.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 478.84,
+        "duration": 0.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 479.72,
+        "duration": 0.26
+    },
+    {
+        "text": "You don't really see that in this picture.",
+        "start": 479.98,
+        "duration": 3.15
+    },
+    {
+        "text": "Okay.",
+        "start": 485.19,
+        "duration": 0.45
+    },
+    {
+        "text": "then solving these optimal\ncontrol problems, and this is",
+        "start": 487.41,
+        "duration": 3.75
+    },
+    {
+        "text": "a really high level overview.",
+        "start": 491.19,
+        "duration": 1.59
+    },
+    {
+        "text": "So If you want me to go into these\ndetails, it's like an entire textbook.",
+        "start": 492.78,
+        "duration": 5.035
+    },
+    {
+        "text": "yeah, just really roughly, you can divide\nit into value based and policy based",
+        "start": 500.425,
+        "duration": 4.37
+    },
+    {
+        "text": "methods, and also at the intersection,\nthere are methods that use both, like",
+        "start": 505.315,
+        "duration": 5.54
+    },
+    {
+        "text": "actor critic methods, for example.",
+        "start": 510.855,
+        "duration": 1.79
+    },
+    {
+        "text": "And in essence, value based\nmethods, calculate or estimate a",
+        "start": 514.435,
+        "duration": 5.32
+    },
+    {
+        "text": "value function, which is, how good\nis it to be in the current state?",
+        "start": 519.755,
+        "duration": 6.51
+    },
+    {
+        "text": "it's the expected future\nreturn given the current state,",
+        "start": 527.855,
+        "duration": 4.58
+    },
+    {
+        "text": "under the policy of the agent.",
+        "start": 533.635,
+        "duration": 2.41
+    },
+    {
+        "text": "I don't know if you can see my mouse.",
+        "start": 536.445,
+        "duration": 1.56
+    },
+    {
+        "text": "Yeah, okay.",
+        "start": 538.335,
+        "duration": 1.85
+    },
+    {
+        "text": "and then they use this value function\nto define the policy basically.",
+        "start": 541.935,
+        "duration": 3.63
+    },
+    {
+        "text": "if I'm in the current state and then I\nlook at all the states I can reach from",
+        "start": 548.075,
+        "duration": 3.58
+    },
+    {
+        "text": "here, which is the state with the highest\nvalue function that I can reach from",
+        "start": 551.655,
+        "duration": 5.075
+    },
+    {
+        "text": "here, and then I perform this action in\nbetween, and this is then the policy.",
+        "start": 556.73,
+        "duration": 4.29
+    },
+    {
+        "text": "And then in policy based learning,\nthe policy is optimized directly by",
+        "start": 561.82,
+        "duration": 3.75
+    },
+    {
+        "text": "parameterizing it, with parameters\ntheta here, and then performing gradient",
+        "start": 565.95,
+        "duration": 6.33
+    },
+    {
+        "text": "descent on the policy parameters with\nrespect to some, objective function,",
+        "start": 572.28,
+        "duration": 5.8
+    },
+    {
+        "text": "usually also some form of, the reward.",
+        "start": 578.08,
+        "duration": 3.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 584.81,
+        "duration": 0.22
+    },
+    {
+        "text": "So that's the general\ndistinction between the two.",
+        "start": 585.03,
+        "duration": 2.65
+    },
+    {
+        "text": "And then within these, there\nare many more subclasses.",
+        "start": 588.06,
+        "duration": 4.48
+    },
+    {
+        "text": "So value based methods here, I just\ndrew up on, on two, two more dimensions.",
+        "start": 592.54,
+        "duration": 5.43
+    },
+    {
+        "text": "So width of update and depth of update.",
+        "start": 597.97,
+        "duration": 2.37
+    },
+    {
+        "text": "and if you look here on the right\nside of width of updates, so dynamic",
+        "start": 601.31,
+        "duration": 2.89
+    },
+    {
+        "text": "programming and exhaustive search, those\ntwo, require a model of the environment.",
+        "start": 604.21,
+        "duration": 5.72
+    },
+    {
+        "text": "So let's say exhaustive search.",
+        "start": 610.43,
+        "duration": 2.22
+    },
+    {
+        "text": "basically means you go through all\nthe state action transitions until you",
+        "start": 613.98,
+        "duration": 4.1
+    },
+    {
+        "text": "reach a terminal state in every branch,\ncalculate how much reward is accumulated",
+        "start": 618.08,
+        "duration": 5.65
+    },
+    {
+        "text": "over each of these branches, and then\nselect the highest one and perform",
+        "start": 623.73,
+        "duration": 4.75
+    },
+    {
+        "text": "the action that is in the, branch\nwith the highest return in the end.",
+        "start": 628.48,
+        "duration": 4.805
+    },
+    {
+        "text": "And in order to be able to do this\nlook ahead to the terminal state,",
+        "start": 633.855,
+        "duration": 3.67
+    },
+    {
+        "text": "you need to have a model of the world\nof all the transition probabilities.",
+        "start": 637.525,
+        "duration": 4.13
+    },
+    {
+        "text": "And this you, for example, have,",
+        "start": 642.435,
+        "duration": 3.17
+    },
+    {
+        "text": "can have in chess, where the,\nthey are pretty simple rules to",
+        "start": 648.035,
+        "duration": 5.07
+    },
+    {
+        "text": "formalize the states of the world.",
+        "start": 653.105,
+        "duration": 2.47
+    },
+    {
+        "text": "but in a lot of, real world applications,\nyou usually don't have a model of the",
+        "start": 657.775,
+        "duration": 4.63
+    },
+    {
+        "text": "world, but rather learn from experience.",
+        "start": 662.405,
+        "duration": 2.25
+    },
+    {
+        "text": "So from actually going out and\nperforming actions and collecting",
+        "start": 665.235,
+        "duration": 3.86
+    },
+    {
+        "text": "experience, and then you can't go\nthrough all the different options.",
+        "start": 669.095,
+        "duration": 3.57
+    },
+    {
+        "text": "You can just go through one option.",
+        "start": 672.665,
+        "duration": 1.71
+    },
+    {
+        "text": "dynamic programming is a weaker\nversion of exhaustive search where",
+        "start": 676.255,
+        "duration": 3.22
+    },
+    {
+        "text": "you just do a one step look ahead\nfor all the different options.",
+        "start": 679.475,
+        "duration": 3.41
+    },
+    {
+        "text": "And then the experience based\nlearning methods are, for example,",
+        "start": 683.815,
+        "duration": 4.6
+    },
+    {
+        "text": "Monte Carlo methods, where you,\nwhere you do an experience episode",
+        "start": 688.625,
+        "duration": 7.07
+    },
+    {
+        "text": "until you reach a terminal state.",
+        "start": 696.025,
+        "duration": 1.94
+    },
+    {
+        "text": "And then you calculate the returns\nfor all of these, states, and then",
+        "start": 698.865,
+        "duration": 5.36
+    },
+    {
+        "text": "update the values for all the states\nthat you actually saw, but only the",
+        "start": 704.255,
+        "duration": 4.46
+    },
+    {
+        "text": "ones that you actually saw in this\nepisode and not all the possible",
+        "start": 708.715,
+        "duration": 4.42
+    },
+    {
+        "text": "options that would have been there.",
+        "start": 713.135,
+        "duration": 1.49
+    },
+    {
+        "text": "And in TD learning, you actually update\nyour value function after every step.",
+        "start": 715.795,
+        "duration": 5.77
+    },
+    {
+        "text": "So you do one step, you look, okay,\nwhat reward did I expect to get?",
+        "start": 722.065,
+        "duration": 3.73
+    },
+    {
+        "text": "what reward did I actually get?",
+        "start": 726.225,
+        "duration": 1.63
+    },
+    {
+        "text": "and then you calculate the TD error and\nuse this to update the value function.",
+        "start": 728.18,
+        "duration": 6.15
+    },
+    {
+        "text": "And then in between there are different\nother blending methods like TD lambda,",
+        "start": 734.82,
+        "duration": 7.26
+    },
+    {
+        "text": "where you take more than one step but\nless than to the terminal state and you",
+        "start": 742.16,
+        "duration": 6.06
+    },
+    {
+        "text": "can also weigh these states in the value\nfunction update so that The most recent",
+        "start": 748.22,
+        "duration": 5.455
+    },
+    {
+        "text": "states has, have the highest influence\non how the value function gets updated.",
+        "start": 753.705,
+        "duration": 5.3
+    },
+    {
+        "text": "What does TD stand for?",
+        "start": 759.945,
+        "duration": 1.08
+    },
+    {
+        "text": "I'm sorry.",
+        "start": 761.025,
+        "duration": 0.28
+    },
+    {
+        "text": "Temporal difference.",
+        "start": 761.545,
+        "duration": 0.89
+    },
+    {
+        "text": "Temporal.",
+        "start": 762.455,
+        "duration": 0.16
+    },
+    {
+        "text": "I, have a question.",
+        "start": 764.195,
+        "duration": 0.82
+    },
+    {
+        "text": "your description of value based\nwas pretty intuitive as, how good",
+        "start": 765.445,
+        "duration": 3.3
+    },
+    {
+        "text": "it is to be in the current state.",
+        "start": 768.745,
+        "duration": 1.31
+    },
+    {
+        "text": "The policy based one seemed\na little more abstract.",
+        "start": 770.465,
+        "duration": 3.13
+    },
+    {
+        "text": "I was trying to figure out how they\ndiffer in principle and implementation.",
+        "start": 773.595,
+        "duration": 5.43
+    },
+    {
+        "text": "yeah, let me get to the\npolicy based, Oh, okay.",
+        "start": 780.695,
+        "duration": 2.63
+    },
+    {
+        "text": "I'm sorry.",
+        "start": 783.505,
+        "duration": 0.36
+    },
+    {
+        "text": "I'll put it real quick.",
+        "start": 784.095,
+        "duration": 0.48
+    },
+    {
+        "text": "okay, just as a brief mention real quick,\nwhen we go over to deep reinforcement",
+        "start": 785.75,
+        "duration": 4.96
+    },
+    {
+        "text": "learning, it can be applied to these,\nall these different methods, and the",
+        "start": 790.71,
+        "duration": 5.27
+    },
+    {
+        "text": "basic difference is that instead of\nusing a lookup table for values for each",
+        "start": 795.99,
+        "duration": 5.32
+    },
+    {
+        "text": "of the possible states of the world,\nWe now use a function approximator",
+        "start": 801.31,
+        "duration": 4.46
+    },
+    {
+        "text": "and in this case a deep neural\nnetwork as a function approximator,",
+        "start": 805.78,
+        "duration": 3.27
+    },
+    {
+        "text": "which takes the state as an input and\nthen outputs a value of the state.",
+        "start": 810.46,
+        "duration": 4.0
+    },
+    {
+        "text": "And now to the policy based methods,",
+        "start": 816.2,
+        "duration": 3.56
+    },
+    {
+        "text": "this is now also that the policy\ngets parameterized and this can, for",
+        "start": 822.2,
+        "duration": 4.9
+    },
+    {
+        "text": "example, also be a deep neural network,",
+        "start": 827.1,
+        "duration": 2.705
+    },
+    {
+        "text": "or some other, parameters.",
+        "start": 832.885,
+        "duration": 2.46
+    },
+    {
+        "text": "and one classic example for policy based\nlearning is reinforced by Williams.",
+        "start": 837.665,
+        "duration": 6.13
+    },
+    {
+        "text": "and here you basically have this,\ngradient of the current policy.",
+        "start": 845.545,
+        "duration": 7.45
+    },
+    {
+        "text": "which is the eligibility vector\ntogether with the, so, it gets divided",
+        "start": 854.95,
+        "duration": 4.77
+    },
+    {
+        "text": "by the current probability of the\naction, under the policy, which just",
+        "start": 859.75,
+        "duration": 6.08
+    },
+    {
+        "text": "makes sure that, the size of the\nupdate is not dependent on how often",
+        "start": 865.83,
+        "duration": 6.57
+    },
+    {
+        "text": "the action gets picked in general.",
+        "start": 872.42,
+        "duration": 1.84
+    },
+    {
+        "text": "So if it's like a really common\naction, you don't want it to influence.",
+        "start": 874.27,
+        "duration": 2.91
+    },
+    {
+        "text": "how much, you update the parameters,\nand then gets multiplied by the,",
+        "start": 878.08,
+        "duration": 6.51
+    },
+    {
+        "text": "the return that was collected.",
+        "start": 887.03,
+        "duration": 2.62
+    },
+    {
+        "text": "So again, here you collect some\nexperiences in this case, and then you",
+        "start": 889.65,
+        "duration": 4.46
+    },
+    {
+        "text": "calculate the gradient of the policy\nparameters and use that directly.",
+        "start": 894.55,
+        "duration": 7.455
+    },
+    {
+        "text": "So there's no value function that is being\nestimated here, but you just calculate",
+        "start": 902.005,
+        "duration": 5.0
+    },
+    {
+        "text": "the discount counted return, which is\nGT, and which is basically the sum of",
+        "start": 907.085,
+        "duration": 5.87
+    },
+    {
+        "text": "all the rewards that were received.",
+        "start": 912.975,
+        "duration": 1.92
+    },
+    {
+        "text": "Discounted by how far it was\naway from the, time step t.",
+        "start": 916.185,
+        "duration": 6.39
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 925.255,
+        "duration": 1.61
+    },
+    {
+        "text": "so it sounds like the underlying\nmetric here is, rewards rather than,",
+        "start": 928.085,
+        "duration": 4.88
+    },
+    {
+        "text": "value, I'm just trying to tease\napart in my head the difference.",
+        "start": 936.685,
+        "duration": 5.29
+    },
+    {
+        "text": "I understand that you're\nat this optimization.",
+        "start": 941.975,
+        "duration": 3.17
+    },
+    {
+        "text": "And there's some control of how\nthings are updated, but I'm still",
+        "start": 945.86,
+        "duration": 4.62
+    },
+    {
+        "text": "having a hard time, tearing my mind\naway from the notion of how good",
+        "start": 950.48,
+        "duration": 5.75
+    },
+    {
+        "text": "it is to be in a particular state.",
+        "start": 956.23,
+        "duration": 1.94
+    },
+    {
+        "text": "Is it just the horizon it's looking at or,",
+        "start": 958.22,
+        "duration": 2.23
+    },
+    {
+        "text": "trying to understand what a\npolicy would look like rather",
+        "start": 962.77,
+        "duration": 3.5
+    },
+    {
+        "text": "than an abstraction of it.",
+        "start": 966.27,
+        "duration": 1.11
+    },
+    {
+        "text": "Yeah, so in this case, you\ndon't really estimate how good",
+        "start": 968.26,
+        "duration": 4.015
+    },
+    {
+        "text": "it is to be in a certain state.",
+        "start": 972.275,
+        "duration": 1.76
+    },
+    {
+        "text": "But you basically have, this is now\na function and you put in the current",
+        "start": 974.435,
+        "duration": 6.25
+    },
+    {
+        "text": "state and you have the parameters\nand it just outputs you an action.",
+        "start": 980.685,
+        "duration": 3.28
+    },
+    {
+        "text": "You can imagine this as a deep\nneural network, for example,",
+        "start": 983.966,
+        "duration": 3.149
+    },
+    {
+        "text": "and it has some advantages.",
+        "start": 987.535,
+        "duration": 2.25
+    },
+    {
+        "text": "For example, in some cases it can be\nmuch easier to estimate a policy directly",
+        "start": 991.065,
+        "duration": 5.09
+    },
+    {
+        "text": "rather than estimating a value function.",
+        "start": 996.44,
+        "duration": 2.07
+    },
+    {
+        "text": "For example, when you have the game\nBreakout or Pong, you, in order to know",
+        "start": 998.81,
+        "duration": 5.8
+    },
+    {
+        "text": "which way you want to move the paddle,\nit is much easier just to look at, okay,",
+        "start": 1004.62,
+        "duration": 4.31
+    },
+    {
+        "text": "where's the ball right now, and then\nwhich is the state, and then, learn a",
+        "start": 1008.93,
+        "duration": 5.57
+    },
+    {
+        "text": "policy that moves the paddle relative\nto the ball, instead of having to learn,",
+        "start": 1014.5,
+        "duration": 4.17
+    },
+    {
+        "text": "How good is it now to be in this state?",
+        "start": 1019.93,
+        "duration": 2.3
+    },
+    {
+        "text": "And when will I actually be game over\nand what is my high score right now?",
+        "start": 1022.39,
+        "duration": 4.46
+    },
+    {
+        "text": "And then from this\ninfer, infer the, policy.",
+        "start": 1026.85,
+        "duration": 5.7
+    },
+    {
+        "text": "It's possible to do it, but it's more\nstraightforward to do, to optimize,",
+        "start": 1032.71,
+        "duration": 4.12
+    },
+    {
+        "text": "the actions directly instead of\nhaving this value function in between.",
+        "start": 1037.48,
+        "duration": 4.02
+    },
+    {
+        "text": "And also here, you can actually\nlearn a stochastic policy",
+        "start": 1042.36,
+        "duration": 4.12
+    },
+    {
+        "text": "while here it is deterministic.",
+        "start": 1047.07,
+        "duration": 2.47
+    },
+    {
+        "text": "And some, in some cases it can be\nimportant to have a stochastic policy.",
+        "start": 1049.89,
+        "duration": 3.64
+    },
+    {
+        "text": "For example, in games like\npoker or, rock, paper, scissors.",
+        "start": 1053.53,
+        "duration": 4.44
+    },
+    {
+        "text": "if you have a deterministic policy\nthere, it can easily be exploited.",
+        "start": 1059.02,
+        "duration": 4.37
+    },
+    {
+        "text": "It seems like you could do stochastic\nin the value base to the value.",
+        "start": 1063.39,
+        "duration": 5.76
+    },
+    {
+        "text": "It doesn't tell you, you have\nto go to the highest value one.",
+        "start": 1069.17,
+        "duration": 2.88
+    },
+    {
+        "text": "You could just, yeah.",
+        "start": 1072.08,
+        "duration": 2.33
+    },
+    {
+        "text": "You can, add, noise to it, saying,\nokay, with probability, with probability",
+        "start": 1076.175,
+        "duration": 6.92
+    },
+    {
+        "text": "epsilon, I will take just a random\naction instead of taking the best",
+        "start": 1083.115,
+        "duration": 4.43
+    },
+    {
+        "text": "one, according to my value function.",
+        "start": 1087.545,
+        "duration": 2.27
+    },
+    {
+        "text": "And, that is used to have\nalso more exploration.",
+        "start": 1089.815,
+        "duration": 4.57
+    },
+    {
+        "text": "but it doesn't, actually.",
+        "start": 1096.855,
+        "duration": 2.88
+    },
+    {
+        "text": "It can't actually assign\nprobabilities to different actions.",
+        "start": 1099.876,
+        "duration": 4.849
+    },
+    {
+        "text": "It can't be like, okay, these two actions\nare 50 50 and all the other actions",
+        "start": 1105.265,
+        "duration": 3.54
+    },
+    {
+        "text": "are crap and I don't select them ever.",
+        "start": 1108.855,
+        "duration": 2.91
+    },
+    {
+        "text": "something like that can\nonly be modeled by this.",
+        "start": 1113.315,
+        "duration": 2.85
+    },
+    {
+        "text": "so back on the, policy side of things, it\nall, in the examples you cited, it almost",
+        "start": 1118.815,
+        "duration": 6.9
+    },
+    {
+        "text": "sounds like you were learning rules of\nhow to process a particular situation.",
+        "start": 1125.715,
+        "duration": 5.81
+    },
+    {
+        "text": "But you gave the example of Pong.",
+        "start": 1131.655,
+        "duration": 1.77
+    },
+    {
+        "text": "that there is some kind\nof association between,",
+        "start": 1134.965,
+        "duration": 2.44
+    },
+    {
+        "text": "I want to move the paddle relative to\nwhere the ball is or something like that.",
+        "start": 1140.055,
+        "duration": 4.39
+    },
+    {
+        "text": "Is that kind of where\nthe policy is sitting?",
+        "start": 1144.515,
+        "duration": 4.37
+    },
+    {
+        "text": "yeah, pretty much.",
+        "start": 1151.775,
+        "duration": 1.2
+    },
+    {
+        "text": "So it's always difficult to interpret\nif you're working with visual input,",
+        "start": 1153.025,
+        "duration": 6.0
+    },
+    {
+        "text": "but for example, a lot of robotic\nstuff, you just get a few numbers",
+        "start": 1159.055,
+        "duration": 5.935
+    },
+    {
+        "text": "of the angles of the joints, for\nexample, or distance to the ground.",
+        "start": 1165.02,
+        "duration": 4.47
+    },
+    {
+        "text": "And, it learns pretty straightforward\nrules when it needs to increase",
+        "start": 1169.52,
+        "duration": 5.78
+    },
+    {
+        "text": "velocity and when decrease.",
+        "start": 1175.3,
+        "duration": 1.73
+    },
+    {
+        "text": "Okay.",
+        "start": 1179.93,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 1180.36,
+        "duration": 0.39
+    },
+    {
+        "text": "So in some sense, it's a higher thing\nwhere it's trying to learn the operant",
+        "start": 1181.18,
+        "duration": 5.72
+    },
+    {
+        "text": "rules of the situation rather than blindly\nfollowing, not blindly, but, optimizing.",
+        "start": 1186.94,
+        "duration": 6.28
+    },
+    {
+        "text": "saying I happen to hit\nhere and this was good.",
+        "start": 1194.49,
+        "duration": 2.08
+    },
+    {
+        "text": "So let me just remember it as opposed\nto being able to generalize what it",
+        "start": 1196.57,
+        "duration": 3.94
+    },
+    {
+        "text": "looks like with the policy based one.",
+        "start": 1200.68,
+        "duration": 1.65
+    },
+    {
+        "text": "There is the possibility of\nlearning general principles as",
+        "start": 1202.79,
+        "duration": 4.33
+    },
+    {
+        "text": "opposed to the value based one.",
+        "start": 1207.12,
+        "duration": 1.79
+    },
+    {
+        "text": "It sounds like, it's trying to\nbecome an expert at doing something.",
+        "start": 1209.28,
+        "duration": 3.72
+    },
+    {
+        "text": "Yeah,",
+        "start": 1217.265,
+        "duration": 0.31
+    },
+    {
+        "text": "in, in, both of them can generalize\nif you use function approximators.",
+        "start": 1220.385,
+        "duration": 4.17
+    },
+    {
+        "text": "deep learning, for example, or\nother functional approximators.",
+        "start": 1229.025,
+        "duration": 3.06
+    },
+    {
+        "text": "But if, you use, for example, lookup\ntables, like these methods were,",
+        "start": 1232.125,
+        "duration": 5.2
+    },
+    {
+        "text": "were originally developed, you can't\nreally generalize to unseen states.",
+        "start": 1238.005,
+        "duration": 4.56
+    },
+    {
+        "text": "Okay.",
+        "start": 1244.365,
+        "duration": 0.34
+    },
+    {
+        "text": "Thank you.",
+        "start": 1245.015,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 1250.725,
+        "duration": 0.24
+    },
+    {
+        "text": "And then the, last one I talk\nabout is the actor critic, which",
+        "start": 1250.975,
+        "duration": 4.66
+    },
+    {
+        "text": "has a little bit in between.",
+        "start": 1255.635,
+        "duration": 1.77
+    },
+    {
+        "text": "both.",
+        "start": 1257.805,
+        "duration": 0.47
+    },
+    {
+        "text": "So there's an actor and a critic, and the\ncritic is using value based learning, so",
+        "start": 1258.475,
+        "duration": 8.03
+    },
+    {
+        "text": "it gets the state from the environment\nand produces a value estimate, using",
+        "start": 1266.505,
+        "duration": 6.76
+    },
+    {
+        "text": "parameters w for example, and then\nthe value estimate is compared with",
+        "start": 1273.265,
+        "duration": 5.46
+    },
+    {
+        "text": "the reward that is actually received.",
+        "start": 1278.775,
+        "duration": 2.27
+    },
+    {
+        "text": "And, the TD error is calculated.",
+        "start": 1281.41,
+        "duration": 2.62
+    },
+    {
+        "text": "and the critic then tries\nto minimize this TD error.",
+        "start": 1285.41,
+        "duration": 3.17
+    },
+    {
+        "text": "So it tries to make as good\npredictions of the reward as possible.",
+        "start": 1288.61,
+        "duration": 4.64
+    },
+    {
+        "text": "And the actor also\nreceives the status input.",
+        "start": 1293.96,
+        "duration": 2.88
+    },
+    {
+        "text": "it also has parameters, but it\nproduces actions as output and uses,",
+        "start": 1297.61,
+        "duration": 6.44
+    },
+    {
+        "text": "policy based learning to update.",
+        "start": 1304.47,
+        "duration": 2.07
+    },
+    {
+        "text": "The policy to produce the actions,\nand it actually tries to maximize the",
+        "start": 1307.37,
+        "duration": 6.15
+    },
+    {
+        "text": "TD error because it wants to produce\nactions that lead to states that",
+        "start": 1313.52,
+        "duration": 6.82
+    },
+    {
+        "text": "were better than it was expected.",
+        "start": 1320.35,
+        "duration": 1.92
+    },
+    {
+        "text": "But in this way, it looks like the\ncritic doesn't impact anything.",
+        "start": 1325.29,
+        "duration": 3.65
+    },
+    {
+        "text": "Does it impact the actor at all?",
+        "start": 1329.69,
+        "duration": 2.05
+    },
+    {
+        "text": "Or the actor uses, because the actor\nis not using the value function.",
+        "start": 1332.07,
+        "duration": 3.6
+    },
+    {
+        "text": "Yeah, because of the value\nestimate that it produces.",
+        "start": 1336.41,
+        "duration": 2.92
+    },
+    {
+        "text": "So the actor needs to use\nactions that are better than",
+        "start": 1341.39,
+        "duration": 3.62
+    },
+    {
+        "text": "the critic expected them to be.",
+        "start": 1345.19,
+        "duration": 1.74
+    },
+    {
+        "text": "okay.",
+        "start": 1347.85,
+        "duration": 0.23
+    },
+    {
+        "text": "And for example, PPO, which was a\nreally popular method, falls into",
+        "start": 1351.24,
+        "duration": 5.365
+    },
+    {
+        "text": "this category and also A2C, A3C,",
+        "start": 1356.605,
+        "duration": 3.44
+    },
+    {
+        "text": "trust region optimization,\npolicy optimization.",
+        "start": 1362.995,
+        "duration": 3.72
+    },
+    {
+        "text": "So a lot of the state of the art methods\nat the moment are in this category.",
+        "start": 1366.845,
+        "duration": 5.76
+    },
+    {
+        "text": "And then just to mention, there are also\nsome other methods, especially for if you",
+        "start": 1377.455,
+        "duration": 4.11
+    },
+    {
+        "text": "have an offline learning situation where\nthe data is not generated by an agent,",
+        "start": 1381.585,
+        "duration": 5.89
+    },
+    {
+        "text": "but it was already collected before.",
+        "start": 1387.485,
+        "duration": 2.28
+    },
+    {
+        "text": "for example, by a human, or if you\ndon't have a lot of data in general,",
+        "start": 1390.45,
+        "duration": 4.53
+    },
+    {
+        "text": "there's imitation learning, or we\nlike behavioral cloning, and then also",
+        "start": 1395.65,
+        "duration": 5.37
+    },
+    {
+        "text": "inverse reinforcement learning, where\nyou try to infer the reward function",
+        "start": 1401.03,
+        "duration": 5.37
+    },
+    {
+        "text": "from, state and action, examples.",
+        "start": 1406.81,
+        "duration": 3.297
+    },
+    {
+        "text": "Okay, that was the really rough overview.",
+        "start": 1410.107,
+        "duration": 3.052
+    },
+    {
+        "text": "Are there any more questions?",
+        "start": 1413.159,
+        "duration": 2.18
+    },
+    {
+        "text": "No, that was very clear.",
+        "start": 1415.339,
+        "duration": 2.18
+    },
+    {
+        "text": "Thanks.",
+        "start": 1417.519,
+        "duration": 0.436
+    },
+    {
+        "text": "Yeah, if you like more information I've\nmade like a little reinforcement and",
+        "start": 1425.135,
+        "duration": 5.44
+    },
+    {
+        "text": "crash course at the beginning of this\nyear and it's on YouTube if you want",
+        "start": 1430.575,
+        "duration": 2.98
+    },
+    {
+        "text": "to watch anything in detail and I also\nhave a short chapter on that and my",
+        "start": 1433.555,
+        "duration": 5.51
+    },
+    {
+        "text": "thesis that I posted in a slack channel.",
+        "start": 1439.065,
+        "duration": 3.0
+    },
+    {
+        "text": "Okay, now to the challenges.",
+        "start": 1444.345,
+        "duration": 1.36
+    },
+    {
+        "text": "So this list is not exhaustive, but\nsome of the bigger ones are in here.",
+        "start": 1447.915,
+        "duration": 4.27
+    },
+    {
+        "text": "And the first paper here,\nhow to train your robot with",
+        "start": 1452.685,
+        "duration": 2.86
+    },
+    {
+        "text": "deep reinforcement learning.",
+        "start": 1455.545,
+        "duration": 1.27
+    },
+    {
+        "text": "I would recommend if you want to\nread up a bit more on challenges",
+        "start": 1458.235,
+        "duration": 4.44
+    },
+    {
+        "text": "with actual real life robots.",
+        "start": 1462.715,
+        "duration": 2.26
+    },
+    {
+        "text": "And then there's one blog post.",
+        "start": 1465.865,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah, it's not a paper, it's a blog\npost, but it's still pretty well cited",
+        "start": 1468.745,
+        "duration": 4.64
+    },
+    {
+        "text": "for a blog post and it's, I think\nit's really well written and fun to",
+        "start": 1473.385,
+        "duration": 5.74
+    },
+    {
+        "text": "read, and there are still discussion\nabout it on Reddit and saying all the",
+        "start": 1479.125,
+        "duration": 6.01
+    },
+    {
+        "text": "critiques raised are still valid in 2021.",
+        "start": 1485.135,
+        "duration": 3.34
+    },
+    {
+        "text": "Things are incrementally getting\nbetter, but I would say that no",
+        "start": 1489.27,
+        "duration": 2.78
+    },
+    {
+        "text": "serious breakthrough happened.",
+        "start": 1492.07,
+        "duration": 1.09
+    },
+    {
+        "text": "Challenging fields like\nrobotics manipulation are still",
+        "start": 1493.47,
+        "duration": 2.63
+    },
+    {
+        "text": "far from being satisfactory.",
+        "start": 1496.22,
+        "duration": 1.61
+    },
+    {
+        "text": "Are these part of the blog post?",
+        "start": 1501.69,
+        "duration": 1.48
+    },
+    {
+        "text": "No, that's a part of Reddit\nthread about the blog post.",
+        "start": 1504.27,
+        "duration": 4.74
+    },
+    {
+        "text": "Just that it's still being discussed\nand still seems prevalent, most of the",
+        "start": 1510.59,
+        "duration": 4.22
+    },
+    {
+        "text": "issues that are talked about in there.",
+        "start": 1514.81,
+        "duration": 1.78
+    },
+    {
+        "text": "Vivian, who wrote the blog post?",
+        "start": 1518.52,
+        "duration": 1.49
+    },
+    {
+        "text": "Alex Yopam?",
+        "start": 1521.55,
+        "duration": 1.07
+    },
+    {
+        "text": "I can share the link.",
+        "start": 1528.3,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah, we just share the\nlink and that in slack.",
+        "start": 1529.59,
+        "duration": 1.76
+    },
+    {
+        "text": "Yeah, I can do that.",
+        "start": 1531.96,
+        "duration": 1.13
+    },
+    {
+        "text": "Okay, and then, just to start it\noff, one quote from Andrej Karpathy.",
+        "start": 1536.22,
+        "duration": 4.84
+    },
+    {
+        "text": "I think he's Head of AI\nresearch at Tesla right now.",
+        "start": 1541.06,
+        "duration": 3.805
+    },
+    {
+        "text": "Not sure.",
+        "start": 1545.195,
+        "duration": 0.48
+    },
+    {
+        "text": "supervised learning wants to work.",
+        "start": 1547.155,
+        "duration": 1.83
+    },
+    {
+        "text": "Even if you screw something up, you'll\nusually get something non random back.",
+        "start": 1549.335,
+        "duration": 3.7
+    },
+    {
+        "text": "Reinforcement learning\nmust be forced to work.",
+        "start": 1553.545,
+        "duration": 2.1
+    },
+    {
+        "text": "If you screw something up or don't\ntune something well enough, you're",
+        "start": 1555.655,
+        "duration": 2.94
+    },
+    {
+        "text": "exceedingly likely to get a policy\nthat is even worse than random.",
+        "start": 1558.595,
+        "duration": 3.21
+    },
+    {
+        "text": "And even if it's all well tuned,\nyou'll get a bad policy 30",
+        "start": 1562.495,
+        "duration": 3.21
+    },
+    {
+        "text": "percent of the time just because.",
+        "start": 1565.705,
+        "duration": 1.77
+    },
+    {
+        "text": "And I made a pretty similar\nexperience with that,",
+        "start": 1568.82,
+        "duration": 2.6
+    },
+    {
+        "text": "over the past years.",
+        "start": 1573.82,
+        "duration": 1.05
+    },
+    {
+        "text": "Sounds like our experiments.",
+        "start": 1575.96,
+        "duration": 1.03
+    },
+    {
+        "text": "Yes.",
+        "start": 1577.82,
+        "duration": 0.3
+    },
+    {
+        "text": "I'm trying, can we go back to that?",
+        "start": 1579.12,
+        "duration": 1.6
+    },
+    {
+        "text": "I'm just trying to parse that a bit.",
+        "start": 1580.72,
+        "duration": 1.22
+    },
+    {
+        "text": "I'm just trying to say, why would\nsupervised learning be like that?",
+        "start": 1581.98,
+        "duration": 3.55
+    },
+    {
+        "text": "And why would reinforcement\nlearning be like that?",
+        "start": 1585.53,
+        "duration": 1.85
+    },
+    {
+        "text": "I don't, I'm surprised to read this.",
+        "start": 1588.47,
+        "duration": 1.86
+    },
+    {
+        "text": "So I guess.",
+        "start": 1590.34,
+        "duration": 0.69
+    },
+    {
+        "text": "I don't have an intuition\nwhy that's the case.",
+        "start": 1591.345,
+        "duration": 2.387
+    },
+    {
+        "text": "Is there an intuition for it?",
+        "start": 1593.732,
+        "duration": 1.413
+    },
+    {
+        "text": "I will go over some more in the\nchallenges, but one basic problem,",
+        "start": 1595.146,
+        "duration": 7.099
+    },
+    {
+        "text": "for example, is in reinforcement\nlearning, you don't get the true label.",
+        "start": 1602.385,
+        "duration": 3.79
+    },
+    {
+        "text": "So supervised learning, it tells you\nwhat would have been the correct answer.",
+        "start": 1606.185,
+        "duration": 3.75
+    },
+    {
+        "text": "But in reinforcement learning, it doesn't\nsay you should have performed this action.",
+        "start": 1610.345,
+        "duration": 3.75
+    },
+    {
+        "text": "It doesn't even tell you if the\naction you performed was good or bad.",
+        "start": 1614.725,
+        "duration": 3.91
+    },
+    {
+        "text": "you might just get a reward after a\nthousand more steps because you reach",
+        "start": 1618.99,
+        "duration": 3.81
+    },
+    {
+        "text": "the goal but you don't really know.",
+        "start": 1622.86,
+        "duration": 1.49
+    },
+    {
+        "text": "But isn't that just restating the\ndifference between them as opposed to",
+        "start": 1624.42,
+        "duration": 3.21
+    },
+    {
+        "text": "why one just makes it so much harder\nand you can just focus on the wrong",
+        "start": 1627.64,
+        "duration": 5.06
+    },
+    {
+        "text": "things and not and do much worse\nthan random reinforcement learning.",
+        "start": 1632.72,
+        "duration": 4.11
+    },
+    {
+        "text": "I mean up front would\nyou have expected that?",
+        "start": 1638.18,
+        "duration": 2.295
+    },
+    {
+        "text": "I mean that I guess that's\nthe question when I've been.",
+        "start": 1640.475,
+        "duration": 2.645
+    },
+    {
+        "text": "I think so I think people\nTech TV learning was done.",
+        "start": 1643.28,
+        "duration": 3.93
+    },
+    {
+        "text": "I don't know, 70s or 80s by\nSutton and Bartow talked about",
+        "start": 1647.311,
+        "duration": 3.179
+    },
+    {
+        "text": "this stuff even back then.",
+        "start": 1650.49,
+        "duration": 1.19
+    },
+    {
+        "text": "And another, I think another big challenge\nis that in supervised learning, at least",
+        "start": 1652.36,
+        "duration": 5.27
+    },
+    {
+        "text": "typically the, whole data set is fixed.",
+        "start": 1657.64,
+        "duration": 2.25
+    },
+    {
+        "text": "whereas in reinforcement learning,\nas you're changing yourself,",
+        "start": 1660.84,
+        "duration": 3.22
+    },
+    {
+        "text": "you take different actions.",
+        "start": 1664.54,
+        "duration": 1.13
+    },
+    {
+        "text": "And so the training data itself\nchanges based on how you do it.",
+        "start": 1666.17,
+        "duration": 3.6
+    },
+    {
+        "text": "So there's this double loop, which\nmakes it even more complicated.",
+        "start": 1669.78,
+        "duration": 3.79
+    },
+    {
+        "text": "So those like I don't, you\ndon't generally hear this.",
+        "start": 1673.571,
+        "duration": 3.569
+    },
+    {
+        "text": "This is a critique of\nreinforcement learning.",
+        "start": 1677.515,
+        "duration": 2.53
+    },
+    {
+        "text": "it's reinforcement learning is all\nyou need, that kind of stuff, right?",
+        "start": 1680.845,
+        "duration": 3.03
+    },
+    {
+        "text": "it just jumped out at me, really?",
+        "start": 1685.515,
+        "duration": 2.22
+    },
+    {
+        "text": "Is this how everyone thinks?",
+        "start": 1688.065,
+        "duration": 1.39
+    },
+    {
+        "text": "Most people don't think this way.",
+        "start": 1689.935,
+        "duration": 1.23
+    },
+    {
+        "text": "It sounds very much like how humans go on.",
+        "start": 1691.885,
+        "duration": 1.89
+    },
+    {
+        "text": "Yeah, you can get rewarded for the\nwrong thing and you go down the path",
+        "start": 1694.78,
+        "duration": 3.6
+    },
+    {
+        "text": "and continue to get that reward.",
+        "start": 1698.49,
+        "duration": 2.06
+    },
+    {
+        "text": "But you generally don't\nscrew up worse than random.",
+        "start": 1700.74,
+        "duration": 2.67
+    },
+    {
+        "text": "it's",
+        "start": 1704.75,
+        "duration": 0.12
+    },
+    {
+        "text": "Anyway,",
+        "start": 1707.35,
+        "duration": 0.19
+    },
+    {
+        "text": "I have the impression, maybe it's just\na very, uninformed impression, that",
+        "start": 1711.89,
+        "duration": 3.24
+    },
+    {
+        "text": "reinforcement learning is through this,\nthis, gold standard of techniques.",
+        "start": 1715.13,
+        "duration": 4.08
+    },
+    {
+        "text": "And this says, oh no, this is terrible.",
+        "start": 1719.88,
+        "duration": 1.63
+    },
+    {
+        "text": "Yeah, so it's yeah, reinforcement\nlearning has also a lot of advantages",
+        "start": 1721.78,
+        "duration": 6.95
+    },
+    {
+        "text": "and a lot of unique applications.",
+        "start": 1728.76,
+        "duration": 1.85
+    },
+    {
+        "text": "So for example, for reinforcement\nlearning, you don't need",
+        "start": 1731.04,
+        "duration": 2.49
+    },
+    {
+        "text": "a huge label data set,",
+        "start": 1733.53,
+        "duration": 1.42
+    },
+    {
+        "text": "interacting, and usually you just\nneed to define a reward function,",
+        "start": 1738.02,
+        "duration": 3.67
+    },
+    {
+        "text": "which may be a lot easier than\nlabeling a big data set, for example.",
+        "start": 1742.55,
+        "duration": 4.55
+    },
+    {
+        "text": "Yeah, but this all\nimplies it doesn't work.",
+        "start": 1747.675,
+        "duration": 1.97
+    },
+    {
+        "text": "So what's the advantage of\nsomething that, you know?",
+        "start": 1749.985,
+        "duration": 3.15
+    },
+    {
+        "text": "it just says you have to work,\nyou have to work hard at it.",
+        "start": 1753.235,
+        "duration": 3.17
+    },
+    {
+        "text": "So someone like DeepMind can do it\nbecause they have tons of resources, but",
+        "start": 1756.425,
+        "duration": 4.0
+    },
+    {
+        "text": "a random lab might have trouble with it.",
+        "start": 1760.655,
+        "duration": 1.92
+    },
+    {
+        "text": "Okay.",
+        "start": 1762.675,
+        "duration": 0.43
+    },
+    {
+        "text": "Interesting.",
+        "start": 1763.475,
+        "duration": 0.46
+    },
+    {
+        "text": "It's a very interesting statement.",
+        "start": 1764.085,
+        "duration": 2.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 1767.925,
+        "duration": 0.29
+    },
+    {
+        "text": "And also why there are few\napplications out in the world.",
+        "start": 1768.705,
+        "duration": 2.72
+    },
+    {
+        "text": "Right now it's really, hard to\ndeploy a system that doesn't.",
+        "start": 1771.975,
+        "duration": 3.58
+    },
+    {
+        "text": "I didn't catch all of that.",
+        "start": 1777.735,
+        "duration": 1.25
+    },
+    {
+        "text": "Lucas, you said now it's really hard to\ndeploy a reinforcement learning system.",
+        "start": 1779.32,
+        "duration": 3.39
+    },
+    {
+        "text": "So there are a few applications.",
+        "start": 1783.24,
+        "duration": 1.13
+    },
+    {
+        "text": "So there are a few applications.",
+        "start": 1784.38,
+        "duration": 1.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 1786.23,
+        "duration": 0.31
+    },
+    {
+        "text": "Okay, I didn't know that.",
+        "start": 1788.13,
+        "duration": 1.28
+    },
+    {
+        "text": "I think the nuance of the last sentence,\nat least for me, is that it's, less",
+        "start": 1791.29,
+        "duration": 4.6
+    },
+    {
+        "text": "about you training a bad policy that\nends up being very bad at the end.",
+        "start": 1795.89,
+        "duration": 4.11
+    },
+    {
+        "text": "It's that the system that you train\nhas no idea where it went wrong.",
+        "start": 1800.34,
+        "duration": 3.48
+    },
+    {
+        "text": "I think Vivian will probably get into\nthe credit assignment problem later.",
+        "start": 1804.67,
+        "duration": 3.2
+    },
+    {
+        "text": "we have really no idea how to fix it.",
+        "start": 1808.56,
+        "duration": 1.43
+    },
+    {
+        "text": "You don't know where you want to go.",
+        "start": 1810.136,
+        "duration": 1.959
+    },
+    {
+        "text": "Okay.",
+        "start": 1812.335,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 1813.575,
+        "duration": 0.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 1814.065,
+        "duration": 0.22
+    },
+    {
+        "text": "I can, I would get into a lot of\nthese things, show some examples.",
+        "start": 1814.285,
+        "duration": 4.8
+    },
+    {
+        "text": "yeah, just as a short overview\nof some of the bigger challenges,",
+        "start": 1822.565,
+        "duration": 4.05
+    },
+    {
+        "text": "there's a sample inefficiency and\na Subutai mentioned learning from",
+        "start": 1826.815,
+        "duration": 5.19
+    },
+    {
+        "text": "dynamically changing non IID data,\nreproducibility and hyper parameters.",
+        "start": 1832.005,
+        "duration": 7.18
+    },
+    {
+        "text": "specifying a reward function,\na credit assignment problem.",
+        "start": 1839.77,
+        "duration": 4.25
+    },
+    {
+        "text": "So where did I actually go wrong?",
+        "start": 1844.05,
+        "duration": 2.12
+    },
+    {
+        "text": "Which action actually\ncontributed to the reward,",
+        "start": 1846.18,
+        "duration": 3.32
+    },
+    {
+        "text": "and dealing with delayed\nand sparse rewards.",
+        "start": 1851.98,
+        "duration": 2.06
+    },
+    {
+        "text": "Then the classic exploration\nversus exploitation dilemma.",
+        "start": 1854.88,
+        "duration": 3.41
+    },
+    {
+        "text": "then there's a generalization\nand, simulate, transferring from",
+        "start": 1859.81,
+        "duration": 5.16
+    },
+    {
+        "text": "simulation to the real world.",
+        "start": 1864.97,
+        "duration": 1.57
+    },
+    {
+        "text": "And then in the real world,\nthere's, of course, also safety.",
+        "start": 1867.07,
+        "duration": 3.47
+    },
+    {
+        "text": "And yeah, I'll just go through them.",
+        "start": 1873.53,
+        "duration": 2.27
+    },
+    {
+        "text": "first, for sample efficiency, there's\nthis, really classic 2015 paper.",
+        "start": 1877.23,
+        "duration": 6.23
+    },
+    {
+        "text": "from DeepMind, that first really got DeepQ\nlearning on the map, solving all these",
+        "start": 1884.835,
+        "duration": 8.74
+    },
+    {
+        "text": "Atari games with, human level performance,\nbut, human level performance in, the",
+        "start": 1893.575,
+        "duration": 6.99
+    },
+    {
+        "text": "sense of the score, but not really in\nthe sense of how much training is needed.",
+        "start": 1900.565,
+        "duration": 4.15
+    },
+    {
+        "text": "So here they write, they trained\nfor 50 million frames, which is",
+        "start": 1905.185,
+        "duration": 4.77
+    },
+    {
+        "text": "around 38 days of game experience.",
+        "start": 1909.955,
+        "duration": 2.37
+    },
+    {
+        "text": "while the human performance they\nmeasured was after two hours of",
+        "start": 1913.46,
+        "duration": 3.92
+    },
+    {
+        "text": "practice, which is, quite the difference.",
+        "start": 1917.38,
+        "duration": 4.27
+    },
+    {
+        "text": "And they also write, we did not perform\na systematic grid search owing to the",
+        "start": 1921.7,
+        "duration": 4.86
+    },
+    {
+        "text": "high computational cost, which coming\nfrom DeepMind is, yeah, I think, must",
+        "start": 1926.56,
+        "duration": 8.74
+    },
+    {
+        "text": "be a pretty high computational cost.",
+        "start": 1935.3,
+        "duration": 2.09
+    },
+    {
+        "text": "It is pretty sample inefficient.",
+        "start": 1940.85,
+        "duration": 2.14
+    },
+    {
+        "text": "Also the experiments I was running\nwith the obstacle tower challenge",
+        "start": 1943.01,
+        "duration": 3.71
+    },
+    {
+        "text": "would, could run for multiple weeks to,\nand still be learning and improving.",
+        "start": 1947.03,
+        "duration": 5.04
+    },
+    {
+        "text": "it, it takes a lot of samples.",
+        "start": 1956.39,
+        "duration": 2.05
+    },
+    {
+        "text": "Here's another example\nfrom that unity posted.",
+        "start": 1959.825,
+        "duration": 3.17
+    },
+    {
+        "text": "this is a pretty simple game.",
+        "start": 1964.145,
+        "duration": 1.42
+    },
+    {
+        "text": "I think it's called bubble\nshoot or something like that.",
+        "start": 1965.565,
+        "duration": 4.19
+    },
+    {
+        "text": "They shoot the bubbles and when\nyou get more of a color that",
+        "start": 1970.205,
+        "duration": 2.69
+    },
+    {
+        "text": "disappears something, but still it.",
+        "start": 1972.905,
+        "duration": 2.17
+    },
+    {
+        "text": "It takes over 60 hours to solve on\nonce with one simulation and if you",
+        "start": 1975.53,
+        "duration": 7.02
+    },
+    {
+        "text": "use more parallel simulations, it\ngets less time, but it's still quite",
+        "start": 1982.55,
+        "duration": 4.86
+    },
+    {
+        "text": "a long time for such a simple game.",
+        "start": 1987.41,
+        "duration": 2.32
+    },
+    {
+        "text": "and.",
+        "start": 1992.88,
+        "duration": 0.66
+    },
+    {
+        "text": "This, this long training time\nis for one due to the number of",
+        "start": 1995.43,
+        "duration": 6.11
+    },
+    {
+        "text": "samples that are needed and the\nrewards can be very uninformative.",
+        "start": 2001.54,
+        "duration": 4.17
+    },
+    {
+        "text": "So it takes a while until, the rewards\nare actually helpful for learning.",
+        "start": 2005.71,
+        "duration": 6.94
+    },
+    {
+        "text": "If you only get one at the end of a\nwhole episode, whether you reach the",
+        "start": 2013.19,
+        "duration": 4.3
+    },
+    {
+        "text": "goal or not, for example, there are\nweak inductive biases, which is the",
+        "start": 2017.49,
+        "duration": 5.64
+    },
+    {
+        "text": "same for all deep neural networks.",
+        "start": 2023.13,
+        "duration": 1.91
+    },
+    {
+        "text": "And then also you have to take into\nconsideration that you need to simulate",
+        "start": 2025.73,
+        "duration": 4.64
+    },
+    {
+        "text": "all of this to collect experiences.",
+        "start": 2030.62,
+        "duration": 2.48
+    },
+    {
+        "text": "So you don't have a huge data set\nalready that you can just throw onto",
+        "start": 2033.11,
+        "duration": 3.72
+    },
+    {
+        "text": "a GPU, in a big batch, but you have\nto collect these experiences one step",
+        "start": 2036.83,
+        "duration": 6.37
+    },
+    {
+        "text": "at a time, which yeah, take takes time\nand, is often not optimized for GPUs.",
+        "start": 2043.2,
+        "duration": 9.52
+    },
+    {
+        "text": "Is it thought that these inefficiencies\nmight be related to catastrophic",
+        "start": 2053.97,
+        "duration": 4.26
+    },
+    {
+        "text": "forgetting, or is that a separate issue?",
+        "start": 2058.24,
+        "duration": 3.27
+    },
+    {
+        "text": "I wouldn't say so, because\nusually the general setup doesn't",
+        "start": 2066.65,
+        "duration": 5.56
+    },
+    {
+        "text": "change that much that it would\nlead to catastrophic forgetting.",
+        "start": 2072.24,
+        "duration": 3.405
+    },
+    {
+        "text": "So with, with our paper, we're doing\nmulti task reinforcement learning.",
+        "start": 2078.795,
+        "duration": 3.47
+    },
+    {
+        "text": "So this is like learning one task\nand then imagine doing this for",
+        "start": 2082.265,
+        "duration": 3.89
+    },
+    {
+        "text": "learning two very different tasks.",
+        "start": 2086.155,
+        "duration": 1.94
+    },
+    {
+        "text": "And there are all these problems\nthat compound there because",
+        "start": 2088.355,
+        "duration": 2.4
+    },
+    {
+        "text": "each task is telling it to do\nsomething completely different.",
+        "start": 2091.195,
+        "duration": 2.36
+    },
+    {
+        "text": "And that's where you get this\ninterference and catastrophic.",
+        "start": 2093.556,
+        "duration": 3.409
+    },
+    {
+        "text": "Yeah.",
+        "start": 2096.966,
+        "duration": 1.909
+    },
+    {
+        "text": "So there are a few\nsolutions proposed to this.",
+        "start": 2103.635,
+        "duration": 2.77
+    },
+    {
+        "text": "And, some things work pretty well here.",
+        "start": 2107.065,
+        "duration": 3.78
+    },
+    {
+        "text": "For example, reinforcement learning, fast\nand slow, they propose, two solutions,",
+        "start": 2110.845,
+        "duration": 5.31
+    },
+    {
+        "text": "episodic memory and meta learning.",
+        "start": 2116.155,
+        "duration": 1.71
+    },
+    {
+        "text": "So episodic memory basically means\nusing memory of previous experiences",
+        "start": 2118.435,
+        "duration": 6.19
+    },
+    {
+        "text": "to solve the current problem.",
+        "start": 2124.675,
+        "duration": 1.55
+    },
+    {
+        "text": "So looking back, how did I solve\nthe problem in the past and",
+        "start": 2126.225,
+        "duration": 4.54
+    },
+    {
+        "text": "then using this information.",
+        "start": 2130.765,
+        "duration": 1.36
+    },
+    {
+        "text": "and then meta learning, it's\nbasically learning how to learn.",
+        "start": 2133.66,
+        "duration": 3.5
+    },
+    {
+        "text": "so you learn how to learn in order to be\nable to solve each individual task faster,",
+        "start": 2138.62,
+        "duration": 5.42
+    },
+    {
+        "text": "in, the future, which,",
+        "start": 2147.91,
+        "duration": 1.78
+    },
+    {
+        "text": "I guess partially is the reason why\nhumans can learn these games so fast.",
+        "start": 2151.7,
+        "duration": 4.84
+    },
+    {
+        "text": "Compared to the AI plus, model\nbased reinforcement learning.",
+        "start": 2157.095,
+        "duration": 5.41
+    },
+    {
+        "text": "So humans already have a model of\nthe world that they can utilize.",
+        "start": 2163.125,
+        "duration": 4.14
+    },
+    {
+        "text": "We already know how balls move,\nhow physics work, while the",
+        "start": 2167.275,
+        "duration": 3.64
+    },
+    {
+        "text": "network has no idea about this.",
+        "start": 2170.915,
+        "duration": 1.62
+    },
+    {
+        "text": "and if you do model based reinforcement\nlearning in general, you don't",
+        "start": 2174.445,
+        "duration": 4.71
+    },
+    {
+        "text": "need to collect experiences.",
+        "start": 2179.285,
+        "duration": 1.53
+    },
+    {
+        "text": "You can just use your model and\nthink about what are the options.",
+        "start": 2180.815,
+        "duration": 4.05
+    },
+    {
+        "text": "And compare them.",
+        "start": 2185.365,
+        "duration": 0.88
+    },
+    {
+        "text": "Isn't that a funny way to put it?",
+        "start": 2187.625,
+        "duration": 1.32
+    },
+    {
+        "text": "the way I would view it is like, Hey, we,\nbrains use model based everything, right?",
+        "start": 2189.565,
+        "duration": 4.31
+    },
+    {
+        "text": "We build models, we solve every problem.",
+        "start": 2193.965,
+        "duration": 1.6
+    },
+    {
+        "text": "So it's calling it model based\nreinforcement learning is weird.",
+        "start": 2196.255,
+        "duration": 3.09
+    },
+    {
+        "text": "It's it seems like you can just go\nall the way to model based learning.",
+        "start": 2199.355,
+        "duration": 2.81
+    },
+    {
+        "text": "yeah.",
+        "start": 2204.385,
+        "duration": 0.4
+    },
+    {
+        "text": "So, there is just a difference\nwhether you actually have to learn the",
+        "start": 2205.185,
+        "duration": 4.66
+    },
+    {
+        "text": "model or if you're given the model.",
+        "start": 2209.845,
+        "duration": 1.76
+    },
+    {
+        "text": "So for example, in the case of chess,\nyou are given the model, you have",
+        "start": 2211.645,
+        "duration": 3.16
+    },
+    {
+        "text": "the rules, you just need to evolve.",
+        "start": 2214.845,
+        "duration": 2.47
+    },
+    {
+        "text": "chess is such a weird example, right?",
+        "start": 2217.945,
+        "duration": 2.1
+    },
+    {
+        "text": "it's such a constrained system.",
+        "start": 2222.14,
+        "duration": 2.07
+    },
+    {
+        "text": "in general, some problems where\nyou're trying to move things and",
+        "start": 2224.59,
+        "duration": 2.52
+    },
+    {
+        "text": "navigator, solve a puzzle of something.",
+        "start": 2227.15,
+        "duration": 3.48
+    },
+    {
+        "text": "It seems like model based learning\nis the way to go with model based",
+        "start": 2230.63,
+        "duration": 4.11
+    },
+    {
+        "text": "learning, not just model based biases.",
+        "start": 2234.74,
+        "duration": 3.35
+    },
+    {
+        "text": "It's just interesting that you,\nthat, that, seems like the answer",
+        "start": 2239.12,
+        "duration": 3.16
+    },
+    {
+        "text": "to most, how humans do all these\nthings, build models of the world",
+        "start": 2242.37,
+        "duration": 3.19
+    },
+    {
+        "text": "and how they work and reapply them.",
+        "start": 2245.61,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah, And, some of the more recent\nbreakthroughs have been by, actually",
+        "start": 2249.07,
+        "duration": 7.255
+    },
+    {
+        "text": "learning models of the world and utilizing\nthem in the reinforcement learning setup",
+        "start": 2256.395,
+        "duration": 5.38
+    },
+    {
+        "text": "and that actually does have some results\nalready showing that it's very useful.",
+        "start": 2261.775,
+        "duration": 6.21
+    },
+    {
+        "text": "Is it wrong to me to think like\nall of our work is basically",
+        "start": 2269.675,
+        "duration": 2.59
+    },
+    {
+        "text": "all about model based modeling?",
+        "start": 2272.575,
+        "duration": 1.87
+    },
+    {
+        "text": "Yeah, it's a it's about learning models\nand then you would basically have to add",
+        "start": 2276.425,
+        "duration": 4.54
+    },
+    {
+        "text": "some kind of reinforcement learning to\nuse this model then to decide on actions.",
+        "start": 2280.965,
+        "duration": 4.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 2285.645,
+        "duration": 0.32
+    },
+    {
+        "text": "Some would argue, and I agree that if\nyou have a large enough replay buffer,",
+        "start": 2288.9,
+        "duration": 5.15
+    },
+    {
+        "text": "that's very akin to having a model.",
+        "start": 2294.13,
+        "duration": 2.04
+    },
+    {
+        "text": "You're just storing that\nmodel in the form of samples.",
+        "start": 2296.69,
+        "duration": 2.35
+    },
+    {
+        "text": "And then when you want to know a\nparticular transition, you're just",
+        "start": 2299.78,
+        "duration": 4.04
+    },
+    {
+        "text": "going to get the sample closest to it.",
+        "start": 2303.84,
+        "duration": 3.22
+    },
+    {
+        "text": "Yeah, that's like the episodic memory.",
+        "start": 2307.06,
+        "duration": 2.2
+    },
+    {
+        "text": "That's pretty large info between\nlike memory and model base.",
+        "start": 2310.621,
+        "duration": 4.049
+    },
+    {
+        "text": "If you have a large enough memory,\nthen you just have a model.",
+        "start": 2314.67,
+        "duration": 2.79
+    },
+    {
+        "text": "Yeah, just remember everything, right?",
+        "start": 2318.48,
+        "duration": 2.39
+    },
+    {
+        "text": "That's kind of brute force and\nnot very efficient either, right?",
+        "start": 2321.73,
+        "duration": 2.73
+    },
+    {
+        "text": "Yeah, in that case, it would\nbe also more difficult to",
+        "start": 2326.07,
+        "duration": 4.95
+    },
+    {
+        "text": "generalize if you just remember.",
+        "start": 2331.03,
+        "duration": 2.0
+    },
+    {
+        "text": "It would be harder to generalize,\nbut if you can have it in a way that",
+        "start": 2333.34,
+        "duration": 3.79
+    },
+    {
+        "text": "generalizes, like you can, for example,\nhave a Cluster based retrieval approach.",
+        "start": 2337.13,
+        "duration": 4.94
+    },
+    {
+        "text": "And then you just get whatever\nis closest to your experience.",
+        "start": 2342.07,
+        "duration": 2.86
+    },
+    {
+        "text": "So I think there is a very blurry line\nand I would never call DQN a model free.",
+        "start": 2344.94,
+        "duration": 5.12
+    },
+    {
+        "text": "method, I think it's in between.",
+        "start": 2350.645,
+        "duration": 2.16
+    },
+    {
+        "text": "Yeah, I guess it's just that it, in\nthose terms, it distinguishes that",
+        "start": 2357.765,
+        "duration": 6.74
+    },
+    {
+        "text": "it doesn't take, it doesn't learn the\ntransition probabilities of the world.",
+        "start": 2364.505,
+        "duration": 5.89
+    },
+    {
+        "text": "And then when it needs to decide\nan action, it doesn't look",
+        "start": 2370.765,
+        "duration": 2.68
+    },
+    {
+        "text": "ahead, multiple transitions.",
+        "start": 2373.495,
+        "duration": 1.78
+    },
+    {
+        "text": "in order to make this decision.",
+        "start": 2376.67,
+        "duration": 1.8
+    },
+    {
+        "text": "in a sense, it has a model of the world\nin the, weights, but it doesn't have this",
+        "start": 2382.11,
+        "duration": 4.29
+    },
+    {
+        "text": "explicit transition model of the world.",
+        "start": 2386.41,
+        "duration": 2.48
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 2392.57,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 2393.86,
+        "duration": 0.38
+    },
+    {
+        "text": "Not that you mentioned that.",
+        "start": 2394.43,
+        "duration": 0.74
+    },
+    {
+        "text": "Do we have, are there models that use the\nreplay buffer to do that, to roll out?",
+        "start": 2395.25,
+        "duration": 6.62
+    },
+    {
+        "text": "You, mean you would have to have a pretty\nbig replay buffer then, yeah, I'm just",
+        "start": 2410.95,
+        "duration": 5.78
+    },
+    {
+        "text": "wondering if someone went that path.",
+        "start": 2416.73,
+        "duration": 2.55
+    },
+    {
+        "text": "Yeah, I'm not sure.",
+        "start": 2421.94,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay.",
+        "start": 2425.16,
+        "duration": 0.16
+    },
+    {
+        "text": "I think about one of these game\nbased things like, Breakout, right?",
+        "start": 2425.9,
+        "duration": 3.66
+    },
+    {
+        "text": "what am I learning when I'm\nlearning how to play Breakout?",
+        "start": 2432.11,
+        "duration": 2.09
+    },
+    {
+        "text": "I can learn to play the game\nin just like a, 10 seconds.",
+        "start": 2435.51,
+        "duration": 3.85
+    },
+    {
+        "text": "But I'm not fast enough or\nI'm, someone explains the",
+        "start": 2440.525,
+        "duration": 2.81
+    },
+    {
+        "text": "rules of the game at the plate.",
+        "start": 2443.335,
+        "duration": 1.04
+    },
+    {
+        "text": "If the game was very slow.",
+        "start": 2445.025,
+        "duration": 2.22
+    },
+    {
+        "text": "I think I can play a\nperfect game right away.",
+        "start": 2447.285,
+        "duration": 2.59
+    },
+    {
+        "text": "I went up to practice.",
+        "start": 2450.355,
+        "duration": 1.08
+    },
+    {
+        "text": "It's understanding how to solve\nthat game seems trivial to me.",
+        "start": 2452.095,
+        "duration": 5.5
+    },
+    {
+        "text": "what I'm really learning is how to\ndo it quickly and it's because it's",
+        "start": 2458.58,
+        "duration": 3.53
+    },
+    {
+        "text": "running at a rate that I cannot do.",
+        "start": 2462.11,
+        "duration": 2.4
+    },
+    {
+        "text": "I can't think too much about.",
+        "start": 2464.53,
+        "duration": 1.12
+    },
+    {
+        "text": "I have to practice and\npractice to get faster.",
+        "start": 2465.65,
+        "duration": 3.48
+    },
+    {
+        "text": "But the problem solving itself is instant.",
+        "start": 2469.92,
+        "duration": 2.55
+    },
+    {
+        "text": "I position the paddle under the\nball before it hits the bottom.",
+        "start": 2472.93,
+        "duration": 2.61
+    },
+    {
+        "text": "I'm done.",
+        "start": 2475.54,
+        "duration": 0.58
+    },
+    {
+        "text": "And, so I think we have to be\ncareful here, too, about mixing",
+        "start": 2476.86,
+        "duration": 4.1
+    },
+    {
+        "text": "up what we're learning, right?",
+        "start": 2480.96,
+        "duration": 1.95
+    },
+    {
+        "text": "We are not learning how to play the\ngame when I have to practice two hours.",
+        "start": 2482.97,
+        "duration": 3.51
+    },
+    {
+        "text": "I'm learning how to get good at,\nhow to do it fast enough, which is",
+        "start": 2486.5,
+        "duration": 4.69
+    },
+    {
+        "text": "a different type of learning, it's\ndealing with the slow, the slowness of",
+        "start": 2491.19,
+        "duration": 3.69
+    },
+    {
+        "text": "brains and how we can get around that.",
+        "start": 2494.88,
+        "duration": 1.78
+    },
+    {
+        "text": "Yeah, that's a really good point.",
+        "start": 2497.17,
+        "duration": 1.23
+    },
+    {
+        "text": "It's not fair to compare the deep\nlearning Atari versus the human",
+        "start": 2498.57,
+        "duration": 4.74
+    },
+    {
+        "text": "Atari because it's just humans.",
+        "start": 2503.31,
+        "duration": 1.76
+    },
+    {
+        "text": "It's about speed in the computer.",
+        "start": 2505.07,
+        "duration": 1.6
+    },
+    {
+        "text": "The speed is not a factor.",
+        "start": 2506.67,
+        "duration": 1.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 2507.98,
+        "duration": 0.35
+    },
+    {
+        "text": "And the whole thing stops until the\nnetwork makes a decision and then",
+        "start": 2508.58,
+        "duration": 3.53
+    },
+    {
+        "text": "you get the next state of the game.",
+        "start": 2512.11,
+        "duration": 2.46
+    },
+    {
+        "text": "Yeah.",
+        "start": 2514.67,
+        "duration": 0.24
+    },
+    {
+        "text": "But again, really think about it.",
+        "start": 2514.93,
+        "duration": 1.44
+    },
+    {
+        "text": "I don't have to practice\nto learn to play that game.",
+        "start": 2516.42,
+        "duration": 2.5
+    },
+    {
+        "text": "It's, once I have to know what the game\nis, so I'm gonna tell you, but that's it.",
+        "start": 2519.37,
+        "duration": 7.45
+    },
+    {
+        "text": "You already have a pretty good model\nof how trajectories of balls work.",
+        "start": 2528.35,
+        "duration": 4.54
+    },
+    {
+        "text": "Exactly, that's my point.",
+        "start": 2533.18,
+        "duration": 1.41
+    },
+    {
+        "text": "the model is already in my head\nabout, okay, a ball's gonna hit",
+        "start": 2535.15,
+        "duration": 3.42
+    },
+    {
+        "text": "something, it's gonna bounce.",
+        "start": 2538.57,
+        "duration": 0.88
+    },
+    {
+        "text": "all done already.",
+        "start": 2539.955,
+        "duration": 0.88
+    },
+    {
+        "text": "And when he hits the bricks, surely\nblow up or do whatever they do.",
+        "start": 2541.045,
+        "duration": 2.79
+    },
+    {
+        "text": "but really, it's there's really the\nonly learning is just getting fast.",
+        "start": 2545.595,
+        "duration": 4.1
+    },
+    {
+        "text": "And of course, they designed\nthe game to get the limits of",
+        "start": 2549.695,
+        "duration": 2.59
+    },
+    {
+        "text": "human ability in terms of speed.",
+        "start": 2552.285,
+        "duration": 2.15
+    },
+    {
+        "text": "that's the whole trick that you're\ntrying to get faster and faster",
+        "start": 2555.535,
+        "duration": 2.34
+    },
+    {
+        "text": "at and get more, But actually,\nit's not a problem solving game.",
+        "start": 2557.875,
+        "duration": 4.05
+    },
+    {
+        "text": "It's, just a speed reaction game.",
+        "start": 2562.615,
+        "duration": 1.7
+    },
+    {
+        "text": "There's a lot of games like that, right?",
+        "start": 2566.615,
+        "duration": 1.44
+    },
+    {
+        "text": "You can, that, that's what\nyou're really learning how to do.",
+        "start": 2568.055,
+        "duration": 3.07
+    },
+    {
+        "text": "But the actual, no, there are\nother games that are really, you're",
+        "start": 2571.665,
+        "duration": 2.77
+    },
+    {
+        "text": "solving problems or you don't know\nhow to solve them, what chance.",
+        "start": 2574.445,
+        "duration": 3.26
+    },
+    {
+        "text": "That's the chess one\nthat has a star agenda.",
+        "start": 2578.555,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah, chess is more complex.",
+        "start": 2580.305,
+        "duration": 1.71
+    },
+    {
+        "text": "Yeah.",
+        "start": 2583.986,
+        "duration": 3.639
+    },
+    {
+        "text": "Tetris kind of sits in between.",
+        "start": 2588.285,
+        "duration": 1.09
+    },
+    {
+        "text": "you can position the things, but\nthey don't do it well enough for you.",
+        "start": 2589.635,
+        "duration": 4.58
+    },
+    {
+        "text": "This is the thing I've always\nhad, obviously reinforcement",
+        "start": 2595.275,
+        "duration": 3.36
+    },
+    {
+        "text": "is a key part of learning.",
+        "start": 2598.695,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm not going to deny that.",
+        "start": 2599.745,
+        "duration": 1.11
+    },
+    {
+        "text": "In humans, but so many of the things that\nI do, you might think of robotic actions.",
+        "start": 2601.315,
+        "duration": 5.39
+    },
+    {
+        "text": "don't really require this sort\nof strong reinforcement signal.",
+        "start": 2608.555,
+        "duration": 3.3
+    },
+    {
+        "text": "learning how to pick up an object and how\nto manipulate something or use a safe.",
+        "start": 2612.675,
+        "duration": 3.9
+    },
+    {
+        "text": "it's not gamified in any sense like that.",
+        "start": 2616.855,
+        "duration": 2.6
+    },
+    {
+        "text": "I didn't just have to learn these\ntools because I've always felt that,",
+        "start": 2619.465,
+        "duration": 3.38
+    },
+    {
+        "text": "relying on reinforcement learning\nas the key, the goal of the key",
+        "start": 2622.845,
+        "duration": 3.77
+    },
+    {
+        "text": "learning strategy for practically\neverything seems really off base.",
+        "start": 2626.755,
+        "duration": 3.45
+    },
+    {
+        "text": "Thank you.",
+        "start": 2630.205,
+        "duration": 0.06
+    },
+    {
+        "text": "It's no, I need it.",
+        "start": 2630.74,
+        "duration": 1.24
+    },
+    {
+        "text": "To me, I've always felt like it's\nall about model based learning.",
+        "start": 2632.06,
+        "duration": 2.46
+    },
+    {
+        "text": "You need to learn to model the world.",
+        "start": 2634.52,
+        "duration": 1.08
+    },
+    {
+        "text": "Once you have a model of the\nworld, you can solve any problem",
+        "start": 2635.61,
+        "duration": 2.09
+    },
+    {
+        "text": "if your model is good enough.",
+        "start": 2637.71,
+        "duration": 0.81
+    },
+    {
+        "text": "I'm not, that's not to deny that\nthere are reinforcements based on,",
+        "start": 2639.7,
+        "duration": 3.41
+    },
+    {
+        "text": "that reward doesn't play a role.",
+        "start": 2645.21,
+        "duration": 1.42
+    },
+    {
+        "text": "But I always felt that the ratio between\nreward learning and model based learning",
+        "start": 2647.17,
+        "duration": 4.41
+    },
+    {
+        "text": "has always been skewed incorrectly.",
+        "start": 2651.58,
+        "duration": 2.73
+    },
+    {
+        "text": "and the brains are basically\nall about learning models.",
+        "start": 2654.99,
+        "duration": 2.16
+    },
+    {
+        "text": "I'm just saying the same thing again.",
+        "start": 2657.24,
+        "duration": 0.9
+    },
+    {
+        "text": "Yeah,",
+        "start": 2659.45,
+        "duration": 0.21
+    },
+    {
+        "text": "that's why I find like these curiosity\nbased approaches so interesting too,",
+        "start": 2662.26,
+        "duration": 4.29
+    },
+    {
+        "text": "that you basically learn in general.",
+        "start": 2666.55,
+        "duration": 2.5
+    },
+    {
+        "text": "Model of the world, and then ideally\nare able to use it quickly to",
+        "start": 2669.5,
+        "duration": 6.13
+    },
+    {
+        "text": "perform different kind of tasks.",
+        "start": 2675.69,
+        "duration": 1.99
+    },
+    {
+        "text": "And I think it's a really promising\nresearch directions to try and",
+        "start": 2677.68,
+        "duration": 3.72
+    },
+    {
+        "text": "learn very good models and then just\nutilize them with very few reward",
+        "start": 2681.4,
+        "duration": 6.33
+    },
+    {
+        "text": "signals or none at all to perform.",
+        "start": 2687.73,
+        "duration": 1.82
+    },
+    {
+        "text": "if we're going to look what the,\nwhat the meant is going to do",
+        "start": 2690.39,
+        "duration": 2.9
+    },
+    {
+        "text": "uniquely, we have to focus on that\nbecause that's our strength, right?",
+        "start": 2693.3,
+        "duration": 3.47
+    },
+    {
+        "text": "Model based learning.",
+        "start": 2696.77,
+        "duration": 1.9
+    },
+    {
+        "text": "Definitely.",
+        "start": 2699.151,
+        "duration": 0.014
+    },
+    {
+        "text": "so we need to, we have to be careful\nlooking at robotics challenges and",
+        "start": 2700.015,
+        "duration": 3.88
+    },
+    {
+        "text": "tease out ones that really are suited\nfor the techniques we have, over the",
+        "start": 2704.075,
+        "duration": 5.89
+    },
+    {
+        "text": "model based learning and not suited for\nthe ones that require speed or, reward",
+        "start": 2709.965,
+        "duration": 5.8
+    },
+    {
+        "text": "functions all the time, things like that.",
+        "start": 2715.765,
+        "duration": 1.7
+    },
+    {
+        "text": "so that's the spin I'm going to\nbe putting on all this stuff.",
+        "start": 2718.525,
+        "duration": 2.12
+    },
+    {
+        "text": "Yeah.",
+        "start": 2721.785,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah, I would agree.",
+        "start": 2722.995,
+        "duration": 0.88
+    },
+    {
+        "text": "Okay.",
+        "start": 2723.885,
+        "duration": 0.18
+    },
+    {
+        "text": "And sample efficiency.",
+        "start": 2724.355,
+        "duration": 1.17
+    },
+    {
+        "text": "Just, it gets to that, right?",
+        "start": 2726.53,
+        "duration": 1.38
+    },
+    {
+        "text": "If you have a great model,\nyou don't need many more, you",
+        "start": 2727.91,
+        "duration": 1.79
+    },
+    {
+        "text": "don't need any more samples.",
+        "start": 2729.7,
+        "duration": 0.83
+    },
+    {
+        "text": "You've already lost a lot.",
+        "start": 2730.82,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah,",
+        "start": 2732.97,
+        "duration": 0.43
+    },
+    {
+        "text": "and they talk, they reference this\nbook, Thinking Fast and Slow, I think,",
+        "start": 2737.78,
+        "duration": 6.67
+    },
+    {
+        "text": "and Like that there's fast and slow\nlearning and basically learning the",
+        "start": 2744.91,
+        "duration": 4.655
+    },
+    {
+        "text": "model would be the slow learning and then\nthe fast learning would be just taking",
+        "start": 2749.565,
+        "duration": 5.43
+    },
+    {
+        "text": "the model and applying it to a task\nand solving it pretty much immediately.",
+        "start": 2754.995,
+        "duration": 4.35
+    },
+    {
+        "text": "Yeah, that's why I didn't like the\nbasic thesis of that book because it",
+        "start": 2760.065,
+        "duration": 3.9
+    },
+    {
+        "text": "was making this distinction which I\nfelt was in most cases unnecessary.",
+        "start": 2763.965,
+        "duration": 4.85
+    },
+    {
+        "text": "where, oh, there's two\nseparate worlds we live in.",
+        "start": 2769.62,
+        "duration": 2.37
+    },
+    {
+        "text": "No, we have a model of the world\nand that takes, as you just said, it",
+        "start": 2771.99,
+        "duration": 3.01
+    },
+    {
+        "text": "takes a while to learn, but then you\ncan act quickly based on the model.",
+        "start": 2775.08,
+        "duration": 2.81
+    },
+    {
+        "text": "It wasn't like, oh, there's two\ndifferent worlds we live in and",
+        "start": 2779.39,
+        "duration": 2.27
+    },
+    {
+        "text": "two ways of solving problems.",
+        "start": 2781.75,
+        "duration": 1.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 2786.13,
+        "duration": 0.42
+    },
+    {
+        "text": "Okay.",
+        "start": 2788.52,
+        "duration": 0.4
+    },
+    {
+        "text": "So let me go on to the next challenge.",
+        "start": 2788.92,
+        "duration": 2.79
+    },
+    {
+        "text": "So learning from dynamically\nchanging non IID data.",
+        "start": 2793.23,
+        "duration": 3.28
+    },
+    {
+        "text": "so generally when training\ndeep neural networks.",
+        "start": 2797.8,
+        "duration": 2.56
+    },
+    {
+        "text": "In theory, we always assume independent\nidentically distributed data, which means",
+        "start": 2801.41,
+        "duration": 7.5
+    },
+    {
+        "text": "if I pick a sample now, and then I pick\nthe next sample randomly, it's independent",
+        "start": 2808.91,
+        "duration": 5.68
+    },
+    {
+        "text": "of what the previous sample was.",
+        "start": 2814.62,
+        "duration": 1.91
+    },
+    {
+        "text": "And that's clearly not the case when\nyou're acting in a continuous world.",
+        "start": 2817.4,
+        "duration": 5.64
+    },
+    {
+        "text": "and This kind of violates this basic\nassumption of deep neural networks,",
+        "start": 2824.53,
+        "duration": 5.065
+    },
+    {
+        "text": "which adds an extra complication when\nyou're using deep reinforcement learning",
+        "start": 2829.595,
+        "duration": 5.01
+    },
+    {
+        "text": "and can lead to unstable training.",
+        "start": 2835.105,
+        "duration": 2.94
+    },
+    {
+        "text": "And then also, as Subutai already\nmentioned, the quality of the",
+        "start": 2838.675,
+        "duration": 5.2
+    },
+    {
+        "text": "policy determines the quality of\nthe data that is being collected.",
+        "start": 2843.875,
+        "duration": 3.42
+    },
+    {
+        "text": "So if you once have a bad policy,\nit's really difficult to recover",
+        "start": 2847.785,
+        "duration": 4.47
+    },
+    {
+        "text": "from it because you don't get any\ngood quality input data anymore.",
+        "start": 2852.255,
+        "duration": 4.2
+    },
+    {
+        "text": "That you can really learn from.",
+        "start": 2856.72,
+        "duration": 1.46
+    },
+    {
+        "text": "so you can really get,\nget stuck in a bad policy.",
+        "start": 2859.67,
+        "duration": 3.55
+    },
+    {
+        "text": "And, one solution is commonly used for\nthe, non IID problem is experience replay",
+        "start": 2864.44,
+        "duration": 8.57
+    },
+    {
+        "text": "that you basically have a policy, use\nit to collect a bunch of experiences.",
+        "start": 2873.48,
+        "duration": 5.06
+    },
+    {
+        "text": "and then you take random.",
+        "start": 2880.01,
+        "duration": 2.32
+    },
+    {
+        "text": "batches of samples out of\nthis, buffer and, replay them.",
+        "start": 2882.78,
+        "duration": 6.76
+    },
+    {
+        "text": "They use replay from, this.",
+        "start": 2889.54,
+        "duration": 2.03
+    },
+    {
+        "text": "You're saying you actually,\ndon't play, replay in order.",
+        "start": 2891.6,
+        "duration": 4.23
+    },
+    {
+        "text": "You take a random sampling of\nthe episodes and mix them up.",
+        "start": 2895.83,
+        "duration": 3.58
+    },
+    {
+        "text": "Did I hear that right?",
+        "start": 2899.84,
+        "duration": 0.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 2901.18,
+        "duration": 0.25
+    },
+    {
+        "text": "Yes.",
+        "start": 2901.43,
+        "duration": 0.38
+    },
+    {
+        "text": "Each episode might have its own order.",
+        "start": 2901.87,
+        "duration": 1.92
+    },
+    {
+        "text": "You might have the last\nthousand games stored, but",
+        "start": 2905.1,
+        "duration": 2.68
+    },
+    {
+        "text": "each game has a sequence to it.",
+        "start": 2907.8,
+        "duration": 1.4
+    },
+    {
+        "text": "So you would pick a random game.",
+        "start": 2909.2,
+        "duration": 1.49
+    },
+    {
+        "text": "Oh, you play the game in sequence,\nbut not I think so, yeah.",
+        "start": 2910.8,
+        "duration": 2.64
+    },
+    {
+        "text": "Okay.",
+        "start": 2913.47,
+        "duration": 0.36
+    },
+    {
+        "text": "Sorry, go ahead.",
+        "start": 2913.831,
+        "duration": 3.199
+    },
+    {
+        "text": "You calculate the discounted rewards in\nsequence, and then you have the reward,",
+        "start": 2917.81,
+        "duration": 5.16
+    },
+    {
+        "text": "the discounted reward associated with\nthis experience sample, but then you",
+        "start": 2923.29,
+        "duration": 3.73
+    },
+    {
+        "text": "can mix it up and it doesn't matter\nanymore because of the Oh, I see.",
+        "start": 2927.02,
+        "duration": 4.45
+    },
+    {
+        "text": "I see.",
+        "start": 2932.665,
+        "duration": 0.41
+    },
+    {
+        "text": "yeah.",
+        "start": 2940.015,
+        "duration": 0.21
+    },
+    {
+        "text": "And this is one of the key tricks that\nactually got this, 2015, Q learning paper",
+        "start": 2940.225,
+        "duration": 7.7
+    },
+    {
+        "text": "off the ground.",
+        "start": 2950.015,
+        "duration": 0.62
+    },
+    {
+        "text": "The method, as far as I know, was already\nthere for a while, but people couldn't",
+        "start": 2950.805,
+        "duration": 4.18
+    },
+    {
+        "text": "get it to really have good performance\nin combination with deep neural networks.",
+        "start": 2954.985,
+        "duration": 5.36
+    },
+    {
+        "text": "And then using this trick",
+        "start": 2960.865,
+        "duration": 1.83
+    },
+    {
+        "text": "was one of the keys,",
+        "start": 2965.095,
+        "duration": 1.12
+    },
+    {
+        "text": "they",
+        "start": 2968.255,
+        "duration": 0.18
+    },
+    {
+        "text": "But, still even with that, it's, difficult\nand still you can get stuck in a bad",
+        "start": 2973.35,
+        "duration": 4.98
+    },
+    {
+        "text": "policy, but we live in a dynamically\nchanging world and we can learn.",
+        "start": 2978.33,
+        "duration": 5.46
+    },
+    {
+        "text": "So there must be a way.",
+        "start": 2983.79,
+        "duration": 1.53
+    },
+    {
+        "text": "Okay.",
+        "start": 2988.35,
+        "duration": 0.3
+    },
+    {
+        "text": "Then there's reproducibility\nand hyper parameters, which is",
+        "start": 2988.65,
+        "duration": 2.82
+    },
+    {
+        "text": "related to the previous issues.",
+        "start": 2991.8,
+        "duration": 1.71
+    },
+    {
+        "text": "little changes, in the high performers\ncan have a large effect on the",
+        "start": 2995.61,
+        "duration": 4.38
+    },
+    {
+        "text": "performance, and also because of the.",
+        "start": 2999.99,
+        "duration": 3.16
+    },
+    {
+        "text": "sample inefficiency.",
+        "start": 3003.66,
+        "duration": 0.92
+    },
+    {
+        "text": "It can take a lot of computation to\nactually tune the hyperparameters.",
+        "start": 3005.36,
+        "duration": 3.99
+    },
+    {
+        "text": "And then even just a little\ndifference in, in the random",
+        "start": 3011.03,
+        "duration": 4.67
+    },
+    {
+        "text": "seeds have very large variants.",
+        "start": 3015.7,
+        "duration": 2.64
+    },
+    {
+        "text": "So here, on the left, this is actually\nfrom this blog post where he ran",
+        "start": 3018.35,
+        "duration": 5.51
+    },
+    {
+        "text": "10 runs of the same parameters.",
+        "start": 3024.29,
+        "duration": 2.27
+    },
+    {
+        "text": "Everything is same except\nfor the random seed.",
+        "start": 3026.58,
+        "duration": 1.91
+    },
+    {
+        "text": "And three of them never\ngot off the ground.",
+        "start": 3028.92,
+        "duration": 2.25
+    },
+    {
+        "text": "And the others, still have some variance\nin here, and this is from a 2019 paper",
+        "start": 3031.76,
+        "duration": 5.61
+    },
+    {
+        "text": "comparing some different, state of the art\nalgorithms, and you can see some of them",
+        "start": 3037.81,
+        "duration": 6.38
+    },
+    {
+        "text": "have a huge variance, and if you imagine\ntrying to tune hyperparameters with this,",
+        "start": 3044.19,
+        "duration": 5.83
+    },
+    {
+        "text": "it's really difficult to do because If\nyou have the same hyperparameters in",
+        "start": 3050.5,
+        "duration": 5.28
+    },
+    {
+        "text": "two runs, one is at this performance and\nthe other one is here, it's, you, it's",
+        "start": 3055.79,
+        "duration": 5.98
+    },
+    {
+        "text": "really hard to really say which parameter\nwas actually better without running",
+        "start": 3061.77,
+        "duration": 4.97
+    },
+    {
+        "text": "multiple runs of the same parameters and\nthis takes a lot of computation so these",
+        "start": 3066.74,
+        "duration": 4.28
+    },
+    {
+        "text": "problems compile on top of each other.",
+        "start": 3071.04,
+        "duration": 2.23
+    },
+    {
+        "text": "is this kind of sensitivity\nto initial conditions?",
+        "start": 3073.955,
+        "duration": 3.745
+    },
+    {
+        "text": "also result in sort of a susceptibility to",
+        "start": 3079.3,
+        "duration": 4.57
+    },
+    {
+        "text": "what do we call, random,\nsmall perturbations in the end",
+        "start": 3086.0,
+        "duration": 3.06
+    },
+    {
+        "text": "result, adversarial attacks.",
+        "start": 3089.06,
+        "duration": 2.83
+    },
+    {
+        "text": "Yeah, adversarial attacks.",
+        "start": 3091.92,
+        "duration": 1.11
+    },
+    {
+        "text": "That's what I was looking for.",
+        "start": 3093.03,
+        "duration": 0.99
+    },
+    {
+        "text": "Or is it not, once you get a\ngood model here, is it good",
+        "start": 3094.47,
+        "duration": 2.82
+    },
+    {
+        "text": "or is it, or, is this sort of\nsusceptibility continue on somehow?",
+        "start": 3097.29,
+        "duration": 3.69
+    },
+    {
+        "text": "Inherently in the system, everything\nis susceptible to adversarial attacks.",
+        "start": 3100.98,
+        "duration": 3.57
+    },
+    {
+        "text": "brains aren't really\nsusceptible, not in the same way.",
+        "start": 3105.195,
+        "duration": 2.39
+    },
+    {
+        "text": "definitely deep learning networks,\nno matter how good they are, they",
+        "start": 3108.625,
+        "duration": 2.31
+    },
+    {
+        "text": "can be susceptible to adversarial.",
+        "start": 3110.935,
+        "duration": 1.41
+    },
+    {
+        "text": "But I guess I knew that was true\nwith deep learning networks.",
+        "start": 3112.395,
+        "duration": 2.13
+    },
+    {
+        "text": "I didn't know if that was true\nfor reinforcement learning.",
+        "start": 3114.605,
+        "duration": 2.52
+    },
+    {
+        "text": "But they're using deep learning.",
+        "start": 3117.135,
+        "duration": 1.03
+    },
+    {
+        "text": "I, just didn't know if that\nsomehow solved that problem.",
+        "start": 3118.195,
+        "duration": 1.97
+    },
+    {
+        "text": "the brain is susceptible\nin some senses, though.",
+        "start": 3120.285,
+        "duration": 1.93
+    },
+    {
+        "text": "Would you not argue, we were\nlooking at a three dimensional",
+        "start": 3122.225,
+        "duration": 2.03
+    },
+    {
+        "text": "shape in a whiteboard, right?",
+        "start": 3124.255,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 3125.485,
+        "duration": 0.27
+    },
+    {
+        "text": "That's in some senses, a\nmatter of serial attack, right?",
+        "start": 3126.035,
+        "duration": 2.68
+    },
+    {
+        "text": "Perceptual attack.",
+        "start": 3128.725,
+        "duration": 0.87
+    },
+    {
+        "text": "Perceptual attack.",
+        "start": 3129.735,
+        "duration": 0.41
+    },
+    {
+        "text": "I don't think it's, look,\nit's, not Wouldn't call it.",
+        "start": 3130.145,
+        "duration": 4.235
+    },
+    {
+        "text": "No, I wouldn't say that at all.",
+        "start": 3134.38,
+        "duration": 1.11
+    },
+    {
+        "text": "It's hard to see it as flat though, right?",
+        "start": 3135.49,
+        "duration": 1.74
+    },
+    {
+        "text": "yeah.",
+        "start": 3137.68,
+        "duration": 0.06
+    },
+    {
+        "text": "No, that's almost, that's\nactually the beauty of the whole",
+        "start": 3138.52,
+        "duration": 2.58
+    },
+    {
+        "text": "thing, actually have a tunnel.",
+        "start": 3141.1,
+        "duration": 1.99
+    },
+    {
+        "text": "first of all, I think that's\nan a, a plus, not a minus end.",
+        "start": 3144.11,
+        "duration": 3.33
+    },
+    {
+        "text": "All right.",
+        "start": 3147.44,
+        "duration": 0.33
+    },
+    {
+        "text": "And second of all, by putting it on the\nboard, I don't see it as, a school bus.",
+        "start": 3147.98,
+        "duration": 4.23
+    },
+    {
+        "text": "it's that's true.",
+        "start": 3152.45,
+        "duration": 1.83
+    },
+    {
+        "text": "Yeah, yeah.",
+        "start": 3154.28,
+        "duration": 0.535
+    },
+    {
+        "text": "it's not the kind of\nstuff you see in there.",
+        "start": 3155.175,
+        "duration": 1.28
+    },
+    {
+        "text": "It seems like the solution here is\nclearly just to pick the best random",
+        "start": 3156.786,
+        "duration": 6.039
+    },
+    {
+        "text": "seed and only publish with that.",
+        "start": 3162.825,
+        "duration": 1.68
+    },
+    {
+        "text": "Yeah, there's a startup idea right\nthere just to choose the best random",
+        "start": 3164.506,
+        "duration": 6.699
+    },
+    {
+        "text": "seeds and sell them to people.",
+        "start": 3171.206,
+        "duration": 1.389
+    },
+    {
+        "text": "I call them magic seeds.",
+        "start": 3172.596,
+        "duration": 3.989
+    },
+    {
+        "text": "Magic seeds, exactly.",
+        "start": 3176.585,
+        "duration": 1.71
+    },
+    {
+        "text": "We've heard the story before\nabout the magic seeds, right?",
+        "start": 3178.805,
+        "duration": 2.455
+    },
+    {
+        "text": "That's basically what\nthe world of finance is.",
+        "start": 3181.261,
+        "duration": 5.763
+    },
+    {
+        "text": "Oh, this is very fascinating.",
+        "start": 3187.024,
+        "duration": 3.936
+    },
+    {
+        "text": "Okay.",
+        "start": 3190.96,
+        "duration": 0.4
+    },
+    {
+        "text": "Let's, let's keep going.",
+        "start": 3191.58,
+        "duration": 1.36
+    },
+    {
+        "text": "And just a remark, we've been seeing this\nin our experiments now that seed only",
+        "start": 3193.77,
+        "duration": 4.33
+    },
+    {
+        "text": "works, when they say see there, if you\nsee the whole thing, but even if you set",
+        "start": 3198.11,
+        "duration": 4.19
+    },
+    {
+        "text": "the initial conditions, like you have\nthis exact same model, exact same weight.",
+        "start": 3202.3,
+        "duration": 4.01
+    },
+    {
+        "text": "The problem is such that with this\ninterdependence between the data",
+        "start": 3207.4,
+        "duration": 3.29
+    },
+    {
+        "text": "generation and the modeling that\neven just after a few steps, they're",
+        "start": 3210.69,
+        "duration": 4.47
+    },
+    {
+        "text": "going to be widely different.",
+        "start": 3215.19,
+        "duration": 1.16
+    },
+    {
+        "text": "So we're still going to have\nthat variation, even if you set",
+        "start": 3216.36,
+        "duration": 2.3
+    },
+    {
+        "text": "the initial conditions to be\nperfect, to be exactly the same.",
+        "start": 3218.66,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 3222.2,
+        "duration": 0.29
+    },
+    {
+        "text": "I think there are like three seats\nyou need to set the seed of the",
+        "start": 3222.491,
+        "duration": 3.539
+    },
+    {
+        "text": "environment, the seed of the.",
+        "start": 3226.03,
+        "duration": 1.64
+    },
+    {
+        "text": "network weights and one other one.",
+        "start": 3228.17,
+        "duration": 2.74
+    },
+    {
+        "text": "I don't remember exactly.",
+        "start": 3230.91,
+        "duration": 1.53
+    },
+    {
+        "text": "Yeah, because there's\na lot of stochasticity.",
+        "start": 3232.79,
+        "duration": 1.96
+    },
+    {
+        "text": "So you got to sit, you got to set the seat\nfor all same thing you're going to do.",
+        "start": 3234.75,
+        "duration": 4.069
+    },
+    {
+        "text": "Then if you're running on GPUs, you,\nthere's inherent variability in the GPUs",
+        "start": 3238.819,
+        "duration": 6.711
+    },
+    {
+        "text": "that, that you can't, you just cannot set.",
+        "start": 3245.59,
+        "duration": 2.3
+    },
+    {
+        "text": "Unless you set it to some deterministic\nmode, and then things are slow.",
+        "start": 3248.32,
+        "duration": 3.5
+    },
+    {
+        "text": "There's always some injuncture.",
+        "start": 3252.68,
+        "duration": 2.2
+    },
+    {
+        "text": "This again seems very much related\nto the issue of model based learning",
+        "start": 3255.15,
+        "duration": 3.52
+    },
+    {
+        "text": "versus non model based learning.",
+        "start": 3258.88,
+        "duration": 1.2
+    },
+    {
+        "text": "Because model based learning,\nit seems inherently gets",
+        "start": 3260.08,
+        "duration": 3.19
+    },
+    {
+        "text": "around many of these problems.",
+        "start": 3263.62,
+        "duration": 1.46
+    },
+    {
+        "text": "it's just that you're, obviously your\nmodel is pretty good, but your model gets",
+        "start": 3268.605,
+        "duration": 3.62
+    },
+    {
+        "text": "good over time, and I just don't think,\nI just, I don't know how to describe",
+        "start": 3272.235,
+        "duration": 4.26
+    },
+    {
+        "text": "it, but mentally, I see that the model\nbased learning solves these problems.",
+        "start": 3276.495,
+        "duration": 3.78
+    },
+    {
+        "text": "because you're assuming it's limiting,\nmodel based learning is limiting in the",
+        "start": 3281.76,
+        "duration": 3.99
+    },
+    {
+        "text": "sense it says the world has to be like\nyour model and the world is different",
+        "start": 3285.75,
+        "duration": 3.25
+    },
+    {
+        "text": "than your model, they don't work at all.",
+        "start": 3289.0,
+        "duration": 1.26
+    },
+    {
+        "text": "But if the world is like your\nmodel, then they work really well.",
+        "start": 3290.86,
+        "duration": 2.68
+    },
+    {
+        "text": "We're here, without model\nbased learning, you can learn",
+        "start": 3293.74,
+        "duration": 2.16
+    },
+    {
+        "text": "anything, but it's very fragile.",
+        "start": 3295.95,
+        "duration": 1.99
+    },
+    {
+        "text": "It seems like inherently that's the case.",
+        "start": 3298.49,
+        "duration": 1.75
+    },
+    {
+        "text": "Yeah, I think, if you just talk about\nmodel based learning for reinforcement",
+        "start": 3301.275,
+        "duration": 5.43
+    },
+    {
+        "text": "learning, it's the case you have less\nvariance, but if you actually need to",
+        "start": 3306.955,
+        "duration": 4.02
+    },
+    {
+        "text": "learn the model from experience as well, I\nthink you still have this problem because",
+        "start": 3310.975,
+        "duration": 4.81
+    },
+    {
+        "text": "you still need to Somehow sample this\nexperience with some kind of I disagree",
+        "start": 3315.785,
+        "duration": 5.475
+    },
+    {
+        "text": "think about all the work we've been\ntalking about recently, where, we don't,",
+        "start": 3321.29,
+        "duration": 4.59
+    },
+    {
+        "text": "the model isn't just learn from experience\nthe model there's an inherent structure",
+        "start": 3326.16,
+        "duration": 4.52
+    },
+    {
+        "text": "to the modeling system of the brain\nthat makes assumptions about the world.",
+        "start": 3330.68,
+        "duration": 3.58
+    },
+    {
+        "text": "And you're not learning that.",
+        "start": 3334.885,
+        "duration": 1.29
+    },
+    {
+        "text": "It's like the brain has, it already has\nbuilt in an assumption what the models",
+        "start": 3336.625,
+        "duration": 3.59
+    },
+    {
+        "text": "of the world are going to look like.",
+        "start": 3340.215,
+        "duration": 0.82
+    },
+    {
+        "text": "The structure of it, the,\ndimensionality of it, how movement",
+        "start": 3341.225,
+        "duration": 3.48
+    },
+    {
+        "text": "relates, how information is stored.",
+        "start": 3344.715,
+        "duration": 2.06
+    },
+    {
+        "text": "So the brain basically says,\nthe world's going to be like,",
+        "start": 3346.775,
+        "duration": 2.62
+    },
+    {
+        "text": "it's got to fit into this model.",
+        "start": 3349.395,
+        "duration": 1.25
+    },
+    {
+        "text": "I'm not learning this model from scratch.",
+        "start": 3350.685,
+        "duration": 1.4
+    },
+    {
+        "text": "I'm just filling in the details.",
+        "start": 3352.535,
+        "duration": 1.11
+    },
+    {
+        "text": "Yeah, that's why I think there's a\nbig difference in learning a model.",
+        "start": 3354.255,
+        "duration": 3.12
+    },
+    {
+        "text": "Learning a model, yeah, you're gonna,\nyou're gonna go through the same process",
+        "start": 3357.375,
+        "duration": 2.66
+    },
+    {
+        "text": "here and you're gonna have the same\nkind of crazy that's gonna happen.",
+        "start": 3360.035,
+        "duration": 2.05
+    },
+    {
+        "text": "Yeah, I think if you add more inductive\nbias to the model and don't just",
+        "start": 3363.785,
+        "duration": 4.64
+    },
+    {
+        "text": "have a neural network with random\nweights in the beginning, I think",
+        "start": 3368.425,
+        "duration": 4.07
+    },
+    {
+        "text": "it's, solve some of the problem.",
+        "start": 3372.495,
+        "duration": 2.58
+    },
+    {
+        "text": "I guess you would still have to\nlearn a policy which you need",
+        "start": 3376.315,
+        "duration": 4.49
+    },
+    {
+        "text": "to start at some place with.",
+        "start": 3380.805,
+        "duration": 1.76
+    },
+    {
+        "text": "And of course, And they\nshow also the policy.",
+        "start": 3382.615,
+        "duration": 2.795
+    },
+    {
+        "text": "What is it?",
+        "start": 3385.82,
+        "duration": 0.41
+    },
+    {
+        "text": "Given our recent research on, we've\nbeen talking about how brains model",
+        "start": 3386.54,
+        "duration": 3.25
+    },
+    {
+        "text": "things in the whole recent discussion.",
+        "start": 3389.81,
+        "duration": 1.79
+    },
+    {
+        "text": "Where does policy fit into that?",
+        "start": 3392.18,
+        "duration": 1.35
+    },
+    {
+        "text": "What is the policy?",
+        "start": 3393.53,
+        "duration": 0.74
+    },
+    {
+        "text": "I actually don't get a sense\nfor policy, what that means.",
+        "start": 3394.6,
+        "duration": 3.24
+    },
+    {
+        "text": "It's just choosing the motor command.",
+        "start": 3398.9,
+        "duration": 1.61
+    },
+    {
+        "text": "And so we don't really talk about that.",
+        "start": 3400.74,
+        "duration": 1.635
+    },
+    {
+        "text": "We haven't done that yet.",
+        "start": 3402.625,
+        "duration": 0.96
+    },
+    {
+        "text": "We haven't done that.",
+        "start": 3403.665,
+        "duration": 0.6
+    },
+    {
+        "text": "How do you, what motor\ncommand do you do next?",
+        "start": 3404.295,
+        "duration": 2.14
+    },
+    {
+        "text": "That's policy.",
+        "start": 3406.465,
+        "duration": 0.54
+    },
+    {
+        "text": "That's what policy means.",
+        "start": 3407.155,
+        "duration": 1.69
+    },
+    {
+        "text": "See, this is, I want to get to.",
+        "start": 3408.845,
+        "duration": 1.27
+    },
+    {
+        "text": "This is why I asked you\nto do this presentation.",
+        "start": 3410.115,
+        "duration": 1.81
+    },
+    {
+        "text": "I want to understand how to bring\nin motor behavior to all the recent",
+        "start": 3412.145,
+        "duration": 4.07
+    },
+    {
+        "text": "work we've been doing on, modeling.",
+        "start": 3416.215,
+        "duration": 1.77
+    },
+    {
+        "text": "And, and I want to understand\nwhat problems we should be trying",
+        "start": 3418.345,
+        "duration": 3.16
+    },
+    {
+        "text": "to solve by introducing policy.",
+        "start": 3421.505,
+        "duration": 2.61
+    },
+    {
+        "text": "So if our work doesn't have\npolicy yet, like what should what",
+        "start": 3424.655,
+        "duration": 4.19
+    },
+    {
+        "text": "problems should we be solving?",
+        "start": 3428.855,
+        "duration": 1.71
+    },
+    {
+        "text": "This is an uber question or not a question\nbased on why we're talking about this what",
+        "start": 3431.605,
+        "duration": 5.72
+    },
+    {
+        "text": "policy what problems should we be solving?",
+        "start": 3437.325,
+        "duration": 2.53
+    },
+    {
+        "text": "Therefore we can define the policies\nthat You know, we have to judge",
+        "start": 3439.895,
+        "duration": 3.61
+    },
+    {
+        "text": "the performance of the system or\nintroduce, introduce behavior into our",
+        "start": 3443.505,
+        "duration": 3.39
+    },
+    {
+        "text": "models, because we have a struggle.",
+        "start": 3446.935,
+        "duration": 2.23
+    },
+    {
+        "text": "You, you said yourself, and\nwe talked about the how all",
+        "start": 3449.165,
+        "duration": 2.71
+    },
+    {
+        "text": "the models are in the brain.",
+        "start": 3451.875,
+        "duration": 1.16
+    },
+    {
+        "text": "You said all the information is already\nthere to solve robotics problems.",
+        "start": 3453.095,
+        "duration": 4.03
+    },
+    {
+        "text": "so we just need to know what\nkind of problems to solve.",
+        "start": 3457.915,
+        "duration": 1.74
+    },
+    {
+        "text": "I'm just speaking a lot.",
+        "start": 3460.915,
+        "duration": 1.19
+    },
+    {
+        "text": "So Vivian, I want you to respond\nto Jeff, but I want to get in the",
+        "start": 3463.185,
+        "duration": 4.02
+    },
+    {
+        "text": "queue for a follow up question.",
+        "start": 3467.205,
+        "duration": 1.32
+    },
+    {
+        "text": "That's really good.",
+        "start": 3468.545,
+        "duration": 0.32
+    },
+    {
+        "text": "You don't need to respond to me.",
+        "start": 3468.995,
+        "duration": 0.94
+    },
+    {
+        "text": "I'm done.",
+        "start": 3469.936,
+        "duration": 3.699
+    },
+    {
+        "text": "Go ahead, Ben.",
+        "start": 3474.595,
+        "duration": 0.59
+    },
+    {
+        "text": "Okay.",
+        "start": 3477.065,
+        "duration": 0.3
+    },
+    {
+        "text": "so a few weeks ago I mentioned, Judea\nPearl has this three tier notion",
+        "start": 3477.915,
+        "duration": 8.715
+    },
+    {
+        "text": "of different levels of reasoning.",
+        "start": 3486.63,
+        "duration": 1.4
+    },
+    {
+        "text": "And I think they were associational,\nintervention and causal.",
+        "start": 3488.06,
+        "duration": 4.23
+    },
+    {
+        "text": "And he criticized machine learning\nas a field by saying other than",
+        "start": 3492.87,
+        "duration": 3.61
+    },
+    {
+        "text": "reinforcement learning, it's pretty\nmuch stuck in the associational phase.",
+        "start": 3496.48,
+        "duration": 3.47
+    },
+    {
+        "text": "And so reinforcement learning is\ninteresting because it gets you into",
+        "start": 3500.01,
+        "duration": 3.92
+    },
+    {
+        "text": "the intervention phase where you.",
+        "start": 3503.93,
+        "duration": 1.17
+    },
+    {
+        "text": "Can choose what data you\nget next and all that.",
+        "start": 3505.475,
+        "duration": 2.85
+    },
+    {
+        "text": "what problems can you solve that you\ncan't solve with just machine learning?",
+        "start": 3510.425,
+        "duration": 3.39
+    },
+    {
+        "text": "one obvious direction would be\ntrying to learn causal relationships.",
+        "start": 3513.955,
+        "duration": 4.1
+    },
+    {
+        "text": "is there work on that in\nreinforcement learning?",
+        "start": 3519.155,
+        "duration": 2.44
+    },
+    {
+        "text": "I know this is a discussion\nthat's out there, but I don't know",
+        "start": 3521.625,
+        "duration": 3.12
+    },
+    {
+        "text": "what's happening in reinforcement\nlearning that hits on this issue.",
+        "start": 3525.175,
+        "duration": 3.07
+    },
+    {
+        "text": "And then would we, wouldn't the causal\nrelationships be basically model based?",
+        "start": 3528.975,
+        "duration": 3.81
+    },
+    {
+        "text": "isn't that the same thing in some sense,\nlike to know, have a model of the world",
+        "start": 3535.365,
+        "duration": 3.72
+    },
+    {
+        "text": "and say, what leads to what, what causes\nwhat aren't they almost the same thing?",
+        "start": 3539.085,
+        "duration": 4.52
+    },
+    {
+        "text": "Model based",
+        "start": 3543.715,
+        "duration": 0.62
+    },
+    {
+        "text": "or am I wrong?",
+        "start": 3546.465,
+        "duration": 0.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 3548.425,
+        "duration": 0.62
+    },
+    {
+        "text": "Yeah.",
+        "start": 3549.365,
+        "duration": 0.27
+    },
+    {
+        "text": "if, you have a model, you have\nthe transition probabilities",
+        "start": 3550.665,
+        "duration": 3.15
+    },
+    {
+        "text": "and then, what causes what,\nand it's not just, correlations",
+        "start": 3553.845,
+        "duration": 5.28
+    },
+    {
+        "text": "between experiences and actions.",
+        "start": 3559.155,
+        "duration": 2.67
+    },
+    {
+        "text": "I think the difficult question\nwould be how to get this model",
+        "start": 3564.115,
+        "duration": 3.49
+    },
+    {
+        "text": "if it's not already given.",
+        "start": 3567.605,
+        "duration": 1.4
+    },
+    {
+        "text": "And we know from children that they\nperform very directed, scientific",
+        "start": 3569.595,
+        "duration": 6.58
+    },
+    {
+        "text": "experiments, young children already trying\nto figure out what causes what, how do",
+        "start": 3576.205,
+        "duration": 5.37
+    },
+    {
+        "text": "things work, and This kind of behavior\nis not, as far as I know, not really seen",
+        "start": 3581.595,
+        "duration": 8.755
+    },
+    {
+        "text": "in reinforcement learning agents yet.",
+        "start": 3590.35,
+        "duration": 1.84
+    },
+    {
+        "text": "Even the ones with curiosity or similar\nthings just seek out novelty but don't",
+        "start": 3592.44,
+        "duration": 7.65
+    },
+    {
+        "text": "perform really directed experiments.",
+        "start": 3600.13,
+        "duration": 2.5
+    },
+    {
+        "text": "And I, know there are some attempts\nto get this more ingrained in these",
+        "start": 3602.98,
+        "duration": 5.53
+    },
+    {
+        "text": "reinforcement learning agents.",
+        "start": 3608.51,
+        "duration": 1.31
+    },
+    {
+        "text": "For example, there's one environment\nthat was proposed a few months",
+        "start": 3609.83,
+        "duration": 3.17
+    },
+    {
+        "text": "ago called alchemy, I think.",
+        "start": 3613.0,
+        "duration": 2.75
+    },
+    {
+        "text": "which is the agent can mix different\nrocks or chemical compounds and kind",
+        "start": 3616.13,
+        "duration": 7.48
+    },
+    {
+        "text": "of experiment with what mixes with\nwhat, and is supposed to figure out",
+        "start": 3623.61,
+        "duration": 5.66
+    },
+    {
+        "text": "these regularities and causal effects.",
+        "start": 3629.27,
+        "duration": 3.21
+    },
+    {
+        "text": "But I'm not sure if they are\nlike really good solutions yet.",
+        "start": 3632.905,
+        "duration": 2.81
+    },
+    {
+        "text": "Can I add something, Vivian?",
+        "start": 3640.985,
+        "duration": 1.56
+    },
+    {
+        "text": "that caters to Ben and Jeff's question.",
+        "start": 3644.065,
+        "duration": 2.17
+    },
+    {
+        "text": "I think model based reinforcement\nlearning have been proposed for a while.",
+        "start": 3647.235,
+        "duration": 3.73
+    },
+    {
+        "text": "I think the first one is like 89.",
+        "start": 3650.965,
+        "duration": 1.92
+    },
+    {
+        "text": "90 in Dyna, but it never really\nworked well because at the beginning",
+        "start": 3652.886,
+        "duration": 5.329
+    },
+    {
+        "text": "of training, it all depends on\nthe quality of the model you have.",
+        "start": 3658.215,
+        "duration": 3.18
+    },
+    {
+        "text": "If, you're not relying on your\nexperience, but you're relying on",
+        "start": 3662.515,
+        "duration": 2.66
+    },
+    {
+        "text": "a model instead, that introduces a\nhuge variance in your system when",
+        "start": 3665.175,
+        "duration": 4.4
+    },
+    {
+        "text": "you do this rollout into the future.",
+        "start": 3669.575,
+        "duration": 2.11
+    },
+    {
+        "text": "And at the beginning of training,\nyour model is really, bad.",
+        "start": 3671.715,
+        "duration": 3.05
+    },
+    {
+        "text": "So your rollouts are\ngoing to be catastrophic.",
+        "start": 3675.165,
+        "duration": 1.95
+    },
+    {
+        "text": "So you get stuck and you can't like\nmove away from this initial phase.",
+        "start": 3677.405,
+        "duration": 3.43
+    },
+    {
+        "text": "And I think 20 years, model based RL\nnever worked well because of that.",
+        "start": 3681.515,
+        "duration": 5.71
+    },
+    {
+        "text": "Still doesn't work that well.",
+        "start": 3687.585,
+        "duration": 1.38
+    },
+    {
+        "text": "But I think the difference here\nthat, I think in Jeff's point of",
+        "start": 3689.415,
+        "duration": 3.89
+    },
+    {
+        "text": "view is that for humans or in our\nmodel, we are introducing this very",
+        "start": 3693.305,
+        "duration": 4.44
+    },
+    {
+        "text": "heavy, inductive biases, your model.",
+        "start": 3697.745,
+        "duration": 3.09
+    },
+    {
+        "text": "So we already assume that, the model\nworks like that, and that's it.",
+        "start": 3700.835,
+        "duration": 3.63
+    },
+    {
+        "text": "So if you have that good\nmodel from the start, and it",
+        "start": 3704.465,
+        "duration": 3.285
+    },
+    {
+        "text": "might be able to do that, but.",
+        "start": 3707.75,
+        "duration": 1.395
+    },
+    {
+        "text": "Otherwise, if you're just learning\nfrom experience, that becomes really",
+        "start": 3709.69,
+        "duration": 2.84
+    },
+    {
+        "text": "hard to do, at least in this framework.",
+        "start": 3712.53,
+        "duration": 2.04
+    },
+    {
+        "text": "And that would be for the\ncausal reasoning aspect.",
+        "start": 3716.07,
+        "duration": 2.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 3720.36,
+        "duration": 0.26
+    },
+    {
+        "text": "I think the other thing is if\nyou're doing like Atari games,",
+        "start": 3720.62,
+        "duration": 2.77
+    },
+    {
+        "text": "you're not like learning,",
+        "start": 3723.4,
+        "duration": 1.2
+    },
+    {
+        "text": "you already have, you've learned\nthroughout your lifetime about how",
+        "start": 3727.66,
+        "duration": 4.06
+    },
+    {
+        "text": "balls bounce, how things hit each other\nand how they move and all that stuff.",
+        "start": 3731.72,
+        "duration": 3.78
+    },
+    {
+        "text": "And so you're able to immediately\ntransfer that in experience into this new",
+        "start": 3735.895,
+        "duration": 4.47
+    },
+    {
+        "text": "environment, which is totally different.",
+        "start": 3740.365,
+        "duration": 2.41
+    },
+    {
+        "text": "so there's this, you've learned a lot\nof stuff that's relevant, even though",
+        "start": 3743.925,
+        "duration": 4.8
+    },
+    {
+        "text": "it's not exactly this particular\nset of experiences, then you can",
+        "start": 3748.725,
+        "duration": 3.68
+    },
+    {
+        "text": "transfer this knowledge very quickly.",
+        "start": 3752.405,
+        "duration": 2.08
+    },
+    {
+        "text": "And this transfer, I think is, this\nability to transfer knowledge so fast from",
+        "start": 3754.905,
+        "duration": 5.3
+    },
+    {
+        "text": "one setup to another, I think Is a huge\naspect of a lot of the stuff we're talking",
+        "start": 3760.205,
+        "duration": 5.73
+    },
+    {
+        "text": "about, and I'm taking it one step further\nsaying that the brain is designed as under",
+        "start": 3765.935,
+        "duration": 5.27
+    },
+    {
+        "text": "the assumption that there are physical\nobjects in the world and they have",
+        "start": 3771.205,
+        "duration": 3.7
+    },
+    {
+        "text": "presence and they move in certain ways\nand it's three dimensional or whatever.",
+        "start": 3774.905,
+        "duration": 3.44
+    },
+    {
+        "text": "And, and, so it's just assumes\nthe world has a whole bunch",
+        "start": 3779.105,
+        "duration": 5.45
+    },
+    {
+        "text": "of constraints on it already.",
+        "start": 3784.555,
+        "duration": 1.37
+    },
+    {
+        "text": "even though you have to learn it,\nyou have to learn the details,",
+        "start": 3787.81,
+        "duration": 2.25
+    },
+    {
+        "text": "but, all these mechanisms.",
+        "start": 3790.06,
+        "duration": 2.68
+    },
+    {
+        "text": "How much of this is predetermined?",
+        "start": 3793.44,
+        "duration": 2.58
+    },
+    {
+        "text": "I'm saying the,",
+        "start": 3796.3,
+        "duration": 0.64
+    },
+    {
+        "text": "what's predetermined is, we're\ntalking about all the things",
+        "start": 3799.17,
+        "duration": 2.33
+    },
+    {
+        "text": "we've been talking about, right?",
+        "start": 3801.5,
+        "duration": 0.78
+    },
+    {
+        "text": "Constraints, transforms, and\nall this stuff is predetermined.",
+        "start": 3802.32,
+        "duration": 2.6
+    },
+    {
+        "text": "So there's an assumption in the brain\nthat you have this body, it's articulated,",
+        "start": 3805.26,
+        "duration": 4.1
+    },
+    {
+        "text": "it's got sensors on it, it's got to\nlearn the structure, physical structure",
+        "start": 3809.36,
+        "duration": 2.87
+    },
+    {
+        "text": "of objects and how they behave.",
+        "start": 3812.23,
+        "duration": 1.58
+    },
+    {
+        "text": "Those objects are going\nto be contiguous in space.",
+        "start": 3814.065,
+        "duration": 2.14
+    },
+    {
+        "text": "They're going to have certain ability\nto move in certain ways, not other ways.",
+        "start": 3816.515,
+        "duration": 2.99
+    },
+    {
+        "text": "All that's predetermined.",
+        "start": 3819.515,
+        "duration": 1.03
+    },
+    {
+        "text": "You just don't know all the details\nof what objects are going to occur.",
+        "start": 3820.555,
+        "duration": 2.9
+    },
+    {
+        "text": "that's my point is that I guess we,\nthat's, I guess in the language of",
+        "start": 3825.715,
+        "duration": 4.12
+    },
+    {
+        "text": "machine learning, that's inductive bias.",
+        "start": 3829.835,
+        "duration": 1.48
+    },
+    {
+        "text": "I guess that's the term.",
+        "start": 3831.375,
+        "duration": 0.92
+    },
+    {
+        "text": "so we have a lot of those.",
+        "start": 3833.015,
+        "duration": 1.34
+    },
+    {
+        "text": "you can't, this is why we have\ntrouble to play something like Go.",
+        "start": 3835.655,
+        "duration": 3.08
+    },
+    {
+        "text": "you go, you look at the board,\nyou have no, you can't really",
+        "start": 3839.185,
+        "duration": 1.98
+    },
+    {
+        "text": "see the structure of a game.",
+        "start": 3841.225,
+        "duration": 1.57
+    },
+    {
+        "text": "It's really hard to, you have to spend\nyears trying to figure out how to",
+        "start": 3842.795,
+        "duration": 3.19
+    },
+    {
+        "text": "interpret this in some sort of way.",
+        "start": 3845.985,
+        "duration": 1.28
+    },
+    {
+        "text": "way that you can look at a board and\nsay, Oh, I know, otherwise there's",
+        "start": 3847.535,
+        "duration": 3.43
+    },
+    {
+        "text": "a bunch of dots on the square.",
+        "start": 3850.975,
+        "duration": 1.91
+    },
+    {
+        "text": "And I was going to mention something\nto talk about games, but that plays a",
+        "start": 3856.055,
+        "duration": 4.61
+    },
+    {
+        "text": "role here as well, because games are\ndesigned for our indictive bias, right?",
+        "start": 3860.855,
+        "duration": 4.09
+    },
+    {
+        "text": "They're designed for the\nhumans to be able to play.",
+        "start": 3864.945,
+        "duration": 2.63
+    },
+    {
+        "text": "And that's why we're good at them,\nbut we could easily design a game.",
+        "start": 3868.085,
+        "duration": 4.27
+    },
+    {
+        "text": "That, doesn't attend to our\ninductive bias that a machine could",
+        "start": 3872.67,
+        "duration": 2.69
+    },
+    {
+        "text": "solve it a lot easier than humans.",
+        "start": 3875.36,
+        "duration": 1.43
+    },
+    {
+        "text": "I was arguing that Go is\nlike an example of that.",
+        "start": 3877.23,
+        "duration": 2.34
+    },
+    {
+        "text": "I was arguing that Go is an\nexample of a game that actually our",
+        "start": 3879.92,
+        "duration": 3.08
+    },
+    {
+        "text": "inductive biases don't work well.",
+        "start": 3883.03,
+        "duration": 1.24
+    },
+    {
+        "text": "You just, it's like looking at, Greek\nletters or, some other language.",
+        "start": 3885.18,
+        "duration": 6.54
+    },
+    {
+        "text": "It's I look at a go board, I can't see\nthe structure of a go board, because",
+        "start": 3891.8,
+        "duration": 3.335
+    },
+    {
+        "text": "someone's been playing it for years,\nhas learned a new way of thinking, it",
+        "start": 3895.765,
+        "duration": 3.17
+    },
+    {
+        "text": "takes a long time, where a game like\nBreakout is oh yeah, there's a ball,",
+        "start": 3899.005,
+        "duration": 4.31
+    },
+    {
+        "text": "there's a paddle, I know that, and bingo.",
+        "start": 3903.325,
+        "duration": 1.56
+    },
+    {
+        "text": "and that, that's why I think deep\nlearning networks have, the places",
+        "start": 3909.015,
+        "duration": 3.68
+    },
+    {
+        "text": "where they've excelled, generally are\nplaces where humans have difficulty,",
+        "start": 3912.695,
+        "duration": 2.87
+    },
+    {
+        "text": "even though we see the protein\nfolding stuff, it's, we can't",
+        "start": 3917.835,
+        "duration": 2.24
+    },
+    {
+        "text": "look at that and understand it.",
+        "start": 3920.075,
+        "duration": 1.19
+    },
+    {
+        "text": "but with enough data, people can,",
+        "start": 3923.0,
+        "duration": 2.7
+    },
+    {
+        "text": "I think we've beaten this up.",
+        "start": 3928.31,
+        "duration": 1.32
+    },
+    {
+        "text": "And the AlphaZero that is super\nsuccessful with Go and Chess and",
+        "start": 3931.02,
+        "duration": 6.01
+    },
+    {
+        "text": "all, uses model based learning.",
+        "start": 3937.03,
+        "duration": 2.29
+    },
+    {
+        "text": "They use Monte Carlo Tree Search.",
+        "start": 3939.35,
+        "duration": 2.0
+    },
+    {
+        "text": "So it's just the difficulty is how to\ndo it when the model is not given to",
+        "start": 3942.525,
+        "duration": 6.25
+    },
+    {
+        "text": "you, when you have to learn the model.",
+        "start": 3948.775,
+        "duration": 3.1
+    },
+    {
+        "text": "And how do they do it in AlphaZero?",
+        "start": 3955.735,
+        "duration": 1.9
+    },
+    {
+        "text": "I remember the first AlphaGo that\nthey learned via human policy.",
+        "start": 3957.665,
+        "duration": 7.31
+    },
+    {
+        "text": "it's not exactly\nreinforcement learning, but.",
+        "start": 3966.845,
+        "duration": 1.89
+    },
+    {
+        "text": "They were relying on replayed games.",
+        "start": 3969.7,
+        "duration": 2.13
+    },
+    {
+        "text": "How did they do it?",
+        "start": 3971.85,
+        "duration": 0.73
+    },
+    {
+        "text": "Now, how did they start\nwith a good model to work?",
+        "start": 3972.58,
+        "duration": 2.65
+    },
+    {
+        "text": "they have all the transition\nprobabilities because of the rules",
+        "start": 3978.55,
+        "duration": 4.03
+    },
+    {
+        "text": "of the game, of course, other\nplayer, the other player that you.",
+        "start": 3982.59,
+        "duration": 5.01
+    },
+    {
+        "text": "don't know what it will do.",
+        "start": 3987.935,
+        "duration": 1.57
+    },
+    {
+        "text": "I just know the general\nMonte Carlo tree search.",
+        "start": 3993.025,
+        "duration": 2.25
+    },
+    {
+        "text": "I don't know the details of the paper\nimplementation, but you basically",
+        "start": 3995.295,
+        "duration": 4.83
+    },
+    {
+        "text": "simulate possible future trajectories,\ntheir probabilities and their,",
+        "start": 4000.155,
+        "duration": 4.73
+    },
+    {
+        "text": "possible future rewards and then\npick the best, with some probability.",
+        "start": 4006.525,
+        "duration": 6.59
+    },
+    {
+        "text": "Okay, we should keep going and we have\nabout 15 minutes left, Yeah, I think",
+        "start": 4018.65,
+        "duration": 5.49
+    },
+    {
+        "text": "the other points are also not that long\nand more fun because they are pictures.",
+        "start": 4024.14,
+        "duration": 4.89
+    },
+    {
+        "text": "getting stuck in a local\noptimum will also bring us.",
+        "start": 4031.72,
+        "duration": 2.82
+    },
+    {
+        "text": "reward function.",
+        "start": 4035.68,
+        "duration": 0.87
+    },
+    {
+        "text": "So for instance, here's, the\nhalf cheetah it's called.",
+        "start": 4036.55,
+        "duration": 4.06
+    },
+    {
+        "text": "It's supposed to learn how\nto run as fast as possible.",
+        "start": 4041.0,
+        "duration": 3.73
+    },
+    {
+        "text": "and this is the half cheetah that\nfound a strange local optimum",
+        "start": 4046.46,
+        "duration": 3.97
+    },
+    {
+        "text": "flipping itself on the backside.",
+        "start": 4050.83,
+        "duration": 1.85
+    },
+    {
+        "text": "Yeah, as you can imagine, it will never\nlearn how to run because it will, once",
+        "start": 4057.46,
+        "duration": 4.45
+    },
+    {
+        "text": "it's on the backside, it's not going\nto figure out, it's actually better",
+        "start": 4061.91,
+        "duration": 4.48
+    },
+    {
+        "text": "to not flip on the backside and it\nwill just figure out how to go faster.",
+        "start": 4066.39,
+        "duration": 5.42
+    },
+    {
+        "text": "I think that encapsulates everything\nthat's wrong with machine learning.",
+        "start": 4076.22,
+        "duration": 5.12
+    },
+    {
+        "text": "There are some really funny\nYouTube videos with just",
+        "start": 4081.341,
+        "duration": 6.199
+    },
+    {
+        "text": "reinforcement learning gone wrong.",
+        "start": 4087.7,
+        "duration": 1.78
+    },
+    {
+        "text": "Yeah, another popular example.",
+        "start": 4092.62,
+        "duration": 3.14
+    },
+    {
+        "text": "Just in general specifying the reward\nfunction can be really difficult.",
+        "start": 4096.69,
+        "duration": 5.54
+    },
+    {
+        "text": "It's like this Greek myth of King Midas.",
+        "start": 4102.59,
+        "duration": 5.26
+    },
+    {
+        "text": "He had a wish with the god of wine,\nDionysus, and he said, I wish that",
+        "start": 4108.14,
+        "duration": 5.52
+    },
+    {
+        "text": "everything I touch turns to gold.",
+        "start": 4113.68,
+        "duration": 1.78
+    },
+    {
+        "text": "And I don't know if you know the story.",
+        "start": 4116.23,
+        "duration": 2.27
+    },
+    {
+        "text": "But, of course the god takes him very\nliteral and now everything he touches",
+        "start": 4118.825,
+        "duration": 6.21
+    },
+    {
+        "text": "turns to gold, even his wife and his\nfood and everything he can't eat.",
+        "start": 4125.355,
+        "duration": 4.62
+    },
+    {
+        "text": "His family is gold statues\nand he's very unhappy.",
+        "start": 4130.895,
+        "duration": 3.84
+    },
+    {
+        "text": "and reinforcement learning\nagents are the same.",
+        "start": 4136.125,
+        "duration": 2.49
+    },
+    {
+        "text": "They take very literally what you specify\nas the reward function, That can lead",
+        "start": 4138.615,
+        "duration": 6.555
+    },
+    {
+        "text": "to also very unintended behaviors.",
+        "start": 4145.19,
+        "duration": 3.05
+    },
+    {
+        "text": "For example, this boat is supposed\nto run on the racetrack, but someone",
+        "start": 4148.25,
+        "duration": 5.61
+    },
+    {
+        "text": "thought it's also good for this\nboat to pick up these turbo packs.",
+        "start": 4153.89,
+        "duration": 3.4
+    },
+    {
+        "text": "So it should get a little reward\nfor that, but this boat actually",
+        "start": 4157.59,
+        "duration": 3.66
+    },
+    {
+        "text": "figured out it will just run in loops\nforever, waiting for the turbo packs",
+        "start": 4161.27,
+        "duration": 3.649
+    },
+    {
+        "text": "to respawn and pick them up again and\nget the most reward By doing that,",
+        "start": 4164.919,
+        "duration": 7.226
+    },
+    {
+        "text": "So the reinforcement earning agent will\nexploit any flaw in the environment",
+        "start": 4180.935,
+        "duration": 5.82
+    },
+    {
+        "text": "or the reward function if it can.",
+        "start": 4186.755,
+        "duration": 1.95
+    },
+    {
+        "text": "And, we actually encountered this\nalso with the robot arm, where I",
+        "start": 4190.135,
+        "duration": 4.2
+    },
+    {
+        "text": "thought it may be good to reward the\nagent for touching objects because.",
+        "start": 4194.545,
+        "duration": 4.14
+    },
+    {
+        "text": "to encourage it to interact more with\nthe objects on the table, which just",
+        "start": 4199.52,
+        "duration": 5.44
+    },
+    {
+        "text": "led to the arm going immediately down\non the table and pressing down as",
+        "start": 4204.96,
+        "duration": 4.03
+    },
+    {
+        "text": "hard as possible on the touch sensors.",
+        "start": 4209.0,
+        "duration": 1.97
+    },
+    {
+        "text": "So So, yeah, you might have\nvery good intentions, but",
+        "start": 4216.03,
+        "duration": 3.845
+    },
+    {
+        "text": "yeah, almost always leads\nto unintended consequences.",
+        "start": 4221.895,
+        "duration": 3.53
+    },
+    {
+        "text": "So the reward function strongly influences\nwhat is learned, and it's difficult",
+        "start": 4226.965,
+        "duration": 4.33
+    },
+    {
+        "text": "to state what you actually want.",
+        "start": 4231.295,
+        "duration": 1.45
+    },
+    {
+        "text": "Yeah, then also.",
+        "start": 4235.425,
+        "duration": 1.07
+    },
+    {
+        "text": "If you only specify the final goal,\nit may actually never be learned.",
+        "start": 4237.505,
+        "duration": 4.13
+    },
+    {
+        "text": "If the final goal is something difficult,\nthat is not happening randomly ever,",
+        "start": 4242.005,
+        "duration": 4.19
+    },
+    {
+        "text": "because then it will just never happen\nand the agent has nothing to learn from.",
+        "start": 4246.735,
+        "duration": 4.13
+    },
+    {
+        "text": "And for that, the method that's also\nused for classical conditioning, for",
+        "start": 4251.325,
+        "duration": 4.96
+    },
+    {
+        "text": "example, in animals called reward shaping\ncan be used where you first reward",
+        "start": 4256.285,
+        "duration": 6.29
+    },
+    {
+        "text": "approximations of the behavior, and\nthen, more and more the actual behavior.",
+        "start": 4262.795,
+        "duration": 6.14
+    },
+    {
+        "text": "And then other, also other, interesting\ndirections, in the field of reward",
+        "start": 4269.855,
+        "duration": 5.75
+    },
+    {
+        "text": "function is multitask learning and\nopen ended learning and curiosity.",
+        "start": 4275.605,
+        "duration": 4.78
+    },
+    {
+        "text": "Okay, then the credit assignment, we\nalso already roughly talked about.",
+        "start": 4283.355,
+        "duration": 3.54
+    },
+    {
+        "text": "So how do you know which\nactions cost a delayed reward?",
+        "start": 4286.895,
+        "duration": 3.73
+    },
+    {
+        "text": "also many tasks have a sparse reward\nstructure, so it's difficult to learn.",
+        "start": 4291.84,
+        "duration": 4.18
+    },
+    {
+        "text": "long action sequences,",
+        "start": 4296.46,
+        "duration": 1.61
+    },
+    {
+        "text": "may take a really long time.",
+        "start": 4300.62,
+        "duration": 1.56
+    },
+    {
+        "text": "And current solutions, as far as\nI know, are discounted rewards.",
+        "start": 4303.27,
+        "duration": 5.19
+    },
+    {
+        "text": "So you give more credit to the actions\nthat were performed shortly before",
+        "start": 4308.9,
+        "duration": 6.68
+    },
+    {
+        "text": "a reward arrived than the ones that\nwere performed a long time ago.",
+        "start": 4315.59,
+        "duration": 4.02
+    },
+    {
+        "text": "And eligibility traces, which is,\nyeah, detail didn't go into, of,",
+        "start": 4320.34,
+        "duration": 8.78
+    },
+    {
+        "text": "for example, TD lambda learning,",
+        "start": 4329.75,
+        "duration": 2.27
+    },
+    {
+        "text": "also weighing states that are close\nto the current state more than the",
+        "start": 4335.32,
+        "duration": 6.13
+    },
+    {
+        "text": "ones that are further in the past.",
+        "start": 4341.46,
+        "duration": 1.58
+    },
+    {
+        "text": "Can I add hierarchical RL to that list?",
+        "start": 4344.21,
+        "duration": 2.27
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 4347.75,
+        "duration": 0.9
+    },
+    {
+        "text": "That's also a good point.",
+        "start": 4348.65,
+        "duration": 1.19
+    },
+    {
+        "text": "Yeah.",
+        "start": 4349.84,
+        "duration": 0.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 4354.18,
+        "duration": 0.2
+    },
+    {
+        "text": "And then of course, also, if you\nhave causal models of the world,",
+        "start": 4354.38,
+        "duration": 3.3
+    },
+    {
+        "text": "that also helps a lot because we\nknow that it's not only temporal co",
+        "start": 4357.71,
+        "duration": 6.055
+    },
+    {
+        "text": "occurrence for the credit assignment.",
+        "start": 4363.765,
+        "duration": 2.55
+    },
+    {
+        "text": "I can do something right now and know\nthat it will be good for tomorrow because",
+        "start": 4366.335,
+        "duration": 5.02
+    },
+    {
+        "text": "I have a causal model of the world.",
+        "start": 4371.355,
+        "duration": 1.91
+    },
+    {
+        "text": "So that's what jumped out at me.",
+        "start": 4373.615,
+        "duration": 1.89
+    },
+    {
+        "text": "It's we solve problems not by trying\ndifferent things and seeing what works.",
+        "start": 4375.505,
+        "duration": 4.77
+    },
+    {
+        "text": "We generally solve them by\nhaving a model and say, the",
+        "start": 4380.275,
+        "duration": 2.12
+    },
+    {
+        "text": "model says I can do it this way.",
+        "start": 4382.405,
+        "duration": 1.58
+    },
+    {
+        "text": "and we're actually not very good\nat seeing solutions that don't.",
+        "start": 4384.975,
+        "duration": 3.76
+    },
+    {
+        "text": "Don't fit our model.",
+        "start": 4389.305,
+        "duration": 1.01
+    },
+    {
+        "text": "someone can come along and show you\nanother way of doing a thing, another",
+        "start": 4391.165,
+        "duration": 2.76
+    },
+    {
+        "text": "way of using a tool that you didn't\nknow, and all of a sudden, oh, that's",
+        "start": 4393.925,
+        "duration": 3.54
+    },
+    {
+        "text": "better, but you almost never figure\nthat out on your own, but, having",
+        "start": 4397.465,
+        "duration": 4.56
+    },
+    {
+        "text": "a model tells you, you can know how\nto solve the problem right away.",
+        "start": 4402.025,
+        "duration": 2.95
+    },
+    {
+        "text": "You can say, give me my model, and\nsomeone can solve that problem.",
+        "start": 4405.025,
+        "duration": 2.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 4408.715,
+        "duration": 0.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 4409.206,
+        "duration": 4.659
+    },
+    {
+        "text": "You'd expect him to\nknow that abbreviation.",
+        "start": 4414.325,
+        "duration": 2.16
+    },
+    {
+        "text": "Yeah.",
+        "start": 4416.486,
+        "duration": 4.449
+    },
+    {
+        "text": "And effectively a counter\nexample is music, for example.",
+        "start": 4421.915,
+        "duration": 4.4
+    },
+    {
+        "text": "So sometimes you can't, no matter how\ngood of a model you have, you can't",
+        "start": 4426.93,
+        "duration": 4.17
+    },
+    {
+        "text": "learn how to play piano just by thinking\nit through and then go and playing.",
+        "start": 4431.13,
+        "duration": 3.31
+    },
+    {
+        "text": "You got to practice a lot.",
+        "start": 4434.45,
+        "duration": 1.25
+    },
+    {
+        "text": "And that, that again goes a little bit\nback to what I was saying earlier about,",
+        "start": 4435.78,
+        "duration": 4.27
+    },
+    {
+        "text": "learning to play breakout well, right?",
+        "start": 4440.39,
+        "duration": 1.69
+    },
+    {
+        "text": "you can learn to read the notes and\nplay them out of piano really slowly.",
+        "start": 4443.17,
+        "duration": 4.25
+    },
+    {
+        "text": "but playing it at tempo with the right\nnuances is what takes years, right?",
+        "start": 4449.03,
+        "duration": 4.96
+    },
+    {
+        "text": "It's not hard to learn how to,\nplay piano slowly and poorly.",
+        "start": 4455.79,
+        "duration": 3.85
+    },
+    {
+        "text": "Believe me, I'm trying, it is.",
+        "start": 4461.55,
+        "duration": 1.33
+    },
+    {
+        "text": "I can play slowly and poorly and\nI'm not, I don't consider myself.",
+        "start": 4464.28,
+        "duration": 3.69
+    },
+    {
+        "text": "I'm",
+        "start": 4468.166,
+        "duration": 2.709
+    },
+    {
+        "text": "almost done.",
+        "start": 4475.115,
+        "duration": 0.72
+    },
+    {
+        "text": "So just real quick, the\nexploration was exploitation.",
+        "start": 4475.895,
+        "duration": 5.35
+    },
+    {
+        "text": "I just thought this\nquote was pretty funny.",
+        "start": 4481.955,
+        "duration": 2.43
+    },
+    {
+        "text": "As I said, the problem is a classic one.",
+        "start": 4485.015,
+        "duration": 2.12
+    },
+    {
+        "text": "It was formulated during the\nwar and efforts to solve it.",
+        "start": 4487.425,
+        "duration": 3.0
+    },
+    {
+        "text": "So accept the energies and minds of\nallied analysts that the suggestion",
+        "start": 4490.425,
+        "duration": 4.37
+    },
+    {
+        "text": "was made that the problem be\ndropped over Germany as the ultimate",
+        "start": 4494.795,
+        "duration": 3.72
+    },
+    {
+        "text": "instrument of intellectual sabotage.",
+        "start": 4498.515,
+        "duration": 1.88
+    },
+    {
+        "text": "So basically the question of whether\nyou should explore more unknown",
+        "start": 4505.19,
+        "duration": 6.06
+    },
+    {
+        "text": "options and figure out if there are\nhigher rewards out there somewhere or",
+        "start": 4511.25,
+        "duration": 3.74
+    },
+    {
+        "text": "just exploit what you already know.",
+        "start": 4514.99,
+        "duration": 1.87
+    },
+    {
+        "text": "And it's a still an open problem.",
+        "start": 4518.53,
+        "duration": 2.2
+    },
+    {
+        "text": "current approaches are\nusing a stochastic policy.",
+        "start": 4521.88,
+        "duration": 3.22
+    },
+    {
+        "text": "in addition, you can also lower\nthe stochasticity over time.",
+        "start": 4527.07,
+        "duration": 3.38
+    },
+    {
+        "text": "So having a lot of stochasticity in the\nbeginning to explore a lot, like for",
+        "start": 4530.45,
+        "duration": 4.32
+    },
+    {
+        "text": "example, in childhood, in humans, and then\nover time, decrease the stochasticity and",
+        "start": 4534.77,
+        "duration": 7.475
+    },
+    {
+        "text": "go over more to exploitative behavior.",
+        "start": 4542.315,
+        "duration": 3.03
+    },
+    {
+        "text": "and then also there are other things\nlike curiosity objectives that encourage",
+        "start": 4547.595,
+        "duration": 5.15
+    },
+    {
+        "text": "a bit more directed exploration,\nin areas that are still unknown as",
+        "start": 4552.775,
+        "duration": 5.31
+    },
+    {
+        "text": "opposed to just random exploration.",
+        "start": 4558.085,
+        "duration": 2.07
+    },
+    {
+        "text": "generalization and sim to real transfer.",
+        "start": 4564.675,
+        "duration": 2.53
+    },
+    {
+        "text": "So basically reinforcement\nlearning agents.",
+        "start": 4567.765,
+        "duration": 2.41
+    },
+    {
+        "text": "often over fit to strange\nfeatures of the environment.",
+        "start": 4571.05,
+        "duration": 3.26
+    },
+    {
+        "text": "So one example is that some, people showed\nthat, on Atari games, sometimes the agent",
+        "start": 4574.78,
+        "duration": 8.71
+    },
+    {
+        "text": "basically just learns to memorize an app\noptimal sequence and kind of ties this",
+        "start": 4584.18,
+        "duration": 5.49
+    },
+    {
+        "text": "memorized sequence to the game score.",
+        "start": 4589.97,
+        "duration": 2.4
+    },
+    {
+        "text": "So just.",
+        "start": 4592.78,
+        "duration": 0.94
+    },
+    {
+        "text": "focuses on the high score and\nthen knows, okay, if it's at",
+        "start": 4593.935,
+        "duration": 2.89
+    },
+    {
+        "text": "this number, I will do this.",
+        "start": 4596.855,
+        "duration": 1.54
+    },
+    {
+        "text": "And if it's at that\nnumber, I will do that.",
+        "start": 4598.425,
+        "duration": 1.79
+    },
+    {
+        "text": "Which means when you cover the high score,\nit just doesn't do well at all anymore.",
+        "start": 4600.855,
+        "duration": 5.12
+    },
+    {
+        "text": "That's hilarious.",
+        "start": 4607.265,
+        "duration": 0.88
+    },
+    {
+        "text": "Yeah.",
+        "start": 4609.565,
+        "duration": 0.18
+    },
+    {
+        "text": "So just like a choreography and\nfor a human, it doesn't matter",
+        "start": 4610.065,
+        "duration": 4.635
+    },
+    {
+        "text": "if it sees a high score or not.",
+        "start": 4614.7,
+        "duration": 1.54
+    },
+    {
+        "text": "Yeah,",
+        "start": 4616.241,
+        "duration": 4.029
+    },
+    {
+        "text": "and one solution is, sorry, in real world\nrobotics, there are other complications",
+        "start": 4622.43,
+        "duration": 8.07
+    },
+    {
+        "text": "like wear and tear of the effectors.",
+        "start": 4630.52,
+        "duration": 3.35
+    },
+    {
+        "text": "Then there's latency, and also less\nprecision than in the simulations.",
+        "start": 4634.86,
+        "duration": 5.16
+    },
+    {
+        "text": "And as solutions you can train on a wider\nvariety of inputs, add more randomness so",
+        "start": 4641.07,
+        "duration": 7.23
+    },
+    {
+        "text": "you can't just overfit, and also in real\nworld robotics you can add latency models",
+        "start": 4648.3,
+        "duration": 7.85
+    },
+    {
+        "text": "or, things like recurrency or memory.",
+        "start": 4656.19,
+        "duration": 3.22
+    },
+    {
+        "text": "And then safety, pretty obvious.",
+        "start": 4662.54,
+        "duration": 2.74
+    },
+    {
+        "text": "If you have a random policy,\nit can be pretty dangerous.",
+        "start": 4665.45,
+        "duration": 2.86
+    },
+    {
+        "text": "It can break the robot if it\njust does random jerky movements.",
+        "start": 4668.31,
+        "duration": 3.48
+    },
+    {
+        "text": "So you can restrict the action\nspace, regularize behaviors, or",
+        "start": 4672.57,
+        "duration": 3.68
+    },
+    {
+        "text": "learn to recognize unsafe actions.",
+        "start": 4677.11,
+        "duration": 2.07
+    },
+    {
+        "text": "And just as a final slide,\nAre there too many challenges?",
+        "start": 4681.8,
+        "duration": 4.875
+    },
+    {
+        "text": "Is reinforcement learning broken?",
+        "start": 4686.725,
+        "duration": 1.89
+    },
+    {
+        "text": "I don't know, I trained this\nobstacle tower network with 2, 500",
+        "start": 4690.555,
+        "duration": 6.72
+    },
+    {
+        "text": "neurons, and it learned a pretty\ncomplex navigation and vision task.",
+        "start": 4697.855,
+        "duration": 4.52
+    },
+    {
+        "text": "with just such a really small\nnetwork, while, yeah, even cats and",
+        "start": 4703.83,
+        "duration": 6.27
+    },
+    {
+        "text": "dogs will have a lot more neurons\nstill, as we probably all know,",
+        "start": 4710.1,
+        "duration": 4.26
+    },
+    {
+        "text": "sometimes do really weird behaviors,",
+        "start": 4714.55,
+        "duration": 2.52
+    },
+    {
+        "text": "and act non optimally.",
+        "start": 4719.09,
+        "duration": 1.0
+    },
+    {
+        "text": "I, guess we, we can't always expect\noptimal behavior anyways, but,",
+        "start": 4723.21,
+        "duration": 4.49
+    },
+    {
+        "text": "Yeah, and, I wanted to do also some\noverview of, what is actually out",
+        "start": 4730.28,
+        "duration": 6.2
+    },
+    {
+        "text": "there and what can be done at the\nmoment, but I thought that would",
+        "start": 4736.48,
+        "duration": 2.73
+    },
+    {
+        "text": "make it a bit too long for one talk.",
+        "start": 4739.21,
+        "duration": 2.17
+    },
+    {
+        "text": "I guess the one thing I would, I, this was\ngreat, by the way, Vivian, but the thing",
+        "start": 4741.44,
+        "duration": 4.08
+    },
+    {
+        "text": "that I still need and want to know is\nwhat, and from a practical point of view,",
+        "start": 4745.53,
+        "duration": 4.42
+    },
+    {
+        "text": "maybe a commercial point of view, What are\nproblems that are important and unsolved?",
+        "start": 4749.96,
+        "duration": 5.425
+    },
+    {
+        "text": "these are, you went through the\nwhole machine learning theoretical",
+        "start": 4756.665,
+        "duration": 3.88
+    },
+    {
+        "text": "perspective, which is very useful.",
+        "start": 4760.935,
+        "duration": 1.45
+    },
+    {
+        "text": "but, that other question\nis also important.",
+        "start": 4764.105,
+        "duration": 3.4
+    },
+    {
+        "text": "what, these are, most of the\nsituations are things that aren't",
+        "start": 4768.595,
+        "duration": 2.61
+    },
+    {
+        "text": "really practically valuable.",
+        "start": 4771.205,
+        "duration": 1.32
+    },
+    {
+        "text": "For robotics more than for robotics.",
+        "start": 4773.71,
+        "duration": 2.68
+    },
+    {
+        "text": "Yes, you know what things that people\nwould like to do in the commercial world",
+        "start": 4776.44,
+        "duration": 5.03
+    },
+    {
+        "text": "of robotics or practical applications\nthat are just not doable today.",
+        "start": 4781.47,
+        "duration": 5.88
+    },
+    {
+        "text": "Yeah, for that we'd have to\nget someone who's more like",
+        "start": 4788.81,
+        "duration": 2.15
+    },
+    {
+        "text": "in the industry or something.",
+        "start": 4790.96,
+        "duration": 1.0
+    },
+    {
+        "text": "Yes.",
+        "start": 4791.961,
+        "duration": 3.109
+    },
+    {
+        "text": "So what I wrote as the ambitious goal\nproposals, I think, like a home care",
+        "start": 4795.15,
+        "duration": 6.29
+    },
+    {
+        "text": "robot because there it would be really\nuseful to have a model of the world",
+        "start": 4801.44,
+        "duration": 4.65
+    },
+    {
+        "text": "because you need to pick up new skills\nmany different new skills very quickly",
+        "start": 4806.15,
+        "duration": 4.2
+    },
+    {
+        "text": "and it's let's break that down you know\nwhat are the primitives of a home care",
+        "start": 4811.11,
+        "duration": 5.38
+    },
+    {
+        "text": "robot has to do I think we shouldn't,\nfrom our point of view, my point of",
+        "start": 4816.49,
+        "duration": 4.315
+    },
+    {
+        "text": "view, I don't think we should focus on,\noh, understanding the disease of the",
+        "start": 4820.805,
+        "duration": 2.92
+    },
+    {
+        "text": "person or what their needs are, more what\ndoes physically that robot have to do?",
+        "start": 4823.725,
+        "duration": 4.56
+    },
+    {
+        "text": "Does it have trouble navigating?",
+        "start": 4828.355,
+        "duration": 1.38
+    },
+    {
+        "text": "Does it have to pick things up?",
+        "start": 4829.745,
+        "duration": 1.16
+    },
+    {
+        "text": "Does it have to dispense medicines?",
+        "start": 4831.235,
+        "duration": 1.47
+    },
+    {
+        "text": "Does it have to unscrew caps?",
+        "start": 4832.705,
+        "duration": 1.66
+    },
+    {
+        "text": "what are the things that, Retrieve\nstuff from the refrigerator, practically",
+        "start": 4834.625,
+        "duration": 5.29
+    },
+    {
+        "text": "those, low level things that you hardly\nsee robots do much very well at all.",
+        "start": 4840.295,
+        "duration": 3.64
+    },
+    {
+        "text": "or the, where I'm coming from,\nlike what are the Maybe even things",
+        "start": 4845.755,
+        "duration": 6.57
+    },
+    {
+        "text": "like, Oh, the person I'm caring for\nis acting weirdly or it's acting.",
+        "start": 4852.325,
+        "duration": 5.48
+    },
+    {
+        "text": "Yeah, there's someone else I know who\nacted similarly ended up with the fall.",
+        "start": 4858.115,
+        "duration": 4.36
+    },
+    {
+        "text": "So maybe I should prevent this,\nbut that's not really robotics.",
+        "start": 4862.475,
+        "duration": 2.59
+    },
+    {
+        "text": "Yeah, I'm thinking like,\nthat's a good task too.",
+        "start": 4866.245,
+        "duration": 3.13
+    },
+    {
+        "text": "But right now I'm thinking like, what\nare the robotics challenges they have?",
+        "start": 4869.425,
+        "duration": 2.96
+    },
+    {
+        "text": "what are the, but those would be a lot of,\nstuff, a lot of the things you mentioned",
+        "start": 4873.59,
+        "duration": 3.33
+    },
+    {
+        "text": "would be like subcortical things, right?",
+        "start": 4876.92,
+        "duration": 1.62
+    },
+    {
+        "text": "Maybe.",
+        "start": 4878.93,
+        "duration": 0.3
+    },
+    {
+        "text": "I think unscrew things, maybe not.",
+        "start": 4879.68,
+        "duration": 2.37
+    },
+    {
+        "text": "when you think about your cortex,\nhas to learn what a screw top is",
+        "start": 4882.68,
+        "duration": 6.65
+    },
+    {
+        "text": "and how bottles open, different\ntypes of bottles open and so on.",
+        "start": 4889.33,
+        "duration": 2.52
+    },
+    {
+        "text": "Maybe that's assisted by subcortical\nnetworks to make smooth actions and",
+        "start": 4892.0,
+        "duration": 4.17
+    },
+    {
+        "text": "prevent you from using too much force.",
+        "start": 4896.17,
+        "duration": 1.74
+    },
+    {
+        "text": "things like that.",
+        "start": 4898.315,
+        "duration": 0.69
+    },
+    {
+        "text": "But those are cognitive functions,\nyou have to learn how to, open a",
+        "start": 4899.005,
+        "duration": 3.64
+    },
+    {
+        "text": "refrigerator door and how to take\nlids off of things and how to pour",
+        "start": 4902.645,
+        "duration": 2.69
+    },
+    {
+        "text": "liquids out and so on and so forth.",
+        "start": 4905.335,
+        "duration": 1.89
+    },
+    {
+        "text": "So those all require a model of the world.",
+        "start": 4907.245,
+        "duration": 2.56
+    },
+    {
+        "text": "and to be able to manipulate the world.",
+        "start": 4910.27,
+        "duration": 1.85
+    },
+    {
+        "text": "where I'm coming from, our latest work\nhere suggests to me that we'll have",
+        "start": 4913.46,
+        "duration": 3.84
+    },
+    {
+        "text": "the, we might have the ability to build\nvery articulate robotic systems that",
+        "start": 4917.3,
+        "duration": 4.21
+    },
+    {
+        "text": "physically manipulate things, because\nwe're building models, very articulate,",
+        "start": 4921.54,
+        "duration": 3.6
+    },
+    {
+        "text": "we're building very detailed models.",
+        "start": 4925.14,
+        "duration": 1.56
+    },
+    {
+        "text": "Showing how we can learn very detailed\nmodels of objects in the world, and their",
+        "start": 4927.16,
+        "duration": 3.78
+    },
+    {
+        "text": "articulations of those objects, and so\nhow would we, what would be a robotic",
+        "start": 4930.97,
+        "duration": 4.01
+    },
+    {
+        "text": "task related to the, just like building\na better robotic arm, picking things up",
+        "start": 4934.99,
+        "duration": 5.64
+    },
+    {
+        "text": "and manipulating and grabbing and turning\nthings, and I don't know what those are.",
+        "start": 4940.63,
+        "duration": 2.92
+    },
+    {
+        "text": "Oh, we've already solved those\nproblems, or, they use a vacuum,",
+        "start": 4944.71,
+        "duration": 2.52
+    },
+    {
+        "text": "or whatever, I don't know.",
+        "start": 4947.23,
+        "duration": 0.75
+    },
+    {
+        "text": "taking your example, the simple,\nthe straightforward, I'll say that.",
+        "start": 4949.16,
+        "duration": 5.26
+    },
+    {
+        "text": "The specific task of transferring\na invalid from a bed into a",
+        "start": 4954.9,
+        "duration": 3.73
+    },
+    {
+        "text": "wheelchair is, requires just that.",
+        "start": 4958.73,
+        "duration": 5.15
+    },
+    {
+        "text": "requires it, be able to perceive\nthe position the person's in,",
+        "start": 4964.44,
+        "duration": 4.71
+    },
+    {
+        "text": "where they will get the position,\ntransfer away, how do you do that?",
+        "start": 4969.15,
+        "duration": 3.3
+    },
+    {
+        "text": "That's a good example.",
+        "start": 4972.45,
+        "duration": 0.9
+    },
+    {
+        "text": "That's a good example.",
+        "start": 4973.65,
+        "duration": 0.9
+    },
+    {
+        "text": "That's, also a very, a pretty,",
+        "start": 4974.81,
+        "duration": 2.74
+    },
+    {
+        "text": "a complex version of the kind\nof example I'm looking for.",
+        "start": 4980.18,
+        "duration": 2.34
+    },
+    {
+        "text": "you're starting, we're starting to talk\nabout dealing with a human that's frail.",
+        "start": 4984.71,
+        "duration": 2.89
+    },
+    {
+        "text": "You don't want to start there.",
+        "start": 4988.23,
+        "duration": 1.28
+    },
+    {
+        "text": "and also one that requires multiple\narms, multiple people to do, that's a",
+        "start": 4990.74,
+        "duration": 5.61
+    },
+    {
+        "text": "tough, let's pick something like that.",
+        "start": 4996.35,
+        "duration": 2.63
+    },
+    {
+        "text": "It's more, what, can one hand,\nwhat robotic arm do that's",
+        "start": 4998.98,
+        "duration": 3.52
+    },
+    {
+        "text": "not going to kill somebody.",
+        "start": 5002.66,
+        "duration": 0.8
+    },
+    {
+        "text": "I mentioned the Japanese\nare investing a huge amount.",
+        "start": 5003.61,
+        "duration": 3.14
+    },
+    {
+        "text": "to try to have robotic eldler assistance.",
+        "start": 5007.45,
+        "duration": 4.01
+    },
+    {
+        "text": "Yeah, I know.",
+        "start": 5011.79,
+        "duration": 0.53
+    },
+    {
+        "text": "and Vivian suggested that too\nhere, but, We'd be cracking an egg.",
+        "start": 5012.85,
+        "duration": 4.81
+    },
+    {
+        "text": "These are all good.",
+        "start": 5019.42,
+        "duration": 0.65
+    },
+    {
+        "text": "I guess I'm trying to get it\nmore, that's a good example too.",
+        "start": 5020.07,
+        "duration": 2.92
+    },
+    {
+        "text": "I'm trying to get it more",
+        "start": 5023.31,
+        "duration": 0.92
+    },
+    {
+        "text": "primitives that, we don't want to make,\ncreate an egg cracking system, nor do we",
+        "start": 5026.56,
+        "duration": 4.1
+    },
+    {
+        "text": "want to create a human lifting system.",
+        "start": 5030.66,
+        "duration": 1.65
+    },
+    {
+        "text": "We want to understand what would be the\nbasic primitives, functional primitives",
+        "start": 5032.32,
+        "duration": 3.67
+    },
+    {
+        "text": "that require to solve a set of problems.",
+        "start": 5036.0,
+        "duration": 2.05
+    },
+    {
+        "text": "Thanks.",
+        "start": 5038.05,
+        "duration": 0.08
+    },
+    {
+        "text": "cracking an egg is, it could be an example\nof many different manipulations, right?",
+        "start": 5039.015,
+        "duration": 3.51
+    },
+    {
+        "text": "taking the lid off a jar,\nto me, is no different than",
+        "start": 5043.025,
+        "duration": 2.15
+    },
+    {
+        "text": "cracking an egg in some sense.",
+        "start": 5045.175,
+        "duration": 0.82
+    },
+    {
+        "text": "It's, picking up an object with the\nright metaphors, getting the right",
+        "start": 5046.675,
+        "duration": 3.11
+    },
+    {
+        "text": "orientation, manipulating in some\nway very precisely, Observing the",
+        "start": 5049.785,
+        "duration": 5.125
+    },
+    {
+        "text": "results of that, to know whether you've\nachieved it or not, that kind of stuff.",
+        "start": 5054.92,
+        "duration": 3.64
+    },
+    {
+        "text": "I think you did say, that it's a\nsufficient source to sufficiently",
+        "start": 5059.072,
+        "duration": 5.868
+    },
+    {
+        "text": "hold on to it, but not so much\nthat it would actually damage it.",
+        "start": 5065.58,
+        "duration": 2.8
+    },
+    {
+        "text": "what I don't know, is that\nreally a valuable problem in",
+        "start": 5068.47,
+        "duration": 2.92
+    },
+    {
+        "text": "the world today, commercially?",
+        "start": 5071.39,
+        "duration": 1.44
+    },
+    {
+        "text": "We can say here, imagine it's\na hard problem, but is it a",
+        "start": 5073.415,
+        "duration": 2.78
+    },
+    {
+        "text": "viable, I assume that's right.",
+        "start": 5076.195,
+        "duration": 1.57
+    },
+    {
+        "text": "You have to talk to someone\nwho's in the field of robotics to",
+        "start": 5077.765,
+        "duration": 2.36
+    },
+    {
+        "text": "talk about, trying to sell these\nsystems or build practical systems.",
+        "start": 5080.125,
+        "duration": 2.66
+    },
+    {
+        "text": "So we can identify things like that,\nbut I've learned that you just,",
+        "start": 5083.885,
+        "duration": 3.1
+    },
+    {
+        "text": "until you talk to someone who's\nactually been in the field and you're",
+        "start": 5087.185,
+        "duration": 2.62
+    },
+    {
+        "text": "dealing with these problems, you\ndon't really know what they want.",
+        "start": 5089.805,
+        "duration": 2.08
+    },
+    {
+        "text": "so at some point, we'll have to get that\nkind of information, because we could go",
+        "start": 5093.085,
+        "duration": 4.2
+    },
+    {
+        "text": "down a long path solving a problem in in\nsome sense that's already been solved.",
+        "start": 5097.285,
+        "duration": 3.76
+    },
+    {
+        "text": "That's not the real problem.",
+        "start": 5101.495,
+        "duration": 0.88
+    },
+    {
+        "text": "Most of the robots, are like things\nlike bolts and stuff like that.",
+        "start": 5102.435,
+        "duration": 4.413
+    },
+    {
+        "text": "It doesn't matter if you put a slight\nscratch on it, but anything else that's",
+        "start": 5106.848,
+        "duration": 3.637
+    },
+    {
+        "text": "more fragile, you'd be able to generally\npick up an object without damaging it",
+        "start": 5110.525,
+        "duration": 4.97
+    },
+    {
+        "text": "by scratching or anything else, I think.",
+        "start": 5115.496,
+        "duration": 2.574
+    },
+    {
+        "text": "But then you have to do what with it?",
+        "start": 5118.9,
+        "duration": 1.23
+    },
+    {
+        "text": "You have to get in some position,\nyou have to screw it in, you have",
+        "start": 5120.32,
+        "duration": 2.0
+    },
+    {
+        "text": "to manipulate it in a certain way.",
+        "start": 5122.32,
+        "duration": 1.23
+    },
+    {
+        "text": "just the act of grasping it.",
+        "start": 5124.68,
+        "duration": 1.27
+    },
+    {
+        "text": "So these are all good examples.",
+        "start": 5126.26,
+        "duration": 1.36
+    },
+    {
+        "text": "I think we need to get some people\nwho know the field to do that.",
+        "start": 5127.69,
+        "duration": 3.9
+    },
+    {
+        "text": "I mean like the thing about grasping it,\nthat was famously solved in the Amazon",
+        "start": 5131.591,
+        "duration": 5.309
+    },
+    {
+        "text": "challenge where Once they identify the\nobject they wanted, they just used the",
+        "start": 5136.9,
+        "duration": 3.64
+    },
+    {
+        "text": "vacuum and sucked it and picked it up.",
+        "start": 5140.54,
+        "duration": 2.694
+    },
+    {
+        "text": "And it didn't damage the object, it\nworked, and that was the solution, right?",
+        "start": 5143.234,
+        "duration": 4.366
+    },
+    {
+        "text": "so we have to be careful.",
+        "start": 5148.51,
+        "duration": 1.29
+    },
+    {
+        "text": "Alright, can I give my opinion on this?",
+        "start": 5152.18,
+        "duration": 1.64
+    },
+    {
+        "text": "I think the issue is\nnot solving a problem.",
+        "start": 5155.25,
+        "duration": 2.64
+    },
+    {
+        "text": "It's actually very easy for\nthe systems, given enough,",
+        "start": 5157.95,
+        "duration": 3.06
+    },
+    {
+        "text": "simulations to solve something.",
+        "start": 5161.79,
+        "duration": 1.64
+    },
+    {
+        "text": "if you do a good reward function,\nand if you just give it enough",
+        "start": 5164.17,
+        "duration": 2.52
+    },
+    {
+        "text": "time, it can solve anything at all.",
+        "start": 5166.74,
+        "duration": 1.34
+    },
+    {
+        "text": "Because it's just going to exhaustively\nsearch the space of solutions.",
+        "start": 5168.66,
+        "duration": 3.17
+    },
+    {
+        "text": "but again, the problem is you have\nto deal with variances in the world,",
+        "start": 5172.4,
+        "duration": 3.84
+    },
+    {
+        "text": "and, transfer learning, right?",
+        "start": 5176.78,
+        "duration": 1.29
+    },
+    {
+        "text": "yeah, I'm going to get to that point.",
+        "start": 5179.09,
+        "duration": 1.55
+    },
+    {
+        "text": "it's not hard to solve one thing.",
+        "start": 5180.88,
+        "duration": 2.71
+    },
+    {
+        "text": "It's hard, but because the thing is, you\nfind a very specific solution to a very",
+        "start": 5184.09,
+        "duration": 5.497
+    },
+    {
+        "text": "specific problem if you do RL based.",
+        "start": 5189.587,
+        "duration": 1.883
+    },
+    {
+        "text": "So it's not hard to solve one thing.",
+        "start": 5191.855,
+        "duration": 1.4
+    },
+    {
+        "text": "It's hard to make a robot\nthat solves many things.",
+        "start": 5193.255,
+        "duration": 2.1
+    },
+    {
+        "text": "And I think that's probably the main\nchallenge we're having in applying",
+        "start": 5195.405,
+        "duration": 3.46
+    },
+    {
+        "text": "reinforcement learning to robotics.",
+        "start": 5198.865,
+        "duration": 1.47
+    },
+    {
+        "text": "And I think what would be a big deal is\nsolving that, solving a way of either.",
+        "start": 5200.985,
+        "duration": 6.35
+    },
+    {
+        "text": "We can call it continual learning, a\nrobot learning things in a sequence,",
+        "start": 5207.775,
+        "duration": 3.74
+    },
+    {
+        "text": "or I'd even call it just transfer\nlearning, maybe learning a good",
+        "start": 5211.805,
+        "duration": 3.47
+    },
+    {
+        "text": "enough, like model of the world that\ncould apply to different problems.",
+        "start": 5215.275,
+        "duration": 3.59
+    },
+    {
+        "text": "And you could just like plug and play,\nyou plug that part of the world and it",
+        "start": 5218.975,
+        "duration": 3.84
+    },
+    {
+        "text": "can easily extend to some other activity.",
+        "start": 5222.815,
+        "duration": 2.23
+    },
+    {
+        "text": "I think those Let's take an example.",
+        "start": 5225.145,
+        "duration": 2.21
+    },
+    {
+        "text": "Let's say you, want to learn how to pick\nup and manipulate certain set of objects.",
+        "start": 5227.355,
+        "duration": 4.47
+    },
+    {
+        "text": "And so you build a model based system,\nand what you really want to do then is",
+        "start": 5231.825,
+        "duration": 4.115
+    },
+    {
+        "text": "say, here's a new object you have, I'm\ngoing to add it to your list, here's",
+        "start": 5235.94,
+        "duration": 2.46
+    },
+    {
+        "text": "some good views of it, go for it.",
+        "start": 5238.42,
+        "duration": 1.98
+    },
+    {
+        "text": "so that's appealing, that's the kind\nof thing that we've been talking",
+        "start": 5241.41,
+        "duration": 2.69
+    },
+    {
+        "text": "about that we could do, I think.",
+        "start": 5244.1,
+        "duration": 1.12
+    },
+    {
+        "text": "The, but then the question that\nreally gets down to, my next",
+        "start": 5245.67,
+        "duration": 3.97
+    },
+    {
+        "text": "question is, I really want to\nknow what's commercially valuable.",
+        "start": 5249.64,
+        "duration": 2.76
+    },
+    {
+        "text": "I'm trying to get to that point where\nit's like, what would someone say, oh",
+        "start": 5253.84,
+        "duration": 2.74
+    },
+    {
+        "text": "my god, I need that in my business,\nall right, that's going to solve this",
+        "start": 5256.58,
+        "duration": 2.71
+    },
+    {
+        "text": "problem in this commercial field.",
+        "start": 5259.31,
+        "duration": 1.55
+    },
+    {
+        "text": "and we're a bunch of researchers\nhere, so we're not going to know this.",
+        "start": 5262.25,
+        "duration": 3.42
+    },
+    {
+        "text": "Like Google, for example, they just added\na new feature to avoid Christmas trees.",
+        "start": 5265.67,
+        "duration": 4.33
+    },
+    {
+        "text": "That's, something that you just added,\nyou just upgraded the model, that's a",
+        "start": 5273.67,
+        "duration": 3.58
+    },
+    {
+        "text": "very, Google is not a very smart system.",
+        "start": 5277.49,
+        "duration": 1.88
+    },
+    {
+        "text": "it's fun, but it's really quick to do.",
+        "start": 5280.02,
+        "duration": 1.93
+    },
+    {
+        "text": "No, I, again, it's just\nreally interesting.",
+        "start": 5285.21,
+        "duration": 2.49
+    },
+    {
+        "text": "I, it's interesting to think about.",
+        "start": 5287.7,
+        "duration": 2.49
+    },
+    {
+        "text": "we'll have to get, this is going\nto have to be, this conversation's",
+        "start": 5291.07,
+        "duration": 3.45
+    },
+    {
+        "text": "going to have to continue.",
+        "start": 5294.56,
+        "duration": 0.8
+    }
+]

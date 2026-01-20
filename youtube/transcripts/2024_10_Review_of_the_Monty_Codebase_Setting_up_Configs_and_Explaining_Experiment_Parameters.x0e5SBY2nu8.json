@@ -1,0 +1,6192 @@
+[
+    {
+        "text": "All right, let me, share my screen.",
+        "start": 8.087,
+        "duration": 3.03
+    },
+    {
+        "text": "and yeah, just I'm hoping that this will\nbe a bit of an interactive thing, so",
+        "start": 14.677,
+        "duration": 4.95
+    },
+    {
+        "text": "just interrupt me whenever, if something\nis unclear or you have a question",
+        "start": 19.687,
+        "duration": 4.95
+    },
+    {
+        "text": "related to what I'm talking about.",
+        "start": 24.637,
+        "duration": 2.63
+    },
+    {
+        "text": "so some of this might already be familiar\nto you, so also tell me if I'm going",
+        "start": 29.217,
+        "duration": 6.44
+    },
+    {
+        "text": "into too much detail and it's not useful.",
+        "start": 35.657,
+        "duration": 2.4
+    },
+    {
+        "text": "But yeah, I thought I would start with\njust a brief overview of the code base.",
+        "start": 38.807,
+        "duration": 3.57
+    },
+    {
+        "text": "and what's all in there, and then\nwe can go into the different topics.",
+        "start": 42.992,
+        "duration": 5.11
+    },
+    {
+        "text": "So basically I think this is\nthe current version of master.",
+        "start": 48.592,
+        "duration": 4.63
+    },
+    {
+        "text": "At least I updated it earlier today.",
+        "start": 53.222,
+        "duration": 2.79
+    },
+    {
+        "text": "so there are a couple of\nfolders that start with dot.",
+        "start": 57.442,
+        "duration": 3.24
+    },
+    {
+        "text": "you can ignore them for now.",
+        "start": 61.687,
+        "duration": 1.8
+    },
+    {
+        "text": "the, then we have the docs folder,\nwhich is currently also not really used.",
+        "start": 66.067,
+        "duration": 7.18
+    },
+    {
+        "text": "HTML coverage basically is like\na nice way of looking at like the",
+        "start": 74.527,
+        "duration": 6.98
+    },
+    {
+        "text": "test coverage of our code base.",
+        "start": 81.507,
+        "duration": 2.13
+    },
+    {
+        "text": "So I look there sometimes to\nsee what part of the code is",
+        "start": 83.647,
+        "duration": 3.4
+    },
+    {
+        "text": "not covered by unit tests yet.",
+        "start": 87.087,
+        "duration": 1.73
+    },
+    {
+        "text": "and then we have the README docs.",
+        "start": 91.147,
+        "duration": 3.5
+    },
+    {
+        "text": "A folder for RFCs, the unit tests are in\nthe test folder and then a tools folder.",
+        "start": 95.887,
+        "duration": 6.34
+    },
+    {
+        "text": "and then the, I don't\nthink I have, I'm sorry.",
+        "start": 103.797,
+        "duration": 2.53
+    },
+    {
+        "text": "I don't think I have\nHTMLConf, which is fine.",
+        "start": 106.327,
+        "duration": 2.47
+    },
+    {
+        "text": "It seems like it's grayed out, which\nmeans it's maybe ignored by Git.",
+        "start": 108.807,
+        "duration": 3.82
+    },
+    {
+        "text": "I'm not sure.",
+        "start": 113.077,
+        "duration": 0.63
+    },
+    {
+        "text": "Oh yeah.",
+        "start": 113.737,
+        "duration": 1.2
+    },
+    {
+        "text": "You might have to actually run\na command to generate these.",
+        "start": 114.937,
+        "duration": 5.67
+    },
+    {
+        "text": "Oh yeah.",
+        "start": 120.687,
+        "duration": 0.54
+    },
+    {
+        "text": "I think,",
+        "start": 121.227,
+        "duration": 0.52
+    },
+    {
+        "text": "it's okay.",
+        "start": 125.742,
+        "duration": 0.5
+    },
+    {
+        "text": "You have to add the coverage\nflag to when you run PyTest.",
+        "start": 126.272,
+        "duration": 3.73
+    },
+    {
+        "text": "So it's PyTest dash cov\nor something like that.",
+        "start": 130.012,
+        "duration": 3.28
+    },
+    {
+        "text": "Okay.",
+        "start": 133.772,
+        "duration": 0.24
+    },
+    {
+        "text": "Okay.",
+        "start": 134.012,
+        "duration": 0.26
+    },
+    {
+        "text": "If you look in the circle CI,\nit'll show you the circle CI job.",
+        "start": 134.292,
+        "duration": 6.12
+    },
+    {
+        "text": "It uses PyTest with the coverage tools.",
+        "start": 140.522,
+        "duration": 3.33
+    },
+    {
+        "text": "Gotcha.",
+        "start": 144.587,
+        "duration": 0.29
+    },
+    {
+        "text": "So this is the command, pytest\ndash report HTML, and then run that",
+        "start": 145.397,
+        "duration": 6.48
+    },
+    {
+        "text": "and it will generate it for you.",
+        "start": 151.887,
+        "duration": 1.59
+    },
+    {
+        "text": "and it's, yeah, let me actually\nopen the coverage report real quick.",
+        "start": 155.117,
+        "duration": 5.37
+    },
+    {
+        "text": "Cause it's a nice tool to have.",
+        "start": 160.497,
+        "duration": 4.09
+    },
+    {
+        "text": "yeah, you can look at it like this and\nthen you'll see each file and it has",
+        "start": 168.187,
+        "duration": 6.24
+    },
+    {
+        "text": "a coverage message, a percentage here.",
+        "start": 174.737,
+        "duration": 2.7
+    },
+    {
+        "text": "And then, I don't know, you can\nlook at, let's take an act, a file",
+        "start": 178.097,
+        "duration": 4.41
+    },
+    {
+        "text": "with some actual content in it.",
+        "start": 182.507,
+        "duration": 2.97
+    },
+    {
+        "text": "I don't know, let's say object model.",
+        "start": 185.667,
+        "duration": 2.38
+    },
+    {
+        "text": "py and then it will show you like\nin green what's covered and then",
+        "start": 188.057,
+        "duration": 4.51
+    },
+    {
+        "text": "in red, the parts of the code that\nare not covered in unit tests.",
+        "start": 193.607,
+        "duration": 4.22
+    },
+    {
+        "text": "So if you add new code, this is useful\nbecause sometimes you forget that",
+        "start": 198.657,
+        "duration": 4.34
+    },
+    {
+        "text": "there's like an else statement and that's\nnot covered in the, in your test and",
+        "start": 202.997,
+        "duration": 5.45
+    },
+    {
+        "text": "that, that will point that out to you.",
+        "start": 208.747,
+        "duration": 1.77
+    },
+    {
+        "text": "okay.",
+        "start": 216.557,
+        "duration": 0.57
+    },
+    {
+        "text": "But so the main, the two important\nfolders right now are projects and",
+        "start": 218.607,
+        "duration": 6.27
+    },
+    {
+        "text": "source and projects is basically a\nfolder that tomorrow we're going to",
+        "start": 225.047,
+        "duration": 4.37
+    },
+    {
+        "text": "move over to the Monty lab repository.",
+        "start": 229.417,
+        "duration": 3.63
+    },
+    {
+        "text": "And then in the projects folder, this\nis like a folder that has all the like",
+        "start": 235.112,
+        "duration": 6.88
+    },
+    {
+        "text": "random files that we use for different\nprojects and different ideas that",
+        "start": 241.992,
+        "duration": 3.53
+    },
+    {
+        "text": "we've been trying and the files in\nhere are not covered by unit tests.",
+        "start": 245.552,
+        "duration": 3.78
+    },
+    {
+        "text": "They're not really actively maintained.",
+        "start": 249.332,
+        "duration": 1.72
+    },
+    {
+        "text": "So a lot of these scripts might\nactually not work anymore.",
+        "start": 251.052,
+        "duration": 3.46
+    },
+    {
+        "text": "when someone makes a change, they\nare really only obligated to make",
+        "start": 256.492,
+        "duration": 3.98
+    },
+    {
+        "text": "sure everything in the source folder\nkeeps working, but here they're like a",
+        "start": 260.472,
+        "duration": 3.74
+    },
+    {
+        "text": "bunch of Jupyter notebooks and stuff.",
+        "start": 264.212,
+        "duration": 1.75
+    },
+    {
+        "text": "So those are not always updated.",
+        "start": 265.962,
+        "duration": 2.8
+    },
+    {
+        "text": "and the, yeah, I'm pretty sure none\nof the notebooks will work because",
+        "start": 271.522,
+        "duration": 3.87
+    },
+    {
+        "text": "I've not been updating them there.",
+        "start": 275.392,
+        "duration": 1.71
+    },
+    {
+        "text": "And remember I did the\nbig action refactor.",
+        "start": 277.382,
+        "duration": 2.32
+    },
+    {
+        "text": "So there's.",
+        "start": 280.022,
+        "duration": 0.58
+    },
+    {
+        "text": "bunch of broken code here.",
+        "start": 281.067,
+        "duration": 1.14
+    },
+    {
+        "text": "And then after that, I just\nstopped updating projects",
+        "start": 282.207,
+        "duration": 3.5
+    },
+    {
+        "text": "folder except for Monty runs.",
+        "start": 285.707,
+        "duration": 1.86
+    },
+    {
+        "text": "Yeah.",
+        "start": 288.497,
+        "duration": 0.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 290.867,
+        "duration": 0.29
+    },
+    {
+        "text": "And this is really more of an archive\nat the moment code that we used to run",
+        "start": 291.157,
+        "duration": 8.29
+    },
+    {
+        "text": "at some point and where we looked at\nsome specific features, I don't know, we",
+        "start": 299.447,
+        "duration": 4.86
+    },
+    {
+        "text": "looked into speeding up the code and then\nthere are a couple of notebooks for that.",
+        "start": 304.307,
+        "duration": 3.91
+    },
+    {
+        "text": "And we looked into object behaviors\nor yeah, different things.",
+        "start": 308.247,
+        "duration": 5.18
+    },
+    {
+        "text": "And the important folder for now that\nis maintained is the monty runs folder.",
+        "start": 314.032,
+        "duration": 5.05
+    },
+    {
+        "text": "In there we have the run script,\nrun parallel script, make",
+        "start": 319.572,
+        "duration": 5.07
+    },
+    {
+        "text": "follow up experiment script.",
+        "start": 324.682,
+        "duration": 1.5
+    },
+    {
+        "text": "And then we have the experiments\nfolder, which contains all the",
+        "start": 326.832,
+        "duration": 3.9
+    },
+    {
+        "text": "different experiment configs.",
+        "start": 330.752,
+        "duration": 2.04
+    },
+    {
+        "text": "and in there the important ones\nare the benchmark experiments",
+        "start": 335.087,
+        "duration": 3.92
+    },
+    {
+        "text": "and the pre training experiments.",
+        "start": 339.007,
+        "duration": 1.63
+    },
+    {
+        "text": "So the pre training experiments\nare the ones that we run to",
+        "start": 341.187,
+        "duration": 3.11
+    },
+    {
+        "text": "generate the object models.",
+        "start": 344.297,
+        "duration": 1.5
+    },
+    {
+        "text": "We usually run that only when\nsomething changes in the way",
+        "start": 346.157,
+        "duration": 4.88
+    },
+    {
+        "text": "that graphs are being learned.",
+        "start": 351.037,
+        "duration": 1.42
+    },
+    {
+        "text": "So the last time we ran this was\nlike a year ago, and the models",
+        "start": 352.902,
+        "duration": 5.21
+    },
+    {
+        "text": "are just on our infrastructure\nand you can just download them.",
+        "start": 358.152,
+        "duration": 4.16
+    },
+    {
+        "text": "And then the benchmark experiments\njust do evaluation on these models.",
+        "start": 362.832,
+        "duration": 4.12
+    },
+    {
+        "text": "and then.",
+        "start": 368.592,
+        "duration": 0.31
+    },
+    {
+        "text": "Okay.",
+        "start": 370.312,
+        "duration": 0.28
+    },
+    {
+        "text": "so when we, we can go into this\nmore tomorrow, but just, so the",
+        "start": 370.972,
+        "duration": 5.66
+    },
+    {
+        "text": "projects will move, but we'll\nprobably keep the Monty runs folder.",
+        "start": 376.632,
+        "duration": 3.5
+    },
+    {
+        "text": "Within projects.",
+        "start": 380.412,
+        "duration": 0.88
+    },
+    {
+        "text": "Yeah.",
+        "start": 382.662,
+        "duration": 0.65
+    },
+    {
+        "text": "So we'll probably not have it nested in\na projects folder anymore, but we would",
+        "start": 383.402,
+        "duration": 4.19
+    },
+    {
+        "text": "want to keep the benchmark experiments\nand pre training experiments here.",
+        "start": 387.592,
+        "duration": 4.03
+    },
+    {
+        "text": "Gotcha.",
+        "start": 391.712,
+        "duration": 0.4
+    },
+    {
+        "text": "Got it.",
+        "start": 392.442,
+        "duration": 0.25
+    },
+    {
+        "text": "So yeah, people can either, or we\ncan easily rerun the benchmarks",
+        "start": 392.722,
+        "duration": 3.77
+    },
+    {
+        "text": "when something in the code changes.",
+        "start": 396.502,
+        "duration": 1.29
+    },
+    {
+        "text": "And yeah, the idea of the benchmark\nexperiments is that anytime we make",
+        "start": 399.447,
+        "duration": 4.8
+    },
+    {
+        "text": "a functional change to the code,\nlike we actually change the way",
+        "start": 404.257,
+        "duration": 3.38
+    },
+    {
+        "text": "the learning module works or the\nsensor module works, we rerun the",
+        "start": 407.647,
+        "duration": 4.93
+    },
+    {
+        "text": "benchmark experiments to make sure,",
+        "start": 412.577,
+        "duration": 2.8
+    },
+    {
+        "text": ".\nTo make sure we don't degrade performance\nor there's an unexpected effect of our",
+        "start": 416.287,
+        "duration": 5.45
+    },
+    {
+        "text": "change, we might also run them in general.",
+        "start": 421.737,
+        "duration": 2.25
+    },
+    {
+        "text": "When we change something, we might run\none or two and just do a sanity check",
+        "start": 423.987,
+        "duration": 4.84
+    },
+    {
+        "text": "that they are still exactly the same.",
+        "start": 428.827,
+        "duration": 1.62
+    },
+    {
+        "text": "and then here in our documentation,\nwe have these tables with the current",
+        "start": 431.497,
+        "duration": 4.16
+    },
+    {
+        "text": "results of the benchmark experiments.",
+        "start": 435.667,
+        "duration": 1.88
+    },
+    {
+        "text": "And if we do decide to make a\nfunctional change that does change these",
+        "start": 437.947,
+        "duration": 3.47
+    },
+    {
+        "text": "numbers, we have to update this table.",
+        "start": 441.427,
+        "duration": 1.91
+    },
+    {
+        "text": "And yeah, the main two are here, the\n10 object experiments, which are faster",
+        "start": 445.342,
+        "duration": 4.42
+    },
+    {
+        "text": "to run, but only run on 10 objects.",
+        "start": 449.762,
+        "duration": 2.93
+    },
+    {
+        "text": "And then we have A couple of, experiments\non all 77 YCB experiments or objects,",
+        "start": 452.692,
+        "duration": 7.16
+    },
+    {
+        "text": "and they take a little longer to run.",
+        "start": 459.902,
+        "duration": 1.87
+    },
+    {
+        "text": "we also have some more benchmarks\non real world data sets and",
+        "start": 464.092,
+        "duration": 5.5
+    },
+    {
+        "text": "the kind of unsupervised\nlearning experiments down here.",
+        "start": 469.602,
+        "duration": 4.6
+    },
+    {
+        "text": "okay.",
+        "start": 478.552,
+        "duration": 0.64
+    },
+    {
+        "text": "So that's the,",
+        "start": 480.902,
+        "duration": 1.18
+    },
+    {
+        "text": "As the documentation is now in GitHub,\nyou could update the scripts to",
+        "start": 484.397,
+        "duration": 4.56
+    },
+    {
+        "text": "automatically update the tables and then\nthey become part of your pull request.",
+        "start": 488.957,
+        "duration": 3.45
+    },
+    {
+        "text": "Yeah, we always had this table in the\nreadme actually on GitHub and we have this",
+        "start": 493.637,
+        "duration": 5.17
+    },
+    {
+        "text": "to do item for over a year now that says,\nWrite a script to automate this process.",
+        "start": 499.157,
+        "duration": 5.185
+    },
+    {
+        "text": "So yeah, definitely\nsomething that we could do.",
+        "start": 504.742,
+        "duration": 4.91
+    },
+    {
+        "text": "yeah.",
+        "start": 513.442,
+        "duration": 0.21
+    },
+    {
+        "text": "One thing we also have to figure out\nhere is, so we are currently running",
+        "start": 513.652,
+        "duration": 4.0
+    },
+    {
+        "text": "these experiments on our Numenta\ncompute cluster, but if we have",
+        "start": 517.652,
+        "duration": 5.91
+    },
+    {
+        "text": "external contributors, they don't have\naccess to that and they might have",
+        "start": 523.562,
+        "duration": 3.76
+    },
+    {
+        "text": "very different hardware, so I'm not\nsure yet how we will do this, that",
+        "start": 527.342,
+        "duration": 3.55
+    },
+    {
+        "text": "the runtimes are still comparable.",
+        "start": 530.902,
+        "duration": 1.74
+    },
+    {
+        "text": "we might want to have some kind\nof regression tests that we",
+        "start": 535.237,
+        "duration": 3.08
+    },
+    {
+        "text": "just run at regular intervals\nand that double check this,",
+        "start": 538.317,
+        "duration": 4.0
+    },
+    {
+        "text": "but yeah, that's still\nsomething to figure out.",
+        "start": 544.407,
+        "duration": 1.68
+    },
+    {
+        "text": "okay.",
+        "start": 553.217,
+        "duration": 0.35
+    },
+    {
+        "text": "Let me go briefly over\nan experiment config.",
+        "start": 553.567,
+        "duration": 3.36
+    },
+    {
+        "text": "So yeah, Scott wrote some\nreally nice tutorials on this.",
+        "start": 558.187,
+        "duration": 4.005
+    },
+    {
+        "text": "So if you want to just read through those.",
+        "start": 562.192,
+        "duration": 2.105
+    },
+    {
+        "text": "I would definitely recommend it, but I'll\njust give a brief overview here as well.",
+        "start": 564.827,
+        "duration": 6.1
+    },
+    {
+        "text": "so in the beginning, we just define a\ncouple of variables up here that use some",
+        "start": 573.687,
+        "duration": 6.14
+    },
+    {
+        "text": "utils like just sampling all possible\nrotations in 3D in a certain way.",
+        "start": 579.827,
+        "duration": 6.165
+    },
+    {
+        "text": "Interval, like this one, samples like\nall the different combinations of 90",
+        "start": 586.562,
+        "duration": 4.85
+    },
+    {
+        "text": "degree interval rotations, so 0, 0,\n0, 0, 0, 0, 90, 0, 0, 180, and so on,",
+        "start": 591.412,
+        "duration": 7.19
+    },
+    {
+        "text": "we define where the models are stored, and\nwhich pre trained models we want to use.",
+        "start": 600.942,
+        "duration": 7.695
+    },
+    {
+        "text": "So we're currently using version eight.",
+        "start": 608.637,
+        "duration": 2.49
+    },
+    {
+        "text": "The comment here outlines what changed\nbetween the different versions.",
+        "start": 611.557,
+        "duration": 3.53
+    },
+    {
+        "text": "So this is what I was talking about\nwhen we change something in the way",
+        "start": 615.607,
+        "duration": 2.53
+    },
+    {
+        "text": "the graphs are being built and learned\nthat we need to rerun pre training.",
+        "start": 618.137,
+        "duration": 4.67
+    },
+    {
+        "text": "And that's not a very common change.",
+        "start": 622.807,
+        "duration": 3.04
+    },
+    {
+        "text": "So we keep track of this and\nwith these version numbers.",
+        "start": 626.267,
+        "duration": 2.52
+    },
+    {
+        "text": "on that note, I see,\ninput channel referred to,",
+        "start": 632.412,
+        "duration": 4.98
+    },
+    {
+        "text": "and in one of the comments,\nand it's also in the buffer.",
+        "start": 639.462,
+        "duration": 2.76
+    },
+    {
+        "text": "Can you just tell me what\ninput channel means here?",
+        "start": 643.372,
+        "duration": 1.89
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 646.042,
+        "duration": 0.63
+    },
+    {
+        "text": "So this was a change when, once we\nimplemented all the, machinery to have",
+        "start": 646.672,
+        "duration": 5.3
+    },
+    {
+        "text": "hierarchy, so that we can basically\nhave a learning module give input",
+        "start": 652.222,
+        "duration": 4.84
+    },
+    {
+        "text": "to a high level learning module.",
+        "start": 657.092,
+        "duration": 1.55
+    },
+    {
+        "text": "That means now a learning module can have\nmultiple inputs, so it can receive input",
+        "start": 659.272,
+        "duration": 4.66
+    },
+    {
+        "text": "from a sensor module, and from a learning\nmodule, or from multiple learning modules.",
+        "start": 663.932,
+        "duration": 4.95
+    },
+    {
+        "text": "So the input channel basically just tells\nyou where are these features coming from.",
+        "start": 669.352,
+        "duration": 4.76
+    },
+    {
+        "text": "Are they coming from\nanother learning module?",
+        "start": 674.152,
+        "duration": 2.82
+    },
+    {
+        "text": "Are they coming from a sensor module?",
+        "start": 676.972,
+        "duration": 1.81
+    },
+    {
+        "text": "so that they can appropriately\nbe matched in the graph.",
+        "start": 679.632,
+        "duration": 4.34
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 684.612,
+        "duration": 0.58
+    },
+    {
+        "text": "Oh, when I actually, when I was\nlike debugging stuff for 1LM, 1SM,",
+        "start": 686.332,
+        "duration": 6.235
+    },
+    {
+        "text": "for example, like an input channel\nwas patch or the next input channel",
+        "start": 693.427,
+        "duration": 4.12
+    },
+    {
+        "text": "was viewfinder, because those were\nthe two things from sensor module.",
+        "start": 697.547,
+        "duration": 3.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 703.897,
+        "duration": 0.48
+    },
+    {
+        "text": "And usually the viewfinder is not\nconnected to the learning module.",
+        "start": 706.017,
+        "duration": 3.34
+    },
+    {
+        "text": "So it wouldn't actually send any\ninformation to the learning module.",
+        "start": 709.377,
+        "duration": 3.55
+    },
+    {
+        "text": "So in the graphs here, there's\nno viewfinder information stored.",
+        "start": 713.327,
+        "duration": 4.59
+    },
+    {
+        "text": "Great question about future state.",
+        "start": 720.657,
+        "duration": 2.7
+    },
+    {
+        "text": "So I just remember recent Jeff\nconversation, when he was saying learning",
+        "start": 723.872,
+        "duration": 6.85
+    },
+    {
+        "text": "modules don't really know where their\ninformation is coming from, learning",
+        "start": 730.722,
+        "duration": 3.27
+    },
+    {
+        "text": "module or sensor module, et cetera.",
+        "start": 733.992,
+        "duration": 1.64
+    },
+    {
+        "text": "So he just made a distinction that it\nis useful to know where it's coming",
+        "start": 735.662,
+        "duration": 4.25
+    },
+    {
+        "text": "from, but in the future we're going\ncorrect that right now we're going",
+        "start": 739.912,
+        "duration": 4.23
+    },
+    {
+        "text": "to aim for a future where learning\nmodule doesn't know what's coming.",
+        "start": 744.142,
+        "duration": 3.33
+    },
+    {
+        "text": "It does not distinguish in sensor\nmodule versus learning module input.",
+        "start": 748.592,
+        "duration": 4.01
+    },
+    {
+        "text": "yeah, this is more, basically a cortical\ncolumn gets input from different sources.",
+        "start": 754.022,
+        "duration": 6.65
+    },
+    {
+        "text": "It doesn't like technically know oh,\nthis is coming from here or this coming",
+        "start": 761.187,
+        "duration": 4.61
+    },
+    {
+        "text": "from there, but it has these connections.",
+        "start": 765.797,
+        "duration": 1.98
+    },
+    {
+        "text": "And if something comes from a sensor\nor comes from a different column, it",
+        "start": 767.797,
+        "duration": 4.8
+    },
+    {
+        "text": "comes through different connections.",
+        "start": 772.597,
+        "duration": 1.65
+    },
+    {
+        "text": "So it can connect like it can\nbe interpreted in different",
+        "start": 774.687,
+        "duration": 3.01
+    },
+    {
+        "text": "ways, because it forms.",
+        "start": 777.707,
+        "duration": 1.47
+    },
+    {
+        "text": "Physically different synapses.",
+        "start": 779.617,
+        "duration": 1.64
+    },
+    {
+        "text": "And here in the code, we're just\nreplacing this with, dictionaries,",
+        "start": 781.737,
+        "duration": 5.3
+    },
+    {
+        "text": "these physical different synapses\nwe were replacing with dictionaries.",
+        "start": 787.947,
+        "duration": 3.87
+    },
+    {
+        "text": "Oh man, I, I think I should turn this off.",
+        "start": 792.337,
+        "duration": 2.01
+    },
+    {
+        "text": "I keep getting balloons.",
+        "start": 794.347,
+        "duration": 1.04
+    },
+    {
+        "text": "but yeah, we were just replacing that\nwith dictionaries and mapping it with",
+        "start": 797.387,
+        "duration": 3.2
+    },
+    {
+        "text": "these keywords, but it's not like it's\ninter It's like dealing with information",
+        "start": 800.607,
+        "duration": 6.795
+    },
+    {
+        "text": "from a sensor module in a different\nway than from a learning module.",
+        "start": 807.402,
+        "duration": 3.32
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 812.352,
+        "duration": 0.45
+    },
+    {
+        "text": "Thank you.",
+        "start": 812.932,
+        "duration": 0.23
+    },
+    {
+        "text": "Represents it in the same way,",
+        "start": 813.562,
+        "duration": 1.57
+    },
+    {
+        "text": "but yeah, that's a good question.",
+        "start": 818.872,
+        "duration": 1.21
+    },
+    {
+        "text": "okay.",
+        "start": 824.962,
+        "duration": 0.48
+    },
+    {
+        "text": "And then, yeah, we defined a couple of\nmore things like minimum eval steps.",
+        "start": 825.582,
+        "duration": 4.1
+    },
+    {
+        "text": "We basically say we want to take at least\n20 steps before we make a classification",
+        "start": 829.712,
+        "duration": 5.64
+    },
+    {
+        "text": "because yeah, we just want to.",
+        "start": 835.722,
+        "duration": 2.11
+    },
+    {
+        "text": "Get enough information and don't\nbe over confident at the start.",
+        "start": 838.662,
+        "duration": 4.45
+    },
+    {
+        "text": "This is just to avoid\nearly false positives.",
+        "start": 843.582,
+        "duration": 3.14
+    },
+    {
+        "text": "yeah, as the comment says, I think\nit's not really necessary anymore.",
+        "start": 850.302,
+        "duration": 4.02
+    },
+    {
+        "text": "and also if we have some better policies,\nthis might be even less necessary.",
+        "start": 855.472,
+        "duration": 4.21
+    },
+    {
+        "text": "Then we define some tolerances.",
+        "start": 862.022,
+        "duration": 1.75
+    },
+    {
+        "text": "So tolerance basically means, okay,\nif, the sensed feature The difference",
+        "start": 864.832,
+        "duration": 6.325
+    },
+    {
+        "text": "between the sensed feature and the\nfeature stored in the model, if that",
+        "start": 871.157,
+        "duration": 4.76
+    },
+    {
+        "text": "difference is within that tolerance,\nwe're adding evidence for this hypothesis.",
+        "start": 875.917,
+        "duration": 4.6
+    },
+    {
+        "text": "If it's outside of that tolerance,\nwe're not adding evidence or with",
+        "start": 881.117,
+        "duration": 4.49
+    },
+    {
+        "text": "this, with like location, we're\nactually subtracting evidence.",
+        "start": 885.827,
+        "duration": 3.17
+    },
+    {
+        "text": "and then,",
+        "start": 892.247,
+        "duration": 0.79
+    },
+    {
+        "text": "we can also weigh how, much we\nwant to weigh these features.",
+        "start": 895.237,
+        "duration": 3.18
+    },
+    {
+        "text": "So for example, with HSV, we weigh\nthe saturation value only by 0.",
+        "start": 898.417,
+        "duration": 6.84
+    },
+    {
+        "text": "5.",
+        "start": 905.337,
+        "duration": 0.44
+    },
+    {
+        "text": "just because, those can be influenced by\nlighting conditions and stuff like that,",
+        "start": 907.717,
+        "duration": 5.09
+    },
+    {
+        "text": "and we want to be a bit robust to that.",
+        "start": 912.807,
+        "duration": 1.83
+    },
+    {
+        "text": "it probably doesn't really matter right\nnow, because we're not actually testing",
+        "start": 916.297,
+        "duration": 3.02
+    },
+    {
+        "text": "under different lighting conditions.",
+        "start": 919.317,
+        "duration": 1.54
+    },
+    {
+        "text": "but that's just another feature we have.",
+        "start": 921.927,
+        "duration": 1.68
+    },
+    {
+        "text": "We can weigh how much we want to rely\non color versus curvature versus,",
+        "start": 923.607,
+        "duration": 4.76
+    },
+    {
+        "text": "just the morphology of objects.",
+        "start": 928.647,
+        "duration": 1.84
+    },
+    {
+        "text": "how are the tolerance values,\nwhat's the general range for HSV",
+        "start": 934.282,
+        "duration": 5.56
+    },
+    {
+        "text": "and principal curvature logs?",
+        "start": 939.882,
+        "duration": 1.74
+    },
+    {
+        "text": "Like, how far off are they?",
+        "start": 941.642,
+        "duration": 1.81
+    },
+    {
+        "text": "is 0.",
+        "start": 943.912,
+        "duration": 0.4
+    },
+    {
+        "text": "1 in hue, is there like a concrete,\nlike red to orange, Yeah, so HSV, they",
+        "start": 944.572,
+        "duration": 8.51
+    },
+    {
+        "text": "are all between 0 and 1, actually,",
+        "start": 953.082,
+        "duration": 3.25
+    },
+    {
+        "text": "let's see,",
+        "start": 958.522,
+        "duration": 0.48
+    },
+    {
+        "text": "oh, okay, I guess that's because I'm in\nGermany, I get the German soccer clubs.",
+        "start": 961.372,
+        "duration": 5.41
+    },
+    {
+        "text": "yeah, so they are between zero and one\nand hue is this color is the actual color.",
+        "start": 969.542,
+        "duration": 9.65
+    },
+    {
+        "text": "So if we say like a 10th of the\ncircle is the tolerance basically.",
+        "start": 979.212,
+        "duration": 7.76
+    },
+    {
+        "text": "Gotcha.",
+        "start": 988.382,
+        "duration": 0.41
+    },
+    {
+        "text": "Makes sense.",
+        "start": 989.152,
+        "duration": 0.77
+    },
+    {
+        "text": "Yes.",
+        "start": 990.412,
+        "duration": 0.36
+    },
+    {
+        "text": "Yes.",
+        "start": 990.792,
+        "duration": 0.56
+    },
+    {
+        "text": "And also for the principal curvatures\nin log scale, that's different in.",
+        "start": 994.092,
+        "duration": 5.67
+    },
+    {
+        "text": "Yeah, so that's a bit hard.",
+        "start": 1002.852,
+        "duration": 1.43
+    },
+    {
+        "text": "I have some figures on this, but\nit would be taking a long time",
+        "start": 1004.402,
+        "duration": 3.95
+    },
+    {
+        "text": "for me to dig them up right now.",
+        "start": 1008.352,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay, Yeah, we can talk about this.",
+        "start": 1010.612,
+        "duration": 1.54
+    },
+    {
+        "text": "Yeah, basically principal\ncurvatures can get really large.",
+        "start": 1012.932,
+        "duration": 4.38
+    },
+    {
+        "text": "But then they can be encoding quite a bit\nof noise, when they get like super large.",
+        "start": 1018.862,
+        "duration": 6.85
+    },
+    {
+        "text": "So that's why we taking the logarithm of\nthem, because really the lower values are",
+        "start": 1025.712,
+        "duration": 5.18
+    },
+    {
+        "text": "the more interesting ones in most cases.",
+        "start": 1030.892,
+        "duration": 2.86
+    },
+    {
+        "text": "And then negative tolerance of\none is, it's, we ran a bunch of",
+        "start": 1034.412,
+        "duration": 6.71
+    },
+    {
+        "text": "experiments back in the day and that\nwas a reasonable tolerance to have.",
+        "start": 1041.122,
+        "duration": 3.68
+    },
+    {
+        "text": "Okay.",
+        "start": 1045.452,
+        "duration": 0.37
+    },
+    {
+        "text": "yeah, I can look up some plots I have on\nthis and send them after this meeting.",
+        "start": 1047.042,
+        "duration": 4.25
+    },
+    {
+        "text": "I guess I'm just wondering, it's\nit Different by one radians, if",
+        "start": 1052.762,
+        "duration": 6.095
+    },
+    {
+        "text": "there's a unit or, yeah, but I can\nlook at figures later and continue.",
+        "start": 1058.857,
+        "duration": 6.42
+    },
+    {
+        "text": "Yeah, let me share, oops, hang on, pull",
+        "start": 1065.277,
+        "duration": 4.29
+    },
+    {
+        "text": "this up here.",
+        "start": 1073.247,
+        "duration": 1.13
+    },
+    {
+        "text": "Okay, so I have a lot of figures.",
+        "start": 1075.277,
+        "duration": 1.53
+    },
+    {
+        "text": "I have random plots here.",
+        "start": 1077.222,
+        "duration": 1.15
+    },
+    {
+        "text": "Let me just see if I,",
+        "start": 1078.372,
+        "duration": 1.18
+    },
+    {
+        "text": "okay,",
+        "start": 1081.802,
+        "duration": 0.41
+    },
+    {
+        "text": "okay,",
+        "start": 1096.002,
+        "duration": 0.03
+    },
+    {
+        "text": "here's, for example, a histogram of how\nthe first one and the second principal",
+        "start": 1104.752,
+        "duration": 5.63
+    },
+    {
+        "text": "curvature, how the distribution is,",
+        "start": 1110.382,
+        "duration": 1.72
+    },
+    {
+        "text": "for this can, and then if we log\nit, it gets more into the Negative",
+        "start": 1114.412,
+        "duration": 6.9
+    },
+    {
+        "text": "seven, positive seven range.",
+        "start": 1122.782,
+        "duration": 2.0
+    },
+    {
+        "text": "So that's, and it's a\nlittle bit more reasonable.",
+        "start": 1125.182,
+        "duration": 2.49
+    },
+    {
+        "text": "and the scan is a bit, looks\na bit odd, but, it's because",
+        "start": 1129.022,
+        "duration": 4.09
+    },
+    {
+        "text": "it has these riffles in it.",
+        "start": 1133.112,
+        "duration": 1.65
+    },
+    {
+        "text": "like you can ask these riffles.",
+        "start": 1135.687,
+        "duration": 2.84
+    },
+    {
+        "text": "Okay.",
+        "start": 1140.187,
+        "duration": 0.35
+    },
+    {
+        "text": "And then the one makes\nsense now in that scale.",
+        "start": 1140.537,
+        "duration": 2.22
+    },
+    {
+        "text": "Yeah.",
+        "start": 1143.437,
+        "duration": 0.53
+    },
+    {
+        "text": "Fine.",
+        "start": 1146.897,
+        "duration": 0.22
+    },
+    {
+        "text": "I'm good.",
+        "start": 1147.157,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 1148.277,
+        "duration": 0.38
+    },
+    {
+        "text": "Good questions.",
+        "start": 1148.657,
+        "duration": 0.85
+    },
+    {
+        "text": "okay.",
+        "start": 1152.227,
+        "duration": 0.31
+    },
+    {
+        "text": "So then this is the config for\nthe learning module and by default",
+        "start": 1152.537,
+        "duration": 4.97
+    },
+    {
+        "text": "right now we're using the evidence\ngraph learning module here.",
+        "start": 1157.527,
+        "duration": 4.03
+    },
+    {
+        "text": "If you go to the class, we list\nout all the parameters that are",
+        "start": 1161.597,
+        "duration": 3.3
+    },
+    {
+        "text": "there with some text around it.",
+        "start": 1164.897,
+        "duration": 1.5
+    },
+    {
+        "text": "I'm not going to go through all of\nthem right now because that would take",
+        "start": 1167.192,
+        "duration": 2.67
+    },
+    {
+        "text": "really long probably to explain them\nall, but if you want to understand",
+        "start": 1169.992,
+        "duration": 3.55
+    },
+    {
+        "text": "it in more depth, maybe just read\nthrough all these parameters here.",
+        "start": 1173.542,
+        "duration": 3.75
+    },
+    {
+        "text": "and yeah, we basically define the\ntolerances again, like also the",
+        "start": 1179.892,
+        "duration": 4.79
+    },
+    {
+        "text": "tolerance for distance, which is like\nabout one centimeter, some threshold,",
+        "start": 1184.692,
+        "duration": 7.07
+    },
+    {
+        "text": "how many neighbors we want to look at.",
+        "start": 1191.972,
+        "duration": 1.96
+    },
+    {
+        "text": "And then some more parameters for the\npolicy as well that we use, the hypothesis",
+        "start": 1194.452,
+        "duration": 6.08
+    },
+    {
+        "text": "driven policy, where we jump to locations\nbased on the models that we have in memory",
+        "start": 1200.532,
+        "duration": 4.77
+    },
+    {
+        "text": "and the hypotheses that we currently have.",
+        "start": 1205.302,
+        "duration": 1.95
+    },
+    {
+        "text": "For this one, I had a question about\nwhat X percent threshold meant.",
+        "start": 1209.382,
+        "duration": 5.37
+    },
+    {
+        "text": "yeah, yeah, that basically means, so\nif we go evidence update threshold,",
+        "start": 1216.827,
+        "duration": 10.02
+    },
+    {
+        "text": "actually it's below, so evidence\nupdate threshold takes, oh, I",
+        "start": 1230.347,
+        "duration": 3.26
+    },
+    {
+        "text": "actually had a question about that\ntoo, but I'll give, I'll ask that.",
+        "start": 1233.647,
+        "duration": 2.57
+    },
+    {
+        "text": "Yeah, so basically, an object whose\nhighest evidence is greater than the",
+        "start": 1236.907,
+        "duration": 4.84
+    },
+    {
+        "text": "most likely object's evidence minus\nX percent of the most likely object's",
+        "start": 1241.747,
+        "duration": 5.21
+    },
+    {
+        "text": "evidence are considered possible matches.",
+        "start": 1246.957,
+        "duration": 2.17
+    },
+    {
+        "text": "Okay, let me unpack that.",
+        "start": 1249.707,
+        "duration": 1.27
+    },
+    {
+        "text": "basically,",
+        "start": 1252.757,
+        "duration": 0.75
+    },
+    {
+        "text": "Every object and every location\nand orientation on that object",
+        "start": 1255.667,
+        "duration": 4.43
+    },
+    {
+        "text": "has an evidence count on it.",
+        "start": 1260.097,
+        "duration": 1.58
+    },
+    {
+        "text": "And we look at the highest\nevidence count across all objects.",
+        "start": 1262.337,
+        "duration": 4.06
+    },
+    {
+        "text": "That's the most likely hypothesis.",
+        "start": 1266.827,
+        "duration": 1.71
+    },
+    {
+        "text": "But it might still be that there are\nlike multiple possible hypotheses.",
+        "start": 1269.807,
+        "duration": 4.41
+    },
+    {
+        "text": "So we basically take the\nhighest evidence count.",
+        "start": 1274.727,
+        "duration": 2.86
+    },
+    {
+        "text": "And then we take, let's say 10\npercent of that, subtract that",
+        "start": 1278.127,
+        "duration": 4.16
+    },
+    {
+        "text": "and everything that's within that.",
+        "start": 1282.357,
+        "duration": 1.37
+    },
+    {
+        "text": "Highest evidence minus 10 percent\nrange is considered possible.",
+        "start": 1284.347,
+        "duration": 4.31
+    },
+    {
+        "text": "Okay.",
+        "start": 1289.317,
+        "duration": 0.28
+    },
+    {
+        "text": "And then, for example, the terminal\ncondition is that there's only one",
+        "start": 1289.597,
+        "duration": 4.02
+    },
+    {
+        "text": "possible object and one possible\npose for that object, and that's",
+        "start": 1293.647,
+        "duration": 3.76
+    },
+    {
+        "text": "what that range is used for.",
+        "start": 1297.407,
+        "duration": 2.04
+    },
+    {
+        "text": "Gotcha.",
+        "start": 1300.277,
+        "duration": 0.25
+    },
+    {
+        "text": "hypothetically, if I set 100%,\nthen all the objects will",
+        "start": 1301.217,
+        "duration": 4.16
+    },
+    {
+        "text": "always be possible, right?",
+        "start": 1305.387,
+        "duration": 2.28
+    },
+    {
+        "text": "Yeah, unless they have negative evidence.",
+        "start": 1308.442,
+        "duration": 3.28
+    },
+    {
+        "text": "Ah, okay, because negative evidence.",
+        "start": 1312.342,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay, alright.",
+        "start": 1314.212,
+        "duration": 0.93
+    },
+    {
+        "text": "and then the related question,\nevidence update threshold,",
+        "start": 1316.252,
+        "duration": 2.97
+    },
+    {
+        "text": "which is a little bit above.",
+        "start": 1319.302,
+        "duration": 2.09
+    },
+    {
+        "text": "So this takes, how to decide which\nhypothesis should be updated.",
+        "start": 1322.212,
+        "duration": 5.05
+    },
+    {
+        "text": "And it says it can take either\ninteger float or these strings.",
+        "start": 1327.272,
+        "duration": 3.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 1332.032,
+        "duration": 0.62
+    },
+    {
+        "text": "for example, if we set X percent\nthreshold, that means we only update",
+        "start": 1334.222,
+        "duration": 4.2
+    },
+    {
+        "text": "the hypotheses that are still possible.",
+        "start": 1338.452,
+        "duration": 2.13
+    },
+    {
+        "text": "So this is basically to save us time.",
+        "start": 1340.922,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 1343.342,
+        "duration": 0.3
+    },
+    {
+        "text": "So if we do all, we update the\nevidence for every possible",
+        "start": 1343.642,
+        "duration": 3.75
+    },
+    {
+        "text": "hypothesis at every step.",
+        "start": 1347.392,
+        "duration": 1.41
+    },
+    {
+        "text": "That is, that gives the most accurate\nresults, but it also takes the longest.",
+        "start": 1349.277,
+        "duration": 3.81
+    },
+    {
+        "text": "cause we have to do all these matrix\nmultipliers at every step, large matrices.",
+        "start": 1354.407,
+        "duration": 3.68
+    },
+    {
+        "text": "So if we do X percent threshold,\nwe only take the hypothesis that",
+        "start": 1358.087,
+        "duration": 4.16
+    },
+    {
+        "text": "are still considered under this.",
+        "start": 1362.247,
+        "duration": 2.38
+    },
+    {
+        "text": "threshold.",
+        "start": 1366.907,
+        "duration": 0.69
+    },
+    {
+        "text": "okay.",
+        "start": 1369.167,
+        "duration": 0.03
+    },
+    {
+        "text": "And if we do mean, we basically update\nall the hypothesis where the evidence",
+        "start": 1369.197,
+        "duration": 4.93
+    },
+    {
+        "text": "is higher than the mean evidence.",
+        "start": 1374.127,
+        "duration": 2.37
+    },
+    {
+        "text": "Okay.",
+        "start": 1376.527,
+        "duration": 0.03
+    },
+    {
+        "text": "And then here, all the ones where it's\nhigher than the median e evidence, the",
+        "start": 1376.947,
+        "duration": 4.61
+    },
+    {
+        "text": "what, would you ask in for intent float?",
+        "start": 1381.917,
+        "duration": 2.19
+    },
+    {
+        "text": "what would that mean?",
+        "start": 1384.497,
+        "duration": 0.93
+    },
+    {
+        "text": "that would be an absolute evidence value.",
+        "start": 1386.337,
+        "duration": 3.09
+    },
+    {
+        "text": "for example, okay, if you have your\nevidence bound between minus one and one.",
+        "start": 1389.637,
+        "duration": 4.05
+    },
+    {
+        "text": "You could pass in 0.",
+        "start": 1394.297,
+        "duration": 2.425
+    },
+    {
+        "text": "8 or you could pass in zero and it\nwould just only update the hypotheses",
+        "start": 1396.722,
+        "duration": 4.915
+    },
+    {
+        "text": "that have positive evidence still.",
+        "start": 1401.687,
+        "duration": 2.09
+    },
+    {
+        "text": "Okay.",
+        "start": 1404.597,
+        "duration": 0.38
+    },
+    {
+        "text": "that's probably a dumb question, but\nwhat's the, is there a bound for evidence?",
+        "start": 1407.947,
+        "duration": 4.5
+    },
+    {
+        "text": "So it can go negative.",
+        "start": 1412.897,
+        "duration": 1.29
+    },
+    {
+        "text": "I thought it was like zero to a\nhundred, which was not correct, but,",
+        "start": 1414.257,
+        "duration": 3.39
+    },
+    {
+        "text": "yeah, it's your upper bound, lower\nbound, or it can go infinitely higher.",
+        "start": 1419.127,
+        "duration": 3.28
+    },
+    {
+        "text": "Yeah, good question.",
+        "start": 1423.412,
+        "duration": 1.87
+    },
+    {
+        "text": "So at any one step, the evidence\nthat, that can be added or subtracted",
+        "start": 1425.592,
+        "duration": 6.06
+    },
+    {
+        "text": "from, for a current, for a specific\nhypothesis is between minus one and two.",
+        "start": 1431.702,
+        "duration": 6.1
+    },
+    {
+        "text": "Minus one and two because we have evidence\nfor morphology and evidence for features,",
+        "start": 1438.622,
+        "duration": 6.795
+    },
+    {
+        "text": "and morphology can add and subtract\nevidence, and that is between minus one",
+        "start": 1445.787,
+        "duration": 5.08
+    },
+    {
+        "text": "and one, and then features like color,\nfor example, can only add evidence.",
+        "start": 1450.867,
+        "duration": 5.46
+    },
+    {
+        "text": "for example, if I've already learned\na model of a red cup, I can still",
+        "start": 1459.217,
+        "duration": 3.93
+    },
+    {
+        "text": "recognize a blue cup based on morphology.",
+        "start": 1463.487,
+        "duration": 2.33
+    },
+    {
+        "text": "And the blue is not going to subtract\nevidence all the time, but, if I",
+        "start": 1466.312,
+        "duration": 5.51
+    },
+    {
+        "text": "already know about a red cup and I\nsee red again, that kind of biases",
+        "start": 1471.902,
+        "duration": 3.55
+    },
+    {
+        "text": "me towards that, the red cup model.",
+        "start": 1475.482,
+        "duration": 1.9
+    },
+    {
+        "text": "And so that's why it's minus one and\ntwo, because the features can add",
+        "start": 1478.892,
+        "duration": 4.97
+    },
+    {
+        "text": "another up to two, one evidence to that.",
+        "start": 1484.452,
+        "duration": 3.19
+    },
+    {
+        "text": "And then we have these past and\npresent weight parameters and",
+        "start": 1488.092,
+        "duration": 6.41
+    },
+    {
+        "text": "by default, they're set to one.",
+        "start": 1494.562,
+        "duration": 1.72
+    },
+    {
+        "text": "So that means we just take, the evidence\nthat has accumulated so far, and",
+        "start": 1496.767,
+        "duration": 6.07
+    },
+    {
+        "text": "we add the one from the step, which\ncan be between minus one and two.",
+        "start": 1502.837,
+        "duration": 3.99
+    },
+    {
+        "text": "And that means the evidence can\ngrow infinitely, essentially.",
+        "start": 1507.287,
+        "duration": 4.1
+    },
+    {
+        "text": "If we, if the past weight plus\nthe present weight add up to one.",
+        "start": 1512.837,
+        "duration": 4.99
+    },
+    {
+        "text": "So if we set this, for example, to 0.",
+        "start": 1517.827,
+        "duration": 2.35
+    },
+    {
+        "text": "8 and this to 0.",
+        "start": 1520.217,
+        "duration": 1.28
+    },
+    {
+        "text": "2, then the evidence is\nbound to minus one and two.",
+        "start": 1521.577,
+        "duration": 5.4
+    },
+    {
+        "text": "we can do that to bind the evidence\ninto a range and that also works.",
+        "start": 1529.557,
+        "duration": 6.47
+    },
+    {
+        "text": "it's not as good as having them both set\nto one, because if we set both to one,",
+        "start": 1536.397,
+        "duration": 5.19
+    },
+    {
+        "text": "we basically have an infinite memory.",
+        "start": 1541.587,
+        "duration": 1.82
+    },
+    {
+        "text": "If we set them to add up to\none, we forget about things",
+        "start": 1545.637,
+        "duration": 4.32
+    },
+    {
+        "text": "that we've seen a long time ago.",
+        "start": 1549.997,
+        "duration": 1.69
+    },
+    {
+        "text": "Yeah, I think it in the future, it\nwould be nice to have them add up",
+        "start": 1552.397,
+        "duration": 4.07
+    },
+    {
+        "text": "to one and have the evidence bound.",
+        "start": 1556.467,
+        "duration": 1.66
+    },
+    {
+        "text": "But I think for that, we need some\nmore efficient policies so that it's",
+        "start": 1558.427,
+        "duration": 3.67
+    },
+    {
+        "text": "not like we need to take 500 steps\nto get to the other side of the mug.",
+        "start": 1562.297,
+        "duration": 4.45
+    },
+    {
+        "text": "But instead, yeah, that only makes\nsense with more efficient policies.",
+        "start": 1567.047,
+        "duration": 6.44
+    },
+    {
+        "text": "That's great.",
+        "start": 1574.567,
+        "duration": 0.49
+    },
+    {
+        "text": "Perfect.",
+        "start": 1577.037,
+        "duration": 0.25
+    },
+    {
+        "text": "This is like clarifying a lot of things.",
+        "start": 1577.307,
+        "duration": 1.34
+    },
+    {
+        "text": "So thank you so much.",
+        "start": 1578.647,
+        "duration": 1.143
+    },
+    {
+        "text": "Cool.",
+        "start": 1579.79,
+        "duration": 0.357
+    },
+    {
+        "text": "Yeah, Keep the questions coming.",
+        "start": 1580.747,
+        "duration": 1.42
+    },
+    {
+        "text": "This is great.",
+        "start": 1582.997,
+        "duration": 0.49
+    },
+    {
+        "text": "I noticed I didn't update Eh,\nin those two places, so I just",
+        "start": 1585.187,
+        "duration": 5.02
+    },
+    {
+        "text": "made a pull request to fix it.",
+        "start": 1590.297,
+        "duration": 1.26
+    },
+    {
+        "text": ". Thank you.",
+        "start": 1592.522,
+        "duration": 0.39
+    },
+    {
+        "text": "Good.",
+        "start": 1593.982,
+        "duration": 0.29
+    },
+    {
+        "text": "Just in those, it's\njust in the doc string.",
+        "start": 1595.727,
+        "duration": 2.76
+    },
+    {
+        "text": "It's fine everywhere else.",
+        "start": 1598.487,
+        "duration": 1.11
+    },
+    {
+        "text": "Okay.",
+        "start": 1600.377,
+        "duration": 0.06
+    },
+    {
+        "text": "What's your color scheme?",
+        "start": 1602.612,
+        "duration": 0.87
+    },
+    {
+        "text": "I really like that the bad . The,\nnames are popping up in red.",
+        "start": 1603.482,
+        "duration": 3.78
+    },
+    {
+        "text": "'cause mine is all yellow and that . Oh.",
+        "start": 1607.652,
+        "duration": 3.165
+    },
+    {
+        "text": "I don't know.",
+        "start": 1611.502,
+        "duration": 0.45
+    },
+    {
+        "text": "Where do I see that?",
+        "start": 1612.282,
+        "duration": 1.08
+    },
+    {
+        "text": "I said that a long time ago\nand I thought it looked cool.",
+        "start": 1613.692,
+        "duration": 2.76
+    },
+    {
+        "text": "let's see.",
+        "start": 1617.322,
+        "duration": 0.24
+    },
+    {
+        "text": "Color theme.",
+        "start": 1618.012,
+        "duration": 0.66
+    },
+    {
+        "text": "monocai.",
+        "start": 1618.942,
+        "duration": 1.81
+    },
+    {
+        "text": "All right.",
+        "start": 1620.772,
+        "duration": 0.21
+    },
+    {
+        "text": "Thank you",
+        "start": 1621.492,
+        "duration": 0.21
+    },
+    {
+        "text": "okay, so we define a couple\nmore things in the configs.",
+        "start": 1626.912,
+        "duration": 5.56
+    },
+    {
+        "text": "some things we do a bit, specific\nto the surface or a distant agent.",
+        "start": 1633.877,
+        "duration": 4.81
+    },
+    {
+        "text": "and then this is for the five\nlearning module config, where we",
+        "start": 1640.157,
+        "duration": 4.59
+    },
+    {
+        "text": "essentially just copy the config\nfor one learning module five times.",
+        "start": 1644.747,
+        "duration": 4.05
+    },
+    {
+        "text": "and then put it all into one dictionary,\nlearning module zero through four.",
+        "start": 1651.507,
+        "duration": 4.88
+    },
+    {
+        "text": "then we define some things\nfor the sensor module.",
+        "start": 1658.347,
+        "duration": 3.43
+    },
+    {
+        "text": "So we define which features we want\nto extract from the raw observations.",
+        "start": 1661.807,
+        "duration": 4.89
+    },
+    {
+        "text": "So if you remember, let me\ngo back here, observations.",
+        "start": 1667.432,
+        "duration": 6.46
+    },
+    {
+        "text": "We basically, we have the view,\nwe don't ever see this picture.",
+        "start": 1675.822,
+        "duration": 4.96
+    },
+    {
+        "text": "Each sensor only gets a small\npatch like this at any time.",
+        "start": 1681.552,
+        "duration": 3.44
+    },
+    {
+        "text": "From this patch, we extract a couple\nof points in three dimensional",
+        "start": 1685.752,
+        "duration": 5.86
+    },
+    {
+        "text": "space, like a point cloud, since\nwe also have a depth image.",
+        "start": 1691.612,
+        "duration": 4.11
+    },
+    {
+        "text": "and then from this\npatch, we extract a pose.",
+        "start": 1697.402,
+        "duration": 3.43
+    },
+    {
+        "text": "So that's defined by the location of\nthe center point, plus the point normal.",
+        "start": 1701.002,
+        "duration": 6.76
+    },
+    {
+        "text": "the two principal, curvature directions.",
+        "start": 1708.447,
+        "duration": 3.26
+    },
+    {
+        "text": "plus some features that are",
+        "start": 1713.217,
+        "duration": 2.0
+    },
+    {
+        "text": "independent of rotation and location,\nand that could be like color or the",
+        "start": 1717.307,
+        "duration": 5.2
+    },
+    {
+        "text": "amount of curvature that we have here.",
+        "start": 1722.547,
+        "duration": 1.85
+    },
+    {
+        "text": "and yeah, the features that we're\nextracting in these experiments here",
+        "start": 1726.617,
+        "duration": 4.44
+    },
+    {
+        "text": "are pose vectors, whether the pose\nis fully defined, whether we are",
+        "start": 1731.647,
+        "duration": 5.29
+    },
+    {
+        "text": "actually on the object or not on an\na object, we don't know what object.",
+        "start": 1736.947,
+        "duration": 6.04
+    },
+    {
+        "text": "HSV, and then the principal\ncurvatures, logged,",
+        "start": 1744.362,
+        "duration": 4.74
+    },
+    {
+        "text": "and then for the surface agent,\nwe just need to extract a few",
+        "start": 1752.952,
+        "duration": 3.41
+    },
+    {
+        "text": "more for the policy to work.",
+        "start": 1756.362,
+        "duration": 2.36
+    },
+    {
+        "text": "So we extract also the minimum\ndepth and the mean depth across",
+        "start": 1758.722,
+        "duration": 4.18
+    },
+    {
+        "text": "the patch and the object coverage.",
+        "start": 1762.902,
+        "duration": 3.42
+    },
+    {
+        "text": "and then, yeah, for some of the\nexperiments, we also add some",
+        "start": 1770.852,
+        "duration": 3.18
+    },
+    {
+        "text": "noise, does this just for testing\nhow robust we are to noise?",
+        "start": 1774.032,
+        "duration": 5.72
+    },
+    {
+        "text": "It's not required for the algorithm\nto work or anything, but here we",
+        "start": 1780.292,
+        "duration": 4.4
+    },
+    {
+        "text": "basically define how much noise\nwe add to the different parts.",
+        "start": 1784.692,
+        "duration": 2.9
+    },
+    {
+        "text": "So for example, how much noise\nwe add to the locations and how",
+        "start": 1787.592,
+        "duration": 4.43
+    },
+    {
+        "text": "much we add to the color and\nthose vectors and stuff like that.",
+        "start": 1792.022,
+        "duration": 4.01
+    },
+    {
+        "text": "Okay, so I, think I, The location, like 0.",
+        "start": 1797.662,
+        "duration": 5.74
+    },
+    {
+        "text": "002, is in centimeters, right?",
+        "start": 1803.402,
+        "duration": 5.61
+    },
+    {
+        "text": "The unit?",
+        "start": 1809.162,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 1809.792,
+        "duration": 0.26
+    },
+    {
+        "text": "Yeah, so I remember, max\ngraph size could be 0.",
+        "start": 1810.512,
+        "duration": 3.07
+    },
+    {
+        "text": "3, which, like I saw in the\ncomment, that's 30 centimeters.",
+        "start": 1813.582,
+        "duration": 2.74
+    },
+    {
+        "text": "Yeah, 002 would be, that's about two\nmillimeters, yeah, okay, I think in the,",
+        "start": 1816.727,
+        "duration": 8.33
+    },
+    {
+        "text": "if we go to the benchmark experiments, we\nhave, yeah, I think I saw like a little",
+        "start": 1825.147,
+        "duration": 4.11
+    },
+    {
+        "text": "noisy, yeah, so this is how the noise\nlooks like, gotcha, I had a question",
+        "start": 1829.257,
+        "duration": 6.1
+    },
+    {
+        "text": "about that, Yeah, the, what is the\ndistance, cause I've come across this",
+        "start": 1835.367,
+        "duration": 7.02
+    },
+    {
+        "text": "doing actions and I couldn't find the\nunits for the distance anywhere really.",
+        "start": 1842.447,
+        "duration": 5.87
+    },
+    {
+        "text": "So now that I see that they're here,\nwhat is that coupled to the one meter?",
+        "start": 1849.017,
+        "duration": 7.14
+    },
+    {
+        "text": "Where does that come from?",
+        "start": 1856.157,
+        "duration": 0.97
+    },
+    {
+        "text": "Cause it seems doesn't need, cause\nit doesn't need actual units to work.",
+        "start": 1857.917,
+        "duration": 4.87
+    },
+    {
+        "text": "So what is it coupled with?",
+        "start": 1863.407,
+        "duration": 1.14
+    },
+    {
+        "text": "I don't know.",
+        "start": 1864.547,
+        "duration": 0.07
+    },
+    {
+        "text": "I think that's coupled to habitat,\nand yeah, I think it's just to",
+        "start": 1866.177,
+        "duration": 6.15
+    },
+    {
+        "text": "have a reference, like to know\nhow much that would roughly be,",
+        "start": 1872.337,
+        "duration": 4.56
+    },
+    {
+        "text": "So yeah, it doesn't really matter,",
+        "start": 1877.547,
+        "duration": 3.73
+    },
+    {
+        "text": "The reason I'm like, when I was\ndoing actions, all the distances,",
+        "start": 1883.512,
+        "duration": 4.08
+    },
+    {
+        "text": "et cetera, they were unitless.",
+        "start": 1887.592,
+        "duration": 2.03
+    },
+    {
+        "text": "And so, it, so this is only if we're\nlike relating it to the ground truth and",
+        "start": 1890.272,
+        "duration": 7.35
+    },
+    {
+        "text": "habitat or something for a real object.",
+        "start": 1897.632,
+        "duration": 2.02
+    },
+    {
+        "text": "But we don't need the units,\ndistance units for this to work.",
+        "start": 1899.882,
+        "duration": 3.34
+    },
+    {
+        "text": "Oh, no, we don't need that.",
+        "start": 1904.182,
+        "duration": 1.62
+    },
+    {
+        "text": "And the reason leading\nquestion there is because.",
+        "start": 1906.762,
+        "duration": 2.59
+    },
+    {
+        "text": "If we have abstract 3d spaces, we still\nhave distance, but not necessarily",
+        "start": 1910.907,
+        "duration": 4.12
+    },
+    {
+        "text": "units of what it means to be there.",
+        "start": 1915.027,
+        "duration": 2.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 1917.577,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 1919.647,
+        "duration": 0.42
+    },
+    {
+        "text": "So it doesn't really matter if for\nexample, like a hundred, if one would",
+        "start": 1920.067,
+        "duration": 6.87
+    },
+    {
+        "text": "be a centimeter instead of a meter,\nit would work exactly the same.",
+        "start": 1926.947,
+        "duration": 4.7
+    },
+    {
+        "text": "We would probably want to update the\ntolerances that we use for matching.",
+        "start": 1931.787,
+        "duration": 5.28
+    },
+    {
+        "text": "if we then use a tolerance\nfor location of 0.",
+        "start": 1937.169,
+        "duration": 3.533
+    },
+    {
+        "text": "01, then that would mean like\nwe, we can't have much noise in",
+        "start": 1940.732,
+        "duration": 4.97
+    },
+    {
+        "text": "the locations that we're sensing.",
+        "start": 1945.702,
+        "duration": 1.34
+    },
+    {
+        "text": "It has to be like exact to the millimeter.",
+        "start": 1947.042,
+        "duration": 2.2
+    },
+    {
+        "text": "Those tolerances can just be adjusted,\nlike scaled by how big the models",
+        "start": 1950.912,
+        "duration": 4.54
+    },
+    {
+        "text": "are basically that we have in memory.",
+        "start": 1955.492,
+        "duration": 1.72
+    },
+    {
+        "text": "yeah, all of this is are coupled\nto a scale in the environment,",
+        "start": 1960.152,
+        "duration": 4.31
+    },
+    {
+        "text": "but the distance is not.",
+        "start": 1964.502,
+        "duration": 1.89
+    },
+    {
+        "text": "the, yeah, the tolerances right now,\nwe define them ourselves in here.",
+        "start": 1970.442,
+        "duration": 4.46
+    },
+    {
+        "text": "we, could determine them\nautomatically and, yeah,",
+        "start": 1977.222,
+        "duration": 6.05
+    },
+    {
+        "text": "the distances are very much\nrelated to the tolerances.",
+        "start": 1985.812,
+        "duration": 4.07
+    },
+    {
+        "text": "The tolerances basically tell you how,\nmuch distance you can have between an",
+        "start": 1989.992,
+        "duration": 4.11
+    },
+    {
+        "text": "observed point and a point in the model.",
+        "start": 1994.492,
+        "duration": 1.96
+    },
+    {
+        "text": "Yeah, I think we're noticing, a\ncouple of, coupled, arguments like",
+        "start": 1999.592,
+        "duration": 6.01
+    },
+    {
+        "text": "the one about distance and the one\nabout, for example, the evidence",
+        "start": 2005.632,
+        "duration": 3.46
+    },
+    {
+        "text": "threshold, if we set the weights.",
+        "start": 2009.092,
+        "duration": 2.18
+    },
+    {
+        "text": "To sum up to one, that doesn't make\nsense to use evidence threshold",
+        "start": 2011.682,
+        "duration": 4.09
+    },
+    {
+        "text": "with X percent, because it means\nthat, anything within 20, but if",
+        "start": 2015.772,
+        "duration": 4.98
+    },
+    {
+        "text": "the range is, minus one to one, then\neverything would be considered, right?",
+        "start": 2020.752,
+        "duration": 3.36
+    },
+    {
+        "text": "there's a couple of arguments in evidence,\nso I'm going And, evidence graph LM",
+        "start": 2025.062,
+        "duration": 3.69
+    },
+    {
+        "text": "that if you change, for example, the\npresent weight of the past weight, for",
+        "start": 2028.772,
+        "duration": 5.39
+    },
+    {
+        "text": "example, to solve the one, then you\nshould probably change how the evidence",
+        "start": 2034.162,
+        "duration": 3.38
+    },
+    {
+        "text": "is, like what, is considered match\nthat kind of, yeah, So the X percent",
+        "start": 2037.542,
+        "duration": 6.31
+    },
+    {
+        "text": "threshold would still work if it's\nbetween minus one and one bounded percent.",
+        "start": 2043.852,
+        "duration": 4.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 2048.242,
+        "duration": 0.29
+    },
+    {
+        "text": "percentage.",
+        "start": 2048.532,
+        "duration": 0.52
+    },
+    {
+        "text": "But if we, would, for example, set\nthe threshold to two, then that",
+        "start": 2049.412,
+        "duration": 4.73
+    },
+    {
+        "text": "would not make any sense because\nwe wouldn't have to do anything.",
+        "start": 2054.142,
+        "duration": 2.98
+    },
+    {
+        "text": "or another thing, if, for example,\nif we set like the feature weights.",
+        "start": 2058.702,
+        "duration": 6.0
+    },
+    {
+        "text": "Here they are all below one, but if\nwe would want to weigh Q by five, for",
+        "start": 2065.342,
+        "duration": 5.91
+    },
+    {
+        "text": "whatever reason, then the evidence\nagain is it's not, it wouldn't be",
+        "start": 2071.252,
+        "duration": 3.98
+    },
+    {
+        "text": "bound between minus one and one\nanymore, between minus one and five.",
+        "start": 2075.232,
+        "duration": 5.38
+    },
+    {
+        "text": "Okay,",
+        "start": 2081.132,
+        "duration": 0.23
+    },
+    {
+        "text": "Okay.",
+        "start": 2083.827,
+        "duration": 0.29
+    },
+    {
+        "text": "yeah, it takes a bit, of, time to get the\nfeel for all these different parameters",
+        "start": 2091.437,
+        "duration": 4.84
+    },
+    {
+        "text": "and how they relate to each other.",
+        "start": 2096.277,
+        "duration": 1.54
+    },
+    {
+        "text": "maybe at some point we can automate\nmore of the setting of the parameters.",
+        "start": 2100.847,
+        "duration": 3.8
+    },
+    {
+        "text": "yeah, I think it could be a good idea\nto set the tolerance based on how large",
+        "start": 2105.127,
+        "duration": 5.01
+    },
+    {
+        "text": "the graphs are that we have in memory\nand how high resolution they are, for",
+        "start": 2110.357,
+        "duration": 3.68
+    },
+    {
+        "text": "example, or also based on how much\nnoise we're sensing with our sensor.",
+        "start": 2114.037,
+        "duration": 5.79
+    },
+    {
+        "text": "Yeah, I think it's okay for now.",
+        "start": 2121.622,
+        "duration": 2.79
+    },
+    {
+        "text": "Of course, before the release, the less\nhyperparameters we need to fiddle around,",
+        "start": 2124.722,
+        "duration": 5.33
+    },
+    {
+        "text": "it also reduces the experiment space.",
+        "start": 2130.492,
+        "duration": 2.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 2133.802,
+        "duration": 0.58
+    },
+    {
+        "text": "Or prevents me from running dumb\nexperiments because I'm the kind of",
+        "start": 2134.852,
+        "duration": 2.51
+    },
+    {
+        "text": "person who will probably run like,\nNegative one to one and then but a",
+        "start": 2137.362,
+        "duration": 3.395
+    },
+    {
+        "text": "feature of five on HSV and it's I\ndon't know why stuff is not working.",
+        "start": 2140.757,
+        "duration": 3.95
+    },
+    {
+        "text": "yeah.",
+        "start": 2146.977,
+        "duration": 0.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 2147.907,
+        "duration": 0.32
+    },
+    {
+        "text": "Most of the values, if you just\nuse the settings in the benchmark",
+        "start": 2148.447,
+        "duration": 3.42
+    },
+    {
+        "text": "experiments, that's pretty much\nthe best we can do right now.",
+        "start": 2151.867,
+        "duration": 2.89
+    },
+    {
+        "text": "And then if you do play around with\nthe parameters, it makes sense to just",
+        "start": 2155.037,
+        "duration": 3.67
+    },
+    {
+        "text": "read through the doc string ones and\nhave an idea of how they, what they do",
+        "start": 2159.087,
+        "duration": 5.11
+    },
+    {
+        "text": "basically and how they might interact.",
+        "start": 2164.197,
+        "duration": 2.1
+    },
+    {
+        "text": "And",
+        "start": 2166.312,
+        "duration": 2.04
+    },
+    {
+        "text": "is it true that I can accidentally\nmisconfigure these if they",
+        "start": 2171.492,
+        "duration": 4.46
+    },
+    {
+        "text": "don't correspond to the actual\nsensor module capabilities?",
+        "start": 2175.952,
+        "duration": 4.4
+    },
+    {
+        "text": "you mean for example, I specify\nthat I want to extract a specific",
+        "start": 2182.902,
+        "duration": 4.57
+    },
+    {
+        "text": "feature that my sensor can't detect?",
+        "start": 2187.472,
+        "duration": 2.69
+    },
+    {
+        "text": "Or just even with the tolerances.",
+        "start": 2190.682,
+        "duration": 1.89
+    },
+    {
+        "text": "so yes to what you just said,\nbut also with the tolerances.",
+        "start": 2193.092,
+        "duration": 3.36
+    },
+    {
+        "text": "if I say, Hey, I want to\ntolerate this noise, but sensor",
+        "start": 2196.662,
+        "duration": 3.58
+    },
+    {
+        "text": "module actually generates.",
+        "start": 2200.242,
+        "duration": 1.64
+    },
+    {
+        "text": "actually can't triple, 10 X that's\ntolerance of a sensor module, and",
+        "start": 2202.992,
+        "duration": 5.34
+    },
+    {
+        "text": "it does not have resolution, to\nresolve what, we're setting here.",
+        "start": 2208.332,
+        "duration": 5.04
+    },
+    {
+        "text": "I'm not, I don't remember this\ndetail, but I think if you specify an",
+        "start": 2215.522,
+        "duration": 5.02
+    },
+    {
+        "text": "additional tolerance that we're not\nsensing, it doesn't matter because",
+        "start": 2220.562,
+        "duration": 3.65
+    },
+    {
+        "text": "it just won't ever look for it.",
+        "start": 2224.212,
+        "duration": 1.6
+    },
+    {
+        "text": "No, What I mean is if you\ngo to one of the numbers,",
+        "start": 2226.662,
+        "duration": 2.11
+    },
+    {
+        "text": "which numbers?",
+        "start": 2231.252,
+        "duration": 0.99
+    },
+    {
+        "text": "This,",
+        "start": 2232.242,
+        "duration": 0.29
+    },
+    {
+        "text": "the, we had the.",
+        "start": 2235.452,
+        "duration": 2.52
+    },
+    {
+        "text": "The distance, these,",
+        "start": 2238.107,
+        "duration": 3.09
+    },
+    {
+        "text": "yeah, these ones, nice parameters.",
+        "start": 2244.437,
+        "duration": 1.96
+    },
+    {
+        "text": "There we go.",
+        "start": 2246.397,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 2247.187,
+        "duration": 0.44
+    },
+    {
+        "text": "So like the location noise, right?",
+        "start": 2249.237,
+        "duration": 2.45
+    },
+    {
+        "text": "So we're saying, Oh, this just says,\nwe're just not add noise to the location.",
+        "start": 2251.827,
+        "duration": 6.38
+    },
+    {
+        "text": "Okay.",
+        "start": 2260.477,
+        "duration": 0.39
+    },
+    {
+        "text": "Got it.",
+        "start": 2260.867,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 2261.187,
+        "duration": 0.2
+    },
+    {
+        "text": "Oh, I'm cut up.",
+        "start": 2261.742,
+        "duration": 0.94
+    },
+    {
+        "text": "I misunderstood it.",
+        "start": 2262.682,
+        "duration": 0.82
+    },
+    {
+        "text": "I'm cut up now.",
+        "start": 2263.602,
+        "duration": 0.61
+    },
+    {
+        "text": "Thank you.",
+        "start": 2264.212,
+        "duration": 0.35
+    },
+    {
+        "text": "Okay.",
+        "start": 2265.802,
+        "duration": 0.42
+    },
+    {
+        "text": "okay.",
+        "start": 2270.182,
+        "duration": 0.38
+    },
+    {
+        "text": "And then, yeah, we basically\ndefined this noisy sensor module.",
+        "start": 2270.592,
+        "duration": 5.54
+    },
+    {
+        "text": "and there we pass in these noise\nparameters as a dictionary.",
+        "start": 2278.052,
+        "duration": 3.78
+    },
+    {
+        "text": "why do I have to change?",
+        "start": 2282.572,
+        "duration": 1.12
+    },
+    {
+        "text": "Okay.",
+        "start": 2283.782,
+        "duration": 0.23
+    },
+    {
+        "text": "And then we, also, we defined a feature\nchange as M, which basically means we",
+        "start": 2284.392,
+        "duration": 6.18
+    },
+    {
+        "text": "only pass It's a sensation from the\nsensor module to the learning module if",
+        "start": 2290.572,
+        "duration": 5.365
+    },
+    {
+        "text": "the sensor module detected a significant\nchange in features or locations.",
+        "start": 2296.277,
+        "duration": 4.54
+    },
+    {
+        "text": "So essentially, if I'm like, if I'm on\na flat surface, nothing is changing.",
+        "start": 2301.357,
+        "duration": 5.07
+    },
+    {
+        "text": "I only moved like half an inch\nor whatever, a small distance.",
+        "start": 2306.577,
+        "duration": 4.09
+    },
+    {
+        "text": "I don't need to send that observation\nto a learning module again, because",
+        "start": 2310.967,
+        "duration": 2.83
+    },
+    {
+        "text": "it's not going to get a whole\nlot of information out of it.",
+        "start": 2313.797,
+        "duration": 2.78
+    },
+    {
+        "text": "I'm going to wait until I'm\nactually going to get to an edge.",
+        "start": 2316.917,
+        "duration": 2.5
+    },
+    {
+        "text": "And then the curvature changes suddenly,\nand then I'm going to send that",
+        "start": 2319.787,
+        "duration": 3.46
+    },
+    {
+        "text": "observation to the learning module, and\nthen the learning module can actually do",
+        "start": 2323.267,
+        "duration": 4.3
+    },
+    {
+        "text": "something useful with that observation.",
+        "start": 2327.567,
+        "duration": 1.66
+    },
+    {
+        "text": "so that, that's, that just\nmakes it a bit more efficient.",
+        "start": 2330.677,
+        "duration": 3.5
+    },
+    {
+        "text": "and for that we have these delta\nthresholds, so basically, Here, we say",
+        "start": 2336.067,
+        "duration": 5.205
+    },
+    {
+        "text": "we, we send a new observation once we\nmove the distance of one centimeter.",
+        "start": 2341.272,
+        "duration": 5.82
+    },
+    {
+        "text": "yeah.",
+        "start": 2352.302,
+        "duration": 0.41
+    },
+    {
+        "text": "yeah.",
+        "start": 2354.882,
+        "duration": 0.47
+    },
+    {
+        "text": "Yeah.",
+        "start": 2355.352,
+        "duration": 0.3
+    },
+    {
+        "text": "And then, yeah, we have the same for the\nsurface agent, which is pretty much the",
+        "start": 2357.492,
+        "duration": 6.94
+    },
+    {
+        "text": "same config, same noise parameters, just\nthat surface agent SM is set to true.",
+        "start": 2364.432,
+        "duration": 4.58
+    },
+    {
+        "text": "should we also define like some kind of\nwhat means a significant change in color?",
+        "start": 2371.912,
+        "duration": 4.98
+    },
+    {
+        "text": "So we have some kind of.",
+        "start": 2376.922,
+        "duration": 1.17
+    },
+    {
+        "text": "Threshold by distance, we need to\nmove at least one centimeter, but",
+        "start": 2378.327,
+        "duration": 4.04
+    },
+    {
+        "text": "if, let's say, hue, color change\nfrom red to blue or something.",
+        "start": 2382.397,
+        "duration": 4.09
+    },
+    {
+        "text": "Yeah, we could, we could basically\njust go here and say HSV.",
+        "start": 2389.367,
+        "duration": 4.98
+    },
+    {
+        "text": "okay.",
+        "start": 2395.967,
+        "duration": 0.16
+    },
+    {
+        "text": "Yeah, just, yeah.",
+        "start": 2396.577,
+        "duration": 0.745
+    },
+    {
+        "text": "And then we would probably want\nto do I don't know, let's say",
+        "start": 2398.002,
+        "duration": 3.9
+    },
+    {
+        "text": "we, we really want to change\nonce we detect a change in color.",
+        "start": 2401.902,
+        "duration": 4.45
+    },
+    {
+        "text": "So we do the small value here, but then\nwe don't care about saturation and value.",
+        "start": 2406.352,
+        "duration": 5.49
+    },
+    {
+        "text": "We could do this for example.",
+        "start": 2412.042,
+        "duration": 1.23
+    },
+    {
+        "text": "Gotcha.",
+        "start": 2414.852,
+        "duration": 0.32
+    },
+    {
+        "text": "I have a, let me know if this\nis, Too much outside the code.",
+        "start": 2419.512,
+        "duration": 4.825
+    },
+    {
+        "text": "I have a question about the\ncorrespondence of feature",
+        "start": 2424.547,
+        "duration": 2.63
+    },
+    {
+        "text": "change sensor module to anatomy.",
+        "start": 2427.177,
+        "duration": 2.01
+    },
+    {
+        "text": "so considering the phenomenon that\nlike, if you have saccade, but they've",
+        "start": 2430.947,
+        "duration": 5.7
+    },
+    {
+        "text": "done an experiment where it's like the\nimage remains stationary, you become",
+        "start": 2436.647,
+        "duration": 3.21
+    },
+    {
+        "text": "You stop losing perception of the image\nbecause even your eye is saccading, it's",
+        "start": 2440.337,
+        "duration": 4.12
+    },
+    {
+        "text": "getting the same input or you're hearing\nthings and then it's just, we just",
+        "start": 2444.467,
+        "duration": 4.06
+    },
+    {
+        "text": "become desensitized to the same input.",
+        "start": 2448.527,
+        "duration": 2.06
+    },
+    {
+        "text": "Yeah.",
+        "start": 2451.177,
+        "duration": 0.57
+    },
+    {
+        "text": "But does that happen inside a sensor\nmodule or in a cortical column?",
+        "start": 2452.177,
+        "duration": 3.4
+    },
+    {
+        "text": "That's my question because it seems like\nthe sensor module is implementing this",
+        "start": 2455.807,
+        "duration": 4.3
+    },
+    {
+        "text": "desensitization, but is that what happens?",
+        "start": 2460.327,
+        "duration": 2.94
+    },
+    {
+        "text": "And the anatomy or, yeah.",
+        "start": 2463.587,
+        "duration": 2.58
+    },
+    {
+        "text": "So yeah, I think you, what you're\ntalking about is habituation and, yes.",
+        "start": 2466.167,
+        "duration": 4.92
+    },
+    {
+        "text": "I don't think you need, this also\nhappens in like very primitive",
+        "start": 2471.497,
+        "duration": 4.83
+    },
+    {
+        "text": "animals, not, that don't have a cor\nneocortex or a cortical columns.",
+        "start": 2476.327,
+        "duration": 4.59
+    },
+    {
+        "text": "So I think it, it can be implemented\npretty early on and doesn't need",
+        "start": 2480.917,
+        "duration": 4.5
+    },
+    {
+        "text": "to happen in, the cortical columns.",
+        "start": 2485.417,
+        "duration": 2.1
+    },
+    {
+        "text": "I'm not, I would be saying\nsomething that I'm not sure about.",
+        "start": 2489.417,
+        "duration": 4.11
+    },
+    {
+        "text": "If I would say now, it always happens\nat the sensor level, but I think it's",
+        "start": 2493.962,
+        "duration": 5.98
+    },
+    {
+        "text": "pretty easy to do this at an early stage.",
+        "start": 2500.252,
+        "duration": 2.47
+    },
+    {
+        "text": "I'm not sure if habituation can work\non such a short timescale, if I'm just",
+        "start": 2504.757,
+        "duration": 4.69
+    },
+    {
+        "text": "moving on the surface of a cup like this.",
+        "start": 2509.507,
+        "duration": 3.04
+    },
+    {
+        "text": "I don't think habituation happens\nthat fast that, but I think there",
+        "start": 2513.157,
+        "duration": 4.38
+    },
+    {
+        "text": "are other mechanisms that just\ntrigger us to attend only to this",
+        "start": 2517.537,
+        "duration": 5.27
+    },
+    {
+        "text": "once actually something changes.",
+        "start": 2522.847,
+        "duration": 1.81
+    },
+    {
+        "text": "yeah.",
+        "start": 2528.367,
+        "duration": 0.47
+    },
+    {
+        "text": "That's helpful context.",
+        "start": 2530.227,
+        "duration": 0.8
+    },
+    {
+        "text": "Appreciate it.",
+        "start": 2531.057,
+        "duration": 0.35
+    },
+    {
+        "text": "A quick question.",
+        "start": 2532.727,
+        "duration": 0.67
+    },
+    {
+        "text": "Sorry about this one.",
+        "start": 2533.667,
+        "duration": 1.08
+    },
+    {
+        "text": "Again, this is change, when I send\nsomething when we change by one",
+        "start": 2536.822,
+        "duration": 3.38
+    },
+    {
+        "text": "centimeter, does that mean, let's\nsay, we only move a millimeter, but",
+        "start": 2540.202,
+        "duration": 5.42
+    },
+    {
+        "text": "suddenly the color change, we were at an\nedge, will that still send it, because",
+        "start": 2545.722,
+        "duration": 4.46
+    },
+    {
+        "text": "it's a significant change in color,\nbut, or does it always need to be, it",
+        "start": 2550.182,
+        "duration": 6.44
+    },
+    {
+        "text": "needs to be at least one centimeter\naway, whatever everything else is.",
+        "start": 2556.622,
+        "duration": 3.3
+    },
+    {
+        "text": "Yeah, I guess I was trying to parse\nthrough the if then else loop, I was",
+        "start": 2563.232,
+        "duration": 5.12
+    },
+    {
+        "text": "just wondering, whatever, basically,\nwhatever color change does that get pushed",
+        "start": 2568.352,
+        "duration": 6.05
+    },
+    {
+        "text": "through, regardless of the distance?",
+        "start": 2574.402,
+        "duration": 2.23
+    },
+    {
+        "text": "or",
+        "start": 2578.592,
+        "duration": 0.61
+    },
+    {
+        "text": "does it, also have a change\nin distance of one centimeter?",
+        "start": 2581.582,
+        "duration": 4.38
+    },
+    {
+        "text": "That makes sense.",
+        "start": 2587.042,
+        "duration": 0.35
+    },
+    {
+        "text": "Yeah, I think in this case it\nwouldn't care about the color change.",
+        "start": 2587.392,
+        "duration": 4.81
+    },
+    {
+        "text": "huh.",
+        "start": 2592.712,
+        "duration": 0.02
+    },
+    {
+        "text": "But that would actually be a\nuseful thing to, to care about too.",
+        "start": 2594.797,
+        "duration": 4.2
+    },
+    {
+        "text": "yeah, I'm not, sure anymore why we\nonly care about those right now.",
+        "start": 2600.567,
+        "duration": 4.49
+    },
+    {
+        "text": "it would be something good to test again,\nBut yeah, this is the function that",
+        "start": 2607.477,
+        "duration": 6.04
+    },
+    {
+        "text": "checks it basically check feature change.",
+        "start": 2613.517,
+        "duration": 2.02
+    },
+    {
+        "text": "And then we go through the features\nand the, in the dictionary only.",
+        "start": 2615.647,
+        "duration": 4.49
+    },
+    {
+        "text": "So if, HSV is not in that dictionary.",
+        "start": 2620.187,
+        "duration": 3.065
+    },
+    {
+        "text": "It's, not gonna check that\nchange, along that dimension.",
+        "start": 2624.292,
+        "duration": 4.56
+    },
+    {
+        "text": "Okay.",
+        "start": 2629.472,
+        "duration": 0.6
+    },
+    {
+        "text": "Okay.",
+        "start": 2630.072,
+        "duration": 0.001
+    },
+    {
+        "text": "It looks like an or.",
+        "start": 2634.722,
+        "duration": 1.05
+    },
+    {
+        "text": "so if any one of those things\nhas changed, you get true?",
+        "start": 2637.772,
+        "duration": 2.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 2640.787,
+        "duration": 0.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 2643.662,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 2645.292,
+        "duration": 0.27
+    },
+    {
+        "text": "So it's not like both of\nthese need to change for Yeah.",
+        "start": 2645.562,
+        "duration": 2.79
+    },
+    {
+        "text": "so because it's not on the, so it's\nnot gonna go through the for loop.",
+        "start": 2650.512,
+        "duration": 2.73
+    },
+    {
+        "text": "so it's gonna return false.",
+        "start": 2654.232,
+        "duration": 1.59
+    },
+    {
+        "text": "in like feature change, because at the\nend, which means that even though there's",
+        "start": 2656.372,
+        "duration": 4.84
+    },
+    {
+        "text": "a lot of change in color, it will still\nthink that the feature didn't change.",
+        "start": 2661.642,
+        "duration": 6.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 2669.302,
+        "duration": 0.51
+    },
+    {
+        "text": "Okay.",
+        "start": 2670.162,
+        "duration": 0.31
+    },
+    {
+        "text": "Okay.",
+        "start": 2670.552,
+        "duration": 0.22
+    },
+    {
+        "text": "Got it.",
+        "start": 2670.772,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 2671.142,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 2675.732,
+        "duration": 0.48
+    },
+    {
+        "text": "So we could try and play around\nwith that and test if it's, better,",
+        "start": 2676.262,
+        "duration": 5.65
+    },
+    {
+        "text": "if we add HSV in here as well.",
+        "start": 2681.912,
+        "duration": 2.53
+    },
+    {
+        "text": "I guess it just reminded me, because\nI know Scott, you had some problem",
+        "start": 2685.572,
+        "duration": 3.02
+    },
+    {
+        "text": "of like spoon and banana being",
+        "start": 2688.612,
+        "duration": 1.84
+    },
+    {
+        "text": "mistaken or confused and because\nthe morphologies are similar at",
+        "start": 2692.737,
+        "duration": 4.5
+    },
+    {
+        "text": "some end but banana is clearly like\nyellow it might be related it might",
+        "start": 2697.257,
+        "duration": 5.31
+    },
+    {
+        "text": "fix that problem potentially maybe\nit's just not detecting that Oh,",
+        "start": 2702.567,
+        "duration": 4.295
+    },
+    {
+        "text": "it's not changing the color though.",
+        "start": 2706.862,
+        "duration": 1.08
+    },
+    {
+        "text": "Yeah, it will still send the\ncolor to the learning module",
+        "start": 2708.872,
+        "duration": 3.27
+    },
+    {
+        "text": "once it saves the centimeter.",
+        "start": 2712.172,
+        "duration": 1.75
+    },
+    {
+        "text": "So yeah, that information\nshould be changed.",
+        "start": 2713.922,
+        "duration": 2.87
+    },
+    {
+        "text": "Yeah, fair enough.",
+        "start": 2717.552,
+        "duration": 1.81
+    },
+    {
+        "text": "Okay,",
+        "start": 2719.362,
+        "duration": 0.7
+    },
+    {
+        "text": "so then, now we get finally\nto an actual config.",
+        "start": 2723.022,
+        "duration": 3.12
+    },
+    {
+        "text": "So here we put all\nthese together into one.",
+        "start": 2726.752,
+        "duration": 2.83
+    },
+    {
+        "text": "So we define configs currently as\ndictionaries and we have these entries.",
+        "start": 2729.952,
+        "duration": 5.62
+    },
+    {
+        "text": "So we often have a class and then\nthe arguments for that class.",
+        "start": 2735.662,
+        "duration": 3.6
+    },
+    {
+        "text": "So we have the experiment class,\nwhich is a Monty object recognition",
+        "start": 2739.812,
+        "duration": 3.68
+    },
+    {
+        "text": "experiment, and then experiment argument,\nwhere we have a, data class that kind",
+        "start": 2743.492,
+        "duration": 6.65
+    },
+    {
+        "text": "of defines the defaults for this.",
+        "start": 2750.142,
+        "duration": 1.77
+    },
+    {
+        "text": "So eval experiment arguments\nhave do train set to false.",
+        "start": 2751.912,
+        "duration": 4.02
+    },
+    {
+        "text": "And then do one eval epoch, and then we\ncan overwrite some of these defaults.",
+        "start": 2757.032,
+        "duration": 5.83
+    },
+    {
+        "text": "like for example, number of\neval epochs here is however",
+        "start": 2765.202,
+        "duration": 3.32
+    },
+    {
+        "text": "many rotations we want to test.",
+        "start": 2768.522,
+        "duration": 2.39
+    },
+    {
+        "text": "so one epoch is one rotation that\nwe test for all of the objects.",
+        "start": 2772.192,
+        "duration": 3.31
+    },
+    {
+        "text": "And we also specify the model path.",
+        "start": 2776.312,
+        "duration": 3.12
+    },
+    {
+        "text": "which is where it loads the pre\ntrained models for this experiment.",
+        "start": 2780.037,
+        "duration": 3.61
+    },
+    {
+        "text": "we specify the logging config.",
+        "start": 2785.467,
+        "duration": 2.09
+    },
+    {
+        "text": "This basically, for logging, we can\nspecify like an output directory, and",
+        "start": 2788.147,
+        "duration": 7.05
+    },
+    {
+        "text": "then we can specify a bunch of handlers.",
+        "start": 2795.197,
+        "duration": 2.01
+    },
+    {
+        "text": "We have Monty handlers and\nWeights and Biases handlers.",
+        "start": 2797.247,
+        "duration": 3.42
+    },
+    {
+        "text": "So Monty handlers.",
+        "start": 2800.667,
+        "duration": 2.16
+    },
+    {
+        "text": "the most commonly used ones are the CSV\nstats handler, which basically saves",
+        "start": 2804.187,
+        "duration": 4.73
+    },
+    {
+        "text": "a CSV file with all the statistics.",
+        "start": 2808.957,
+        "duration": 2.42
+    },
+    {
+        "text": "and then we have a reproduce episode\nhandler, which basically saves",
+        "start": 2812.277,
+        "duration": 3.46
+    },
+    {
+        "text": "the sequence of actions that were\ntaken so that we can reproduce",
+        "start": 2815.737,
+        "duration": 3.18
+    },
+    {
+        "text": "an episode, which is useful for\ndebugging since we're mostly using.",
+        "start": 2819.287,
+        "duration": 5.3
+    },
+    {
+        "text": "Like random actions, which is\ndependent on a random seed.",
+        "start": 2824.887,
+        "duration": 2.95
+    },
+    {
+        "text": "And then if there's like the 50th episode\nwhere something is odd and you want to",
+        "start": 2827.837,
+        "duration": 4.53
+    },
+    {
+        "text": "look at that episode, if you just run\nthat episode, it will take different",
+        "start": 2832.377,
+        "duration": 3.88
+    },
+    {
+        "text": "random actions because of the random seed.",
+        "start": 2836.267,
+        "duration": 2.77
+    },
+    {
+        "text": "so this way we can just\nreproduce that one episode.",
+        "start": 2839.817,
+        "duration": 2.67
+    },
+    {
+        "text": "And then, we could also save\na JSON file with more detailed",
+        "start": 2843.597,
+        "duration": 4.07
+    },
+    {
+        "text": "stats as a JSON handler.",
+        "start": 2847.727,
+        "duration": 2.32
+    },
+    {
+        "text": "and yeah, if you want to know all of\nthese, I'll show later, they are all",
+        "start": 2850.907,
+        "duration": 4.37
+    },
+    {
+        "text": "saved in one, in the loggers folder.",
+        "start": 2855.287,
+        "duration": 2.03
+    },
+    {
+        "text": "And then weights and biases, we\nalso have a couple of options.",
+        "start": 2858.567,
+        "duration": 2.98
+    },
+    {
+        "text": "and we can also specify, where it\nshould log the weights and biases.",
+        "start": 2863.857,
+        "duration": 5.2
+    },
+    {
+        "text": "Run, and then Monty log\nlevel is, basically how much",
+        "start": 2869.517,
+        "duration": 5.79
+    },
+    {
+        "text": "information is being saved.",
+        "start": 2875.307,
+        "duration": 1.71
+    },
+    {
+        "text": "And then Python log level is\nhow much information is being",
+        "start": 2877.487,
+        "duration": 3.43
+    },
+    {
+        "text": "printed to the terminal down here.",
+        "start": 2880.917,
+        "duration": 2.58
+    },
+    {
+        "text": "yeah, and then this one needs to\nbe set to true if we're running a",
+        "start": 2888.387,
+        "duration": 3.45
+    },
+    {
+        "text": "parallel experiment because we need\nto do some extra workarounds to get",
+        "start": 2891.837,
+        "duration": 4.84
+    },
+    {
+        "text": "that working with weights and biases.",
+        "start": 2896.677,
+        "duration": 1.75
+    },
+    {
+        "text": "and then we have the Monty config.",
+        "start": 2902.947,
+        "duration": 2.18
+    },
+    {
+        "text": "This is where we specify like\nall the interesting stuff with",
+        "start": 2905.447,
+        "duration": 4.35
+    },
+    {
+        "text": "learning modules and sensor module.",
+        "start": 2909.797,
+        "duration": 1.97
+    },
+    {
+        "text": "This is where we pass in our learning\nmodule config that we specified earlier.",
+        "start": 2912.287,
+        "duration": 4.04
+    },
+    {
+        "text": "And we also specify the Monty arguments,\nwhich are some things like minimum eval",
+        "start": 2917.017,
+        "duration": 7.97
+    },
+    {
+        "text": "steps, minimum training steps, maximum\ntotal steps, number of exploratory steps.",
+        "start": 2924.997,
+        "duration": 4.59
+    },
+    {
+        "text": "and so again, we have a default here\nand then we just overwrite a couple of",
+        "start": 2935.202,
+        "duration": 5.43
+    },
+    {
+        "text": "values from the default and the default\nis really where all the Interesting stuff",
+        "start": 2940.632,
+        "duration": 5.375
+    },
+    {
+        "text": "is, so for example, here, actually, I\nguess this is the difference between",
+        "start": 2946.027,
+        "duration": 7.24
+    },
+    {
+        "text": "the noise and non noise experiments.",
+        "start": 2953.267,
+        "duration": 1.97
+    },
+    {
+        "text": "Here, we actually, we're using the feature\nchange SM and we actually specifying",
+        "start": 2955.647,
+        "duration": 3.63
+    },
+    {
+        "text": "delta thresholds for all of these things.",
+        "start": 2959.287,
+        "duration": 1.89
+    },
+    {
+        "text": "So here we actually like also looking\nat the change in color and curvature",
+        "start": 2961.177,
+        "duration": 5.14
+    },
+    {
+        "text": "and pose vectors, and also distance.",
+        "start": 2966.317,
+        "duration": 3.94
+    },
+    {
+        "text": "And then also in steps, which\nmeans if we've taken 20 steps.",
+        "start": 2970.807,
+        "duration": 3.72
+    },
+    {
+        "text": "Even if nothing changed, we\nstill send another observation",
+        "start": 2975.077,
+        "duration": 2.89
+    },
+    {
+        "text": "to the learning module.",
+        "start": 2978.047,
+        "duration": 1.07
+    },
+    {
+        "text": "so yeah, let me just go to a basic Monty\nconfig to go through the fields here,",
+        "start": 2983.917,
+        "duration": 5.03
+    },
+    {
+        "text": "because that's the most complex one.",
+        "start": 2988.947,
+        "duration": 1.7
+    },
+    {
+        "text": "We have the Monty class, which\nis Monty for graph matching.",
+        "start": 2991.117,
+        "duration": 3.25
+    },
+    {
+        "text": "we have learning module configs.",
+        "start": 2995.407,
+        "duration": 1.5
+    },
+    {
+        "text": "Which is a list of configs, one for\neach learning module that we're using.",
+        "start": 2997.627,
+        "duration": 4.45
+    },
+    {
+        "text": "And that one again has a learning module\nclass and learning module arguments.",
+        "start": 3002.627,
+        "duration": 4.22
+    },
+    {
+        "text": "You have sensor module configs, which\nis same as learning module configs.",
+        "start": 3007.947,
+        "duration": 3.78
+    },
+    {
+        "text": "It's a list of sensor module\nconfigs, one for each sensor module.",
+        "start": 3011.727,
+        "duration": 4.9
+    },
+    {
+        "text": "And again, we have sensor module class\nand then sensor module arguments.",
+        "start": 3016.697,
+        "duration": 4.19
+    },
+    {
+        "text": "and then we have the motor system config,\nwhich basically tells us the class of the",
+        "start": 3024.042,
+        "duration": 4.87
+    },
+    {
+        "text": "motor system, and if we go here now, that\nwill give us more information about what's",
+        "start": 3028.912,
+        "duration": 4.84
+    },
+    {
+        "text": "specified for the motor system, and we\nhave a couple of, mapping dictionaries, so",
+        "start": 3033.752,
+        "duration": 8.02
+    },
+    {
+        "text": "this one maps sensor modules to an agent,",
+        "start": 3041.782,
+        "duration": 2.96
+    },
+    {
+        "text": "which sensors map to which agent,\nand right now all sensors map to",
+        "start": 3047.382,
+        "duration": 4.63
+    },
+    {
+        "text": "the same agent, but in the future\nwe might have, things that move",
+        "start": 3052.012,
+        "duration": 3.99
+    },
+    {
+        "text": "independently, like two fingers would\nbe two agents, and each agent might",
+        "start": 3056.022,
+        "duration": 4.15
+    },
+    {
+        "text": "have several sensors attached to it.",
+        "start": 3060.182,
+        "duration": 2.02
+    },
+    {
+        "text": "And then we have sensor module\nto learning module matrix.",
+        "start": 3063.852,
+        "duration": 2.59
+    },
+    {
+        "text": "This defines.",
+        "start": 3066.442,
+        "duration": 0.79
+    },
+    {
+        "text": "basically that the zeroth sensor module\nconnects to zeroth learning module.",
+        "start": 3068.947,
+        "duration": 5.2
+    },
+    {
+        "text": "And if you saw this here while\nI was scrolling over it, we",
+        "start": 3074.867,
+        "duration": 4.21
+    },
+    {
+        "text": "specified two sensor modules.",
+        "start": 3079.077,
+        "duration": 2.07
+    },
+    {
+        "text": "One is the patch and\none is the viewfinder.",
+        "start": 3081.177,
+        "duration": 3.22
+    },
+    {
+        "text": "Viewfinder would be number one,\nbut since it's not in this list,",
+        "start": 3084.727,
+        "duration": 3.23
+    },
+    {
+        "text": "the viewfinder is not sending\ninformation to any learning module.",
+        "start": 3088.267,
+        "duration": 3.98
+    },
+    {
+        "text": "We just use this for visualizations.",
+        "start": 3092.277,
+        "duration": 2.89
+    },
+    {
+        "text": "And then we have the learning module to\nlearning module matrix that only gets",
+        "start": 3098.082,
+        "duration": 4.35
+    },
+    {
+        "text": "used in the hierarchical experiments.",
+        "start": 3103.242,
+        "duration": 2.05
+    },
+    {
+        "text": "So when we have one learning\nmodule stacked on top of the",
+        "start": 3105.292,
+        "duration": 2.61
+    },
+    {
+        "text": "other one and receiving the output\nof a different learning module.",
+        "start": 3107.912,
+        "duration": 3.07
+    },
+    {
+        "text": "So here this is, not specified,\nthen LM to LM voting matrix.",
+        "start": 3111.562,
+        "duration": 5.105
+    },
+    {
+        "text": "Since we're currently just have one\nlearning module, there's no voting going",
+        "start": 3117.207,
+        "duration": 4.63
+    },
+    {
+        "text": "on, so also nothing specified, but if\nwe do have multiple learning modules,",
+        "start": 3121.837,
+        "duration": 3.97
+    },
+    {
+        "text": "then we would specify, like a matrix\nof how they connect to each other.",
+        "start": 3127.077,
+        "duration": 5.39
+    },
+    {
+        "text": "So for example, here we have two LM Monty\nconfig, and there we would have this",
+        "start": 3132.497,
+        "duration": 7.0
+    },
+    {
+        "text": "voting matrix where they connect and.",
+        "start": 3139.527,
+        "duration": 2.14
+    },
+    {
+        "text": "If we have the two stacked LM Monty\nconfig, that's the hierarchical",
+        "start": 3142.292,
+        "duration": 4.04
+    },
+    {
+        "text": "version, there we would have something\nspecified for the LM to LM matrix.",
+        "start": 3146.332,
+        "duration": 5.34
+    },
+    {
+        "text": "We have five learning module configs,\nwe have, for the learning module",
+        "start": 3152.482,
+        "duration": 5.13
+    },
+    {
+        "text": "configs, we have five, for the sensor\nmodule configs, we have five patches.",
+        "start": 3157.612,
+        "duration": 5.7
+    },
+    {
+        "text": "Plus the viewfinder, and then all of the\nsensors are attached to the same agent.",
+        "start": 3163.787,
+        "duration": 6.7
+    },
+    {
+        "text": "Sensors to learning modules\nis a one to one mapping.",
+        "start": 3171.157,
+        "duration": 2.79
+    },
+    {
+        "text": "Viewfinder doesn't map anywhere.",
+        "start": 3174.097,
+        "duration": 1.82
+    },
+    {
+        "text": "we have no hierarchy in this.",
+        "start": 3178.137,
+        "duration": 2.155
+    },
+    {
+        "text": "experiment, and then the voting\nmatrix is basically an all to",
+        "start": 3180.832,
+        "duration": 4.31
+    },
+    {
+        "text": "all connection, connectivity.",
+        "start": 3185.142,
+        "duration": 2.38
+    },
+    {
+        "text": "yeah, I hope I'm not going over this\ntoo fast, but it's quite a lot, so yeah.",
+        "start": 3191.422,
+        "duration": 4.79
+    },
+    {
+        "text": "Yeah, it's so far so good for me.",
+        "start": 3197.192,
+        "duration": 2.13
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 3200.342,
+        "duration": 0.85
+    },
+    {
+        "text": "all right, so that's the\nmost complex config in here.",
+        "start": 3202.632,
+        "duration": 2.8
+    },
+    {
+        "text": "Then we also have configs for\nthe environment and data loaders.",
+        "start": 3205.562,
+        "duration": 5.05
+    },
+    {
+        "text": "So we have the dataset class,\nwhich, yeah, basically tells us.",
+        "start": 3210.692,
+        "duration": 6.32
+    },
+    {
+        "text": "This is the first dataset we want to use\nand here the terminology we use is a bit",
+        "start": 3217.157,
+        "duration": 4.66
+    },
+    {
+        "text": "confusing because we're actually working\nwith environments, so not static datasets.",
+        "start": 3221.817,
+        "duration": 6.84
+    },
+    {
+        "text": "Monty is not really made\nfor static datasets.",
+        "start": 3228.657,
+        "duration": 2.41
+    },
+    {
+        "text": "It's made for environments that\ncan interact with, but this, we",
+        "start": 3231.067,
+        "duration": 4.03
+    },
+    {
+        "text": "originally started this with a torch\ndataset, naming convention, and also",
+        "start": 3235.157,
+        "duration": 6.425
+    },
+    {
+        "text": "I think inherited from their classes.",
+        "start": 3241.582,
+        "duration": 2.12
+    },
+    {
+        "text": "So that's why this name stuck,\nbut, we have a ticket for changing",
+        "start": 3244.272,
+        "duration": 4.3
+    },
+    {
+        "text": "that terminology eventually.",
+        "start": 3248.572,
+        "duration": 2.18
+    },
+    {
+        "text": "and then we have arguments\nfor that dataset args.",
+        "start": 3252.072,
+        "duration": 2.83
+    },
+    {
+        "text": "I'm just going to jump over here real\nquick to, for the dataset args, we have",
+        "start": 3255.132,
+        "duration": 5.226
+    },
+    {
+        "text": "an initialization function with, which\nis in this case, habitat environment.",
+        "start": 3260.358,
+        "duration": 4.567
+    },
+    {
+        "text": "We're using habitat and then arguments.",
+        "start": 3264.925,
+        "duration": 2.492
+    },
+    {
+        "text": "Here, I can also jump to that real quick.",
+        "start": 3270.407,
+        "duration": 2.25
+    },
+    {
+        "text": "Since this basically specifies our\nagent and its sensors, so it says, okay,",
+        "start": 3273.447,
+        "duration": 5.14
+    },
+    {
+        "text": "the name of my agent is agent ID zero.",
+        "start": 3278.587,
+        "duration": 2.11
+    },
+    {
+        "text": "We saw that earlier with what\nagent the sensor is connected to.",
+        "start": 3280.757,
+        "duration": 4.61
+    },
+    {
+        "text": "We have sensor IDs, we have the\nheight of the agent, in this case, we",
+        "start": 3286.237,
+        "duration": 3.93
+    },
+    {
+        "text": "just have it at zero for simplicity.",
+        "start": 3290.167,
+        "duration": 2.66
+    },
+    {
+        "text": "We have the position of the\nagent, which starts And we have,",
+        "start": 3294.027,
+        "duration": 4.59
+    },
+    {
+        "text": "the resolution for the sensors.",
+        "start": 3298.977,
+        "duration": 2.07
+    },
+    {
+        "text": "So in this case, we have 64 by 64 pixel\npatches, and then positions of the sensors",
+        "start": 3301.057,
+        "duration": 8.23
+    },
+    {
+        "text": "and rotation of each of the sensors.",
+        "start": 3310.207,
+        "duration": 2.28
+    },
+    {
+        "text": "and then are these, sorry, are\nthese, like agents for Habitat or",
+        "start": 3314.417,
+        "duration": 4.25
+    },
+    {
+        "text": "is this agent like Monty where Monty\nis initialized in the environment?",
+        "start": 3318.667,
+        "duration": 4.42
+    },
+    {
+        "text": "this is for Habitat.",
+        "start": 3323.917,
+        "duration": 1.09
+    },
+    {
+        "text": "So this is basically used to\ninitialize where their camera is",
+        "start": 3325.027,
+        "duration": 3.08
+    },
+    {
+        "text": "and sensors and yeah, exactly.",
+        "start": 3328.137,
+        "duration": 1.7
+    },
+    {
+        "text": "So this is, we use this to tell Habitat,\nokay, put a camera here at this location,",
+        "start": 3330.387,
+        "duration": 6.0
+    },
+    {
+        "text": "and then here the zoom factor 10 and one.",
+        "start": 3337.437,
+        "duration": 2.78
+    },
+    {
+        "text": "So the patch is zoomed in by 10.",
+        "start": 3340.217,
+        "duration": 1.78
+    },
+    {
+        "text": "And the viewfinder is\njust a normal camera.",
+        "start": 3342.872,
+        "duration": 2.67
+    },
+    {
+        "text": "Gotcha.",
+        "start": 3346.472,
+        "duration": 0.3
+    },
+    {
+        "text": "okay.",
+        "start": 3351.232,
+        "duration": 0.38
+    },
+    {
+        "text": "And then finally we have the data\nloaders for training and for evaluation.",
+        "start": 3351.652,
+        "duration": 4.26
+    },
+    {
+        "text": "and there we tell it that, for\ntraining doesn't matter right now",
+        "start": 3357.002,
+        "duration": 5.37
+    },
+    {
+        "text": "because we're only evaluating, but\nwe still have to specify something",
+        "start": 3362.372,
+        "duration": 3.82
+    },
+    {
+        "text": "here, but that doesn't matter.",
+        "start": 3366.192,
+        "duration": 1.34
+    },
+    {
+        "text": "And then for evaluation,\nwe specify object names.",
+        "start": 3367.532,
+        "duration": 3.89
+    },
+    {
+        "text": "In this case, we're just using a\nhelper function, but we could also",
+        "start": 3371.452,
+        "duration": 3.49
+    },
+    {
+        "text": "just pass an array of strings with\nthe object names that we want to have.",
+        "start": 3374.942,
+        "duration": 6.36
+    },
+    {
+        "text": "we say 10 objects, and then, we use\nthis initializer to initialize with",
+        "start": 3383.592,
+        "duration": 6.66
+    },
+    {
+        "text": "the test rotations that we want.",
+        "start": 3390.262,
+        "duration": 1.88
+    },
+    {
+        "text": "So the initializer basically, yeah,\ntakes these and puts it in the right",
+        "start": 3392.842,
+        "duration": 5.16
+    },
+    {
+        "text": "format that we need for passing it\nto Habitat and then distinct objects.",
+        "start": 3398.002,
+        "duration": 5.32
+    },
+    {
+        "text": "These are the 10 distinct\nobjects that we're testing on.",
+        "start": 3403.622,
+        "duration": 3.8
+    },
+    {
+        "text": "okay.",
+        "start": 3412.672,
+        "duration": 0.57
+    },
+    {
+        "text": "That's one config.",
+        "start": 3413.322,
+        "duration": 1.2
+    },
+    {
+        "text": "it took me an hour to explain it, but.",
+        "start": 3415.662,
+        "duration": 2.48
+    },
+    {
+        "text": "for the, data set,",
+        "start": 3420.062,
+        "duration": 2.23
+    },
+    {
+        "text": "how, I guess I'm just curious, how\ndependent are we on habitats or as long",
+        "start": 3424.532,
+        "duration": 5.51
+    },
+    {
+        "text": "as it whatever third party that we use, as\nlong as it can return whatever is defined",
+        "start": 3430.042,
+        "duration": 5.72
+    },
+    {
+        "text": "in environment dataset, it will be fine.",
+        "start": 3435.762,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 3439.032,
+        "duration": 0.32
+    },
+    {
+        "text": "So we have a bunch of different\ndatasets here already.",
+        "start": 3439.352,
+        "duration": 2.3
+    },
+    {
+        "text": "If you go into the frameworks\ncode to datasets, we have.",
+        "start": 3441.652,
+        "duration": 4.12
+    },
+    {
+        "text": "Okay, we have the habitat stuff,\nbut we also have other data sets.",
+        "start": 3446.297,
+        "duration": 4.75
+    },
+    {
+        "text": "So for example,",
+        "start": 3451.047,
+        "duration": 0.94
+    },
+    {
+        "text": "2D data, we defined one that's I\ndon't know if you know the Omniglot",
+        "start": 3454.167,
+        "duration": 5.18
+    },
+    {
+        "text": "data set, it's basically like\nthese handwritten digits and you",
+        "start": 3459.347,
+        "duration": 3.12
+    },
+    {
+        "text": "only have a few examples of it.",
+        "start": 3462.467,
+        "duration": 2.55
+    },
+    {
+        "text": "and there we basically have the sensor\nmoving over the strokes for the digits.",
+        "start": 3466.707,
+        "duration": 4.62
+    },
+    {
+        "text": "or we have,",
+        "start": 3473.107,
+        "duration": 1.02
+    },
+    {
+        "text": "yeah, okay.",
+        "start": 3476.487,
+        "duration": 0.8
+    },
+    {
+        "text": "ModelNet is more data set, but for\nexample, when we did the, demo of",
+        "start": 3478.017,
+        "duration": 5.56
+    },
+    {
+        "text": "Monty in a real world environment,\nwe would have I think it's actually",
+        "start": 3483.697,
+        "duration": 7.72
+    },
+    {
+        "text": "in the 2D data one, Cicada on image\nenvironment, where we would have an",
+        "start": 3491.417,
+        "duration": 4.31
+    },
+    {
+        "text": "iPad, we would take a picture and then\nit would take that full image and just",
+        "start": 3495.737,
+        "duration": 5.02
+    },
+    {
+        "text": "have a patch move on that 2D image.",
+        "start": 3500.757,
+        "duration": 2.51
+    },
+    {
+        "text": "Okay.",
+        "start": 3504.337,
+        "duration": 0.35
+    },
+    {
+        "text": "So that's, for example,\nalso without habitat.",
+        "start": 3505.357,
+        "duration": 2.86
+    },
+    {
+        "text": "So it doesn't have to be habitat.",
+        "start": 3508.217,
+        "duration": 2.22
+    },
+    {
+        "text": "It just needs to be an instance\nof the embodied environment where",
+        "start": 3511.057,
+        "duration": 5.94
+    },
+    {
+        "text": "you can basically move and send an\naction, get an observation back,",
+        "start": 3516.997,
+        "duration": 6.05
+    },
+    {
+        "text": "send an action, get an observation.",
+        "start": 3523.047,
+        "duration": 1.65
+    },
+    {
+        "text": "Gotcha.",
+        "start": 3525.617,
+        "duration": 0.42
+    },
+    {
+        "text": "So it just needs to follow this schema.",
+        "start": 3526.037,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 3528.767,
+        "duration": 0.51
+    },
+    {
+        "text": "Exactly.",
+        "start": 3529.617,
+        "duration": 0.21
+    },
+    {
+        "text": "Whatever dataset it is.",
+        "start": 3529.847,
+        "duration": 0.99
+    },
+    {
+        "text": "Okay.",
+        "start": 3530.887,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 3531.997,
+        "duration": 0.35
+    },
+    {
+        "text": "Okay.",
+        "start": 3536.567,
+        "duration": 0.34
+    },
+    {
+        "text": "And then every following config\nbasically deep copies from this first",
+        "start": 3536.907,
+        "duration": 4.32
+    },
+    {
+        "text": "config and then updates whatever\nchanges we want to make to it.",
+        "start": 3541.247,
+        "duration": 4.59
+    },
+    {
+        "text": "So for example, this is the base config\nfor the distant agent and now we're making",
+        "start": 3545.837,
+        "duration": 5.69
+    },
+    {
+        "text": "the base config for the surface agent\nand for the surface agent, we need to",
+        "start": 3551.537,
+        "duration": 4.79
+    },
+    {
+        "text": "adapt the Monty configs that we're using.",
+        "start": 3556.327,
+        "duration": 2.3
+    },
+    {
+        "text": "The surface and view state\nof the art Monty config,",
+        "start": 3559.337,
+        "duration": 3.2
+    },
+    {
+        "text": "pass again, the same learning module\nconfig from above, and we pass a",
+        "start": 3564.857,
+        "duration": 4.11
+    },
+    {
+        "text": "different motor system, for the surface\npolicy and some minimum eval steps,",
+        "start": 3568.967,
+        "duration": 10.42
+    },
+    {
+        "text": "and then for the dataset arcs, we\njust, yeah, initialize the dataset",
+        "start": 3579.997,
+        "duration": 5.6
+    },
+    {
+        "text": "for surface viewfinder and so on.",
+        "start": 3585.607,
+        "duration": 4.1
+    },
+    {
+        "text": "For the noisy one, we need to\nuse the different noisy sensor",
+        "start": 3589.727,
+        "duration": 4.83
+    },
+    {
+        "text": "module that we defined above with\nthese noise values and so on.",
+        "start": 3594.557,
+        "duration": 4.7
+    },
+    {
+        "text": "For each experiment, we are customizing\na certain part of this config.",
+        "start": 3599.267,
+        "duration": 4.08
+    },
+    {
+        "text": "And then in the end, we put all the\nconfigs into the configs dictionary.",
+        "start": 3603.937,
+        "duration": 5.02
+    },
+    {
+        "text": "And then we can run the\nexperiment basically by running",
+        "start": 3610.512,
+        "duration": 4.49
+    },
+    {
+        "text": "Python, and then we have a run.",
+        "start": 3615.702,
+        "duration": 2.63
+    },
+    {
+        "text": "py script in this folder here.",
+        "start": 3618.332,
+        "duration": 2.06
+    },
+    {
+        "text": "and then we do dash E and the\nname of the experiment, and then",
+        "start": 3622.332,
+        "duration": 6.11
+    },
+    {
+        "text": "that will run that experiment.",
+        "start": 3628.452,
+        "duration": 1.63
+    },
+    {
+        "text": "Or you can call run parallel,\nsame dash E and same experiment",
+        "start": 3630.922,
+        "duration": 5.16
+    },
+    {
+        "text": "name, and it will run that.",
+        "start": 3636.102,
+        "duration": 0.655
+    },
+    {
+        "text": "Okay, that was, that took\nlonger than I expected it to",
+        "start": 3643.827,
+        "duration": 4.84
+    },
+    {
+        "text": "take, but I hope it's useful.",
+        "start": 3648.667,
+        "duration": 2.17
+    },
+    {
+        "text": "I think it will be a video I go back to.",
+        "start": 3651.797,
+        "duration": 1.91
+    },
+    {
+        "text": "Okay.",
+        "start": 3654.937,
+        "duration": 0.52
+    },
+    {
+        "text": "okay.",
+        "start": 3656.927,
+        "duration": 0.47
+    },
+    {
+        "text": "So what was next on my plan?",
+        "start": 3657.397,
+        "duration": 2.59
+    },
+    {
+        "text": "all right.",
+        "start": 3662.687,
+        "duration": 0.62
+    },
+    {
+        "text": "Terminal.",
+        "start": 3663.827,
+        "duration": 1.12
+    },
+    {
+        "text": "Logs.",
+        "start": 3666.327,
+        "duration": 1.1
+    },
+    {
+        "text": "So right now in the terminal logs,\nthere isn't a whole lot of output,",
+        "start": 3668.667,
+        "duration": 3.98
+    },
+    {
+        "text": "but let me just show an example of\nif we would want to see some more.",
+        "start": 3673.227,
+        "duration": 5.34
+    },
+    {
+        "text": "so which experiment are we running?",
+        "start": 3680.887,
+        "duration": 1.63
+    },
+    {
+        "text": "This one here.",
+        "start": 3682.527,
+        "duration": 1.28
+    },
+    {
+        "text": "So we would want to update the logger.",
+        "start": 3685.577,
+        "duration": 2.76
+    },
+    {
+        "text": "Let's see where we actually\nspecify the logging.",
+        "start": 3689.042,
+        "duration": 3.41
+    },
+    {
+        "text": "Okay, so we could just change\nPython log level to debug if we",
+        "start": 3693.282,
+        "duration": 4.53
+    },
+    {
+        "text": "want to get some more information.",
+        "start": 3697.812,
+        "duration": 1.61
+    },
+    {
+        "text": "Run this again",
+        "start": 3700.342,
+        "duration": 1.1
+    },
+    {
+        "text": "and now it's gonna tell us all\nthis information hopefully.",
+        "start": 3704.332,
+        "duration": 4.54
+    },
+    {
+        "text": "Yeah, okay, this is\nmaybe a bit too detailed.",
+        "start": 3709.622,
+        "duration": 3.62
+    },
+    {
+        "text": "in some cases, but if you're\ndebugging something, it can be",
+        "start": 3714.247,
+        "duration": 3.7
+    },
+    {
+        "text": "useful to set the level to debug.",
+        "start": 3717.947,
+        "duration": 1.86
+    },
+    {
+        "text": "where it really tells you for\neach step, what exactly is",
+        "start": 3721.057,
+        "duration": 4.04
+    },
+    {
+        "text": "happening, all the evidence values.",
+        "start": 3725.097,
+        "duration": 3.4
+    },
+    {
+        "text": "we can also set it to info if we\ndon't want to be overwhelmed by it.",
+        "start": 3730.227,
+        "duration": 4.6
+    },
+    {
+        "text": "Does this also go to the log.",
+        "start": 3737.687,
+        "duration": 0.97
+    },
+    {
+        "text": "txt file?",
+        "start": 3738.687,
+        "duration": 1.0
+    },
+    {
+        "text": "yes.",
+        "start": 3741.977,
+        "duration": 0.48
+    },
+    {
+        "text": "A",
+        "start": 3742.577,
+        "duration": 0.2
+    },
+    {
+        "text": "lot of times mine are empty,\nbut I think that might be just",
+        "start": 3745.067,
+        "duration": 2.4
+    },
+    {
+        "text": "because of the way I have the log\nlevel set up during pre training.",
+        "start": 3747.467,
+        "duration": 4.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 3753.217,
+        "duration": 0.68
+    },
+    {
+        "text": "Cause yeah, I think they are set to error,\nso it won't print anything, but if you",
+        "start": 3754.037,
+        "duration": 4.29
+    },
+    {
+        "text": "set it to info, it's actually useful.",
+        "start": 3758.327,
+        "duration": 2.15
+    },
+    {
+        "text": "And I used to have this as default, so\nmy brain still gets these huge dopamine",
+        "start": 3760.477,
+        "duration": 4.77
+    },
+    {
+        "text": "boosts when I see a monty detected match.",
+        "start": 3765.587,
+        "duration": 2.4
+    },
+    {
+        "text": "And the Python log level, it literally\njust follows the logging levels, right?",
+        "start": 3767.987,
+        "duration": 10.99
+    },
+    {
+        "text": "The debug is for both info, warning,\nerror, if I remember correctly.",
+        "start": 3778.977,
+        "duration": 5.09
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 3784.777,
+        "duration": 0.79
+    },
+    {
+        "text": "Yeah, for example, yeah, if we have\nhere in the code, you'll see all over",
+        "start": 3787.907,
+        "duration": 6.01
+    },
+    {
+        "text": "the place, logger dot, maybe not in\nthis file, but see, evidence matching,",
+        "start": 3793.917,
+        "duration": 8.24
+    },
+    {
+        "text": "logging dot debug will only be printed\nif, it's set to debug, logging dot",
+        "start": 3806.627,
+        "duration": 4.25
+    },
+    {
+        "text": "info will print if it's set to info,",
+        "start": 3811.427,
+        "duration": 2.26
+    },
+    {
+        "text": "logging dot warning will be, when it's set\nto So that's also when you're writing new",
+        "start": 3816.677,
+        "duration": 6.485
+    },
+    {
+        "text": "code, we're not using print statements.",
+        "start": 3823.192,
+        "duration": 2.9
+    },
+    {
+        "text": "So don't do print X, do logging\ndot and then the log level at",
+        "start": 3826.102,
+        "duration": 4.33
+    },
+    {
+        "text": "which it should be printed.",
+        "start": 3830.452,
+        "duration": 1.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 3833.532,
+        "duration": 0.48
+    },
+    {
+        "text": "Okay.",
+        "start": 3834.372,
+        "duration": 0.31
+    },
+    {
+        "text": "I was just wondering about the log.",
+        "start": 3834.682,
+        "duration": 1.85
+    },
+    {
+        "text": "Okay.",
+        "start": 3836.692,
+        "duration": 0.26
+    },
+    {
+        "text": "So above error, there's\nactually critical, just FYI.",
+        "start": 3836.952,
+        "duration": 2.54
+    },
+    {
+        "text": "So there's a code that you must\nrun or critical is the way to go.",
+        "start": 3841.252,
+        "duration": 4.96
+    },
+    {
+        "text": "But.",
+        "start": 3847.142,
+        "duration": 0.28
+    },
+    {
+        "text": "and there's also below something\nbelow debug which is not set, but",
+        "start": 3849.397,
+        "duration": 4.44
+    },
+    {
+        "text": "basically You know, debug would\ncontain everything above debug,",
+        "start": 3853.837,
+        "duration": 4.09
+    },
+    {
+        "text": "debug info, warn error, and critical.",
+        "start": 3857.927,
+        "duration": 2.53
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 3860.477,
+        "duration": 0.94
+    },
+    {
+        "text": "Gotcha.",
+        "start": 3861.947,
+        "duration": 0.3
+    },
+    {
+        "text": "so yeah, now that the experiment\nis running, let me just show you",
+        "start": 3866.697,
+        "duration": 5.55
+    },
+    {
+        "text": "what actually it's outputting.",
+        "start": 3872.247,
+        "duration": 3.06
+    },
+    {
+        "text": "We can get to the logs.",
+        "start": 3876.067,
+        "duration": 2.18
+    },
+    {
+        "text": "We have this results folder,\nMonty, and then projects,",
+        "start": 3881.307,
+        "duration": 6.65
+    },
+    {
+        "text": "here I think we're logging to.",
+        "start": 3890.957,
+        "duration": 1.4
+    },
+    {
+        "text": "do you remember what the\nexperiment was called?",
+        "start": 3894.257,
+        "duration": 2.15
+    },
+    {
+        "text": "We're just running, I think this one",
+        "start": 3896.407,
+        "duration": 7.76
+    },
+    {
+        "text": "today.",
+        "start": 3906.387,
+        "duration": 0.56
+    },
+    {
+        "text": "Okay.",
+        "start": 3907.917,
+        "duration": 0.32
+    },
+    {
+        "text": "Yeah, that should be it.",
+        "start": 3908.237,
+        "duration": 0.72
+    },
+    {
+        "text": "Okay.",
+        "start": 3910.027,
+        "duration": 0.3
+    },
+    {
+        "text": "So here we have, the logs.",
+        "start": 3910.327,
+        "duration": 3.56
+    },
+    {
+        "text": "it always takes, if I run a new experiment\nand there's already an evalstats file in",
+        "start": 3914.997,
+        "duration": 5.29
+    },
+    {
+        "text": "this folder, it will take it and rename it\nto underscore old and start this new one.",
+        "start": 3920.297,
+        "duration": 5.38
+    },
+    {
+        "text": "That's just so we don't like\naccidentally lose something.",
+        "start": 3925.677,
+        "duration": 3.06
+    },
+    {
+        "text": "Rarely ever do we need\nit, but we just have that.",
+        "start": 3929.207,
+        "duration": 3.04
+    },
+    {
+        "text": "and then the log.",
+        "start": 3933.337,
+        "duration": 1.01
+    },
+    {
+        "text": "txt, like you mentioned.",
+        "start": 3934.347,
+        "duration": 2.2
+    },
+    {
+        "text": "Scott will save all the terminal outputs.",
+        "start": 3937.217,
+        "duration": 3.26
+    },
+    {
+        "text": "So now I can actually go\nhere and have a closer look.",
+        "start": 3940.677,
+        "duration": 3.79
+    },
+    {
+        "text": "We see, okay, the target was the\nmug with this random rotation here.",
+        "start": 3945.097,
+        "duration": 5.29
+    },
+    {
+        "text": "and we're starting the simulation.",
+        "start": 3952.557,
+        "duration": 4.25
+    },
+    {
+        "text": "We're skipping a step on the\nlearning module because yeah,",
+        "start": 3957.087,
+        "duration": 3.7
+    },
+    {
+        "text": "we're not getting input.",
+        "start": 3961.087,
+        "duration": 1.92
+    },
+    {
+        "text": "Then we have the first.",
+        "start": 3963.017,
+        "duration": 1.15
+    },
+    {
+        "text": "Matching step,",
+        "start": 3964.957,
+        "duration": 0.91
+    },
+    {
+        "text": "we're sending input from patch to\nlearning module zero, current most likely",
+        "start": 3968.107,
+        "duration": 5.4
+    },
+    {
+        "text": "hypothesis is Boll with evidence 0.",
+        "start": 3973.507,
+        "duration": 2.35
+    },
+    {
+        "text": "96.",
+        "start": 3975.927,
+        "duration": 0.84
+    },
+    {
+        "text": "The bowl is also red, same\nas the cup, so they usually",
+        "start": 3977.827,
+        "duration": 2.92
+    },
+    {
+        "text": "both start with high evidence.",
+        "start": 3980.937,
+        "duration": 1.39
+    },
+    {
+        "text": "We haven't even moved\nyet, we just saw red,",
+        "start": 3982.327,
+        "duration": 2.87
+    },
+    {
+        "text": "and possible matches are still\nall of the objects essentially.",
+        "start": 3987.607,
+        "duration": 4.03
+    },
+    {
+        "text": "then step one, we're skipping step\none on learning module zero, probably",
+        "start": 3994.077,
+        "duration": 5.85
+    },
+    {
+        "text": "because features didn't change.",
+        "start": 3999.927,
+        "duration": 1.66
+    },
+    {
+        "text": "Step two, sending input from patch\nto learning module zero, testing this",
+        "start": 4002.607,
+        "duration": 6.17
+    },
+    {
+        "text": "and this many hypotheses out of so\nmany for spoon, which are all the",
+        "start": 4008.777,
+        "duration": 4.43
+    },
+    {
+        "text": "hypotheses where evidence is above 0.",
+        "start": 4013.207,
+        "duration": 3.11
+    },
+    {
+        "text": "19, that's that X percent threshold,\nand we do that for all these objects.",
+        "start": 4016.317,
+        "duration": 5.31
+    },
+    {
+        "text": "And then, okay, current most likely\nhypothesis bowl with evidence 2.",
+        "start": 4022.542,
+        "duration": 3.09
+    },
+    {
+        "text": "08.",
+        "start": 4025.632,
+        "duration": 1.0
+    },
+    {
+        "text": "And that goes on and on until, okay, Monty\ndetected, okay, let's go to the last one,",
+        "start": 4027.352,
+        "duration": 9.96
+    },
+    {
+        "text": "matching step 34, all possible locations\nare in a radius of 10 centimeters.",
+        "start": 4038.492,
+        "duration": 7.53
+    },
+    {
+        "text": "added symmetry evidence, symmetry\ndetected for four hypotheses, setting",
+        "start": 4047.737,
+        "duration": 6.46
+    },
+    {
+        "text": "terminal state, detected mug at this\nlocation, this orientation and scale,",
+        "start": 4054.197,
+        "duration": 6.62
+    },
+    {
+        "text": "and then we move on to the next episode.",
+        "start": 4061.597,
+        "duration": 3.4
+    },
+    {
+        "text": "Oh, how are the number of hypotheses,",
+        "start": 4067.937,
+        "duration": 2.18
+    },
+    {
+        "text": "generated?",
+        "start": 4073.077,
+        "duration": 0.73
+    },
+    {
+        "text": "So it's, it looked like for spoon, there\nwas like 3000 or so number of hypotheses.",
+        "start": 4073.817,
+        "duration": 5.15
+    },
+    {
+        "text": "I guess that might be more related to,\nwe'll say generators and whatnot, but.",
+        "start": 4078.992,
+        "duration": 4.73
+    },
+    {
+        "text": "Yeah, so the hypothesis, basically,\nat the first sensation, any, or",
+        "start": 4084.812,
+        "duration": 5.4
+    },
+    {
+        "text": "before the first sensation, we could\nbe on any location, on any object.",
+        "start": 4090.212,
+        "duration": 4.98
+    },
+    {
+        "text": "That's the initialization.",
+        "start": 4098.122,
+        "duration": 3.5
+    },
+    {
+        "text": "But for the pose, There are usually only\ntwo poses for each of the locations,",
+        "start": 4101.702,
+        "duration": 4.545
+    },
+    {
+        "text": "since we have the curvature directions.",
+        "start": 4106.587,
+        "duration": 1.85
+    },
+    {
+        "text": "So if I'm sensing this coffee mug, I got\na curvature direc I got a point normal",
+        "start": 4108.877,
+        "duration": 4.34
+    },
+    {
+        "text": "and the curvature directions here.",
+        "start": 4113.257,
+        "duration": 1.81
+    },
+    {
+        "text": "Let me just finish this cup.",
+        "start": 4115.727,
+        "duration": 1.27
+    },
+    {
+        "text": "if I'm sensing this curvature, the\ncup can only be rotated like this.",
+        "start": 4121.477,
+        "duration": 5.14
+    },
+    {
+        "text": "Or upside down, because otherwise,\nif it's like this, the curvature",
+        "start": 4127.122,
+        "duration": 4.35
+    },
+    {
+        "text": "directions wouldn't work.",
+        "start": 4131.472,
+        "duration": 1.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 4133.292,
+        "duration": 0.34
+    },
+    {
+        "text": "so for pretty much all the\nlocations, there are two possible",
+        "start": 4134.472,
+        "duration": 3.28
+    },
+    {
+        "text": "rotations, except if we're on a\nflat surface, then the principal",
+        "start": 4137.752,
+        "duration": 5.73
+    },
+    {
+        "text": "curvatures directions don't work.",
+        "start": 4143.482,
+        "duration": 2.05
+    },
+    {
+        "text": "Could be flipped, they're ambiguous, could\nbe rotated in any way along that surface.",
+        "start": 4145.922,
+        "duration": 4.9
+    },
+    {
+        "text": "We still have the point normal, so\nthen we sample I think we sample eight",
+        "start": 4150.852,
+        "duration": 4.75
+    },
+    {
+        "text": "different rotations along that dimension.",
+        "start": 4156.452,
+        "duration": 2.37
+    },
+    {
+        "text": "Gotcha, gotcha.",
+        "start": 4159.542,
+        "duration": 0.84
+    },
+    {
+        "text": "And that's how we initialize it.",
+        "start": 4160.852,
+        "duration": 1.42
+    },
+    {
+        "text": "So that, means that objects with a lot\nof like flat surfaces or like a round",
+        "start": 4162.562,
+        "duration": 5.505
+    },
+    {
+        "text": "ball would be the same thing where the\ncurvature is the same in all directions.",
+        "start": 4168.107,
+        "duration": 4.48
+    },
+    {
+        "text": "those usually have more hypotheses\ninitialized in the beginning",
+        "start": 4173.927,
+        "duration": 3.41
+    },
+    {
+        "text": "and then, but then they narrow down\npretty quickly and you're not testing",
+        "start": 4179.567,
+        "duration": 4.12
+    },
+    {
+        "text": "all of them at every step anymore.",
+        "start": 4183.687,
+        "duration": 1.67
+    },
+    {
+        "text": "Yeah, Do you think those,\nsymmetric objects, flat objects,",
+        "start": 4186.187,
+        "duration": 5.53
+    },
+    {
+        "text": "shirtless objects, basically,",
+        "start": 4192.087,
+        "duration": 1.3
+    },
+    {
+        "text": "do they generally take more number\nof steps to get to the conc I know",
+        "start": 4196.617,
+        "duration": 4.47
+    },
+    {
+        "text": "that the hypothesis space goes down\nvery rapidly from 3000 to, I guess",
+        "start": 4201.087,
+        "duration": 6.79
+    },
+    {
+        "text": "it narrows it down, but do you think\nthose can be considered more difficult",
+        "start": 4207.877,
+        "duration": 3.33
+    },
+    {
+        "text": "objects for Monty, or it doesn't matter?",
+        "start": 4211.237,
+        "duration": 1.73
+    },
+    {
+        "text": "yeah, so not because they have\nmore hypotheses in the beginning.",
+        "start": 4216.587,
+        "duration": 4.12
+    },
+    {
+        "text": "But more because of symmetry, so it\ntakes longer to, resolve symmetry.",
+        "start": 4221.142,
+        "duration": 5.12
+    },
+    {
+        "text": "we have a symmetry detection\nmechanism in there.",
+        "start": 4226.752,
+        "duration": 3.19
+    },
+    {
+        "text": "so we can detect symmetry and then\nhave an early timeout, but it still",
+        "start": 4231.462,
+        "duration": 5.28
+    },
+    {
+        "text": "might take a few more steps to\nactually detect symmetry and say,",
+        "start": 4236.742,
+        "duration": 3.81
+    },
+    {
+        "text": "okay, I can't resolve the pose along\nall three dimensions for this object.",
+        "start": 4240.552,
+        "duration": 3.81
+    },
+    {
+        "text": "Okay.",
+        "start": 4245.042,
+        "duration": 0.3
+    },
+    {
+        "text": "So is the symmetry, computation or\nestimations, is that a pretty local",
+        "start": 4245.842,
+        "duration": 5.99
+    },
+    {
+        "text": "thing or is there some, yeah, it's\nlocal, so it's not object wide.",
+        "start": 4251.882,
+        "duration": 6.51
+    },
+    {
+        "text": "It's pretty simplistic.",
+        "start": 4259.122,
+        "duration": 1.22
+    },
+    {
+        "text": "So it basically says\nif two, if, what is it?",
+        "start": 4260.352,
+        "duration": 7.93
+    },
+    {
+        "text": "If we have the same set of hypotheses\nthat keep being valid for X",
+        "start": 4268.972,
+        "duration": 4.62
+    },
+    {
+        "text": "number of steps, then these must\nbe symmetric because the whole.",
+        "start": 4273.762,
+        "duration": 4.79
+    },
+    {
+        "text": "All of the observations are\nconsistent with all of these",
+        "start": 4279.472,
+        "duration": 2.92
+    },
+    {
+        "text": "hypotheses, so it must be symmetric.",
+        "start": 4282.392,
+        "duration": 3.17
+    },
+    {
+        "text": "That's basically the rationale behind\nit, but we're not like taking the",
+        "start": 4285.592,
+        "duration": 3.0
+    },
+    {
+        "text": "graph and doing some computation\non it or something like that.",
+        "start": 4288.592,
+        "duration": 4.22
+    },
+    {
+        "text": "It's basically just how the\nhypotheses develop over time.",
+        "start": 4293.712,
+        "duration": 3.65
+    },
+    {
+        "text": "Got it.",
+        "start": 4298.522,
+        "duration": 0.39
+    },
+    {
+        "text": "And it's not perfect.",
+        "start": 4302.442,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 4304.712,
+        "duration": 0.37
+    },
+    {
+        "text": "Like you saw just now with this log\nfor the mug, it detected symmetry.",
+        "start": 4305.812,
+        "duration": 4.27
+    },
+    {
+        "text": "When actually with a MUG, you could\nresolve it by going to the handle.",
+        "start": 4310.472,
+        "duration": 4.41
+    },
+    {
+        "text": "And I think you've seen that too with the\nunsupervised experiments that with the",
+        "start": 4318.132,
+        "duration": 3.46
+    },
+    {
+        "text": "MUG, it often just merges graphs with the\nhandle in different places around that.",
+        "start": 4321.592,
+        "duration": 6.15
+    },
+    {
+        "text": "Like it detects correctly how\nto put the MUG up right, but it",
+        "start": 4327.762,
+        "duration": 4.48
+    },
+    {
+        "text": "just, yeah, gets that rotation.",
+        "start": 4332.252,
+        "duration": 1.89
+    },
+    {
+        "text": "it doesn't, go to the\nhandle and figures it out.",
+        "start": 4335.642,
+        "duration": 3.59
+    },
+    {
+        "text": "Yeah, that is interesting to me that\nit would, I don't quite understand the",
+        "start": 4341.477,
+        "duration": 3.45
+    },
+    {
+        "text": "process yet about how, if I'm on a mug,\nI don't have a mug on me, close enough.",
+        "start": 4344.927,
+        "duration": 6.18
+    },
+    {
+        "text": "If I'm on a mug,",
+        "start": 4351.877,
+        "duration": 0.99
+    },
+    {
+        "text": "and I'm moving along this surface, and\nlet's say this is the handle, I could",
+        "start": 4355.447,
+        "duration": 4.56
+    },
+    {
+        "text": "be at any one of these points, right?",
+        "start": 4360.017,
+        "duration": 2.07
+    },
+    {
+        "text": "Anywhere but the handle, essentially.",
+        "start": 4362.087,
+        "duration": 1.85
+    },
+    {
+        "text": "But during the continual learning phase,\nsay on the second or third epoch, it",
+        "start": 4364.147,
+        "duration": 5.72
+    },
+    {
+        "text": "must eventually settle that we are\nsomewhere, even if it's not correct.",
+        "start": 4369.997,
+        "duration": 4.73
+    },
+    {
+        "text": "Like all these hypotheses\nare about equally good.",
+        "start": 4375.352,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah, so it could say And then\nit picks a spot, basically.",
+        "start": 4379.452,
+        "duration": 2.9
+    },
+    {
+        "text": "And that's why when it runs\ninto the handle in an unexpected",
+        "start": 4382.472,
+        "duration": 2.94
+    },
+    {
+        "text": "location, it just adds it.",
+        "start": 4385.442,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah, so it basically goes into the\nsymmetry condition where it says All",
+        "start": 4387.632,
+        "duration": 5.43
+    },
+    {
+        "text": "of these hypotheses have been valid for\nthe past a hundred steps or whatever.",
+        "start": 4393.062,
+        "duration": 4.95
+    },
+    {
+        "text": "So I think there's symmetric and then\nthat goes into okay, the episode is over.",
+        "start": 4398.012,
+        "duration": 6.74
+    },
+    {
+        "text": "It starts a symmetric object, and then\nit just takes the first one for how",
+        "start": 4404.752,
+        "duration": 5.16
+    },
+    {
+        "text": "to add the object into the, how to add\nthe new observations into the graph.",
+        "start": 4409.912,
+        "duration": 4.62
+    },
+    {
+        "text": "Okay.",
+        "start": 4415.682,
+        "duration": 0.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 4421.682,
+        "duration": 0.23
+    },
+    {
+        "text": "That's actually something we could\nmaybe do for the unsupervised learning",
+        "start": 4421.912,
+        "duration": 4.43
+    },
+    {
+        "text": "condition is to set that threshold\nfor symmetry detection much higher.",
+        "start": 4426.342,
+        "duration": 5.09
+    },
+    {
+        "text": "So it goes longer trying to resolve it.",
+        "start": 4431.552,
+        "duration": 3.49
+    },
+    {
+        "text": "okay.",
+        "start": 4440.132,
+        "duration": 0.13
+    },
+    {
+        "text": "We only got 10 minutes left.",
+        "start": 4440.262,
+        "duration": 1.34
+    },
+    {
+        "text": "Maybe I can quickly explain the CSV stats.",
+        "start": 4441.602,
+        "duration": 2.89
+    },
+    {
+        "text": "okay, actually maybe I show them for\na five learning module experiment,",
+        "start": 4447.052,
+        "duration": 4.77
+    },
+    {
+        "text": "because, that, that might be a\nbit more interesting to explain.",
+        "start": 4451.832,
+        "duration": 7.36
+    },
+    {
+        "text": "Okay.",
+        "start": 4460.382,
+        "duration": 0.29
+    },
+    {
+        "text": "So we have the primary performance,",
+        "start": 4460.672,
+        "duration": 2.75
+    },
+    {
+        "text": "which is like the most interesting\nthing that the, that Monty recognized",
+        "start": 4466.422,
+        "duration": 5.17
+    },
+    {
+        "text": "the object correctly or not.",
+        "start": 4471.642,
+        "duration": 1.69
+    },
+    {
+        "text": "and there we have different options.",
+        "start": 4474.662,
+        "duration": 1.74
+    },
+    {
+        "text": "We have correct.",
+        "start": 4476.402,
+        "duration": 0.83
+    },
+    {
+        "text": "We have correct most likely\nhypothesis, which means.",
+        "start": 4477.282,
+        "duration": 2.72
+    },
+    {
+        "text": "It didn't converge, it didn't\nsay I'm done, but the most likely",
+        "start": 4480.807,
+        "duration": 3.96
+    },
+    {
+        "text": "hypothesis was correct at that time.",
+        "start": 4484.767,
+        "duration": 2.0
+    },
+    {
+        "text": "and here in this example, we have five\nlearning modules, so LM0 through 4,",
+        "start": 4488.407,
+        "duration": 5.25
+    },
+    {
+        "text": "and that basically means, okay, at\nthe end of the episode, three of the",
+        "start": 4494.167,
+        "duration": 5.59
+    },
+    {
+        "text": "learning modules had detected the object.",
+        "start": 4500.137,
+        "duration": 2.15
+    },
+    {
+        "text": "They said, we're done.",
+        "start": 4502.317,
+        "duration": 1.1
+    },
+    {
+        "text": "Our condition was we need three\nout of five learning modules.",
+        "start": 4503.657,
+        "duration": 3.35
+    },
+    {
+        "text": "To be done.",
+        "start": 4507.792,
+        "duration": 0.77
+    },
+    {
+        "text": "So it just said, okay,\nthree, three are done.",
+        "start": 4508.912,
+        "duration": 2.93
+    },
+    {
+        "text": "We're done.",
+        "start": 4511.862,
+        "duration": 0.54
+    },
+    {
+        "text": "And these were not done yet, but they\nstill had the most likely hypothesis.",
+        "start": 4512.442,
+        "duration": 4.23
+    },
+    {
+        "text": "other options are okay.",
+        "start": 4518.812,
+        "duration": 1.44
+    },
+    {
+        "text": "Patch of object that just happens if\none of the patches is not on the object.",
+        "start": 4520.252,
+        "duration": 4.59
+    },
+    {
+        "text": "and then confused, most likely hypothesis\nthat happens when like here we have,",
+        "start": 4526.792,
+        "duration": 6.37
+    },
+    {
+        "text": "again, we had three that were done.",
+        "start": 4533.542,
+        "duration": 1.9
+    },
+    {
+        "text": "One at the correct, most\nlikely hypothesis and this one.",
+        "start": 4535.692,
+        "duration": 2.81
+    },
+    {
+        "text": "And here you can see the hypotheses\nthat they still had at the",
+        "start": 4538.567,
+        "duration": 7.09
+    },
+    {
+        "text": "point when the episode finished.",
+        "start": 4545.667,
+        "duration": 1.59
+    },
+    {
+        "text": "Both of them have Spoon in\nthere, but this one just had a",
+        "start": 4547.257,
+        "duration": 3.87
+    },
+    {
+        "text": "different one for most likely.",
+        "start": 4551.127,
+        "duration": 1.6
+    },
+    {
+        "text": "And you can also see this one\nonly got two observations versus",
+        "start": 4552.727,
+        "duration": 3.78
+    },
+    {
+        "text": "like 36, 37 on the other one.",
+        "start": 4556.517,
+        "duration": 2.31
+    },
+    {
+        "text": "So it probably just didn't\nget a lot of information.",
+        "start": 4558.827,
+        "duration": 3.19
+    },
+    {
+        "text": "And that's why it didn't say I'm done.",
+        "start": 4562.187,
+        "duration": 1.98
+    },
+    {
+        "text": "And it didn't have the right\nmost likely hypothesis.",
+        "start": 4564.167,
+        "duration": 3.45
+    },
+    {
+        "text": "I have a question about that.",
+        "start": 4568.182,
+        "duration": 0.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 4569.622,
+        "duration": 0.38
+    },
+    {
+        "text": "So how is it that these, learning\nmodules They're in the same episode,",
+        "start": 4570.302,
+        "duration": 5.785
+    },
+    {
+        "text": "they're both receiving information from\nthe same type of sensor module, but one",
+        "start": 4576.467,
+        "duration": 3.7
+    },
+    {
+        "text": "has more observations than the other.",
+        "start": 4580.167,
+        "duration": 1.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 4583.217,
+        "duration": 0.43
+    },
+    {
+        "text": "So that's because they are different\npatches in different locations.",
+        "start": 4583.647,
+        "duration": 3.39
+    },
+    {
+        "text": "they are really nearby and move together,\nbut they're still in different locations.",
+        "start": 4587.797,
+        "duration": 3.9
+    },
+    {
+        "text": "And they are also using\nthe future change as an SM.",
+        "start": 4592.277,
+        "duration": 4.87
+    },
+    {
+        "text": "So they might not all be getting\nobservations at the same points in time.",
+        "start": 4597.157,
+        "duration": 3.64
+    },
+    {
+        "text": "And also it can, if you imagine\nthese, and it's a distant object.",
+        "start": 4601.047,
+        "duration": 4.28
+    },
+    {
+        "text": "the distant agent.",
+        "start": 4606.842,
+        "duration": 0.86
+    },
+    {
+        "text": "So it's saccading like this.",
+        "start": 4607.702,
+        "duration": 1.6
+    },
+    {
+        "text": "And if you have four of them here on\nthe left side and we're on the side",
+        "start": 4609.322,
+        "duration": 3.81
+    },
+    {
+        "text": "of the cup, then like the ones on the\nside here are not actually on the cup.",
+        "start": 4613.132,
+        "duration": 5.86
+    },
+    {
+        "text": "So they won't get any observations\nwhile these are actually on the",
+        "start": 4618.992,
+        "duration": 2.96
+    },
+    {
+        "text": "cup and getting observations.",
+        "start": 4621.952,
+        "duration": 1.54
+    },
+    {
+        "text": "Got it.",
+        "start": 4624.022,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay.",
+        "start": 4624.542,
+        "duration": 0.3
+    },
+    {
+        "text": "And that might've happened here.",
+        "start": 4627.012,
+        "duration": 1.46
+    },
+    {
+        "text": "That learning module two was\njust like not even on the cup.",
+        "start": 4628.472,
+        "duration": 3.75
+    },
+    {
+        "text": "And so it didn't get anything.",
+        "start": 4632.362,
+        "duration": 1.59
+    },
+    {
+        "text": "Okay.",
+        "start": 4638.442,
+        "duration": 0.42
+    },
+    {
+        "text": "And then we have number of steps.",
+        "start": 4638.862,
+        "duration": 3.54
+    },
+    {
+        "text": "And if you go through here, you'll see\nthere's a number of steps, there's Monty",
+        "start": 4643.327,
+        "duration": 4.06
+    },
+    {
+        "text": "steps, there's Monty matching steps.",
+        "start": 4647.387,
+        "duration": 1.98
+    },
+    {
+        "text": "So what's that all about?",
+        "start": 4649.737,
+        "duration": 1.11
+    },
+    {
+        "text": "where did I put that?",
+        "start": 4657.417,
+        "duration": 1.35
+    },
+    {
+        "text": "experiment, I think.",
+        "start": 4662.937,
+        "duration": 1.5
+    },
+    {
+        "text": "Yeah, if you go to how Monty works in\nan experiment, there's an explanation",
+        "start": 4665.147,
+        "duration": 3.74
+    },
+    {
+        "text": "of all the different types of steps.",
+        "start": 4668.887,
+        "duration": 2.05
+    },
+    {
+        "text": "number of steps, the first column\nis number of matching steps that a",
+        "start": 4673.687,
+        "duration": 3.71
+    },
+    {
+        "text": "specific learning module performed.",
+        "start": 4677.397,
+        "duration": 2.36
+    },
+    {
+        "text": "So here, these can be different\nfor each of the learning module.",
+        "start": 4680.147,
+        "duration": 3.06
+    },
+    {
+        "text": "Each learning module might have\ngotten a different amount of",
+        "start": 4683.517,
+        "duration": 3.59
+    },
+    {
+        "text": "observations and performed a\ndifferent amount of matching steps.",
+        "start": 4687.197,
+        "duration": 2.85
+    },
+    {
+        "text": "Monty step are global steps.",
+        "start": 4691.997,
+        "duration": 2.26
+    },
+    {
+        "text": "So this is number of observations\nsent to the Monty model.",
+        "start": 4694.607,
+        "duration": 3.77
+    },
+    {
+        "text": "This includes observations that\nwere not interesting enough to",
+        "start": 4698.737,
+        "duration": 3.39
+    },
+    {
+        "text": "be sent to a learning module\nsuch as off object observations.",
+        "start": 4702.127,
+        "duration": 4.59
+    },
+    {
+        "text": "It also includes both matching\nand exploratory steps.",
+        "start": 4707.087,
+        "duration": 3.05
+    },
+    {
+        "text": "So here, if you look at Monty steps,\nit's the same for all of them.",
+        "start": 4711.477,
+        "duration": 3.13
+    },
+    {
+        "text": "It's basically How many cycles do we do?",
+        "start": 4714.607,
+        "duration": 3.255
+    },
+    {
+        "text": "How many, even if all of the sensors don't\ndetect a feature change, it will still be",
+        "start": 4718.142,
+        "duration": 6.4
+    },
+    {
+        "text": "a Monty step, because we went once through\nthe outer for loop of taking a step in",
+        "start": 4724.542,
+        "duration": 4.71
+    },
+    {
+        "text": "the environment, essentially, like the\nsensors actually made a movement, even if",
+        "start": 4729.252,
+        "duration": 5.46
+    },
+    {
+        "text": "nothing happened in the learning modules.",
+        "start": 4734.762,
+        "duration": 1.94
+    },
+    {
+        "text": "And then Monty matching step.",
+        "start": 4738.792,
+        "duration": 1.57
+    },
+    {
+        "text": "is at least one learning\nmodule performed matching step.",
+        "start": 4741.477,
+        "duration": 4.04
+    },
+    {
+        "text": "and yeah, there are also exploratory\nsteps, which do not update possible",
+        "start": 4748.517,
+        "duration": 3.65
+    },
+    {
+        "text": "matches and only store an observation in\nthe buffer and they are not counted here.",
+        "start": 4752.167,
+        "duration": 4.47
+    },
+    {
+        "text": "So matching steps is again, the same\nfor all of them, but this are only",
+        "start": 4757.337,
+        "duration": 4.4
+    },
+    {
+        "text": "the steps where at least one of the\nlearning modules actually performed",
+        "start": 4761.737,
+        "duration": 3.71
+    },
+    {
+        "text": "an update and got an observation.",
+        "start": 4765.457,
+        "duration": 2.23
+    },
+    {
+        "text": "So this was when the feature change was\ntrue for at least one of the module.",
+        "start": 4769.757,
+        "duration": 3.34
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 4773.627,
+        "duration": 0.97
+    },
+    {
+        "text": "Gotcha.",
+        "start": 4775.017,
+        "duration": 0.33
+    },
+    {
+        "text": "and then, yeah, we have the\nrotation error, which is in radians,",
+        "start": 4778.202,
+        "duration": 3.96
+    },
+    {
+        "text": "this is actually pretty bad, I'm not\nsure why, but it's between zero and",
+        "start": 4784.942,
+        "duration": 5.98
+    },
+    {
+        "text": "pi, this is like the maximum, almost.",
+        "start": 4790.942,
+        "duration": 3.58
+    },
+    {
+        "text": "maybe.",
+        "start": 4796.362,
+        "duration": 0.29
+    },
+    {
+        "text": "Okay.",
+        "start": 4797.397,
+        "duration": 0.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 4797.887,
+        "duration": 0.25
+    },
+    {
+        "text": "It might be like a mirror symmetry,\nlike it recognized exactly the opposite.",
+        "start": 4798.137,
+        "duration": 5.41
+    },
+    {
+        "text": "and then, yeah, result, it's all marked,\nbut these two marks are in a list",
+        "start": 4805.857,
+        "duration": 4.12
+    },
+    {
+        "text": "because These two timed out, so this\nis just correct most likely hypothesis,",
+        "start": 4809.997,
+        "duration": 6.51
+    },
+    {
+        "text": "and why would this not be done?",
+        "start": 4817.077,
+        "duration": 3.27
+    },
+    {
+        "text": "It only has one object\nin the possible objects.",
+        "start": 4820.357,
+        "duration": 2.92
+    },
+    {
+        "text": "Why wouldn't it say it's a mug?",
+        "start": 4823.317,
+        "duration": 1.32
+    },
+    {
+        "text": "It's because for a learning\nmodule to say it's done, it",
+        "start": 4825.017,
+        "duration": 3.51
+    },
+    {
+        "text": "also needs to resolve the pose.",
+        "start": 4828.537,
+        "duration": 1.73
+    },
+    {
+        "text": "So these already said, okay, mug\nis the only possible object, but",
+        "start": 4830.867,
+        "duration": 3.91
+    },
+    {
+        "text": "I'm not sure yet where I'm on the\nmug or how the mug is rotated.",
+        "start": 4834.967,
+        "duration": 4.05
+    },
+    {
+        "text": "most likely objects, mug for all\nof them, primary target object.",
+        "start": 4842.197,
+        "duration": 4.16
+    },
+    {
+        "text": "so we have primary target object\nand stepwise target object.",
+        "start": 4848.087,
+        "duration": 3.01
+    },
+    {
+        "text": "This is, basically a\ndistinction that's useful for.",
+        "start": 4851.757,
+        "duration": 3.1
+    },
+    {
+        "text": "Environments where we have multiple\nobjects in the environment.",
+        "start": 4855.117,
+        "duration": 3.22
+    },
+    {
+        "text": "So primary target would be\nthe object that we start on.",
+        "start": 4858.857,
+        "duration": 2.67
+    },
+    {
+        "text": "And then we might be\nmoving on to other objects.",
+        "start": 4862.357,
+        "duration": 2.8
+    },
+    {
+        "text": "So that's the stepwise target object.",
+        "start": 4866.147,
+        "duration": 1.83
+    },
+    {
+        "text": "So that's what was the object that\nwe were on when the episode ended.",
+        "start": 4867.977,
+        "duration": 3.83
+    },
+    {
+        "text": "Okay.",
+        "start": 4874.297,
+        "duration": 0.36
+    },
+    {
+        "text": "And then highest evidence.",
+        "start": 4874.657,
+        "duration": 1.32
+    },
+    {
+        "text": "That's the evidence, the highest\nevidence for each of these.",
+        "start": 4875.977,
+        "duration": 4.09
+    },
+    {
+        "text": "Time is,",
+        "start": 4880.987,
+        "duration": 0.66
+    },
+    {
+        "text": "How long?",
+        "start": 4887.447,
+        "duration": 0.6
+    },
+    {
+        "text": "I think this is how long each learning\nmodule took overall, added up, and",
+        "start": 4888.267,
+        "duration": 6.86
+    },
+    {
+        "text": "they are different because some of\nthem took steps when others didn't.",
+        "start": 4895.137,
+        "duration": 4.55
+    },
+    {
+        "text": "I would have to go back into the code to\ncheck why these are different actually.",
+        "start": 4900.187,
+        "duration": 3.76
+    },
+    {
+        "text": "and then symmetry evidence is like,\nhow many steps in a row did we have?",
+        "start": 4906.297,
+        "duration": 5.09
+    },
+    {
+        "text": "Where symmetry was detected and\nbasically if one step happens where",
+        "start": 4911.827,
+        "duration": 5.28
+    },
+    {
+        "text": "the hypotheses are not consistent\nanymore, this gets reset to zero again.",
+        "start": 4918.407,
+        "duration": 3.68
+    },
+    {
+        "text": "Monty step, matching steps I\nexplained and then individual,",
+        "start": 4925.227,
+        "duration": 5.66
+    },
+    {
+        "text": "terminal state performance.",
+        "start": 4931.397,
+        "duration": 1.86
+    },
+    {
+        "text": "Here you can see again, those\nthree, finished and We had a correct",
+        "start": 4934.127,
+        "duration": 4.665
+    },
+    {
+        "text": "classification, but then these two\nhad a timeout because they were",
+        "start": 4938.822,
+        "duration": 3.43
+    },
+    {
+        "text": "finished early because we reached\nthe terminal condition with three,",
+        "start": 4943.462,
+        "duration": 3.66
+    },
+    {
+        "text": "here individual terminal\nstate reached at step.",
+        "start": 4950.012,
+        "duration": 2.7
+    },
+    {
+        "text": "it's at what step was it done, and we can\nsee this one was done first, and then this",
+        "start": 4954.067,
+        "duration": 5.43
+    },
+    {
+        "text": "one, and then this one, and these never.",
+        "start": 4959.497,
+        "duration": 3.27
+    },
+    {
+        "text": "And we have the target position,\nrotation, the most likely rotation,",
+        "start": 4964.377,
+        "duration": 5.65
+    },
+    {
+        "text": "number of possible matches, detect\nlocation, detect rotation, detect",
+        "start": 4970.127,
+        "duration": 4.15
+    },
+    {
+        "text": "scale, those are all pretty obvious,",
+        "start": 4974.297,
+        "duration": 2.14
+    },
+    {
+        "text": "individual rotation error.",
+        "start": 4979.407,
+        "duration": 1.24
+    },
+    {
+        "text": "mean objects per graph and mean graphs\nper object, those are relevant for",
+        "start": 4982.757,
+        "duration": 3.32
+    },
+    {
+        "text": "the unsupervised learning experiments.",
+        "start": 4986.077,
+        "duration": 1.98
+    },
+    {
+        "text": "So when we don't give labels during\ntraining, it might happen that two",
+        "start": 4988.187,
+        "duration": 4.16
+    },
+    {
+        "text": "objects get merged into one graph,\nor one object is represented with two",
+        "start": 4992.347,
+        "duration": 5.36
+    },
+    {
+        "text": "graphs, and that's being tracked here.",
+        "start": 4997.707,
+        "duration": 2.22
+    },
+    {
+        "text": "And then,",
+        "start": 5001.277,
+        "duration": 0.45
+    },
+    {
+        "text": "true positives, false positives, and\nso on are tracked in this column, which",
+        "start": 5003.857,
+        "duration": 5.29
+    },
+    {
+        "text": "is also useful if we have unsupervised\ntraining, where it might be, oh, I",
+        "start": 5009.147,
+        "duration": 6.795
+    },
+    {
+        "text": "have a model learned from the small,\nfrom the red mug and the green mug.",
+        "start": 5015.952,
+        "duration": 5.95
+    },
+    {
+        "text": "They're both merged into one model.",
+        "start": 5021.902,
+        "duration": 1.93
+    },
+    {
+        "text": "so I think,",
+        "start": 5026.522,
+        "duration": 2.57
+    },
+    {
+        "text": "yeah, that, Basically, yeah, it's\na bit complicated to explain, we're",
+        "start": 5031.632,
+        "duration": 5.49
+    },
+    {
+        "text": "over time, but, yeah, in this case, we\ncan only have like target impossible",
+        "start": 5037.122,
+        "duration": 5.01
+    },
+    {
+        "text": "matches or target not matched.",
+        "start": 5042.132,
+        "duration": 1.92
+    },
+    {
+        "text": "and yeah, maybe I'll go\nover this another time.",
+        "start": 5048.042,
+        "duration": 4.83
+    },
+    {
+        "text": "This is for the policy, how many\njumps were attempted, how many were",
+        "start": 5052.872,
+        "duration": 3.65
+    },
+    {
+        "text": "successful, and learning module ID.",
+        "start": 5056.532,
+        "duration": 4.36
+    }
+]

@@ -1,0 +1,2067 @@
+[
+    {
+        "text": "so Q2.",
+        "start": 8.336,
+        "duration": 1.38
+    },
+    {
+        "text": "also it was fun putting these\nslides together 'cause you forget",
+        "start": 11.246,
+        "duration": 3.24
+    },
+    {
+        "text": "about all these things that you did\nand then you see them all again.",
+        "start": 14.486,
+        "duration": 2.91
+    },
+    {
+        "text": "but, so this is what we set out to do.",
+        "start": 18.506,
+        "duration": 2.01
+    },
+    {
+        "text": "three months ago, we wanted\nto pave the way for Monte to",
+        "start": 21.056,
+        "duration": 2.97
+    },
+    {
+        "text": "model compositional objects.",
+        "start": 24.026,
+        "duration": 1.59
+    },
+    {
+        "text": "We want to make money, easy to use in\na variety of applications, increase",
+        "start": 26.186,
+        "duration": 4.41
+    },
+    {
+        "text": "our academic engagement and figure\nout how to model object behaviors.",
+        "start": 30.596,
+        "duration": 4.02
+    },
+    {
+        "text": "And so I'll just go through the sub\ngoals that we set for each of those.",
+        "start": 35.561,
+        "duration": 3.84
+    },
+    {
+        "text": "So for paving the way for mild to\nMarty Monty to model compositional",
+        "start": 39.881,
+        "duration": 6.51
+    },
+    {
+        "text": "objects, one of the sub goals was\nthat the accuracy on unsupervised",
+        "start": 46.391,
+        "duration": 5.4
+    },
+    {
+        "text": "inference benchmark is dramatically\nimproved via hypothesis resampling.",
+        "start": 51.821,
+        "duration": 4.32
+    },
+    {
+        "text": "And I would say that's definitely checked\noff 'cause we went from 12% accuracy",
+        "start": 56.381,
+        "duration": 4.98
+    },
+    {
+        "text": "to 96 and from 6% to 94% accuracy.",
+        "start": 61.361,
+        "duration": 3.96
+    },
+    {
+        "text": "So I would say that's\ndramatically improved.",
+        "start": 65.321,
+        "duration": 2.55
+    },
+    {
+        "text": "and it's been done through\nhypothesis resampling.",
+        "start": 68.921,
+        "duration": 2.13
+    },
+    {
+        "text": "So great work Rami.",
+        "start": 71.441,
+        "duration": 1.62
+    },
+    {
+        "text": "we had the speed of inference\nfor distant age and dramatically",
+        "start": 75.791,
+        "duration": 2.64
+    },
+    {
+        "text": "improved via better policies.",
+        "start": 78.431,
+        "duration": 2.28
+    },
+    {
+        "text": "and this one has been deprioritized,\nwhich is why I made it gray.",
+        "start": 81.431,
+        "duration": 3.54
+    },
+    {
+        "text": "'cause there was a lot of other\nstuff that came up and we had",
+        "start": 85.901,
+        "duration": 3.525
+    },
+    {
+        "text": "to work on like finalizing DMC\npaper and the hackathon wrap up.",
+        "start": 89.426,
+        "duration": 3.705
+    },
+    {
+        "text": "Or, it was a whole quarter.",
+        "start": 95.471,
+        "duration": 1.89
+    },
+    {
+        "text": "But yeah, generally the hackathon\nwork, as well took a lot of time.",
+        "start": 97.391,
+        "duration": 3.84
+    },
+    {
+        "text": "But, so we deprioritize this one, but\nstill towards the end of last month,",
+        "start": 101.231,
+        "duration": 4.17
+    },
+    {
+        "text": "Scott, spent a lot of time on outlining\nhow we wanna do this, and we have a",
+        "start": 105.491,
+        "duration": 4.65
+    },
+    {
+        "text": "really concrete idea now of how we\nwanna tackle that in the next quarter.",
+        "start": 110.141,
+        "duration": 3.87
+    },
+    {
+        "text": "then putting together a test bit for\ncompositional objects, so Logos on",
+        "start": 115.931,
+        "duration": 3.96
+    },
+    {
+        "text": "Cups is available, and that's done,\nthanks to Scott's, work last week.",
+        "start": 119.891,
+        "duration": 6.72
+    },
+    {
+        "text": "And then the performance baseline\nquantified is not done yet.",
+        "start": 127.181,
+        "duration": 4.5
+    },
+    {
+        "text": "that will be a bigger project, figuring\nout how we actually want to measure",
+        "start": 131.861,
+        "duration": 3.51
+    },
+    {
+        "text": "performance on that, how we wanna learn\nhow, we wanna do inference and so on.",
+        "start": 135.371,
+        "duration": 3.6
+    },
+    {
+        "text": "and then also the motor system\nsupports swapping out policies,",
+        "start": 141.101,
+        "duration": 3.06
+    },
+    {
+        "text": "which, thanks to Tristan.",
+        "start": 144.161,
+        "duration": 1.92
+    },
+    {
+        "text": "It, it does now.",
+        "start": 146.106,
+        "duration": 1.265
+    },
+    {
+        "text": "then on making one easy to use.",
+        "start": 150.446,
+        "duration": 2.01
+    },
+    {
+        "text": "we had the motor system is disentangled\nfrom other classes that one, Tristan did",
+        "start": 152.756,
+        "duration": 5.61
+    },
+    {
+        "text": "a whole bunch of work on, but it's a, huge\nproject, so it's still in progress, but",
+        "start": 158.426,
+        "duration": 4.29
+    },
+    {
+        "text": "there's been, lots of progress made on it.",
+        "start": 162.716,
+        "duration": 2.4
+    },
+    {
+        "text": "as you can see from all these merch, prs,\nMonty is not constrained to Python 3.0.",
+        "start": 166.196,
+        "duration": 6.99
+    },
+    {
+        "text": "again, it's, in progress.",
+        "start": 174.776,
+        "duration": 1.38
+    },
+    {
+        "text": "There.",
+        "start": 176.156,
+        "duration": 0.33
+    },
+    {
+        "text": "There is a draft PR that Jeremy, put here.",
+        "start": 176.486,
+        "duration": 4.14
+    },
+    {
+        "text": "and he put a lot of, work into kind of,",
+        "start": 181.556,
+        "duration": 2.91
+    },
+    {
+        "text": "making it unconstrained to Python,\nbut we haven't merged it yet.",
+        "start": 186.716,
+        "duration": 3.0
+    },
+    {
+        "text": "And, Jeremy's currently exploring\na different path because with the",
+        "start": 190.286,
+        "duration": 4.11
+    },
+    {
+        "text": "newest Habitat SIM versions, which\nis needed for a new Python version.",
+        "start": 194.396,
+        "duration": 3.33
+    },
+    {
+        "text": "That one for some reason requires GPUs.",
+        "start": 198.056,
+        "duration": 2.28
+    },
+    {
+        "text": "and then we have to add GPUs to all of our\ninfrastructure just to run the simulator.",
+        "start": 201.536,
+        "duration": 4.14
+    },
+    {
+        "text": "And so right now, the different\npath, Jeremy's going down as adding",
+        "start": 206.006,
+        "duration": 5.67
+    },
+    {
+        "text": "a different simulator instead\nof, keeping reliance on habitats.",
+        "start": 211.676,
+        "duration": 4.92
+    },
+    {
+        "text": "And,",
+        "start": 216.626,
+        "duration": 0.09
+    },
+    {
+        "text": "we published tutorials on using Monty\nin novel applications and in robotics.",
+        "start": 219.416,
+        "duration": 4.89
+    },
+    {
+        "text": "So I put up these two tutorials\non that and then, published",
+        "start": 224.306,
+        "duration": 4.26
+    },
+    {
+        "text": "several example projects.",
+        "start": 228.566,
+        "duration": 1.41
+    },
+    {
+        "text": "Those are the projects from\nthe hackathons that we have.",
+        "start": 229.976,
+        "duration": 2.91
+    },
+    {
+        "text": "The, Lego, Asbury PI project\nand all its documentation.",
+        "start": 233.936,
+        "duration": 4.47
+    },
+    {
+        "text": "We have the ultrasound and\nall its documentation, and",
+        "start": 238.406,
+        "duration": 2.82
+    },
+    {
+        "text": "then also the drone project.",
+        "start": 241.226,
+        "duration": 1.5
+    },
+    {
+        "text": "And, hint around what people\nshould, watch out for when",
+        "start": 242.726,
+        "duration": 4.86
+    },
+    {
+        "text": "building a robotics application\nplus the website once it's public.",
+        "start": 247.586,
+        "duration": 4.23
+    },
+    {
+        "text": "Then yeah, for increasing academic\nengagement, the kind of university",
+        "start": 256.651,
+        "duration": 4.57
+    },
+    {
+        "text": "outreach and creating content for\ntargeting universities, hasn't gotten",
+        "start": 261.221,
+        "duration": 5.07
+    },
+    {
+        "text": "as much attention as we planned this,\nthe squatter, but still, will has",
+        "start": 266.291,
+        "duration": 4.56
+    },
+    {
+        "text": "created some of the, content pieces,\nlike a short form two page, PDF, and",
+        "start": 270.851,
+        "duration": 5.34
+    },
+    {
+        "text": "then we'll also have the two papers\nto use, once they're published.",
+        "start": 276.191,
+        "duration": 4.41
+    },
+    {
+        "text": "everyone looked into conferences\nto go to and, I don't think all of",
+        "start": 282.401,
+        "duration": 4.5
+    },
+    {
+        "text": "them are booked yet, but at least\neveryone had looked into those.",
+        "start": 286.901,
+        "duration": 3.09
+    },
+    {
+        "text": "A lot of them are planned and booked.",
+        "start": 289.991,
+        "duration": 1.41
+    },
+    {
+        "text": "and",
+        "start": 292.271,
+        "duration": 0.33
+    },
+    {
+        "text": "yeah.",
+        "start": 295.541,
+        "duration": 0.39
+    },
+    {
+        "text": "Some, plans made for this year and\nthen adding 500 academic context on",
+        "start": 296.861,
+        "duration": 4.47
+    },
+    {
+        "text": "Twitter, blue sky, I think on Blue\nSky we have, more than 500 that we're",
+        "start": 301.421,
+        "duration": 3.57
+    },
+    {
+        "text": "following now that we'll add it.",
+        "start": 304.991,
+        "duration": 1.86
+    },
+    {
+        "text": "And then on Twitter, not as many, but\nwe decided that Blue sky works better",
+        "start": 306.851,
+        "duration": 5.01
+    },
+    {
+        "text": "and more academics are there nowadays.",
+        "start": 311.861,
+        "duration": 2.52
+    },
+    {
+        "text": "anyways, but yeah, that's\nalso still in progress.",
+        "start": 315.341,
+        "duration": 3.87
+    },
+    {
+        "text": "will it released, 36 hours of video?",
+        "start": 320.171,
+        "duration": 3.24
+    },
+    {
+        "text": "Exactly.",
+        "start": 323.621,
+        "duration": 0.84
+    },
+    {
+        "text": "For some reason?",
+        "start": 324.851,
+        "duration": 0.69
+    },
+    {
+        "text": "YouTube doesn't give you the\nstatistic, it just tells you how",
+        "start": 325.811,
+        "duration": 2.43
+    },
+    {
+        "text": "many hours people have spent watching\nyour videos, which is 1,362 hours.",
+        "start": 328.241,
+        "duration": 5.82
+    },
+    {
+        "text": "But I went in with the calculator\nand just added them up real quick",
+        "start": 334.271,
+        "duration": 3.78
+    },
+    {
+        "text": "and it actually added up to 36 hours.",
+        "start": 338.051,
+        "duration": 2.04
+    },
+    {
+        "text": "So I don't know if you planned\nthis Will or but just, was a",
+        "start": 340.091,
+        "duration": 3.75
+    },
+    {
+        "text": "lucky coincidence, but just,",
+        "start": 343.841,
+        "duration": 2.43
+    },
+    {
+        "text": "Yeah, lots of, research\nmeetings that will, process",
+        "start": 350.771,
+        "duration": 4.53
+    },
+    {
+        "text": "then transcribed and uploaded.",
+        "start": 355.301,
+        "duration": 2.01
+    },
+    {
+        "text": "And the most exciting thing\nis that we're almost caught",
+        "start": 358.001,
+        "duration": 2.13
+    },
+    {
+        "text": "up with the backlog of videos.",
+        "start": 360.131,
+        "duration": 1.38
+    },
+    {
+        "text": "So that's almost complete.",
+        "start": 361.631,
+        "duration": 1.47
+    },
+    {
+        "text": "That is very exciting because we have like\nover 200 videos in that backlog, I think.",
+        "start": 364.271,
+        "duration": 4.65
+    },
+    {
+        "text": "and then, yeah, the one that really got\nthe most attention the quarter, I, would",
+        "start": 372.881,
+        "duration": 5.04
+    },
+    {
+        "text": "say, especially from the research team,\nwas, publishing or finalizing these",
+        "start": 377.921,
+        "duration": 5.97
+    },
+    {
+        "text": "two articles, especially the DMC paper.",
+        "start": 383.891,
+        "duration": 2.88
+    },
+    {
+        "text": "and so yeah, Niels uploaded them last\nnight to archive and then, yeah, for",
+        "start": 388.571,
+        "duration": 5.25
+    },
+    {
+        "text": "the peer reviewed journal, that will\ntake a couple more months to get the",
+        "start": 393.821,
+        "duration": 3.18
+    },
+    {
+        "text": "reviews and everything and address them.",
+        "start": 397.001,
+        "duration": 2.82
+    },
+    {
+        "text": "then on the last one, figuring\nout how to model object behaviors.",
+        "start": 402.266,
+        "duration": 3.69
+    },
+    {
+        "text": "one of our goals was to have a concrete\nproposal for generalizing the stapler",
+        "start": 406.256,
+        "duration": 3.12
+    },
+    {
+        "text": "behavior to another object, including\nbeing able to predict observed features.",
+        "start": 409.376,
+        "duration": 3.93
+    },
+    {
+        "text": "And we do have a pretty concrete proposal\nfor that, which is sending the kind of",
+        "start": 413.726,
+        "duration": 4.41
+    },
+    {
+        "text": "movement stored in the behavior model\ndown to the child objects column and move",
+        "start": 418.136,
+        "duration": 4.5
+    },
+    {
+        "text": "through the child objects reference frame.",
+        "start": 422.636,
+        "duration": 1.83
+    },
+    {
+        "text": "And we also have kinda pre\nconcrete proposal for solving",
+        "start": 424.946,
+        "duration": 3.63
+    },
+    {
+        "text": "a lot of the questions around\nthe modeling object behaviors,",
+        "start": 428.576,
+        "duration": 3.27
+    },
+    {
+        "text": "for concrete proposal for\nhow to model them in Monty.",
+        "start": 435.986,
+        "duration": 3.84
+    },
+    {
+        "text": "We do have some sections on that\nin the, disclosure document that",
+        "start": 439.916,
+        "duration": 4.83
+    },
+    {
+        "text": "Jeff and I wrote, and that we\npublished, but not super concrete yet.",
+        "start": 444.746,
+        "duration": 5.52
+    },
+    {
+        "text": "So I put that to in progress.",
+        "start": 450.506,
+        "duration": 2.16
+    },
+    {
+        "text": "And then file provisional patent\napplication or public disclosure.",
+        "start": 454.586,
+        "duration": 3.75
+    },
+    {
+        "text": "We decided to go with the public\ndisclosure and, disclose this",
+        "start": 458.366,
+        "duration": 4.05
+    },
+    {
+        "text": "PDF plus a bunch of videos of\nus discussing, these new ideas.",
+        "start": 462.416,
+        "duration": 4.14
+    },
+    {
+        "text": "and so although we didn't complete all\nof the sub things we set out for each of",
+        "start": 469.316,
+        "duration": 5.19
+    },
+    {
+        "text": "those, I decided to make all of these,\ngreen because we did spend a significant",
+        "start": 474.506,
+        "duration": 5.22
+    },
+    {
+        "text": "amount of time on each of these items,\non each of these kind of broad items, and",
+        "start": 479.726,
+        "duration": 5.4
+    },
+    {
+        "text": "made a, lot of, progress on each of them.",
+        "start": 485.156,
+        "duration": 2.88
+    },
+    {
+        "text": "And overall, pretty much almost all of\nthe things we did fell into one of these",
+        "start": 488.576,
+        "duration": 7.47
+    },
+    {
+        "text": "four categories and these tasks we set\nout, which I thought was really great.",
+        "start": 496.046,
+        "duration": 4.62
+    },
+    {
+        "text": "So there was a lot of good focus on those.",
+        "start": 500.666,
+        "duration": 2.1
+    },
+    {
+        "text": "There were a couple of things that\nI didn't mention yet, but we still",
+        "start": 503.156,
+        "duration": 3.45
+    },
+    {
+        "text": "spend a good amount of time on, so\nI thought I'll put those on some",
+        "start": 506.606,
+        "duration": 2.94
+    },
+    {
+        "text": "sites to just highlight as well.",
+        "start": 509.546,
+        "duration": 1.59
+    },
+    {
+        "text": "One is interacting with the community,\nwhich is an ongoing effort, but",
+        "start": 511.946,
+        "duration": 4.62
+    },
+    {
+        "text": "still takes a lot of time from\npeople, in at least some, a lot of",
+        "start": 516.566,
+        "duration": 5.43
+    },
+    {
+        "text": "the instances when there are more\ndetailed replies and questions.",
+        "start": 522.146,
+        "duration": 2.61
+    },
+    {
+        "text": "yeah, thanks to everyone who interacted\non discourse and who posted, replies to",
+        "start": 525.656,
+        "duration": 5.705
+    },
+    {
+        "text": "people's questions and help them out.",
+        "start": 531.361,
+        "duration": 2.905
+    },
+    {
+        "text": "there.",
+        "start": 535.256,
+        "duration": 0.45
+    },
+    {
+        "text": "And also for people who, like\nTristan, who reviewed p PRS on our GI",
+        "start": 536.876,
+        "duration": 5.7
+    },
+    {
+        "text": "repository from external contributors.",
+        "start": 542.576,
+        "duration": 2.16
+    },
+    {
+        "text": "then also presented the\nproject at several venues.",
+        "start": 547.466,
+        "duration": 3.0
+    },
+    {
+        "text": "So Tristan presented, the project.",
+        "start": 550.466,
+        "duration": 2.76
+    },
+    {
+        "text": "then I, was on a podcast and\nScott also presented, our",
+        "start": 555.416,
+        "duration": 4.65
+    },
+    {
+        "text": "project at the, Chen Institute.",
+        "start": 560.066,
+        "duration": 2.04
+    },
+    {
+        "text": "and both of those were two\nreally nice new slide decks and",
+        "start": 563.426,
+        "duration": 4.14
+    },
+    {
+        "text": "new ways of presenting Monty.",
+        "start": 567.566,
+        "duration": 1.65
+    },
+    {
+        "text": "really good to have in the repertoire.",
+        "start": 570.986,
+        "duration": 2.01
+    },
+    {
+        "text": "got a better idea of potential\napplications of Monty.",
+        "start": 575.456,
+        "duration": 2.73
+    },
+    {
+        "text": "Tristan visited some, the expo\nand some, other potential kind of,",
+        "start": 579.986,
+        "duration": 6.66
+    },
+    {
+        "text": "neck place in, the robotics space.",
+        "start": 588.056,
+        "duration": 2.31
+    },
+    {
+        "text": "I put together this presentation\nof, applications and how they tie",
+        "start": 590.726,
+        "duration": 4.35
+    },
+    {
+        "text": "into the capabilities of Monty.",
+        "start": 595.076,
+        "duration": 1.56
+    },
+    {
+        "text": "And then Niels and I spent a fair\namount of time talking to ultrasound,",
+        "start": 596.636,
+        "duration": 5.1
+    },
+    {
+        "text": "both ultrasound vendors and people\nwho worked with AI on ultrasound and",
+        "start": 602.216,
+        "duration": 4.29
+    },
+    {
+        "text": "people who worked with computer vision\nand implemented kind of ultrasound",
+        "start": 606.506,
+        "duration": 3.93
+    },
+    {
+        "text": "projects and had access to, clinics\nwith, ultrasound, just to figure",
+        "start": 610.436,
+        "duration": 4.95
+    },
+    {
+        "text": "out what's out there in the space.",
+        "start": 615.386,
+        "duration": 1.95
+    },
+    {
+        "text": "And could Monty, could this be a\nfirst application for Monty and would",
+        "start": 617.336,
+        "duration": 4.29
+    },
+    {
+        "text": "someone be interested in building this?",
+        "start": 621.626,
+        "duration": 1.62
+    },
+    {
+        "text": "so that also got a fair\namount of attention.",
+        "start": 625.871,
+        "duration": 2.49
+    },
+    {
+        "text": "and then the hackathon, although it\nwas just one week itself, demanded a",
+        "start": 629.591,
+        "duration": 5.34
+    },
+    {
+        "text": "significant amount of, preparation, both\nin terms of ordering all the parts for",
+        "start": 634.931,
+        "duration": 4.92
+    },
+    {
+        "text": "it, pre-training models, and also getting\nswag and prizes and stuff like that.",
+        "start": 639.851,
+        "duration": 8.1
+    },
+    {
+        "text": "and then also a significant,\namount of post work.",
+        "start": 649.871,
+        "duration": 4.38
+    },
+    {
+        "text": "like documenting everything.",
+        "start": 654.941,
+        "duration": 1.98
+    },
+    {
+        "text": "Tristan collected a bunch of feedback\nfrom everyone on Montes usability and",
+        "start": 657.491,
+        "duration": 5.55
+    },
+    {
+        "text": "issues they encountered and started\naddressing some of that feedback",
+        "start": 663.131,
+        "duration": 3.21
+    },
+    {
+        "text": "and then also some debugging work.",
+        "start": 666.641,
+        "duration": 1.74
+    },
+    {
+        "text": "and then there was also, a good\namount of brainstorming, especially",
+        "start": 671.291,
+        "duration": 5.31
+    },
+    {
+        "text": "also the brainstorming focus week.",
+        "start": 676.601,
+        "duration": 1.74
+    },
+    {
+        "text": "And I already mentioned in the\nmain Q2 priorities that we.",
+        "start": 678.641,
+        "duration": 5.04
+    },
+    {
+        "text": "do have a proposal for object\nbehaviors applied on a stapler, but",
+        "start": 685.646,
+        "duration": 3.27
+    },
+    {
+        "text": "we also talked a lot about, additional\nproblems like object distortions.",
+        "start": 688.916,
+        "duration": 4.59
+    },
+    {
+        "text": "We talked about, you\nfeature or surface models.",
+        "start": 693.506,
+        "duration": 3.57
+    },
+    {
+        "text": "We talked about general\ngeneric and specific models.",
+        "start": 697.076,
+        "duration": 2.55
+    },
+    {
+        "text": "We talked about circles and ovals\nand interpolation in variance",
+        "start": 699.626,
+        "duration": 4.17
+    },
+    {
+        "text": "and equity variance and learning\nin lower and higher regions and",
+        "start": 703.796,
+        "duration": 3.87
+    },
+    {
+        "text": "like all these different topics.",
+        "start": 707.996,
+        "duration": 1.32
+    },
+    {
+        "text": "yeah, a lot of interesting,\nideas and thoughts.",
+        "start": 709.946,
+        "duration": 4.38
+    },
+    {
+        "text": "and then there were a, bunch of\ncode and infrastructure and style",
+        "start": 715.586,
+        "duration": 2.61
+    },
+    {
+        "text": "improvements that happened, throughout\nthe month, just on a continual basis",
+        "start": 718.196,
+        "duration": 4.95
+    },
+    {
+        "text": "improving things, in little, ways.",
+        "start": 723.146,
+        "duration": 3.12
+    },
+    {
+        "text": "so yeah, overall really great job.",
+        "start": 728.696,
+        "duration": 2.04
+    },
+    {
+        "text": "Everyone I thought was yeah, really nice.",
+        "start": 730.736,
+        "duration": 3.96
+    },
+    {
+        "text": "All the things we accomplished.",
+        "start": 734.786,
+        "duration": 1.65
+    },
+    {
+        "text": "and then, yeah, I would hand it over to\nNiels for a quick recap on everything",
+        "start": 741.536,
+        "duration": 5.61
+    },
+    {
+        "text": "that happened to produce the DMC paper.",
+        "start": 747.146,
+        "duration": 2.79
+    },
+    {
+        "text": "Yeah.",
+        "start": 751.076,
+        "duration": 0.39
+    },
+    {
+        "text": "And I know there's been a lot of recap,\nalready, so I'll make it quick, but I",
+        "start": 751.466,
+        "duration": 6.51
+    },
+    {
+        "text": "just thought it would be nice given that\nthis was, a huge effort to get this out",
+        "start": 757.976,
+        "duration": 6.48
+    },
+    {
+        "text": "to just kinda revisit because, yeah, it,\nit's definitely been a big, milestone",
+        "start": 764.456,
+        "duration": 6.48
+    },
+    {
+        "text": "and, it's ended up being a, big project\nthat we worked on for a long time.",
+        "start": 770.936,
+        "duration": 4.05
+    },
+    {
+        "text": "But I think also, everyone's really\nproud of, what we've put together",
+        "start": 774.986,
+        "duration": 4.17
+    },
+    {
+        "text": "and rightly because yeah, our\nambitions grew as, this unfolded.",
+        "start": 779.576,
+        "duration": 6.39
+    },
+    {
+        "text": "and the original kind\nof motivation was to.",
+        "start": 787.436,
+        "duration": 2.46
+    },
+    {
+        "text": "Essentially establish Monte these\ncapabilities, show that to the community",
+        "start": 790.346,
+        "duration": 3.84
+    },
+    {
+        "text": "and kind of communi communicate that\nto others and what the current state of",
+        "start": 794.186,
+        "duration": 4.35
+    },
+    {
+        "text": "the art of a thousand brain system is.",
+        "start": 798.536,
+        "duration": 2.22
+    },
+    {
+        "text": "and of course there's a variety\nof reasons, would want to do that.",
+        "start": 802.016,
+        "duration": 2.97
+    },
+    {
+        "text": "But amongst other things, one of the\nmain kind of aims of the TBP is to",
+        "start": 804.986,
+        "duration": 5.22
+    },
+    {
+        "text": "get people excited about and using, a\nthousand brain systems in this approach.",
+        "start": 810.206,
+        "duration": 4.77
+    },
+    {
+        "text": "And of course, showing what it's\nactually capable of is a big part of",
+        "start": 814.976,
+        "duration": 3.51
+    },
+    {
+        "text": "that, especially the academic community.",
+        "start": 818.486,
+        "duration": 2.16
+    },
+    {
+        "text": "but along the way, I think it\nwas just surprising how many",
+        "start": 822.356,
+        "duration": 3.54
+    },
+    {
+        "text": "kind of new things that came out.",
+        "start": 825.926,
+        "duration": 2.31
+    },
+    {
+        "text": "So new metrics, new understandings of\nwhat Monty's kind of actually capable of,",
+        "start": 828.236,
+        "duration": 3.84
+    },
+    {
+        "text": "that we hadn't act, really conceptualized\nwhen we kinda first decided to write this.",
+        "start": 832.886,
+        "duration": 4.11
+    },
+    {
+        "text": "and also just lots of kind of\nfixes and general improvements",
+        "start": 837.686,
+        "duration": 2.7
+    },
+    {
+        "text": "to, Monty's implementation.",
+        "start": 840.386,
+        "duration": 2.31
+    },
+    {
+        "text": "And, many of those were\ndefinitely not, trivial.",
+        "start": 843.176,
+        "duration": 1.975
+    },
+    {
+        "text": "and so it's, been a huge team effort,\neveryone at The Thousand Brains Project.",
+        "start": 847.496,
+        "duration": 3.81
+    },
+    {
+        "text": "And also, like I said, on Wednesday,\na lot of the groundwork for this even",
+        "start": 851.306,
+        "duration": 2.91
+    },
+    {
+        "text": "started at Menta, as been saying,\nalthough we've been working on the DMC",
+        "start": 854.216,
+        "duration": 5.67
+    },
+    {
+        "text": "paper for maybe eight months, really\nthis started more than three years",
+        "start": 859.886,
+        "duration": 4.35
+    },
+    {
+        "text": "ago, with the actual kind of, initial\nwork on the thousand, on, kinda Monty.",
+        "start": 864.236,
+        "duration": 5.85
+    },
+    {
+        "text": "but, definitely special shout out to\nScott and Hojae for the, huge amount",
+        "start": 871.166,
+        "duration": 5.1
+    },
+    {
+        "text": "of effort they've put into this.",
+        "start": 876.266,
+        "duration": 1.08
+    },
+    {
+        "text": "I think when you guys joined, the\nidea was this was gonna be like a two,",
+        "start": 877.916,
+        "duration": 3.42
+    },
+    {
+        "text": "maybe three month project that would\nbe a nice way of getting to familiar",
+        "start": 881.636,
+        "duration": 4.92
+    },
+    {
+        "text": "with Monty's, experiments and how\nto run those and things like that.",
+        "start": 886.556,
+        "duration": 3.15
+    },
+    {
+        "text": "And, thank you for, all\nthe effort you've put in.",
+        "start": 889.706,
+        "duration": 5.85
+    },
+    {
+        "text": "despite it being a actually a much\nbigger, project we ended up doing.",
+        "start": 896.126,
+        "duration": 4.05
+    },
+    {
+        "text": "and so yeah, To rewind back to when we\nkinda started on this, what we had at the",
+        "start": 902.816,
+        "duration": 4.92
+    },
+    {
+        "text": "time was, of course, Monty, certainly a\nsimilar version to what we have now, but,",
+        "start": 907.736,
+        "duration": 5.67
+    },
+    {
+        "text": "but with some, as I said, bugs and things\nlike that, that we'd later discover.",
+        "start": 913.646,
+        "duration": 3.72
+    },
+    {
+        "text": "And we had some benchmarks gauging\napproximately things like accuracy,",
+        "start": 917.666,
+        "duration": 3.93
+    },
+    {
+        "text": "in the context of certain amounts\nof noise and things like that.",
+        "start": 922.346,
+        "duration": 2.16
+    },
+    {
+        "text": "And we had some, visualizations,\nbut nothing particularly, glamorous.",
+        "start": 924.686,
+        "duration": 4.68
+    },
+    {
+        "text": "and so when we were doing initial scoping\nwork, I said it started, fairly simple,",
+        "start": 931.166,
+        "duration": 5.19
+    },
+    {
+        "text": "but then eventually grew, quite a bit\nambition, and I'm not gonna spend a long",
+        "start": 936.356,
+        "duration": 5.435
+    },
+    {
+        "text": "time on it, but just to put into a bit of\ncontext, of the amount of work that went",
+        "start": 941.906,
+        "duration": 3.96
+    },
+    {
+        "text": "into, some of these figures, we had these\nalii draw boards where this is just a",
+        "start": 945.866,
+        "duration": 4.89
+    },
+    {
+        "text": "version three where you can see there's,\na huge amount of, variations and comments",
+        "start": 950.756,
+        "duration": 5.61
+    },
+    {
+        "text": "and all this kind of stuff, going on.",
+        "start": 956.366,
+        "duration": 2.22
+    },
+    {
+        "text": "and this was version four.",
+        "start": 959.936,
+        "duration": 1.35
+    },
+    {
+        "text": "And, I think it went all\nthe way up to, version five.",
+        "start": 961.346,
+        "duration": 3.42
+    },
+    {
+        "text": "but we, what we ended up with\nwas these six, I think, really",
+        "start": 966.236,
+        "duration": 4.41
+    },
+    {
+        "text": "beautiful, results figures that do a\nreally nice job of just showing how",
+        "start": 970.646,
+        "duration": 5.25
+    },
+    {
+        "text": "diverse Monty's capabilities are.",
+        "start": 975.896,
+        "duration": 2.01
+    },
+    {
+        "text": "and that's, I think what's so exciting\nabout this is that any one of these",
+        "start": 978.566,
+        "duration": 3.84
+    },
+    {
+        "text": "would be an impressive result.",
+        "start": 982.406,
+        "duration": 1.95
+    },
+    {
+        "text": "but the fact that all of these\ncapabilities fall out almost automatically",
+        "start": 985.316,
+        "duration": 4.56
+    },
+    {
+        "text": "from developing sensorimotor ai, informed\nby the cortex is, pretty exciting.",
+        "start": 990.026,
+        "duration": 6.03
+    },
+    {
+        "text": "And I, a pretty, it feels like a\npretty strong, kinda signal that, what",
+        "start": 996.056,
+        "duration": 5.55
+    },
+    {
+        "text": "we're doing is on the right track.",
+        "start": 1001.606,
+        "duration": 1.14
+    },
+    {
+        "text": "and, along the way, this resulted in two,\nnew repositories, which, are providing",
+        "start": 1005.986,
+        "duration": 6.96
+    },
+    {
+        "text": "comprehensive kinda support for anyone\nwho wants to replicate these experiments.",
+        "start": 1013.006,
+        "duration": 3.12
+    },
+    {
+        "text": "that's really important from the\npoint of view of open science.",
+        "start": 1017.401,
+        "duration": 3.21
+    },
+    {
+        "text": "and it should also really, build trust\nin, in what we've done and, increase the",
+        "start": 1021.241,
+        "duration": 4.35
+    },
+    {
+        "text": "likelihood that people build off of this.",
+        "start": 1025.591,
+        "duration": 2.07
+    },
+    {
+        "text": "And, but yeah, these, this was a huge\namount of effort when 30,000 lines of",
+        "start": 1027.661,
+        "duration": 4.65
+    },
+    {
+        "text": "code and experiment configurations for\nthe kind of main paper repository and",
+        "start": 1032.311,
+        "duration": 4.65
+    },
+    {
+        "text": "then this epic repository that, Hojae\nput together TPP floppy, which for the",
+        "start": 1036.961,
+        "duration": 5.55
+    },
+    {
+        "text": "first time enabled us to quantify the\namount of flops, that, the amount of",
+        "start": 1042.511,
+        "duration": 4.32
+    },
+    {
+        "text": "compute essentially, that Monty, consumes\nand, enable us to benchmark that n bts.",
+        "start": 1046.831,
+        "duration": 5.52
+    },
+    {
+        "text": "but, this doesn't capture all this\nother stuff as, was highlighting before.",
+        "start": 1053.191,
+        "duration": 3.63
+    },
+    {
+        "text": "even just things like replicating\nthe experiments, not to mention,",
+        "start": 1057.331,
+        "duration": 2.37
+    },
+    {
+        "text": "running them in the first place and\nrunning them many times, I should say.",
+        "start": 1060.241,
+        "duration": 3.75
+    },
+    {
+        "text": "Every time we'd realize some kind of\nchange we should make to the figure or.",
+        "start": 1064.261,
+        "duration": 4.35
+    },
+    {
+        "text": "some bug had been identified or whatever\nit happened to be that kind of led to",
+        "start": 1069.556,
+        "duration": 3.96
+    },
+    {
+        "text": "a cascade of running all this again.",
+        "start": 1073.516,
+        "duration": 1.59
+    },
+    {
+        "text": "So a huge amount of effort.",
+        "start": 1075.106,
+        "duration": 1.35
+    },
+    {
+        "text": "and just a quick kind of summary of\nsome things in terms of new evaluations",
+        "start": 1078.886,
+        "duration": 5.4
+    },
+    {
+        "text": "and metrics and things like that.",
+        "start": 1084.376,
+        "duration": 1.23
+    },
+    {
+        "text": "We added, better visualizations of\nmovement sequences for the first",
+        "start": 1085.606,
+        "duration": 4.86
+    },
+    {
+        "text": "time we properly quantified symmetry.",
+        "start": 1090.466,
+        "duration": 2.28
+    },
+    {
+        "text": "and found a way of verifying that we\nlooked at adversarial color robustness.",
+        "start": 1093.286,
+        "duration": 4.2
+    },
+    {
+        "text": "we looked at the kind of stepwise\neffects of the model-based policy.",
+        "start": 1098.086,
+        "duration": 2.61
+    },
+    {
+        "text": "looked at scaling of voting for the\nfirst time, and figured out tie breaking,",
+        "start": 1101.596,
+        "duration": 4.32
+    },
+    {
+        "text": "quantified learning efficiency.",
+        "start": 1108.256,
+        "duration": 1.38
+    },
+    {
+        "text": "And also versus VIT, we had no\ncomparisons before at all to",
+        "start": 1109.636,
+        "duration": 3.42
+    },
+    {
+        "text": "deep learning architectures.",
+        "start": 1113.056,
+        "duration": 1.02
+    },
+    {
+        "text": "And that was a huge, effort, particularly\non ho j's effort to, get that.",
+        "start": 1114.076,
+        "duration": 4.29
+    },
+    {
+        "text": "Also comparing flops and quantifying\nthat versus the VIT also looking",
+        "start": 1119.026,
+        "duration": 3.69
+    },
+    {
+        "text": "at qu continual learning and\ncomparing that against the VIT.",
+        "start": 1122.716,
+        "duration": 2.335
+    },
+    {
+        "text": "Plus, outside of that stuff, we\ngot updated professional diagrams.",
+        "start": 1126.646,
+        "duration": 3.75
+    },
+    {
+        "text": "we did a literature review\non related approaches.",
+        "start": 1130.876,
+        "duration": 2.16
+    },
+    {
+        "text": "had a whole bunch of\nimprovements to the configs.",
+        "start": 1134.536,
+        "duration": 2.43
+    },
+    {
+        "text": "Just simple things like specifying\na voting, system in Monty where you",
+        "start": 1136.966,
+        "duration": 4.2
+    },
+    {
+        "text": "have multiple learning modules in a\ngrid, was not trivial at all before.",
+        "start": 1141.166,
+        "duration": 3.69
+    },
+    {
+        "text": "Scott made lots of nice\nimprovements to that.",
+        "start": 1145.966,
+        "duration": 1.89
+    },
+    {
+        "text": "we have now a comprehensive mathematical\ndescription of how Monty works,",
+        "start": 1148.936,
+        "duration": 3.42
+    },
+    {
+        "text": "which we didn't have at all before.",
+        "start": 1152.356,
+        "duration": 1.35
+    },
+    {
+        "text": "and notation for that and then fixed a\nwhole bunch of bugs, which yeah, I said",
+        "start": 1154.186,
+        "duration": 4.35
+    },
+    {
+        "text": "none of these were, trivial things.",
+        "start": 1158.536,
+        "duration": 1.83
+    },
+    {
+        "text": "Like when we started this voting only\nworked with, learning modules and",
+        "start": 1160.366,
+        "duration": 4.77
+    },
+    {
+        "text": "sensorimotor modules basically aligned\nin a one dimensional grid, or, aligned.",
+        "start": 1165.136,
+        "duration": 5.04
+    },
+    {
+        "text": "We, couldn't have kind\nof other arrangements.",
+        "start": 1170.551,
+        "duration": 2.265
+    },
+    {
+        "text": "something with the X percent threshold.",
+        "start": 1174.196,
+        "duration": 1.35
+    },
+    {
+        "text": "We fixed patch off object.",
+        "start": 1175.546,
+        "duration": 1.62
+    },
+    {
+        "text": "that was getting a huge effort on Scott's\npart and then semantic sensorimotor.",
+        "start": 1178.036,
+        "duration": 3.3
+    },
+    {
+        "text": "This was a thing that\nwas leaking into our.",
+        "start": 1181.336,
+        "duration": 2.07
+    },
+    {
+        "text": "experiments that we didn't want to.",
+        "start": 1184.741,
+        "duration": 1.32
+    },
+    {
+        "text": "So I'm sure I've missed some stuff.",
+        "start": 1186.961,
+        "duration": 2.13
+    },
+    {
+        "text": "so it was, a lot of, things.",
+        "start": 1189.991,
+        "duration": 2.76
+    },
+    {
+        "text": "and of course, I think all these metrics\nand evaluations that we've now developed",
+        "start": 1193.501,
+        "duration": 4.14
+    },
+    {
+        "text": "and the pipeline for visualizing them,\nall this stuff is, work that we can",
+        "start": 1197.641,
+        "duration": 5.07
+    },
+    {
+        "text": "reuse, when Monty's capabilities grow\nand we want to communicate that again.",
+        "start": 1202.711,
+        "duration": 3.66
+    },
+    {
+        "text": "so it's definitely not\na one-off, use case.",
+        "start": 1207.721,
+        "duration": 3.42
+    },
+    {
+        "text": "And of course now we have this 32\npage paper that we can share with",
+        "start": 1211.171,
+        "duration": 3.63
+    },
+    {
+        "text": "everyone, and talk about when they\nask what can Monty actually do.",
+        "start": 1214.801,
+        "duration": 4.17
+    },
+    {
+        "text": "so yeah.",
+        "start": 1220.771,
+        "duration": 0.33
+    },
+    {
+        "text": "Thanks everyone for their hard work.",
+        "start": 1221.371,
+        "duration": 1.95
+    },
+    {
+        "text": "Yeah.",
+        "start": 1224.011,
+        "duration": 0.27
+    },
+    {
+        "text": "Kind of patience through\nthis whole process.",
+        "start": 1224.581,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 1228.541,
+        "duration": 0.33
+    },
+    {
+        "text": "since highlight yourself,\nI just highlight that.",
+        "start": 1229.861,
+        "duration": 3.75
+    },
+    {
+        "text": "It would not have been this really high\nquality, awesome paper with all these",
+        "start": 1234.241,
+        "duration": 4.05
+    },
+    {
+        "text": "great results if it wasn't for you.",
+        "start": 1238.291,
+        "duration": 2.01
+    },
+    {
+        "text": "And like you put this huge\namount of effort into it.",
+        "start": 1240.301,
+        "duration": 3.06
+    },
+    {
+        "text": "and especially over the past months,\nreally pulling everything together,",
+        "start": 1244.381,
+        "duration": 3.72
+    },
+    {
+        "text": "coordinating everything, making sure\nall the experiments are up to high",
+        "start": 1248.101,
+        "duration": 4.56
+    },
+    {
+        "text": "quality standards, writing really nice\ntexts that is like really fun to read.",
+        "start": 1252.661,
+        "duration": 5.97
+    },
+    {
+        "text": "and yeah, up to last night, figuring\nout last issues, looking into last",
+        "start": 1259.891,
+        "duration": 6.18
+    },
+    {
+        "text": "little numbers, whether they're\nactually correct and yeah, it,",
+        "start": 1266.071,
+        "duration": 4.98
+    },
+    {
+        "text": "would not have been this great high\nquality paper if it, wasn't for you.",
+        "start": 1271.051,
+        "duration": 3.6
+    },
+    {
+        "text": "Great work, Niels everybody.",
+        "start": 1274.951,
+        "duration": 2.25
+    },
+    {
+        "text": "Thank you everybody.",
+        "start": 1277.206,
+        "duration": 1.78
+    },
+    {
+        "text": "Awesome.",
+        "start": 1279.241,
+        "duration": 0.21
+    },
+    {
+        "text": "I don't know what this paper was\ngonna be like when first started",
+        "start": 1280.171,
+        "duration": 2.67
+    },
+    {
+        "text": "on, but it turned out much, better.",
+        "start": 1282.841,
+        "duration": 1.68
+    },
+    {
+        "text": "Imagine.",
+        "start": 1285.181,
+        "duration": 0.57
+    },
+    {
+        "text": "And it's very great, results.",
+        "start": 1285.751,
+        "duration": 3.03
+    },
+    {
+        "text": "So it's really, really impressive.",
+        "start": 1288.781,
+        "duration": 3.24
+    },
+    {
+        "text": "Thank you.",
+        "start": 1292.861,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 1295.081,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 1295.561,
+        "duration": 0.27
+    },
+    {
+        "text": "Thanks to everyone.",
+        "start": 1295.891,
+        "duration": 1.23
+    },
+    {
+        "text": "So Q3 is, has already started last week.",
+        "start": 1298.347,
+        "duration": 5.46
+    },
+    {
+        "text": "and Neil Tristan Will and I put\ntogether a couple of, priorities again,",
+        "start": 1305.067,
+        "duration": 8.805
+    },
+    {
+        "text": "oh, I forgot to change this header.",
+        "start": 1313.932,
+        "duration": 1.53
+    },
+    {
+        "text": "It should say three here.",
+        "start": 1315.492,
+        "duration": 1.35
+    },
+    {
+        "text": "But, I liked how they aligned last\ntime with our TBP mission, so I",
+        "start": 1316.932,
+        "duration": 5.7
+    },
+    {
+        "text": "tried to align them again, this time.",
+        "start": 1322.632,
+        "duration": 3.18
+    },
+    {
+        "text": "And some of them are similar\nto last and or extensions of",
+        "start": 1326.202,
+        "duration": 4.53
+    },
+    {
+        "text": "last, quarters, priorities.",
+        "start": 1330.732,
+        "duration": 3.06
+    },
+    {
+        "text": "So first one, this one is an extension\nof first one from last month.",
+        "start": 1334.392,
+        "duration": 6.06
+    },
+    {
+        "text": "Last month we were lining things\nup, for Monte to be able to model",
+        "start": 1340.452,
+        "duration": 5.07
+    },
+    {
+        "text": "composition objects in this quarter,\nwe really want to, and have Monty",
+        "start": 1345.527,
+        "duration": 5.755
+    },
+    {
+        "text": "actually model composition objects\nand assess its accuracy and",
+        "start": 1351.312,
+        "duration": 4.68
+    },
+    {
+        "text": "demonstrate that with hierarchy we\ncan model compositional objects in",
+        "start": 1355.992,
+        "duration": 4.62
+    },
+    {
+        "text": "Monty, accurately and efficiently.",
+        "start": 1360.612,
+        "duration": 3.15
+    },
+    {
+        "text": "Then second, we want to make Monty easy\nto use, improve, and contribute to both",
+        "start": 1366.312,
+        "duration": 6.96
+    },
+    {
+        "text": "for the TVP team and for external people.",
+        "start": 1373.272,
+        "duration": 2.49
+    },
+    {
+        "text": "And again, I'll break down each of those\ninto a couple of actionable items that,",
+        "start": 1376.002,
+        "duration": 5.97
+    },
+    {
+        "text": "that we're planning to do for those.",
+        "start": 1382.032,
+        "duration": 1.59
+    },
+    {
+        "text": "third, we wanna increase external\ninterest and awareness of our approach.",
+        "start": 1385.062,
+        "duration": 3.81
+    },
+    {
+        "text": "And fourth, figure out how to model\nobject behaviors, finally completely.",
+        "start": 1389.412,
+        "duration": 6.39
+    },
+    {
+        "text": "and so what do those concretely mean?",
+        "start": 1398.532,
+        "duration": 2.88
+    },
+    {
+        "text": "enabling multi to model composition\nobjects accurately and efficiently.",
+        "start": 1402.822,
+        "duration": 3.51
+    },
+    {
+        "text": "First of all, we wanna set up a data\nset training and inference protocol",
+        "start": 1406.662,
+        "duration": 4.14
+    },
+    {
+        "text": "and evaluation measures to evaluate\nMonte's composition modeling abilities.",
+        "start": 1410.802,
+        "duration": 5.25
+    },
+    {
+        "text": "And that's not.",
+        "start": 1416.082,
+        "duration": 0.69
+    },
+    {
+        "text": "Trivial.",
+        "start": 1417.222,
+        "duration": 0.66
+    },
+    {
+        "text": "So we have this data set that Scott put\ntogether, but now we need to figure out",
+        "start": 1417.882,
+        "duration": 5.55
+    },
+    {
+        "text": "how do we actually train Monte on that?",
+        "start": 1423.762,
+        "duration": 1.95
+    },
+    {
+        "text": "How do we give a supervisory\nsignal for what's the child object?",
+        "start": 1426.072,
+        "duration": 4.02
+    },
+    {
+        "text": "What's the parent output?",
+        "start": 1430.092,
+        "duration": 0.93
+    },
+    {
+        "text": "What, how do we, evaluate what's\nthe correct classification since",
+        "start": 1431.022,
+        "duration": 4.26
+    },
+    {
+        "text": "different learning modules have\ndifferent objects that they recognize.",
+        "start": 1435.312,
+        "duration": 3.48
+    },
+    {
+        "text": "and so we'll have to set up a couple of\nnew evaluation measures and think through",
+        "start": 1439.962,
+        "duration": 5.97
+    },
+    {
+        "text": "how training and evaluation should look\nlike in this composition object setting.",
+        "start": 1445.962,
+        "duration": 4.23
+    },
+    {
+        "text": "Then we wanna improve hypothesis\nresampling, based on different signals.",
+        "start": 1453.252,
+        "duration": 4.83
+    },
+    {
+        "text": "So last quarter, Rami implemented\nthe this way to Resample hypothesis.",
+        "start": 1458.112,
+        "duration": 5.25
+    },
+    {
+        "text": "and then now we have a bunch of, signals\nthat we wanna use to inform that, such as",
+        "start": 1464.892,
+        "duration": 6.15
+    },
+    {
+        "text": "prediction, error, out of reference frame\nmovement, salient features and confidence.",
+        "start": 1471.042,
+        "duration": 4.5
+    },
+    {
+        "text": "And that should manifest itself\nas improved or comparable accuracy",
+        "start": 1476.172,
+        "duration": 4.5
+    },
+    {
+        "text": "on the composition data set with\nreduced computational overhead.",
+        "start": 1481.962,
+        "duration": 4.11
+    },
+    {
+        "text": "So kinda being faster and more\naccurate because we don't have to",
+        "start": 1486.402,
+        "duration": 4.65
+    },
+    {
+        "text": "test a whole bunch of hypotheses.",
+        "start": 1491.052,
+        "duration": 2.1
+    },
+    {
+        "text": "and then sate policies to improve\naccuracy and enable sparse some",
+        "start": 1495.162,
+        "duration": 4.62
+    },
+    {
+        "text": "models, which basically, means\nwe, we move more principled.",
+        "start": 1499.782,
+        "duration": 4.83
+    },
+    {
+        "text": "Like right now we do random walk on\nthe object, but that kind of ties",
+        "start": 1504.702,
+        "duration": 4.11
+    },
+    {
+        "text": "into these model free policies to.",
+        "start": 1508.812,
+        "duration": 1.95
+    },
+    {
+        "text": "Sate to salient features, and,\nor make sure to stay on an",
+        "start": 1511.512,
+        "duration": 7.08
+    },
+    {
+        "text": "object until it is recognized.",
+        "start": 1518.592,
+        "duration": 1.68
+    },
+    {
+        "text": "And then lastly, adding and testing this,\nidea of a 2D Surface sensorimotor module.",
+        "start": 1521.982,
+        "duration": 6.69
+    },
+    {
+        "text": "that basically extracts 2D movements and\nfeatures to learn things like the logo",
+        "start": 1529.482,
+        "duration": 5.46
+    },
+    {
+        "text": "that can, that's a 2D representation\nthat can wrap around 3D objects.",
+        "start": 1534.972,
+        "duration": 4.74
+    },
+    {
+        "text": "then on making much easy to use,\nimprove, and contribute to, we have",
+        "start": 1543.312,
+        "duration": 4.08
+    },
+    {
+        "text": "a continuation of the motor system\nrefactor, so disentangling the",
+        "start": 1547.392,
+        "duration": 3.96
+    },
+    {
+        "text": "motor system from other classes.",
+        "start": 1551.352,
+        "duration": 1.65
+    },
+    {
+        "text": "we have, Monte not being constrained\nto Python 3.8 anymore, which also ties",
+        "start": 1555.102,
+        "duration": 3.93
+    },
+    {
+        "text": "into the support for Muco simulator.",
+        "start": 1559.032,
+        "duration": 2.49
+    },
+    {
+        "text": "adding an interactive and UpToDate\noverview of where people can contribute",
+        "start": 1564.492,
+        "duration": 3.63
+    },
+    {
+        "text": "so that hopefully the amount of\nexternal people who contribute",
+        "start": 1568.122,
+        "duration": 3.24
+    },
+    {
+        "text": "significantly increases even further\nbecause we make it easier for them",
+        "start": 1571.362,
+        "duration": 3.66
+    },
+    {
+        "text": "to see where they could contribute.",
+        "start": 1575.022,
+        "duration": 2.22
+    },
+    {
+        "text": "And then also adding more documentation\non how to do that and how to customize",
+        "start": 1577.512,
+        "duration": 4.68
+    },
+    {
+        "text": "Monte for specific applications.",
+        "start": 1582.192,
+        "duration": 1.8
+    },
+    {
+        "text": "Again, making it as easy as possible for\npeople who wanna contribute or who wanna",
+        "start": 1583.992,
+        "duration": 4.92
+    },
+    {
+        "text": "use Monty to actually be able to do that.",
+        "start": 1588.912,
+        "duration": 2.22
+    },
+    {
+        "text": "increasing external interest in awareness.",
+        "start": 1593.622,
+        "duration": 1.92
+    },
+    {
+        "text": "We have, publishing material\naround the hierarchy and DMC",
+        "start": 1595.812,
+        "duration": 2.94
+    },
+    {
+        "text": "paper, so Will has already a\nbunch of stuff lined up for that.",
+        "start": 1598.752,
+        "duration": 2.91
+    },
+    {
+        "text": "And there's also more, to put together.",
+        "start": 1602.052,
+        "duration": 2.49
+    },
+    {
+        "text": "videos, presentations, plain\nlanguage, explainers, posts and so on.",
+        "start": 1605.052,
+        "duration": 4.59
+    },
+    {
+        "text": "presenting Monty and BRS theory at\nseveral conferences and speaker series.",
+        "start": 1610.902,
+        "duration": 3.99
+    },
+    {
+        "text": "Part of that is also reaching out\nto some universities and presenting",
+        "start": 1615.192,
+        "duration": 3.33
+    },
+    {
+        "text": "at their symposium speaker series.",
+        "start": 1618.522,
+        "duration": 2.16
+    },
+    {
+        "text": "organ and organizing an online\nworkshop slash symposium about Monte.",
+        "start": 1622.362,
+        "duration": 3.93
+    },
+    {
+        "text": "Again, similar to what we did in December.",
+        "start": 1626.292,
+        "duration": 2.49
+    },
+    {
+        "text": "and this might not actually happen\nin the next quarter, but to at",
+        "start": 1630.912,
+        "duration": 3.69
+    },
+    {
+        "text": "least organize it and plan it.",
+        "start": 1634.602,
+        "duration": 1.92
+    },
+    {
+        "text": "and then figuring out how\nto model object behaviors.",
+        "start": 1639.942,
+        "duration": 2.76
+    },
+    {
+        "text": "again, we made a lot of progress on\nthat already in the past half year, but,",
+        "start": 1643.722,
+        "duration": 4.89
+    },
+    {
+        "text": "hoping that in the next three months we\ncan kinda have a theoretical proposal",
+        "start": 1650.382,
+        "duration": 4.29
+    },
+    {
+        "text": "for all the open questions we currently\nstill have around, especially object",
+        "start": 1654.672,
+        "duration": 4.71
+    },
+    {
+        "text": "deformations and, hopefully also how\nactions turn into the, play into that,",
+        "start": 1659.382,
+        "duration": 6.48
+    },
+    {
+        "text": "how actions change the state of objects.",
+        "start": 1665.922,
+        "duration": 2.04
+    },
+    {
+        "text": "and then a concrete writeup or\neven a prototype of how, object",
+        "start": 1669.597,
+        "duration": 5.4
+    },
+    {
+        "text": "behaviors could be modeled in Monty.",
+        "start": 1674.997,
+        "duration": 1.65
+    },
+    {
+        "text": "So actually, I'm hoping actually a\nlittle code prototype of that, but,",
+        "start": 1677.097,
+        "duration": 4.29
+    },
+    {
+        "text": "it depends a bit on how complex that\nsolution we come up with will be.",
+        "start": 1681.957,
+        "duration": 4.74
+    },
+    {
+        "text": "and so yeah, that's,\nthe two, two parts here.",
+        "start": 1688.257,
+        "duration": 2.76
+    },
+    {
+        "text": "and then again, there's a Google doc in\nour drive that I can also share in the",
+        "start": 1692.607,
+        "duration": 5.19
+    },
+    {
+        "text": "team channel later that has more details.",
+        "start": 1697.797,
+        "duration": 2.61
+    },
+    {
+        "text": "So those were just the high level company\npriorities, but there are also, there's",
+        "start": 1700.407,
+        "duration": 4.05
+    },
+    {
+        "text": "also more detailed breakdown, especially\nof the research objectives that, Niels can",
+        "start": 1704.457,
+        "duration": 4.44
+    },
+    {
+        "text": "go over, later in the research meeting.",
+        "start": 1708.897,
+        "duration": 2.76
+    },
+    {
+        "text": "and also the engineering and\ncommunity objectives are a bit",
+        "start": 1714.117,
+        "duration": 3.78
+    },
+    {
+        "text": "more detailed, broken down there.",
+        "start": 1717.897,
+        "duration": 2.1
+    }
+]

@@ -1,0 +1,682 @@
+[
+    {
+        "text": "Jeff Hawkins: gonna talk about two things.",
+        "start": 0.999,
+        "duration": 1.398
+    },
+    {
+        "text": "I'm just gonna talk\nabout our mission again.",
+        "start": 2.407,
+        "duration": 1.78
+    },
+    {
+        "text": "I know Vivian talked about this a bit.",
+        "start": 4.227,
+        "duration": 1.42
+    },
+    {
+        "text": "I'm gonna give you my take on that.",
+        "start": 5.667,
+        "duration": 1.25
+    },
+    {
+        "text": "And then I want to give you a really\nhigh-level picture of the goals.",
+        "start": 7.457,
+        "duration": 3.14
+    },
+    {
+        "text": "You've heard a lot of details in these\npresentations, a lot of amazing work",
+        "start": 11.367,
+        "duration": 4.44
+    },
+    {
+        "text": "that's been going on to the system, but\nsometimes it's really helpful just to bop",
+        "start": 15.807,
+        "duration": 3.58
+    },
+    {
+        "text": "up again, take a look at the top picture.",
+        "start": 19.387,
+        "duration": 2.73
+    },
+    {
+        "text": "So let's just start with the\nThousand Brains Project's mission.",
+        "start": 22.347,
+        "duration": 2.19
+    },
+    {
+        "text": "It all starts here.",
+        "start": 24.757,
+        "duration": 1.11
+    },
+    {
+        "text": "Vivian mentioned this, it can be\nsummed up in this one sentence.",
+        "start": 26.687,
+        "duration": 2.61
+    },
+    {
+        "text": "We're creating machine\nintelligence technology based",
+        "start": 29.507,
+        "duration": 2.88
+    },
+    {
+        "text": "on neocortical principles.",
+        "start": 32.387,
+        "duration": 1.14
+    },
+    {
+        "text": "There's a lot in this\nsentence, I want to unpack it.",
+        "start": 34.007,
+        "duration": 1.93
+    },
+    {
+        "text": "First of all, I prefer the word machine\nintelligence over artificial intelligence.",
+        "start": 36.327,
+        "duration": 3.34
+    },
+    {
+        "text": "to me, today's AI is\nnot really intelligent.",
+        "start": 40.907,
+        "duration": 2.4
+    },
+    {
+        "text": "It doesn't mean it's not useful,\nit doesn't mean it's not great,",
+        "start": 43.337,
+        "duration": 2.07
+    },
+    {
+        "text": "it's just not the real thing.",
+        "start": 45.427,
+        "duration": 1.25
+    },
+    {
+        "text": "And we're trying to create the real\nthing here, the things that we all can",
+        "start": 47.127,
+        "duration": 3.07
+    },
+    {
+        "text": "agree to.",
+        "start": 52.287,
+        "duration": 0.71
+    },
+    {
+        "text": "Since we're building machines\nthat work the same way that",
+        "start": 53.287,
+        "duration": 2.41
+    },
+    {
+        "text": "biological intelligence works.",
+        "start": 55.947,
+        "duration": 1.5
+    },
+    {
+        "text": "We're really focused on\nbuilding a technology.",
+        "start": 58.237,
+        "duration": 1.81
+    },
+    {
+        "text": "We're not focused on applications,\nwe're not trying to build on business.",
+        "start": 60.767,
+        "duration": 3.28
+    },
+    {
+        "text": "It reminds me, I don't want to get too\nheady here, but I really do think what",
+        "start": 64.417,
+        "duration": 4.42
+    },
+    {
+        "text": "we're doing is sorta what happened\nin the 1940s when the pioneers of",
+        "start": 68.837,
+        "duration": 3.87
+    },
+    {
+        "text": "computing set down the technology\nframework for computing, which lasted",
+        "start": 72.707,
+        "duration": 4.45
+    },
+    {
+        "text": "for many decades and still today.",
+        "start": 77.177,
+        "duration": 1.58
+    },
+    {
+        "text": "And I think that's what we're doing,\nsomething similar here, we're building",
+        "start": 79.107,
+        "duration": 2.29
+    },
+    {
+        "text": "the fundamental technology and the theory\nbehind what intelligent systems are like.",
+        "start": 81.877,
+        "duration": 4.43
+    },
+    {
+        "text": "And of course we're using neocortical\nprinciples to do this and we're",
+        "start": 86.307,
+        "duration": 4.24
+    },
+    {
+        "text": "only able to do that because we've\nspent so many decades working on",
+        "start": 90.547,
+        "duration": 2.91
+    },
+    {
+        "text": "this and made amazing progress in\nunderstanding how the brain works.",
+        "start": 93.457,
+        "duration": 3.6
+    },
+    {
+        "text": "So that's our goal, that's our mission.",
+        "start": 98.317,
+        "duration": 1.75
+    },
+    {
+        "text": "I thought I'd mention just again remind\nyou of the top principles involved here.",
+        "start": 100.387,
+        "duration": 3.99
+    },
+    {
+        "text": "The top principles, my top three,\nwe can disagree about these.",
+        "start": 104.767,
+        "duration": 3.06
+    },
+    {
+        "text": "My top three principles is that\nthese systems are sensorimotor.",
+        "start": 108.567,
+        "duration": 2.79
+    },
+    {
+        "text": "They have sensors which sense the world.",
+        "start": 111.947,
+        "duration": 3.12
+    },
+    {
+        "text": "We're not feeding some\nabstract data into them.",
+        "start": 115.697,
+        "duration": 2.137
+    },
+    {
+        "text": "The sensors that sense the world,\nthey're moved through the world,",
+        "start": 117.947,
+        "duration": 2.79
+    },
+    {
+        "text": "so there's motion involved.",
+        "start": 120.737,
+        "duration": 1.24
+    },
+    {
+        "text": "Sensorimotor integration is used\nfor learning, for inference,",
+        "start": 122.427,
+        "duration": 4.43
+    },
+    {
+        "text": "and for solving problems.",
+        "start": 126.887,
+        "duration": 1.26
+    },
+    {
+        "text": "So it's not an add-on piece, you\nadd a motor to it, every learning",
+        "start": 128.387,
+        "duration": 3.25
+    },
+    {
+        "text": "module has a motor output.",
+        "start": 131.967,
+        "duration": 0.96
+    },
+    {
+        "text": "The whole system is a sensorimotor.",
+        "start": 132.937,
+        "duration": 1.595
+    },
+    {
+        "text": "One of the things that people just,\nI don't think appreciate enough",
+        "start": 135.547,
+        "duration": 3.17
+    },
+    {
+        "text": "that when you learn this way,\nyou have these structured models.",
+        "start": 138.717,
+        "duration": 2.42
+    },
+    {
+        "text": "You heard about reference frames.",
+        "start": 141.137,
+        "duration": 1.35
+    },
+    {
+        "text": "Everything that's ever processed\nin the brain and in Monty is not",
+        "start": 143.297,
+        "duration": 4.163
+    },
+    {
+        "text": "only what it is but where it is.",
+        "start": 147.46,
+        "duration": 1.367
+    },
+    {
+        "text": "Where being the pose,\nlocation, and orientation.",
+        "start": 148.857,
+        "duration": 2.95
+    },
+    {
+        "text": "That's how knowledge is structured\nin your brain, that's how",
+        "start": 152.117,
+        "duration": 2.8
+    },
+    {
+        "text": "knowledge is structured in Monty.",
+        "start": 154.917,
+        "duration": 1.54
+    },
+    {
+        "text": "This provides all these amazing\nabilities to manipulate knowledge,",
+        "start": 157.127,
+        "duration": 3.52
+    },
+    {
+        "text": "to rotate at things, to navigate\nthrough a reference frame or through",
+        "start": 160.927,
+        "duration": 4.55
+    },
+    {
+        "text": "a structured space to solve problems.",
+        "start": 165.477,
+        "duration": 3.04
+    },
+    {
+        "text": "This is really the key to\nthe strength of the system.",
+        "start": 169.177,
+        "duration": 4.17
+    },
+    {
+        "text": "And of course it's a highly distributed\narchitecture and the learning",
+        "start": 173.657,
+        "duration": 5.23
+    },
+    {
+        "text": "module is a very powerful thing.",
+        "start": 178.987,
+        "duration": 1.87
+    },
+    {
+        "text": "But really the systems become powerful\nbecause the same learning modules can be",
+        "start": 181.647,
+        "duration": 4.67
+    },
+    {
+        "text": "applied to different type of modalities,\ndifferent parts of hierarchy, allows us",
+        "start": 186.317,
+        "duration": 3.67
+    },
+    {
+        "text": "to build systems of different sensory\nmodalities, different embodiments,",
+        "start": 189.987,
+        "duration": 2.28
+    },
+    {
+        "text": "different levels of capabilities.",
+        "start": 193.007,
+        "duration": 1.38
+    },
+    {
+        "text": "It's an incredibly modular\nsystem that nature has discovered",
+        "start": 194.927,
+        "duration": 4.2
+    },
+    {
+        "text": "and we're trying to replicate.",
+        "start": 199.127,
+        "duration": 2.57
+    },
+    {
+        "text": "You've heard about some of these\nattributes that's come along with this.",
+        "start": 201.697,
+        "duration": 2.17
+    },
+    {
+        "text": "Continuous learning, can't\noveremphasize how important that is.",
+        "start": 203.887,
+        "duration": 3.74
+    },
+    {
+        "text": "To make a system that actually solves\nreal-world problems, it has to, moment to",
+        "start": 207.627,
+        "duration": 5.43
+    },
+    {
+        "text": "moment, learn what the current reality is.",
+        "start": 213.057,
+        "duration": 1.85
+    },
+    {
+        "text": "Where did I leave this thing?",
+        "start": 214.917,
+        "duration": 1.22
+    },
+    {
+        "text": "Where's my tools?",
+        "start": 216.137,
+        "duration": 0.79
+    },
+    {
+        "text": "What's happening?",
+        "start": 216.927,
+        "duration": 0.71
+    },
+    {
+        "text": "Who's there?",
+        "start": 217.637,
+        "duration": 0.49
+    },
+    {
+        "text": "What things have just\nchanged in the last minute?",
+        "start": 218.127,
+        "duration": 2.78
+    },
+    {
+        "text": "And the system has to be able to do those\nthings and of course along comes with that",
+        "start": 221.427,
+        "duration": 3.0
+    },
+    {
+        "text": "is a super low power and minimal training.",
+        "start": 224.697,
+        "duration": 2.11
+    },
+    {
+        "text": "Our goals for 2026",
+        "start": 228.417,
+        "duration": 1.61
+    },
+    {
+        "text": "We basically we have 3 broad goals, and\nyou've heard about all of them today.",
+        "start": 231.887,
+        "duration": 3.91
+    },
+    {
+        "text": "And this is our goals for\n2025, these are our goals",
+        "start": 236.197,
+        "duration": 1.59
+    },
+    {
+        "text": "for 2026.",
+        "start": 240.017,
+        "duration": 0.76
+    },
+    {
+        "text": "This is a system.",
+        "start": 240.817,
+        "duration": 0.92
+    },
+    {
+        "text": "First, we have to expand our community.",
+        "start": 241.767,
+        "duration": 1.47
+    },
+    {
+        "text": "We're 8 people full-time,\nwhich is very small.",
+        "start": 243.257,
+        "duration": 2.86
+    },
+    {
+        "text": "What we're building is going to\nbe much, much larger than any one",
+        "start": 246.457,
+        "duration": 2.79
+    },
+    {
+        "text": "company or organization can manage.",
+        "start": 249.247,
+        "duration": 1.77
+    },
+    {
+        "text": "We need to get more people\ninvolved and excited.",
+        "start": 251.347,
+        "duration": 2.3
+    },
+    {
+        "text": "Will gave you a good introduction\nof how you can get involved.",
+        "start": 253.807,
+        "duration": 2.6
+    },
+    {
+        "text": "If nothing else, tell people\nabout the Thousand Brains Project.",
+        "start": 256.617,
+        "duration": 2.31
+    },
+    {
+        "text": "We think this is really important.",
+        "start": 259.537,
+        "duration": 1.33
+    },
+    {
+        "text": "Then you heard from Tristan about\nhow we have to build a platform,",
+        "start": 261.357,
+        "duration": 3.0
+    },
+    {
+        "text": "that's really essential too.",
+        "start": 264.357,
+        "duration": 1.08
+    },
+    {
+        "text": "I spend most of my time, and\nsome of the research people",
+        "start": 266.257,
+        "duration": 2.41
+    },
+    {
+        "text": "do, about adding capabilities.",
+        "start": 268.667,
+        "duration": 1.47
+    },
+    {
+        "text": "I used to say research but I changed\nit today to say add capabilities",
+        "start": 270.367,
+        "duration": 3.6
+    },
+    {
+        "text": "because actually, it turns out\nthe number of things we have to",
+        "start": 273.967,
+        "duration": 2.68
+    },
+    {
+        "text": "do research on is decreasing.",
+        "start": 276.647,
+        "duration": 1.56
+    },
+    {
+        "text": "There aren't too many big\nthings left to figure out.",
+        "start": 278.927,
+        "duration": 2.87
+    },
+    {
+        "text": "And we're moving more into a sort of\nan implementation mode on these things.",
+        "start": 282.607,
+        "duration": 5.4
+    },
+    {
+        "text": "As you've heard throughout this we did\ndo a lot of work on compositional models.",
+        "start": 288.777,
+        "duration": 4.47
+    },
+    {
+        "text": "How the world of objects are\nstructured of other objects.",
+        "start": 293.247,
+        "duration": 2.92
+    },
+    {
+        "text": "We understand that.",
+        "start": 296.417,
+        "duration": 0.9
+    },
+    {
+        "text": "We're implementing that.",
+        "start": 297.317,
+        "duration": 0.88
+    },
+    {
+        "text": "That should be integrated\ncompletely into Monty this year.",
+        "start": 299.197,
+        "duration": 3.19
+    },
+    {
+        "text": "We learned last year how the same\nlearning modules can learn the",
+        "start": 303.457,
+        "duration": 4.39
+    },
+    {
+        "text": "behavioral dynamics of the world,\nhow things in the world change.",
+        "start": 307.857,
+        "duration": 3.07
+    },
+    {
+        "text": "And of course the world isn't static.",
+        "start": 311.447,
+        "duration": 1.99
+    },
+    {
+        "text": "But fortunately, we didn't have to\ncome up with new algorithms for that.",
+        "start": 313.677,
+        "duration": 2.22
+    },
+    {
+        "text": "It was an amazingly simple\nswitch from what the inputs",
+        "start": 315.897,
+        "duration": 2.94
+    },
+    {
+        "text": "to the learning modules are.",
+        "start": 318.837,
+        "duration": 1.15
+    },
+    {
+        "text": "Now we have models of behaviors.",
+        "start": 320.307,
+        "duration": 1.7
+    },
+    {
+        "text": "How things are expected\nto behave over time.",
+        "start": 322.057,
+        "duration": 1.93
+    },
+    {
+        "text": "And once you have those two things,\nonce you understand the structure,",
+        "start": 324.407,
+        "duration": 2.28
+    },
+    {
+        "text": "the static structure of the world,\nand then the dynamic structure of",
+        "start": 326.717,
+        "duration": 2.4
+    },
+    {
+        "text": "the world, we are able to now start\napproaching goal-oriented behaviors.",
+        "start": 329.117,
+        "duration": 5.07
+    },
+    {
+        "text": "Like, how do we use behaviors\nto manipulate the world",
+        "start": 334.187,
+        "duration": 3.66
+    },
+    {
+        "text": "to reach various states?",
+        "start": 337.847,
+        "duration": 1.17
+    },
+    {
+        "text": "This is all coming together.",
+        "start": 339.707,
+        "duration": 1.31
+    },
+    {
+        "text": "I don't expect that we'll have\nall this implemented this year.",
+        "start": 341.267,
+        "duration": 2.64
+    },
+    {
+        "text": "I know we won't almost certainly.",
+        "start": 343.907,
+        "duration": 1.63
+    },
+    {
+        "text": "But I think by the end of this\nyear our goal would be to have a",
+        "start": 345.797,
+        "duration": 2.85
+    },
+    {
+        "text": "very solid theory of goal-oriented\nbehaviors and understand causality.",
+        "start": 348.647,
+        "duration": 4.07
+    },
+    {
+        "text": "So that perhaps in 2027, we'll\nfill out the whole thing.",
+        "start": 353.857,
+        "duration": 3.72
+    },
+    {
+        "text": "I want to emphasize again, how\nthat there's really not a lot",
+        "start": 358.067,
+        "duration": 4.18
+    },
+    {
+        "text": "of major things left to done.",
+        "start": 362.247,
+        "duration": 1.45
+    },
+    {
+        "text": "The beginning of this\nproject moved very slowly.",
+        "start": 364.107,
+        "duration": 2.07
+    },
+    {
+        "text": "For years and years, it was\ndifficult to make progress.",
+        "start": 366.677,
+        "duration": 2.24
+    },
+    {
+        "text": "But now things are moving quickly because\nwe have all these pieces in place.",
+        "start": 369.137,
+        "duration": 3.04
+    },
+    {
+        "text": "And it's now just rejiggering\nthe components and adding",
+        "start": 372.557,
+        "duration": 3.56
+    },
+    {
+        "text": "some new things to it.",
+        "start": 376.117,
+        "duration": 0.85
+    },
+    {
+        "text": "So it's getting to be a very exciting\ntime for this whole endeavor.",
+        "start": 376.967,
+        "duration": 3.91
+    },
+    {
+        "text": "And with that I want to thank for those\nwho are listening today live, those of",
+        "start": 381.487,
+        "duration": 3.627
+    },
+    {
+        "text": "you who are listening online later, those\nwho have contributed to the project so",
+        "start": 385.114,
+        "duration": 3.693
+    },
+    {
+        "text": "far, we talk about you all the time,\nwe really appreciate the effort you do.",
+        "start": 388.807,
+        "duration": 4.62
+    },
+    {
+        "text": "And I think now I'm going to leave it,\nand we're going to now talk do some Q&A.",
+        "start": 394.337,
+        "duration": 3.54
+    },
+    {
+        "text": "I think Will's going to moderate\nthat if I remember correctly.",
+        "start": 398.467,
+        "duration": 4.01
+    }
+]

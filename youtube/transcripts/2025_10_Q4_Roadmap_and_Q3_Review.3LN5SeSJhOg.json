@@ -1,0 +1,1552 @@
+[
+    {
+        "text": "So view of September years\ngoing by fast end of Q3 already.",
+        "start": 8.558,
+        "duration": 6.05
+    },
+    {
+        "text": "So we're gonna do the Q3 review\nas well, at the end of this.",
+        "start": 14.608,
+        "duration": 3.7
+    },
+    {
+        "text": "yeah, but I'll start with the\nshout out to the community.",
+        "start": 20.133,
+        "duration": 3.1
+    },
+    {
+        "text": "And yeah, it's been pretty exciting.",
+        "start": 23.958,
+        "duration": 1.775
+    },
+    {
+        "text": "I feel like there's more and\nmore happening and more and",
+        "start": 25.758,
+        "duration": 2.85
+    },
+    {
+        "text": "more kind of collaborations and\nsignificant contributions and",
+        "start": 28.608,
+        "duration": 2.725
+    },
+    {
+        "text": "interesting exchanges on the forum.",
+        "start": 31.333,
+        "duration": 1.375
+    },
+    {
+        "text": "So yeah, this is getting really\nfun to put together these slides.",
+        "start": 32.708,
+        "duration": 3.525
+    },
+    {
+        "text": "so first of all, some first time\nposts, new people joining the forum,",
+        "start": 37.433,
+        "duration": 3.25
+    },
+    {
+        "text": "Ram, from the University of Groaning\nand in the Netherlands introducing",
+        "start": 41.533,
+        "duration": 4.275
+    },
+    {
+        "text": "himself and asking, some questions.",
+        "start": 45.808,
+        "duration": 2.625
+    },
+    {
+        "text": "and then also paper docs, and yeah,\nasking about time series, pattern,",
+        "start": 49.483,
+        "duration": 6.225
+    },
+    {
+        "text": "recognition and time series.",
+        "start": 55.708,
+        "duration": 0.95
+    },
+    {
+        "text": "But then there are also a couple\nof other posts from him and even",
+        "start": 56.658,
+        "duration": 2.425
+    },
+    {
+        "text": "a pr, that I'll show in a bit.",
+        "start": 59.083,
+        "duration": 2.075
+    },
+    {
+        "text": "So yeah, welcome to the\nforum, and the project.",
+        "start": 61.758,
+        "duration": 3.575
+    },
+    {
+        "text": "And then, yeah, there were a bunch of\ninteresting posts just, to, to highlight.",
+        "start": 66.02,
+        "duration": 4.0
+    },
+    {
+        "text": "there were, yeah, a\ncouple of papers shared.",
+        "start": 71.02,
+        "duration": 1.825
+    },
+    {
+        "text": "For instance, here, DLA shared a paper\non, yeah, with a current models have",
+        "start": 72.945,
+        "duration": 7.1
+    },
+    {
+        "text": "an understanding of physics or they\ncan just, generate impressive visuals.",
+        "start": 80.045,
+        "duration": 5.35
+    },
+    {
+        "text": "and then, yeah, another interesting\npaper shared around, yeah, robotic",
+        "start": 86.72,
+        "duration": 4.525
+    },
+    {
+        "text": "manipulation and how it helps to provide\npoint, cloud data or predict point cloud",
+        "start": 91.245,
+        "duration": 3.85
+    },
+    {
+        "text": "data, some discussion around those.",
+        "start": 95.095,
+        "duration": 4.4
+    },
+    {
+        "text": "and then, yeah, hear another interesting\nthread, started by pep docs around, how",
+        "start": 100.32,
+        "duration": 4.6
+    },
+    {
+        "text": "learning in Monty works algorithmically.",
+        "start": 105.195,
+        "duration": 1.95
+    },
+    {
+        "text": "I.",
+        "start": 108.195,
+        "duration": 0.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 110.558,
+        "duration": 0.25
+    },
+    {
+        "text": "in the category of helping\nand interacting with others.",
+        "start": 111.408,
+        "duration": 1.725
+    },
+    {
+        "text": "I think the award this month has to go\nto Agent Rev. He's just been, really",
+        "start": 113.133,
+        "duration": 4.6
+    },
+    {
+        "text": "helpful answering people's questions,\nreplying to people who share other",
+        "start": 117.733,
+        "duration": 3.625
+    },
+    {
+        "text": "people's, like other articles and\nresearch, and how it relates to Monty.",
+        "start": 121.358,
+        "duration": 5.6
+    },
+    {
+        "text": "giving feedback on the workflow,\nfor doing research with Monty.",
+        "start": 128.258,
+        "duration": 4.35
+    },
+    {
+        "text": "yeah, replying to different articles\nabout researchers doing alternative",
+        "start": 135.083,
+        "duration": 4.425
+    },
+    {
+        "text": "approaches to ai and then yeah,\nTBP based projects and plans.",
+        "start": 139.508,
+        "duration": 5.125
+    },
+    {
+        "text": "Zach has posted again, this time\nposting a bit more of a concrete.",
+        "start": 145.258,
+        "duration": 4.675
+    },
+    {
+        "text": "Outline of a potential undergrad\nproject using Monty for an",
+        "start": 150.783,
+        "duration": 3.7
+    },
+    {
+        "text": "application in robotics.",
+        "start": 154.483,
+        "duration": 1.425
+    },
+    {
+        "text": "and then here was another\npost, I think it was Spencer.",
+        "start": 157.108,
+        "duration": 3.975
+    },
+    {
+        "text": "Yeah.",
+        "start": 161.558,
+        "duration": 0.35
+    },
+    {
+        "text": "posting about, implementing a,\ncustom learning module using SDRs",
+        "start": 162.433,
+        "duration": 4.35
+    },
+    {
+        "text": "and some proposals around that.",
+        "start": 167.233,
+        "duration": 1.925
+    },
+    {
+        "text": "And yeah, said she started to\nimplement an SDR based learning",
+        "start": 169.408,
+        "duration": 3.425
+    },
+    {
+        "text": "module and we'll share some\nvisualizations once things are working.",
+        "start": 172.833,
+        "duration": 3.1
+    },
+    {
+        "text": "So looking forward to that.",
+        "start": 175.933,
+        "duration": 1.2
+    },
+    {
+        "text": "And then also, Sebastian asking about\nsome more details on our previous",
+        "start": 177.933,
+        "duration": 5.25
+    },
+    {
+        "text": "investigations into integrating HTM\ninto a learning module and yeah,",
+        "start": 183.483,
+        "duration": 3.55
+    },
+    {
+        "text": "saying, yeah, sure, it's a monumental\ntask, however, I'm still interested.",
+        "start": 187.358,
+        "duration": 3.25
+    },
+    {
+        "text": "So yeah, maybe also looking into\nthat, which would be cool to see.",
+        "start": 190.608,
+        "duration": 3.8
+    },
+    {
+        "text": "then yeah, we had a couple\nof community prs this month.",
+        "start": 196.27,
+        "duration": 2.75
+    },
+    {
+        "text": "some fixes to the documentation,\nsome, mostly link path fixes.",
+        "start": 199.395,
+        "duration": 4.7
+    },
+    {
+        "text": "then yeah, PR from Paper Docs,\nupdating the environment to allow",
+        "start": 205.87,
+        "duration": 3.725
+    },
+    {
+        "text": "MKL, dependency for Mac Intel.",
+        "start": 209.945,
+        "duration": 2.3
+    },
+    {
+        "text": "nice PR from Agent Rev. adding a WSL\ntutorial for setting up monon subsystem",
+        "start": 213.72,
+        "duration": 6.325
+    },
+    {
+        "text": "for Linux Windows subsystem, which he\npreviously shared on the course, but now",
+        "start": 220.045,
+        "duration": 5.35
+    },
+    {
+        "text": "it's integrated into our documentation.",
+        "start": 225.395,
+        "duration": 1.6
+    },
+    {
+        "text": "and then another peer from\nPOCs, fixing a path assumption.",
+        "start": 228.17,
+        "duration": 3.925
+    },
+    {
+        "text": "and yeah, those were the kind\nof smaller ones, but still",
+        "start": 234.07,
+        "duration": 2.825
+    },
+    {
+        "text": "really, nice and helpful ones.",
+        "start": 236.895,
+        "duration": 1.525
+    },
+    {
+        "text": "So thanks for those.",
+        "start": 238.42,
+        "duration": 0.925
+    },
+    {
+        "text": "And then, we also had some contributions\nto our overall roadmap, which are",
+        "start": 239.67,
+        "duration": 4.1
+    },
+    {
+        "text": "often like quite big chunks of work.",
+        "start": 243.77,
+        "duration": 1.95
+    },
+    {
+        "text": "And, you can see like each of these\nitems, is a bigger chunk of work",
+        "start": 245.745,
+        "duration": 5.05
+    },
+    {
+        "text": "and the kind of icons show what peer\npeople both on our team and in the",
+        "start": 250.795,
+        "duration": 4.125
+    },
+    {
+        "text": "community are currently working on.",
+        "start": 254.92,
+        "duration": 1.375
+    },
+    {
+        "text": "And so one really nice example of\nsomeone contributing to a, an item",
+        "start": 256.795,
+        "duration": 3.775
+    },
+    {
+        "text": "on this roadmap, this month was\nfrom Anna, who first yeah, posted",
+        "start": 260.57,
+        "duration": 5.35
+    },
+    {
+        "text": "on, this course about how she can,\ncontribute in the intro thread.",
+        "start": 266.27,
+        "duration": 3.75
+    },
+    {
+        "text": "And then we had scoped out potential\noptions and then an action plan of",
+        "start": 270.12,
+        "duration": 3.8
+    },
+    {
+        "text": "different steps to, make it happen.",
+        "start": 273.92,
+        "duration": 1.725
+    },
+    {
+        "text": "And then, continually interacted on\nhere with questions and progress on",
+        "start": 275.995,
+        "duration": 5.9
+    },
+    {
+        "text": "this item of combining data load and\ndataset into an environment interface.",
+        "start": 282.22,
+        "duration": 3.425
+    },
+    {
+        "text": "And basically working on a, really nice.",
+        "start": 286.145,
+        "duration": 2.85
+    },
+    {
+        "text": "pull request refactoring Monty to\nslowly look a bit more like an actual",
+        "start": 289.87,
+        "duration": 4.225
+    },
+    {
+        "text": "embodied system instead of, an AI\nthat learns from a static data set.",
+        "start": 294.095,
+        "duration": 3.525
+    },
+    {
+        "text": "And this PR was merged, last week, where\nyeah, she merged the data load and data",
+        "start": 297.945,
+        "duration": 6.825
+    },
+    {
+        "text": "set into, one class and updated all the\nrespective, calls of those and configs",
+        "start": 304.77,
+        "duration": 6.875
+    },
+    {
+        "text": "and even added some more unit tests.",
+        "start": 311.645,
+        "duration": 1.8
+    },
+    {
+        "text": "so yeah, really great, PR\ncontributing to our roadmap.",
+        "start": 314.12,
+        "duration": 5.6
+    },
+    {
+        "text": "So thanks a lot Anna, for this one.",
+        "start": 320.07,
+        "duration": 1.55
+    },
+    {
+        "text": "And, another one working on,\nanother item on our roadmap is",
+        "start": 321.67,
+        "duration": 4.5
+    },
+    {
+        "text": "Colin working on adding GPU support.",
+        "start": 326.22,
+        "duration": 2.175
+    },
+    {
+        "text": "So we have a GPU working group now.",
+        "start": 328.395,
+        "duration": 1.625
+    },
+    {
+        "text": "and this is, this are the first two videos\nof our new Community edition video series.",
+        "start": 331.87,
+        "duration": 4.65
+    },
+    {
+        "text": "two meeting recordings of Colin and\nTristan meeting and talking about how",
+        "start": 337.395,
+        "duration": 3.45
+    },
+    {
+        "text": "we could add GPU support to Monty.",
+        "start": 340.845,
+        "duration": 2.1
+    },
+    {
+        "text": "and, there are also meeting\nnotes in this course.",
+        "start": 343.62,
+        "duration": 2.85
+    },
+    {
+        "text": "from that,",
+        "start": 347.145,
+        "duration": 0.525
+    },
+    {
+        "text": "then Greg Robinson has written some more\nnice, blog posts, the theory of mind,",
+        "start": 350.295,
+        "duration": 5.975
+    },
+    {
+        "text": "on humor, and then also shared previous\nblog posts I think that I had in last",
+        "start": 356.62,
+        "duration": 3.5
+    },
+    {
+        "text": "month's presentation, on this course.",
+        "start": 360.12,
+        "duration": 2.375
+    },
+    {
+        "text": "So those are really nice reads if you,\nare looking for something to read.",
+        "start": 362.72,
+        "duration": 3.325
+    },
+    {
+        "text": "and then other people have also\nbeen sharing thousand Brains project",
+        "start": 367.97,
+        "duration": 2.475
+    },
+    {
+        "text": "on social media, responding to,\npeople talking about AI and whether",
+        "start": 370.445,
+        "duration": 6.025
+    },
+    {
+        "text": "LLMs are the path or what's, what\nis the path to real intelligence.",
+        "start": 376.47,
+        "duration": 4.15
+    },
+    {
+        "text": "the first time I think that Grok mentioned\nBrains Project, someone asking it what's.",
+        "start": 381.345,
+        "duration": 4.85
+    },
+    {
+        "text": "Monty, and, the ex AI agent\ngiving a summary of our project.",
+        "start": 386.533,
+        "duration": 6.025
+    },
+    {
+        "text": "yeah, here another person sharing our,\npaper about Monty and what it can do.",
+        "start": 394.108,
+        "duration": 5.65
+    },
+    {
+        "text": "and yeah, another one, commenting on\na post about, like a definition of",
+        "start": 401.683,
+        "duration": 3.475
+    },
+    {
+        "text": "intelligence and referencing Jeff's\ndefinition in the Thousand Brains book.",
+        "start": 405.158,
+        "duration": 3.475
+    },
+    {
+        "text": "and yeah, I hear another\nkind of thread about,",
+        "start": 410.558,
+        "duration": 2.175
+    },
+    {
+        "text": "LLMs and Monty and, learning\nthrough interaction with the world.",
+        "start": 415.633,
+        "duration": 3.925
+    },
+    {
+        "text": "yeah.",
+        "start": 420.058,
+        "duration": 0.4
+    },
+    {
+        "text": "thanks a lot for everyone\nsharing the project, right?",
+        "start": 421.808,
+        "duration": 2.725
+    },
+    {
+        "text": "posting on the forum and\ncontributing to our code base.",
+        "start": 425.033,
+        "duration": 2.825
+    },
+    {
+        "text": "It's really exciting to see.",
+        "start": 428.158,
+        "duration": 1.175
+    },
+    {
+        "text": "and yeah, hope the trend continues\nand I'm excited to see, everyone",
+        "start": 430.508,
+        "duration": 5.325
+    },
+    {
+        "text": "who's everyone's projects, everyone\nwho's forking Monty to see what,",
+        "start": 435.833,
+        "duration": 3.85
+    },
+    {
+        "text": "they're doing with it eventually.",
+        "start": 439.683,
+        "duration": 1.45
+    },
+    {
+        "text": "Okay.",
+        "start": 442.875,
+        "duration": 0.2
+    },
+    {
+        "text": "goals that we set out for ourselves\nor priorities that we set for the",
+        "start": 445.0,
+        "duration": 2.975
+    },
+    {
+        "text": "past three months, were mirror\nmirroring the TVP mission again.",
+        "start": 447.975,
+        "duration": 3.775
+    },
+    {
+        "text": "So we have, this was mostly a\nresearch priority, enabling Monty",
+        "start": 451.75,
+        "duration": 6.375
+    },
+    {
+        "text": "to model composition objects\naccurately and efficiently.",
+        "start": 458.125,
+        "duration": 2.825
+    },
+    {
+        "text": "then this was a bit more\non the engineering side.",
+        "start": 462.15,
+        "duration": 2.675
+    },
+    {
+        "text": "make Monte easy to use,\nimprove, and contribute to.",
+        "start": 466.3,
+        "duration": 2.475
+    },
+    {
+        "text": "both for us and for the,\nfor external people.",
+        "start": 469.775,
+        "duration": 2.4
+    },
+    {
+        "text": "then increase external interest\nand awareness of our approach.",
+        "start": 473.275,
+        "duration": 2.825
+    },
+    {
+        "text": "And lastly, on the theory side, figure\nout how to model object behaviors",
+        "start": 476.75,
+        "duration": 3.4
+    },
+    {
+        "text": "in brain, in the brain and in Monty.",
+        "start": 480.175,
+        "duration": 2.0
+    },
+    {
+        "text": "And so specifically subgoals we had\nthere, for the, for modeling composition",
+        "start": 483.275,
+        "duration": 4.975
+    },
+    {
+        "text": "objects, one of the subgoals was to have\na data set training and inference protocol",
+        "start": 488.25,
+        "duration": 4.5
+    },
+    {
+        "text": "and evaluation measures to ev evaluate\nMA's composition modeling abilities.",
+        "start": 493.125,
+        "duration": 4.45
+    },
+    {
+        "text": "And we got a huge chunk of that\ndone during the, focus week.",
+        "start": 497.925,
+        "duration": 5.325
+    },
+    {
+        "text": "We already had the data set from Scott,\nand then yeah, basically implemented",
+        "start": 503.675,
+        "duration": 3.2
+    },
+    {
+        "text": "the training and inference protocol,\nthe supervision for it, the evaluation",
+        "start": 506.875,
+        "duration": 2.95
+    },
+    {
+        "text": "measures, and evaluated Monty.",
+        "start": 509.825,
+        "duration": 2.475
+    },
+    {
+        "text": "and then, yeah, a little bit more\nof cleanup and getting it ready to",
+        "start": 513.875,
+        "duration": 2.8
+    },
+    {
+        "text": "integrate into TBP of Mon TBP Monty\nin the kind of weeks afterwards.",
+        "start": 516.675,
+        "duration": 3.975
+    },
+    {
+        "text": "so it's light green, which means\na bit of follow-up work left",
+        "start": 521.9,
+        "duration": 3.175
+    },
+    {
+        "text": "'cause it still needs to be merged\ninto Monty, but, it is all there.",
+        "start": 525.15,
+        "duration": 5.0
+    },
+    {
+        "text": "then, oh, I put that in the wrong spot.",
+        "start": 532.525,
+        "duration": 2.675
+    },
+    {
+        "text": "I, improved, let me move this thing, but,",
+        "start": 535.2,
+        "duration": 5.175
+    },
+    {
+        "text": "okay.",
+        "start": 542.7,
+        "duration": 0.35
+    },
+    {
+        "text": "Improved hypothesis resampling\nbased on different signals.",
+        "start": 543.05,
+        "duration": 2.4
+    },
+    {
+        "text": "based on prediction error out of reference\nframe movement, salient features,",
+        "start": 546.725,
+        "duration": 2.85
+    },
+    {
+        "text": "confidence manifesting as improved or\ncomparable accuracy on composition data",
+        "start": 549.75,
+        "duration": 4.025
+    },
+    {
+        "text": "sets with reduced computational overhead.",
+        "start": 553.775,
+        "duration": 1.925
+    },
+    {
+        "text": "So a lot of work went into this one.",
+        "start": 556.55,
+        "duration": 1.9
+    },
+    {
+        "text": "there was, work from.",
+        "start": 559.85,
+        "duration": 1.012
+    },
+    {
+        "text": "Both, Rami and Hojae, scoping out kind of\napproaches for this in, different RFCs HO",
+        "start": 561.562,
+        "duration": 6.025
+    },
+    {
+        "text": "J'S RFC actually split into three RFCs.",
+        "start": 567.587,
+        "duration": 2.325
+    },
+    {
+        "text": "and then there's this, feature branch\nthat Rami has been working a lot on over",
+        "start": 571.512,
+        "duration": 5.7
+    },
+    {
+        "text": "the past months, and j has been testing\nthe auto reference frame movement,",
+        "start": 577.212,
+        "duration": 3.925
+    },
+    {
+        "text": "which IMARK has done now because we\ndecided to not integrate that right now.",
+        "start": 581.137,
+        "duration": 3.425
+    },
+    {
+        "text": "But we have a nice writeup\nof all the results.",
+        "start": 584.762,
+        "duration": 1.65
+    },
+    {
+        "text": "but yeah, so a lot of work went\ninto it, but it's not, none of it",
+        "start": 587.987,
+        "duration": 3.2
+    },
+    {
+        "text": "made it into Tbp Monte yet, and we\ndon't really have final results on",
+        "start": 591.212,
+        "duration": 3.5
+    },
+    {
+        "text": "improved accuracy, for this one yet.",
+        "start": 594.937,
+        "duration": 2.8
+    },
+    {
+        "text": "then SIC policies improve\naccuracy on composition data",
+        "start": 600.012,
+        "duration": 2.775
+    },
+    {
+        "text": "sets and enable sparse models.",
+        "start": 602.787,
+        "duration": 1.575
+    },
+    {
+        "text": "so Scott worked a lot on this and\nthen also Jose during the focus week.",
+        "start": 605.537,
+        "duration": 3.3
+    },
+    {
+        "text": "so we have, Scott implemented the Cade\npolicy moving to Gold States, a lot of",
+        "start": 609.937,
+        "duration": 4.125
+    },
+    {
+        "text": "plumbing into Monty for sensorimotor\nmodules, emitting gold states and",
+        "start": 614.062,
+        "duration": 3.325
+    },
+    {
+        "text": "adding the gold states selector, adding\nthe inhibition of return and then",
+        "start": 617.387,
+        "duration": 4.15
+    },
+    {
+        "text": "testing different saliency methods and\nevaluating them against each other,",
+        "start": 621.587,
+        "duration": 2.925
+    },
+    {
+        "text": "and also learning sparse models.",
+        "start": 625.412,
+        "duration": 1.6
+    },
+    {
+        "text": "So yeah, this kind of showed approved\naccuracy, and all that, but again,",
+        "start": 627.762,
+        "duration": 4.85
+    },
+    {
+        "text": "it's light green because it's\nnot integrated into TBP Mon yet.",
+        "start": 632.612,
+        "duration": 2.775
+    },
+    {
+        "text": "Then, add and test it to the\nsurface sensorimotor module enable",
+        "start": 637.7,
+        "duration": 2.975
+    },
+    {
+        "text": "enabling improved representation\nof 2D on 3D compositional objects.",
+        "start": 641.025,
+        "duration": 3.8
+    },
+    {
+        "text": "Jose got started on that last week.",
+        "start": 645.775,
+        "duration": 2.075
+    },
+    {
+        "text": "There's a, nice feature branch there.",
+        "start": 647.95,
+        "duration": 1.75
+    },
+    {
+        "text": "Some first, results on it.",
+        "start": 649.7,
+        "duration": 2.0
+    },
+    {
+        "text": "But, yeah, this one is\nstill, early in progress.",
+        "start": 651.725,
+        "duration": 3.1
+    },
+    {
+        "text": "make much easy to use,\nimprove and contribute to.",
+        "start": 657.6,
+        "duration": 2.0
+    },
+    {
+        "text": "We had, motor systems disentangled\nfrom other classes, but that one got,",
+        "start": 659.9,
+        "duration": 3.525
+    },
+    {
+        "text": "superseded by other things that came\nup, like a lot of, platform planning.",
+        "start": 664.3,
+        "duration": 3.425
+    },
+    {
+        "text": "so there wasn't a lot\nof progress on this one.",
+        "start": 669.075,
+        "duration": 2.925
+    },
+    {
+        "text": "then Monte's not constrained to Python\n3.8, which, Jeremy is working on.",
+        "start": 672.8,
+        "duration": 4.775
+    },
+    {
+        "text": "It's still in progress, but there was.",
+        "start": 677.575,
+        "duration": 1.421
+    },
+    {
+        "text": "several PRS merged and also, changes that\nare currently in progress on this one.",
+        "start": 680.037,
+        "duration": 4.45
+    },
+    {
+        "text": "Basically the approach currently being to,\nintegrate MUCO as a different simulator,",
+        "start": 684.762,
+        "duration": 5.9
+    },
+    {
+        "text": "which allows us to upgrade Python.",
+        "start": 690.687,
+        "duration": 1.775
+    },
+    {
+        "text": "we briefly had a much higher\nPython version during the focus",
+        "start": 693.962,
+        "duration": 3.025
+    },
+    {
+        "text": "week, with the other approach\nthat, Tristan will implement it,",
+        "start": 696.987,
+        "duration": 4.475
+    },
+    {
+        "text": "that's not the current main path.",
+        "start": 704.012,
+        "duration": 1.65
+    },
+    {
+        "text": "and then added interactive and up-to-date\noverview of where people can contribute.",
+        "start": 707.487,
+        "duration": 3.875
+    },
+    {
+        "text": "that one also, there's a lot\nof progress and basically, will",
+        "start": 712.362,
+        "duration": 3.025
+    },
+    {
+        "text": "implemented all of this already,\nbut it's currently under review.",
+        "start": 715.387,
+        "duration": 3.55
+    },
+    {
+        "text": "so hopefully it will be live very soon.",
+        "start": 719.562,
+        "duration": 2.975
+    },
+    {
+        "text": "And then improved documentation on\nhow to contribute and how to customize",
+        "start": 724.525,
+        "duration": 2.95
+    },
+    {
+        "text": "Monty for specific applications.",
+        "start": 727.5,
+        "duration": 1.65
+    },
+    {
+        "text": "That was a bit of a vague one, but there\nhave been several prs both on adding,",
+        "start": 729.475,
+        "duration": 4.7
+    },
+    {
+        "text": "or hackathon projects as examples.",
+        "start": 734.425,
+        "duration": 1.95
+    },
+    {
+        "text": "and then also just general improvements\nto the documentation, adding some more",
+        "start": 737.025,
+        "duration": 3.25
+    },
+    {
+        "text": "cross links and, information on using\nMonty and how Monty works and how to",
+        "start": 740.275,
+        "duration": 5.525
+    },
+    {
+        "text": "contribute, and do research with Monty,",
+        "start": 745.8,
+        "duration": 2.075
+    },
+    {
+        "text": "increase external interest\nand awareness of our approach.",
+        "start": 750.65,
+        "duration": 2.275
+    },
+    {
+        "text": "one of the big items was to publish\nall the material around how hierarchy",
+        "start": 753.1,
+        "duration": 2.7
+    },
+    {
+        "text": "and DMC papers and produce it.",
+        "start": 755.8,
+        "duration": 1.5
+    },
+    {
+        "text": "So Will has, yeah, recorded and\nedited and produced all of the kinda",
+        "start": 757.75,
+        "duration": 4.975
+    },
+    {
+        "text": "shorts for the DMC and hierarchy\npaper and the full length videos.",
+        "start": 762.725,
+        "duration": 3.05
+    },
+    {
+        "text": "And, there are two blog\nposts, with the plain language",
+        "start": 765.775,
+        "duration": 3.475
+    },
+    {
+        "text": "explainer on our website now.",
+        "start": 769.275,
+        "duration": 1.25
+    },
+    {
+        "text": "so that one is done and the shorts\nare being gradually released,",
+        "start": 771.5,
+        "duration": 4.075
+    },
+    {
+        "text": "but all ready in the pipeline.",
+        "start": 775.575,
+        "duration": 1.775
+    },
+    {
+        "text": "and then presented TBP and, TBT\nand Monty at several conferences.",
+        "start": 779.45,
+        "duration": 3.95
+    },
+    {
+        "text": "And speaker series, I marked it as screen\n'cause there was, again, a bit more",
+        "start": 783.4,
+        "duration": 4.45
+    },
+    {
+        "text": "vague, but we haven't really presented\nit much, but attended several conferences",
+        "start": 787.85,
+        "duration": 4.6
+    },
+    {
+        "text": "and then lined up several presentations\nfor the next, weeks and months.",
+        "start": 792.675,
+        "duration": 4.15
+    },
+    {
+        "text": "but that's a, an always ongoing thing.",
+        "start": 797.475,
+        "duration": 3.275
+    },
+    {
+        "text": "but yeah, made good, kind of progress\nand yeah, organizing an online community",
+        "start": 802.325,
+        "duration": 7.0
+    },
+    {
+        "text": "event, hasn't happened yet this quarter.",
+        "start": 809.325,
+        "duration": 2.425
+    },
+    {
+        "text": "And then on the theory side,\nOne of the items was, was a",
+        "start": 814.275,
+        "duration": 3.637
+    },
+    {
+        "text": "proposal for open questions around\nobject deformation and actions.",
+        "start": 817.937,
+        "duration": 3.0
+    },
+    {
+        "text": "We haven't really gotten into talking\nabout that too much the past months, but",
+        "start": 821.262,
+        "duration": 4.65
+    },
+    {
+        "text": "hopefully we will in the next months.",
+        "start": 825.912,
+        "duration": 1.75
+    },
+    {
+        "text": "And then concrete writeup or prototype\nof how to model object behaviors in",
+        "start": 828.312,
+        "duration": 3.3
+    },
+    {
+        "text": "Monty, I put together a presentation\nand then, a writeup in the Google",
+        "start": 831.612,
+        "duration": 4.9
+    },
+    {
+        "text": "doc of the exact concrete steps\nof, what we would have to do to get",
+        "start": 836.512,
+        "duration": 4.3
+    },
+    {
+        "text": "these different capabilities that we\nneed for modeling object behaviors.",
+        "start": 840.812,
+        "duration": 3.1
+    },
+    {
+        "text": "and so planning to also\nintegrate that in our public",
+        "start": 845.262,
+        "duration": 2.75
+    },
+    {
+        "text": "documentation, hopefully this week.",
+        "start": 848.012,
+        "duration": 2.55
+    },
+    {
+        "text": "But yeah, we have a pretty\nconcrete writeup of that now.",
+        "start": 851.912,
+        "duration": 2.475
+    },
+    {
+        "text": "so yeah, overall.",
+        "start": 857.237,
+        "duration": 1.05
+    },
+    {
+        "text": "I think we did a decent\njob on the priorities.",
+        "start": 858.4,
+        "duration": 3.1
+    },
+    {
+        "text": "yeah, several things that like a lot\nof work went into, but there's still",
+        "start": 862.65,
+        "duration": 3.475
+    },
+    {
+        "text": "some follow up work to do, especially\nto integrate things into Monty.",
+        "start": 866.125,
+        "duration": 3.15
+    },
+    {
+        "text": "and but yeah, we've worked on almost\neverything on there and made good",
+        "start": 871.0,
+        "duration": 4.55
+    },
+    {
+        "text": "progress on almost everything on there.",
+        "start": 875.55,
+        "duration": 1.525
+    },
+    {
+        "text": "okay.",
+        "start": 878.295,
+        "duration": 0.325
+    },
+    {
+        "text": "But then, yeah, I'll briefly go\nover the Q4 priorities that, Tristan",
+        "start": 878.62,
+        "duration": 4.45
+    },
+    {
+        "text": "Niels will and I put together.",
+        "start": 883.07,
+        "duration": 1.5
+    },
+    {
+        "text": "so again, I put the mission on the\nleft side and the priorities on the",
+        "start": 886.82,
+        "duration": 3.175
+    },
+    {
+        "text": "right, and they follow a similar\npattern as the last two quarters.",
+        "start": 889.995,
+        "duration": 2.775
+    },
+    {
+        "text": "so first this is, was,\nbasically a continuation of",
+        "start": 893.97,
+        "duration": 3.575
+    },
+    {
+        "text": "the first priority last month.",
+        "start": 898.245,
+        "duration": 1.975
+    },
+    {
+        "text": "last month.",
+        "start": 900.92,
+        "duration": 0.575
+    },
+    {
+        "text": "we gave monthly the ability to\nmodel the composition objects and",
+        "start": 902.545,
+        "duration": 3.375
+    },
+    {
+        "text": "we can evaluate its ability to\nmodel composition objects now.",
+        "start": 906.47,
+        "duration": 2.775
+    },
+    {
+        "text": "So the next quarter is really\nabout improving Monte's ability",
+        "start": 909.57,
+        "duration": 3.125
+    },
+    {
+        "text": "to model compositional object.",
+        "start": 912.695,
+        "duration": 1.25
+    },
+    {
+        "text": "Both accurately and efficiently.",
+        "start": 914.42,
+        "duration": 1.525
+    },
+    {
+        "text": "And so there are a couple of kind\nof research lines that go into that.",
+        "start": 916.345,
+        "duration": 3.9
+    },
+    {
+        "text": "basically, yeah, taking the baseline\nmetrics we have now and improving",
+        "start": 921.295,
+        "duration": 3.4
+    },
+    {
+        "text": "on them, getting Monte better\nat modeling composition objects.",
+        "start": 924.695,
+        "duration": 3.375
+    },
+    {
+        "text": "That's the big theme for the research,\nI would say in the next quarter.",
+        "start": 928.295,
+        "duration": 3.075
+    },
+    {
+        "text": "Then making money easier to\nuse, improve and contribute to.",
+        "start": 932.42,
+        "duration": 3.25
+    },
+    {
+        "text": "I'll go into the sub points\nfor that in a moment.",
+        "start": 936.17,
+        "duration": 2.5
+    },
+    {
+        "text": "increasing external\ncontributions to the project.",
+        "start": 940.17,
+        "duration": 2.375
+    },
+    {
+        "text": "and theoretical progress on\nhow to utilize behavior models.",
+        "start": 944.67,
+        "duration": 2.825
+    },
+    {
+        "text": "So this one is again, a bit of a con\ncontinuation of the previous one,",
+        "start": 947.72,
+        "duration": 3.05
+    },
+    {
+        "text": "but it's a slightly different word.",
+        "start": 950.77,
+        "duration": 1.45
+    },
+    {
+        "text": "So I feel like now we have\na pretty good idea of how we",
+        "start": 952.22,
+        "duration": 2.9
+    },
+    {
+        "text": "want to model object behaviors.",
+        "start": 955.12,
+        "duration": 1.087
+    },
+    {
+        "text": "And so this one is focusing more on how\nwe then use these behavior models, for",
+        "start": 957.153,
+        "duration": 4.829
+    },
+    {
+        "text": "example, for actions and also to make\npredictions about, like what to see.",
+        "start": 961.982,
+        "duration": 5.575
+    },
+    {
+        "text": "so yeah, let me go through\nwhat goes into these.",
+        "start": 970.257,
+        "duration": 2.725
+    },
+    {
+        "text": "So multis ability to\nmodel composition objects.",
+        "start": 973.457,
+        "duration": 2.675
+    },
+    {
+        "text": "one part that goes into that is\nthe model free and model based Cade",
+        "start": 977.182,
+        "duration": 3.1
+    },
+    {
+        "text": "policy that Scott has been working on.",
+        "start": 980.282,
+        "duration": 1.55
+    },
+    {
+        "text": "so the gold state generation of\nsensorimotor module saliency, go",
+        "start": 983.032,
+        "duration": 4.65
+    },
+    {
+        "text": "state selector and CIC policy are all\nvalidated and integrated into TP Monte.",
+        "start": 987.682,
+        "duration": 4.75
+    },
+    {
+        "text": "So that will be probably\nseveral integration projects.",
+        "start": 992.482,
+        "duration": 2.525
+    },
+    {
+        "text": "getting that all into the main\ncode base, then dynamic adjustment",
+        "start": 996.832,
+        "duration": 4.25
+    },
+    {
+        "text": "of the hypothesis space that,\nRami has been working on a lot.",
+        "start": 1001.082,
+        "duration": 3.155
+    },
+    {
+        "text": "it is validated and integrated into Tbp.",
+        "start": 1004.957,
+        "duration": 1.95
+    },
+    {
+        "text": "Monty should probably also be\nseveral integration projects.",
+        "start": 1006.907,
+        "duration": 3.525
+    },
+    {
+        "text": "then the Composition Object Test Bed and\nMetrics is integrated into TVP Monty.",
+        "start": 1012.957,
+        "duration": 4.025
+    },
+    {
+        "text": "That's the kind of PR I opened, last week.",
+        "start": 1017.132,
+        "duration": 2.625
+    },
+    {
+        "text": "and yeah, tested additional\nways to improve performance",
+        "start": 1022.207,
+        "duration": 3.275
+    },
+    {
+        "text": "on compositional test bed.",
+        "start": 1025.482,
+        "duration": 1.2
+    },
+    {
+        "text": "there's this 2D sensorimotor\nmodule that Hojae is working on,",
+        "start": 1028.257,
+        "duration": 2.275
+    },
+    {
+        "text": "potentially masking or seg segmenting,\nin the sensorimotor module.",
+        "start": 1031.357,
+        "duration": 3.125
+    },
+    {
+        "text": "In addition to saliency hypothesis.",
+        "start": 1034.482,
+        "duration": 2.525
+    },
+    {
+        "text": "Re-anchoring is an idea we\ntalked about adding the top-down",
+        "start": 1037.007,
+        "duration": 2.625
+    },
+    {
+        "text": "connections will be an important one.",
+        "start": 1039.632,
+        "duration": 2.425
+    },
+    {
+        "text": "storing the child relative to parent\norientation is another piece of plumbing",
+        "start": 1043.082,
+        "duration": 4.275
+    },
+    {
+        "text": "that needs to be added into Monty.",
+        "start": 1047.357,
+        "duration": 1.375
+    },
+    {
+        "text": "And then, yeah, hyper parameters\nand I expect us to be running lots",
+        "start": 1048.907,
+        "duration": 3.825
+    },
+    {
+        "text": "of experiments in the next month.",
+        "start": 1052.732,
+        "duration": 1.575
+    },
+    {
+        "text": "figuring out how to get best model\nthese, compositional objects,",
+        "start": 1056.357,
+        "duration": 4.15
+    },
+    {
+        "text": "making Monty easier to use,\nimprove, and contribute to.",
+        "start": 1063.532,
+        "duration": 2.25
+    },
+    {
+        "text": "this one might look a bit familiar.",
+        "start": 1066.882,
+        "duration": 2.775
+    },
+    {
+        "text": "So here is, the MO motor system is in\ndisentangled from other classes right now.",
+        "start": 1069.732,
+        "duration": 4.475
+    },
+    {
+        "text": "There's a lot of kind of messy\nentanglement between the motor system and",
+        "start": 1074.207,
+        "duration": 3.6
+    },
+    {
+        "text": "data loader and dataset, which are now one\nclass, but still a lot of entanglement.",
+        "start": 1078.057,
+        "duration": 3.675
+    },
+    {
+        "text": "and Tristan has been working on that one.",
+        "start": 1083.282,
+        "duration": 1.7
+    },
+    {
+        "text": "and then Monty's not constrained to\nPython 3.9, which, Jeremy's working",
+        "start": 1086.407,
+        "duration": 3.675
+    },
+    {
+        "text": "on with the Muco integration.",
+        "start": 1090.082,
+        "duration": 1.425
+    },
+    {
+        "text": "And also, integrated with simulator\nruns on Windows as well as",
+        "start": 1092.07,
+        "duration": 3.925
+    },
+    {
+        "text": "distributed via instead of Conda.",
+        "start": 1096.02,
+        "duration": 2.3
+    },
+    {
+        "text": "both also ties into the MACO\nintegration that Jeremy's working on.",
+        "start": 1099.095,
+        "duration": 4.125
+    },
+    {
+        "text": "and then for increasing, so increasing\nexternal contributions to the",
+        "start": 1105.12,
+        "duration": 4.0
+    },
+    {
+        "text": "project itself is not very concrete.",
+        "start": 1109.12,
+        "duration": 2.35
+    },
+    {
+        "text": "It's a bit partially outside of\nour influence, but we have a couple",
+        "start": 1111.72,
+        "duration": 2.475
+    },
+    {
+        "text": "of, concrete points that we want\nto do, to hopefully achieve that.",
+        "start": 1114.195,
+        "duration": 4.575
+    },
+    {
+        "text": "so one is to, get the future work\ntable live and then for us to",
+        "start": 1119.995,
+        "duration": 5.675
+    },
+    {
+        "text": "update the research engineering and\ncommunity items, and the meta data",
+        "start": 1125.67,
+        "duration": 4.6
+    },
+    {
+        "text": "metadata associated with them so that\neverything is up to date, people can",
+        "start": 1130.295,
+        "duration": 4.875
+    },
+    {
+        "text": "easily find different projects that\nrequire different skills for different",
+        "start": 1135.17,
+        "duration": 3.35
+    },
+    {
+        "text": "interests in that interactive table.",
+        "start": 1138.52,
+        "duration": 1.625
+    },
+    {
+        "text": "And it's easy to find a place where\nsomeone could contribute if they want to.",
+        "start": 1140.22,
+        "duration": 3.075
+    },
+    {
+        "text": "fostering the community engagement\nand collaborations, that's the",
+        "start": 1145.495,
+        "duration": 2.725
+    },
+    {
+        "text": "kind of ongoing things like Penn\nState, IDPR community members.",
+        "start": 1148.245,
+        "duration": 3.45
+    },
+    {
+        "text": "publishing more resources\non Monty and the project.",
+        "start": 1153.47,
+        "duration": 2.075
+    },
+    {
+        "text": "So that involves both like\nthe DMC and hierarchy paper",
+        "start": 1155.595,
+        "duration": 2.825
+    },
+    {
+        "text": "being published in the journal.",
+        "start": 1158.42,
+        "duration": 1.225
+    },
+    {
+        "text": "So we need to address the\nreviewer comments for that",
+        "start": 1159.87,
+        "duration": 2.225
+    },
+    {
+        "text": "and resubmit the DMC paper.",
+        "start": 1162.145,
+        "duration": 2.15
+    },
+    {
+        "text": "But then also, more video\nreleases, documentation, updates",
+        "start": 1164.82,
+        "duration": 3.25
+    },
+    {
+        "text": "and speaking opportunities.",
+        "start": 1168.07,
+        "duration": 1.325
+    },
+    {
+        "text": "then lowering the barrier to\nfind information and contribute.",
+        "start": 1171.445,
+        "duration": 2.525
+    },
+    {
+        "text": "So kinda figuring out what's the path\npeople take, what kind of information are",
+        "start": 1174.17,
+        "duration": 3.325
+    },
+    {
+        "text": "they looking for, and how can we make it\neasier for them to find that information?",
+        "start": 1177.495,
+        "duration": 2.85
+    },
+    {
+        "text": "and organizing and\nhosting a community event.",
+        "start": 1182.845,
+        "duration": 2.2
+    },
+    {
+        "text": "And then lastly, theoretical progress\non how to utilize behavior models.",
+        "start": 1187.657,
+        "duration": 3.5
+    },
+    {
+        "text": "One, a proposal on how to use behavior\nmodels to make predictions about",
+        "start": 1191.682,
+        "duration": 3.475
+    },
+    {
+        "text": "mythology, including distortions\nand a proposal on how to use",
+        "start": 1195.157,
+        "duration": 4.525
+    },
+    {
+        "text": "behavior models to inform actions.",
+        "start": 1199.682,
+        "duration": 1.975
+    }
+]

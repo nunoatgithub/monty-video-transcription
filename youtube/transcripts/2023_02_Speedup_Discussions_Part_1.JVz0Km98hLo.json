@@ -1,0 +1,4452 @@
+[
+    {
+        "text": "Okay.",
+        "start": 8.97,
+        "duration": 0.25
+    },
+    {
+        "text": "Yeah.",
+        "start": 9.22,
+        "duration": 0.3
+    },
+    {
+        "text": "I prepared a few slides.",
+        "start": 9.52,
+        "duration": 1.71
+    },
+    {
+        "text": "but yeah, I'm trying to keep it\nshort and yeah, hopefully have",
+        "start": 13.39,
+        "duration": 5.56
+    },
+    {
+        "text": "more time for just discussion\nand getting input from everyone.",
+        "start": 19.5,
+        "duration": 5.14
+    },
+    {
+        "text": "So the goal of today's meeting is to show\nthe kind of computations that we're doing",
+        "start": 25.34,
+        "duration": 5.41
+    },
+    {
+        "text": "in Monty, especially the ones that are\ntaking a lot of time and then seeing if.",
+        "start": 30.75,
+        "duration": 5.86
+    },
+    {
+        "text": "The mega team has any ideas of how\nthey could be sped up if we can maybe",
+        "start": 37.47,
+        "duration": 4.31
+    },
+    {
+        "text": "leverage some of their work, if we\ncan maybe leverage sparsity or any",
+        "start": 41.78,
+        "duration": 5.2
+    },
+    {
+        "text": "other techniques that you know of.",
+        "start": 46.98,
+        "duration": 1.44
+    },
+    {
+        "text": "And then maybe at the end of today, we\ncan also think about if we can, if it",
+        "start": 48.94,
+        "duration": 5.22
+    },
+    {
+        "text": "would make sense to have some more Mega,\nMonty cross team meetings and if there",
+        "start": 54.16,
+        "duration": 5.19
+    },
+    {
+        "text": "are any synergies between the teams.",
+        "start": 59.36,
+        "duration": 2.49
+    },
+    {
+        "text": "yeah, sounds good.",
+        "start": 65.78,
+        "duration": 0.91
+    },
+    {
+        "text": "Yep.",
+        "start": 68.1,
+        "duration": 0.23
+    },
+    {
+        "text": "All right.",
+        "start": 71.11,
+        "duration": 0.35
+    },
+    {
+        "text": "Yeah, as I wrote.",
+        "start": 71.46,
+        "duration": 0.76
+    },
+    {
+        "text": "No one needs to have any prior\nknowledge about what is actually",
+        "start": 73.425,
+        "duration": 3.82
+    },
+    {
+        "text": "happening inside of Monty.",
+        "start": 77.245,
+        "duration": 1.28
+    },
+    {
+        "text": "but I'll just give a quick,",
+        "start": 79.915,
+        "duration": 1.58
+    },
+    {
+        "text": "yeah, outline of where we're at\nright now and what's going on",
+        "start": 83.505,
+        "duration": 3.27
+    },
+    {
+        "text": "in relation to runtimes and the\nkind of operations we're running.",
+        "start": 86.815,
+        "duration": 3.6
+    },
+    {
+        "text": "So at the moment, if we have a\nlearning module that knows about",
+        "start": 90.905,
+        "duration": 3.53
+    },
+    {
+        "text": "10 objects, it takes about 0.",
+        "start": 94.445,
+        "duration": 3.16
+    },
+    {
+        "text": "1 to four seconds to perform a step.",
+        "start": 97.605,
+        "duration": 2.0
+    },
+    {
+        "text": "a step is basically getting one\nobservation from the environment.",
+        "start": 100.595,
+        "duration": 3.45
+    },
+    {
+        "text": "And then using that observation to update\nthe internal state of the learning module.",
+        "start": 104.495,
+        "duration": 3.94
+    },
+    {
+        "text": "and in order to recognize an object,\nyou usually need to perform many steps.",
+        "start": 111.015,
+        "duration": 5.457
+    },
+    {
+        "text": "Is it in serial or is that in parallel?",
+        "start": 116.472,
+        "duration": 1.713
+    },
+    {
+        "text": "Are you running on multiple CPUs?",
+        "start": 118.495,
+        "duration": 1.49
+    },
+    {
+        "text": "I'll get to that in a second.",
+        "start": 121.855,
+        "duration": 1.22
+    },
+    {
+        "text": "Okay, great.",
+        "start": 123.635,
+        "duration": 0.84
+    },
+    {
+        "text": "And will you also explain why\nthere's such a big range from 0.",
+        "start": 125.295,
+        "duration": 2.44
+    },
+    {
+        "text": "1 to 4 seconds?",
+        "start": 127.735,
+        "duration": 1.56
+    },
+    {
+        "text": "yeah, so it depends, on how many\nhypotheses are being initialized.",
+        "start": 130.515,
+        "duration": 6.15
+    },
+    {
+        "text": "for example, depending on how noisy the\nobservation is and what part of the object",
+        "start": 138.33,
+        "duration": 4.96
+    },
+    {
+        "text": "the observation is on, it initializes\ndifferent amount of hypotheses and",
+        "start": 143.29,
+        "duration": 3.72
+    },
+    {
+        "text": "then different amounts of hypotheses\nneed to be updated at every step.",
+        "start": 147.01,
+        "duration": 3.68
+    },
+    {
+        "text": "then, yeah, if we have, five\nlearning module, that number gets",
+        "start": 154.73,
+        "duration": 4.17
+    },
+    {
+        "text": "multiplied approximately by five.",
+        "start": 159.4,
+        "duration": 2.38
+    },
+    {
+        "text": "Here, I don't have a range\nbecause I just took the average",
+        "start": 162.03,
+        "duration": 2.61
+    },
+    {
+        "text": "from one experiment right now.",
+        "start": 164.64,
+        "duration": 1.62
+    },
+    {
+        "text": "but, yeah.",
+        "start": 167.83,
+        "duration": 0.91
+    },
+    {
+        "text": "On average, they are about 2.",
+        "start": 169.125,
+        "duration": 1.11
+    },
+    {
+        "text": "5 seconds per step.",
+        "start": 170.395,
+        "duration": 1.79
+    },
+    {
+        "text": "If we know about 77 objects, it gets a\nlot slower because now we have to update",
+        "start": 173.035,
+        "duration": 5.88
+    },
+    {
+        "text": "evidence for every of the 77 objects.",
+        "start": 179.405,
+        "duration": 3.06
+    },
+    {
+        "text": "So about 1 to 15 seconds per step.",
+        "start": 183.015,
+        "duration": 2.35
+    },
+    {
+        "text": "And for five learning modules, it,\nagain, scales by about a factor of five.",
+        "start": 186.1,
+        "duration": 7.09
+    },
+    {
+        "text": "now, given that we have to take\nmultiple steps to recognize an",
+        "start": 195.54,
+        "duration": 3.04
+    },
+    {
+        "text": "object, when the learning module\nknows about ten objects, you usually",
+        "start": 198.59,
+        "duration": 4.06
+    },
+    {
+        "text": "have to take less steps because there\nare less objects to disambiguate.",
+        "start": 202.65,
+        "duration": 3.28
+    },
+    {
+        "text": "so it takes about 0.",
+        "start": 207.16,
+        "duration": 0.71
+    },
+    {
+        "text": "3 to 3 minutes to recognize an object.",
+        "start": 207.87,
+        "duration": 2.58
+    },
+    {
+        "text": "If we have a set of 10 distinct objects,\nif we have 10 very similar objects, it",
+        "start": 211.035,
+        "duration": 4.78
+    },
+    {
+        "text": "can take up to 15 minutes to recognize\nan object, which is quite long.",
+        "start": 215.815,
+        "duration": 4.88
+    },
+    {
+        "text": "And then for 77 objects, really depending\non which object we're looking at and",
+        "start": 221.205,
+        "duration": 5.57
+    },
+    {
+        "text": "how similar it is to other objects\nand how ambiguous the viewpoint is",
+        "start": 226.775,
+        "duration": 4.215
+    },
+    {
+        "text": "it can take between one to 86 minutes\nto recognize an object, which, yeah,",
+        "start": 231.01,
+        "duration": 5.26
+    },
+    {
+        "text": "I think we can do a lot better.",
+        "start": 237.09,
+        "duration": 1.9
+    },
+    {
+        "text": "I feel like we also need to do a\nlot better if Monty should ever",
+        "start": 242.12,
+        "duration": 3.22
+    },
+    {
+        "text": "be applied in the real world.",
+        "start": 245.34,
+        "duration": 1.36
+    },
+    {
+        "text": "To recognize an object\nin less than 86 minutes.",
+        "start": 248.24,
+        "duration": 3.69
+    },
+    {
+        "text": "Like the length of a soccer game, right?",
+        "start": 252.77,
+        "duration": 1.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 256.88,
+        "duration": 0.38
+    },
+    {
+        "text": "And, yeah, I'm sorry, just to say, are\nthese times, I know you said you're going",
+        "start": 260.45,
+        "duration": 4.22
+    },
+    {
+        "text": "to talk about it later, but are these\ntimes single CPU, or is this is this",
+        "start": 264.67,
+        "duration": 3.18
+    },
+    {
+        "text": "Lambda using whatever CPUs you want?",
+        "start": 267.85,
+        "duration": 3.1
+    },
+    {
+        "text": "Yeah, these times are from\nrunning on Lambda with 16 CPUs.",
+        "start": 271.69,
+        "duration": 4.835
+    },
+    {
+        "text": "All right.",
+        "start": 276.925,
+        "duration": 0.28
+    },
+    {
+        "text": "Okay, just, quickly about the terms.",
+        "start": 281.205,
+        "duration": 2.44
+    },
+    {
+        "text": "so we have steps, the, that was the\nfirst numbers I showed, so one step",
+        "start": 284.155,
+        "duration": 4.45
+    },
+    {
+        "text": "is getting an observation, updating\nthe internal state, and then moving,",
+        "start": 288.605,
+        "duration": 3.99
+    },
+    {
+        "text": "and then you get the next step.",
+        "start": 293.235,
+        "duration": 1.62
+    },
+    {
+        "text": "we have a variable number of steps in\nan episode ends, for example, if we",
+        "start": 296.255,
+        "duration": 4.96
+    },
+    {
+        "text": "recognize the object, or if we recognize\nthat we don't know this object, And",
+        "start": 301.215,
+        "duration": 5.46
+    },
+    {
+        "text": "then, we have a number of episodes\nwithin an epoch, which in our case is",
+        "start": 306.675,
+        "duration": 6.71
+    },
+    {
+        "text": "always going through the whole data set\nof objects once, and then we can run",
+        "start": 313.425,
+        "duration": 4.58
+    },
+    {
+        "text": "multiple epochs, for example, testing\ndifferent orientations of each object.",
+        "start": 318.005,
+        "duration": 3.77
+    },
+    {
+        "text": "steps in a typical experiment.",
+        "start": 324.625,
+        "duration": 1.7
+    },
+    {
+        "text": "First of all, We loop over episodes\nin an experiment, and this part, Ben",
+        "start": 327.535,
+        "duration": 6.54
+    },
+    {
+        "text": "actually nicely parallelized, so if we're\nevaluating, we can run every episode in",
+        "start": 334.165,
+        "duration": 6.14
+    },
+    {
+        "text": "parallel on a different CPU on the Lambda\nnode, that doesn't work during training",
+        "start": 340.305,
+        "duration": 5.84
+    },
+    {
+        "text": "because When we are learning, it matters.",
+        "start": 346.145,
+        "duration": 2.245
+    },
+    {
+        "text": "The order matters, basically.",
+        "start": 348.69,
+        "duration": 1.53
+    },
+    {
+        "text": "But since right now we're mostly\nevaluating, this helps speed up that part.",
+        "start": 351.49,
+        "duration": 4.94
+    },
+    {
+        "text": "And then while we haven't reached a\nterminal state yet, we first go over all",
+        "start": 357.94,
+        "duration": 4.61
+    },
+    {
+        "text": "the sensors that the agent has and collect\nthe observations from these sensors.",
+        "start": 362.55,
+        "duration": 4.715
+    },
+    {
+        "text": "And then we loop over the learning\nmodules and perform a matching",
+        "start": 368.345,
+        "duration": 4.87
+    },
+    {
+        "text": "step for each learning module.",
+        "start": 373.215,
+        "duration": 1.41
+    },
+    {
+        "text": "this loop could also be parallelized, but\nit isn't right now because, mostly because",
+        "start": 375.495,
+        "duration": 5.87
+    },
+    {
+        "text": "no one has done it yet and we thought it's\nnot the highest priority because we don't",
+        "start": 381.605,
+        "duration": 4.34
+    },
+    {
+        "text": "have as many CPUs as episodes anyways.",
+        "start": 385.955,
+        "duration": 3.46
+    },
+    {
+        "text": "just wasn't the highest priority yet.",
+        "start": 394.585,
+        "duration": 1.59
+    },
+    {
+        "text": "And then for each matching step within\none learning module, we have to loop over.",
+        "start": 396.995,
+        "duration": 6.05
+    },
+    {
+        "text": "The objects in memory, and for\neach object we have to update the",
+        "start": 403.48,
+        "duration": 3.27
+    },
+    {
+        "text": "evidence given the observation.",
+        "start": 406.76,
+        "duration": 2.12
+    },
+    {
+        "text": "The loop over objects, for this we\nuse multi threading, and then the",
+        "start": 408.88,
+        "duration": 6.37
+    },
+    {
+        "text": "evidence update is vectorized, so it's\nmostly large matrix multiplications.",
+        "start": 415.29,
+        "duration": 6.58
+    },
+    {
+        "text": "Then the learning module sends outputs,\nthat's, Yeah, an output of the object",
+        "start": 422.93,
+        "duration": 5.13
+    },
+    {
+        "text": "it thinks we're on, it's pose, and\nthen a vote and a motor command.",
+        "start": 428.06,
+        "duration": 3.91
+    },
+    {
+        "text": "Then we look again over\nlearning modules, receive votes,",
+        "start": 433.62,
+        "duration": 3.78
+    },
+    {
+        "text": "could again be parallelized.",
+        "start": 438.4,
+        "duration": 1.19
+    },
+    {
+        "text": "And then receiving votes again has\nto loop over objects and update",
+        "start": 439.61,
+        "duration": 4.09
+    },
+    {
+        "text": "the evidence using, The vote.",
+        "start": 443.7,
+        "duration": 1.955
+    },
+    {
+        "text": "So here again, for the loop of objects,\nwe use multi threading and then",
+        "start": 446.185,
+        "duration": 3.97
+    },
+    {
+        "text": "the evidence update is factorized.",
+        "start": 450.305,
+        "duration": 2.1
+    },
+    {
+        "text": "And then finally we check whether\nwe reached a terminal condition.",
+        "start": 453.305,
+        "duration": 3.06
+    },
+    {
+        "text": "getting the sensory\nobservation takes about 0.",
+        "start": 458.335,
+        "duration": 3.49
+    },
+    {
+        "text": "01 seconds, it's pretty\nfast compared to the rest.",
+        "start": 461.825,
+        "duration": 2.78
+    },
+    {
+        "text": "this is the slowest step, updating\nthe evidence for each, learning",
+        "start": 466.475,
+        "duration": 4.31
+    },
+    {
+        "text": "module given an observation.",
+        "start": 470.785,
+        "duration": 1.67
+    },
+    {
+        "text": "that takes about 0.",
+        "start": 473.665,
+        "duration": 1.48
+    },
+    {
+        "text": "01 to 0.",
+        "start": 475.145,
+        "duration": 0.16
+    },
+    {
+        "text": "05 seconds per object.",
+        "start": 475.305,
+        "duration": 1.89
+    },
+    {
+        "text": "if we scale that by having to do\nit for 77 objects and five learning",
+        "start": 478.05,
+        "duration": 4.6
+    },
+    {
+        "text": "modules, it adds up to about five\nto two to five seconds, with multi",
+        "start": 482.66,
+        "duration": 4.48
+    },
+    {
+        "text": "threading, it takes about one second.",
+        "start": 487.14,
+        "duration": 1.47
+    },
+    {
+        "text": "and then,",
+        "start": 490.515,
+        "duration": 0.6
+    },
+    {
+        "text": "the update using votes is, a bit\nquicker because we don't use as",
+        "start": 493.165,
+        "duration": 6.57
+    },
+    {
+        "text": "many, we don't, we threshold the\nvotes to make it a lot faster.",
+        "start": 499.735,
+        "duration": 3.58
+    },
+    {
+        "text": "overall it takes about 0.",
+        "start": 504.525,
+        "duration": 1.98
+    },
+    {
+        "text": "05 seconds with multithreading.",
+        "start": 506.505,
+        "duration": 1.5
+    },
+    {
+        "text": "If we would, if we do use all votes\nand don't threshold them, it is a",
+        "start": 508.445,
+        "duration": 4.4
+    },
+    {
+        "text": "bit slower than, the first update.",
+        "start": 512.845,
+        "duration": 2.32
+    },
+    {
+        "text": "and then overall, taking as many steps\nas we need to recognize the object,",
+        "start": 517.965,
+        "duration": 4.33
+    },
+    {
+        "text": "it takes about one to eight minutes,\nfor episodes where we don't time out.",
+        "start": 522.295,
+        "duration": 5.72
+    },
+    {
+        "text": "So how many steps is\nthat in general, usually?",
+        "start": 531.075,
+        "duration": 2.02
+    },
+    {
+        "text": "it's usually between 20 and 200 steps.",
+        "start": 535.365,
+        "duration": 5.13
+    },
+    {
+        "text": "we have a maximum of 500 steps,\nwhich is, when we reach time out.",
+        "start": 542.24,
+        "duration": 5.09
+    },
+    {
+        "text": "yeah, so since we already have these outer\nloops paralleled or use multithreading",
+        "start": 552.23,
+        "duration": 5.43
+    },
+    {
+        "text": "for this presentation, I'll focus on\nthe evidence updates, which are the",
+        "start": 558.01,
+        "duration": 6.19
+    },
+    {
+        "text": "slowest part of the code at the moment.",
+        "start": 564.2,
+        "duration": 1.62
+    },
+    {
+        "text": "is this clear so far?",
+        "start": 567.18,
+        "duration": 1.31
+    },
+    {
+        "text": "Yeah, very clear.",
+        "start": 570.1,
+        "duration": 0.88
+    },
+    {
+        "text": "I had one question.",
+        "start": 572.03,
+        "duration": 1.08
+    },
+    {
+        "text": "when you say multithreading,\nwhat mechanism are you",
+        "start": 573.72,
+        "duration": 2.55
+    },
+    {
+        "text": "using for multithreading?",
+        "start": 576.27,
+        "duration": 1.1
+    },
+    {
+        "text": "we use Python multithreading, the map.",
+        "start": 579.66,
+        "duration": 5.49
+    },
+    {
+        "text": "fullmap or something it's called.",
+        "start": 585.16,
+        "duration": 2.83
+    },
+    {
+        "text": "I'd have to check real quick.",
+        "start": 590.39,
+        "duration": 3.39
+    },
+    {
+        "text": "yeah, we use, this.",
+        "start": 601.08,
+        "duration": 1.91
+    },
+    {
+        "text": "Threading the thread.",
+        "start": 603.695,
+        "duration": 1.07
+    },
+    {
+        "text": "Okay, so",
+        "start": 606.245,
+        "duration": 1.09
+    },
+    {
+        "text": "That is not preemptive.",
+        "start": 611.005,
+        "duration": 1.05
+    },
+    {
+        "text": "Okay, so Is this using Python\nthreads then, Luis or Kevin?",
+        "start": 618.045,
+        "duration": 4.97
+    },
+    {
+        "text": "Yeah, this is Python thread, that's\nnot preemptive threading, that would",
+        "start": 623.195,
+        "duration": 3.54
+    },
+    {
+        "text": "be Yeah, so these are not real threads.",
+        "start": 626.745,
+        "duration": 2.01
+    },
+    {
+        "text": "No, there'll be a lock and a guilt.",
+        "start": 629.305,
+        "duration": 1.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 631.235,
+        "duration": 0.46
+    },
+    {
+        "text": "Yeah, so that's why I was asking,\nbecause at deeper levels, you",
+        "start": 633.445,
+        "duration": 4.12
+    },
+    {
+        "text": "want to distribute things.",
+        "start": 637.565,
+        "duration": 1.93
+    },
+    {
+        "text": "You can use affinities and various things,\nbecause Basically, at any one CPU, you",
+        "start": 640.955,
+        "duration": 4.805
+    },
+    {
+        "text": "only have hardware, direct hardware\nsupport for two threads at a time.",
+        "start": 645.84,
+        "duration": 3.32
+    },
+    {
+        "text": "Anything more than that is\nbasically put into queues.",
+        "start": 649.7,
+        "duration": 2.67
+    },
+    {
+        "text": "but if you're using Python threads like,\nLuiz just pointed out, it's not, it's",
+        "start": 653.83,
+        "duration": 7.08
+    },
+    {
+        "text": "not the, it's not the most efficient\nmechanism possible, for the hardware.",
+        "start": 660.91,
+        "duration": 6.01
+    },
+    {
+        "text": "It's only running on one CPU.",
+        "start": 668.5,
+        "duration": 1.84
+    },
+    {
+        "text": "I think it's not even real threads.",
+        "start": 671.27,
+        "duration": 1.65
+    },
+    {
+        "text": "Correct.",
+        "start": 673.19,
+        "duration": 0.5
+    },
+    {
+        "text": "It's, it's yielding.",
+        "start": 673.78,
+        "duration": 1.26
+    },
+    {
+        "text": "It's yielding the",
+        "start": 675.24,
+        "duration": 0.67
+    },
+    {
+        "text": "Okay, so when they say they're\nrunning on multiple CPUs, how",
+        "start": 679.08,
+        "duration": 2.36
+    },
+    {
+        "text": "is that being distributed then?",
+        "start": 681.44,
+        "duration": 1.19
+    },
+    {
+        "text": "the, episodes is running\nmultiple processors.",
+        "start": 684.05,
+        "duration": 2.1
+    },
+    {
+        "text": "Yeah, so this is the parallelization\npart here, each, yeah, each episode",
+        "start": 688.71,
+        "duration": 6.27
+    },
+    {
+        "text": "is its own process, and then within\nthat process we do the multithreading.",
+        "start": 694.98,
+        "duration": 4.43
+    },
+    {
+        "text": "It seems to be doing something,\nthe multithreading, right?",
+        "start": 700.665,
+        "duration": 2.08
+    },
+    {
+        "text": "Because it's up to five times\nfaster than without it, right?",
+        "start": 702.745,
+        "duration": 2.72
+    },
+    {
+        "text": "Yeah, it's definitely faster.",
+        "start": 705.465,
+        "duration": 1.56
+    },
+    {
+        "text": "So it seems to be doing some goodness.",
+        "start": 708.155,
+        "duration": 1.66
+    },
+    {
+        "text": "It can't be one CPU, though.",
+        "start": 712.415,
+        "duration": 1.05
+    },
+    {
+        "text": "it depends.",
+        "start": 714.865,
+        "duration": 0.63
+    },
+    {
+        "text": "I think we need to wait until we see\nwhat's going on under the hood, right?",
+        "start": 715.685,
+        "duration": 2.5
+    },
+    {
+        "text": "Because the difference in\nmultithreading will be impacted",
+        "start": 718.185,
+        "duration": 2.61
+    },
+    {
+        "text": "by different things, right?",
+        "start": 720.805,
+        "duration": 1.55
+    },
+    {
+        "text": "So depending on what the\noperators actually are.",
+        "start": 722.395,
+        "duration": 1.7
+    },
+    {
+        "text": "The advantage of that\nthread is there's some I.",
+        "start": 724.99,
+        "duration": 1.82
+    },
+    {
+        "text": "O.",
+        "start": 726.81,
+        "duration": 0.32
+    },
+    {
+        "text": "because it's, going to do yield to Gil\nand Gil is going to wait just for the I.",
+        "start": 729.4,
+        "duration": 5.12
+    },
+    {
+        "text": "O.",
+        "start": 734.52,
+        "duration": 0.14
+    },
+    {
+        "text": "There's nothing else to wait for.",
+        "start": 734.66,
+        "duration": 1.29
+    },
+    {
+        "text": "So let's look at the, I think\nyou were going to talk about",
+        "start": 737.87,
+        "duration": 1.84
+    },
+    {
+        "text": "what's in the actual code, right?",
+        "start": 739.71,
+        "duration": 1.41
+    },
+    {
+        "text": "And then we can back up a\nlevel if, that makes sense.",
+        "start": 741.12,
+        "duration": 3.52
+    },
+    {
+        "text": "Yeah.",
+        "start": 745.27,
+        "duration": 0.53
+    },
+    {
+        "text": "okay.",
+        "start": 747.93,
+        "duration": 0.37
+    },
+    {
+        "text": "So if we actually run a profiler\non one episode, so in this episode",
+        "start": 748.42,
+        "duration": 5.78
+    },
+    {
+        "text": "we have five loading modules, and\nthis is looking at the, this is not",
+        "start": 754.2,
+        "duration": 6.38
+    },
+    {
+        "text": "using multithreading just because the\nprofiler doesn't deal well with that.",
+        "start": 760.58,
+        "duration": 3.19
+    },
+    {
+        "text": "so it's a bit slower\nthan it usually would be.",
+        "start": 765.6,
+        "duration": 2.27
+    },
+    {
+        "text": "but anyways, it looks at the time\ntaken by the top 15 functions.",
+        "start": 769.22,
+        "duration": 3.79
+    },
+    {
+        "text": "And, As you can see, the longest\ntime is taken by the KD tree",
+        "start": 773.73,
+        "duration": 5.645
+    },
+    {
+        "text": "search, which is the first topic\ncalled, is that Python, KD tree?",
+        "start": 779.375,
+        "duration": 3.91
+    },
+    {
+        "text": "is it like, is that put in Python?",
+        "start": 784.935,
+        "duration": 1.53
+    },
+    {
+        "text": "Okay.",
+        "start": 786.585,
+        "duration": 0.24
+    },
+    {
+        "text": "No, it's it's using C,",
+        "start": 788.795,
+        "duration": 2.91
+    },
+    {
+        "text": "yeah, sty.",
+        "start": 793.885,
+        "duration": 0.9
+    },
+    {
+        "text": "Okay.",
+        "start": 795.835,
+        "duration": 0.3
+    },
+    {
+        "text": "All right.",
+        "start": 796.555,
+        "duration": 0.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 799.695,
+        "duration": 0.21
+    },
+    {
+        "text": "So basically today I have basically\ntwo, two topics of things that.",
+        "start": 799.905,
+        "duration": 3.75
+    },
+    {
+        "text": "I think could be sped up.",
+        "start": 804.275,
+        "duration": 1.29
+    },
+    {
+        "text": "One is, yeah, KD tree research.",
+        "start": 805.715,
+        "duration": 2.92
+    },
+    {
+        "text": "And then the second one are the",
+        "start": 809.195,
+        "duration": 2.15
+    },
+    {
+        "text": "Everything else, yeah.",
+        "start": 813.515,
+        "duration": 1.01
+    },
+    {
+        "text": "Everything else, exactly.",
+        "start": 815.415,
+        "duration": 0.98
+    },
+    {
+        "text": "So yeah, all the matrix\nmultiplications, all the like",
+        "start": 816.435,
+        "duration": 4.4
+    },
+    {
+        "text": "evidence updates that are vectorized.",
+        "start": 820.845,
+        "duration": 1.82
+    },
+    {
+        "text": "and then there are a few other\nones that are mostly like rendering",
+        "start": 825.845,
+        "duration": 3.97
+    },
+    {
+        "text": "the observations in Habitat.",
+        "start": 829.845,
+        "duration": 1.81
+    },
+    {
+        "text": "and adding an object and things like that.",
+        "start": 831.84,
+        "duration": 3.63
+    },
+    {
+        "text": "and this one, I think, I\ncan figure out on my own.",
+        "start": 836.45,
+        "duration": 3.32
+    },
+    {
+        "text": "so yeah, let's jump in on the first\none if there are no questions for now.",
+        "start": 842.68,
+        "duration": 4.37
+    },
+    {
+        "text": "Yeah, I've used KDtrees a lot.",
+        "start": 849.21,
+        "duration": 2.14
+    },
+    {
+        "text": "mostly in C implementations,\nso I can take a look at that.",
+        "start": 852.465,
+        "duration": 3.99
+    },
+    {
+        "text": "I don't know how SciPy implements it.",
+        "start": 856.485,
+        "duration": 1.7
+    },
+    {
+        "text": "usually SciPy implements a lot of\ntheir stuff with C on the back end.",
+        "start": 858.955,
+        "duration": 3.46
+    },
+    {
+        "text": "And it's just a Python interface.",
+        "start": 862.925,
+        "duration": 2.29
+    },
+    {
+        "text": "I'd have to look to see\nhow that's being done.",
+        "start": 866.215,
+        "duration": 1.48
+    },
+    {
+        "text": "the SciPy one, I checked on, and we\nupgraded SciPy, so we used the C back end.",
+        "start": 868.415,
+        "duration": 4.87
+    },
+    {
+        "text": "So there's a, we have to create a version\nof SciPy so we could use the C back end.",
+        "start": 875.21,
+        "duration": 3.53
+    },
+    {
+        "text": "I guess it's probably a\npretty decent implementation.",
+        "start": 878.74,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah, so I guess one question would be\nif there's actually a, if KDTreeSearch",
+        "start": 883.49,
+        "duration": 4.27
+    },
+    {
+        "text": "is actually the best way to get\nwhat we want or if there's maybe a",
+        "start": 887.76,
+        "duration": 3.61
+    },
+    {
+        "text": "better What are you using it for?",
+        "start": 891.39,
+        "duration": 1.54
+    },
+    {
+        "text": "What are you using it for right now?",
+        "start": 893.43,
+        "duration": 1.02
+    },
+    {
+        "text": "That's the next slide.",
+        "start": 895.33,
+        "duration": 0.99
+    },
+    {
+        "text": "All right, cool, got it.",
+        "start": 897.13,
+        "duration": 1.11
+    },
+    {
+        "text": "is Einstein, like Einstein summation,\nor is that like an eigenvalue",
+        "start": 900.16,
+        "duration": 3.65
+    },
+    {
+        "text": "summation or something else?",
+        "start": 903.81,
+        "duration": 2.44
+    },
+    {
+        "text": "Yeah, I'll also show that on a slide.",
+        "start": 906.26,
+        "duration": 3.17
+    },
+    {
+        "text": "it's, yeah, basically doing a dot\nproduct with three dimensions.",
+        "start": 910.14,
+        "duration": 4.4
+    },
+    {
+        "text": "So yeah, let me just, go ahead.",
+        "start": 918.19,
+        "duration": 2.63
+    },
+    {
+        "text": "so yeah, first of all, the shapes\nand sizes of the matrices that",
+        "start": 921.87,
+        "duration": 5.725
+    },
+    {
+        "text": "we're working with, just as\na primer for the next slides.",
+        "start": 927.595,
+        "duration": 5.13
+    },
+    {
+        "text": "So we have the number of points in the\nmodel which is usually around 500 to",
+        "start": 932.925,
+        "duration": 4.15
+    },
+    {
+        "text": "5000 depending on the size of the object.",
+        "start": 937.215,
+        "duration": 2.06
+    },
+    {
+        "text": "We have the number of hypotheses which is\nbetween two and eight times larger than",
+        "start": 939.835,
+        "duration": 6.27
+    },
+    {
+        "text": "the set number of points in the model.",
+        "start": 946.135,
+        "duration": 1.75
+    },
+    {
+        "text": "We have the number of nearest\nneighbors that we look at.",
+        "start": 949.745,
+        "duration": 2.89
+    },
+    {
+        "text": "usually it's either 5 or 10.",
+        "start": 953.43,
+        "duration": 1.77
+    },
+    {
+        "text": "We have the number of features that\nthe sensor module is detecting.",
+        "start": 956.29,
+        "duration": 3.87
+    },
+    {
+        "text": "it's usually between 5 and 15.",
+        "start": 960.69,
+        "duration": 1.74
+    },
+    {
+        "text": "And then we have the number of\nincoming votes, which, if we only",
+        "start": 963.23,
+        "duration": 4.64
+    },
+    {
+        "text": "take the highest percentile of\nvotes, we have about 1 to 200.",
+        "start": 967.88,
+        "duration": 3.98
+    },
+    {
+        "text": "if we use all votes, it\ncan go up to 200, 000.",
+        "start": 973.19,
+        "duration": 3.33
+    },
+    {
+        "text": "Which was then, a lot slower.",
+        "start": 976.97,
+        "duration": 2.54
+    },
+    {
+        "text": "Wow, it's like a small metropolitan area.",
+        "start": 979.96,
+        "duration": 1.89
+    },
+    {
+        "text": "I don't understand how the\nincoming votes can be that high.",
+        "start": 982.33,
+        "duration": 2.9
+    },
+    {
+        "text": "what's the logic, how they get that big?",
+        "start": 986.15,
+        "duration": 2.27
+    },
+    {
+        "text": "it's basically, all the\npossible hypotheses.",
+        "start": 990.21,
+        "duration": 3.47
+    },
+    {
+        "text": "So if we have 4, 000 hypotheses\nfrom five learning modules,",
+        "start": 994.06,
+        "duration": 3.69
+    },
+    {
+        "text": "it's, yeah, 40, 000 times five,\nincoming votes for possible poses.",
+        "start": 998.51,
+        "duration": 5.81
+    },
+    {
+        "text": "And that's like in the\nworst possible scenario.",
+        "start": 1005.59,
+        "duration": 1.89
+    },
+    {
+        "text": "The worst possible case where\neverything is equally probable",
+        "start": 1007.97,
+        "duration": 3.73
+    },
+    {
+        "text": "or likely to be happening.",
+        "start": 1011.71,
+        "duration": 1.52
+    },
+    {
+        "text": "And the hypotheses are, the\nhypotheses of the locations on",
+        "start": 1013.53,
+        "duration": 5.38
+    },
+    {
+        "text": "objects, so it could be the same.",
+        "start": 1018.92,
+        "duration": 1.61
+    },
+    {
+        "text": "there's a limited number of\nobjects, there's a lot of places.",
+        "start": 1021.69,
+        "duration": 2.09
+    },
+    {
+        "text": "Locations and pose, right?",
+        "start": 1023.82,
+        "duration": 1.4
+    },
+    {
+        "text": "Yeah, so that's why hypothesis is like\ntwo to six times larger than the model,",
+        "start": 1025.88,
+        "duration": 4.27
+    },
+    {
+        "text": "because for every location on the model,\nwe have two to six possible poses.",
+        "start": 1030.15,
+        "duration": 3.96
+    },
+    {
+        "text": "got it.",
+        "start": 1034.56,
+        "duration": 0.39
+    },
+    {
+        "text": "Thank you.",
+        "start": 1035.46,
+        "duration": 0.06
+    },
+    {
+        "text": "Okay, so Finding the nearest neighbor.",
+        "start": 1038.93,
+        "duration": 2.835
+    },
+    {
+        "text": "what we do right now is use KDTreeSearch.",
+        "start": 1042.925,
+        "duration": 1.93
+    },
+    {
+        "text": "Basically, the problem we're\ntrying to solve is, we have",
+        "start": 1045.165,
+        "duration": 3.36
+    },
+    {
+        "text": "an array of search locations.",
+        "start": 1048.615,
+        "duration": 1.91
+    },
+    {
+        "text": "so in this picture down here, it would be,\ngiven two hypotheses, the two gray arrows.",
+        "start": 1051.365,
+        "duration": 5.59
+    },
+    {
+        "text": "We would have two search locations,\nthe green dot up here and down here.",
+        "start": 1056.985,
+        "duration": 4.07
+    },
+    {
+        "text": "H would be number of hypothesis, in\nthis case two, and they are in 3D",
+        "start": 1063.91,
+        "duration": 4.76
+    },
+    {
+        "text": "space, so we have XYZ coordinates.",
+        "start": 1068.67,
+        "duration": 2.05
+    },
+    {
+        "text": "And then we have model locations, which\nwould be all the black dots in here.",
+        "start": 1071.59,
+        "duration": 4.68
+    },
+    {
+        "text": "that would be N, and then again\nin 3D space, so XYZ coordinates.",
+        "start": 1078.19,
+        "duration": 4.36
+    },
+    {
+        "text": "And we want the IDs of the k nearest\nneighbors of these search locations.",
+        "start": 1083.705,
+        "duration": 4.84
+    },
+    {
+        "text": "so for example, if k would be three,\nwe would want to have the ID of these",
+        "start": 1089.635,
+        "duration": 4.5
+    },
+    {
+        "text": "three points in the search radius.",
+        "start": 1094.365,
+        "duration": 2.18
+    },
+    {
+        "text": "so what we want to have\nreturned is of shape H, K.",
+        "start": 1097.725,
+        "duration": 4.47
+    },
+    {
+        "text": "yeah, maybe I'll pause here for a moment.",
+        "start": 1105.395,
+        "duration": 1.72
+    },
+    {
+        "text": "All right.",
+        "start": 1108.285,
+        "duration": 0.26
+    },
+    {
+        "text": "So KV tree typically works by\ndoing a spatial bifurcation, right?",
+        "start": 1108.545,
+        "duration": 4.97
+    },
+    {
+        "text": "You take half of the elements and put\nthem in one side, half on the other,",
+        "start": 1113.515,
+        "duration": 2.41
+    },
+    {
+        "text": "and there's like a dividing plane.",
+        "start": 1115.925,
+        "duration": 1.37
+    },
+    {
+        "text": "Anything that's X less than\nthis, or X greater than that",
+        "start": 1117.885,
+        "duration": 2.6
+    },
+    {
+        "text": "gets separated into binary tree.",
+        "start": 1120.485,
+        "duration": 1.56
+    },
+    {
+        "text": "And then you do the next one on Y and\nthe next one on Z, and then you repeat.",
+        "start": 1122.045,
+        "duration": 3.52
+    },
+    {
+        "text": "Yeah.",
+        "start": 1125.565,
+        "duration": 0.3
+    },
+    {
+        "text": "And it's like an arc tree\ndecomposition, is that correct?",
+        "start": 1126.3,
+        "duration": 2.26
+    },
+    {
+        "text": "Yeah, so we basically built this location\ntree at the start of an experiment.",
+        "start": 1129.41,
+        "duration": 4.28
+    },
+    {
+        "text": "so we, already know the model\nof the object in this case,",
+        "start": 1134.64,
+        "duration": 3.0
+    },
+    {
+        "text": "because we're just evaluating.",
+        "start": 1137.67,
+        "duration": 1.12
+    },
+    {
+        "text": "So we built the KD tree once, and\nthen at every step we just query the",
+        "start": 1138.99,
+        "duration": 4.24
+    },
+    {
+        "text": "tree with the hypothesis locations.",
+        "start": 1143.23,
+        "duration": 2.39
+    },
+    {
+        "text": "So you can stop that\ndecomposition at any stage.",
+        "start": 1146.64,
+        "duration": 3.7
+    },
+    {
+        "text": "Like you say, if I want to go until I\nhave like only 10 leaf nodes left, right?",
+        "start": 1150.34,
+        "duration": 4.44
+    },
+    {
+        "text": "And then I can say, I can search through,\nthat, or I can continue to decompose until",
+        "start": 1154.78,
+        "duration": 4.87
+    },
+    {
+        "text": "I have only one object on each leaf node.",
+        "start": 1159.65,
+        "duration": 1.89
+    },
+    {
+        "text": "that's one of the optimizations\nyou can do in the KD tree search",
+        "start": 1162.88,
+        "duration": 2.74
+    },
+    {
+        "text": "is you can terminate it early.",
+        "start": 1165.63,
+        "duration": 1.42
+    },
+    {
+        "text": "If you want like a whole bag\nof things that are local.",
+        "start": 1167.35,
+        "duration": 2.72
+    },
+    {
+        "text": "they're nearby.",
+        "start": 1170.625,
+        "duration": 0.66
+    },
+    {
+        "text": "Is that during building or querying?",
+        "start": 1172.795,
+        "duration": 2.42
+    },
+    {
+        "text": "that's, that would be during building,\nThat would be during the building phase.",
+        "start": 1176.245,
+        "duration": 3.73
+    },
+    {
+        "text": "how many points?",
+        "start": 1180.905,
+        "duration": 0.503
+    },
+    {
+        "text": "That's like how it's\nstructural structured.",
+        "start": 1181.408,
+        "duration": 1.437
+    },
+    {
+        "text": "Yeah, so the building is not that big of a\ndeal because you only have to do it once.",
+        "start": 1183.965,
+        "duration": 3.66
+    },
+    {
+        "text": "It's more the querying\nthat's, querying, yeah.",
+        "start": 1187.975,
+        "duration": 2.81
+    },
+    {
+        "text": "No, but it would be a parameter\nyou set during building that would",
+        "start": 1191.015,
+        "duration": 3.02
+    },
+    {
+        "text": "affect the speed of the query.",
+        "start": 1194.035,
+        "duration": 1.46
+    },
+    {
+        "text": "Yeah, so we have leaf size set to 40.",
+        "start": 1197.245,
+        "duration": 3.9
+    },
+    {
+        "text": "Did you try to vary that to\nsee if it speeds things up?",
+        "start": 1201.145,
+        "duration": 5.57
+    },
+    {
+        "text": "Yeah, so if I said lower,\nit was lower, but yeah.",
+        "start": 1206.715,
+        "duration": 4.95
+    },
+    {
+        "text": "How many points do you have in that again?",
+        "start": 1211.725,
+        "duration": 1.98
+    },
+    {
+        "text": "So N is around 500 to 5, 000.",
+        "start": 1216.115,
+        "duration": 2.745
+    },
+    {
+        "text": "Can you just, guys, I'm going to\nask the stupid question then, right?",
+        "start": 1219.68,
+        "duration": 3.23
+    },
+    {
+        "text": "Can you just use a lookup table?",
+        "start": 1223.01,
+        "duration": 1.48
+    },
+    {
+        "text": "We've got a bunch of memory\non this thing, right?",
+        "start": 1226.85,
+        "duration": 1.75
+    },
+    {
+        "text": "We've got two terabytes, right?",
+        "start": 1228.6,
+        "duration": 1.53
+    },
+    {
+        "text": "Can I just use a lookup table?",
+        "start": 1230.28,
+        "duration": 2.22
+    },
+    {
+        "text": "So the search locations are not\nidentical to the locations in the model.",
+        "start": 1234.18,
+        "duration": 3.97
+    },
+    {
+        "text": "So they, they're just like nearby.",
+        "start": 1238.19,
+        "duration": 1.85
+    },
+    {
+        "text": "before we use KD2 search, we\njust did the difference and then",
+        "start": 1241.88,
+        "duration": 3.15
+    },
+    {
+        "text": "linear norm and then the minimum.",
+        "start": 1245.04,
+        "duration": 2.19
+    },
+    {
+        "text": "And that was definitely a lot slower.",
+        "start": 1247.23,
+        "duration": 1.67
+    },
+    {
+        "text": "Yeah, you could do what\nLawrence is saying actually.",
+        "start": 1249.34,
+        "duration": 2.25
+    },
+    {
+        "text": "yeah, basically just create like this huge\nyou disco, discretized the space Yeah.",
+        "start": 1254.52,
+        "duration": 5.63
+    },
+    {
+        "text": "into the mesh and for, into a small mesh.",
+        "start": 1261.265,
+        "duration": 3.715
+    },
+    {
+        "text": "And for each voxel you, you have\nyour neighbors have the list of Ks.",
+        "start": 1264.98,
+        "duration": 4.02
+    },
+    {
+        "text": "Yeah.",
+        "start": 1269.0,
+        "duration": 0.06
+    },
+    {
+        "text": "And 5,000 elements.",
+        "start": 1269.06,
+        "duration": 2.22
+    },
+    {
+        "text": "Even having 40, keeping the list\nof 40 is a small tree, right?",
+        "start": 1271.7,
+        "duration": 3.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 1275.12,
+        "duration": 0.33
+    },
+    {
+        "text": "And then you just, so you don't\nstore any mesh at all, is, is that on",
+        "start": 1276.04,
+        "duration": 3.24
+    },
+    {
+        "text": "there's no connectivity information\nbetween the adjacent points.",
+        "start": 1279.4,
+        "duration": 2.52
+    },
+    {
+        "text": "Is this a list of points?",
+        "start": 1283.445,
+        "duration": 0.82
+    },
+    {
+        "text": "Building a mesh would be one way\nof speeding that up a lot because",
+        "start": 1286.545,
+        "duration": 2.74
+    },
+    {
+        "text": "for each point that you register,\nor even if you're detecting like a",
+        "start": 1289.295,
+        "duration": 4.82
+    },
+    {
+        "text": "point like in between, stored points.",
+        "start": 1294.115,
+        "duration": 2.93
+    },
+    {
+        "text": "You can still figure that out\npretty quickly by connectivity.",
+        "start": 1297.375,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 1300.12,
+        "duration": 0.29
+    },
+    {
+        "text": "So you have the graph.",
+        "start": 1302.55,
+        "duration": 1.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 1304.575,
+        "duration": 0.21
+    },
+    {
+        "text": "I think Lawrence's idea\nis a good one actually.",
+        "start": 1304.785,
+        "duration": 1.68
+    },
+    {
+        "text": "When, would you create that list?",
+        "start": 1306.765,
+        "duration": 1.35
+    },
+    {
+        "text": "After training, at least instead\nof the tree, you just replace",
+        "start": 1308.205,
+        "duration": 3.42
+    },
+    {
+        "text": "the tree With the tructure?",
+        "start": 1311.625,
+        "duration": 0.873
+    },
+    {
+        "text": "Yeah.",
+        "start": 1312.503,
+        "duration": 0.147
+    },
+    {
+        "text": "You replace the tree at the star, and\nthat is basically a single, you do your",
+        "start": 1313.095,
+        "duration": 4.64
+    },
+    {
+        "text": "training and then you build a tree and\nthen all your inputs is based on Yes.",
+        "start": 1317.735,
+        "duration": 3.155
+    },
+    {
+        "text": "Because it's static, so\nit won't be really simple.",
+        "start": 1321.145,
+        "duration": 1.992
+    },
+    {
+        "text": "yeah.",
+        "start": 1323.358,
+        "duration": 0.222
+    },
+    {
+        "text": "You've got a bunch of memory, right?",
+        "start": 1323.58,
+        "duration": 1.555
+    },
+    {
+        "text": "Let's use it, right?",
+        "start": 1325.185,
+        "duration": 0.85
+    },
+    {
+        "text": "You just have to figure\nout how to index it.",
+        "start": 1326.395,
+        "duration": 2.23
+    },
+    {
+        "text": "Indexing is the tricky part, right?",
+        "start": 1328.625,
+        "duration": 1.45
+    },
+    {
+        "text": "But as you say, if you know what\nyour parameter space, your sort",
+        "start": 1330.075,
+        "duration": 2.66
+    },
+    {
+        "text": "of spatial space is, you just\nput it up, chop it up into bits.",
+        "start": 1332.735,
+        "duration": 4.06
+    },
+    {
+        "text": "Yeah, actually, the other thing that\nyou can do is, there are actually",
+        "start": 1337.285,
+        "duration": 2.39
+    },
+    {
+        "text": "images representing each voxel.",
+        "start": 1339.735,
+        "duration": 1.75
+    },
+    {
+        "text": "You can just round it, and that's it.",
+        "start": 1341.485,
+        "duration": 1.17
+    },
+    {
+        "text": "yeah.",
+        "start": 1342.965,
+        "duration": 0.31
+    },
+    {
+        "text": "Yeah, I think it'll be\nhella fast then, right?",
+        "start": 1344.83,
+        "duration": 2.74
+    },
+    {
+        "text": "The other thing you can do to accelerate\nit using this implementation you've got",
+        "start": 1349.35,
+        "duration": 4.05
+    },
+    {
+        "text": "right now, a quick and easy thing you\ncan do is to cache those, those nodes.",
+        "start": 1353.4,
+        "duration": 5.1
+    },
+    {
+        "text": "So if you're only moving a short distance\non the object for each step, you can",
+        "start": 1359.06,
+        "duration": 4.53
+    },
+    {
+        "text": "reuse those lookups and go straight to\nthe leaf node to see if your, nearest",
+        "start": 1363.59,
+        "duration": 4.19
+    },
+    {
+        "text": "neighbors are still in the vicinity.",
+        "start": 1367.78,
+        "duration": 1.97
+    },
+    {
+        "text": "Yeah, but Eric, I think\nLawrence's idea would.",
+        "start": 1370.36,
+        "duration": 2.98
+    },
+    {
+        "text": "Take out all of them, there'd\nbe no tree to begin with.",
+        "start": 1373.865,
+        "duration": 2.56
+    },
+    {
+        "text": "Exactly, but I'm saying like, if you\njust wanted to implement something just",
+        "start": 1377.385,
+        "duration": 2.58
+    },
+    {
+        "text": "to accelerate what you've got right now,\njust to see if it makes any difference,",
+        "start": 1379.965,
+        "duration": 2.89
+    },
+    {
+        "text": "it's just going to cache the tree nodes\nthat you're finding in the KD tree",
+        "start": 1382.855,
+        "duration": 4.92
+    },
+    {
+        "text": "search, and then just basically reusing\nthose until they no longer are valid,",
+        "start": 1387.775,
+        "duration": 4.27
+    },
+    {
+        "text": "and you pop back up one node in the tree\nand go back down to find the neighbors.",
+        "start": 1392.055,
+        "duration": 3.95
+    },
+    {
+        "text": "I'm not sure that would help.",
+        "start": 1396.435,
+        "duration": 0.9
+    },
+    {
+        "text": "That.",
+        "start": 1397.335,
+        "duration": 0.09
+    },
+    {
+        "text": "That assumes you're gonna look at the\nsame note over and over again in sequence.",
+        "start": 1398.085,
+        "duration": 3.45
+    },
+    {
+        "text": "I'm not sure that'll help.",
+        "start": 1401.535,
+        "duration": 1.05
+    },
+    {
+        "text": "and I'm not sure you\neven have access to that.",
+        "start": 1404.305,
+        "duration": 1.56
+    },
+    {
+        "text": "it's a, look, it's a locality.",
+        "start": 1406.795,
+        "duration": 0.69
+    },
+    {
+        "text": "It is it a locality based caching\nbasically is what you're doing.",
+        "start": 1407.485,
+        "duration": 3.12
+    },
+    {
+        "text": "Yeah.",
+        "start": 1410.955,
+        "duration": 0.33
+    },
+    {
+        "text": "If you's a cod, then you're gonna\nsee disparate stuff is the problem.",
+        "start": 1411.795,
+        "duration": 3.81
+    },
+    {
+        "text": "It's not gonna be a continuous, it\ndepends on the length of this cod.",
+        "start": 1415.605,
+        "duration": 2.85
+    },
+    {
+        "text": "You're right, Yeah.",
+        "start": 1418.455,
+        "duration": 1.305
+    },
+    {
+        "text": "But also another thing I thought of.",
+        "start": 1419.76,
+        "duration": 1.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 1421.47,
+        "duration": 0.29
+    },
+    {
+        "text": "But also it implies changing the\nKD three implementation of site.",
+        "start": 1421.76,
+        "duration": 4.115
+    },
+    {
+        "text": "And I think that's it.",
+        "start": 1426.305,
+        "duration": 1.407
+    },
+    {
+        "text": "I don't think I want to get there.",
+        "start": 1427.712,
+        "duration": 2.251
+    },
+    {
+        "text": "So",
+        "start": 1429.963,
+        "duration": 0.282
+    },
+    {
+        "text": "just so I get it right, what you\nsuggested learns, you said to discretize",
+        "start": 1432.405,
+        "duration": 4.58
+    },
+    {
+        "text": "the space into voxels and then\nbasically just use those as a lookup",
+        "start": 1436.985,
+        "duration": 4.25
+    },
+    {
+        "text": "table whenever we get a new point.",
+        "start": 1441.255,
+        "duration": 2.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 1443.835,
+        "duration": 0.09
+    },
+    {
+        "text": "See if that looks one at the floor.",
+        "start": 1444.095,
+        "duration": 1.94
+    },
+    {
+        "text": "That was, that's what I said,\nI just said lookup table.",
+        "start": 1446.445,
+        "duration": 2.56
+    },
+    {
+        "text": "That's what that was.",
+        "start": 1450.565,
+        "duration": 2.65
+    },
+    {
+        "text": "You know the point you're on and you\njust look up all the adjacent points.",
+        "start": 1453.215,
+        "duration": 6.51
+    },
+    {
+        "text": "Yeah, but you'd have to, within a,\nthe would be, you just say, within",
+        "start": 1460.455,
+        "duration": 5.71
+    },
+    {
+        "text": "this resolution, I don't care.",
+        "start": 1466.165,
+        "duration": 1.38
+    },
+    {
+        "text": "Yeah.",
+        "start": 1467.605,
+        "duration": 0.48
+    },
+    {
+        "text": "I don't care what, you\nlose that much resolution.",
+        "start": 1468.895,
+        "duration": 3.36
+    },
+    {
+        "text": "Oh, you're not in, you're not in,",
+        "start": 1472.465,
+        "duration": 1.59
+    },
+    {
+        "text": "I know which ones are close,\nwhich ones you wouldn't.",
+        "start": 1476.395,
+        "duration": 3.15
+    },
+    {
+        "text": "Information too, whether it's\n1.15 inches versus 1.16 inches.",
+        "start": 1479.725,
+        "duration": 4.85
+    },
+    {
+        "text": "You might actually get different\nnearest neighbors, but here",
+        "start": 1484.785,
+        "duration": 2.55
+    },
+    {
+        "text": "you would still get the same.",
+        "start": 1487.335,
+        "duration": 0.99
+    },
+    {
+        "text": "So it would be a slightly lossy.",
+        "start": 1488.715,
+        "duration": 1.71
+    },
+    {
+        "text": "But you could, that would be okay.",
+        "start": 1490.925,
+        "duration": 1.55
+    },
+    {
+        "text": "How would that scale into the future?",
+        "start": 1493.595,
+        "duration": 2.27
+    },
+    {
+        "text": "Do we want to worry about that now?",
+        "start": 1496.535,
+        "duration": 1.24
+    },
+    {
+        "text": "I wouldn't worry about it, yeah.",
+        "start": 1498.085,
+        "duration": 1.28
+    },
+    {
+        "text": "You can go, I'm going to look\nup terror by summary, right?",
+        "start": 1499.445,
+        "duration": 2.12
+    },
+    {
+        "text": "Ha 5, 000 bodies.",
+        "start": 1502.925,
+        "duration": 2.43
+    },
+    {
+        "text": "You can like, stay on the ladder.",
+        "start": 1505.355,
+        "duration": 1.74
+    },
+    {
+        "text": "At the point it starts, at the\npoint it starts to fail, you",
+        "start": 1507.955,
+        "duration": 3.06
+    },
+    {
+        "text": "can start hashing techniques.",
+        "start": 1511.015,
+        "duration": 1.69
+    },
+    {
+        "text": "Yeah, you can hash as Well, the good thing\nabout, I was trying to imagine always,",
+        "start": 1512.745,
+        "duration": 3.69
+    },
+    {
+        "text": "let's say we're scaling something to\nhuman brains, but, the learning modules",
+        "start": 1516.505,
+        "duration": 3.9
+    },
+    {
+        "text": "themselves don't continue to scale.",
+        "start": 1520.405,
+        "duration": 1.78
+    },
+    {
+        "text": "they don't go to maximum.",
+        "start": 1522.525,
+        "duration": 0.61
+    },
+    {
+        "text": "Yeah.",
+        "start": 1523.725,
+        "duration": 0.33
+    },
+    {
+        "text": "And to make bigger brains, you\nneed more learning modules.",
+        "start": 1524.085,
+        "duration": 3.35
+    },
+    {
+        "text": "This speeds up the operation of\na single learning module, right?",
+        "start": 1527.445,
+        "duration": 2.53
+    },
+    {
+        "text": "So, my question, I've\nanswered my own question.",
+        "start": 1531.965,
+        "duration": 2.0
+    },
+    {
+        "text": "If you wanted to be really, big brains,\nthis wouldn't be a limiting factor.",
+        "start": 1534.075,
+        "duration": 2.88
+    },
+    {
+        "text": "No, and I wouldn't be surprised\nif neurons do something like this.",
+        "start": 1538.005,
+        "duration": 2.32
+    },
+    {
+        "text": "That's essentially what they do.",
+        "start": 1540.375,
+        "duration": 0.92
+    },
+    {
+        "text": "I was trying to think that.",
+        "start": 1541.455,
+        "duration": 0.87
+    },
+    {
+        "text": "How does this relate to neurons?",
+        "start": 1542.325,
+        "duration": 1.99
+    },
+    {
+        "text": "I haven't gotten there yet, but\nyou may be reaching a conclusion.",
+        "start": 1545.055,
+        "duration": 2.55
+    },
+    {
+        "text": "Yeah, I think it's very\nsimilar to what neurons do.",
+        "start": 1547.615,
+        "duration": 2.165
+    },
+    {
+        "text": "That makes me happy that my\nneurons are doing lookup tables.",
+        "start": 1554.12,
+        "duration": 2.12
+    },
+    {
+        "text": "That's basically what an SDR is.",
+        "start": 1556.24,
+        "duration": 5.18
+    },
+    {
+        "text": "Within some resolution you\nmatch and then you do something.",
+        "start": 1561.42,
+        "duration": 2.95
+    },
+    {
+        "text": "That's basically what we're talking about.",
+        "start": 1566.31,
+        "duration": 1.28
+    },
+    {
+        "text": "We're solving both your problems.",
+        "start": 1569.73,
+        "duration": 1.56
+    },
+    {
+        "text": "We're solving two Monty problems.",
+        "start": 1571.45,
+        "duration": 1.7
+    },
+    {
+        "text": "We're making it more neural.",
+        "start": 1573.64,
+        "duration": 1.22
+    },
+    {
+        "text": "Yeah, this is great.",
+        "start": 1577.75,
+        "duration": 1.2
+    },
+    {
+        "text": "Has anyone seen an objection to this idea?",
+        "start": 1580.1,
+        "duration": 1.83
+    },
+    {
+        "text": "No.",
+        "start": 1581.93,
+        "duration": 0.12
+    },
+    {
+        "text": "I",
+        "start": 1582.065,
+        "duration": 0.01
+    },
+    {
+        "text": "mean, there might be a couple of\nother things algorithmically I could",
+        "start": 1585.745,
+        "duration": 2.71
+    },
+    {
+        "text": "suggest, but if you're happy with the\nlookup tables, that's probably It does.",
+        "start": 1588.585,
+        "duration": 4.25
+    },
+    {
+        "text": "I think it's gonna be really\nhard to beat lookup tables.",
+        "start": 1593.005,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah, it's one of the rules.",
+        "start": 1594.885,
+        "duration": 1.34
+    },
+    {
+        "text": "Yeah, if you've got the bandwidth for it.",
+        "start": 1596.415,
+        "duration": 1.991
+    },
+    {
+        "text": "It answers the interview question.",
+        "start": 1598.406,
+        "duration": 2.254
+    },
+    {
+        "text": "Yeah.",
+        "start": 1600.66,
+        "duration": 0.451
+    },
+    {
+        "text": "The only thing I would add to that is,\nif you have three dimensions, there",
+        "start": 1601.111,
+        "duration": 7.184
+    },
+    {
+        "text": "are Several ways of creating the index.",
+        "start": 1608.295,
+        "duration": 2.435
+    },
+    {
+        "text": "One way is just to, say, let's suppose\nit was, your indices were 256 and you,",
+        "start": 1611.26,
+        "duration": 6.57
+    },
+    {
+        "text": "so you have a one byte for the X, one\nbyte for the Y, one byte for the Z,",
+        "start": 1617.83,
+        "duration": 4.56
+    },
+    {
+        "text": "and, three bytes, that, the way you\nwant to sometimes think about this",
+        "start": 1623.19,
+        "duration": 8.19
+    },
+    {
+        "text": "is what the implication of that is on\nthe underlying cache memory structure.",
+        "start": 1631.41,
+        "duration": 5.14
+    },
+    {
+        "text": "There's an alternative format\nwhere you Interleave the bytes.",
+        "start": 1636.93,
+        "duration": 5.385
+    },
+    {
+        "text": "It's a, there's a name for it.",
+        "start": 1642.325,
+        "duration": 3.31
+    },
+    {
+        "text": "I want to call it a Hamiltonian, path.",
+        "start": 1645.915,
+        "duration": 2.96
+    },
+    {
+        "text": "And what it does is, it\nbasically improves locality.",
+        "start": 1649.495,
+        "duration": 4.74
+    },
+    {
+        "text": "If you're hitting around one particular\narea, you'll, there's a greater",
+        "start": 1654.255,
+        "duration": 4.41
+    },
+    {
+        "text": "probability that you'll be on the same\ncache line looking for the next one.",
+        "start": 1658.765,
+        "duration": 3.51
+    },
+    {
+        "text": "And in fact, that's what\nthey do in texture maps.",
+        "start": 1662.535,
+        "duration": 2.08
+    },
+    {
+        "text": "these days.",
+        "start": 1665.43,
+        "duration": 0.68
+    },
+    {
+        "text": "So Kevin, one, this is all in Python.",
+        "start": 1666.55,
+        "duration": 3.19
+    },
+    {
+        "text": "Yeah, like No, if you're\ngonna no, you misunderstand.",
+        "start": 1671.19,
+        "duration": 5.77
+    },
+    {
+        "text": "The, it's, a simple bit twiddle.",
+        "start": 1677.12,
+        "duration": 2.92
+    },
+    {
+        "text": "Yeah, on the index he\nused to look something up.",
+        "start": 1680.645,
+        "duration": 2.59
+    },
+    {
+        "text": "But that I think, what we will have\ndone with this is I think we will",
+        "start": 1683.575,
+        "duration": 3.45
+    },
+    {
+        "text": "have knocked down this, the runtime\nhere such that now it's in the",
+        "start": 1687.035,
+        "duration": 3.84
+    },
+    {
+        "text": "Einstein and things like this, right?",
+        "start": 1690.875,
+        "duration": 1.68
+    },
+    {
+        "text": "I think what would be cool is\ntry and implement this, see",
+        "start": 1693.525,
+        "duration": 3.17
+    },
+    {
+        "text": "where the timing is, and then we\ncan do additional optimization.",
+        "start": 1696.695,
+        "duration": 3.04
+    },
+    {
+        "text": "But my guess will be, this would be like\nthe 10th hottest operation now, right?",
+        "start": 1699.775,
+        "duration": 3.73
+    },
+    {
+        "text": "Yeah, I think the only concern I\nhave is the resolution loss, because",
+        "start": 1704.045,
+        "duration": 3.12
+    },
+    {
+        "text": "it's the Right now we have pixel.",
+        "start": 1707.165,
+        "duration": 2.15
+    },
+    {
+        "text": "We're going to voxel, right?",
+        "start": 1709.385,
+        "duration": 1.15
+    },
+    {
+        "text": "So There's a volume in there.",
+        "start": 1710.535,
+        "duration": 2.405
+    },
+    {
+        "text": "Yeah, but if you're using a uniform\ndiscretization of space, which",
+        "start": 1715.44,
+        "duration": 3.99
+    },
+    {
+        "text": "is the other thing that you can\ndo, is not, the points are being",
+        "start": 1719.43,
+        "duration": 4.44
+    },
+    {
+        "text": "separated by how many there are in\neach set, but like the space itself.",
+        "start": 1723.87,
+        "duration": 4.06
+    },
+    {
+        "text": "if you know the maximum dimensions,\nlike a bounding box around the space,",
+        "start": 1728.58,
+        "duration": 2.89
+    },
+    {
+        "text": "you can just subdivide it into say 32\nby 32 or 256 by 256 or whatever, and",
+        "start": 1731.71,
+        "duration": 5.9
+    },
+    {
+        "text": "that gets you the voxels automatically.",
+        "start": 1737.61,
+        "duration": 2.22
+    },
+    {
+        "text": "And it's, the set volume to each one.",
+        "start": 1740.1,
+        "duration": 2.51
+    },
+    {
+        "text": "But look at this picture, for example, of\nthis mug, so that point that's marked in",
+        "start": 1743.195,
+        "duration": 6.12
+    },
+    {
+        "text": "green will include the points that on the\nother side of the mug, inside the mug and",
+        "start": 1749.315,
+        "duration": 4.47
+    },
+    {
+        "text": "outside of the mug, because of the volume.",
+        "start": 1753.785,
+        "duration": 2.15
+    },
+    {
+        "text": "The voxel is encoded, the location\nof the voxel in memory is encoded",
+        "start": 1756.875,
+        "duration": 3.8
+    },
+    {
+        "text": "in the actual XYZ coordinates or IJK\ncoordinates of the point itself, right?",
+        "start": 1760.685,
+        "duration": 5.01
+    },
+    {
+        "text": "You can actually read off Where in that\nspace it's going to be based on, is it",
+        "start": 1766.545,
+        "duration": 4.465
+    },
+    {
+        "text": "on, basically the way I think of it is,\nevery time you divide the space in half,",
+        "start": 1771.01,
+        "duration": 3.87
+    },
+    {
+        "text": "that's like a bit, either I'm on the left\nor the right side, it's either going to be",
+        "start": 1774.91,
+        "duration": 2.68
+    },
+    {
+        "text": "a zero or a one, and so when I subdivide\nand I subdivide, basically you're adding",
+        "start": 1777.59,
+        "duration": 3.29
+    },
+    {
+        "text": "another zero or another one, which you're\nsaying, which side of the cut plane am",
+        "start": 1780.88,
+        "duration": 4.39
+    },
+    {
+        "text": "I on, and effectively that drives you\ndown to a single voxel, a single leaf",
+        "start": 1785.27,
+        "duration": 3.97
+    },
+    {
+        "text": "node, and so the position of the thing in\nXYZ space can actually read off exactly",
+        "start": 1789.24,
+        "duration": 5.54
+    },
+    {
+        "text": "where it's going to be at in memory.",
+        "start": 1794.78,
+        "duration": 1.22
+    },
+    {
+        "text": "So if you've got the memory space\nfor it, it's a very, fast lookup.",
+        "start": 1799.83,
+        "duration": 3.34
+    },
+    {
+        "text": "It's a very fast hashing algorithm.",
+        "start": 1803.19,
+        "duration": 1.15
+    },
+    {
+        "text": "So in this case, would we basically\nnot actually care anymore about",
+        "start": 1805.36,
+        "duration": 6.6
+    },
+    {
+        "text": "storing less points because we just\nhave the discretized voxel space and",
+        "start": 1811.96,
+        "duration": 4.29
+    },
+    {
+        "text": "we just want to say for every voxel\nwhether the object exists there or not?",
+        "start": 1816.25,
+        "duration": 4.7
+    },
+    {
+        "text": "does the surface intersect the voxel?",
+        "start": 1821.57,
+        "duration": 1.9
+    },
+    {
+        "text": "That's really what you want to\nstore a bit, the one or zero.",
+        "start": 1823.63,
+        "duration": 2.44
+    },
+    {
+        "text": "It does the, surface of the shape\nintersect the voxel at this location?",
+        "start": 1826.08,
+        "duration": 5.1
+    },
+    {
+        "text": "Is that what we're saying?",
+        "start": 1832.365,
+        "duration": 0.76
+    },
+    {
+        "text": "I thought it was just\nreplacing the KD tree search.",
+        "start": 1833.495,
+        "duration": 2.42
+    },
+    {
+        "text": "Yeah, that's what I thought.",
+        "start": 1836.785,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah, we still want to know\nthe idea of the point where",
+        "start": 1837.355,
+        "duration": 3.5
+    },
+    {
+        "text": "we have stored the feature.",
+        "start": 1840.855,
+        "duration": 1.18
+    },
+    {
+        "text": "I think it's just to take the XYZ,\nhash it to an index, and look it up.",
+        "start": 1843.665,
+        "duration": 4.11
+    },
+    {
+        "text": "Yeah, I think what we're proposing\nis like an optimization of",
+        "start": 1848.385,
+        "duration": 2.27
+    },
+    {
+        "text": "basically giving the tree a static.",
+        "start": 1850.655,
+        "duration": 1.79
+    },
+    {
+        "text": "Let's just build a lookup\ntable out of the tree, right?",
+        "start": 1852.905,
+        "duration": 3.2
+    },
+    {
+        "text": "Exactly.",
+        "start": 1856.145,
+        "duration": 0.49
+    },
+    {
+        "text": "Could you make it?",
+        "start": 1856.675,
+        "duration": 1.63
+    },
+    {
+        "text": "Absolutely.",
+        "start": 1858.305,
+        "duration": 0.015
+    },
+    {
+        "text": "If you wanted to do incremental learning\nwith it, could you still modify without",
+        "start": 1858.51,
+        "duration": 4.9
+    },
+    {
+        "text": "rebuilding the table every time?",
+        "start": 1863.41,
+        "duration": 1.05
+    },
+    {
+        "text": "Oh yeah, Seems like you should.",
+        "start": 1864.48,
+        "duration": 1.96
+    },
+    {
+        "text": "Yeah, I mean there's stuff that people\nhave done, something that you've done.",
+        "start": 1866.6,
+        "duration": 2.335
+    },
+    {
+        "text": "Subutai and I were also saying\nLHS to each other, right?",
+        "start": 1869.425,
+        "duration": 3.02
+    },
+    {
+        "text": "So locality sensitive hashing is\nalso a way that people do this.",
+        "start": 1872.495,
+        "duration": 2.63
+    },
+    {
+        "text": "You can do periodic rebuilds\nand all sorts of stuff.",
+        "start": 1875.145,
+        "duration": 2.48
+    },
+    {
+        "text": "But if you have to rebuild those,\nwhat can you just incrementally add?",
+        "start": 1877.625,
+        "duration": 2.62
+    },
+    {
+        "text": "Incrementally build things.",
+        "start": 1880.305,
+        "duration": 1.15
+    },
+    {
+        "text": "And you can also delay rebuilds\nand all sorts of things, right?",
+        "start": 1881.455,
+        "duration": 3.43
+    },
+    {
+        "text": "You can do minus with all this stuff.",
+        "start": 1884.885,
+        "duration": 1.21
+    },
+    {
+        "text": "Can you do actual true\nincremental work with this table?",
+        "start": 1886.095,
+        "duration": 2.48
+    },
+    {
+        "text": "Could you, let's say I'm going along, I\nfind new objects, new points, whatever.",
+        "start": 1888.585,
+        "duration": 4.89
+    },
+    {
+        "text": "Can I just Can I dynamically modify\nthe table without rebuilding it?",
+        "start": 1893.475,
+        "duration": 3.77
+    },
+    {
+        "text": "Yes.",
+        "start": 1897.595,
+        "duration": 0.26
+    },
+    {
+        "text": "Yeah, it would be very simple.",
+        "start": 1897.885,
+        "duration": 1.15
+    },
+    {
+        "text": "So you're just modifying it very locally.",
+        "start": 1899.305,
+        "duration": 2.08
+    },
+    {
+        "text": "It gives you a lot of flexibility.",
+        "start": 1902.635,
+        "duration": 1.33
+    },
+    {
+        "text": "Yeah, to modify the table.",
+        "start": 1903.975,
+        "duration": 1.03
+    },
+    {
+        "text": "Viviane was asking could I have more\npoints, but it seems like the size",
+        "start": 1906.035,
+        "duration": 2.6
+    },
+    {
+        "text": "of your box could be modified too.",
+        "start": 1908.635,
+        "duration": 1.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 1910.625,
+        "duration": 0.42
+    },
+    {
+        "text": "It's actually faster than\ndoing a td tree rebuild.",
+        "start": 1911.115,
+        "duration": 2.63
+    },
+    {
+        "text": "Pretty much that's it.",
+        "start": 1914.72,
+        "duration": 0.59
+    },
+    {
+        "text": "So do you have any, libraries for\nthis that you would recommend?",
+        "start": 1915.34,
+        "duration": 5.07
+    },
+    {
+        "text": "let's start with the dict, but you\ncould do an LSH library or something.",
+        "start": 1921.25,
+        "duration": 4.21
+    },
+    {
+        "text": "LSH is the other way to scale,\nlike if you want to get to massive",
+        "start": 1925.46,
+        "duration": 3.42
+    },
+    {
+        "text": "objects, massive points, right?",
+        "start": 1928.88,
+        "duration": 1.55
+    },
+    {
+        "text": "So it's locality sensitive hashing, right?",
+        "start": 1930.44,
+        "duration": 1.84
+    },
+    {
+        "text": "So basically, you There's again a lossy\ntechnique where basically, a lot of",
+        "start": 1932.29,
+        "duration": 3.37
+    },
+    {
+        "text": "people use it in transformers now as\nwell, so basically, rather than the",
+        "start": 1935.7,
+        "duration": 3.29
+    },
+    {
+        "text": "hash avoiding collisions, you're hashing\nto points in space that are similar.",
+        "start": 1938.99,
+        "duration": 5.12
+    },
+    {
+        "text": "That was Anshman.",
+        "start": 1944.11,
+        "duration": 1.48
+    },
+    {
+        "text": "Yeah, Anshman was big, yeah.",
+        "start": 1945.8,
+        "duration": 1.49
+    },
+    {
+        "text": "The big thing was LHF, right?",
+        "start": 1947.34,
+        "duration": 2.03
+    },
+    {
+        "text": "LHF is also the solution to many problems.",
+        "start": 1949.37,
+        "duration": 1.79
+    },
+    {
+        "text": "there are actually a bunch of open\nsource implementations for that, right?",
+        "start": 1952.77,
+        "duration": 3.46
+    },
+    {
+        "text": "Yeah, I was just looking\nup, I just did FAST.",
+        "start": 1956.42,
+        "duration": 1.64
+    },
+    {
+        "text": "LSH, Ash, and Python,\nthere's a bunch of them.",
+        "start": 1958.68,
+        "duration": 3.51
+    },
+    {
+        "text": "Yeah, Okay.",
+        "start": 1962.94,
+        "duration": 1.07
+    },
+    {
+        "text": "Yeah, I think that would be better than,\njust a crude partition of the space",
+        "start": 1964.9,
+        "duration": 6.44
+    },
+    {
+        "text": "because you're trying to encapsulate\na surface in, but you're paying the",
+        "start": 1971.35,
+        "duration": 4.74
+    },
+    {
+        "text": "penalty of a volume whereas with LSH\nyou could, basically winnow that down to",
+        "start": 1976.09,
+        "duration": 6.35
+    },
+    {
+        "text": "only, only storing locations that make\nsense as opposed to all the empty space.",
+        "start": 1982.7,
+        "duration": 5.03
+    },
+    {
+        "text": "Okay.",
+        "start": 1987.73,
+        "duration": 0.025
+    },
+    {
+        "text": "Thanks.",
+        "start": 1987.755,
+        "duration": 0.025
+    },
+    {
+        "text": "you wouldn't store the empty space.",
+        "start": 1989.07,
+        "duration": 1.185
+    },
+    {
+        "text": "With a dink, you wouldn't\nstore the empty space.",
+        "start": 1990.255,
+        "duration": 1.865
+    },
+    {
+        "text": "You'd just have only where the points are.",
+        "start": 1992.12,
+        "duration": 2.59
+    },
+    {
+        "text": "What is a dink?",
+        "start": 1995.15,
+        "duration": 1.01
+    },
+    {
+        "text": "just joking.",
+        "start": 1996.515,
+        "duration": 0.71
+    },
+    {
+        "text": "lookup table.",
+        "start": 1998.24,
+        "duration": 0.53
+    },
+    {
+        "text": "Lookup table.",
+        "start": 1998.82,
+        "duration": 1.163
+    },
+    {
+        "text": "Hash table.",
+        "start": 1999.983,
+        "duration": 1.024
+    },
+    {
+        "text": "Yeah, when you first said lookup table, I\nwas assuming you were, actually carving up",
+        "start": 2001.007,
+        "duration": 7.043
+    },
+    {
+        "text": "space into volumes, and every one of those\nwould have to be represented in memory.",
+        "start": 2008.05,
+        "duration": 4.02
+    },
+    {
+        "text": "No, no, you don't want to do that.",
+        "start": 2012.73,
+        "duration": 1.53
+    },
+    {
+        "text": "More like a hash table.",
+        "start": 2014.26,
+        "duration": 2.65
+    },
+    {
+        "text": "Yeah, okay.",
+        "start": 2017.235,
+        "duration": 0.75
+    },
+    {
+        "text": "Yeah, so I understood the same thing\nas Kevin, so that's why I was confused.",
+        "start": 2017.985,
+        "duration": 3.26
+    },
+    {
+        "text": "Oh, I'm sorry.",
+        "start": 2021.425,
+        "duration": 0.5
+    },
+    {
+        "text": "Yeah, no.",
+        "start": 2021.925,
+        "duration": 0.87
+    },
+    {
+        "text": "You take the, location, you hash that so\nthat you get to some point, and then you",
+        "start": 2024.855,
+        "duration": 5.41
+    },
+    {
+        "text": "just, there's the five points right there.",
+        "start": 2030.265,
+        "duration": 1.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 2032.445,
+        "duration": 0.37
+    },
+    {
+        "text": "Viviane, quick question.",
+        "start": 2034.295,
+        "duration": 0.79
+    },
+    {
+        "text": "the inputs to the KD tree search, are\nthose like global XYZ coordinates, or are",
+        "start": 2036.025,
+        "duration": 5.16
+    },
+    {
+        "text": "they like object specific coordinates?",
+        "start": 2041.185,
+        "duration": 2.1
+    },
+    {
+        "text": "Object specific.",
+        "start": 2045.38,
+        "duration": 1.14
+    },
+    {
+        "text": "Alright, so you have a point on\nan object and then you're querying",
+        "start": 2048.01,
+        "duration": 3.34
+    },
+    {
+        "text": "for nearby points based on distance\nfrom the initial search point.",
+        "start": 2051.38,
+        "duration": 4.94
+    },
+    {
+        "text": "Yeah.",
+        "start": 2057.95,
+        "duration": 0.42
+    },
+    {
+        "text": "Distance and direction, alright, okay,",
+        "start": 2058.67,
+        "duration": 1.27
+    },
+    {
+        "text": "okay.",
+        "start": 2063.27,
+        "duration": 0.3
+    },
+    {
+        "text": "yeah, thanks a lot, should I move on?",
+        "start": 2065.26,
+        "duration": 2.98
+    },
+    {
+        "text": "To,",
+        "start": 2069.14,
+        "duration": 0.32
+    },
+    {
+        "text": "actually the next slide\nis Let's not go downhill.",
+        "start": 2071.62,
+        "duration": 2.83
+    },
+    {
+        "text": "Lawrence and I have an 11 day apart,\nYeah, yeah, this is actually still related",
+        "start": 2075.235,
+        "duration": 6.61
+    },
+    {
+        "text": "to Katie, the Katie tree search, but\njust to check in if this would change",
+        "start": 2081.845,
+        "duration": 3.25
+    },
+    {
+        "text": "anything with, what you're recommending.",
+        "start": 2085.095,
+        "duration": 2.02
+    },
+    {
+        "text": "So when we're, voting, we actually,\nwe have a very similar problem,",
+        "start": 2087.395,
+        "duration": 4.32
+    },
+    {
+        "text": "but the main difference is that we\nhave to build the location tree at",
+        "start": 2091.725,
+        "duration": 3.15
+    },
+    {
+        "text": "every step from the incoming votes.",
+        "start": 2094.885,
+        "duration": 2.44
+    },
+    {
+        "text": "so basically we have a bunch of\nincoming votes and we want to.",
+        "start": 2098.985,
+        "duration": 3.42
+    },
+    {
+        "text": "Query in that space of\nthe votes, basically.",
+        "start": 2103.105,
+        "duration": 2.52
+    },
+    {
+        "text": "So would it still be fast\nto, build up this discretized",
+        "start": 2105.885,
+        "duration": 5.36
+    },
+    {
+        "text": "voxel space at every step?",
+        "start": 2111.285,
+        "duration": 2.57
+    },
+    {
+        "text": "Or is that, would you say something\nelse would be better in that case?",
+        "start": 2113.855,
+        "duration": 4.15
+    },
+    {
+        "text": "do you have to build a\ntree that's being created?",
+        "start": 2122.66,
+        "duration": 1.73
+    },
+    {
+        "text": "Yeah.",
+        "start": 2124.79,
+        "duration": 0.35
+    },
+    {
+        "text": "So we basically get, votes of shape\nV times three, votes, if we threshold",
+        "start": 2126.24,
+        "duration": 7.96
+    },
+    {
+        "text": "them, yeah, around 20 to 200, and\nthen in that space, we query these,",
+        "start": 2134.2,
+        "duration": 7.42
+    },
+    {
+        "text": "locations from the hypotheses.",
+        "start": 2142.63,
+        "duration": 1.74
+    },
+    {
+        "text": "But this is, the part of the loop\nthat was much faster already, right?",
+        "start": 2148.38,
+        "duration": 3.83
+    },
+    {
+        "text": "Yeah.",
+        "start": 2152.21,
+        "duration": 0.06
+    },
+    {
+        "text": "Okay.",
+        "start": 2152.27,
+        "duration": 0.02
+    },
+    {
+        "text": "This is a different, is it's using\na completely different KD tree",
+        "start": 2152.61,
+        "duration": 3.17
+    },
+    {
+        "text": "here or is it the same KD tree\nyou had in the previous slide?",
+        "start": 2155.78,
+        "duration": 3.23
+    },
+    {
+        "text": "It's a different KD tree, so in the\nprevious slide we could build the tree",
+        "start": 2160.29,
+        "duration": 4.57
+    },
+    {
+        "text": "once at the start of an experiment\nfrom the model of the object, but now",
+        "start": 2164.93,
+        "duration": 4.34
+    },
+    {
+        "text": "both the hypothesis locations that\nwe used to query and the tree that we",
+        "start": 2170.45,
+        "duration": 5.17
+    },
+    {
+        "text": "need to query in changes at every step.",
+        "start": 2175.62,
+        "duration": 2.08
+    },
+    {
+        "text": "So here we would have to build the\ntree or the voxel space or the lookup",
+        "start": 2178.54,
+        "duration": 3.88
+    },
+    {
+        "text": "table at every step, basically.",
+        "start": 2182.45,
+        "duration": 2.02
+    },
+    {
+        "text": "So the first one was the evidence update\nfrom the sensory data, and this one is the",
+        "start": 2185.52,
+        "duration": 4.66
+    },
+    {
+        "text": "evidence update from the module voting.",
+        "start": 2190.18,
+        "duration": 2.56
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 2193.56,
+        "duration": 0.81
+    },
+    {
+        "text": "Okay, But didn't you say that\nloop was already pretty fast?",
+        "start": 2195.0,
+        "duration": 3.39
+    },
+    {
+        "text": "Faster, but not as fast.",
+        "start": 2200.36,
+        "duration": 1.46
+    },
+    {
+        "text": "Yeah, so that one was, yeah, so if we\nthreshold the votes, it's pretty fast",
+        "start": 2202.2,
+        "duration": 4.0
+    },
+    {
+        "text": "because V is only up to 200 elements,\nso it's fast to build the tree anyways,",
+        "start": 2206.25,
+        "duration": 5.84
+    },
+    {
+        "text": "but if we do use all the, votes, which\ncan be up to 200, 000, then it's slower.",
+        "start": 2212.14,
+        "duration": 5.97
+    },
+    {
+        "text": "Is there an advantage to using 200, 000?",
+        "start": 2220.12,
+        "duration": 1.55
+    },
+    {
+        "text": "Would you like to use more than 200, 000?",
+        "start": 2222.12,
+        "duration": 1.63
+    },
+    {
+        "text": "Or does it rapidly fall off, is it,",
+        "start": 2223.76,
+        "duration": 2.96
+    },
+    {
+        "text": "it's a minimal advantage, but not\nenough to justify the time cost.",
+        "start": 2229.38,
+        "duration": 5.91
+    },
+    {
+        "text": "neurons couldn't do that, right?",
+        "start": 2235.54,
+        "duration": 1.78
+    },
+    {
+        "text": "They couldn't, process 200, 000 quotes.",
+        "start": 2239.45,
+        "duration": 1.82
+    },
+    {
+        "text": "Is the thresholding based on an\nevidence measure or a confidence",
+        "start": 2242.74,
+        "duration": 4.27
+    },
+    {
+        "text": "measure or anything like that?",
+        "start": 2247.01,
+        "duration": 1.05
+    },
+    {
+        "text": "Yeah, so basically only the most\nconfident hypotheses get communicated",
+        "start": 2248.55,
+        "duration": 4.06
+    },
+    {
+        "text": "to other learning modules.",
+        "start": 2252.61,
+        "duration": 0.92
+    },
+    {
+        "text": "And on average, how many votes is that for\nper module that they're confident about?",
+        "start": 2254.635,
+        "duration": 4.59
+    },
+    {
+        "text": "It's between one and 200 usually.",
+        "start": 2260.455,
+        "duration": 2.54
+    },
+    {
+        "text": "Okay.",
+        "start": 2263.575,
+        "duration": 0.24
+    },
+    {
+        "text": "All right.",
+        "start": 2263.945,
+        "duration": 0.16
+    },
+    {
+        "text": "So you actually do have a lot.",
+        "start": 2264.135,
+        "duration": 0.94
+    },
+    {
+        "text": "Okay.",
+        "start": 2265.135,
+        "duration": 0.25
+    },
+    {
+        "text": "Depending on how symmetrical.",
+        "start": 2265.385,
+        "duration": 1.42
+    },
+    {
+        "text": "If this is being done by unions and an\nSDR, you can't get that high a number.",
+        "start": 2267.145,
+        "duration": 6.89
+    },
+    {
+        "text": "You can't form a unit of 200 hypothesis.",
+        "start": 2274.875,
+        "duration": 2.38
+    },
+    {
+        "text": "You might be able to form a unit of 50.",
+        "start": 2277.255,
+        "duration": 1.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 2279.015,
+        "duration": 0.41
+    },
+    {
+        "text": "I'm just saying it doesn't mean\nyou couldn't do better than the",
+        "start": 2281.845,
+        "duration": 1.95
+    },
+    {
+        "text": "neurons, but I'm saying the neurons\nare not that they're going to",
+        "start": 2283.795,
+        "duration": 1.93
+    },
+    {
+        "text": "plateau at some lower number.",
+        "start": 2285.775,
+        "duration": 1.83
+    },
+    {
+        "text": "Yes, yeah, the main problem is like\nif, like Eric says, if we have a",
+        "start": 2289.305,
+        "duration": 3.74
+    },
+    {
+        "text": "very symmetric object, then all of\nthe poses are about equally likely.",
+        "start": 2293.045,
+        "duration": 4.25
+    },
+    {
+        "text": "So if we then threshold the\nevidence, they will all be.",
+        "start": 2297.485,
+        "duration": 3.74
+    },
+    {
+        "text": "Would there be a way of compressing\nthose, yeah, would there be a way of",
+        "start": 2304.815,
+        "duration": 5.41
+    },
+    {
+        "text": "consolidating those for which the evidence\nis all the same for a set of votes?",
+        "start": 2310.765,
+        "duration": 4.6
+    },
+    {
+        "text": "Like having a list of, like for the\ngiven evidence, all these possibilities",
+        "start": 2315.405,
+        "duration": 5.37
+    },
+    {
+        "text": "are there that way you don't have to,",
+        "start": 2320.775,
+        "duration": 1.88
+    },
+    {
+        "text": "I hate you have to expand it out\nanyway when you do the, compression.",
+        "start": 2325.135,
+        "duration": 2.915
+    },
+    {
+        "text": "The voting with other modules, so",
+        "start": 2328.57,
+        "duration": 1.54
+    },
+    {
+        "text": "there's no way to distinguish two\nvotes from two hypotheses from each",
+        "start": 2332.34,
+        "duration": 3.24
+    },
+    {
+        "text": "other based on the evidence, then\nthey're functionally equivalent.",
+        "start": 2335.58,
+        "duration": 2.64
+    },
+    {
+        "text": "There should be a way of\ncompressing that down somehow.",
+        "start": 2338.66,
+        "duration": 1.81
+    },
+    {
+        "text": "Yeah, so we do have a mechanism to detect\nsymmetry if we, if if two poses have",
+        "start": 2341.94,
+        "duration": 6.81
+    },
+    {
+        "text": "consistently the same predictions, they're\nclassified as symmetric after a certain",
+        "start": 2349.12,
+        "duration": 5.28
+    },
+    {
+        "text": "number of steps, but still until they.",
+        "start": 2354.4,
+        "duration": 2.67
+    },
+    {
+        "text": "Took the, this number of steps that it was\nto, yeah, communicate a lot of thoughts.",
+        "start": 2357.335,
+        "duration": 6.48
+    },
+    {
+        "text": "Okay.",
+        "start": 2365.805,
+        "duration": 0.23
+    },
+    {
+        "text": "I'm almost tempted to say\nthe right solution here is to",
+        "start": 2371.425,
+        "duration": 3.07
+    },
+    {
+        "text": "not have so many hypotheses.",
+        "start": 2374.495,
+        "duration": 0.7
+    },
+    {
+        "text": "It's like Laura and Albert Beck.",
+        "start": 2376.765,
+        "duration": 1.47
+    },
+    {
+        "text": "Yeah, no.",
+        "start": 2379.065,
+        "duration": 0.64
+    },
+    {
+        "text": "So yeah, right now with the\nthresholding, it's actually pretty",
+        "start": 2379.955,
+        "duration": 3.42
+    },
+    {
+        "text": "fast, so it might not be the highest\npriority to optimize this one.",
+        "start": 2383.375,
+        "duration": 4.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 2387.835,
+        "duration": 0.41
+    },
+    {
+        "text": "Yeah, I agree.",
+        "start": 2388.245,
+        "duration": 1.92
+    },
+    {
+        "text": "Okay.",
+        "start": 2393.065,
+        "duration": 0.69
+    },
+    {
+        "text": "yeah, then, Move on.",
+        "start": 2394.405,
+        "duration": 2.715
+    },
+    {
+        "text": "I guess just one last note on\nthe k tree search radiuses.",
+        "start": 2397.5,
+        "duration": 4.07
+    },
+    {
+        "text": "We only want points in a given radius, so\nspecified by the maximum match distance,",
+        "start": 2402.21,
+        "duration": 5.41
+    },
+    {
+        "text": "but we also want to get a matrix.",
+        "start": 2408.44,
+        "duration": 1.73
+    },
+    {
+        "text": "And if we just query the radius,\nwe get like a ragged list since",
+        "start": 2410.31,
+        "duration": 3.47
+    },
+    {
+        "text": "each point's radius contains a\nvariable amount of neighbors.",
+        "start": 2413.81,
+        "duration": 3.07
+    },
+    {
+        "text": "So what we do right now is to create\na query for k nearest neighbors",
+        "start": 2416.88,
+        "duration": 4.51
+    },
+    {
+        "text": "to, to get an array of shape.",
+        "start": 2421.39,
+        "duration": 2.24
+    },
+    {
+        "text": "H times K, and then we mask all\nthe entries that are too far away.",
+        "start": 2424.25,
+        "duration": 4.56
+    },
+    {
+        "text": "I guess there's really a\nbetter solution, but yeah.",
+        "start": 2431.4,
+        "duration": 3.84
+    },
+    {
+        "text": "Is this still relevant if\nwe do the lookup table?",
+        "start": 2435.24,
+        "duration": 2.27
+    },
+    {
+        "text": "Yeah, I mean in the lookup table it can\nalso happen that There, it will always",
+        "start": 2439.71,
+        "duration": 4.445
+    },
+    {
+        "text": "be that within a given radius, there\ncan be a variable, amount of neighbors.",
+        "start": 2444.155,
+        "duration": 4.286
+    },
+    {
+        "text": "Is that a problem?",
+        "start": 2448.441,
+        "duration": 1.628
+    },
+    {
+        "text": "Why is that a problem?",
+        "start": 2450.069,
+        "duration": 2.035
+    },
+    {
+        "text": "It's not obvious.",
+        "start": 2452.104,
+        "duration": 1.222
+    },
+    {
+        "text": "Because then you can't use the\nmatrix operations directly,",
+        "start": 2453.326,
+        "duration": 3.663
+    },
+    {
+        "text": "because they expect a fixed",
+        "start": 2456.989,
+        "duration": 2.036
+    },
+    {
+        "text": "You can't just put zeros there\nor something like that, or?",
+        "start": 2461.145,
+        "duration": 2.56
+    },
+    {
+        "text": "Yeah, but, yeah, so yeah, I guess the two\noptions would be either to fill up by,",
+        "start": 2466.185,
+        "duration": 5.03
+    },
+    {
+        "text": "with zeros, but then if only one point\nhas a hundred neighbors, then the matrix",
+        "start": 2471.275,
+        "duration": 5.04
+    },
+    {
+        "text": "gets huge, for all the ones that just\nhave two neighbors, and then I guess we do",
+        "start": 2476.315,
+        "duration": 6.71
+    },
+    {
+        "text": "the opposite and, cut it off at a certain\nnumber of neighbors, and then Mask the",
+        "start": 2483.425,
+        "duration": 5.835
+    },
+    {
+        "text": "ones that, are not what we said to do\nearlier when we were talking about the",
+        "start": 2489.26,
+        "duration": 4.49
+    },
+    {
+        "text": "lookup table, pick some number of points.",
+        "start": 2493.75,
+        "duration": 2.66
+    },
+    {
+        "text": "Yeah.",
+        "start": 2496.68,
+        "duration": 0.19
+    },
+    {
+        "text": "Yeah.",
+        "start": 2496.87,
+        "duration": 1.58
+    },
+    {
+        "text": "So that problem applies to\nthe lookup table as well.",
+        "start": 2498.91,
+        "duration": 2.84
+    },
+    {
+        "text": "It's,",
+        "start": 2501.76,
+        "duration": 0.27
+    },
+    {
+        "text": "yeah, I guess just a universal thing.",
+        "start": 2504.82,
+        "duration": 4.62
+    },
+    {
+        "text": "But you're saying if we did\nthe query radius in principle,",
+        "start": 2510.24,
+        "duration": 2.61
+    },
+    {
+        "text": "we'd have much fewer points.",
+        "start": 2512.85,
+        "duration": 2.24
+    },
+    {
+        "text": "in some cases.",
+        "start": 2519.11,
+        "duration": 1.26
+    },
+    {
+        "text": "I actually didn't look at in\nhow many cases there are more",
+        "start": 2521.375,
+        "duration": 3.61
+    },
+    {
+        "text": "points than k in the radius.",
+        "start": 2524.985,
+        "duration": 1.79
+    },
+    {
+        "text": "It depends on how dense our models are.",
+        "start": 2527.295,
+        "duration": 2.2
+    },
+    {
+        "text": "but yeah, maybe I'll move on,\nthis one is that much for speed.",
+        "start": 2536.515,
+        "duration": 4.47
+    },
+    {
+        "text": "So now just a quick question.",
+        "start": 2541.925,
+        "duration": 2.19
+    },
+    {
+        "text": "So right now you're assuming that\nyou can't assign any importance to",
+        "start": 2544.535,
+        "duration": 4.48
+    },
+    {
+        "text": "the points, they're all Equal in your\neyes as contributing evidence, right?",
+        "start": 2549.015,
+        "duration": 4.645
+    },
+    {
+        "text": "yeah.",
+        "start": 2557.03,
+        "duration": 0.39
+    },
+    {
+        "text": "What if you relax that assumption?",
+        "start": 2559.41,
+        "duration": 2.04
+    },
+    {
+        "text": "How, would you The points get\neliminated based on the, the evidence",
+        "start": 2566.09,
+        "duration": 3.07
+    },
+    {
+        "text": "not fitting the hypothesis, right?",
+        "start": 2569.19,
+        "duration": 2.07
+    },
+    {
+        "text": "I guess they, they contribute\nto additional hypothesis, but",
+        "start": 2574.85,
+        "duration": 3.11
+    },
+    {
+        "text": "I'm just thinking that in large\nflat areas, some of those points,",
+        "start": 2578.34,
+        "duration": 4.62
+    },
+    {
+        "text": "It's if you eliminate them, then\nyou have gaps in your model, but if",
+        "start": 2586.18,
+        "duration": 4.74
+    },
+    {
+        "text": "you had something that was higher\norder than just a point, then",
+        "start": 2590.92,
+        "duration": 4.66
+    },
+    {
+        "text": "you could allow for, something to\nsubstitute for a large flat area as",
+        "start": 2595.58,
+        "duration": 4.77
+    },
+    {
+        "text": "opposed to a myriad of small points.",
+        "start": 2600.35,
+        "duration": 2.52
+    },
+    {
+        "text": "This is the isolation problem\nI was talking about earlier.",
+        "start": 2604.94,
+        "duration": 2.22
+    },
+    {
+        "text": "Yeah, so I guess that's something\nthat will come in more when",
+        "start": 2608.405,
+        "duration": 2.74
+    },
+    {
+        "text": "we add hierarchy, that points.",
+        "start": 2611.145,
+        "duration": 3.7
+    },
+    {
+        "text": "Yeah.",
+        "start": 2614.885,
+        "duration": 0.37
+    },
+    {
+        "text": "And then also when we build the\nmodels, we take into account how",
+        "start": 2615.475,
+        "duration": 3.17
+    },
+    {
+        "text": "fast features change in an area.",
+        "start": 2618.645,
+        "duration": 2.11
+    },
+    {
+        "text": "So if we're just on a flat surface, we\nstore less points in the model than if we",
+        "start": 2620.755,
+        "duration": 4.08
+    },
+    {
+        "text": "are in like a part of the object where it\ncurves a lot and features change a lot.",
+        "start": 2624.835,
+        "duration": 4.96
+    },
+    {
+        "text": "Yeah, I wouldn't necessarily postpone\nit to where you think of hierarchy",
+        "start": 2630.395,
+        "duration": 3.92
+    },
+    {
+        "text": "because then you're getting into\nassemblies of parts and stuff like that.",
+        "start": 2634.345,
+        "duration": 3.67
+    },
+    {
+        "text": "What I would say is that you, if, your\nfundamental primitive is, starting to",
+        "start": 2638.015,
+        "duration": 6.0
+    },
+    {
+        "text": "become burdensome because it's just\ntoo low information content, and you",
+        "start": 2644.015,
+        "duration": 5.43
+    },
+    {
+        "text": "need a lot of them before you, you\nget something out of it, my indi,",
+        "start": 2649.445,
+        "duration": 4.55
+    },
+    {
+        "text": "It would almost I would say that you\nwould need to replace it with something",
+        "start": 2655.18,
+        "duration": 5.01
+    },
+    {
+        "text": "that has more structure to it, so you\ndon't need so many representations",
+        "start": 2660.19,
+        "duration": 4.8
+    },
+    {
+        "text": "of it to, to, yield a hypothesis.",
+        "start": 2664.99,
+        "duration": 4.88
+    },
+    {
+        "text": "it's something, that's not a point, but,",
+        "start": 2672.45,
+        "duration": 1.74
+    },
+    {
+        "text": "just for argument's sake, a, rectangle,\nthat basically as long as it's flat",
+        "start": 2676.415,
+        "duration": 6.43
+    },
+    {
+        "text": "enough, you, it's the rectangle, and\nthen the descriptor for the rectangle",
+        "start": 2682.845,
+        "duration": 4.74
+    },
+    {
+        "text": "could basically substitute for a myriad\nof points if things are flat enough,",
+        "start": 2688.035,
+        "duration": 4.56
+    },
+    {
+        "text": "but, because if you're, going to go down\nto pixel points, the problem is you're",
+        "start": 2693.515,
+        "duration": 8.08
+    },
+    {
+        "text": "going to run into these combinatorics, so\nunless you do some kind of abstraction,",
+        "start": 2701.595,
+        "duration": 4.49
+    },
+    {
+        "text": "which I don't, think it's the same\nthing as hierarchy, it's a, it's",
+        "start": 2706.095,
+        "duration": 6.775
+    },
+    {
+        "text": "going to basically be a problem until,",
+        "start": 2712.87,
+        "duration": 3.11
+    },
+    {
+        "text": "you can, efficiently represent, a area of\na portion of a surface by a few parameters",
+        "start": 2718.22,
+        "duration": 8.205
+    },
+    {
+        "text": "as opposed to, hundreds of points.",
+        "start": 2726.425,
+        "duration": 2.52
+    },
+    {
+        "text": "That's exactly what I was talking\nabout in my research meeting last",
+        "start": 2731.045,
+        "duration": 2.68
+    },
+    {
+        "text": "week, was how do you discretize a\nspace using as few points as possible.",
+        "start": 2733.725,
+        "duration": 4.21
+    },
+    {
+        "text": "You can use fewer points, the more high\norder information you're given, say, in",
+        "start": 2738.695,
+        "duration": 4.06
+    },
+    {
+        "text": "addition to getting the point, you're\nalso given the gradient or the curvature.",
+        "start": 2742.765,
+        "duration": 3.01
+    },
+    {
+        "text": "you can then extrapolate away from that\npoint and represent a very large area",
+        "start": 2746.45,
+        "duration": 3.39
+    },
+    {
+        "text": "near there if the, if those features\nremain constant, but if the features",
+        "start": 2749.86,
+        "duration": 3.96
+    },
+    {
+        "text": "start to change, if the curvature\nchanges or the gradient changes, then",
+        "start": 2753.82,
+        "duration": 3.27
+    },
+    {
+        "text": "you might need to drop in another\npoint there to capture that change, and",
+        "start": 2757.09,
+        "duration": 3.5
+    },
+    {
+        "text": "then basically you could interpolate\nbetween those two points to get a",
+        "start": 2760.59,
+        "duration": 2.68
+    },
+    {
+        "text": "smooth transition from one to the other.",
+        "start": 2763.27,
+        "duration": 1.58
+    },
+    {
+        "text": "Yeah, maybe that's a good\ntopic for another research",
+        "start": 2765.67,
+        "duration": 3.17
+    },
+    {
+        "text": "meeting to, to get into more.",
+        "start": 2768.84,
+        "duration": 1.64
+    },
+    {
+        "text": "yeah, because just because we\nonly have about 10 minutes left.",
+        "start": 2772.75,
+        "duration": 2.68
+    },
+    {
+        "text": "I just want to get to the second topic\nreal quick and see if there are any",
+        "start": 2776.86,
+        "duration": 3.34
+    },
+    {
+        "text": "other thoughts on that, if that's okay.",
+        "start": 2780.2,
+        "duration": 1.67
+    },
+    {
+        "text": "so yeah, now the matrix operations.",
+        "start": 2785.43,
+        "duration": 2.32
+    },
+    {
+        "text": "the one that takes the longest\nis the Einsam operation, which",
+        "start": 2790.07,
+        "duration": 3.95
+    },
+    {
+        "text": "we use to get angles between the\nhypotheses and the observation.",
+        "start": 2794.02,
+        "duration": 3.96
+    },
+    {
+        "text": "So basically.",
+        "start": 2798.48,
+        "duration": 0.87
+    },
+    {
+        "text": "since we have, since we use unit vectors\nto calculate the angle, we basically just",
+        "start": 2800.425,
+        "duration": 5.32
+    },
+    {
+        "text": "need to take the dot product between two\nvectors and then apply, our cost to it.",
+        "start": 2805.745,
+        "duration": 7.03
+    },
+    {
+        "text": "And we want to do this for all\nhypotheses, poses, and then",
+        "start": 2813.175,
+        "duration": 3.84
+    },
+    {
+        "text": "your neighbors in one step.",
+        "start": 2817.015,
+        "duration": 1.54
+    },
+    {
+        "text": "that means we need to apply the\ndot product between the hypothesis.",
+        "start": 2820.615,
+        "duration": 5.13
+    },
+    {
+        "text": "nearest neighbors, which is shape\nH times K times three, and the",
+        "start": 2827.45,
+        "duration": 5.52
+    },
+    {
+        "text": "transformed observations point normal.",
+        "start": 2832.98,
+        "duration": 2.55
+    },
+    {
+        "text": "so three are the XYZ coordinates of the\npoint normal, which is a unit factor.",
+        "start": 2836.44,
+        "duration": 4.03
+    },
+    {
+        "text": "and then, yeah, as an output, we want\nto have a matrix of size H times K.",
+        "start": 2841.97,
+        "duration": 4.23
+    },
+    {
+        "text": "and Einsam is basically just an\nefficient version of running a for",
+        "start": 2847.77,
+        "duration": 6.43
+    },
+    {
+        "text": "loop over all hypotheses and then\napplying the dot product between.",
+        "start": 2854.2,
+        "duration": 4.57
+    },
+    {
+        "text": "the hypothesis point normal and the\ntransformed observation point normal.",
+        "start": 2859.615,
+        "duration": 4.15
+    },
+    {
+        "text": "then we also apply normal dot\nproducts, for example, to rotate",
+        "start": 2868.625,
+        "duration": 3.23
+    },
+    {
+        "text": "displacements by the hypothesized poses.",
+        "start": 2872.655,
+        "duration": 2.07
+    },
+    {
+        "text": "So in that case, we have the possible\nrotations, which are three by three",
+        "start": 2875.465,
+        "duration": 5.59
+    },
+    {
+        "text": "rotation matrices, and we have, as\nmany of them as we have hypotheses.",
+        "start": 2881.055,
+        "duration": 4.92
+    },
+    {
+        "text": "And then we apply the dot product,\nbetween that and the sense",
+        "start": 2886.935,
+        "duration": 4.5
+    },
+    {
+        "text": "displacement, which is Again, unit\nvector and X, Y, Z coordinates.",
+        "start": 2891.435,
+        "duration": 5.33
+    },
+    {
+        "text": "No, it's not a unit vector in this case.",
+        "start": 2899.045,
+        "duration": 1.87
+    },
+    {
+        "text": "It's just a displacement.",
+        "start": 2902.375,
+        "duration": 1.14
+    },
+    {
+        "text": "And we got a matrix of size H times 3.",
+        "start": 2904.475,
+        "duration": 4.1
+    },
+    {
+        "text": "We also apply matrix multiplications.",
+        "start": 2910.085,
+        "duration": 2.95
+    },
+    {
+        "text": "for example, to get the rotation\nmatrices from our pose hypotheses.",
+        "start": 2913.68,
+        "duration": 4.85
+    },
+    {
+        "text": "So in this case, we have the\nposes stored in all the nodes.",
+        "start": 2919.2,
+        "duration": 4.26
+    },
+    {
+        "text": "So that's, number of nodes in the graph,",
+        "start": 2923.47,
+        "duration": 2.91
+    },
+    {
+        "text": "times three And then we have the sensed\npose, which are also three unit vectors,",
+        "start": 2928.84,
+        "duration": 5.09
+    },
+    {
+        "text": "they are orthonormal and yeah, we apply\na matrix multiplication between them to",
+        "start": 2935.67,
+        "duration": 5.98
+    },
+    {
+        "text": "get, N, three by three rotation matrices.",
+        "start": 2941.65,
+        "duration": 3.79
+    },
+    {
+        "text": "Then we have the standard operations,\nlike addition, abstraction,",
+        "start": 2947.435,
+        "duration": 3.81
+    },
+    {
+        "text": "arc costs, and multiply to do\na range of different things.",
+        "start": 2951.245,
+        "duration": 3.63
+    },
+    {
+        "text": "here the dimensions always stay the same.",
+        "start": 2955.645,
+        "duration": 2.42
+    },
+    {
+        "text": "And then we have, yeah, some reduced\noperations, like applying the",
+        "start": 2958.645,
+        "duration": 4.34
+    },
+    {
+        "text": "maximum to get the highest evidence\nin the, nearest neighbor Radi.",
+        "start": 2962.985,
+        "duration": 4.03
+    },
+    {
+        "text": "yeah.",
+        "start": 2970.87,
+        "duration": 0.39
+    },
+    {
+        "text": "So if we boil this down to just the\nsize of the matrices, two things",
+        "start": 2971.55,
+        "duration": 5.11
+    },
+    {
+        "text": "that I think could be places where\nwe can maybe optimize something.",
+        "start": 2976.69,
+        "duration": 3.88
+    },
+    {
+        "text": "So one thing is, we don't need to test\nall hypotheses at every time step.",
+        "start": 2980.57,
+        "duration": 4.64
+    },
+    {
+        "text": "So right now, since it's just matrix\nmultiplications, we just, We update the",
+        "start": 2985.72,
+        "duration": 4.785
+    },
+    {
+        "text": "evidence for every hypothesis at every\nstep, but in theory we could mask a lot",
+        "start": 2990.505,
+        "duration": 6.13
+    },
+    {
+        "text": "of the rows in the first axis, so H.",
+        "start": 2996.635,
+        "duration": 2.63
+    },
+    {
+        "text": "And then the second one is some entries\nin K are also masked, like I mentioned.",
+        "start": 3000.655,
+        "duration": 6.64
+    },
+    {
+        "text": "less than k neighbors are in the\nradius, then we mask these entries.",
+        "start": 3008.84,
+        "duration": 3.84
+    },
+    {
+        "text": "So yeah, I don't know if you\nhave any, thoughts on that.",
+        "start": 3013.56,
+        "duration": 3.57
+    },
+    {
+        "text": "What are you using to\ndo the, the matrix math?",
+        "start": 3021.64,
+        "duration": 2.45
+    },
+    {
+        "text": "NumPy.",
+        "start": 3025.54,
+        "duration": 0.8
+    },
+    {
+        "text": "NumPy.",
+        "start": 3026.67,
+        "duration": 0.41
+    },
+    {
+        "text": "All right.",
+        "start": 3027.18,
+        "duration": 0.3
+    },
+    {
+        "text": "So with the first one, are you saying Like\nhow many rows are you trying to ignore on",
+        "start": 3029.06,
+        "duration": 6.59
+    },
+    {
+        "text": "average, like what percent, because that\nseems like it's just brute force doing a",
+        "start": 3035.65,
+        "duration": 5.18
+    },
+    {
+        "text": "lot of stuff that it doesn't need to do.",
+        "start": 3040.83,
+        "duration": 1.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 3043.24,
+        "duration": 0.37
+    },
+    {
+        "text": "So theoretically we could\nignore a lot of these.",
+        "start": 3043.61,
+        "duration": 3.59
+    },
+    {
+        "text": "So for example, we could only look\nat the N highest evidence hypothesis.",
+        "start": 3047.2,
+        "duration": 7.03
+    },
+    {
+        "text": "So that could be 10, it could be\na hundred, it could be a thousand",
+        "start": 3054.23,
+        "duration": 4.4
+    },
+    {
+        "text": "highest hypothesis, whatever.",
+        "start": 3058.63,
+        "duration": 1.32
+    },
+    {
+        "text": "But it would definitely be still lower\nthan age, which is usually between.",
+        "start": 3059.95,
+        "duration": 3.21
+    },
+    {
+        "text": "Like a thousand and forty thousand,\nespecially towards later steps in",
+        "start": 3063.55,
+        "duration": 5.44
+    },
+    {
+        "text": "the episode, this would probably\njust be like five or so high",
+        "start": 3068.99,
+        "duration": 6.23
+    },
+    {
+        "text": "up, high evidence hypotheses.",
+        "start": 3075.22,
+        "duration": 1.6
+    },
+    {
+        "text": "So you really just want to, you only care\nabout a very sparse subset of the rows.",
+        "start": 3076.82,
+        "duration": 5.83
+    },
+    {
+        "text": "Yeah.",
+        "start": 3084.335,
+        "duration": 0.47
+    },
+    {
+        "text": "So I don't know if there's",
+        "start": 3086.005,
+        "duration": 0.59
+    },
+    {
+        "text": "an efficient way to do that.",
+        "start": 3089.705,
+        "duration": 0.97
+    },
+    {
+        "text": "the, advantage of updating all of them\nat every time step is that you can",
+        "start": 3093.745,
+        "duration": 3.94
+    },
+    {
+        "text": "easily recover a hypothesis, even if you\nget several inconsistent observations.",
+        "start": 3097.685,
+        "duration": 5.42
+    },
+    {
+        "text": "but yeah, I'm not sure how\nrelevant that actually is and",
+        "start": 3105.295,
+        "duration": 3.89
+    },
+    {
+        "text": "if it's worth the computation.",
+        "start": 3109.355,
+        "duration": 1.72
+    },
+    {
+        "text": "I'd have to take a look at the math to\nsee if there's anything that pops to mind.",
+        "start": 3118.535,
+        "duration": 4.32
+    },
+    {
+        "text": "so it's hard telling from\njust the description.",
+        "start": 3123.365,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah, yeah, I would try to minimize the\nnumber of times you're calling arccos",
+        "start": 3126.575,
+        "duration": 4.95
+    },
+    {
+        "text": "and sine and so forth, because those are\ninherently a bit slower than the built",
+        "start": 3131.525,
+        "duration": 5.16
+    },
+    {
+        "text": "in addition, multiply sort of things.",
+        "start": 3136.685,
+        "duration": 2.19
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 3140.155,
+        "duration": 0.72
+    },
+    {
+        "text": "It's just because the way they're\nimplemented, they're usually lookup tables",
+        "start": 3142.035,
+        "duration": 3.22
+    },
+    {
+        "text": "or something like that, because they're,\nnot like, they're not something that",
+        "start": 3145.265,
+        "duration": 3.89
+    },
+    {
+        "text": "you can just implement in transistors\ndirectly, like addition and subtraction",
+        "start": 3149.155,
+        "duration": 3.46
+    },
+    {
+        "text": "and multiplication and so forth.",
+        "start": 3152.625,
+        "duration": 1.16
+    },
+    {
+        "text": "Yeah.",
+        "start": 3155.335,
+        "duration": 0.08
+    },
+    {
+        "text": "there are a variety of,",
+        "start": 3155.625,
+        "duration": 1.45
+    },
+    {
+        "text": "when they're really computing the\nARC codes and you've got floating",
+        "start": 3160.04,
+        "duration": 2.43
+    },
+    {
+        "text": "point numbers, they start with a\nlookup and then there's probably",
+        "start": 3162.47,
+        "duration": 2.7
+    },
+    {
+        "text": "a polynomial iteration on it.",
+        "start": 3165.22,
+        "duration": 1.78
+    },
+    {
+        "text": "So they're expensive operations.",
+        "start": 3167.39,
+        "duration": 1.46
+    },
+    {
+        "text": "Newton iteration.",
+        "start": 3169.12,
+        "duration": 1.42
+    },
+    {
+        "text": "It's not a single op\nor anything like that.",
+        "start": 3171.75,
+        "duration": 2.71
+    },
+    {
+        "text": "There's a variety of optimizations that\npeople go to, to try to compute that.",
+        "start": 3174.9,
+        "duration": 5.86
+    },
+    {
+        "text": "The other thing is,",
+        "start": 3181.08,
+        "duration": 1.15
+    },
+    {
+        "text": "if you take, the easiest thing is, you\ntake the dot, the dot product, which you",
+        "start": 3184.68,
+        "duration": 5.16
+    },
+    {
+        "text": "say is normalized, and then just go to a\nlookup table to get you in the ballpark.",
+        "start": 3189.84,
+        "duration": 5.0
+    },
+    {
+        "text": "The other thing is, if you're comparing\ndistances, like if you're computing",
+        "start": 3197.24,
+        "duration": 2.98
+    },
+    {
+        "text": "two distances and you're trying to\ncompare which one's smaller, don't",
+        "start": 3200.24,
+        "duration": 3.75
+    },
+    {
+        "text": "compare the distances like by, like\nwhen you have to, sum all the squared,",
+        "start": 3204.0,
+        "duration": 3.72
+    },
+    {
+        "text": "components and you take the square root,\njust compare the distances squared.",
+        "start": 3208.41,
+        "duration": 3.5
+    },
+    {
+        "text": "Okay.",
+        "start": 3211.91,
+        "duration": 0.015
+    },
+    {
+        "text": "That way you don't, that square\nroot is also an expensive operation,",
+        "start": 3212.205,
+        "duration": 2.41
+    },
+    {
+        "text": "and you can compare directly the,\ndistances squared, the, one's going to",
+        "start": 3215.105,
+        "duration": 5.33
+    },
+    {
+        "text": "be bigger than the other, obviously.",
+        "start": 3220.435,
+        "duration": 1.2
+    },
+    {
+        "text": "so that's another way you can save\nyourself some computations if you",
+        "start": 3222.585,
+        "duration": 2.23
+    },
+    {
+        "text": "don't, if you don't actually need the\ndistance, if you're just comparing two",
+        "start": 3224.815,
+        "duration": 2.82
+    },
+    {
+        "text": "distances, you can get by with that.",
+        "start": 3227.635,
+        "duration": 2.3
+    },
+    {
+        "text": "Yeah, that's a good, point, yeah,\nbecause, that will tend to have",
+        "start": 3230.625,
+        "duration": 4.31
+    },
+    {
+        "text": "a coordinate bias though to it.",
+        "start": 3234.975,
+        "duration": 2.09
+    },
+    {
+        "text": "How When you, if you're just taking the\ndistance, okay, I'm sorry, nevermind.",
+        "start": 3240.135,
+        "duration": 6.89
+    },
+    {
+        "text": "Distance squared.",
+        "start": 3247.025,
+        "duration": 1.17
+    },
+    {
+        "text": "No, I understand.",
+        "start": 3248.515,
+        "duration": 1.2
+    },
+    {
+        "text": "I thought you were talking about\nthe square of the components.",
+        "start": 3249.715,
+        "duration": 1.94
+    },
+    {
+        "text": "Nevermind.",
+        "start": 3252.105,
+        "duration": 0.42
+    },
+    {
+        "text": "You're right.",
+        "start": 3252.545,
+        "duration": 0.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 3253.015,
+        "duration": 0.19
+    },
+    {
+        "text": "Compare the distance to\nsquared is, easy enough.",
+        "start": 3253.325,
+        "duration": 2.95
+    },
+    {
+        "text": "So from the profiler, actually the\nslowest operations are, or yeah.",
+        "start": 3257.315,
+        "duration": 5.52
+    },
+    {
+        "text": "Multiplied by how often they are\nbeing performed in the algorithm",
+        "start": 3263.96,
+        "duration": 2.7
+    },
+    {
+        "text": "is the Einsam, and actually I was\nsurprised also the Maximum operation.",
+        "start": 3267.2,
+        "duration": 6.25
+    }
+]

@@ -1,0 +1,6232 @@
+[
+    {
+        "text": "All right, welcome to the third\nvideo in the core video series.",
+        "start": 1.476,
+        "duration": 3.2
+    },
+    {
+        "text": "And now we're gonna dive into some\nmore depth on the actual implementation",
+        "start": 5.266,
+        "duration": 4.79
+    },
+    {
+        "text": "and how we want to implement these\nmodules and the communication protocol.",
+        "start": 10.066,
+        "duration": 5.81
+    },
+    {
+        "text": "So here I have a couple\nmore notes to make.",
+        "start": 16.536,
+        "duration": 3.43
+    },
+    {
+        "text": "The idea is that in this core video series\nI'm gonna do some intros for all the",
+        "start": 20.546,
+        "duration": 4.45
+    },
+    {
+        "text": "older videos because It's been a while\nsince we recorded them, and since then",
+        "start": 24.996,
+        "duration": 5.28
+    },
+    {
+        "text": "we tried a lot of things, we figured out\nsome issues, and what we talk about in",
+        "start": 30.296,
+        "duration": 4.53
+    },
+    {
+        "text": "these videos might not be exactly the same\nanymore if you look at the codebase now.",
+        "start": 34.826,
+        "duration": 4.78
+    },
+    {
+        "text": "And we might have figured out\nsome things as well that were",
+        "start": 40.026,
+        "duration": 2.95
+    },
+    {
+        "text": "open questions back then.",
+        "start": 42.976,
+        "duration": 1.33
+    },
+    {
+        "text": "So I'm just trying to give you a quick\nintro to have a bit of context, trying",
+        "start": 44.626,
+        "duration": 5.06
+    },
+    {
+        "text": "not to go into too much detail here.",
+        "start": 49.696,
+        "duration": 1.84
+    },
+    {
+        "text": "But hopefully I'm giving you a bit of\ninformation that helps to follow along",
+        "start": 51.891,
+        "duration": 4.27
+    },
+    {
+        "text": "and understand what we're talking about.",
+        "start": 56.171,
+        "duration": 1.62
+    },
+    {
+        "text": "So one big thing in this video is we talk\na lot about features and pose of features",
+        "start": 58.731,
+        "duration": 7.17
+    },
+    {
+        "text": "and communicating poses and features.",
+        "start": 65.901,
+        "duration": 2.31
+    },
+    {
+        "text": "And when we talk about features, you\nmight have a different idea of what",
+        "start": 68.731,
+        "duration": 4.74
+    },
+    {
+        "text": "we mean with that than we actually do.",
+        "start": 73.471,
+        "duration": 2.56
+    },
+    {
+        "text": "So features in computer vision are\noften like 2D edge detectors or some",
+        "start": 76.451,
+        "duration": 5.2
+    },
+    {
+        "text": "pattern or something like that you\ncan recognize with a kernel function.",
+        "start": 81.701,
+        "duration": 3.41
+    },
+    {
+        "text": "When we talk about features here,\nfeatures have three dimensional",
+        "start": 85.771,
+        "duration": 4.25
+    },
+    {
+        "text": "poses associated with them.",
+        "start": 90.021,
+        "duration": 1.56
+    },
+    {
+        "text": "And at higher levels,\nfeatures are entire objects.",
+        "start": 91.911,
+        "duration": 3.21
+    },
+    {
+        "text": "So one of the core principles of the\nthousand brains theory is that each",
+        "start": 95.751,
+        "duration": 4.82
+    },
+    {
+        "text": "cortical column can model entire objects.",
+        "start": 101.001,
+        "duration": 2.51
+    },
+    {
+        "text": "And that means if a cortical column\noutputs something which adheres to",
+        "start": 104.721,
+        "duration": 7.365
+    },
+    {
+        "text": "the cortical messaging protocol.",
+        "start": 112.406,
+        "duration": 1.84
+    },
+    {
+        "text": "It outputs a feature, but that feature\nrepresents an entire object and its pose.",
+        "start": 114.656,
+        "duration": 5.45
+    },
+    {
+        "text": "So let me give you a quick example.",
+        "start": 120.796,
+        "duration": 2.29
+    },
+    {
+        "text": "Let's say you're trying to\nrecognize this Numenta coffee mug",
+        "start": 124.216,
+        "duration": 3.08
+    },
+    {
+        "text": "and you have two cortical columns\nstacked on top of each other.",
+        "start": 127.336,
+        "duration": 3.43
+    },
+    {
+        "text": "The lower column models the Numenta\nlogo and the higher column models",
+        "start": 131.206,
+        "duration": 5.12
+    },
+    {
+        "text": "the cup with the logo on it.",
+        "start": 136.356,
+        "duration": 1.72
+    },
+    {
+        "text": "So the lower level column\ngets input over time.",
+        "start": 139.231,
+        "duration": 3.47
+    },
+    {
+        "text": "It doesn't see the whole\nlogo at the same time.",
+        "start": 142.701,
+        "duration": 3.86
+    },
+    {
+        "text": "We have a sensor moving over the\nlogo and it's recognizing this",
+        "start": 147.041,
+        "duration": 3.5
+    },
+    {
+        "text": "logo through movement over time.",
+        "start": 150.541,
+        "duration": 1.81
+    },
+    {
+        "text": "It recognizes the features in\nthe logo relative to each other.",
+        "start": 152.351,
+        "duration": 3.65
+    },
+    {
+        "text": "And once it recognizes the Numenta\nlogo, it outputs the ID of this, the",
+        "start": 156.611,
+        "duration": 6.035
+    },
+    {
+        "text": "ID of this model as a feature, plus\nthe orientation and location of it.",
+        "start": 162.676,
+        "duration": 5.1
+    },
+    {
+        "text": "And that becomes the input to the higher\nlevel model, which models the coffee mug.",
+        "start": 168.356,
+        "duration": 4.7
+    },
+    {
+        "text": "And in that model, the logo is a\nfeature at a location within that model.",
+        "start": 173.466,
+        "duration": 5.95
+    },
+    {
+        "text": "that sounds a bit complicated.",
+        "start": 181.576,
+        "duration": 1.18
+    },
+    {
+        "text": "I'll try to be brief.",
+        "start": 182.926,
+        "duration": 1.29
+    },
+    {
+        "text": "The main point is that a feature can\nbe an entire object, a 3 dimensional",
+        "start": 185.136,
+        "duration": 4.72
+    },
+    {
+        "text": "object, and it has a 3 dimensional pose.",
+        "start": 189.856,
+        "duration": 3.21
+    },
+    {
+        "text": "How would that work at the lowest level?",
+        "start": 193.626,
+        "duration": 2.21
+    },
+    {
+        "text": "actually, the features that\ncome from the sensor module.",
+        "start": 196.496,
+        "duration": 3.1
+    },
+    {
+        "text": "How do we get a 3 dimensional pose there?",
+        "start": 199.996,
+        "duration": 2.44
+    },
+    {
+        "text": "So what we do there is we use the\npoint normal and curvature direction",
+        "start": 203.056,
+        "duration": 4.61
+    },
+    {
+        "text": "that are being sensed to define,\nthe 3D pose at that location.",
+        "start": 208.036,
+        "duration": 5.97
+    },
+    {
+        "text": "for those of you who don't know, the\npoint normal is essentially if you draw",
+        "start": 215.866,
+        "duration": 4.29
+    },
+    {
+        "text": "a line orthogonally out of the surface\nof the object, that's the point normal.",
+        "start": 220.526,
+        "duration": 5.25
+    },
+    {
+        "text": "on this coffee mug, the point\nnormal would be like this here.",
+        "start": 226.286,
+        "duration": 2.95
+    },
+    {
+        "text": "If we get to the rim of the cup,\nit turns like this, and then on",
+        "start": 229.536,
+        "duration": 4.11
+    },
+    {
+        "text": "the inside it's the opposite.",
+        "start": 233.646,
+        "duration": 1.36
+    },
+    {
+        "text": "Thanks for that.",
+        "start": 235.006,
+        "duration": 0.14
+    },
+    {
+        "text": ". so the point normal is always orthogonal\nto the surface, and then the curvature",
+        "start": 236.346,
+        "duration": 5.37
+    },
+    {
+        "text": "direction are two more orthogonal\nunit vectors to that point, normal.",
+        "start": 241.716,
+        "duration": 5.07
+    },
+    {
+        "text": "So they point in the, direction of\nthe highest and lowest curvature.",
+        "start": 246.816,
+        "duration": 5.01
+    },
+    {
+        "text": "So on this cup, it would be one\nof them would go up like this.",
+        "start": 251.826,
+        "duration": 4.62
+    },
+    {
+        "text": "So here we have no curvature if we go\nup the mug or down the mug, and then the",
+        "start": 257.106,
+        "duration": 5.07
+    },
+    {
+        "text": "other one would go around the mug like\nthis, where we have a high curvature.",
+        "start": 262.366,
+        "duration": 3.95
+    },
+    {
+        "text": "So if I'm sensing the mug here,\nthe pose would be defined by the",
+        "start": 267.106,
+        "duration": 5.2
+    },
+    {
+        "text": "point normal, which looks like this.",
+        "start": 272.306,
+        "duration": 2.1
+    },
+    {
+        "text": "One of the curvature directions looks like\nthis, and the other one looks like this.",
+        "start": 274.976,
+        "duration": 4.25
+    },
+    {
+        "text": "And those three unit vectors\ntell us the pose of the object.",
+        "start": 279.606,
+        "duration": 5.01
+    },
+    {
+        "text": "at that location.",
+        "start": 284.971,
+        "duration": 1.01
+    },
+    {
+        "text": "And that's essentially the input that\ngoes into the lowest level learning",
+        "start": 286.301,
+        "duration": 3.44
+    },
+    {
+        "text": "module, and that's associated with the\nfeatures that come from the sensor module.",
+        "start": 289.741,
+        "duration": 5.03
+    },
+    {
+        "text": "for instance, we might get color, or\nthe amount of curvature there, as well",
+        "start": 294.801,
+        "duration": 5.12
+    },
+    {
+        "text": "as features, and then the pose are\nthese three vectors plus the location.",
+        "start": 299.931,
+        "duration": 4.37
+    },
+    {
+        "text": "And speaking of location, in this video\nwe also talk about  how in the brain",
+        "start": 305.321,
+        "duration": 5.54
+    },
+    {
+        "text": "there is no origin, grid cells don't\nrepresent an origin or anything like that.",
+        "start": 310.861,
+        "duration": 4.15
+    },
+    {
+        "text": "In our implementation we do have\nan origin, just because we're",
+        "start": 315.851,
+        "duration": 3.15
+    },
+    {
+        "text": "using Euclidean reference frames.",
+        "start": 319.001,
+        "duration": 1.77
+    },
+    {
+        "text": "But the origin we're using is\narbitrary, so the whole object modeling",
+        "start": 321.551,
+        "duration": 4.25
+    },
+    {
+        "text": "and also recognizing objects works\nno matter where we set the origin.",
+        "start": 325.811,
+        "duration": 5.8
+    },
+    {
+        "text": "The only thing that matters is how\nfeatures are located relative to each",
+        "start": 332.101,
+        "duration": 3.99
+    },
+    {
+        "text": "other within that reference frame.",
+        "start": 336.091,
+        "duration": 2.56
+    },
+    {
+        "text": "Okay, what else do we have?",
+        "start": 340.346,
+        "duration": 1.51
+    },
+    {
+        "text": "another thing we talked about\nin this video is, matching",
+        "start": 342.236,
+        "duration": 2.93
+    },
+    {
+        "text": "objects using displacements.",
+        "start": 345.186,
+        "duration": 1.75
+    },
+    {
+        "text": "and this is what we first implemented,\nand we tested it, and it had some really",
+        "start": 348.186,
+        "duration": 4.4
+    },
+    {
+        "text": "nice properties, like we could recognize\nobjects irrespective of the object's",
+        "start": 352.586,
+        "duration": 4.58
+    },
+    {
+        "text": "location, orientation, and scale.",
+        "start": 357.186,
+        "duration": 2.27
+    },
+    {
+        "text": "but it also had some very big drawbacks,\nthe biggest of them being you couldn't",
+        "start": 360.746,
+        "duration": 5.83
+    },
+    {
+        "text": "really sample new displacements.",
+        "start": 366.586,
+        "duration": 1.97
+    },
+    {
+        "text": "that you hadn't stored in the model,\nand if you wanted to store a lot of",
+        "start": 368.966,
+        "duration": 4.24
+    },
+    {
+        "text": "possible displacements to be able to\ngeneralize to new paths on the object,",
+        "start": 373.206,
+        "duration": 4.41
+    },
+    {
+        "text": "you have a combinatorial explosion.",
+        "start": 377.906,
+        "duration": 2.31
+    },
+    {
+        "text": "we implemented a different approach, I'm\nnot going to go into detail on that one,",
+        "start": 382.426,
+        "duration": 5.09
+    },
+    {
+        "text": "that will be presented in later videos.",
+        "start": 387.596,
+        "duration": 2.23
+    },
+    {
+        "text": "what else do we got?",
+        "start": 392.286,
+        "duration": 0.69
+    },
+    {
+        "text": "Oh yeah, at some point I mentioned\nthe idea of implementing a policy",
+        "start": 393.406,
+        "duration": 3.89
+    },
+    {
+        "text": "that essentially uses the internal\nmodels to move to locations",
+        "start": 397.366,
+        "duration": 5.11
+    },
+    {
+        "text": "that resolve the most ambiguity.",
+        "start": 402.476,
+        "duration": 1.91
+    },
+    {
+        "text": "And this is what's implemented in\nour code base as the hypothesis",
+        "start": 404.806,
+        "duration": 3.48
+    },
+    {
+        "text": "driven policies, or if you're more\nused to reinforcement learning",
+        "start": 408.286,
+        "duration": 3.37
+    },
+    {
+        "text": "terminology, model based policies.",
+        "start": 411.656,
+        "duration": 2.52
+    },
+    {
+        "text": "essentially, we're using the\ninternal models of an object,",
+        "start": 415.701,
+        "duration": 3.47
+    },
+    {
+        "text": "plus the hypotheses that we have,\nto inform where to move next.",
+        "start": 419.221,
+        "duration": 4.15
+    },
+    {
+        "text": "for example, if I'm on this mug,\nI'm not sure yet if it's a coffee",
+        "start": 423.681,
+        "duration": 4.13
+    },
+    {
+        "text": "mug, or a cylinder, or a cup.",
+        "start": 427.811,
+        "duration": 2.3
+    },
+    {
+        "text": "I would saccade or move to the\nhandle to resolve the ambiguity.",
+        "start": 431.111,
+        "duration": 4.45
+    },
+    {
+        "text": "and we got that implemented\nin our code base now.",
+        "start": 437.291,
+        "duration": 2.52
+    },
+    {
+        "text": "what else do we have?",
+        "start": 442.331,
+        "duration": 0.93
+    },
+    {
+        "text": "Oh, one other point is, we don't\nimplement separate where and what",
+        "start": 444.531,
+        "duration": 4.64
+    },
+    {
+        "text": "columns in the current codebase.",
+        "start": 449.171,
+        "duration": 2.92
+    },
+    {
+        "text": "A learning module can do both.",
+        "start": 452.471,
+        "duration": 1.95
+    },
+    {
+        "text": "It can do what a where column can\ndo and what a what pathway can do.",
+        "start": 454.571,
+        "duration": 3.45
+    },
+    {
+        "text": "So this is combined in a learning module.",
+        "start": 458.491,
+        "duration": 2.69
+    },
+    {
+        "text": "That should be all for now.",
+        "start": 462.941,
+        "duration": 1.65
+    },
+    {
+        "text": "If you have any more questions and\nthings are unclear, please just leave",
+        "start": 464.711,
+        "duration": 3.71
+    },
+    {
+        "text": "a comment and I'll try to answer it.",
+        "start": 468.421,
+        "duration": 1.8
+    },
+    {
+        "text": "But for now, just focus your 150,\n000 cortical columns on this video.",
+        "start": 470.831,
+        "duration": 3.94
+    },
+    {
+        "text": "Cheers!",
+        "start": 475.151,
+        "duration": 0.54
+    },
+    {
+        "text": "I guess this is it.",
+        "start": 484.068,
+        "duration": 0.65
+    },
+    {
+        "text": "I was asked last week to hey, we need to,\nwe need some more definition on this idea.",
+        "start": 486.038,
+        "duration": 5.15
+    },
+    {
+        "text": "And I don't really want to\ncall it the AI bus anymore.",
+        "start": 491.208,
+        "duration": 2.1
+    },
+    {
+        "text": "I don't want to call it the CCP,\nso we need an answer for that.",
+        "start": 493.338,
+        "duration": 2.67
+    },
+    {
+        "text": "So I'm just not gonna call\nit anything right now.",
+        "start": 496.773,
+        "duration": 1.67
+    },
+    {
+        "text": "one of the questions was what\nis, can we be more precise about",
+        "start": 501.183,
+        "duration": 2.97
+    },
+    {
+        "text": "a function of a module that\ndidn't get input from the sensor?",
+        "start": 504.213,
+        "duration": 3.51
+    },
+    {
+        "text": "And so I tried to do that and, and I went\nthrough a series of thought experiments,",
+        "start": 507.733,
+        "duration": 5.66
+    },
+    {
+        "text": "some of which I'll share with you today,\nbut what it ended up leading to is a set",
+        "start": 513.403,
+        "duration": 5.31
+    },
+    {
+        "text": "of, definitions that I'd like to propose.",
+        "start": 518.713,
+        "duration": 3.5
+    },
+    {
+        "text": "the biggest thing for me was clarity\non a bunch of old ideas or ideas",
+        "start": 523.828,
+        "duration": 4.53
+    },
+    {
+        "text": "we've thought about over the years.",
+        "start": 528.358,
+        "duration": 1.23
+    },
+    {
+        "text": "and there are various forms at\ndifferent times, and we never really",
+        "start": 530.328,
+        "duration": 2.65
+    },
+    {
+        "text": "could reconcile all these things.",
+        "start": 532.978,
+        "duration": 1.27
+    },
+    {
+        "text": "And we have this big grab bag\nof ideas we've focused on,",
+        "start": 534.388,
+        "duration": 4.25
+    },
+    {
+        "text": "different ways of doing things.",
+        "start": 538.638,
+        "duration": 0.91
+    },
+    {
+        "text": "And it seems like I have much clarity\nhow all those come together now.",
+        "start": 539.548,
+        "duration": 3.49
+    },
+    {
+        "text": "And there's a few new ideas that\ncome into it too, but primarily it's",
+        "start": 543.478,
+        "duration": 2.82
+    },
+    {
+        "text": "really about clarity and definitions.",
+        "start": 546.398,
+        "duration": 1.85
+    },
+    {
+        "text": "And so we have a common language\nand understanding what's going on.",
+        "start": 548.753,
+        "duration": 3.47
+    },
+    {
+        "text": "So I'll start just by\njumping in some definitions.",
+        "start": 554.133,
+        "duration": 3.65
+    },
+    {
+        "text": "the first one is the word pose.",
+        "start": 559.303,
+        "duration": 2.04
+    },
+    {
+        "text": "we've been using it, Ben is\nusing it in his document.",
+        "start": 562.063,
+        "duration": 3.24
+    },
+    {
+        "text": "We might not be able to say that you're\ntesting stuff, but, I want to make sure",
+        "start": 565.303,
+        "duration": 3.29
+    },
+    {
+        "text": "that we're all using it in the same way.",
+        "start": 568.633,
+        "duration": 1.69
+    },
+    {
+        "text": "So Marcus and I like this way.",
+        "start": 570.343,
+        "duration": 1.24
+    },
+    {
+        "text": "So we're going to talk this way.",
+        "start": 571.583,
+        "duration": 2.095
+    },
+    {
+        "text": "and Marcus says, this\nis a common usage of it.",
+        "start": 574.013,
+        "duration": 2.68
+    },
+    {
+        "text": "So in this case, a pose.",
+        "start": 577.043,
+        "duration": 2.03
+    },
+    {
+        "text": "is the relative location and\norientation between two things.",
+        "start": 579.443,
+        "duration": 3.51
+    },
+    {
+        "text": "So it's not just the location, it's\nnot just the orientation, it's both.",
+        "start": 582.963,
+        "duration": 2.47
+    },
+    {
+        "text": "in a three dimensional world, we could\nsay that's six degrees of freedom, right?",
+        "start": 586.703,
+        "duration": 3.44
+    },
+    {
+        "text": "Freedom of location,\nfreedom of orientation.",
+        "start": 590.553,
+        "duration": 1.9
+    },
+    {
+        "text": "and, the brain is going to be\ncalculating pose a lot between objects.",
+        "start": 593.793,
+        "duration": 3.8
+    },
+    {
+        "text": "It's just going to be constantly saying,\nwhat's the pose of this to this, we've",
+        "start": 597.803,
+        "duration": 4.86
+    },
+    {
+        "text": "had some discussions about how we\nwant to represent this information.",
+        "start": 602.663,
+        "duration": 3.94
+    },
+    {
+        "text": "and I, we can have a long\ndiscussion about that.",
+        "start": 607.523,
+        "duration": 1.85
+    },
+    {
+        "text": "because you could think of it\nlike Cartesian coordinates,",
+        "start": 610.343,
+        "duration": 1.97
+    },
+    {
+        "text": "you can do polar coordinates.",
+        "start": 612.313,
+        "duration": 1.42
+    },
+    {
+        "text": "The brain uses cellular codes, which\nis different than, like integers and,",
+        "start": 613.833,
+        "duration": 6.4
+    },
+    {
+        "text": "distances and angles, but it looks closer,\nmaybe the brain is perhaps closer to polar",
+        "start": 621.108,
+        "duration": 5.45
+    },
+    {
+        "text": "coordinates but using a cellular code.",
+        "start": 626.558,
+        "duration": 1.64
+    },
+    {
+        "text": "So we, but at the moment we\ndon't need to worry about that.",
+        "start": 628.248,
+        "duration": 2.9
+    },
+    {
+        "text": "We're just going to say we can\nspecify the pose between any two",
+        "start": 631.338,
+        "duration": 3.13
+    },
+    {
+        "text": "things and we're going to assume\nthe world is three dimensional.",
+        "start": 634.468,
+        "duration": 3.08
+    },
+    {
+        "text": "I don't know if the brain\nmakes that assumption.",
+        "start": 637.548,
+        "duration": 1.64
+    },
+    {
+        "text": "I think the brain actually doesn't\nmake that assumption, but we can",
+        "start": 639.268,
+        "duration": 3.39
+    },
+    {
+        "text": "make that assumption right now.",
+        "start": 642.658,
+        "duration": 1.31
+    },
+    {
+        "text": "So we have a three dimensional\nworld and the pose of the relative",
+        "start": 644.358,
+        "duration": 2.97
+    },
+    {
+        "text": "orientation between any two things.",
+        "start": 647.348,
+        "duration": 1.17
+    },
+    {
+        "text": "So I can say, what's the pose\nof this pen to this coffee cup?",
+        "start": 649.208,
+        "duration": 2.91
+    },
+    {
+        "text": "I can say, what's the pose\nof this pen to this mouse?",
+        "start": 652.158,
+        "duration": 1.84
+    },
+    {
+        "text": "I can say, what's the pose\nof this pen to this room?",
+        "start": 653.998,
+        "duration": 1.67
+    },
+    {
+        "text": "and and so to do that, you have to have\na, some sort of shared reference point.",
+        "start": 656.998,
+        "duration": 5.64
+    },
+    {
+        "text": "or shared, you don't have\nshared reference point.",
+        "start": 663.658,
+        "duration": 2.61
+    },
+    {
+        "text": "To do that, you have to have you\njust have, each object has to have",
+        "start": 666.268,
+        "duration": 2.65
+    },
+    {
+        "text": "its own sort of reference point.",
+        "start": 668.918,
+        "duration": 1.04
+    },
+    {
+        "text": "Okay, that's what pose.",
+        "start": 672.088,
+        "duration": 0.88
+    },
+    {
+        "text": "Any questions about pose?",
+        "start": 673.008,
+        "duration": 1.15
+    },
+    {
+        "text": "Pretty straightforward, right?",
+        "start": 674.278,
+        "duration": 2.1
+    },
+    {
+        "text": "we're going to use the word body.",
+        "start": 677.578,
+        "duration": 1.11
+    },
+    {
+        "text": "It's a little weird to use the word\nbody, but we've been using it already.",
+        "start": 678.698,
+        "duration": 2.72
+    },
+    {
+        "text": "It's just a shared reference point,\nrelated to your physical presence, right?",
+        "start": 681.448,
+        "duration": 4.52
+    },
+    {
+        "text": "you can just imagine there's some point\nin your body that's a reference point.",
+        "start": 686.418,
+        "duration": 2.97
+    },
+    {
+        "text": "and, and then I can say where is\nthe pose of other things to that.",
+        "start": 689.928,
+        "duration": 4.91
+    },
+    {
+        "text": "So I can say where is the pose of\nmy finger relative to that reference",
+        "start": 694.838,
+        "duration": 2.66
+    },
+    {
+        "text": "point, where is the pose of my toe.",
+        "start": 697.498,
+        "duration": 1.29
+    },
+    {
+        "text": "Cool.",
+        "start": 698.788,
+        "duration": 0.17
+    },
+    {
+        "text": "where is the pose to this object to that\nreference point, I could, it's just a, one",
+        "start": 699.678,
+        "duration": 3.57
+    },
+    {
+        "text": "that's shared, among a bunch of things.",
+        "start": 703.248,
+        "duration": 2.16
+    },
+    {
+        "text": "It's just, it is the sort of\nreference point for your body.",
+        "start": 705.408,
+        "duration": 2.85
+    },
+    {
+        "text": "There'll be other shared\nreference points along it.",
+        "start": 709.448,
+        "duration": 1.89
+    },
+    {
+        "text": "all right, so now we can\nthink about, a sensor.",
+        "start": 713.538,
+        "duration": 3.0
+    },
+    {
+        "text": "now, we're gonna define a sensor as,\nyou can think of it like a patch of",
+        "start": 717.198,
+        "duration": 5.41
+    },
+    {
+        "text": "your skin or a patch of your retina.",
+        "start": 722.608,
+        "duration": 1.82
+    },
+    {
+        "text": "It's not the entire retina.",
+        "start": 724.818,
+        "duration": 0.98
+    },
+    {
+        "text": "It's not all your skin.",
+        "start": 725.868,
+        "duration": 0.95
+    },
+    {
+        "text": "It's a small patch.",
+        "start": 726.838,
+        "duration": 0.92
+    },
+    {
+        "text": "key about the sensor, sensors\nhave a location and orientation.",
+        "start": 730.068,
+        "duration": 4.33
+    },
+    {
+        "text": "So they have, they can, you\ncan, just say, what is the pose",
+        "start": 734.808,
+        "duration": 3.22
+    },
+    {
+        "text": "of this sensor to something?",
+        "start": 738.028,
+        "duration": 1.02
+    },
+    {
+        "text": "I can say, what is the pose\nof the sensor to the body?",
+        "start": 739.818,
+        "duration": 2.07
+    },
+    {
+        "text": "I can say, what is the pose of\nthe sensor to something else?",
+        "start": 742.698,
+        "duration": 1.75
+    },
+    {
+        "text": "But it is a, you can think of it as a\npoint, a location, and an orientation.",
+        "start": 744.478,
+        "duration": 4.09
+    },
+    {
+        "text": "it's typically, it's a small patch of\nyour skin, where you have a small patch",
+        "start": 750.378,
+        "duration": 3.81
+    },
+    {
+        "text": "of your retina, that kind of thing.",
+        "start": 754.188,
+        "duration": 1.01
+    },
+    {
+        "text": "But.",
+        "start": 755.198,
+        "duration": 0.32
+    },
+    {
+        "text": "we'll, get a little more detail about that\nwhen we talk about how it's processed.",
+        "start": 756.448,
+        "duration": 3.15
+    },
+    {
+        "text": "your body consists of a whole\nbunch of sensors, that are moving",
+        "start": 760.698,
+        "duration": 4.09
+    },
+    {
+        "text": "around, as like mine are right now.",
+        "start": 764.788,
+        "duration": 2.14
+    },
+    {
+        "text": "my eyes are moving, and my, the\ndifferent parts of my eyes are looking",
+        "start": 767.608,
+        "duration": 2.31
+    },
+    {
+        "text": "different directions, and I have\ntens of thousands of sensors, at the",
+        "start": 769.918,
+        "duration": 3.2
+    },
+    {
+        "text": "moment, and they're all moving around.",
+        "start": 773.118,
+        "duration": 1.93
+    },
+    {
+        "text": "and they all, have, you can say they\nall have some location and orientation.",
+        "start": 776.578,
+        "duration": 4.36
+    },
+    {
+        "text": "And I could say what they, I could tell\nyou, what is it relative to the body?",
+        "start": 781.148,
+        "duration": 3.07
+    },
+    {
+        "text": "So let's just start drawing that here.",
+        "start": 784.348,
+        "duration": 2.5
+    },
+    {
+        "text": "I'm going to, for lack of a\nbetter word, I could draw like",
+        "start": 787.108,
+        "duration": 3.01
+    },
+    {
+        "text": "a 3D, a Cartesian coordinate.",
+        "start": 790.118,
+        "duration": 2.42
+    },
+    {
+        "text": "But I'm not going to, I'm just going\nto say, this is a representation",
+        "start": 792.538,
+        "duration": 4.23
+    },
+    {
+        "text": "of my reference point here.",
+        "start": 796.778,
+        "duration": 1.01
+    },
+    {
+        "text": "So that's a location and some\nreference location and orientation.",
+        "start": 797.838,
+        "duration": 4.97
+    },
+    {
+        "text": "We can call this the body.",
+        "start": 803.018,
+        "duration": 1.32
+    },
+    {
+        "text": "for now.",
+        "start": 806.848,
+        "duration": 0.58
+    },
+    {
+        "text": "And then I can have a sensor,\nwhich is just some thing out here.",
+        "start": 807.688,
+        "duration": 3.15
+    },
+    {
+        "text": "I don't need to specify\nwhat kind of sensor it is.",
+        "start": 810.838,
+        "duration": 2.05
+    },
+    {
+        "text": "It doesn't really matter.",
+        "start": 812.888,
+        "duration": 0.96
+    },
+    {
+        "text": "it's something that moves around.",
+        "start": 815.148,
+        "duration": 1.2
+    },
+    {
+        "text": "And so this is the sensor.",
+        "start": 816.998,
+        "duration": 1.15
+    },
+    {
+        "text": "And, I have a lot of those.",
+        "start": 819.218,
+        "duration": 1.93
+    },
+    {
+        "text": "There, there are different modalities,\nsome can be skin, some can be touch,",
+        "start": 822.328,
+        "duration": 4.82
+    },
+    {
+        "text": "can be hearing, doesn't really matter.",
+        "start": 827.148,
+        "duration": 1.2
+    },
+    {
+        "text": "I got a bunch of them, they're floating\naround in space, moving around.",
+        "start": 828.758,
+        "duration": 2.91
+    },
+    {
+        "text": "and the first thing we're going to say is,\nwe're going to talk a little in a moment.",
+        "start": 833.243,
+        "duration": 5.44
+    },
+    {
+        "text": "We're going to just, I'll just\njump around randomly here.",
+        "start": 838.763,
+        "duration": 2.18
+    },
+    {
+        "text": "One of the things we're going to assume,",
+        "start": 841.363,
+        "duration": 1.14
+    },
+    {
+        "text": "I didn't write it here, oh,\nup here, I wrote it here.",
+        "start": 846.503,
+        "duration": 2.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 848.913,
+        "duration": 0.26
+    },
+    {
+        "text": "Is, that our brain always knows, the\npose of the sensor to the body, always.",
+        "start": 849.353,
+        "duration": 6.63
+    },
+    {
+        "text": "All right.",
+        "start": 856.923,
+        "duration": 0.24
+    },
+    {
+        "text": "I'll, I might have an object out\nhere as we draw an object in green,",
+        "start": 858.113,
+        "duration": 3.54
+    },
+    {
+        "text": "something I might be sensing.",
+        "start": 862.913,
+        "duration": 1.29
+    },
+    {
+        "text": "That's a kind of independent of the\nbody, a pen, paper cup, whatever.",
+        "start": 865.258,
+        "duration": 4.05
+    },
+    {
+        "text": "And, These sensors are moving around,\nbut the important thing is at any moment",
+        "start": 869.938,
+        "duration": 5.69
+    },
+    {
+        "text": "in time, the pose of the sensors to\nthe body is known for every sensor.",
+        "start": 875.628,
+        "duration": 4.55
+    },
+    {
+        "text": "and I can explain that in a moment,\nbut to do this in biological",
+        "start": 882.678,
+        "duration": 4.41
+    },
+    {
+        "text": "terms is quite difficult.",
+        "start": 887.148,
+        "duration": 1.18
+    },
+    {
+        "text": "If you think about, like, how\ndoes your brain know where your",
+        "start": 889.318,
+        "duration": 1.87
+    },
+    {
+        "text": "finger is relative to your body?",
+        "start": 891.188,
+        "duration": 1.64
+    },
+    {
+        "text": "you might have to know where the\nfinger is relative to your joints,",
+        "start": 893.608,
+        "duration": 2.68
+    },
+    {
+        "text": "and your arm, and this, and then you\ncalculate all these things, and, there's",
+        "start": 896.288,
+        "duration": 4.17
+    },
+    {
+        "text": "some error that's involved in this.",
+        "start": 900.458,
+        "duration": 1.47
+    },
+    {
+        "text": "You might use your proprioceptive system.",
+        "start": 902.088,
+        "duration": 1.64
+    },
+    {
+        "text": "There's a whole bunch of mechanisms.",
+        "start": 903.728,
+        "duration": 1.02
+    },
+    {
+        "text": "That the brain could use to\nfigure this out, we're just",
+        "start": 905.393,
+        "duration": 2.74
+    },
+    {
+        "text": "going to assume that we know it.",
+        "start": 908.133,
+        "duration": 0.98
+    },
+    {
+        "text": "In an engineered system, we can say\nwe know what it is, it's just here.",
+        "start": 909.213,
+        "duration": 3.12
+    },
+    {
+        "text": "and so we don't have to worry\nabout that calculation, which is a",
+        "start": 913.933,
+        "duration": 2.07
+    },
+    {
+        "text": "sort of a biological calculation.",
+        "start": 916.003,
+        "duration": 1.31
+    },
+    {
+        "text": "and, so we're going to assume\nthat every, sensor's location did,",
+        "start": 919.163,
+        "duration": 3.49
+    },
+    {
+        "text": "pose to the body that's known.",
+        "start": 922.973,
+        "duration": 1.24
+    },
+    {
+        "text": "now, what does the sensor do, So I said\nit's a patch of skin or retina like",
+        "start": 926.543,
+        "duration": 6.12
+    },
+    {
+        "text": "that, they have location and orientation.",
+        "start": 932.663,
+        "duration": 1.41
+    },
+    {
+        "text": "We're going to define another thing\nhere, and this thing's called a feature.",
+        "start": 934.613,
+        "duration": 4.25
+    },
+    {
+        "text": "And, a feature is something\nthat a sensor can detect.",
+        "start": 939.983,
+        "duration": 3.93
+    },
+    {
+        "text": "and the general property of a\nfeature is it's got some measurable",
+        "start": 946.063,
+        "duration": 5.84
+    },
+    {
+        "text": "property about the world.",
+        "start": 951.903,
+        "duration": 1.3
+    },
+    {
+        "text": "And it too has a location and orientation.",
+        "start": 953.913,
+        "duration": 3.59
+    },
+    {
+        "text": "So regard, just think of it, it's\na thing out there in the world.",
+        "start": 958.673,
+        "duration": 3.16
+    },
+    {
+        "text": "Whatever it is, we're going to assume it\nhas a full location and orientation to it.",
+        "start": 962.633,
+        "duration": 4.69
+    },
+    {
+        "text": "So I've drawn it in\nthe same category here.",
+        "start": 967.593,
+        "duration": 2.69
+    },
+    {
+        "text": "Now, so I might be seeing something and\nI say, Oh, at that point out here, there",
+        "start": 970.843,
+        "duration": 4.82
+    },
+    {
+        "text": "is some feature at some orientation.",
+        "start": 975.663,
+        "duration": 1.38
+    },
+    {
+        "text": "and then, yeah.",
+        "start": 979.388,
+        "duration": 0.9
+    },
+    {
+        "text": "So when you say orientation and\nlocation reference point is the body?",
+        "start": 980.858,
+        "duration": 5.19
+    },
+    {
+        "text": "No, it could be any, it just, at this\npoint I can say some, I can say the pose",
+        "start": 986.088,
+        "duration": 4.25
+    },
+    {
+        "text": "between the sensor and the feature, that\nwould be, that's a legitimate pose, right?",
+        "start": 990.338,
+        "duration": 5.62
+    },
+    {
+        "text": "in that view, that pose, the\nsensor, the feature is on top of",
+        "start": 996.998,
+        "duration": 4.95
+    },
+    {
+        "text": "the sensor, but the direction is up.",
+        "start": 1001.948,
+        "duration": 1.84
+    },
+    {
+        "text": "no at this point, all we can say is, all\nwe can say is the sensor has some location",
+        "start": 1006.358,
+        "duration": 5.61
+    },
+    {
+        "text": "and the orientation, and the feature has,\na relative location orientation to it.",
+        "start": 1011.968,
+        "duration": 5.51
+    },
+    {
+        "text": "That's, the definition of a pose.",
+        "start": 1017.998,
+        "duration": 1.46
+    },
+    {
+        "text": "This, is fundamental to\nthe whole orientation.",
+        "start": 1020.248,
+        "duration": 3.89
+    },
+    {
+        "text": "It's relative to the sensor at\nthis point, to the sensor, right?",
+        "start": 1025.408,
+        "duration": 2.92
+    },
+    {
+        "text": "You could think of the sensor\nas having some, a tip of my",
+        "start": 1028.528,
+        "duration": 3.04
+    },
+    {
+        "text": "finger is some location in space.",
+        "start": 1031.568,
+        "duration": 3.03
+    },
+    {
+        "text": "And some orientation at that location.",
+        "start": 1035.163,
+        "duration": 2.02
+    },
+    {
+        "text": "But the orientation, that's\npart of the transcript.",
+        "start": 1037.283,
+        "duration": 2.42
+    },
+    {
+        "text": "it's, all relative.",
+        "start": 1040.303,
+        "duration": 0.9
+    },
+    {
+        "text": "As far as a point in the location.",
+        "start": 1041.203,
+        "duration": 1.15
+    },
+    {
+        "text": "Think of it just like a,\nit's just a reference frame.",
+        "start": 1043.353,
+        "duration": 2.89
+    },
+    {
+        "text": "So I can say, it's like saying,\nit's like saying, I'm going to",
+        "start": 1046.253,
+        "duration": 3.53
+    },
+    {
+        "text": "arbitrarily decide this is north.",
+        "start": 1049.783,
+        "duration": 1.72
+    },
+    {
+        "text": "Then I can say it's east, right?",
+        "start": 1051.968,
+        "duration": 2.07
+    },
+    {
+        "text": "But it's arbitrary.",
+        "start": 1054.188,
+        "duration": 0.77
+    },
+    {
+        "text": "I can just But is it arbitrary\nfor every sensor or for the body?",
+        "start": 1054.988,
+        "duration": 3.35
+    },
+    {
+        "text": "that's my question.",
+        "start": 1061.688,
+        "duration": 0.67
+    },
+    {
+        "text": "Everything has this reference frame.",
+        "start": 1063.348,
+        "duration": 1.99
+    },
+    {
+        "text": "the body is a reference\nframe, if you will.",
+        "start": 1066.668,
+        "duration": 2.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 1069.608,
+        "duration": 0.31
+    },
+    {
+        "text": "A sensor has its own reference frame.",
+        "start": 1069.968,
+        "duration": 1.69
+    },
+    {
+        "text": "The feature has its own reference frame.",
+        "start": 1071.678,
+        "duration": 1.85
+    },
+    {
+        "text": "Everything has this property.",
+        "start": 1074.228,
+        "duration": 1.71
+    },
+    {
+        "text": "You could say everything\nhas its own defined north.",
+        "start": 1076.118,
+        "duration": 2.4
+    },
+    {
+        "text": "Okay.",
+        "start": 1078.518,
+        "duration": 0.13
+    },
+    {
+        "text": "You could say everything has its own\ndefined north and its own origin.",
+        "start": 1079.943,
+        "duration": 3.29
+    },
+    {
+        "text": "this is a pretty fundamental\nimportant concept.",
+        "start": 1087.993,
+        "duration": 2.37
+    },
+    {
+        "text": "So if it's other than it's confused about,\nif anyone can help me explain this better",
+        "start": 1090.363,
+        "duration": 3.27
+    },
+    {
+        "text": "or a different way of explaining it.",
+        "start": 1093.633,
+        "duration": 1.08
+    },
+    {
+        "text": "I think what, what, he's asking is whether\nthe feature has a local reference frame.",
+        "start": 1096.043,
+        "duration": 5.01
+    },
+    {
+        "text": "I think you just answered that.",
+        "start": 1101.053,
+        "duration": 1.38
+    },
+    {
+        "text": "It, does.",
+        "start": 1103.563,
+        "duration": 0.5
+    },
+    {
+        "text": "I'm not using the word\nreference frame here, but, But,",
+        "start": 1105.523,
+        "duration": 3.2
+    },
+    {
+        "text": "because reference frame implies, maybe\nit implies Cartesian coordinates,",
+        "start": 1110.773,
+        "duration": 4.46
+    },
+    {
+        "text": "it's, basically when you\nsaid they had a pose.",
+        "start": 1117.803,
+        "duration": 2.55
+    },
+    {
+        "text": "There's the, I think there's\nambiguity when you say the word pose",
+        "start": 1120.773,
+        "duration": 4.6
+    },
+    {
+        "text": "because it's relative to something.",
+        "start": 1125.393,
+        "duration": 3.4
+    },
+    {
+        "text": "you could say there's a feature I only\nknow the thing about the feature is",
+        "start": 1129.053,
+        "duration": 2.93
+    },
+    {
+        "text": "that I detected, I know the location,\nbut I don't know have the local.",
+        "start": 1131.983,
+        "duration": 4.16
+    },
+    {
+        "text": "Coordinate system for the thing,\neverything you can use the word reference",
+        "start": 1136.573,
+        "duration": 4.42
+    },
+    {
+        "text": "frame, everything has a reference\nframe and you can think of those",
+        "start": 1141.003,
+        "duration": 3.58
+    },
+    {
+        "text": "three axis is moving around, right?",
+        "start": 1144.593,
+        "duration": 1.67
+    },
+    {
+        "text": "So if I say, here's my reference\nframe, then anybody else has a",
+        "start": 1146.273,
+        "duration": 3.98
+    },
+    {
+        "text": "reference frame that I can, then I can\ncalculate the pose between the two.",
+        "start": 1150.253,
+        "duration": 2.91
+    },
+    {
+        "text": "But it's an internal thing.",
+        "start": 1154.288,
+        "duration": 1.22
+    },
+    {
+        "text": "If this feature were to move, like this,\nits reference frame would move, and then",
+        "start": 1155.568,
+        "duration": 5.41
+    },
+    {
+        "text": "the pose to the sensor would change.",
+        "start": 1160.978,
+        "duration": 1.65
+    },
+    {
+        "text": "if I just rotated in this spot, in any\nof the three dimensions of rotation,",
+        "start": 1164.418,
+        "duration": 3.78
+    },
+    {
+        "text": "it would have the same location to the,\nsection, but the orientation would change.",
+        "start": 1168.198,
+        "duration": 4.12
+    },
+    {
+        "text": "And if the sensor went like up\nhere, it might have a different",
+        "start": 1173.073,
+        "duration": 3.53
+    },
+    {
+        "text": "location to the sensor, right?",
+        "start": 1176.633,
+        "duration": 2.41
+    },
+    {
+        "text": "But if you thought of that as a reference\nframe, everything has a reference frame.",
+        "start": 1179.543,
+        "duration": 2.92
+    },
+    {
+        "text": "And it's arbitrarily chosen initially.",
+        "start": 1182.903,
+        "duration": 2.64
+    },
+    {
+        "text": "Like we used to say anchoring your\ngrid cells or something like that.",
+        "start": 1186.353,
+        "duration": 2.28
+    },
+    {
+        "text": "Just arbitrarily chosen what's\nnorth, and, where, what's zero",
+        "start": 1188.773,
+        "duration": 6.23
+    },
+    {
+        "text": "if you want to call it that.",
+        "start": 1195.013,
+        "duration": 0.832
+    },
+    {
+        "text": "But the north of the sensor is\ndifferent than the north of the sensor.",
+        "start": 1195.845,
+        "duration": 2.178
+    },
+    {
+        "text": "Yeah, Everybody has its\nown local reference frame.",
+        "start": 1198.023,
+        "duration": 2.08
+    },
+    {
+        "text": "And these reference frames\nare moving around in space.",
+        "start": 1200.103,
+        "duration": 1.52
+    },
+    {
+        "text": "Is there anyone else confused by that?",
+        "start": 1201.623,
+        "duration": 1.71
+    },
+    {
+        "text": "Speak up.",
+        "start": 1205.973,
+        "duration": 0.37
+    },
+    {
+        "text": "I just want to clarify something.",
+        "start": 1206.343,
+        "duration": 1.32
+    },
+    {
+        "text": "It doesn't matter if we have a\nuniversal coordinate system, right?",
+        "start": 1207.973,
+        "duration": 3.58
+    },
+    {
+        "text": "Because everything is centered\nwith respect to my body.",
+        "start": 1211.633,
+        "duration": 2.76
+    },
+    {
+        "text": "My sensor is with respect to my body,\nand that's a known transformation.",
+        "start": 1214.848,
+        "duration": 3.33
+    },
+    {
+        "text": "And the features that I observe\nwith respect to my sensor can also",
+        "start": 1218.888,
+        "duration": 3.28
+    },
+    {
+        "text": "be directly related to my body.",
+        "start": 1222.178,
+        "duration": 1.29
+    },
+    {
+        "text": "Yes, Wherever my body\nis, that's the, center.",
+        "start": 1224.098,
+        "duration": 2.46
+    },
+    {
+        "text": "Let's let's, I want to\nclarify that even further.",
+        "start": 1226.888,
+        "duration": 2.11
+    },
+    {
+        "text": "The concept of pose does not require\na universal reference frame at all.",
+        "start": 1229.618,
+        "duration": 3.37
+    },
+    {
+        "text": "Nothing.",
+        "start": 1233.318,
+        "duration": 0.25
+    },
+    {
+        "text": "It's just two objects, two\nreference frames, and they're",
+        "start": 1234.218,
+        "duration": 2.62
+    },
+    {
+        "text": "relevant, and they're pose.",
+        "start": 1236.838,
+        "duration": 0.87
+    },
+    {
+        "text": "That's it.",
+        "start": 1237.708,
+        "duration": 0.32
+    },
+    {
+        "text": "I can determine that no matter\nwhere they are in the universe.",
+        "start": 1238.048,
+        "duration": 2.54
+    },
+    {
+        "text": "It doesn't matter.",
+        "start": 1240.608,
+        "duration": 0.6
+    },
+    {
+        "text": "The pose between two\nobjects is determined.",
+        "start": 1241.508,
+        "duration": 1.55
+    },
+    {
+        "text": "There's another object we're calling\na body, and then it's going to have",
+        "start": 1244.328,
+        "duration": 2.72
+    },
+    {
+        "text": "a, it's going to stay a special\nrole, but it's just another object.",
+        "start": 1247.048,
+        "duration": 2.93
+    },
+    {
+        "text": "There's nothing else.",
+        "start": 1250.728,
+        "duration": 0.73
+    },
+    {
+        "text": "It's another reference frame.",
+        "start": 1252.008,
+        "duration": 1.1
+    },
+    {
+        "text": "It's no different than this reference\nframe, than this reference frame.",
+        "start": 1253.128,
+        "duration": 2.89
+    },
+    {
+        "text": "It's just another reference frame,\nand we're going to have, and we're",
+        "start": 1256.028,
+        "duration": 2.45
+    },
+    {
+        "text": "going to be calculating things.",
+        "start": 1258.478,
+        "duration": 0.94
+    },
+    {
+        "text": "We're going to use it as a special way,\nbut it's just another reference frame.",
+        "start": 1259.418,
+        "duration": 3.61
+    },
+    {
+        "text": "There is no universal\nanything in this, system.",
+        "start": 1263.508,
+        "duration": 3.19
+    },
+    {
+        "text": "Does that help?",
+        "start": 1268.918,
+        "duration": 0.52
+    },
+    {
+        "text": "Okay.",
+        "start": 1270.118,
+        "duration": 0.12
+    },
+    {
+        "text": "I started with this because I thought\nthere'd be a lot of confusion about it",
+        "start": 1270.738,
+        "duration": 5.73
+    },
+    {
+        "text": "and there's a lot of confusion about\nhow you implement it and I wanted",
+        "start": 1276.468,
+        "duration": 2.22
+    },
+    {
+        "text": "to avoid that, although I'm happy to\ntalk about how neurons do this, which",
+        "start": 1278.688,
+        "duration": 4.22
+    },
+    {
+        "text": "I think is really interesting, and,\nbut how we would do it is also pretty",
+        "start": 1282.908,
+        "duration": 3.6
+    },
+    {
+        "text": "interesting, but it doesn't really matter.",
+        "start": 1286.508,
+        "duration": 1.27
+    },
+    {
+        "text": "It's the concept of a\npose that's important.",
+        "start": 1287.948,
+        "duration": 2.08
+    },
+    {
+        "text": "And the concept of a pose works\nin any number of dimensions.",
+        "start": 1290.998,
+        "duration": 2.62
+    },
+    {
+        "text": "So it doesn't matter, we'll just assume\nit's three dimensions at the moment.",
+        "start": 1293.678,
+        "duration": 4.5
+    },
+    {
+        "text": "Okay.",
+        "start": 1298.868,
+        "duration": 0.43
+    },
+    {
+        "text": "So, but this idea now, this is\na key insight I had here that",
+        "start": 1300.538,
+        "duration": 4.39
+    },
+    {
+        "text": "I didn't understand before.",
+        "start": 1305.018,
+        "duration": 1.18
+    },
+    {
+        "text": "that features also have a\nfull pose relative to a sensor",
+        "start": 1307.113,
+        "duration": 3.77
+    },
+    {
+        "text": "or relative to other things.",
+        "start": 1310.883,
+        "duration": 1.02
+    },
+    {
+        "text": "There's an entire reference\nframe associated with a feature.",
+        "start": 1312.343,
+        "duration": 3.32
+    },
+    {
+        "text": "it's not just, something.",
+        "start": 1316.573,
+        "duration": 1.99
+    },
+    {
+        "text": "Now, imagine you have a sensor and like\nwith vision I can say, oh this, and I",
+        "start": 1318.563,
+        "duration": 5.98
+    },
+    {
+        "text": "have a reference frame for my sensor, I\ncan say the feature is at some point In",
+        "start": 1324.553,
+        "duration": 4.175
+    },
+    {
+        "text": "distance and location relative to me, but\nalso it has an orientation at that point.",
+        "start": 1328.728,
+        "duration": 5.26
+    },
+    {
+        "text": "and now some features, some\nsensors don't really give you",
+        "start": 1335.398,
+        "duration": 4.65
+    },
+    {
+        "text": "enough information for that.",
+        "start": 1340.048,
+        "duration": 1.17
+    },
+    {
+        "text": "for example, I might just have a\nsensor that just detects something",
+        "start": 1342.018,
+        "duration": 5.9
+    },
+    {
+        "text": "solid here, but nothing else.",
+        "start": 1347.918,
+        "duration": 2.05
+    },
+    {
+        "text": "I bumped up against something or\nsomething out there, which is my thing",
+        "start": 1351.238,
+        "duration": 4.27
+    },
+    {
+        "text": "can't pass through and I know there's\nsomething there that will still work in",
+        "start": 1355.548,
+        "duration": 3.34
+    },
+    {
+        "text": "the system, the, in that case the feature\ndetecting really doesn't, it doesn't",
+        "start": 1358.888,
+        "duration": 5.25
+    },
+    {
+        "text": "have a full sense of orientation I could.",
+        "start": 1364.138,
+        "duration": 1.91
+    },
+    {
+        "text": "If I were looking at a surface, I could\nbe rotating the surface like this.",
+        "start": 1366.423,
+        "duration": 3.52
+    },
+    {
+        "text": "I wouldn't know the difference,\nand something like color may not",
+        "start": 1369.943,
+        "duration": 4.79
+    },
+    {
+        "text": "have any sort of orientation to it.",
+        "start": 1374.733,
+        "duration": 1.99
+    },
+    {
+        "text": "The most important thing about\na feature is it's at some pose.",
+        "start": 1377.043,
+        "duration": 4.59
+    },
+    {
+        "text": "it's a relative to other things.",
+        "start": 1382.663,
+        "duration": 1.54
+    },
+    {
+        "text": "And, and this is really confusing\nbecause when you think about sound",
+        "start": 1384.563,
+        "duration": 4.59
+    },
+    {
+        "text": "and sight and touch, you might,\nyou may not realize that, but this",
+        "start": 1389.153,
+        "duration": 5.04
+    },
+    {
+        "text": "is a key part of the whole thing.",
+        "start": 1394.203,
+        "duration": 1.07
+    },
+    {
+        "text": "We're just going to assume there's a\nreference frame attached to every feature.",
+        "start": 1395.283,
+        "duration": 3.3
+    },
+    {
+        "text": "And some features is very obvious\nwhy there is other features,",
+        "start": 1399.003,
+        "duration": 2.65
+    },
+    {
+        "text": "it's hey, it's so fuzzy what that\nreference, the orientation of it,",
+        "start": 1401.673,
+        "duration": 3.23
+    },
+    {
+        "text": "something you can't really detect it.",
+        "start": 1405.073,
+        "duration": 1.34
+    },
+    {
+        "text": "But the general case is.",
+        "start": 1406.713,
+        "duration": 1.42
+    },
+    {
+        "text": "There is a pose of that to\nthis, or there's a reference",
+        "start": 1408.578,
+        "duration": 3.09
+    },
+    {
+        "text": "to an attachment feature.",
+        "start": 1411.668,
+        "duration": 0.55
+    },
+    {
+        "text": "If I have my finger touching an object,\nthen, my finger generally is right",
+        "start": 1413.578,
+        "duration": 6.51
+    },
+    {
+        "text": "up against the object, and so the,\ndistance to that, or the, location of",
+        "start": 1420.088,
+        "duration": 4.19
+    },
+    {
+        "text": "that feature, from, my finger is really\nalmost coincident with the finger itself.",
+        "start": 1424.308,
+        "duration": 5.31
+    },
+    {
+        "text": "but that's just a, that's just a\nspecial case of the, of this one.",
+        "start": 1430.863,
+        "duration": 5.07
+    },
+    {
+        "text": "It's just saying, oh yeah, this\nsensor can only detect things",
+        "start": 1436.373,
+        "duration": 2.42
+    },
+    {
+        "text": "up a certain distance away.",
+        "start": 1438.793,
+        "duration": 1.38
+    },
+    {
+        "text": "By the way, it's been shown that if\nyou wear like a thick glove, your",
+        "start": 1440.353,
+        "duration": 3.58
+    },
+    {
+        "text": "perception of where you're touching\nis on the outside of the glove.",
+        "start": 1443.953,
+        "duration": 2.05
+    },
+    {
+        "text": "it's not your finger, it's on the outside.",
+        "start": 1446.843,
+        "duration": 1.31
+    },
+    {
+        "text": "It's like when you use a tool, so it's not\nthat touch is always right on the object.",
+        "start": 1448.153,
+        "duration": 4.99
+    },
+    {
+        "text": "it's, you have a sensor at some\ndistance from that sensor and some low,",
+        "start": 1453.443,
+        "duration": 4.0
+    },
+    {
+        "text": "some pose to the sensor there's a feature.",
+        "start": 1459.568,
+        "duration": 1.76
+    },
+    {
+        "text": "Okay, any further questions\nabout that before we go on?",
+        "start": 1463.843,
+        "duration": 5.78
+    },
+    {
+        "text": "All right,",
+        "start": 1471.413,
+        "duration": 0.3
+    },
+    {
+        "text": "a few more seconds.",
+        "start": 1473.953,
+        "duration": 0.44
+    },
+    {
+        "text": "So one of the thought experiments\nI had was interesting.",
+        "start": 1477.163,
+        "duration": 2.56
+    },
+    {
+        "text": "I was holding, this pen in my hand,\nthis Muji pen, and not looking at it,",
+        "start": 1480.153,
+        "duration": 6.22
+    },
+    {
+        "text": "but just running my finger, touching\nsome feature on this pen, like maybe the",
+        "start": 1487.443,
+        "duration": 3.98
+    },
+    {
+        "text": "bottom of the clip, the top little edge\nhere or the side, and it's, and this",
+        "start": 1491.443,
+        "duration": 3.99
+    },
+    {
+        "text": "is, in hindsight, it's not surprising,\nbut it certainly was surprising when",
+        "start": 1495.433,
+        "duration": 2.85
+    },
+    {
+        "text": "I thought about it carefully is that,",
+        "start": 1498.293,
+        "duration": 3.02
+    },
+    {
+        "text": "I have a sense for what I'm detecting.",
+        "start": 1503.833,
+        "duration": 2.56
+    },
+    {
+        "text": "For example, oh, I'm detecting\nthis edge on the side of the clip.",
+        "start": 1506.993,
+        "duration": 2.33
+    },
+    {
+        "text": "And I, of course, my\nsense is where is that?",
+        "start": 1510.123,
+        "duration": 2.53
+    },
+    {
+        "text": "I can sense it relative to my body.",
+        "start": 1512.733,
+        "duration": 1.63
+    },
+    {
+        "text": "I know where this is.",
+        "start": 1514.363,
+        "duration": 0.72
+    },
+    {
+        "text": "the same touch of my finger here, It\nchanged when I moved over here, I saw",
+        "start": 1515.493,
+        "duration": 5.4
+    },
+    {
+        "text": "it's a different location relative to my\nbody, and here it's a different location,",
+        "start": 1520.893,
+        "duration": 2.56
+    },
+    {
+        "text": "but it's the same input on my finger.",
+        "start": 1523.503,
+        "duration": 1.19
+    },
+    {
+        "text": "and then, and when I rotate my\nfinger on here, my perception is",
+        "start": 1526.353,
+        "duration": 3.66
+    },
+    {
+        "text": "the edge is still oriented in the\nsame position relative to my body.",
+        "start": 1530.013,
+        "duration": 3.46
+    },
+    {
+        "text": "So just by changing the orientation of\nmy sensor doesn't change my perception",
+        "start": 1533.793,
+        "duration": 3.69
+    },
+    {
+        "text": "of what I'm feeling, this feature is\nat some location relative to my body.",
+        "start": 1537.483,
+        "duration": 4.06
+    },
+    {
+        "text": "I also notice if I roll my finger over,\nover a feature like this, I'm actually",
+        "start": 1543.043,
+        "duration": 3.75
+    },
+    {
+        "text": "invoking different sensory patches,\nand yet I sense the same feature at",
+        "start": 1546.843,
+        "duration": 4.36
+    },
+    {
+        "text": "the same position relative to my body.",
+        "start": 1551.213,
+        "duration": 1.58
+    },
+    {
+        "text": "So I'm invoking different sensory\npatches, different sensors in some",
+        "start": 1552.833,
+        "duration": 2.87
+    },
+    {
+        "text": "sense, we're actually now actuating\nthis thing, and yet I have the",
+        "start": 1555.703,
+        "duration": 2.42
+    },
+    {
+        "text": "same perception about where it is.",
+        "start": 1558.123,
+        "duration": 1.23
+    },
+    {
+        "text": "oh, no, it's the same feature.",
+        "start": 1560.173,
+        "duration": 1.13
+    },
+    {
+        "text": "Some people I remember back in the old\ndays and old office used to run my finger",
+        "start": 1562.403,
+        "duration": 2.82
+    },
+    {
+        "text": "on whiteboard I said, oh, how is it?",
+        "start": 1565.223,
+        "duration": 1.98
+    },
+    {
+        "text": "I had the same sensation all the time,\neven though my thumb was changing.",
+        "start": 1567.203,
+        "duration": 3.36
+    },
+    {
+        "text": "That's a reference.",
+        "start": 1571.133,
+        "duration": 0.64
+    },
+    {
+        "text": "That's a little time",
+        "start": 1571.793,
+        "duration": 0.57
+    },
+    {
+        "text": "and I also noticed it doesn't matter which\npart of my skin I can touch it with my",
+        "start": 1575.503,
+        "duration": 3.36
+    },
+    {
+        "text": "finger or my other finger Or the back of\nthis finger or with my arm or whatever I",
+        "start": 1578.863,
+        "duration": 5.75
+    },
+    {
+        "text": "get the same sensation so you can think\nof it this way You Now, just imagine",
+        "start": 1584.623,
+        "duration": 4.515
+    },
+    {
+        "text": "I'm going to have a whole bunch of, now\nwe're going to start drawing a system.",
+        "start": 1589.408,
+        "duration": 3.7
+    },
+    {
+        "text": "I wonder if I should give\nmyself some more room here.",
+        "start": 1594.588,
+        "duration": 2.56
+    },
+    {
+        "text": "I'll just erase this for now.",
+        "start": 1600.528,
+        "duration": 1.36
+    },
+    {
+        "text": "Imagine I have,",
+        "start": 1604.848,
+        "duration": 0.82
+    },
+    {
+        "text": "I'm going to draw like this.",
+        "start": 1608.098,
+        "duration": 1.05
+    },
+    {
+        "text": "And,",
+        "start": 1614.838,
+        "duration": 0.55
+    },
+    {
+        "text": "okay, these little rectangles\nare sensor patches.",
+        "start": 1621.048,
+        "duration": 2.75
+    },
+    {
+        "text": "So these are different parts\nof my skin, if you will.",
+        "start": 1626.113,
+        "duration": 1.94
+    },
+    {
+        "text": "It's got tens of thousands of them.",
+        "start": 1629.203,
+        "duration": 1.43
+    },
+    {
+        "text": "That is feeding information into\nthis processing element here.",
+        "start": 1631.133,
+        "duration": 3.15
+    },
+    {
+        "text": "All right, and so as I touch the pen\nwith different parts of my sensory",
+        "start": 1638.083,
+        "duration": 3.57
+    },
+    {
+        "text": "app, these individual columns, these\nindividual modules are being activated.",
+        "start": 1641.653,
+        "duration": 3.51
+    },
+    {
+        "text": "Yet I have the same perception of the,\nof what's going on out in the world.",
+        "start": 1645.603,
+        "duration": 4.17
+    },
+    {
+        "text": "So we're going to assume\nthat, inside these modules,",
+        "start": 1650.163,
+        "duration": 4.09
+    },
+    {
+        "text": "they know the pose of\nthemselves to the body.",
+        "start": 1657.063,
+        "duration": 2.56
+    },
+    {
+        "text": "So models know the pose.",
+        "start": 1659.643,
+        "duration": 1.21
+    },
+    {
+        "text": "module to the body.",
+        "start": 1662.318,
+        "duration": 1.14
+    },
+    {
+        "text": "And, so they, if you have my body",
+        "start": 1665.988,
+        "duration": 3.1
+    },
+    {
+        "text": "and so I'm, I basically know this pose,\nI'm sensing something, I'm sensing a",
+        "start": 1671.968,
+        "duration": 4.52
+    },
+    {
+        "text": "feature from the sensor and it doesn't\nmatter, it doesn't matter which sensor",
+        "start": 1676.508,
+        "duration": 5.56
+    },
+    {
+        "text": "is actually sensing that feature.",
+        "start": 1682.078,
+        "duration": 1.83
+    },
+    {
+        "text": "and then what pose we're sensing\nthe feature, if they're all going",
+        "start": 1684.458,
+        "duration": 3.41
+    },
+    {
+        "text": "to report back the same thing.",
+        "start": 1687.868,
+        "duration": 1.44
+    },
+    {
+        "text": "So basically what you're going\nto calculate here is, you're",
+        "start": 1689.348,
+        "duration": 2.73
+    },
+    {
+        "text": "going to calculate the pose\nof the feature to the body.",
+        "start": 1692.108,
+        "duration": 3.02
+    },
+    {
+        "text": "So that's one of the goals of these\nthings, a module, it receives,",
+        "start": 1695.868,
+        "duration": 4.46
+    },
+    {
+        "text": "an element receives input from a\nsensor, and it always knows the",
+        "start": 1700.358,
+        "duration": 3.29
+    },
+    {
+        "text": "pose of the sensor of the body.",
+        "start": 1703.648,
+        "duration": 1.31
+    },
+    {
+        "text": "And goal number one is determining the\nfeature and its pose to the, first of all,",
+        "start": 1704.998,
+        "duration": 4.46
+    },
+    {
+        "text": "determine the feature pose to the sensor.",
+        "start": 1709.468,
+        "duration": 1.64
+    },
+    {
+        "text": "So it has to determine what this.",
+        "start": 1711.108,
+        "duration": 1.52
+    },
+    {
+        "text": "poses, it knows this pose, and\nso it can calculate this pose.",
+        "start": 1712.958,
+        "duration": 4.24
+    },
+    {
+        "text": "It's pretty simple.",
+        "start": 1717.998,
+        "duration": 0.73
+    },
+    {
+        "text": "so goal number two would be to,",
+        "start": 1719.938,
+        "duration": 1.87
+    },
+    {
+        "text": "determine",
+        "start": 1725.208,
+        "duration": 0.65
+    },
+    {
+        "text": "pose feature body",
+        "start": 1729.108,
+        "duration": 3.55
+    },
+    {
+        "text": "and this is why I'm, that's why my,\nwhat I'm aware of is that output of this",
+        "start": 1733.918,
+        "duration": 6.82
+    },
+    {
+        "text": "thing, which is the feature to the body.",
+        "start": 1740.738,
+        "duration": 1.31
+    },
+    {
+        "text": "That's why it doesn't seem to\nbe changing as I'm doing this.",
+        "start": 1742.048,
+        "duration": 2.62
+    },
+    {
+        "text": "And, and it does seem to change\nif I do this because it's",
+        "start": 1745.208,
+        "duration": 5.08
+    },
+    {
+        "text": "moving relative to the body.",
+        "start": 1750.288,
+        "duration": 0.91
+    },
+    {
+        "text": "So now, essentially now, if I touch\nan object with any of my sensors, any",
+        "start": 1751.748,
+        "duration": 5.47
+    },
+    {
+        "text": "of my fingers, in any order, what I'm\ngoing to be determining is a series of",
+        "start": 1757.218,
+        "duration": 4.67
+    },
+    {
+        "text": "features all relative to the body, right?",
+        "start": 1761.898,
+        "duration": 3.99
+    },
+    {
+        "text": "It'd be like, oh, I can say what's the\npose of this feature, and then what's",
+        "start": 1766.348,
+        "duration": 2.76
+    },
+    {
+        "text": "the pose of this feature, and what's the\npose of this feature, that kind of thing.",
+        "start": 1769.108,
+        "duration": 2.39
+    },
+    {
+        "text": "And now they would occur sequentially\nover time, as I touch one at a time.",
+        "start": 1773.568,
+        "duration": 3.34
+    },
+    {
+        "text": "Let's say there was some\ncommunications information here.",
+        "start": 1779.728,
+        "duration": 3.21
+    },
+    {
+        "text": "I'm not, I'm called this a bus.",
+        "start": 1782.938,
+        "duration": 1.67
+    },
+    {
+        "text": "I'm not going to say how this is working.",
+        "start": 1784.728,
+        "duration": 1.89
+    },
+    {
+        "text": "I'm not even going there.",
+        "start": 1786.628,
+        "duration": 2.01
+    },
+    {
+        "text": "I'm just saying I'm able to bring\nthese all to some centralized location.",
+        "start": 1788.638,
+        "duration": 3.56
+    },
+    {
+        "text": "And, I'm going to put some kind of, memory\nmodule on here, something that can learn.",
+        "start": 1794.248,
+        "duration": 6.43
+    },
+    {
+        "text": "And what it's going to get is a\nsense of features relative to the",
+        "start": 1801.488,
+        "duration": 3.38
+    },
+    {
+        "text": "body, at poses relative to the body.",
+        "start": 1804.868,
+        "duration": 2.05
+    },
+    {
+        "text": "And it's going to get those over\ntime, and I could store those here.",
+        "start": 1807.648,
+        "duration": 2.49
+    },
+    {
+        "text": "I could just remember them.",
+        "start": 1810.138,
+        "duration": 0.94
+    },
+    {
+        "text": "So these are features to the body.",
+        "start": 1812.928,
+        "duration": 2.89
+    },
+    {
+        "text": "That set, as long as this object\ndoesn't move relative to the body,",
+        "start": 1818.678,
+        "duration": 3.99
+    },
+    {
+        "text": "that set defines the morphology or\nwhatever this object is, all relative",
+        "start": 1822.978,
+        "duration": 5.78
+    },
+    {
+        "text": "to my body at this point in time.",
+        "start": 1829.148,
+        "duration": 1.22
+    },
+    {
+        "text": "So this set of things here, this is, it\njust says, yeah, okay, that's all the",
+        "start": 1831.083,
+        "duration": 5.09
+    },
+    {
+        "text": "features that are out there that I've\ndetected, they're all relative to some",
+        "start": 1836.173,
+        "duration": 2.82
+    },
+    {
+        "text": "central point, therefore it defines the\nobject, it's a definition of the object,",
+        "start": 1838.993,
+        "duration": 4.27
+    },
+    {
+        "text": "but it's only in this case exactly\nat where it is relative to the body.",
+        "start": 1843.293,
+        "duration": 4.33
+    },
+    {
+        "text": "If it moved or changed its\norientation, then all this",
+        "start": 1847.633,
+        "duration": 2.84
+    },
+    {
+        "text": "information would be useless.",
+        "start": 1850.473,
+        "duration": 1.08
+    },
+    {
+        "text": "Is that clear?.",
+        "start": 1851.553,
+        "duration": 2.59
+    },
+    {
+        "text": "So there's a different sensory\nmodality of the same, when",
+        "start": 1855.423,
+        "duration": 4.07
+    },
+    {
+        "text": "they say the term of feature.",
+        "start": 1859.493,
+        "duration": 0.85
+    },
+    {
+        "text": "What does that mean?",
+        "start": 1860.978,
+        "duration": 0.66
+    },
+    {
+        "text": "I want to leave the sensor modality\nout for the moment, because there's",
+        "start": 1863.368,
+        "duration": 4.8
+    },
+    {
+        "text": "lots of different modalities, and\nthey all measure different types",
+        "start": 1868.168,
+        "duration": 3.31
+    },
+    {
+        "text": "of qualities in the world, right?",
+        "start": 1871.478,
+        "duration": 1.95
+    },
+    {
+        "text": "And, and when I said a feature is a\nmeasurable property at some pose, I",
+        "start": 1874.128,
+        "duration": 6.46
+    },
+    {
+        "text": "don't want to, I don't really care about\nwhat the measurable property is yet.",
+        "start": 1880.588,
+        "duration": 2.9
+    },
+    {
+        "text": "That's my question.",
+        "start": 1883.488,
+        "duration": 0.35
+    },
+    {
+        "text": "It doesn't really matter yet.",
+        "start": 1883.838,
+        "duration": 1.28
+    },
+    {
+        "text": "So right now I only care about morphology,\nIt's going to be more than that, but",
+        "start": 1885.158,
+        "duration": 4.09
+    },
+    {
+        "text": "we'll just put it in the bucket of other\nthings that it knows about that feature.",
+        "start": 1889.248,
+        "duration": 3.3
+    },
+    {
+        "text": "No location, at that location.",
+        "start": 1893.543,
+        "duration": 1.6
+    },
+    {
+        "text": "the feature has A pose and\nit also has attributes.",
+        "start": 1895.623,
+        "duration": 3.83
+    },
+    {
+        "text": "I could say it's green.",
+        "start": 1899.563,
+        "duration": 1.12
+    },
+    {
+        "text": "I could say it's rough.",
+        "start": 1901.353,
+        "duration": 1.65
+    },
+    {
+        "text": "I could say it's I can even you'll see\nin a moment that I can even give much",
+        "start": 1903.063,
+        "duration": 4.75
+    },
+    {
+        "text": "more definition to what that feature\nis But don't worry about that moment.",
+        "start": 1907.813,
+        "duration": 3.56
+    },
+    {
+        "text": "The most important thing is it has a\npose And there's some other qualities,",
+        "start": 1911.373,
+        "duration": 3.995
+    },
+    {
+        "text": "and those other qualities will help\nus, but the qualities I get from vision",
+        "start": 1915.398,
+        "duration": 4.34
+    },
+    {
+        "text": "are different than the qualities I\nget from sound, are different than",
+        "start": 1919.738,
+        "duration": 1.67
+    },
+    {
+        "text": "the qualities I get from touch, are\ndifferent than the qualities I get",
+        "start": 1921.408,
+        "duration": 1.98
+    },
+    {
+        "text": "from echolocation, are different than\nthe qualities I get from, whisking.",
+        "start": 1923.388,
+        "duration": 3.62
+    },
+    {
+        "text": "It doesn't really matter.",
+        "start": 1927.418,
+        "duration": 0.78
+    },
+    {
+        "text": "That is a distraction.",
+        "start": 1928.238,
+        "duration": 1.84
+    },
+    {
+        "text": "It's helpful, it's going to be\nreally important that the sensors",
+        "start": 1930.613,
+        "duration": 3.07
+    },
+    {
+        "text": "are able to detect different\ntypes of feature qualities.",
+        "start": 1933.843,
+        "duration": 2.96
+    },
+    {
+        "text": "but if I were to look at this feature\nand I were to touch this feature,",
+        "start": 1937.793,
+        "duration": 3.71
+    },
+    {
+        "text": "they were both my eyes and my fingers\nwould both report this feature at the",
+        "start": 1942.043,
+        "duration": 3.95
+    },
+    {
+        "text": "same location in space in the same\norientation, but they'd have other",
+        "start": 1945.993,
+        "duration": 3.4
+    },
+    {
+        "text": "qualities different between them.",
+        "start": 1949.393,
+        "duration": 1.12
+    },
+    {
+        "text": "The eyes might say, oh, it's blue, and\nthe finger might say, oh, it's cold.",
+        "start": 1951.173,
+        "duration": 3.31
+    },
+    {
+        "text": "And they don't, I can't share\nthat information between those",
+        "start": 1956.068,
+        "duration": 2.28
+    },
+    {
+        "text": "modalities, but I don't want to,\nI don't want to focus on that.",
+        "start": 1958.418,
+        "duration": 3.12
+    },
+    {
+        "text": "That's not the important\npart of what a feature is.",
+        "start": 1961.718,
+        "duration": 1.69
+    },
+    {
+        "text": "The most important part of the\nfeature is its pose, plus additional",
+        "start": 1963.978,
+        "duration": 4.59
+    },
+    {
+        "text": "qualities that we can make up as\nwe want with different sensors.",
+        "start": 1968.568,
+        "duration": 2.72
+    },
+    {
+        "text": "That's a, again, a very\nimportant distinction.",
+        "start": 1973.408,
+        "duration": 1.98
+    },
+    {
+        "text": "In my clarity of my mind that don't\nfocus on those other qualities.",
+        "start": 1976.178,
+        "duration": 3.52
+    },
+    {
+        "text": "It's really about the pose\nof the feature that matters.",
+        "start": 1979.748,
+        "duration": 2.13
+    },
+    {
+        "text": "That's a great question.",
+        "start": 1983.958,
+        "duration": 0.68
+    },
+    {
+        "text": "Anything else?",
+        "start": 1986.178,
+        "duration": 0.53
+    },
+    {
+        "text": "Before go on.",
+        "start": 1988.398,
+        "duration": 0.6
+    },
+    {
+        "text": "Okay, so",
+        "start": 1989.628,
+        "duration": 0.56
+    },
+    {
+        "text": "we can call, if you want to do a\nlittle neuroscience here this is part",
+        "start": 1992.508,
+        "duration": 3.24
+    },
+    {
+        "text": "of the where columns at the moment,\nand this might be happening, half the",
+        "start": 1995.748,
+        "duration": 6.06
+    },
+    {
+        "text": "entorhinal cortex, which is which I\nthink would be the lateral staff would",
+        "start": 2001.808,
+        "duration": 3.84
+    },
+    {
+        "text": "be the where equivalent right so that\nmost, I don't know, it's hard to say.",
+        "start": 2005.648,
+        "duration": 4.71
+    },
+    {
+        "text": "Yeah, it doesn't matter.",
+        "start": 2010.358,
+        "duration": 3.245
+    },
+    {
+        "text": "Now, but of course, this is,\nall in some sense of, egocentric",
+        "start": 2013.963,
+        "duration": 4.25
+    },
+    {
+        "text": "or body centric space, right?",
+        "start": 2018.223,
+        "duration": 1.28
+    },
+    {
+        "text": "It's all representing these\nfeatures and correlatives of",
+        "start": 2019.503,
+        "duration": 1.99
+    },
+    {
+        "text": "body at any given point in time.",
+        "start": 2021.493,
+        "duration": 1.0
+    },
+    {
+        "text": "We don't really want that.",
+        "start": 2022.733,
+        "duration": 1.09
+    },
+    {
+        "text": "we do want it sometimes, but if I want\nto learn a model of the object, I want",
+        "start": 2025.073,
+        "duration": 4.51
+    },
+    {
+        "text": "to learn the model of the object not\nrelative to my body, but relative to",
+        "start": 2029.583,
+        "duration": 3.08
+    },
+    {
+        "text": "an internally consistent point of view.",
+        "start": 2032.663,
+        "duration": 1.46
+    },
+    {
+        "text": "So we can now define, an object.",
+        "start": 2034.933,
+        "duration": 2.05
+    },
+    {
+        "text": "As, also having a common reference frame,",
+        "start": 2037.578,
+        "duration": 4.28
+    },
+    {
+        "text": "and so just like the body had a\ncommon point, we're gonna find out,",
+        "start": 2044.568,
+        "duration": 3.68
+    },
+    {
+        "text": "we're gonna make one up, but it\ndoesn't really matter, we're just",
+        "start": 2048.748,
+        "duration": 2.34
+    },
+    {
+        "text": "picking, pick a point, to do this.",
+        "start": 2051.178,
+        "duration": 2.86
+    },
+    {
+        "text": "And, and now if I could define these\nfeatures relative to that common point,",
+        "start": 2054.238,
+        "duration": 5.3
+    },
+    {
+        "text": "then I would have a model of this\nobject that's independent of the body.",
+        "start": 2060.518,
+        "duration": 2.94
+    },
+    {
+        "text": "we talked about anchoring, head\ndirection cells, or anchoring",
+        "start": 2065.738,
+        "duration": 3.5
+    },
+    {
+        "text": "grid cells, things like that.",
+        "start": 2069.238,
+        "duration": 1.01
+    },
+    {
+        "text": "It's basically saying, I'm going\nto pick a point that says this",
+        "start": 2070.328,
+        "duration": 2.81
+    },
+    {
+        "text": "is how I'm going to orient this.",
+        "start": 2073.138,
+        "duration": 0.99
+    },
+    {
+        "text": "this is the reference frame for\nthis common point for the object.",
+        "start": 2074.378,
+        "duration": 3.58
+    },
+    {
+        "text": "Now I can relate all the features to\nthat common point as opposed to the body.",
+        "start": 2078.008,
+        "duration": 3.59
+    },
+    {
+        "text": "If I relate it to that common\npoint, then I have essentially",
+        "start": 2081.598,
+        "duration": 2.27
+    },
+    {
+        "text": "the definition of the object.",
+        "start": 2083.868,
+        "duration": 1.06
+    },
+    {
+        "text": "The object is a set of features.",
+        "start": 2085.438,
+        "duration": 2.37
+    },
+    {
+        "text": "all relative to a common\npoint, a pose a common point.",
+        "start": 2088.368,
+        "duration": 3.4
+    },
+    {
+        "text": "That is the definition of an object.",
+        "start": 2092.808,
+        "duration": 2.15
+    },
+    {
+        "text": "So how do we get to there?",
+        "start": 2095.778,
+        "duration": 1.19
+    },
+    {
+        "text": "we can get there pretty easily\nif we know the pose between the",
+        "start": 2098.708,
+        "duration": 5.23
+    },
+    {
+        "text": "body and this common point here.",
+        "start": 2103.938,
+        "duration": 2.27
+    },
+    {
+        "text": "So there's going to be a pose between\nthe body's point and the object's point.",
+        "start": 2106.588,
+        "duration": 2.48
+    },
+    {
+        "text": "If we know that, which changes as the\nobject moves around the world, right?",
+        "start": 2109.068,
+        "duration": 4.47
+    },
+    {
+        "text": "But if we know that, then I can then go\nback and forth between a, a body centric",
+        "start": 2113.538,
+        "duration": 6.56
+    },
+    {
+        "text": "model and an object centric model.",
+        "start": 2120.138,
+        "duration": 2.375
+    },
+    {
+        "text": "and so I'll just call this, this is a\ntransformation that occurs from, it's",
+        "start": 2124.353,
+        "duration": 3.95
+    },
+    {
+        "text": "the pose of the, based on the pose of\nthe body, to the object, and We shift the",
+        "start": 2128.303,
+        "duration": 6.43
+    },
+    {
+        "text": "camera to the right a little bit, please.",
+        "start": 2134.733,
+        "duration": 1.43
+    },
+    {
+        "text": "Oh, yeah, sorry.",
+        "start": 2136.173,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah, I can.",
+        "start": 2137.023,
+        "duration": 0.605
+    },
+    {
+        "text": "And, so now I can take every one of\nthese features and transform them",
+        "start": 2142.138,
+        "duration": 4.34
+    },
+    {
+        "text": "to a set of features over here,",
+        "start": 2146.478,
+        "duration": 1.44
+    },
+    {
+        "text": "just by doing this\ntransposition here, right?",
+        "start": 2150.288,
+        "duration": 2.56
+    },
+    {
+        "text": "It's pretty straightforward.",
+        "start": 2152.938,
+        "duration": 1.12
+    },
+    {
+        "text": "And now I have a list of\nfeatures relative to the object.",
+        "start": 2154.558,
+        "duration": 2.93
+    },
+    {
+        "text": "this assumes I know the pose\nof the body of the object.",
+        "start": 2158.958,
+        "duration": 3.19
+    },
+    {
+        "text": "I may not know that, but if I\njust started out and I said, okay,",
+        "start": 2162.418,
+        "duration": 3.07
+    },
+    {
+        "text": "this is stable and I'm stable.",
+        "start": 2166.328,
+        "duration": 1.58
+    },
+    {
+        "text": "I'm going to learn this.",
+        "start": 2167.928,
+        "duration": 0.75
+    },
+    {
+        "text": "I'm going to randomly pick\nlet's say I randomly choose.",
+        "start": 2168.678,
+        "duration": 3.35
+    },
+    {
+        "text": "A reference point, if you will, for the\nobject, just like I ran into Joe's body.",
+        "start": 2172.868,
+        "duration": 6.39
+    },
+    {
+        "text": "I randomly choose one here, and now\nas I go around and touch these things,",
+        "start": 2179.538,
+        "duration": 4.15
+    },
+    {
+        "text": "I build up this list of features,\nthat are all relative to the object.",
+        "start": 2183.688,
+        "duration": 4.21
+    },
+    {
+        "text": "This is getting close, closer to\nwhat we did in the columns paper.",
+        "start": 2188.328,
+        "duration": 3.2
+    },
+    {
+        "text": "where we had a set of features at\nrelative, locations, on an object,",
+        "start": 2191.838,
+        "duration": 4.21
+    },
+    {
+        "text": "but we didn't have the concept of\norientation, which was essential.",
+        "start": 2196.048,
+        "duration": 4.01
+    },
+    {
+        "text": "We missed that, and we amazingly\ndiscovered it only once Luiz",
+        "start": 2200.068,
+        "duration": 3.38
+    },
+    {
+        "text": "made the robot simulator.",
+        "start": 2203.648,
+        "duration": 1.38
+    },
+    {
+        "text": "It was all crap.",
+        "start": 2205.118,
+        "duration": 0.64
+    },
+    {
+        "text": "We missed that.",
+        "start": 2206.558,
+        "duration": 0.47
+    },
+    {
+        "text": "now, this is all good, so now I've\nlearned it, learned this thing,",
+        "start": 2209.218,
+        "duration": 5.16
+    },
+    {
+        "text": "but what if I didn't know this now?",
+        "start": 2215.398,
+        "duration": 1.53
+    },
+    {
+        "text": "Later on, I come across this\nobject, and it's now in a different",
+        "start": 2216.938,
+        "duration": 3.72
+    },
+    {
+        "text": "position, in a different orientation,\nAnd I'm trying to infer it.",
+        "start": 2220.658,
+        "duration": 4.055
+    },
+    {
+        "text": "And I have this model that I\nlearned earlier, but I can't, I",
+        "start": 2225.033,
+        "duration": 5.55
+    },
+    {
+        "text": "don't know this transformation.",
+        "start": 2230.583,
+        "duration": 1.37
+    },
+    {
+        "text": "If I knew the pose of the body\nof the object, I'd very easily",
+        "start": 2231.953,
+        "duration": 2.28
+    },
+    {
+        "text": "be able to go and figure out what\nit is, but I don't know this.",
+        "start": 2234.243,
+        "duration": 2.38
+    },
+    {
+        "text": "And so I can, determine these, I\nhave a feature relative to my body,",
+        "start": 2237.763,
+        "duration": 3.77
+    },
+    {
+        "text": "another feature relative to my body,\nanother feature relative to my body.",
+        "start": 2241.533,
+        "duration": 2.013
+    },
+    {
+        "text": "How do I figure out which\none of these is over here?",
+        "start": 2243.546,
+        "duration": 2.137
+    },
+    {
+        "text": "Some features are, just to give\nyou a flavor, some features",
+        "start": 2246.813,
+        "duration": 2.78
+    },
+    {
+        "text": "have such unique qualities.",
+        "start": 2249.603,
+        "duration": 2.1
+    },
+    {
+        "text": "That I can immediately\nidentify the object.",
+        "start": 2252.393,
+        "duration": 1.51
+    },
+    {
+        "text": "for example, let's say only one\nfeature in the world was pink, and",
+        "start": 2254.193,
+        "duration": 4.36
+    },
+    {
+        "text": "I see a pink feature, then I go, oh,\nI know exactly where I am, because",
+        "start": 2258.583,
+        "duration": 4.16
+    },
+    {
+        "text": "there's only one model over here\nthat's pink, and I can look it up.",
+        "start": 2262.753,
+        "duration": 2.41
+    },
+    {
+        "text": "so knowing some quality of the object,\nbut, generally, features exist in lots",
+        "start": 2266.643,
+        "duration": 4.02
+    },
+    {
+        "text": "of different places, and you can't assume\nthere's anything unique about them at all.",
+        "start": 2270.663,
+        "duration": 3.6
+    },
+    {
+        "text": "There's just a rearrangement of\nthem which is unique, in which",
+        "start": 2274.263,
+        "duration": 3.31
+    },
+    {
+        "text": "case, I can't really use that.",
+        "start": 2277.573,
+        "duration": 1.28
+    },
+    {
+        "text": "I have to have some other way of doing it.",
+        "start": 2278.923,
+        "duration": 1.3
+    },
+    {
+        "text": "So this is a hard thing to\ndetermine, given some observations",
+        "start": 2281.388,
+        "duration": 3.65
+    },
+    {
+        "text": "here, how do I figure, basically\nI have to figure out what is the",
+        "start": 2285.038,
+        "duration": 2.35
+    },
+    {
+        "text": "pose of the body to the object.",
+        "start": 2287.388,
+        "duration": 1.21
+    },
+    {
+        "text": "And that's not so easy to do, just\ngiven the feature here, how do I know?",
+        "start": 2289.338,
+        "duration": 2.91
+    },
+    {
+        "text": "we've come up with a second way of\nrepresenting a model of an object.",
+        "start": 2293.868,
+        "duration": 6.32
+    },
+    {
+        "text": "And the second way is the graph.",
+        "start": 2300.998,
+        "duration": 1.29
+    },
+    {
+        "text": "that we've talked about a lot here.",
+        "start": 2303.918,
+        "duration": 1.29
+    },
+    {
+        "text": "and the graph basically says, I have\nfeatures, but I'm gonna, I'm gonna learn",
+        "start": 2307.968,
+        "duration": 4.4
+    },
+    {
+        "text": "the pose between the individual features.",
+        "start": 2312.368,
+        "duration": 2.28
+    },
+    {
+        "text": "so I'm going to learn the pose between\nthis feature and this feature, or between",
+        "start": 2316.178,
+        "duration": 3.44
+    },
+    {
+        "text": "this feature and that feature, and I'm\ngoing to represent that in this graph.",
+        "start": 2319.758,
+        "duration": 3.31
+    },
+    {
+        "text": "And that's what Marcus started proposing\na month or two, a couple months ago.",
+        "start": 2324.248,
+        "duration": 3.97
+    },
+    {
+        "text": "And we've worked with that idea.",
+        "start": 2328.708,
+        "duration": 2.32
+    },
+    {
+        "text": "So that's a different representation.",
+        "start": 2331.668,
+        "duration": 1.4
+    },
+    {
+        "text": "Now the nice thing about\nthis one is the following,",
+        "start": 2333.648,
+        "duration": 3.22
+    },
+    {
+        "text": "if I, let me clear up\nmy diagram here, Okay.",
+        "start": 2339.558,
+        "duration": 3.59
+    },
+    {
+        "text": "We're going to remove the idea of the\nsensor from this, we're just going",
+        "start": 2346.308,
+        "duration": 2.52
+    },
+    {
+        "text": "to think about the body now, because\nwe've just abstracted away the sensor.",
+        "start": 2348.828,
+        "duration": 3.63
+    },
+    {
+        "text": "I detect one feature at this\nlocation, one feature here, and",
+        "start": 2353.818,
+        "duration": 5.01
+    },
+    {
+        "text": "I detect another feature here.",
+        "start": 2358.828,
+        "duration": 1.27
+    },
+    {
+        "text": "And, in the, in this model here, by Blue,\nwe've learned this, we've learned the",
+        "start": 2361.288,
+        "duration": 8.06
+    },
+    {
+        "text": "pose between these two features, right?",
+        "start": 2369.728,
+        "duration": 1.82
+    },
+    {
+        "text": "That's part of what the graph does.",
+        "start": 2371.568,
+        "duration": 1.28
+    },
+    {
+        "text": "It's just saying this feature\nto that feature, that's part of",
+        "start": 2373.963,
+        "duration": 3.29
+    },
+    {
+        "text": "what the definition of it is.",
+        "start": 2377.253,
+        "duration": 0.83
+    },
+    {
+        "text": "Excuse me, the reference point.",
+        "start": 2378.083,
+        "duration": 1.2
+    },
+    {
+        "text": "I don't, at this point, all, at this\npoint, all that matters is that the",
+        "start": 2380.223,
+        "duration": 3.84
+    },
+    {
+        "text": "edges of this graph are independent\nof the object reference point.",
+        "start": 2384.063,
+        "duration": 4.16
+    },
+    {
+        "text": "Independent of object reference point.",
+        "start": 2388.473,
+        "duration": 1.01
+    },
+    {
+        "text": "It's a pose of feature to feature.",
+        "start": 2389.493,
+        "duration": 1.59
+    },
+    {
+        "text": "but the origin of that.",
+        "start": 2392.493,
+        "duration": 2.0
+    },
+    {
+        "text": "It doesn't matter.",
+        "start": 2394.533,
+        "duration": 0.68
+    },
+    {
+        "text": "There is no origin.",
+        "start": 2395.213,
+        "duration": 0.65
+    },
+    {
+        "text": "It's just feature to feature.",
+        "start": 2395.863,
+        "duration": 1.09
+    },
+    {
+        "text": "Each one has its own reference point.",
+        "start": 2397.213,
+        "duration": 1.44
+    },
+    {
+        "text": "And which one has its own reference?",
+        "start": 2399.273,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 2401.403,
+        "duration": 0.06
+    },
+    {
+        "text": "Every feature has its own reference.",
+        "start": 2401.553,
+        "duration": 1.47
+    },
+    {
+        "text": "Everything in the world has\nits own reference frame.",
+        "start": 2403.143,
+        "duration": 2.01
+    },
+    {
+        "text": "So think of it there, the angle and\nthe distance of that blue line does not",
+        "start": 2405.843,
+        "duration": 4.41
+    },
+    {
+        "text": "depend on where the common, the angle.",
+        "start": 2410.253,
+        "duration": 3.82
+    },
+    {
+        "text": "The angle does not, but they\nmust have their own reference.",
+        "start": 2415.863,
+        "duration": 2.46
+    },
+    {
+        "text": "Yeah.",
+        "start": 2418.353,
+        "duration": 0.09
+    },
+    {
+        "text": "this guy, everything has\na reference you, can take.",
+        "start": 2418.653,
+        "duration": 2.305
+    },
+    {
+        "text": "This is feature one.",
+        "start": 2420.988,
+        "duration": 0.93
+    },
+    {
+        "text": "And it has this reference frame.",
+        "start": 2422.678,
+        "duration": 1.46
+    },
+    {
+        "text": "And this is feature two and\nit has this reference frame.",
+        "start": 2424.538,
+        "duration": 2.41
+    },
+    {
+        "text": "And I can calculate the distance\nand the angle between them.",
+        "start": 2427.308,
+        "duration": 2.29
+    },
+    {
+        "text": "it just, that's all you need to know.",
+        "start": 2432.028,
+        "duration": 2.39
+    },
+    {
+        "text": "and so we have been able to now.",
+        "start": 2435.718,
+        "duration": 3.19
+    },
+    {
+        "text": "So that will also, Help\nilluminate the set of.",
+        "start": 2439.778,
+        "duration": 2.675
+    },
+    {
+        "text": "Yes, exactly.",
+        "start": 2442.613,
+        "duration": 1.24
+    },
+    {
+        "text": "Exactly the point.",
+        "start": 2444.233,
+        "duration": 0.7
+    },
+    {
+        "text": "The beauty of this system here is,\nI can't look at a particular feature",
+        "start": 2445.563,
+        "duration": 4.72
+    },
+    {
+        "text": "and say, Oh, where is that over here?",
+        "start": 2450.283,
+        "duration": 2.04
+    },
+    {
+        "text": "I can't do that.",
+        "start": 2452.323,
+        "duration": 0.61
+    },
+    {
+        "text": "I don't know the pose here.",
+        "start": 2452.933,
+        "duration": 1.86
+    },
+    {
+        "text": "However, I can look at these two features\nhere and count from a body, from my",
+        "start": 2455.443,
+        "duration": 6.467
+    },
+    {
+        "text": "body centric point of view, knowing\nthat this is a feature of pose here.",
+        "start": 2461.91,
+        "duration": 3.103
+    },
+    {
+        "text": "This is a feature pose here.",
+        "start": 2465.013,
+        "duration": 1.04
+    },
+    {
+        "text": "I can calculate this blue line.",
+        "start": 2466.223,
+        "duration": 1.29
+    },
+    {
+        "text": "And that's, we've had a lot\nof discussions about this.",
+        "start": 2470.043,
+        "duration": 2.4
+    },
+    {
+        "text": "So you can calculate this blue line.",
+        "start": 2477.623,
+        "duration": 1.41
+    },
+    {
+        "text": "and now I have something that's much,\nit's not, a guarantee, but now I'm",
+        "start": 2480.073,
+        "duration": 4.35
+    },
+    {
+        "text": "looking for, I'm looking for, objects\nover here where I'm not only looking at",
+        "start": 2484.423,
+        "duration": 4.74
+    },
+    {
+        "text": "some feature, but I am looking at two\nfeatures in relative poses to each other.",
+        "start": 2489.163,
+        "duration": 4.69
+    },
+    {
+        "text": "And that's a very much more\ndiscriminatory thing, right?",
+        "start": 2494.013,
+        "duration": 2.62
+    },
+    {
+        "text": "Now, all of a sudden, that's really\nnarrowing down the number of objects in",
+        "start": 2496.633,
+        "duration": 3.875
+    },
+    {
+        "text": "the world may not narrow down completely,\nbut it's certainly narrowing down a lot.",
+        "start": 2500.508,
+        "duration": 2.89
+    },
+    {
+        "text": "And as I go through and calculate.",
+        "start": 2503.878,
+        "duration": 2.39
+    },
+    {
+        "text": "And I, if I, started looking, I don't\nrecognize the object with these two",
+        "start": 2506.768,
+        "duration": 3.26
+    },
+    {
+        "text": "glances, and then I can do another\nobservation and calculate another pose.",
+        "start": 2510.028,
+        "duration": 4.85
+    },
+    {
+        "text": "And eventually I'm going to narrow\ndown this, I'm going to figure out",
+        "start": 2515.068,
+        "duration": 3.06
+    },
+    {
+        "text": "which object I'm in very quickly,\nmight take a few observations.",
+        "start": 2518.138,
+        "duration": 5.49
+    },
+    {
+        "text": "but I, it's guaranteed to\nwork in some sense, because.",
+        "start": 2524.878,
+        "duration": 3.65
+    },
+    {
+        "text": "Even if you have to do five observations,\neventually you'll only find one object",
+        "start": 2528.983,
+        "duration": 4.25
+    },
+    {
+        "text": "that actually matches all those poses.",
+        "start": 2533.623,
+        "duration": 1.84
+    },
+    {
+        "text": "And, and so then I know\nwhat object I'm looking at.",
+        "start": 2536.083,
+        "duration": 2.8
+    },
+    {
+        "text": "And once I know what object I'm\nlooking at, I can calculate the pose.",
+        "start": 2539.033,
+        "duration": 2.56
+    },
+    {
+        "text": "And now I say, oh, I inferred what I'm at.",
+        "start": 2541.923,
+        "duration": 2.42
+    },
+    {
+        "text": "So it could be as simple as\none observation, because the",
+        "start": 2545.033,
+        "duration": 2.63
+    },
+    {
+        "text": "feature is completely unique.",
+        "start": 2547.663,
+        "duration": 1.48
+    },
+    {
+        "text": "It can be as simple as two observations\nsaying, they're not unique, but the",
+        "start": 2549.723,
+        "duration": 3.08
+    },
+    {
+        "text": "relative poses of these two features\nare unique, or I just keep going until",
+        "start": 2552.813,
+        "duration": 4.64
+    },
+    {
+        "text": "I get enough relative poses that I find\na unique object that meets those poses.",
+        "start": 2557.453,
+        "duration": 5.69
+    },
+    {
+        "text": "Wait, you're also just kicking\nthe can down the road now.",
+        "start": 2563.563,
+        "duration": 3.21
+    },
+    {
+        "text": "How do you recognize a feature now?",
+        "start": 2566.783,
+        "duration": 1.44
+    },
+    {
+        "text": "Good question.",
+        "start": 2569.513,
+        "duration": 0.89
+    },
+    {
+        "text": "Can we come back to that?",
+        "start": 2570.403,
+        "duration": 2.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 2572.943,
+        "duration": 0.67
+    },
+    {
+        "text": "Yeah, this to me assumes a discrete\nset of features that you know.",
+        "start": 2573.793,
+        "duration": 2.97
+    },
+    {
+        "text": "And in a real object like a coffee\ncup, you don't necessarily know, you",
+        "start": 2577.413,
+        "duration": 3.63
+    },
+    {
+        "text": "may not always pick the same thing.",
+        "start": 2581.043,
+        "duration": 1.17
+    },
+    {
+        "text": "let's come back to that.",
+        "start": 2582.773,
+        "duration": 1.05
+    },
+    {
+        "text": "Okay.",
+        "start": 2583.943,
+        "duration": 0.46
+    },
+    {
+        "text": "That's a very subtle point.",
+        "start": 2584.593,
+        "duration": 1.34
+    },
+    {
+        "text": "I want to get to it later.",
+        "start": 2586.083,
+        "duration": 1.54
+    },
+    {
+        "text": "And, and I have some observations,\nbut I don't have all the answers,",
+        "start": 2588.333,
+        "duration": 3.3
+    },
+    {
+        "text": "but I have some, I think I have\nsome important observations, which",
+        "start": 2591.633,
+        "duration": 2.36
+    },
+    {
+        "text": "will open up a lot of discussion.",
+        "start": 2594.773,
+        "duration": 1.99
+    },
+    {
+        "text": "So let's assume you know that.",
+        "start": 2597.353,
+        "duration": 1.31
+    },
+    {
+        "text": "Okay, for the moment.",
+        "start": 2599.113,
+        "duration": 1.08
+    },
+    {
+        "text": "so this is, now notice here, I have a\nsystem and what we've designed, a system",
+        "start": 2602.263,
+        "duration": 3.86
+    },
+    {
+        "text": "that can learn rapidly, we learn by\nsensing one thing at a time using any",
+        "start": 2606.133,
+        "duration": 5.74
+    },
+    {
+        "text": "one of an array of sensors, like in any\nnumber of sensors, but I can only observe",
+        "start": 2611.873,
+        "duration": 3.17
+    },
+    {
+        "text": "one at a time, because I can only send\nin one at a time to this guy, but if I",
+        "start": 2615.043,
+        "duration": 6.65
+    },
+    {
+        "text": "do that, I'm able to build, an object\nmodel in a way that I can infer it later",
+        "start": 2621.723,
+        "duration": 6.41
+    },
+    {
+        "text": "by a series of observations as well.",
+        "start": 2628.133,
+        "duration": 1.65
+    },
+    {
+        "text": "And, and that's pretty cool.",
+        "start": 2631.713,
+        "duration": 1.74
+    },
+    {
+        "text": "Notice there's no voting going on here.",
+        "start": 2633.483,
+        "duration": 1.62
+    },
+    {
+        "text": "At least no voting on object ID.",
+        "start": 2635.633,
+        "duration": 1.43
+    },
+    {
+        "text": "I am, But isn't, eliminating\nthe candidates a type of voting?",
+        "start": 2637.813,
+        "duration": 4.0
+    },
+    {
+        "text": "not in the kind of voting that\nwe've talked about, where multiple",
+        "start": 2642.653,
+        "duration": 2.13
+    },
+    {
+        "text": "columns are voting together, right?",
+        "start": 2644.783,
+        "duration": 2.96
+    },
+    {
+        "text": "There's, this is not, this is just an\ninternal, you can Yeah, this would be",
+        "start": 2648.183,
+        "duration": 4.09
+    },
+    {
+        "text": "within the list of candidate objects.",
+        "start": 2652.513,
+        "duration": 1.93
+    },
+    {
+        "text": "But this is all one module here.",
+        "start": 2654.623,
+        "duration": 2.52
+    },
+    {
+        "text": "there are no two, there's no, you'll\nsee the voting as we wrote about",
+        "start": 2658.023,
+        "duration": 4.26
+    },
+    {
+        "text": "it in the columns paper is you get\nmultiple models of the same thing.",
+        "start": 2662.283,
+        "duration": 3.35
+    },
+    {
+        "text": "And, but also within a column,\nif you just look at a single",
+        "start": 2666.533,
+        "duration": 4.48
+    },
+    {
+        "text": "cortical column, as you get more\nsensations, you're narrowing down.",
+        "start": 2671.033,
+        "duration": 2.94
+    },
+    {
+        "text": "But that's still, going on here.",
+        "start": 2675.413,
+        "duration": 1.98
+    },
+    {
+        "text": "I don't call that voting we could but\nI think that would be confusing The",
+        "start": 2678.043,
+        "duration": 3.43
+    },
+    {
+        "text": "way we describe voting in the columns\npaper and elsewhere is voting between",
+        "start": 2681.473,
+        "duration": 3.14
+    },
+    {
+        "text": "models Two models, two modeling systems.",
+        "start": 2684.623,
+        "duration": 2.445
+    },
+    {
+        "text": "I'll get there in a second.",
+        "start": 2687.098,
+        "duration": 0.79
+    },
+    {
+        "text": "So it's the same operations with\nthe, it's the same algorithm?",
+        "start": 2688.478,
+        "duration": 2.69
+    },
+    {
+        "text": "I don't know.",
+        "start": 2691.418,
+        "duration": 0.71
+    },
+    {
+        "text": "That's an interesting question.",
+        "start": 2692.128,
+        "duration": 0.79
+    },
+    {
+        "text": "Is it the same operation?",
+        "start": 2692.918,
+        "duration": 1.32
+    },
+    {
+        "text": "interesting question.",
+        "start": 2694.938,
+        "duration": 0.61
+    },
+    {
+        "text": "I don't know.",
+        "start": 2695.598,
+        "duration": 0.42
+    },
+    {
+        "text": "But voting in the sense that\nwe wrote about in the columns",
+        "start": 2696.428,
+        "duration": 3.03
+    },
+    {
+        "text": "paper does not exist here.",
+        "start": 2699.458,
+        "duration": 1.06
+    },
+    {
+        "text": "We illustrate in the columns paper it's\nthree different columns that have complete",
+        "start": 2700.548,
+        "duration": 2.91
+    },
+    {
+        "text": "models and they're trying to agree.",
+        "start": 2703.458,
+        "duration": 1.34
+    },
+    {
+        "text": "That's not what I have here.",
+        "start": 2704.988,
+        "duration": 0.99
+    },
+    {
+        "text": "I have one model, And I\nhave multiple sensors.",
+        "start": 2706.078,
+        "duration": 3.34
+    },
+    {
+        "text": "I'm assuming you would have\neventually multiple what modules.",
+        "start": 2710.738,
+        "duration": 2.82
+    },
+    {
+        "text": "Yeah, let's go, we're\ngoing to go there next.",
+        "start": 2713.588,
+        "duration": 2.19
+    },
+    {
+        "text": "Okay.",
+        "start": 2715.908,
+        "duration": 0.18
+    },
+    {
+        "text": "We're going to go there next, okay?",
+        "start": 2716.328,
+        "duration": 1.23
+    },
+    {
+        "text": "So at the moment, I'm thinking this\nis like a fast learning system here.",
+        "start": 2718.038,
+        "duration": 3.42
+    },
+    {
+        "text": "And this you might think of\nentorhinal cortex, right?",
+        "start": 2721.878,
+        "duration": 2.19
+    },
+    {
+        "text": "It's learning very quickly, you're saying,\nI'm building up this model very fast,",
+        "start": 2724.068,
+        "duration": 3.59
+    },
+    {
+        "text": "and I'm going to recognize it again,\nlike, where are the items on this table?",
+        "start": 2728.168,
+        "duration": 3.28
+    },
+    {
+        "text": "And then I can come over here\nand say, oh yeah, it's the same",
+        "start": 2731.478,
+        "duration": 1.68
+    },
+    {
+        "text": "table, I know where that item is.",
+        "start": 2733.158,
+        "duration": 1.21
+    },
+    {
+        "text": "So I have a system here\nwhich says learned.",
+        "start": 2734.708,
+        "duration": 2.1
+    },
+    {
+        "text": "Learn a model of the things in front of\nyou very quickly, and and then you can",
+        "start": 2737.123,
+        "duration": 4.19
+    },
+    {
+        "text": "infer from, you can build it up from\nany sensor, and you can infer it from",
+        "start": 2741.313,
+        "duration": 2.87
+    },
+    {
+        "text": "any sensor, and you can recognize this\nobject, and make predictions, and so on.",
+        "start": 2744.183,
+        "duration": 3.94
+    },
+    {
+        "text": "There's enough information here to\nsolve a bunch of modeling problems,",
+        "start": 2748.383,
+        "duration": 3.75
+    },
+    {
+        "text": "but it's only one model of the world.",
+        "start": 2752.423,
+        "duration": 1.87
+    },
+    {
+        "text": "There's only one model of\nthe senses you have here.",
+        "start": 2754.533,
+        "duration": 1.68
+    },
+    {
+        "text": "Now this is, this is all leading\nup to the next extension of this.",
+        "start": 2757.203,
+        "duration": 4.26
+    },
+    {
+        "text": "So is that okay so far?",
+        "start": 2762.593,
+        "duration": 1.62
+    },
+    {
+        "text": "Wouldn't it be right to say that, the\nlist of possible objects also gives you",
+        "start": 2768.593,
+        "duration": 5.62
+    },
+    {
+        "text": "an implicit policy of where to look next.",
+        "start": 2774.213,
+        "duration": 3.82
+    },
+    {
+        "text": "So going to the point that resolves\nthe most uncertainty, basically.",
+        "start": 2778.063,
+        "duration": 3.85
+    },
+    {
+        "text": "I suppose if you go there, I, you're,\nthat's a mechanism that, that I didn't",
+        "start": 2782.853,
+        "duration": 4.17
+    },
+    {
+        "text": "want to, I didn't think about here.",
+        "start": 2787.023,
+        "duration": 1.94
+    },
+    {
+        "text": "if I'm trying to infer, like one thing\nwe haven't talked about here at all",
+        "start": 2790.053,
+        "duration": 3.86
+    },
+    {
+        "text": "is the, motor output end of this, like\nhow would I direct these things to",
+        "start": 2793.913,
+        "duration": 4.27
+    },
+    {
+        "text": "go someplace like this guy might say,\nHey, It's just in a very abstract way.",
+        "start": 2798.193,
+        "duration": 5.46
+    },
+    {
+        "text": "You might say, Hey, you know what?",
+        "start": 2803.663,
+        "duration": 1.05
+    },
+    {
+        "text": "We're confused.",
+        "start": 2804.713,
+        "duration": 0.65
+    },
+    {
+        "text": "But if you went to this one, if you\nobserve this location on the object,",
+        "start": 2805.363,
+        "duration": 3.27
+    },
+    {
+        "text": "then we'd be, we would know the answer.",
+        "start": 2809.093,
+        "duration": 1.73
+    },
+    {
+        "text": "In which case you could say you could\ntell one of these people, go observe",
+        "start": 2811.553,
+        "duration": 2.49
+    },
+    {
+        "text": "that location, tell me what you find.",
+        "start": 2814.043,
+        "duration": 1.45
+    },
+    {
+        "text": "So that's an outer loop\nsort of intelligence.",
+        "start": 2816.003,
+        "duration": 1.87
+    },
+    {
+        "text": "Is that what you're thinking, Viviane?",
+        "start": 2818.548,
+        "duration": 1.07
+    },
+    {
+        "text": "I think that's what you're thinking.",
+        "start": 2819.618,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 2821.348,
+        "duration": 0.76
+    },
+    {
+        "text": "there's a lot here I'm not\ndiscussing right at the moment.",
+        "start": 2823.748,
+        "duration": 2.16
+    },
+    {
+        "text": "There's no motor system here.",
+        "start": 2825.918,
+        "duration": 1.54
+    },
+    {
+        "text": "I'm just saying if I make these\nobservations, if these things",
+        "start": 2827.648,
+        "duration": 2.39
+    },
+    {
+        "text": "move, this is what would happen.",
+        "start": 2830.038,
+        "duration": 2.15
+    },
+    {
+        "text": "But there is clearly going to be\nmuch more going on top of this.",
+        "start": 2832.478,
+        "duration": 3.15
+    },
+    {
+        "text": "But I'm going to go in\none direction first.",
+        "start": 2835.713,
+        "duration": 3.29
+    },
+    {
+        "text": "You might answer that later.",
+        "start": 2839.593,
+        "duration": 1.23
+    },
+    {
+        "text": "I think, towards what Subutai\nasked, but we're assuming in this",
+        "start": 2840.823,
+        "duration": 4.39
+    },
+    {
+        "text": "model there is certainty where\nfeature is relative to body.",
+        "start": 2845.213,
+        "duration": 3.03
+    },
+    {
+        "text": "What happens when we add uncertainty?",
+        "start": 2849.163,
+        "duration": 1.84
+    },
+    {
+        "text": "I don't assume there's certainty.",
+        "start": 2851.823,
+        "duration": 2.02
+    },
+    {
+        "text": "There's always, there's\nno certainty, to get.",
+        "start": 2855.623,
+        "duration": 5.22
+    },
+    {
+        "text": "you could have a noise\nassociated with each other.",
+        "start": 2861.083,
+        "duration": 1.79
+    },
+    {
+        "text": "Not just, not even just a noise.",
+        "start": 2862.873,
+        "duration": 1.62
+    },
+    {
+        "text": "Take, for example,",
+        "start": 2864.803,
+        "duration": 0.94
+    },
+    {
+        "text": "nothing is ever precise in the world.",
+        "start": 2869.943,
+        "duration": 1.98
+    },
+    {
+        "text": "There's no infinite precision of location.",
+        "start": 2871.933,
+        "duration": 2.17
+    },
+    {
+        "text": "If I were to think about, let's jump\ninto biology for a second, right?",
+        "start": 2874.553,
+        "duration": 2.86
+    },
+    {
+        "text": "One of the ways that biology represents\nlocation is these vector cells.",
+        "start": 2877.613,
+        "duration": 3.14
+    },
+    {
+        "text": "And a vector cells you can say\nyou have some point which is some",
+        "start": 2881.423,
+        "duration": 2.22
+    },
+    {
+        "text": "sort of preferred orientation.",
+        "start": 2883.643,
+        "duration": 0.97
+    },
+    {
+        "text": "I'm showing it to you in 2d Okay\nshowing 2d and that around now you",
+        "start": 2884.613,
+        "duration": 4.76
+    },
+    {
+        "text": "have a bunch of cells that are active\naround that and you say this cell",
+        "start": 2889.383,
+        "duration": 3.845
+    },
+    {
+        "text": "is active and it's at some angle and\ndistance from this point and then you",
+        "start": 2893.228,
+        "duration": 3.01
+    },
+    {
+        "text": "might have another cell like this.",
+        "start": 2896.238,
+        "duration": 1.46
+    },
+    {
+        "text": "We've seen this diagram.",
+        "start": 2898.418,
+        "duration": 1.05
+    },
+    {
+        "text": "These are vector cells, and then\nyou say this cell is active it's",
+        "start": 2900.028,
+        "duration": 3.25
+    },
+    {
+        "text": "at this orientation, but it's\nthe one speculation is that as",
+        "start": 2903.278,
+        "duration": 3.81
+    },
+    {
+        "text": "you get further and further out.",
+        "start": 2907.088,
+        "duration": 1.46
+    },
+    {
+        "text": "These, things get bigger, right?",
+        "start": 2909.473,
+        "duration": 1.93
+    },
+    {
+        "text": "So if I were to say, oh, this cell is\nactive, then it's anywhere out here.",
+        "start": 2911.403,
+        "duration": 3.82
+    },
+    {
+        "text": "I don't really, but from a point\nof view that this guy, there's no",
+        "start": 2915.343,
+        "duration": 2.9
+    },
+    {
+        "text": "further distinction says that's a\nlocation and it's a fuzzy space.",
+        "start": 2918.463,
+        "duration": 3.73
+    },
+    {
+        "text": "it's not an error in some sense.",
+        "start": 2923.493,
+        "duration": 1.75
+    },
+    {
+        "text": "It's just the resolution of\nspace gets smaller or it gets",
+        "start": 2925.243,
+        "duration": 3.02
+    },
+    {
+        "text": "less as you get further out.",
+        "start": 2928.263,
+        "duration": 1.41
+    },
+    {
+        "text": "so there's a, distinction between,\nthis is a real subtle point.",
+        "start": 2931.063,
+        "duration": 4.58
+    },
+    {
+        "text": "There's a distinction between.",
+        "start": 2935.643,
+        "duration": 1.14
+    },
+    {
+        "text": "My certainty that it's this location.",
+        "start": 2937.458,
+        "duration": 2.25
+    },
+    {
+        "text": "And what does that actual location\nrepresent and space actual physical",
+        "start": 2939.748,
+        "duration": 4.4
+    },
+    {
+        "text": "space might be quite large, but\nfrom the perspective of this",
+        "start": 2944.148,
+        "duration": 2.88
+    },
+    {
+        "text": "module, that's all one place.",
+        "start": 2947.028,
+        "duration": 2.16
+    },
+    {
+        "text": "There is no further distinction side\nof that, which is, that's, I have a",
+        "start": 2950.148,
+        "duration": 4.2
+    },
+    {
+        "text": "cell represents that's what it is.",
+        "start": 2954.348,
+        "duration": 1.48
+    },
+    {
+        "text": "So it's a subtle point.",
+        "start": 2956.968,
+        "duration": 1.45
+    },
+    {
+        "text": "I don't want to go there.",
+        "start": 2959.338,
+        "duration": 0.74
+    },
+    {
+        "text": "I think one thing that's important\nfrom a centrist point of view.",
+        "start": 2960.078,
+        "duration": 4.19
+    },
+    {
+        "text": "If I, if my fingers touching\nsomething, it's never going to be",
+        "start": 2965.228,
+        "duration": 2.76
+    },
+    {
+        "text": "like, I think it'd be over here.",
+        "start": 2967.988,
+        "duration": 1.88
+    },
+    {
+        "text": "That can be over here.",
+        "start": 2969.888,
+        "duration": 0.95
+    },
+    {
+        "text": "No, it's going to be right around\nhere, or to my eyes point of",
+        "start": 2971.028,
+        "duration": 3.67
+    },
+    {
+        "text": "view, if I'm eyes poking, pointing\nhere, it's not like the feature is",
+        "start": 2974.698,
+        "duration": 3.3
+    },
+    {
+        "text": "going to be behind my back, right?",
+        "start": 2977.998,
+        "duration": 1.29
+    },
+    {
+        "text": "It's it's going to be\nsomewhere in this direction.",
+        "start": 2979.318,
+        "duration": 2.08
+    },
+    {
+        "text": "It's not oh, like the\nunion of ideas where this.",
+        "start": 2981.398,
+        "duration": 2.44
+    },
+    {
+        "text": "feature might be relative to the sensor.",
+        "start": 2984.028,
+        "duration": 1.55
+    },
+    {
+        "text": "There's going to be some, a cloud of\npossibility, but it's not going to be",
+        "start": 2986.148,
+        "duration": 5.21
+    },
+    {
+        "text": "like, oh, it could be here, There's\nno union of orientations and there's",
+        "start": 2991.358,
+        "duration": 3.55
+    },
+    {
+        "text": "no union, could be union orientation,\nbut there's no union of location.",
+        "start": 2994.908,
+        "duration": 2.88
+    },
+    {
+        "text": "It's the sensor knows, oh,\nthis general direction, it's",
+        "start": 2998.198,
+        "duration": 4.21
+    },
+    {
+        "text": "not like it doesn't know that.",
+        "start": 3002.408,
+        "duration": 1.25
+    },
+    {
+        "text": "But what if it's conflicting?",
+        "start": 3005.068,
+        "duration": 1.37
+    },
+    {
+        "text": "what if it's uncertain?",
+        "start": 3006.608,
+        "duration": 0.77
+    },
+    {
+        "text": "That would be really weird, right?",
+        "start": 3007.378,
+        "duration": 1.87
+    },
+    {
+        "text": "What if all of a sudden, Your eyes\nare looking this direction, but",
+        "start": 3009.288,
+        "duration": 3.87
+    },
+    {
+        "text": "for some weird biological reason,\nthey start detecting things over",
+        "start": 3013.168,
+        "duration": 2.95
+    },
+    {
+        "text": "here, you'd be totally confused.",
+        "start": 3016.118,
+        "duration": 2.44
+    },
+    {
+        "text": "It would just like the whole\nsystem would fall apart.",
+        "start": 3018.728,
+        "duration": 1.8
+    },
+    {
+        "text": "So I think there are some\nphysical constraints here.",
+        "start": 3021.038,
+        "duration": 3.9
+    },
+    {
+        "text": "it's interesting question.",
+        "start": 3025.858,
+        "duration": 1.38
+    },
+    {
+        "text": "I don't even want to go there.",
+        "start": 3028.808,
+        "duration": 0.68
+    },
+    {
+        "text": "If you want to go there, I think I want\nto stick with what I've stated so far.",
+        "start": 3029.548,
+        "duration": 6.15
+    },
+    {
+        "text": "Are there other questions\nabout this so far?",
+        "start": 3036.378,
+        "duration": 1.98
+    },
+    {
+        "text": "Because I want to keep going\ninto the rest of this here.",
+        "start": 3038.358,
+        "duration": 2.09
+    },
+    {
+        "text": "I think the concepts have to be clear.",
+        "start": 3043.028,
+        "duration": 1.57
+    },
+    {
+        "text": "The implementation details, maybe\nnot, but the concepts should be clear.",
+        "start": 3044.628,
+        "duration": 3.55
+    },
+    {
+        "text": "Okay, these are like where columns, but\nthe theory that we've had in our papers",
+        "start": 3049.378,
+        "duration": 7.24
+    },
+    {
+        "text": "and the theory of what we know about\nthe brain is that they're also what",
+        "start": 3056.638,
+        "duration": 4.22
+    },
+    {
+        "text": "columns associated with where columns.",
+        "start": 3060.858,
+        "duration": 1.61
+    },
+    {
+        "text": "And so what I'm going to argue now is\nthat associated with each of these,",
+        "start": 3062.728,
+        "duration": 3.67
+    },
+    {
+        "text": "that each of these can also build a model,",
+        "start": 3069.518,
+        "duration": 1.96
+    },
+    {
+        "text": "very similar to how this builds\na model, almost identical.",
+        "start": 3082.078,
+        "duration": 3.34
+    },
+    {
+        "text": "Okay.",
+        "start": 3085.418,
+        "duration": 0.23
+    },
+    {
+        "text": "The difference here is, these models,\nif I think about a brain, these",
+        "start": 3086.503,
+        "duration": 5.7
+    },
+    {
+        "text": "models are going to learn very slowly,\nand there's a good reason for that.",
+        "start": 3092.203,
+        "duration": 2.58
+    },
+    {
+        "text": "we don't want these models, these would\nbe like V1 or S1 or something like that.",
+        "start": 3095.913,
+        "duration": 4.75
+    },
+    {
+        "text": "You don't want to learn things\nreally rapidly here, because you're",
+        "start": 3101.213,
+        "duration": 2.51
+    },
+    {
+        "text": "going to see in a moment that other\nthings are going to rely upon it,",
+        "start": 3103.723,
+        "duration": 2.1
+    },
+    {
+        "text": "so you don't really want to do that.",
+        "start": 3105.863,
+        "duration": 1.51
+    },
+    {
+        "text": "What you want to do is say, I'm going\nto learn models of things that occur",
+        "start": 3107.883,
+        "duration": 3.1
+    },
+    {
+        "text": "consistently over time, for a long\nperiod of time, that I know are going",
+        "start": 3111.313,
+        "duration": 2.82
+    },
+    {
+        "text": "to be around for a long period of time.",
+        "start": 3114.143,
+        "duration": 1.0
+    },
+    {
+        "text": "Not some temporary arrangement of\nstuff, not some thing for today, not for",
+        "start": 3115.858,
+        "duration": 4.02
+    },
+    {
+        "text": "tomorrow, but more consistent reality,\nthings are consistently in the world.",
+        "start": 3119.878,
+        "duration": 4.0
+    },
+    {
+        "text": "and so I'll learn these will learn\nslowly and but they're going to",
+        "start": 3124.908,
+        "duration": 3.78
+    },
+    {
+        "text": "do the same thing as over here.",
+        "start": 3128.688,
+        "duration": 1.29
+    },
+    {
+        "text": "You're just not going\nto be rapidly learning",
+        "start": 3130.288,
+        "duration": 1.27
+    },
+    {
+        "text": "A good example to think about is when\nyou learn the letters of the alphabet.",
+        "start": 3134.028,
+        "duration": 3.08
+    },
+    {
+        "text": "When you first, as a child, you learn\nthe letters of the alphabet, the",
+        "start": 3138.468,
+        "duration": 2.68
+    },
+    {
+        "text": "letters don't look like anything,\nthey're just like gobbledygook, right?",
+        "start": 3141.148,
+        "duration": 2.41
+    },
+    {
+        "text": "And, and someone has to say, there's\nthis thing called the down arrow,",
+        "start": 3143.958,
+        "duration": 3.43
+    },
+    {
+        "text": "and then there's like another thing\nlike this, and we call that a B.",
+        "start": 3147.388,
+        "duration": 2.3
+    },
+    {
+        "text": "And so you look, oh, I have this\nfeature plus this feature, that",
+        "start": 3150.148,
+        "duration": 2.94
+    },
+    {
+        "text": "equals a B at some relative location.",
+        "start": 3153.088,
+        "duration": 1.6
+    },
+    {
+        "text": "And then, you learn that another\nletter is yeah, this is a D, it's",
+        "start": 3155.018,
+        "duration": 2.62
+    },
+    {
+        "text": "like that, but it goes this way, okay.",
+        "start": 3157.668,
+        "duration": 1.66
+    },
+    {
+        "text": "Okay.",
+        "start": 3159.328,
+        "duration": 0.135
+    },
+    {
+        "text": "And, but over, and so in the beginning,\nyou have to really think hard about",
+        "start": 3160.053,
+        "duration": 3.35
+    },
+    {
+        "text": "this and try to learn your letters,\nyou have to think really hard about it.",
+        "start": 3163.403,
+        "duration": 2.64
+    },
+    {
+        "text": "and they have to practice over and over\nagain, because it's not obvious, they",
+        "start": 3166.728,
+        "duration": 2.2
+    },
+    {
+        "text": "can't just see it and recognize it.",
+        "start": 3168.928,
+        "duration": 1.3
+    },
+    {
+        "text": "They have to see that these components and\ntheir sort of ability, and you practice",
+        "start": 3170.728,
+        "duration": 2.91
+    },
+    {
+        "text": "this over and over again, and slowly\nyou build up these models down here, of",
+        "start": 3173.638,
+        "duration": 3.81
+    },
+    {
+        "text": "what these things are, and, sometimes\nyou, can learn it quickly here, I can",
+        "start": 3177.448,
+        "duration": 4.96
+    },
+    {
+        "text": "say, oh, today I went to kindergarten\nfor the first time, I learned, the first",
+        "start": 3182.408,
+        "duration": 3.1
+    },
+    {
+        "text": "four letters of the alphabet, I learned\nthat quickly here, but ultimately we're",
+        "start": 3185.538,
+        "duration": 3.09
+    },
+    {
+        "text": "going to want to learn it down in here.",
+        "start": 3188.698,
+        "duration": 0.97
+    },
+    {
+        "text": "and you just have to\npractice over and over again.",
+        "start": 3190.478,
+        "duration": 2.61
+    },
+    {
+        "text": "And so I'll just leave it\nat that for the moment.",
+        "start": 3193.443,
+        "duration": 1.75
+    },
+    {
+        "text": "So these guys here, now\nwe have multiple models.",
+        "start": 3195.373,
+        "duration": 4.03
+    },
+    {
+        "text": "Now, how would they build the model?",
+        "start": 3199.453,
+        "duration": 1.15
+    },
+    {
+        "text": "Exactly the same way as here.",
+        "start": 3200.603,
+        "duration": 1.29
+    },
+    {
+        "text": "They have the same information.",
+        "start": 3201.923,
+        "duration": 1.37
+    },
+    {
+        "text": "They have, imagine, I am now, one\nsensor at a time is getting input,",
+        "start": 3203.743,
+        "duration": 5.98
+    },
+    {
+        "text": "and that sensor posts up here, a pose\nof the feature to the body, right?",
+        "start": 3210.453,
+        "duration": 5.65
+    },
+    {
+        "text": "and, that information is\naccessible to all these people.",
+        "start": 3218.133,
+        "duration": 3.84
+    },
+    {
+        "text": "And so everyone can learn\na model at the same time.",
+        "start": 3222.978,
+        "duration": 2.5
+    },
+    {
+        "text": "I, my fingertip is exploring an\nobject, but the next sensory patch",
+        "start": 3226.588,
+        "duration": 4.88
+    },
+    {
+        "text": "is over, all can have access to the\ninformation, they can be learning the",
+        "start": 3231.468,
+        "duration": 3.307
+    },
+    {
+        "text": "module, the thing at the same time.",
+        "start": 3234.775,
+        "duration": 1.553
+    },
+    {
+        "text": "so I'm only touching with this finger,\nbut other parts of my skin could",
+        "start": 3237.308,
+        "duration": 2.58
+    },
+    {
+        "text": "learn the same model, because they all\nhave access to this pose, the feature",
+        "start": 3239.958,
+        "duration": 3.04
+    },
+    {
+        "text": "relative to the body, they can convert\nthat as a pose, as a feature, they",
+        "start": 3243.008,
+        "duration": 4.2
+    },
+    {
+        "text": "basically can build a model from that.",
+        "start": 3247.208,
+        "duration": 1.31
+    },
+    {
+        "text": "It's the same information that\nthis guy's using and the same",
+        "start": 3249.048,
+        "duration": 2.92
+    },
+    {
+        "text": "information that this one's using.",
+        "start": 3251.968,
+        "duration": 0.95
+    },
+    {
+        "text": "but we're going to do it slowly,\nbut that's an implementation detail.",
+        "start": 3254.448,
+        "duration": 3.15
+    },
+    {
+        "text": "but just saying we can all learn.",
+        "start": 3258.218,
+        "duration": 1.35
+    },
+    {
+        "text": "Now, here's a very important thing.",
+        "start": 3259.888,
+        "duration": 1.02
+    },
+    {
+        "text": "When you're learning something new, you\ncan't grab it with all your sensors.",
+        "start": 3260.908,
+        "duration": 5.27
+    },
+    {
+        "text": "that won't work.",
+        "start": 3266.668,
+        "duration": 0.7
+    },
+    {
+        "text": "That only works when you've learned it.",
+        "start": 3267.458,
+        "duration": 1.8
+    },
+    {
+        "text": "And when you're learning something\nnew, you always have to narrow down",
+        "start": 3269.258,
+        "duration": 2.58
+    },
+    {
+        "text": "to some piece, thing you actually can\nrecognize, and then do a series of those",
+        "start": 3271.838,
+        "duration": 4.08
+    },
+    {
+        "text": "and build up your, graphical model.",
+        "start": 3275.918,
+        "duration": 1.53
+    },
+    {
+        "text": "So, only after you have, you'll see at\nhome, only after you have many models",
+        "start": 3279.613,
+        "duration": 3.23
+    },
+    {
+        "text": "can you grab them with one hand and\nlook them in all their eyes, but in the",
+        "start": 3282.843,
+        "duration": 2.4
+    },
+    {
+        "text": "beginning, if you see something really\nodd or new, you just have to look,",
+        "start": 3285.243,
+        "duration": 3.17
+    },
+    {
+        "text": "you have to attend to each individual\nfeatures in order to build up that model.",
+        "start": 3288.573,
+        "duration": 2.97
+    },
+    {
+        "text": "So that's, imagine that's\nwhat's happening here.",
+        "start": 3291.613,
+        "duration": 2.35
+    },
+    {
+        "text": "So now I have, models here.",
+        "start": 3294.233,
+        "duration": 2.2
+    },
+    {
+        "text": "just like the model up here,\nthere's really no difference.",
+        "start": 3300.193,
+        "duration": 2.28
+    },
+    {
+        "text": "It's just multiple copies of it, of\nthe same thing up here, but these, in",
+        "start": 3302.993,
+        "duration": 3.25
+    },
+    {
+        "text": "some sense, these are a little slower.",
+        "start": 3306.243,
+        "duration": 1.2
+    },
+    {
+        "text": "and, and each one now is,\nassociated with a particular sensor.",
+        "start": 3309.063,
+        "duration": 3.16
+    },
+    {
+        "text": "So this, I've used a\nlot of resources here.",
+        "start": 3312.223,
+        "duration": 2.11
+    },
+    {
+        "text": "I've just replicated this\nfor every sensor patch.",
+        "start": 3314.333,
+        "duration": 2.71
+    },
+    {
+        "text": "I now have a complete model,\nwhich is like really expensive.",
+        "start": 3317.363,
+        "duration": 2.68
+    },
+    {
+        "text": "That's why primary and secondary\nsensory and motor cortices are so big.",
+        "start": 3320.633,
+        "duration": 3.54
+    },
+    {
+        "text": "because I have lots of models\nof the same thing, down at one",
+        "start": 3325.218,
+        "duration": 3.77
+    },
+    {
+        "text": "level, in some sense like that.",
+        "start": 3329.038,
+        "duration": 1.42
+    },
+    {
+        "text": "before I go on, any questions about that?",
+        "start": 3331.818,
+        "duration": 1.74
+    },
+    {
+        "text": "You don't have the what columns?",
+        "start": 3336.288,
+        "duration": 1.67
+    },
+    {
+        "text": "This would be a what column?",
+        "start": 3338.258,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah, but you don't have\nthem collaborating on?",
+        "start": 3339.368,
+        "duration": 1.81
+    },
+    {
+        "text": "I will, in a second.",
+        "start": 3341.978,
+        "duration": 0.85
+    },
+    {
+        "text": "Okay.",
+        "start": 3343.168,
+        "duration": 0.29
+    },
+    {
+        "text": "So now this is where\nvoting can come in, right?",
+        "start": 3343.953,
+        "duration": 2.36
+    },
+    {
+        "text": "We talked about voting, as you have\nmultiple modules that are, so imagine",
+        "start": 3346.683,
+        "duration": 6.2
+    },
+    {
+        "text": "I have some input here, and I have\nsome input here, or some input here.",
+        "start": 3352.883,
+        "duration": 2.56
+    },
+    {
+        "text": "After we've learned all these things,\nand maybe after we've learned the letters",
+        "start": 3355.573,
+        "duration": 3.71
+    },
+    {
+        "text": "of the alphabet, and now I have a bunch\nof sensory inputs coming in at the",
+        "start": 3359.283,
+        "duration": 4.0
+    },
+    {
+        "text": "same time, Each of these systems says,\nOh, I see a feature at some location.",
+        "start": 3363.283,
+        "duration": 6.13
+    },
+    {
+        "text": "I can now trying to figure out what,\nmy model, what, I'm recognizing.",
+        "start": 3370.273,
+        "duration": 4.16
+    },
+    {
+        "text": "Everybody has uncertainty about that\nbecause they only sense one thing.",
+        "start": 3374.673,
+        "duration": 3.88
+    },
+    {
+        "text": "but they can now vote in the\nway that we've described it.",
+        "start": 3379.653,
+        "duration": 3.13
+    },
+    {
+        "text": "In the, in the, columns paper, they now\nhave the ability to vote, and so they can",
+        "start": 3384.778,
+        "duration": 6.55
+    },
+    {
+        "text": "say, okay, we all have some features at\nsome locations, and now we have enough",
+        "start": 3391.328,
+        "duration": 4.54
+    },
+    {
+        "text": "information together that we can say\nat a glance, we can all touch the cup",
+        "start": 3395.938,
+        "duration": 5.45
+    },
+    {
+        "text": "with our fingers, we can all look at\nthe letter with multiple columns in my",
+        "start": 3401.388,
+        "duration": 2.72
+    },
+    {
+        "text": "cortex, my visual cortex, And with one\npresentation or fewer presentations,",
+        "start": 3404.348,
+        "duration": 4.95
+    },
+    {
+        "text": "I'm able to resolve which, which\nobject, which graph I'm looking at.",
+        "start": 3409.298,
+        "duration": 6.07
+    },
+    {
+        "text": "What do you gain from this?",
+        "start": 3416.728,
+        "duration": 2.0
+    },
+    {
+        "text": "The first thing you gain is\nmuch faster processing, right?",
+        "start": 3418.728,
+        "duration": 4.6
+    },
+    {
+        "text": "Prior to this, to recognize an\nobject, I'd have to thoroughly",
+        "start": 3423.688,
+        "duration": 3.24
+    },
+    {
+        "text": "go through the features.",
+        "start": 3426.928,
+        "duration": 1.13
+    },
+    {
+        "text": "That's how I learned it.",
+        "start": 3429.098,
+        "duration": 0.82
+    },
+    {
+        "text": "Learning requires that.",
+        "start": 3429.998,
+        "duration": 1.21
+    },
+    {
+        "text": "But once I've learned it in this\nsystem here, I still have to do",
+        "start": 3431.598,
+        "duration": 2.6
+    },
+    {
+        "text": "that to recognize the object.",
+        "start": 3434.198,
+        "duration": 1.18
+    },
+    {
+        "text": "I still have to go through one at a\ntime, building, seeing which of the graph",
+        "start": 3435.428,
+        "duration": 3.15
+    },
+    {
+        "text": "elements, and it would take multiple\npresentations to, to figure out where,",
+        "start": 3438.778,
+        "duration": 4.64
+    },
+    {
+        "text": "what object it is . Here, I can do it\nwith one presentation, one, potentially",
+        "start": 3443.438,
+        "duration": 5.3
+    },
+    {
+        "text": "one, but certainly fewer than this.",
+        "start": 3448.738,
+        "duration": 1.64
+    },
+    {
+        "text": "We made that point in the Columns paper.",
+        "start": 3451.218,
+        "duration": 1.47
+    },
+    {
+        "text": "That's one advantage of this\nsystem, but at a great cost.",
+        "start": 3452.788,
+        "duration": 3.36
+    },
+    {
+        "text": "Because I now, have many\ncopies of this model.",
+        "start": 3456.763,
+        "duration": 3.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 3460.923,
+        "duration": 0.31
+    },
+    {
+        "text": "What's the information\npassed on the green lines?",
+        "start": 3461.473,
+        "duration": 1.79
+    },
+    {
+        "text": "I don't know yet, actually.",
+        "start": 3463.263,
+        "duration": 2.55
+    },
+    {
+        "text": "I'm not thinking about that level.",
+        "start": 3467.423,
+        "duration": 1.49
+    },
+    {
+        "text": "All I'm thinking about at the\nmoment is that there is enough",
+        "start": 3468.923,
+        "duration": 2.22
+    },
+    {
+        "text": "information here to resolve it.",
+        "start": 3471.263,
+        "duration": 2.3
+    },
+    {
+        "text": "so we can say, there could be\nthe union of object like things.",
+        "start": 3474.443,
+        "duration": 3.28
+    },
+    {
+        "text": "But, that's how we talked about it,\nthis is the voting mechanism, we",
+        "start": 3478.298,
+        "duration": 4.24
+    },
+    {
+        "text": "have in the columns paper, that would\nwork, but I don't really know yet",
+        "start": 3482.538,
+        "duration": 2.82
+    },
+    {
+        "text": "how to incorporate the orientation,\nrelative orientation component of this.",
+        "start": 3485.368,
+        "duration": 3.612
+    },
+    {
+        "text": "I don't know if you\nthought about that Marcus.",
+        "start": 3488.98,
+        "duration": 1.578
+    },
+    {
+        "text": "we've said, your fingers know\nwhere they are relative to each",
+        "start": 3492.338,
+        "duration": 2.18
+    },
+    {
+        "text": "other, and that helps you know\nwhere you recognize the coffee cup.",
+        "start": 3494.518,
+        "duration": 3.09
+    },
+    {
+        "text": "I haven't worked out those details yet.",
+        "start": 3498.278,
+        "duration": 1.24
+    },
+    {
+        "text": "Okay, let's just say though,\nthere's, we have one part of it,",
+        "start": 3500.148,
+        "duration": 4.22
+    },
+    {
+        "text": "which is the voting mechanism\nin, In the, in the columns paper.",
+        "start": 3504.398,
+        "duration": 4.75
+    },
+    {
+        "text": "That's an important part of it.",
+        "start": 3509.198,
+        "duration": 0.93
+    },
+    {
+        "text": "But even that, we'll talk about\nobject state in a moment and it",
+        "start": 3510.698,
+        "duration": 3.28
+    },
+    {
+        "text": "doesn't represent object state.",
+        "start": 3513.978,
+        "duration": 1.43
+    },
+    {
+        "text": "So I don't know.",
+        "start": 3515.868,
+        "duration": 0.75
+    },
+    {
+        "text": "Can we just leave that?",
+        "start": 3517.218,
+        "duration": 0.77
+    },
+    {
+        "text": "For sensations there, as you've shown\nthat, yeah, you have four choose two six",
+        "start": 3519.028,
+        "duration": 5.42
+    },
+    {
+        "text": "pairwise things that you can calculate.",
+        "start": 3525.468,
+        "duration": 2.04
+    },
+    {
+        "text": "the blue lines, what you call\nrelative positions of the",
+        "start": 3530.948,
+        "duration": 3.57
+    },
+    {
+        "text": "features on the object relative.",
+        "start": 3534.848,
+        "duration": 1.89
+    },
+    {
+        "text": "You said four, choose two, four.",
+        "start": 3537.608,
+        "duration": 1.8
+    },
+    {
+        "text": "Choose two.",
+        "start": 3539.408,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 3539.948,
+        "duration": 0.33
+    },
+    {
+        "text": "All para, oh, all pairwise combinations.",
+        "start": 3540.368,
+        "duration": 1.86
+    },
+    {
+        "text": "Yes.",
+        "start": 3542.228,
+        "duration": 0.18
+    },
+    {
+        "text": "Yeah.",
+        "start": 3542.498,
+        "duration": 0.21
+    },
+    {
+        "text": "So you have six.",
+        "start": 3542.708,
+        "duration": 0.525
+    },
+    {
+        "text": "Six of those blue lines now,\nyou can send back to them.",
+        "start": 3544.173,
+        "duration": 4.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 3548.673,
+        "duration": 0.19
+    },
+    {
+        "text": "You know what those, six of them.",
+        "start": 3548.953,
+        "duration": 1.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 3550.613,
+        "duration": 0.26
+    },
+    {
+        "text": "I think, that's right, I think with the\nSo that's information you can use to Yes.",
+        "start": 3551.273,
+        "duration": 5.85
+    },
+    {
+        "text": "Narrow things down.",
+        "start": 3557.753,
+        "duration": 0.63
+    },
+    {
+        "text": "I think, again, I'm going to put that\ninto the implementation detail here.",
+        "start": 3558.393,
+        "duration": 3.3
+    },
+    {
+        "text": "I'm just trying to figure out who knows\nwhat and how, what you can do with it.",
+        "start": 3561.693,
+        "duration": 2.775
+    },
+    {
+        "text": "so there is enough information\nhere to much more quickly",
+        "start": 3566.028,
+        "duration": 4.94
+    },
+    {
+        "text": "resolve, what the object is.",
+        "start": 3570.968,
+        "duration": 2.88
+    },
+    {
+        "text": "And as soon as these objects are\nin the graph, then you can work",
+        "start": 3573.918,
+        "duration": 3.4
+    },
+    {
+        "text": "out mechanisms to make it happen.",
+        "start": 3577.318,
+        "duration": 1.3
+    },
+    {
+        "text": "but I think there's a huge amount of\nbiological evidence to support this idea.",
+        "start": 3580.588,
+        "duration": 3.07
+    },
+    {
+        "text": "one of the biggest problems I've spent\nmy life trying to understand is how it is",
+        "start": 3584.978,
+        "duration": 3.6
+    },
+    {
+        "text": "we can recognize an image at one glance.",
+        "start": 3588.588,
+        "duration": 1.85
+    },
+    {
+        "text": "where I knew that vision was\nnot like that vision is always",
+        "start": 3591.783,
+        "duration": 2.65
+    },
+    {
+        "text": "and everything is it's it's like\nmoving your sensors and in touch.",
+        "start": 3594.513,
+        "duration": 4.9
+    },
+    {
+        "text": "You can't even imagine what one glance\nis, but I can say, yes, it's like grabbing",
+        "start": 3599.413,
+        "duration": 3.42
+    },
+    {
+        "text": "this coffee cup, but it's not an image.",
+        "start": 3602.833,
+        "duration": 1.32
+    },
+    {
+        "text": "How does that work?",
+        "start": 3604.153,
+        "duration": 0.82
+    },
+    {
+        "text": "How can this grab be similar to this grab?",
+        "start": 3606.303,
+        "duration": 2.93
+    },
+    {
+        "text": "How does that all work?",
+        "start": 3609.763,
+        "duration": 0.82
+    },
+    {
+        "text": "this explains that.",
+        "start": 3610.773,
+        "duration": 0.85
+    },
+    {
+        "text": "It's like it says, here's how you\ncan infer an object with multiple",
+        "start": 3611.693,
+        "duration": 4.61
+    },
+    {
+        "text": "sensors in one sensation event.",
+        "start": 3616.303,
+        "duration": 4.79
+    },
+    {
+        "text": "even though the object had to be learned\nsequentially, a feature in sequence.",
+        "start": 3621.748,
+        "duration": 4.4
+    },
+    {
+        "text": "You can't learn an object just by\nstaring at the letter, you have to",
+        "start": 3626.418,
+        "duration": 3.11
+    },
+    {
+        "text": "look at the individual pieces, you\ncan't learn anything like that.",
+        "start": 3629.538,
+        "duration": 2.82
+    },
+    {
+        "text": "So that was one advantage here,\nvery fast recognition of something.",
+        "start": 3633.888,
+        "duration": 4.5
+    },
+    {
+        "text": "just a little bit of an aside,\nYou're going to build, okay, this",
+        "start": 3640.778,
+        "duration": 3.655
+    },
+    {
+        "text": "is an aside, it's not important.",
+        "start": 3644.433,
+        "duration": 1.17
+    },
+    {
+        "text": "If you're going to build a practical\nsystem, the speed advantage of",
+        "start": 3645.603,
+        "duration": 3.8
+    },
+    {
+        "text": "this comes out of cost of memory,\nand training time, memory.",
+        "start": 3649.403,
+        "duration": 3.39
+    },
+    {
+        "text": "what if you could, in a brain, the\nfastest you can do one of these things",
+        "start": 3654.553,
+        "duration": 3.2
+    },
+    {
+        "text": "is like 100 milliseconds, like how\nquickly can you move your finger or",
+        "start": 3657.753,
+        "duration": 2.87
+    },
+    {
+        "text": "your eyes or something like that?",
+        "start": 3660.623,
+        "duration": 1.1
+    },
+    {
+        "text": "But in a computer, you might\nbe able to do this really fast.",
+        "start": 3662.053,
+        "duration": 2.54
+    },
+    {
+        "text": "And so you might be able to\ninfer this object with really",
+        "start": 3664.593,
+        "duration": 3.21
+    },
+    {
+        "text": "fast sequential observations.",
+        "start": 3667.803,
+        "duration": 1.87
+    },
+    {
+        "text": "cameras out there and they\nsay, okay, I got rid of it.",
+        "start": 3670.193,
+        "duration": 2.19
+    },
+    {
+        "text": "but in the brain, things are slow.",
+        "start": 3674.323,
+        "duration": 1.21
+    },
+    {
+        "text": "So this is, this gives\nyou a real advantage.",
+        "start": 3675.533,
+        "duration": 2.0
+    },
+    {
+        "text": "if I, if going from to understand\nsomething with one glance versus",
+        "start": 3677.793,
+        "duration": 4.71
+    },
+    {
+        "text": "having to look at three or four, which\ncould be half a second, then that's",
+        "start": 3682.623,
+        "duration": 4.31
+    },
+    {
+        "text": "the difference of life and death.",
+        "start": 3686.973,
+        "duration": 0.97
+    },
+    {
+        "text": "But that's all.",
+        "start": 3689.343,
+        "duration": 0.74
+    },
+    {
+        "text": "You're going to get something\nelse from this, okay?",
+        "start": 3690.448,
+        "duration": 1.86
+    },
+    {
+        "text": "What else do you get from this?",
+        "start": 3692.768,
+        "duration": 1.2
+    },
+    {
+        "text": "So",
+        "start": 3695.018,
+        "duration": 0.5
+    },
+    {
+        "text": "imagine now we have a, we have another,",
+        "start": 3697.828,
+        "duration": 2.98
+    },
+    {
+        "text": "modeling system here.",
+        "start": 3703.728,
+        "duration": 1.09
+    },
+    {
+        "text": "This is going to be secondary cortex.",
+        "start": 3706.668,
+        "duration": 1.64
+    },
+    {
+        "text": "This is primary cortex, all right?",
+        "start": 3708.308,
+        "duration": 2.76
+    },
+    {
+        "text": "And as before, this module here is\nit's, it thinks it has a sensor.",
+        "start": 3712.048,
+        "duration": 5.35
+    },
+    {
+        "text": "It's it says, I have a sensor.",
+        "start": 3717.558,
+        "duration": 1.5
+    },
+    {
+        "text": "It has this, but let's for\nthe moment assume that sensor",
+        "start": 3719.058,
+        "duration": 2.21
+    },
+    {
+        "text": "is not a physical sensor.",
+        "start": 3721.268,
+        "duration": 0.68
+    },
+    {
+        "text": "What it's sensing is the\noutput of these guys, right?",
+        "start": 3723.038,
+        "duration": 3.89
+    },
+    {
+        "text": "So this is like the, you're\npassing up the hierarchy.",
+        "start": 3726.958,
+        "duration": 2.02
+    },
+    {
+        "text": "and this is something a little fuzzy.",
+        "start": 3733.603,
+        "duration": 1.54
+    },
+    {
+        "text": "I haven't worked through\nall the details here yet.",
+        "start": 3735.143,
+        "duration": 1.59
+    },
+    {
+        "text": "But, think about it this way.",
+        "start": 3736.733,
+        "duration": 1.99
+    },
+    {
+        "text": "This sensor is, again, trying to figure\nout there's some object in the world",
+        "start": 3739.433,
+        "duration": 3.63
+    },
+    {
+        "text": "at some location relative to my sensor.",
+        "start": 3743.103,
+        "duration": 2.5
+    },
+    {
+        "text": "This green thing here is\nan object in the world.",
+        "start": 3749.323,
+        "duration": 2.49
+    },
+    {
+        "text": "it's, everyone agreed down here that,\nhey, this is the letter A, or this",
+        "start": 3752.223,
+        "duration": 4.22
+    },
+    {
+        "text": "is, the coffee cup, or whatever it is.",
+        "start": 3756.453,
+        "duration": 1.99
+    },
+    {
+        "text": "This is a, this is an ensemble\nof features, and it doesn't",
+        "start": 3759.133,
+        "duration": 3.13
+    },
+    {
+        "text": "matter where these sensors are\nmoving around on the object.",
+        "start": 3762.263,
+        "duration": 2.5
+    },
+    {
+        "text": "I could be moving my fingers like this,\nor my eyes can look at different points.",
+        "start": 3765.153,
+        "duration": 3.01
+    },
+    {
+        "text": "The output of the green line is stable.",
+        "start": 3768.563,
+        "duration": 1.63
+    },
+    {
+        "text": "It says, yep, that's coffee\ncup, yep, that's the pen,",
+        "start": 3770.943,
+        "duration": 2.08
+    },
+    {
+        "text": "whatever, that's the letter B.",
+        "start": 3773.223,
+        "duration": 1.34
+    },
+    {
+        "text": "And so this stuff is all changing,\nbut this stuff is constant.",
+        "start": 3776.038,
+        "duration": 3.39
+    },
+    {
+        "text": "And so this says, there's a B out there,\nor there's a coffee cup out there, and",
+        "start": 3780.128,
+        "duration": 3.83
+    },
+    {
+        "text": "I can, it's, it doesn't, it's, position\nto this sensor isn't changing, even",
+        "start": 3783.978,
+        "duration": 4.17
+    },
+    {
+        "text": "though my, sensors were changing, but the\nposition to this sensor is not changing.",
+        "start": 3788.148,
+        "duration": 3.97
+    },
+    {
+        "text": "It's just there's a doesn't matter.",
+        "start": 3793.778,
+        "duration": 1.82
+    },
+    {
+        "text": "My eyes move around.",
+        "start": 3795.598,
+        "duration": 1.0
+    },
+    {
+        "text": "The B is that location.",
+        "start": 3796.668,
+        "duration": 1.39
+    },
+    {
+        "text": "I don't imagine the B moving\nas I'm moving my eyes around or",
+        "start": 3798.058,
+        "duration": 2.82
+    },
+    {
+        "text": "I don't mention the coffee cup\nmoving as I move my fingers around.",
+        "start": 3800.938,
+        "duration": 2.2
+    },
+    {
+        "text": "you can think this isn't sometimes\na sensor where the feature is",
+        "start": 3804.458,
+        "duration": 3.63
+    },
+    {
+        "text": "a more as a, composite object.",
+        "start": 3808.138,
+        "duration": 2.72
+    },
+    {
+        "text": "It's getting this input from\nthese guys, and the feature is",
+        "start": 3811.548,
+        "duration": 3.02
+    },
+    {
+        "text": "composite, a more complex feature,\na composite feature, if you will.",
+        "start": 3814.758,
+        "duration": 4.84
+    },
+    {
+        "text": "and.",
+        "start": 3822.378,
+        "duration": 0.38
+    },
+    {
+        "text": "This guy itself cannot\nknow any of the details.",
+        "start": 3823.838,
+        "duration": 3.6
+    },
+    {
+        "text": "If it's saying, this is the letter\nB, it doesn't have any knowledge",
+        "start": 3828.058,
+        "duration": 3.2
+    },
+    {
+        "text": "of what the details of a B are.",
+        "start": 3831.258,
+        "duration": 2.24
+    },
+    {
+        "text": "It just says, I, this is a feature\nthat I detect consistently,",
+        "start": 3834.048,
+        "duration": 3.41
+    },
+    {
+        "text": "and we're going to call it a B.",
+        "start": 3837.798,
+        "duration": 1.63
+    },
+    {
+        "text": "or just, it's going to be what it is.",
+        "start": 3840.228,
+        "duration": 1.47
+    },
+    {
+        "text": "But it doesn't itself, doesn't\nknow anything about the detail.",
+        "start": 3842.048,
+        "duration": 2.89
+    },
+    {
+        "text": "it's just That's all you can say.",
+        "start": 3845.398,
+        "duration": 2.63
+    },
+    {
+        "text": "It doesn't know any further spatial\ndiscrimination in, it's there's a",
+        "start": 3848.038,
+        "duration": 3.43
+    },
+    {
+        "text": "feature at some location and pose\nrelative to me, so it knows the pose",
+        "start": 3851.468,
+        "duration": 4.12
+    },
+    {
+        "text": "of that feature, but there's no further\nspatial discrimination possible.",
+        "start": 3855.588,
+        "duration": 4.69
+    },
+    {
+        "text": "It's a very kind of odd concept.",
+        "start": 3861.888,
+        "duration": 1.33
+    },
+    {
+        "text": "It's these guys have further spatial\ndiscrimination, but this guy doesn't.",
+        "start": 3864.108,
+        "duration": 3.2
+    },
+    {
+        "text": "Says No, it's just, it's that thing.",
+        "start": 3868.243,
+        "duration": 2.52
+    },
+    {
+        "text": "'cause I've seen this pattern\nand this pattern's coming in and",
+        "start": 3870.853,
+        "duration": 3.09
+    },
+    {
+        "text": "I get another pattern and I get\nanother pattern and I can, now I",
+        "start": 3873.943,
+        "duration": 2.34
+    },
+    {
+        "text": "can build up a model of whatever.",
+        "start": 3876.283,
+        "duration": 1.44
+    },
+    {
+        "text": "So these were, if these recognize letters\nof the alphabet, they may be here.",
+        "start": 3878.023,
+        "duration": 3.69
+    },
+    {
+        "text": "I'm recognizing words and right.",
+        "start": 3881.713,
+        "duration": 1.96
+    },
+    {
+        "text": "And words are certain combination\nof letters in certain position",
+        "start": 3883.673,
+        "duration": 2.25
+    },
+    {
+        "text": "relative to each other.",
+        "start": 3885.923,
+        "duration": 0.66
+    },
+    {
+        "text": "And instead it says, yeah,\nI recognize the word dog.",
+        "start": 3886.583,
+        "duration": 2.31
+    },
+    {
+        "text": "But at this level, I don't know\ndog has a D and an O and a G.",
+        "start": 3889.223,
+        "duration": 3.44
+    },
+    {
+        "text": "It's just a thing,",
+        "start": 3892.763,
+        "duration": 1.06
+    },
+    {
+        "text": "that I observe.",
+        "start": 3895.843,
+        "duration": 0.67
+    },
+    {
+        "text": "Down here, they can say, yeah, I\nknow a dog is composed of a D and",
+        "start": 3897.103,
+        "duration": 3.21
+    },
+    {
+        "text": "an O and a G in relative positions.",
+        "start": 3900.313,
+        "duration": 1.6
+    },
+    {
+        "text": "So this led me to the idea This\nis the first time, we talk here",
+        "start": 3904.143,
+        "duration": 6.3
+    },
+    {
+        "text": "a lot about composite objects\nand, how you represent, things as",
+        "start": 3910.443,
+        "duration": 3.69
+    },
+    {
+        "text": "part of things as part of things.",
+        "start": 3914.133,
+        "duration": 1.36
+    },
+    {
+        "text": "And I've always was hoping that\ncomposition could be defined",
+        "start": 3915.973,
+        "duration": 4.55
+    },
+    {
+        "text": "hierarchical composition can\nbe defined within a module.",
+        "start": 3921.643,
+        "duration": 2.02
+    },
+    {
+        "text": "and this view says no, you have one level\nof composition in any particular module.",
+        "start": 3925.363,
+        "duration": 4.38
+    },
+    {
+        "text": "the letter, the letter B has these\ncomponents that are in this arrangement.",
+        "start": 3931.563,
+        "duration": 4.99
+    },
+    {
+        "text": "But that's it, can't represent\nanother level of, abstraction.",
+        "start": 3936.763,
+        "duration": 3.53
+    },
+    {
+        "text": "I have to go up here to have this guy\nsay, you know what, I know these, now,",
+        "start": 3940.533,
+        "duration": 4.42
+    },
+    {
+        "text": "these components, I can see that they are\narranged in a certain way, and I'm going",
+        "start": 3944.953,
+        "duration": 3.6
+    },
+    {
+        "text": "to form a representation of the whole.",
+        "start": 3948.553,
+        "duration": 1.34
+    },
+    {
+        "text": "So this is the idea that, that.",
+        "start": 3950.583,
+        "duration": 1.64
+    },
+    {
+        "text": "There's one level of composition at each\nlevel here, and it's not like this guy",
+        "start": 3952.923,
+        "duration": 4.48
+    },
+    {
+        "text": "can have a model of a, a word and then\nalso a model of a letter and then the",
+        "start": 3957.403,
+        "duration": 5.97
+    },
+    {
+        "text": "individual components underneath it.",
+        "start": 3963.413,
+        "duration": 1.65
+    },
+    {
+        "text": "I don't, maybe that's true now,\nbut I'm going that direction, which",
+        "start": 3966.183,
+        "duration": 4.35
+    },
+    {
+        "text": "kind of implies a limit to how many\nlevels of composition you can have",
+        "start": 3970.533,
+        "duration": 5.38
+    },
+    {
+        "text": "based on how many levels in the\nhierarchy you're going to go to.",
+        "start": 3975.933,
+        "duration": 2.18
+    },
+    {
+        "text": "here I have, one level of composition\ndown another level of composition and",
+        "start": 3979.213,
+        "duration": 3.86
+    },
+    {
+        "text": "then I got another level of composition.",
+        "start": 3983.073,
+        "duration": 1.3
+    },
+    {
+        "text": "but this is the first time gave me a\nsense like intuitive things I knew what",
+        "start": 3986.733,
+        "duration": 4.73
+    },
+    {
+        "text": "to be happening but for the first time\nI had the language to describe what a",
+        "start": 3991.463,
+        "duration": 4.4
+    },
+    {
+        "text": "higher level cortical column is doing.",
+        "start": 3995.873,
+        "duration": 1.81
+    },
+    {
+        "text": "It's detecting a feature, which,\nin this case, is something that,",
+        "start": 3998.298,
+        "duration": 5.15
+    },
+    {
+        "text": "it's an output of these guys.",
+        "start": 4003.798,
+        "duration": 1.22
+    },
+    {
+        "text": "It's at some particular location,\nwhich now forbids this guy",
+        "start": 4005.518,
+        "duration": 4.19
+    },
+    {
+        "text": "to know any of the details.",
+        "start": 4009.788,
+        "duration": 0.85
+    },
+    {
+        "text": "It just doesn't know it.",
+        "start": 4011.083,
+        "duration": 0.73
+    },
+    {
+        "text": "it can't.",
+        "start": 4011.813,
+        "duration": 1.19
+    },
+    {
+        "text": "and most of the time, my conceptual\nthings I'm thinking about are pretty",
+        "start": 4014.543,
+        "duration": 4.34
+    },
+    {
+        "text": "high up here, and I'm not aware of\nall these details down here, but",
+        "start": 4018.883,
+        "duration": 4.36
+    },
+    {
+        "text": "if I want to drill down, I can.",
+        "start": 4023.243,
+        "duration": 1.39
+    },
+    {
+        "text": "there's some way we can come back\ndown here, and we can, and I don't",
+        "start": 4025.243,
+        "duration": 2.76
+    },
+    {
+        "text": "know how that would happen yet.",
+        "start": 4028.013,
+        "duration": 1.01
+    },
+    {
+        "text": "But at least I have a language\nto think about thinking about it,",
+        "start": 4029.318,
+        "duration": 2.3
+    },
+    {
+        "text": "we come back down here and say,\nOh, what is that actual feature?",
+        "start": 4031.828,
+        "duration": 2.78
+    },
+    {
+        "text": "Where should it be given this\nand given the pose and so on.",
+        "start": 4034.618,
+        "duration": 3.64
+    },
+    {
+        "text": "By the way, the.",
+        "start": 4038.528,
+        "duration": 0.88
+    },
+    {
+        "text": "Yeah, this is it.",
+        "start": 4040.388,
+        "duration": 1.96
+    },
+    {
+        "text": "that's the, that's all I want to say first\nup here you're going to have multiples",
+        "start": 4044.658,
+        "duration": 4.82
+    },
+    {
+        "text": "of these doing the same thing as well.",
+        "start": 4049.558,
+        "duration": 1.28
+    },
+    {
+        "text": "And they're going to be voting as well.",
+        "start": 4054.368,
+        "duration": 1.82
+    },
+    {
+        "text": "at a more abstract level.",
+        "start": 4058.488,
+        "duration": 0.97
+    },
+    {
+        "text": "You can see now why you don't want\nto have this thing changing very",
+        "start": 4059.658,
+        "duration": 2.82
+    },
+    {
+        "text": "often down here, because if you\nchange this, then you're changing",
+        "start": 4062.478,
+        "duration": 3.86
+    },
+    {
+        "text": "what features this guy's on, right?",
+        "start": 4066.338,
+        "duration": 2.83
+    },
+    {
+        "text": "This guy's based on what this guy's\noutputting, so if I fundamentally change",
+        "start": 4069.168,
+        "duration": 3.32
+    },
+    {
+        "text": "all the letters of the alphabet in\nsome sense, then all my, then, there",
+        "start": 4072.488,
+        "duration": 5.69
+    },
+    {
+        "text": "are different set of features down\nhere, then a different set of objects,",
+        "start": 4078.178,
+        "duration": 3.5
+    },
+    {
+        "text": "excuse me, if I want different sets\nof objects down here, then, then this",
+        "start": 4081.728,
+        "duration": 3.6
+    },
+    {
+        "text": "guy's going to be completely confused.",
+        "start": 4085.328,
+        "duration": 1.39
+    },
+    {
+        "text": "But you just can't do that.",
+        "start": 4087.303,
+        "duration": 1.04
+    },
+    {
+        "text": "So this guy has to be pretty damn stable.",
+        "start": 4088.353,
+        "duration": 1.78
+    },
+    {
+        "text": "otherwise you have to retrain the\nentire hierarchy and this is we see",
+        "start": 4091.263,
+        "duration": 4.7
+    },
+    {
+        "text": "this kind of problems if you've been\ntrying to learn You know something",
+        "start": 4095.963,
+        "duration": 4.71
+    },
+    {
+        "text": "that's fundamentally new Components\nit can be very it can be difficult.",
+        "start": 4100.683,
+        "duration": 3.78
+    },
+    {
+        "text": "I can never learn chinese And now I\nhave to learn to recognize Chinese",
+        "start": 4104.563,
+        "duration": 3.65
+    },
+    {
+        "text": "characters, which I can't, but I could\nlook at the features and try to remember",
+        "start": 4108.213,
+        "duration": 3.73
+    },
+    {
+        "text": "them, then I might be relearning\nall these modules down here and I'd",
+        "start": 4111.943,
+        "duration": 3.51
+    },
+    {
+        "text": "be forgetting other things and, the\nworld can get complicated that way.",
+        "start": 4115.453,
+        "duration": 2.88
+    },
+    {
+        "text": "So, that's why these are pretty stable.",
+        "start": 4120.913,
+        "duration": 1.29
+    },
+    {
+        "text": "It also, it implies that this\nobject you recognize down here",
+        "start": 4122.423,
+        "duration": 4.885
+    },
+    {
+        "text": "may not actually be real objects.",
+        "start": 4127.318,
+        "duration": 2.4
+    },
+    {
+        "text": "It could be things like letters\nthat again, there's either we're",
+        "start": 4129.718,
+        "duration": 3.57
+    },
+    {
+        "text": "trying to do things that are\nstatistically occurring often.",
+        "start": 4133.288,
+        "duration": 2.47
+    },
+    {
+        "text": "this is just an idea.",
+        "start": 4137.738,
+        "duration": 1.03
+    },
+    {
+        "text": "I haven't thought about,\nbut what is a cylinder.",
+        "start": 4139.048,
+        "duration": 2.75
+    },
+    {
+        "text": "a cylinder is a set of, features that\nsort of, that transcend any particular",
+        "start": 4144.073,
+        "duration": 5.1
+    },
+    {
+        "text": "object, but they might be a consistent\nset of filters, features that I detected",
+        "start": 4149.173,
+        "duration": 4.82
+    },
+    {
+        "text": "that there's these round things that\nare similar, so I might learn something",
+        "start": 4153.993,
+        "duration": 2.77
+    },
+    {
+        "text": "like a cylinder like feature here.",
+        "start": 4156.763,
+        "duration": 1.53
+    },
+    {
+        "text": "It doesn't actually have to\nbe a thing that you can name.",
+        "start": 4158.293,
+        "duration": 2.98
+    },
+    {
+        "text": "It's just that there's a statistically\ncorrelated, relationship with features",
+        "start": 4161.783,
+        "duration": 4.17
+    },
+    {
+        "text": "that I see often, and therefore I'm going\nto learn to represent them as one thing.",
+        "start": 4166.143,
+        "duration": 3.61
+    },
+    {
+        "text": "and that doesn't have to correspond to,\nsomething physical like a letter or cup,",
+        "start": 4171.193,
+        "duration": 4.52
+    },
+    {
+        "text": "it could, but it could also correspond to\nthings that are just sub components, types",
+        "start": 4176.133,
+        "duration": 5.07
+    },
+    {
+        "text": "of shapes or, things like that, because\nit's just going to be statistically",
+        "start": 4181.203,
+        "duration": 3.9
+    },
+    {
+        "text": "learned over time, so that changes that.",
+        "start": 4185.103,
+        "duration": 4.02
+    }
+]

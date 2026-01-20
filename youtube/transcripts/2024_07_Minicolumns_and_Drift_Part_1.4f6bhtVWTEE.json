@@ -1,0 +1,6362 @@
+[
+    {
+        "text": "so I was dealing with this basic\nissue we've had where you have,",
+        "start": 8.015,
+        "duration": 4.86
+    },
+    {
+        "text": "layer four and, layer six A.",
+        "start": 13.325,
+        "duration": 3.96
+    },
+    {
+        "text": "That was the basic idea.",
+        "start": 17.435,
+        "duration": 1.53
+    },
+    {
+        "text": "And you have these,\nbidirectional connections.",
+        "start": 19.175,
+        "duration": 2.37
+    },
+    {
+        "text": "And this is a, location on the object.",
+        "start": 21.875,
+        "duration": 4.08
+    },
+    {
+        "text": "It's unique.",
+        "start": 26.045,
+        "duration": 0.69
+    },
+    {
+        "text": "We assume this is a, this is a, sensory,\nif you will, sensory input in, in context.",
+        "start": 26.735,
+        "duration": 9.96
+    },
+    {
+        "text": "it's already been in it, it would already\nbeen spar sparsed to say, yeah, is",
+        "start": 38.465,
+        "duration": 4.38
+    },
+    {
+        "text": "this input in this particular context\nor in a different particular context?",
+        "start": 42.845,
+        "duration": 3.36
+    },
+    {
+        "text": "And so you, you represent the\nassociation between these two.",
+        "start": 46.21,
+        "duration": 2.395
+    },
+    {
+        "text": "and, one of the things we said,\noh, if you don't really know where",
+        "start": 50.555,
+        "duration": 3.0
+    },
+    {
+        "text": "you are, you may have an input and\nyou don't, know the context yet.",
+        "start": 53.555,
+        "duration": 4.44
+    },
+    {
+        "text": "You might not know that.",
+        "start": 58.475,
+        "duration": 0.93
+    },
+    {
+        "text": "And or you, therefore you\nwouldn't be able to predict or",
+        "start": 59.405,
+        "duration": 3.51
+    },
+    {
+        "text": "accurate what your location is.",
+        "start": 62.915,
+        "duration": 1.23
+    },
+    {
+        "text": "So we always said if you have some\nsort of un in-context input comes",
+        "start": 64.145,
+        "duration": 3.78
+    },
+    {
+        "text": "in, it would lead to a union of, of,\nlocations, and then we propagate the",
+        "start": 67.925,
+        "duration": 6.48
+    },
+    {
+        "text": "union and then we come up and get\nanother input and we narrow it down.",
+        "start": 74.405,
+        "duration": 3.63
+    },
+    {
+        "text": "I never thought that would work,\nbecause I don't, I never, we can",
+        "start": 78.545,
+        "duration": 4.95
+    },
+    {
+        "text": "never figure how you would propagate\na union by sense by a motor input.",
+        "start": 83.495,
+        "duration": 3.63
+    },
+    {
+        "text": "You have motor input comes in\nhere and the mechanisms that,",
+        "start": 87.275,
+        "duration": 4.53
+    },
+    {
+        "text": "that we know about for grid cells,",
+        "start": 91.81,
+        "duration": 1.825
+    },
+    {
+        "text": "it's not clear.",
+        "start": 95.945,
+        "duration": 1.59
+    },
+    {
+        "text": "it, it would, it is not at all\nobvious how you would propagate",
+        "start": 98.015,
+        "duration": 3.51
+    },
+    {
+        "text": "a union based on a motor output.",
+        "start": 101.525,
+        "duration": 1.35
+    },
+    {
+        "text": "You get the next set of unions, a set\nof locations, and so maybe it works.",
+        "start": 103.175,
+        "duration": 4.98
+    },
+    {
+        "text": "but we never, we, I can never\nfigure out how it would work.",
+        "start": 109.235,
+        "duration": 2.85
+    },
+    {
+        "text": "Yeah.",
+        "start": 112.505,
+        "duration": 0.27
+    },
+    {
+        "text": "unless they're all oriented\nsomehow in the same way.",
+        "start": 112.955,
+        "duration": 3.06
+    },
+    {
+        "text": "if your movement is just the same\nmovement through all of these",
+        "start": 117.275,
+        "duration": 3.48
+    },
+    {
+        "text": "spaces, then it doesn't matter.",
+        "start": 120.755,
+        "duration": 1.53
+    },
+    {
+        "text": "but in reality, there's nothing\nto constrain the spaces to be.",
+        "start": 122.585,
+        "duration": 3.72
+    },
+    {
+        "text": "In the same way.",
+        "start": 127.67,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 128.27,
+        "duration": 0.12
+    },
+    {
+        "text": "That issue I was thinking of\nion issue, the diff the, dis.",
+        "start": 128.45,
+        "duration": 3.9
+    },
+    {
+        "text": "The other issue is if you think\nabout how grid cells are supposed to",
+        "start": 132.56,
+        "duration": 2.64
+    },
+    {
+        "text": "work, and we could go into that and\ngo into the details of that theory.",
+        "start": 135.2,
+        "duration": 5.55
+    },
+    {
+        "text": "You're essentially assuming that\nthere's a subset of cells that",
+        "start": 140.93,
+        "duration": 4.62
+    },
+    {
+        "text": "are in phases, and those are the\nones that represent something.",
+        "start": 145.55,
+        "duration": 2.97
+    },
+    {
+        "text": "And and, then you, I guess you'd\nbe propagating all the cells.",
+        "start": 149.0,
+        "duration": 4.5
+    },
+    {
+        "text": "We should walk through that.",
+        "start": 154.16,
+        "duration": 1.11
+    },
+    {
+        "text": "Yeah.",
+        "start": 155.48,
+        "duration": 0.06
+    },
+    {
+        "text": "Anyway, so, what I wrote here was,\nso the way we've always assumed this",
+        "start": 155.57,
+        "duration": 6.66
+    },
+    {
+        "text": "worked is you have some sort of, you\nhave some sort of columns, minicolumns.",
+        "start": 162.23,
+        "duration": 4.71
+    },
+    {
+        "text": "These are minicolumns, right?",
+        "start": 166.94,
+        "duration": 2.04
+    },
+    {
+        "text": "And you've got a bunch of\ncells in each mini column.",
+        "start": 168.98,
+        "duration": 2.1
+    },
+    {
+        "text": "And this is the temple memory algorithm.",
+        "start": 172.28,
+        "duration": 2.07
+    },
+    {
+        "text": "So the you sensory input comes in, it runs\nto the spatial, to the spatial pooler.",
+        "start": 174.35,
+        "duration": 5.61
+    },
+    {
+        "text": "You select, some set of minicolumns\nthat represent that sensory input.",
+        "start": 180.14,
+        "duration": 5.4
+    },
+    {
+        "text": "and then you would randomly select\none cell in each mini column.",
+        "start": 187.01,
+        "duration": 4.53
+    },
+    {
+        "text": "so the, all the active cells are, in\neach column represents the columns",
+        "start": 192.35,
+        "duration": 6.75
+    },
+    {
+        "text": "themselves represent the sensory input.",
+        "start": 199.1,
+        "duration": 1.74
+    },
+    {
+        "text": "But then the unique combination of,\nindividual cells would be in, in context.",
+        "start": 200.84,
+        "duration": 4.92
+    },
+    {
+        "text": "And if you, we've done a lot of math\non this saying how many minicolumns",
+        "start": 206.225,
+        "duration": 3.81
+    },
+    {
+        "text": "would typically be on a real column,\nand there seems to be enough.",
+        "start": 210.035,
+        "duration": 2.76
+    },
+    {
+        "text": "It seems to be a good number.",
+        "start": 212.915,
+        "duration": 1.17
+    },
+    {
+        "text": "Like you could get a, high enough\nunique representation here.",
+        "start": 214.115,
+        "duration": 2.82
+    },
+    {
+        "text": "if you take maybe, 200 minicolumns or\nsomething like that, and of I think",
+        "start": 218.165,
+        "duration": 4.735
+    },
+    {
+        "text": "that maybe, 50 or active or, so, or\nmore active, something like that.",
+        "start": 223.235,
+        "duration": 4.47
+    },
+    {
+        "text": "but this has always been a random thing.",
+        "start": 231.905,
+        "duration": 2.46
+    },
+    {
+        "text": "And the, I, the assumption is if you\nhad it out of context, all these cells",
+        "start": 234.365,
+        "duration": 3.45
+    },
+    {
+        "text": "would fire, at once, and therefore, all\nthe things that were associated with",
+        "start": 237.815,
+        "duration": 6.21
+    },
+    {
+        "text": "all the different possible features and\nall the different parts of the world",
+        "start": 244.025,
+        "duration": 3.54
+    },
+    {
+        "text": "would, be protected down here at once.",
+        "start": 248.075,
+        "duration": 1.8
+    },
+    {
+        "text": "And then, this also has\nminicolumns down here.",
+        "start": 250.685,
+        "duration": 4.14
+    },
+    {
+        "text": "They're, physically the same, but\nthere's a lot of evidence that they're",
+        "start": 255.845,
+        "duration": 3.57
+    },
+    {
+        "text": "actually, logically separate from these.",
+        "start": 259.415,
+        "duration": 2.04
+    },
+    {
+        "text": "and that, the mini column active\nhere doesn't necessarily mean",
+        "start": 263.165,
+        "duration": 2.72
+    },
+    {
+        "text": "it's minicolumn active down here.",
+        "start": 265.885,
+        "duration": 1.09
+    },
+    {
+        "text": "under very constrained context.",
+        "start": 268.205,
+        "duration": 2.04
+    },
+    {
+        "text": "It looks like that, the context being,",
+        "start": 270.245,
+        "duration": 2.58
+    },
+    {
+        "text": "anesthetized animal looking at gradings\nor something like that out of context.",
+        "start": 276.695,
+        "duration": 3.9
+    },
+    {
+        "text": "but what are the minicolumns\ndown here represent?",
+        "start": 282.155,
+        "duration": 2.28
+    },
+    {
+        "text": "first of all, in layer six A, there's\nlots of different types of cells.",
+        "start": 286.655,
+        "duration": 2.31
+    },
+    {
+        "text": "So we're not just talking about\nany, there's multiple types",
+        "start": 288.965,
+        "duration": 2.61
+    },
+    {
+        "text": "of cells down there, so we\nhave to be careful about that.",
+        "start": 291.575,
+        "duration": 2.46
+    },
+    {
+        "text": "But one of the things about grid cells,\nand I don't remember how much we've",
+        "start": 294.785,
+        "duration": 4.35
+    },
+    {
+        "text": "discussed grid cells here, but a grid\ncell of course, becomes active, at",
+        "start": 299.135,
+        "duration": 5.73
+    },
+    {
+        "text": "multiple locations on an object, right?",
+        "start": 304.865,
+        "duration": 3.54
+    },
+    {
+        "text": "And the question is how do\nthey, what generates, how does",
+        "start": 308.525,
+        "duration": 3.99
+    },
+    {
+        "text": "a grid cell become active?",
+        "start": 312.515,
+        "duration": 1.29
+    },
+    {
+        "text": "and their basic idea here\nis there's two signals.",
+        "start": 314.14,
+        "duration": 2.695
+    },
+    {
+        "text": "there's two sort of sign waves\ncoming in and when they have the",
+        "start": 318.215,
+        "duration": 3.51
+    },
+    {
+        "text": "same peak, the cell become active.",
+        "start": 321.725,
+        "duration": 1.65
+    },
+    {
+        "text": "And one of these is a, a voltage,\ncontrol oscillator and the voltage",
+        "start": 323.585,
+        "duration": 5.01
+    },
+    {
+        "text": "related to the speed of movement\nin a particular direction.",
+        "start": 328.595,
+        "duration": 2.88
+    },
+    {
+        "text": "So if you're moving in a particular\nduration, the, os oscillation",
+        "start": 331.475,
+        "duration": 4.32
+    },
+    {
+        "text": "frequency of this one will change\nand therefore this cell will become",
+        "start": 335.795,
+        "duration": 3.12
+    },
+    {
+        "text": "out of phase for a while and then\nit becomes in phase again later on.",
+        "start": 338.915,
+        "duration": 3.42
+    },
+    {
+        "text": "And to make this work, you actually\nhave to have a whole set of cells that",
+        "start": 343.385,
+        "duration": 5.49
+    },
+    {
+        "text": "all share the same, movement, vector.",
+        "start": 348.875,
+        "duration": 5.1
+    },
+    {
+        "text": "And they all seem the same\nfrequency, but they're out of phase.",
+        "start": 354.425,
+        "duration": 5.49
+    },
+    {
+        "text": "So they have different phases.",
+        "start": 360.005,
+        "duration": 1.26
+    },
+    {
+        "text": "All these have different\nphases going down here.",
+        "start": 362.405,
+        "duration": 1.92
+    },
+    {
+        "text": "This is not, this is not\nsomething we made up.",
+        "start": 364.565,
+        "duration": 2.61
+    },
+    {
+        "text": "This is been in the literature.",
+        "start": 367.175,
+        "duration": 1.47
+    },
+    {
+        "text": "and it's a bit speculative 'cause\nnot everyone writes about it, but",
+        "start": 369.875,
+        "duration": 2.55
+    },
+    {
+        "text": "I can't see other way of doing it.",
+        "start": 372.425,
+        "duration": 1.29
+    },
+    {
+        "text": "It's not speculative, I guess most\npeople just don't write about it much.",
+        "start": 373.715,
+        "duration": 2.22
+    },
+    {
+        "text": "They just talk about\nhow a cell comes about.",
+        "start": 375.935,
+        "duration": 1.47
+    },
+    {
+        "text": "But if you wanna have a\nwhole set of good cell raves.",
+        "start": 377.405,
+        "duration": 1.86
+    },
+    {
+        "text": "A whole set grid cells then, each\nof these saying you have to have",
+        "start": 379.655,
+        "duration": 4.14
+    },
+    {
+        "text": "a, for each direction, you have to\nhave a set of cells that all seem to",
+        "start": 383.795,
+        "duration": 2.76
+    },
+    {
+        "text": "respond to the same movement and the\nsame frequency would be out of phase.",
+        "start": 386.555,
+        "duration": 3.48
+    },
+    {
+        "text": "And then, and at any point in time\nyou have a set of these guys and",
+        "start": 390.695,
+        "duration": 6.9
+    },
+    {
+        "text": "different meaning, I'm gonna assume\nthose are minicolumns, because",
+        "start": 397.595,
+        "duration": 3.27
+    },
+    {
+        "text": "they all seem to have the same\nresponse, which out to field, right?",
+        "start": 400.865,
+        "duration": 2.88
+    },
+    {
+        "text": "Which is what and then at any point in\ntime you have some one, some of these",
+        "start": 403.745,
+        "duration": 5.28
+    },
+    {
+        "text": "cells are in sync and that performs\nyour, that becomes your unique input",
+        "start": 409.025,
+        "duration": 4.47
+    },
+    {
+        "text": "for what, where your location is.",
+        "start": 413.495,
+        "duration": 1.44
+    },
+    {
+        "text": "So if I were to look at all these\ncells and read out from 'em, and I",
+        "start": 415.385,
+        "duration": 3.48
+    },
+    {
+        "text": "say at any point in time, some are\nactually in phase, then that is a",
+        "start": 418.865,
+        "duration": 4.2
+    },
+    {
+        "text": "unique location of a, of an, of a\nmovement in a particular direction.",
+        "start": 423.065,
+        "duration": 4.86
+    },
+    {
+        "text": "How far along am I that in where I,\nwhere am I in that particular direction?",
+        "start": 427.925,
+        "duration": 4.23
+    },
+    {
+        "text": "and so I, I've always, been under the\nassumption, speculation that's what",
+        "start": 434.165,
+        "duration": 6.24
+    },
+    {
+        "text": "these minicolumns are doing because,\nthey, 'cause they seem to have the",
+        "start": 440.405,
+        "duration": 5.82
+    },
+    {
+        "text": "same basic response properties.",
+        "start": 446.225,
+        "duration": 1.62
+    },
+    {
+        "text": "You do see voltage, you do see, speed\nmoderated frequencies down here.",
+        "start": 448.235,
+        "duration": 4.32
+    },
+    {
+        "text": "the, and so os the\noscillation frequencies.",
+        "start": 453.395,
+        "duration": 2.34
+    },
+    {
+        "text": "So that's been my assumption.",
+        "start": 456.035,
+        "duration": 1.44
+    },
+    {
+        "text": "That, and this, by the way,\nthese aren't grid cells.",
+        "start": 457.475,
+        "duration": 2.37
+    },
+    {
+        "text": "These don't fit the\ndefinition of grid cells.",
+        "start": 459.995,
+        "duration": 1.5
+    },
+    {
+        "text": "A grid cell would be\nreading these out, right?",
+        "start": 461.555,
+        "duration": 2.73
+    },
+    {
+        "text": "But this is what you need\nto generate location.",
+        "start": 464.375,
+        "duration": 2.34
+    },
+    {
+        "text": "so let's stop there for a\nmoment if that's clear so far.",
+        "start": 468.53,
+        "duration": 2.67
+    },
+    {
+        "text": "So this part, the oscillation\npart, this is for learning the grid",
+        "start": 471.86,
+        "duration": 3.0
+    },
+    {
+        "text": "cells, not for, just using them.",
+        "start": 474.86,
+        "duration": 2.49
+    },
+    {
+        "text": "It, is for using 'em.",
+        "start": 477.625,
+        "duration": 0.805
+    },
+    {
+        "text": "Just for using them, it for both.",
+        "start": 478.76,
+        "duration": 1.59
+    },
+    {
+        "text": "essentially if I just have movement,",
+        "start": 482.84,
+        "duration": 1.92
+    },
+    {
+        "text": "if I have, if imagine I have, these\nare, all, each of these minicolumns is",
+        "start": 488.69,
+        "duration": 5.64
+    },
+    {
+        "text": "slightly different, direction of movement.",
+        "start": 494.33,
+        "duration": 1.95
+    },
+    {
+        "text": "Okay.",
+        "start": 497.39,
+        "duration": 0.51
+    },
+    {
+        "text": "okay.",
+        "start": 500.48,
+        "duration": 0.66
+    },
+    {
+        "text": "I know there's a lot.",
+        "start": 501.35,
+        "duration": 0.78
+    },
+    {
+        "text": "So I don't know if there's a,\nbase frequency that I don't",
+        "start": 502.13,
+        "duration": 4.26
+    },
+    {
+        "text": "know how to describe that.",
+        "start": 506.39,
+        "duration": 0.75
+    },
+    {
+        "text": "Base frequency and then, which is like\ncoming from the Almas, that doesn't,",
+        "start": 507.14,
+        "duration": 6.15
+    },
+    {
+        "text": "change, that's spec our speculation.",
+        "start": 513.29,
+        "duration": 1.65
+    },
+    {
+        "text": "That's how you, change it to\nchange the scale of something.",
+        "start": 515.03,
+        "duration": 2.22
+    },
+    {
+        "text": "But there's a base frequency\nand then each of these guys",
+        "start": 517.58,
+        "duration": 3.09
+    },
+    {
+        "text": "share that base frequency all.",
+        "start": 520.97,
+        "duration": 1.56
+    },
+    {
+        "text": "And, but if you're moving in a\nparticular direction, the cells",
+        "start": 522.53,
+        "duration": 4.86
+    },
+    {
+        "text": "in the minicolumn that match that\ndirection, they also oscillate.",
+        "start": 527.39,
+        "duration": 4.17
+    },
+    {
+        "text": "but they oscillate at a slightly,\nvariation of that frequency based on how",
+        "start": 532.13,
+        "duration": 5.61
+    },
+    {
+        "text": "fast you're moving in that direction.",
+        "start": 537.74,
+        "duration": 1.11
+    },
+    {
+        "text": "I'm making this clearable.",
+        "start": 541.82,
+        "duration": 1.02
+    },
+    {
+        "text": "I wanna get to the problem.",
+        "start": 544.4,
+        "duration": 1.08
+    },
+    {
+        "text": "We're trying to Yeah.",
+        "start": 545.48,
+        "duration": 0.66
+    },
+    {
+        "text": "Adjust that moment here.",
+        "start": 546.14,
+        "duration": 0.96
+    },
+    {
+        "text": "So even in the independent of\nwhat, anything else going on?",
+        "start": 548.555,
+        "duration": 3.93
+    },
+    {
+        "text": "If I just assume there's one cell\nactive in each of these, in the",
+        "start": 552.695,
+        "duration": 2.882
+    },
+    {
+        "text": "minicolumns that are active right now.",
+        "start": 555.755,
+        "duration": 2.1
+    },
+    {
+        "text": "So there's only a set of minicolumns\nthat are active 'cause set.",
+        "start": 557.855,
+        "duration": 1.98
+    },
+    {
+        "text": "They represent, anything, like, we're\nmoving north, north mini column and",
+        "start": 559.835,
+        "duration": 6.03
+    },
+    {
+        "text": "slightly less than north the side.",
+        "start": 566.615,
+        "duration": 1.2
+    },
+    {
+        "text": "These are all active with\ndifferent amounts, right?",
+        "start": 567.815,
+        "duration": 2.37
+    },
+    {
+        "text": "But the north one would\nbe most active, right?",
+        "start": 570.185,
+        "duration": 1.89
+    },
+    {
+        "text": "Higher.",
+        "start": 572.225,
+        "duration": 0.42
+    },
+    {
+        "text": "and the others would be, the\nfrequency would be less, right?",
+        "start": 573.425,
+        "duration": 4.41
+    },
+    {
+        "text": "Of the frequency shift would be less.",
+        "start": 578.285,
+        "duration": 1.56
+    },
+    {
+        "text": "So the, so basically if you just looked\nat, the, oscillation, the phase of all",
+        "start": 580.565,
+        "duration": 7.2
+    },
+    {
+        "text": "these cells that they're depending on if\nthis column is moving faster than this",
+        "start": 587.765,
+        "duration": 5.34
+    },
+    {
+        "text": "column because this is north and this\nis northeast and I'm moving north, the",
+        "start": 593.105,
+        "duration": 4.83
+    },
+    {
+        "text": "phase on these will shift slower and\nthe phase of these will shift faster.",
+        "start": 597.935,
+        "duration": 3.03
+    },
+    {
+        "text": "They're all still oscillating, but\nit's just a phase shift that matters.",
+        "start": 601.145,
+        "duration": 3.18
+    },
+    {
+        "text": "and when I say phase shift, it's\na slightly different frequency,",
+        "start": 606.185,
+        "duration": 3.18
+    },
+    {
+        "text": "which means the peak phase is\ndifferent than it was a moment ago.",
+        "start": 609.455,
+        "duration": 2.88
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 613.055,
+        "duration": 0.72
+    },
+    {
+        "text": "Yeah.",
+        "start": 614.885,
+        "duration": 0.3
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 615.305,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 615.905,
+        "duration": 0.18
+    },
+    {
+        "text": "Okay.",
+        "start": 616.265,
+        "duration": 0.3
+    },
+    {
+        "text": "so this is the premise of which,\nand you would have to do this during",
+        "start": 618.395,
+        "duration": 3.9
+    },
+    {
+        "text": "learning because you'd have to,\nyou'd have to, you just, you would",
+        "start": 622.295,
+        "duration": 3.51
+    },
+    {
+        "text": "randomly associate sign a like up here.",
+        "start": 626.075,
+        "duration": 2.28
+    },
+    {
+        "text": "We, we randomly associated\nthe active cell here.",
+        "start": 628.355,
+        "duration": 3.21
+    },
+    {
+        "text": "We assumed, like randomly\nassociated the active cell here,",
+        "start": 631.625,
+        "duration": 2.37
+    },
+    {
+        "text": "meaning one that's in phase.",
+        "start": 634.025,
+        "duration": 1.14
+    },
+    {
+        "text": "The active cell, the one that's in phase\nand with in phase with the base frequency.",
+        "start": 635.975,
+        "duration": 4.56
+    },
+    {
+        "text": "And then as you move,",
+        "start": 640.985,
+        "duration": 1.2
+    },
+    {
+        "text": "then, the, one that's in\nphase with the base frequency",
+        "start": 644.765,
+        "duration": 3.03
+    },
+    {
+        "text": "would shift in some direction.",
+        "start": 647.795,
+        "duration": 2.34
+    },
+    {
+        "text": "So essentially these would act\nlike one dimensional grid cells.",
+        "start": 650.645,
+        "duration": 2.97
+    },
+    {
+        "text": "It would say I have maybe 20 cells\nhere or 15 cells and I have 15",
+        "start": 654.125,
+        "duration": 5.13
+    },
+    {
+        "text": "locations I can represent in a\nparticular direction by which, which",
+        "start": 659.255,
+        "duration": 3.54
+    },
+    {
+        "text": "is in phase with the base frequency.",
+        "start": 662.795,
+        "duration": 1.53
+    },
+    {
+        "text": "And so as I keep moving,\nI'll cycle through 'em again.",
+        "start": 664.955,
+        "duration": 2.52
+    },
+    {
+        "text": "'cause, 360 degrees, that's what I got.",
+        "start": 667.565,
+        "duration": 2.46
+    },
+    {
+        "text": "And but the combination of\nthese cells would be unique.",
+        "start": 670.415,
+        "duration": 3.54
+    },
+    {
+        "text": "So it's like a one dimensional grid cell.",
+        "start": 674.675,
+        "duration": 1.8
+    },
+    {
+        "text": "If you look at the phase relative to\nthe base frequency, which ones is in",
+        "start": 676.955,
+        "duration": 3.69
+    },
+    {
+        "text": "phase, that sort of look tells you your\nlocation along one dimension and and that",
+        "start": 680.645,
+        "duration": 7.47
+    },
+    {
+        "text": "will cycle back around again and again.",
+        "start": 688.115,
+        "duration": 1.68
+    },
+    {
+        "text": "So it's not unique, but yeah.",
+        "start": 689.795,
+        "duration": 1.83
+    },
+    {
+        "text": "And I guess the one thing, and maybe\nthis is distraction, but yeah, it's",
+        "start": 691.625,
+        "duration": 4.41
+    },
+    {
+        "text": "clear to me that it's like a one\ndimensional grid cell in that it, has",
+        "start": 696.035,
+        "duration": 3.69
+    },
+    {
+        "text": "like path integration in one dimension,\nand will like loop back around.",
+        "start": 699.725,
+        "duration": 4.08
+    },
+    {
+        "text": "Yes.",
+        "start": 704.105,
+        "duration": 0.15
+    },
+    {
+        "text": "But I guess it is not obvious\nthat it would have path",
+        "start": 704.255,
+        "duration": 2.94
+    },
+    {
+        "text": "integr, in multiple dimensions.",
+        "start": 707.225,
+        "duration": 3.09
+    },
+    {
+        "text": "So if you took a new path around\nthe object and got back to the same",
+        "start": 710.315,
+        "duration": 4.86
+    },
+    {
+        "text": "location, you're not guaranteed\nto have the same, cells in phase.",
+        "start": 715.175,
+        "duration": 3.93
+    },
+    {
+        "text": "I, we could like, let's see\nif, let's think about that.",
+        "start": 721.44,
+        "duration": 3.485
+    },
+    {
+        "text": "if we just did a really, let's\nsay maybe this is like a, this",
+        "start": 725.195,
+        "duration": 5.04
+    },
+    {
+        "text": "is going left and then this is\ngoing up, or something like that.",
+        "start": 730.235,
+        "duration": 3.72
+    },
+    {
+        "text": "And then this is going right and down.",
+        "start": 734.315,
+        "duration": 1.41
+    },
+    {
+        "text": "I think the, problem, I think maybe\nthe problem you have, if, let's say a",
+        "start": 737.0,
+        "duration": 2.775
+    },
+    {
+        "text": "minicolumn means that's going up and I\nhave another minicolumn that's going down.",
+        "start": 739.775,
+        "duration": 3.84
+    },
+    {
+        "text": "Yeah.",
+        "start": 743.705,
+        "duration": 0.21
+    },
+    {
+        "text": "you are right because this one\nwould be active going one way.",
+        "start": 745.715,
+        "duration": 2.64
+    },
+    {
+        "text": "This would be active going the other way.",
+        "start": 748.355,
+        "duration": 1.44
+    },
+    {
+        "text": "Yeah.",
+        "start": 749.795,
+        "duration": 0.48
+    },
+    {
+        "text": "And, that is a problem, this theory.",
+        "start": 751.21,
+        "duration": 1.435
+    },
+    {
+        "text": "And so what, which I guess we,\nyou're saying like grid cells",
+        "start": 752.645,
+        "duration": 2.7
+    },
+    {
+        "text": "are almost like what read off of\nthis and then they have the path",
+        "start": 755.345,
+        "duration": 3.36
+    },
+    {
+        "text": "integration in the higher dimension.",
+        "start": 758.705,
+        "duration": 1.29
+    },
+    {
+        "text": "I don't know if they, I, we've\nnever resolved this, right?",
+        "start": 760.535,
+        "duration": 3.06
+    },
+    {
+        "text": "I'm not sure.",
+        "start": 763.595,
+        "duration": 0.66
+    },
+    {
+        "text": "I don't see any other way to do path.",
+        "start": 764.255,
+        "duration": 1.38
+    },
+    {
+        "text": "This is the way to do path integration.",
+        "start": 765.695,
+        "duration": 1.32
+    },
+    {
+        "text": "This is the only proposal that really\nmakes any sense there is the, the can,",
+        "start": 767.045,
+        "duration": 5.55
+    },
+    {
+        "text": "the continuous, whatever track network.",
+        "start": 772.595,
+        "duration": 4.05
+    },
+    {
+        "text": "I don't think that works.",
+        "start": 776.885,
+        "duration": 0.75
+    },
+    {
+        "text": "and I've talked to scientists about this,\nthey don't think it really works either.",
+        "start": 777.835,
+        "duration": 2.53
+    },
+    {
+        "text": "it takes too many cells.",
+        "start": 781.025,
+        "duration": 1.05
+    },
+    {
+        "text": "So to me, the only viable method\nof doing path integration is",
+        "start": 782.225,
+        "duration": 3.72
+    },
+    {
+        "text": "the one that was laid out.",
+        "start": 785.945,
+        "duration": 0.93
+    },
+    {
+        "text": "this is, again, not our idea,\nthat you have a set of cells.",
+        "start": 787.085,
+        "duration": 3.69
+    },
+    {
+        "text": "Each is, representing a different phase.",
+        "start": 790.775,
+        "duration": 3.09
+    },
+    {
+        "text": "And as far as I know, that's the\nonly way that anyone's proposed",
+        "start": 794.255,
+        "duration": 3.0
+    },
+    {
+        "text": "path integration can work and\nhave all the right attributes.",
+        "start": 797.255,
+        "duration": 3.15
+    },
+    {
+        "text": "'cause you have this phase\nshift, what do you call it?",
+        "start": 800.405,
+        "duration": 2.485
+    },
+    {
+        "text": "The one, when a location comes\nafter, before the camera,",
+        "start": 802.89,
+        "duration": 4.925
+    },
+    {
+        "text": "but, and then afterwards.",
+        "start": 807.815,
+        "duration": 1.08
+    },
+    {
+        "text": "phase possession, I think it's called.",
+        "start": 810.77,
+        "duration": 1.29
+    },
+    {
+        "text": "Okay, so this is a problem.",
+        "start": 812.06,
+        "duration": 2.22
+    },
+    {
+        "text": "So there's another question.",
+        "start": 814.28,
+        "duration": 1.2
+    },
+    {
+        "text": "So goods, these aren't really grid cells\nbecause for the reason you said, Grid",
+        "start": 815.57,
+        "duration": 4.47
+    },
+    {
+        "text": "cells always is active in the same place.",
+        "start": 820.04,
+        "duration": 1.5
+    },
+    {
+        "text": "So it, feels in some sense, like there's\nanother set of cells that reads these",
+        "start": 821.78,
+        "duration": 3.99
+    },
+    {
+        "text": "things out that we would call grid cells.",
+        "start": 825.77,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 828.32,
+        "duration": 0.3
+    },
+    {
+        "text": "And, grid cells have these really weird\nthings because for, the life of us,",
+        "start": 830.66,
+        "duration": 3.6
+    },
+    {
+        "text": "we couldn't figure out how you could\nget a unique representational location",
+        "start": 834.26,
+        "duration": 4.14
+    },
+    {
+        "text": "using grid cells into the literature.",
+        "start": 838.4,
+        "duration": 2.82
+    },
+    {
+        "text": "there aren't enough grid cells, there\naren't enough, variation in grid",
+        "start": 841.7,
+        "duration": 3.18
+    },
+    {
+        "text": "cells, but this would get it to you.",
+        "start": 844.88,
+        "duration": 1.95
+    },
+    {
+        "text": "And so somehow it almost feels and\nother people have written about",
+        "start": 847.31,
+        "duration": 3.87
+    },
+    {
+        "text": "this too, so it's not completely\nmade off that this is the, the,",
+        "start": 851.18,
+        "duration": 3.9
+    },
+    {
+        "text": "way you generate path integration.",
+        "start": 855.08,
+        "duration": 1.68
+    },
+    {
+        "text": "Then it gets, converted into grid cells,\nwhich are actually have a form of the,",
+        "start": 858.02,
+        "duration": 4.74
+    },
+    {
+        "text": "the continuous attraction network.",
+        "start": 863.36,
+        "duration": 2.01
+    },
+    {
+        "text": "There was a paper called, there's a paper\nabout how, grid cell, you need both.",
+        "start": 865.37,
+        "duration": 4.65
+    },
+    {
+        "text": "You need the, you need a continuous\nattracting network and you also need",
+        "start": 870.02,
+        "duration": 4.08
+    },
+    {
+        "text": "the, oscillate oscillatory interference\nmethod to make this stuff work.",
+        "start": 874.1,
+        "duration": 3.75
+    },
+    {
+        "text": "So somehow it's like you go over\nhere, you activate the grid cells.",
+        "start": 878.48,
+        "duration": 3.63
+    },
+    {
+        "text": "these are persistent activation,\nand then they can read and",
+        "start": 882.56,
+        "duration": 3.03
+    },
+    {
+        "text": "state the right things here.",
+        "start": 885.59,
+        "duration": 0.99
+    },
+    {
+        "text": "So you can do the path ation.",
+        "start": 886.58,
+        "duration": 1.65
+    },
+    {
+        "text": "We, no one, as far as I know, no one\nunderstands how this works, but these",
+        "start": 888.59,
+        "duration": 4.38
+    },
+    {
+        "text": "are pieces that seem to make sense.",
+        "start": 892.97,
+        "duration": 1.86
+    },
+    {
+        "text": "So these, the idea that you have\nthese kind cells, you have a",
+        "start": 894.83,
+        "duration": 2.76
+    },
+    {
+        "text": "continuous active, the can, which is\nactually the grid cells themselves.",
+        "start": 897.59,
+        "duration": 3.63
+    },
+    {
+        "text": "these are things that people propose,\neven if they're not generally agreed",
+        "start": 902.45,
+        "duration": 3.66
+    },
+    {
+        "text": "upon, in the grid cells literature.",
+        "start": 906.11,
+        "duration": 2.07
+    },
+    {
+        "text": "But they still, and so the unique\nlocation code would be in the vector",
+        "start": 908.72,
+        "duration": 2.85
+    },
+    {
+        "text": "cells rather than the grid cells, right?",
+        "start": 911.57,
+        "duration": 2.19
+    },
+    {
+        "text": "this is the only place I could figure\nout how you get a unique location code.",
+        "start": 914.09,
+        "duration": 2.58
+    },
+    {
+        "text": "And, so I, don't know how you\ndeal with the path integration",
+        "start": 917.45,
+        "duration": 3.57
+    },
+    {
+        "text": "through multiple dimensions.",
+        "start": 921.02,
+        "duration": 1.47
+    },
+    {
+        "text": "'cause this problem, I, don't,\nquite, I've never figured that out.",
+        "start": 922.52,
+        "duration": 3.66
+    },
+    {
+        "text": "I haven't worked on it through,\nbut, alright, so this is all",
+        "start": 926.18,
+        "duration": 2.79
+    },
+    {
+        "text": "preamble, to the problem of, yeah.",
+        "start": 928.97,
+        "duration": 3.0
+    },
+    {
+        "text": "so let's talk about what your idea was.",
+        "start": 933.77,
+        "duration": 2.01
+    },
+    {
+        "text": "and, I'll see if I can paraphrase\nit, but it's been a while",
+        "start": 938.27,
+        "duration": 2.31
+    },
+    {
+        "text": "since I thought about it.",
+        "start": 940.58,
+        "duration": 0.78
+    },
+    {
+        "text": "we've always assumed that, that when, if\nyou look at our temporal memory algorithm,",
+        "start": 942.23,
+        "duration": 5.97
+    },
+    {
+        "text": "we would, when the input came in into\nlayer four, we assumed that all the cells",
+        "start": 948.77,
+        "duration": 5.28
+    },
+    {
+        "text": "and all the minicolumns become in the,\nactive minicolumns would become active.",
+        "start": 954.05,
+        "duration": 2.91
+    },
+    {
+        "text": "So you'd have, this is the input outta\ncontext and then a moment later it would,",
+        "start": 956.96,
+        "duration": 5.82
+    },
+    {
+        "text": "inhibit, these cells would get inhibited.",
+        "start": 962.78,
+        "duration": 1.65
+    },
+    {
+        "text": "You pick, you randomly\npick an act, an active one.",
+        "start": 964.865,
+        "duration": 2.76
+    },
+    {
+        "text": "If the cells were depolarized, meaning you\nhad a prediction coming in from let's say",
+        "start": 967.985,
+        "duration": 4.08
+    },
+    {
+        "text": "layer six, and you said, I'm predicting\nthese cells, then only those cells would",
+        "start": 972.065,
+        "duration": 3.72
+    },
+    {
+        "text": "fire and you would never have this burst.",
+        "start": 975.785,
+        "duration": 2.01
+    },
+    {
+        "text": "and then a unique activation.",
+        "start": 979.115,
+        "duration": 1.59
+    },
+    {
+        "text": "and there are issues with that.",
+        "start": 983.315,
+        "duration": 1.53
+    },
+    {
+        "text": "I can't remember them all right\nnow, maybe I can remember.",
+        "start": 984.845,
+        "duration": 2.01
+    },
+    {
+        "text": "But that was the basic way we\nthought about this and we always",
+        "start": 986.855,
+        "duration": 3.81
+    },
+    {
+        "text": "thought that the selections of\nthese cells, would be random.",
+        "start": 990.665,
+        "duration": 2.79
+    },
+    {
+        "text": "And we also felt that,",
+        "start": 993.755,
+        "duration": 1.08
+    },
+    {
+        "text": "now, right now it's coming back to\nme if I have a union of predictions,",
+        "start": 997.235,
+        "duration": 3.33
+    },
+    {
+        "text": "so I have multiple cells in these\nminicolumns that are active,",
+        "start": 1003.835,
+        "duration": 2.94
+    },
+    {
+        "text": "we would, we always said, okay,\nyou, activate all of them.",
+        "start": 1009.175,
+        "duration": 3.39
+    },
+    {
+        "text": "You propagate that down here as a union.",
+        "start": 1012.565,
+        "duration": 2.16
+    },
+    {
+        "text": "And,",
+        "start": 1015.985,
+        "duration": 0.54
+    },
+    {
+        "text": "I think what you were proposing\nRon mean was, that, if I have a",
+        "start": 1018.955,
+        "duration": 6.3
+    },
+    {
+        "text": "union of cells here, we always\nexpect that the same representation",
+        "start": 1025.255,
+        "duration": 2.94
+    },
+    {
+        "text": "will occur in the right context.",
+        "start": 1028.195,
+        "duration": 1.41
+    },
+    {
+        "text": "So imagine I come in, I, have a. we\nonly, let's say if a union and I select",
+        "start": 1030.115,
+        "duration": 4.755
+    },
+    {
+        "text": "a bunch of cells here and I narrow it\ndown, we always under the assumption, as",
+        "start": 1034.87,
+        "duration": 3.39
+    },
+    {
+        "text": "we narrow it down, we narrow it down to\nthe unique one that was up there before.",
+        "start": 1038.26,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 1041.56,
+        "duration": 0.09
+    },
+    {
+        "text": "And you're suggesting perhaps\nthat No, it's maybe not the",
+        "start": 1041.65,
+        "duration": 2.195
+    },
+    {
+        "text": "unique one we had before.",
+        "start": 1043.85,
+        "duration": 0.86
+    },
+    {
+        "text": "We have a union here, and, we may not\nnarrow it down, so we probably get",
+        "start": 1044.71,
+        "duration": 6.45
+    },
+    {
+        "text": "the union fa, but maybe, and maybe\nafter I do that union and I propag, I",
+        "start": 1051.16,
+        "duration": 5.37
+    },
+    {
+        "text": "propagate, maybe I select a different\nset of cells for the momentary.",
+        "start": 1056.53,
+        "duration": 4.41
+    },
+    {
+        "text": "Okay, now we're getting into\nthe, heart of the matter, right?",
+        "start": 1061.0,
+        "duration": 2.16
+    },
+    {
+        "text": "'cause we, always assume there was\na, an input comes in, you activate",
+        "start": 1063.61,
+        "duration": 3.51
+    },
+    {
+        "text": "the minicolumns and, if it's,\nunique, you know exactly what it is.",
+        "start": 1067.12,
+        "duration": 4.62
+    },
+    {
+        "text": "But if, the prediction is not unique\nor you don't have a prediction, then",
+        "start": 1072.13,
+        "duration": 2.7
+    },
+    {
+        "text": "you get a set, set of cells active.",
+        "start": 1074.83,
+        "duration": 1.59
+    },
+    {
+        "text": "But when you activate that set\nof cells, you may reset what",
+        "start": 1077.11,
+        "duration": 2.7
+    },
+    {
+        "text": "the actual representation is.",
+        "start": 1079.81,
+        "duration": 1.2
+    },
+    {
+        "text": "Is that, I think that's\nwhat you're saying.",
+        "start": 1081.28,
+        "duration": 1.53
+    },
+    {
+        "text": "Yeah.",
+        "start": 1082.87,
+        "duration": 0.18
+    },
+    {
+        "text": "So if I had cell, A, B, and C where the\ncorrect cells for that representation.",
+        "start": 1083.26,
+        "duration": 6.93
+    },
+    {
+        "text": "But I have a, I have a, union coming in.",
+        "start": 1090.7,
+        "duration": 2.58
+    },
+    {
+        "text": "I, and so I activate, I activate 20 cells.",
+        "start": 1093.28,
+        "duration": 2.85
+    },
+    {
+        "text": "maybe then, and then those 20\ncells I narrow down to three.",
+        "start": 1098.38,
+        "duration": 3.57
+    },
+    {
+        "text": "'cause I do the same algorithm,\nwhich is always you burst and",
+        "start": 1102.01,
+        "duration": 2.4
+    },
+    {
+        "text": "then then you pick a winner.",
+        "start": 1104.41,
+        "duration": 1.92
+    },
+    {
+        "text": "I might not pick A, B, C,\nI may pick something else.",
+        "start": 1106.81,
+        "duration": 1.92
+    },
+    {
+        "text": "I may, the three winners I pick\nwould be D, E, and F, or depending",
+        "start": 1108.73,
+        "duration": 4.86
+    },
+    {
+        "text": "on how much their overlap.",
+        "start": 1113.59,
+        "duration": 0.9
+    },
+    {
+        "text": "If it's a big union that\ncould pick random ones.",
+        "start": 1114.49,
+        "duration": 2.04
+    },
+    {
+        "text": "If it was, a lot of overlap,\nI'd maybe just pick a few.",
+        "start": 1117.07,
+        "duration": 1.77
+    },
+    {
+        "text": "but then you're essentially\nresetting what the, what this",
+        "start": 1120.445,
+        "duration": 3.87
+    },
+    {
+        "text": "representation is in this context.",
+        "start": 1124.315,
+        "duration": 1.89
+    },
+    {
+        "text": "Alright.",
+        "start": 1127.105,
+        "duration": 0.24
+    },
+    {
+        "text": "That was a long way of getting\nsomething very difficult to think about.",
+        "start": 1127.345,
+        "duration": 2.61
+    },
+    {
+        "text": "that's how I interpreted\nwhat you were suggesting.",
+        "start": 1131.245,
+        "duration": 1.74
+    },
+    {
+        "text": "Yeah.",
+        "start": 1133.135,
+        "duration": 0.27
+    },
+    {
+        "text": "The representation that we're\nmapping to is going to change to go",
+        "start": 1133.405,
+        "duration": 4.29
+    },
+    {
+        "text": "more towards the other predicted.",
+        "start": 1137.695,
+        "duration": 1.8
+    },
+    {
+        "text": "it, could be random.",
+        "start": 1140.191,
+        "duration": 0.774
+    },
+    {
+        "text": "I yeah.",
+        "start": 1141.475,
+        "duration": 0.42
+    },
+    {
+        "text": "I feel like you're suggesting that\nyou just start with a totally new one.",
+        "start": 1141.895,
+        "duration": 3.12
+    },
+    {
+        "text": "I, would pick from the ones that\nwere in the union of predictions.",
+        "start": 1148.205,
+        "duration": 2.63
+    },
+    {
+        "text": "Yeah.",
+        "start": 1151.435,
+        "duration": 0.09
+    },
+    {
+        "text": "So it's not totally random.",
+        "start": 1151.525,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 1152.725,
+        "duration": 0.36
+    },
+    {
+        "text": "and if I didn't have a union\npredictions, I'd pick the same ones.",
+        "start": 1154.465,
+        "duration": 2.79
+    },
+    {
+        "text": "It's, if I have a perfect match,\nthen, then there's no drift.",
+        "start": 1157.255,
+        "duration": 5.07
+    },
+    {
+        "text": "if I predicted exactly one thing Yeah.",
+        "start": 1163.075,
+        "duration": 1.77
+    },
+    {
+        "text": "And an input comes in and I only\nhad one prediction, no drift.",
+        "start": 1164.905,
+        "duration": 3.15
+    },
+    {
+        "text": "But if I had multiple predictions,\nlike what's, I have two, predictions.",
+        "start": 1168.595,
+        "duration": 3.21
+    },
+    {
+        "text": "And so now I have,",
+        "start": 1172.255,
+        "duration": 1.23
+    },
+    {
+        "text": "those, the, only place I would\nget drift is if I, you have",
+        "start": 1175.585,
+        "duration": 3.78
+    },
+    {
+        "text": "a common mini column, right?",
+        "start": 1179.365,
+        "duration": 2.55
+    },
+    {
+        "text": "So the two inputs have to\nhave a common mini column.",
+        "start": 1181.915,
+        "duration": 2.37
+    },
+    {
+        "text": "And, and now I had two predicted\ncells in that mini column.",
+        "start": 1184.825,
+        "duration": 4.23
+    },
+    {
+        "text": "one of 'em is the right one and\none of 'em is a different one.",
+        "start": 1190.795,
+        "duration": 3.72
+    },
+    {
+        "text": "But one of, at that point in time, after\nyou depolarize both of those, you just",
+        "start": 1194.935,
+        "duration": 3.99
+    },
+    {
+        "text": "randomly pick one at that moment in time.",
+        "start": 1198.925,
+        "duration": 1.41
+    },
+    {
+        "text": "so it wouldn't, all the cells\nwouldn't, wouldn't drift because",
+        "start": 1201.415,
+        "duration": 3.99
+    },
+    {
+        "text": "owning a, you are only gonna exhibit\nthe drift in a mini column where",
+        "start": 1205.765,
+        "duration": 2.7
+    },
+    {
+        "text": "there was multiple cells predicted.",
+        "start": 1208.465,
+        "duration": 1.47
+    },
+    {
+        "text": "If I had another mini column\nover here, we only had one",
+        "start": 1210.565,
+        "duration": 1.74
+    },
+    {
+        "text": "prediction, I wouldn't get a drift.",
+        "start": 1212.305,
+        "duration": 1.38
+    },
+    {
+        "text": "So I think about how much of a\nyou that basically says you'd have",
+        "start": 1214.405,
+        "duration": 3.45
+    },
+    {
+        "text": "more drift with more uncertainty.",
+        "start": 1217.855,
+        "duration": 2.34
+    },
+    {
+        "text": "I dunno if that fits the literature or\nnot, but that's what that would imply.",
+        "start": 1222.115,
+        "duration": 3.69
+    },
+    {
+        "text": "so I guess the, whole point of this\nexercise was I was taking what you",
+        "start": 1227.245,
+        "duration": 2.97
+    },
+    {
+        "text": "suggested and trying to map it into mini\ncolumn, temple memory theory, and then,",
+        "start": 1230.215,
+        "duration": 7.02
+    },
+    {
+        "text": "walk through the implications of that.",
+        "start": 1237.235,
+        "duration": 1.74
+    },
+    {
+        "text": "So I'm not sure if there's\nan advantage to this.",
+        "start": 1239.875,
+        "duration": 2.16
+    },
+    {
+        "text": "I don't know what this advantage to this,\nbut it would basically say if I have a",
+        "start": 1245.305,
+        "duration": 4.71
+    },
+    {
+        "text": "bunch of predictions, alright, I'm sorry\nI took the long way to get here, but",
+        "start": 1250.015,
+        "duration": 5.1
+    },
+    {
+        "text": "I have multiple predictions coming in.",
+        "start": 1255.115,
+        "duration": 1.71
+    },
+    {
+        "text": "That means I got multiple cells, multiple,\nSDRs active, some of the minicolumns.",
+        "start": 1257.005,
+        "duration": 4.765
+    },
+    {
+        "text": "I could randomly pick the wrong\ncell for the new representation",
+        "start": 1262.105,
+        "duration": 3.9
+    },
+    {
+        "text": "and I start learning that.",
+        "start": 1266.005,
+        "duration": 0.93
+    },
+    {
+        "text": "and, and so for those,\nminicolumns, I would exhibit drift.",
+        "start": 1268.975,
+        "duration": 5.46
+    },
+    {
+        "text": "and then of course once I picked the\nunique ones here, I would now have a",
+        "start": 1275.335,
+        "duration": 4.08
+    },
+    {
+        "text": "unique representation to pass down here.",
+        "start": 1279.415,
+        "duration": 1.62
+    },
+    {
+        "text": "Not a, union.",
+        "start": 1281.965,
+        "duration": 0.87
+    },
+    {
+        "text": "See, I, still don't know how to\ndeal with the union down here.",
+        "start": 1283.255,
+        "duration": 2.43
+    },
+    {
+        "text": "maybe it works, maybe it doesn't work.",
+        "start": 1287.515,
+        "duration": 1.32
+    },
+    {
+        "text": "So the next thing to do is to\nfigure out what if I just, okay.",
+        "start": 1291.085,
+        "duration": 2.64
+    },
+    {
+        "text": "So I was supposed to do SDRA, and\nnow I have, because I had a union, I",
+        "start": 1293.725,
+        "duration": 6.42
+    },
+    {
+        "text": "have SDRA, prime, which is slightly\nmodified from a, that's a drift from a,",
+        "start": 1300.145,
+        "duration": 5.67
+    },
+    {
+        "text": "and then I passing that down here\nand, and now I'm associating the",
+        "start": 1308.155,
+        "duration": 4.2
+    },
+    {
+        "text": "drifted, the slightly modified SDR\nup here with the location down here.",
+        "start": 1312.355,
+        "duration": 5.58
+    },
+    {
+        "text": "But that's slightly modified.",
+        "start": 1318.595,
+        "duration": 1.11
+    },
+    {
+        "text": "SDR is going to be more\nconsistent over time.",
+        "start": 1319.705,
+        "duration": 2.7
+    },
+    {
+        "text": "Is it?",
+        "start": 1322.765,
+        "duration": 0.42
+    },
+    {
+        "text": "I don't know.",
+        "start": 1323.875,
+        "duration": 0.54
+    },
+    {
+        "text": "it's supposed to, we have a\nunion of features at layer four.",
+        "start": 1325.585,
+        "duration": 4.38
+    },
+    {
+        "text": "And we're basically every time we're,\nI'm not sure about randomly choosing,",
+        "start": 1330.415,
+        "duration": 4.8
+    },
+    {
+        "text": "from the union of predictions, but\nif we basically over time pull them",
+        "start": 1335.845,
+        "duration": 4.74
+    },
+    {
+        "text": "towards some sort of an average or a,\nsample from, these unions into just",
+        "start": 1340.585,
+        "duration": 5.58
+    },
+    {
+        "text": "a single representation and basically\nboth features are going to be the same",
+        "start": 1346.165,
+        "duration": 3.84
+    },
+    {
+        "text": "then, I don't How would you do that?",
+        "start": 1350.995,
+        "duration": 1.83
+    },
+    {
+        "text": "do you wanna explain that?",
+        "start": 1354.865,
+        "duration": 0.96
+    },
+    {
+        "text": "Is that also what you\nwere thinking of Niels?",
+        "start": 1359.695,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 1362.515,
+        "duration": 0.3
+    },
+    {
+        "text": "We, I don't understand.",
+        "start": 1362.82,
+        "duration": 0.985
+    },
+    {
+        "text": "Wouldn't helpful so far?",
+        "start": 1365.965,
+        "duration": 1.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 1367.765,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 1368.395,
+        "duration": 0.24
+    },
+    {
+        "text": "I think it was good to\ntake the detour as well.",
+        "start": 1368.635,
+        "duration": 2.13
+    },
+    {
+        "text": "Okay.",
+        "start": 1370.9,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 1371.3,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 1371.66,
+        "duration": 0.29
+    },
+    {
+        "text": "Okay.",
+        "start": 1373.975,
+        "duration": 0.45
+    },
+    {
+        "text": "Can I, erase?",
+        "start": 1378.43,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah, sure.",
+        "start": 1379.6,
+        "duration": 0.27
+    },
+    {
+        "text": "Maybe we just take a quick photo.",
+        "start": 1380.38,
+        "duration": 1.2
+    },
+    {
+        "text": "We have, but, the high resolution photo,",
+        "start": 1382.51,
+        "duration": 2.67
+    },
+    {
+        "text": "great.",
+        "start": 1387.55,
+        "duration": 0.3
+    },
+    {
+        "text": "Erase everything just this way.",
+        "start": 1392.02,
+        "duration": 0.99
+    },
+    {
+        "text": "All, I guess it was\nthe big two rectangles.",
+        "start": 1395.515,
+        "duration": 3.465
+    },
+    {
+        "text": "So the idea was if, that we, if\nwe have, a union of predictions,",
+        "start": 1402.37,
+        "duration": 5.16
+    },
+    {
+        "text": "then we would have multiple,",
+        "start": 1408.25,
+        "duration": 1.5
+    },
+    {
+        "text": "so they don't have to\nbe in the same column.",
+        "start": 1413.17,
+        "duration": 2.61
+    },
+    {
+        "text": "So it, is only sometimes it happens\nin the same column, but sometimes",
+        "start": 1416.02,
+        "duration": 4.08
+    },
+    {
+        "text": "also, you get a prediction here and\nyou get a prediction there, and maybe",
+        "start": 1420.13,
+        "duration": 4.29
+    },
+    {
+        "text": "SDRV only has this column in it,\nand SDRV only has this column in it.",
+        "start": 1424.42,
+        "duration": 4.125
+    },
+    {
+        "text": "But, when you, make a union of\npredictions, you could have.",
+        "start": 1428.65,
+        "duration": 3.12
+    },
+    {
+        "text": "This one and that one.",
+        "start": 1432.4,
+        "duration": 0.87
+    },
+    {
+        "text": "you only have different columns.",
+        "start": 1433.66,
+        "duration": 1.17
+    },
+    {
+        "text": "If the sensorimotor, the input\nto layer four, the sensory input",
+        "start": 1434.83,
+        "duration": 3.0
+    },
+    {
+        "text": "to layer four was different.",
+        "start": 1437.83,
+        "duration": 1.17
+    },
+    {
+        "text": "You have the same sensory,\nhave the same minicolumns.",
+        "start": 1439.33,
+        "duration": 2.255
+    },
+    {
+        "text": "Are we, just to clarify, are we\ntalking about the example right now",
+        "start": 1441.605,
+        "duration": 3.185
+    },
+    {
+        "text": "where we are like on a food bowl and\nit could be an apple or a banana?",
+        "start": 1444.79,
+        "duration": 3.3
+    },
+    {
+        "text": "No.",
+        "start": 1448.24,
+        "duration": 0.42
+    },
+    {
+        "text": "Or this is, this is the, extension of\nthat where, Jeff is trying to apply",
+        "start": 1448.72,
+        "duration": 5.85
+    },
+    {
+        "text": "to, just between, in, in a single\ncortical column between the u, between",
+        "start": 1454.57,
+        "duration": 4.23
+    },
+    {
+        "text": "the location and the, oh, why wouldn't\nthat be applied if apples orange?",
+        "start": 1458.8,
+        "duration": 2.985
+    },
+    {
+        "text": "No, it would apply.",
+        "start": 1462.565,
+        "duration": 0.945
+    },
+    {
+        "text": "The original idea was that I'd only\nuse it for the hierarchical, but for",
+        "start": 1463.51,
+        "duration": 4.47
+    },
+    {
+        "text": "generalizing that for, as a In our\nconversation is coming back to that, our",
+        "start": 1467.98,
+        "duration": 4.5
+    },
+    {
+        "text": "conversation, I was more interested, you\nwere thinking about hierarchical stuff",
+        "start": 1472.48,
+        "duration": 2.91
+    },
+    {
+        "text": "and I'm thinking like, oh, this, could\nbe occurring right here in layer four.",
+        "start": 1475.39,
+        "duration": 2.79
+    },
+    {
+        "text": "I think maybe even said, I don't know,\nbut layer four could be doing this.",
+        "start": 1478.72,
+        "duration": 2.73
+    },
+    {
+        "text": "And then I asked myself, could this be,\ncould this method be working on all parts",
+        "start": 1481.45,
+        "duration": 3.63
+    },
+    {
+        "text": "of the cortex where the units are formed?",
+        "start": 1485.08,
+        "duration": 1.53
+    },
+    {
+        "text": "Yeah.",
+        "start": 1486.79,
+        "duration": 0.3
+    },
+    {
+        "text": "Personally, I think it would be\neasier to almost abstract away",
+        "start": 1487.15,
+        "duration": 2.82
+    },
+    {
+        "text": "whether it's layer 4, 6, 3, whatever.",
+        "start": 1489.97,
+        "duration": 2.61
+    },
+    {
+        "text": "And you just describe it as it's\nhelpful for me to have that concrete.",
+        "start": 1493.0,
+        "duration": 4.32
+    },
+    {
+        "text": "Okay.",
+        "start": 1497.44,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah, a little bit.",
+        "start": 1497.83,
+        "duration": 0.51
+    },
+    {
+        "text": "because in this case, yeah, mommy\nsaid, oh, I might have different",
+        "start": 1498.61,
+        "duration": 3.48
+    },
+    {
+        "text": "mini column doctor, but that means\nI have a different sensory input.",
+        "start": 1502.09,
+        "duration": 2.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 1505.12,
+        "duration": 0.3
+    },
+    {
+        "text": "So that's why I'm asking\nabout if this the case.",
+        "start": 1505.42,
+        "duration": 2.19
+    },
+    {
+        "text": "So if it's like an, banana and orange,\nit could definitely be the case that",
+        "start": 1507.61,
+        "duration": 3.72
+    },
+    {
+        "text": "totally different features came in.",
+        "start": 1511.45,
+        "duration": 1.44
+    },
+    {
+        "text": "So different minicolumns are active.",
+        "start": 1512.89,
+        "duration": 1.68
+    },
+    {
+        "text": "But if it's like we, we have the same.",
+        "start": 1514.66,
+        "duration": 3.24
+    },
+    {
+        "text": "You have feature input that's\nconsistent with two objects.",
+        "start": 1518.695,
+        "duration": 2.85
+    },
+    {
+        "text": "I think it's really important because\nthey have completely different features.",
+        "start": 1521.605,
+        "duration": 2.4
+    },
+    {
+        "text": "The way I just described it, there would\nbe no drift because they normally columns",
+        "start": 1524.935,
+        "duration": 3.48
+    },
+    {
+        "text": "have shared, or almost only have shared.",
+        "start": 1528.415,
+        "duration": 2.4
+    },
+    {
+        "text": "Yeah.",
+        "start": 1530.935,
+        "duration": 0.57
+    },
+    {
+        "text": "so that's the example where we\nhave a can and a cup, and so far",
+        "start": 1531.925,
+        "duration": 3.09
+    },
+    {
+        "text": "we haven't reached a handle yet.",
+        "start": 1535.015,
+        "duration": 1.41
+    },
+    {
+        "text": "So it's consistent with both of them.",
+        "start": 1536.425,
+        "duration": 1.56
+    },
+    {
+        "text": "So this would only occur when you\nhave similarities between the charges,",
+        "start": 1537.985,
+        "duration": 3.27
+    },
+    {
+        "text": "which is nice because that could, it\nsuggested that maybe has something",
+        "start": 1541.345,
+        "duration": 3.36
+    },
+    {
+        "text": "to do with classification and forming\nmore general representations, right?",
+        "start": 1544.705,
+        "duration": 4.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 1549.505,
+        "duration": 0.24
+    },
+    {
+        "text": "Yeah.",
+        "start": 1549.75,
+        "duration": 0.09
+    },
+    {
+        "text": "So observing a banana and a can\nnot, there's no drift going on.",
+        "start": 1550.135,
+        "duration": 3.72
+    },
+    {
+        "text": "But if I have a can and a something else\ncup, then I might start having Drift",
+        "start": 1553.855,
+        "duration": 5.86
+    },
+    {
+        "text": "because there's some common features that\nlocations, but I think it'll, yeah, I",
+        "start": 1559.735,
+        "duration": 4.83
+    },
+    {
+        "text": "think it'll, it could happen both with\noverlap in the features, but also overlap",
+        "start": 1564.565,
+        "duration": 4.95
+    },
+    {
+        "text": "in their structural representation.",
+        "start": 1569.575,
+        "duration": 2.94
+    },
+    {
+        "text": "Because the same thing would happen,\nassume you've learned two different",
+        "start": 1572.515,
+        "duration": 3.57
+    },
+    {
+        "text": "objects and they're relatively similar,\nlike at a structural level, I don't know.",
+        "start": 1576.085,
+        "duration": 6.03
+    },
+    {
+        "text": "You have two different types of coffee\ncups yet now you're sensing one of them.",
+        "start": 1582.115,
+        "duration": 4.05
+    },
+    {
+        "text": "You're going to have this union active\nhere, which is initially unique, but",
+        "start": 1586.945,
+        "duration": 4.47
+    },
+    {
+        "text": "you're gonna have the union active\nhere, which is initially unique.",
+        "start": 1591.415,
+        "duration": 3.3
+    },
+    {
+        "text": "No, I could never forget\nyou used the word down.",
+        "start": 1594.81,
+        "duration": 1.885
+    },
+    {
+        "text": "Remember that?",
+        "start": 1596.815,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 1597.355,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 1597.745,
+        "duration": 0.33
+    },
+    {
+        "text": "But if we did, if we had two different\nlocation, representations, active.",
+        "start": 1598.075,
+        "duration": 5.94
+    },
+    {
+        "text": "The same thing is gonna happen that,\nthese are gonna be feeding back here.",
+        "start": 1606.16,
+        "duration": 4.98
+    },
+    {
+        "text": "And you have this kind of overlap in\nokay, some cells are going to receive",
+        "start": 1612.04,
+        "duration": 5.07
+    },
+    {
+        "text": "input from both of these and that could\nbias those cells to be more active.",
+        "start": 1617.68,
+        "duration": 5.31
+    },
+    {
+        "text": "And so that could again, push\nthese, the kind of, these two",
+        "start": 1623.47,
+        "duration": 3.27
+    },
+    {
+        "text": "locations to be more similar.",
+        "start": 1626.74,
+        "duration": 2.16
+    },
+    {
+        "text": "or to rather just sub-select a union.",
+        "start": 1631.06,
+        "duration": 2.49
+    },
+    {
+        "text": "I'm not fine.",
+        "start": 1635.11,
+        "duration": 0.72
+    },
+    {
+        "text": "So I feel like it, it is\njust it's just basic heavy.",
+        "start": 1636.37,
+        "duration": 3.51
+    },
+    {
+        "text": "And if, as long as you have some sort\nof sparsely constraint, if you have,",
+        "start": 1639.88,
+        "duration": 5.73
+    },
+    {
+        "text": "like two different\nlocation representations.",
+        "start": 1648.16,
+        "duration": 3.27
+    },
+    {
+        "text": "So the one in black",
+        "start": 1652.51,
+        "duration": 1.26
+    },
+    {
+        "text": "and the one in green, yeah.",
+        "start": 1656.77,
+        "duration": 2.37
+    },
+    {
+        "text": "and these are for two different\nobjects that are similar.",
+        "start": 1660.16,
+        "duration": 3.54
+    },
+    {
+        "text": "So there's gonna be some\ncells that get, green inputs.",
+        "start": 1664.27,
+        "duration": 4.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 1669.25,
+        "duration": 0.39
+    },
+    {
+        "text": "There's gonna be some\ncells that get black inputs",
+        "start": 1670.03,
+        "duration": 3.21
+    },
+    {
+        "text": "and there's gonna be, there's gonna be\nsome overlap in those receptive fields.",
+        "start": 1676.3,
+        "duration": 4.29
+    },
+    {
+        "text": "and so these cells that have\ninputs from both, but there",
+        "start": 1681.88,
+        "duration": 3.99
+    },
+    {
+        "text": "wouldn't typically be many.",
+        "start": 1685.87,
+        "duration": 1.11
+    },
+    {
+        "text": "If I have two SDRs, which similar Aspar,",
+        "start": 1687.34,
+        "duration": 2.73
+    },
+    {
+        "text": "the overlap would be very low\nin terms of those upper cells.",
+        "start": 1692.995,
+        "duration": 2.88
+    },
+    {
+        "text": "you just, the, it just would be\nvery few cells would be input",
+        "start": 1696.475,
+        "duration": 4.315
+    },
+    {
+        "text": "from most, if, they're spars.",
+        "start": 1700.795,
+        "duration": 1.38
+    },
+    {
+        "text": "If the two inputs are spars, then\nmathematically there's very little,",
+        "start": 1702.295,
+        "duration": 5.1
+    },
+    {
+        "text": "overlap between, any particular cell.",
+        "start": 1707.395,
+        "duration": 2.31
+    },
+    {
+        "text": "Therefore, but there, there will\nbe cells like maybe not the ones",
+        "start": 1709.705,
+        "duration": 6.3
+    },
+    {
+        "text": "that were originally active.",
+        "start": 1716.005,
+        "duration": 1.44
+    },
+    {
+        "text": "there, there's gonna be a significant\nnumber of cells that get inputs from each.",
+        "start": 1719.275,
+        "duration": 4.68
+    },
+    {
+        "text": "No, I think that's not true.",
+        "start": 1724.015,
+        "duration": 1.38
+    },
+    {
+        "text": "That's why I'm arguing if it's\nsparse, that won't be true.",
+        "start": 1725.395,
+        "duration": 3.15
+    },
+    {
+        "text": "you could use, what's the overlap\nbetween two, 2% representations?",
+        "start": 1730.675,
+        "duration": 3.45
+    },
+    {
+        "text": "Yeah, it's very low.",
+        "start": 1734.395,
+        "duration": 0.72
+    },
+    {
+        "text": "there'll be some, but not many.",
+        "start": 1736.465,
+        "duration": 1.05
+    },
+    {
+        "text": "I think the learning rule here is that,\nwhat I'm trying to get at is that those",
+        "start": 1737.965,
+        "duration": 3.99
+    },
+    {
+        "text": "representations will try to be, will\ntry to have more overlap over time.",
+        "start": 1741.955,
+        "duration": 3.69
+    },
+    {
+        "text": "We don't want it to be exactly the same,\nbut they're just gonna have more overlap.",
+        "start": 1746.005,
+        "duration": 3.24
+    },
+    {
+        "text": "Which, two representations.",
+        "start": 1749.385,
+        "duration": 1.15
+    },
+    {
+        "text": "So these, union of predictions, the,\nthat, union is going to be, much",
+        "start": 1750.835,
+        "duration": 6.0
+    },
+    {
+        "text": "less, many less people or sales are\ngoing to be, happening over time.",
+        "start": 1756.835,
+        "duration": 4.95
+    },
+    {
+        "text": "because they're always\nchoosing from that sub sample.",
+        "start": 1763.075,
+        "duration": 2.01
+    },
+    {
+        "text": "They're always converging\nto, more and more similar.",
+        "start": 1765.085,
+        "duration": 3.39
+    },
+    {
+        "text": "I see.",
+        "start": 1768.475,
+        "duration": 0.63
+    },
+    {
+        "text": "So along what Niels is saying it,\nbut essentially, the problem I have",
+        "start": 1769.165,
+        "duration": 4.41
+    },
+    {
+        "text": "with that is because if I think about\nthis layer four, you don't want to",
+        "start": 1773.575,
+        "duration": 3.12
+    },
+    {
+        "text": "think about it, you wanna abstract\nit, but I'm thinking about it.",
+        "start": 1776.695,
+        "duration": 2.105
+    },
+    {
+        "text": "Layer four.",
+        "start": 1780.085,
+        "duration": 0.72
+    },
+    {
+        "text": "On a particular input.",
+        "start": 1781.665,
+        "duration": 1.105
+    },
+    {
+        "text": "I'm, specifying which\nminicolumns are active.",
+        "start": 1783.37,
+        "duration": 1.77
+    },
+    {
+        "text": "That's it.",
+        "start": 1785.2,
+        "duration": 0.39
+    },
+    {
+        "text": "I can't pick a different set of\nminicolumns, that's sensory driven.",
+        "start": 1785.95,
+        "duration": 3.9
+    },
+    {
+        "text": "True.",
+        "start": 1790.0,
+        "duration": 0.39
+    },
+    {
+        "text": "And I can't pick a different set.",
+        "start": 1790.51,
+        "duration": 1.41
+    },
+    {
+        "text": "So all you do is pick from\nthemselves within those minicolumns.",
+        "start": 1791.92,
+        "duration": 2.43
+    },
+    {
+        "text": "but the thalamus is sending, like\nwhat, chooses, which layers here",
+        "start": 1795.07,
+        "duration": 5.82
+    },
+    {
+        "text": "get active over time, is really\nwhich, Minicolumns get active.",
+        "start": 1800.98,
+        "duration": 3.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 1804.88,
+        "duration": 0.33
+    },
+    {
+        "text": "First of all, our assumption\nis you take these bits from",
+        "start": 1805.57,
+        "duration": 2.52
+    },
+    {
+        "text": "like the retina, for example.",
+        "start": 1808.3,
+        "duration": 1.23
+    },
+    {
+        "text": "And, you run into a spatial pooler\nand you, essentially say, okay, I",
+        "start": 1810.25,
+        "duration": 4.77
+    },
+    {
+        "text": "have so many minicolumns, I'm now\ngonna activate, 30% over 20% of 'em.",
+        "start": 1815.02,
+        "duration": 4.29
+    },
+    {
+        "text": "And the spatial pooler determines that.",
+        "start": 1819.82,
+        "duration": 1.71
+    },
+    {
+        "text": "It's just like the, you take a,\nthere's all these possible inputs",
+        "start": 1821.53,
+        "duration": 2.97
+    },
+    {
+        "text": "and you narrow it down to a, rep,\nnot a very sparse, distributor, but",
+        "start": 1824.53,
+        "duration": 5.37
+    },
+    {
+        "text": "not very sparse, sparse, but not very\nsparse representation of minicolumns.",
+        "start": 1829.9,
+        "duration": 4.595
+    },
+    {
+        "text": "It is, the spatial pooler is\ntrained, also learns to do that.",
+        "start": 1835.0,
+        "duration": 3.51
+    },
+    {
+        "text": "And you have to assume that spatial\npooler doesn't change very quickly.",
+        "start": 1838.57,
+        "duration": 2.94
+    },
+    {
+        "text": "It essentially say, okay, I've seen\nthe world, I've seen all the sensory",
+        "start": 1843.19,
+        "duration": 4.44
+    },
+    {
+        "text": "inputs from the world, from my patch\nof the sensorimotor, and I've learned",
+        "start": 1847.63,
+        "duration": 3.69
+    },
+    {
+        "text": "to represent 'em using a set of\nminicolumns via the spatial pooler.",
+        "start": 1851.32,
+        "duration": 2.82
+    },
+    {
+        "text": "And that becomes your basis\nof which all learning occurs.",
+        "start": 1854.89,
+        "duration": 3.12
+    },
+    {
+        "text": "If that spatial pooler changes,\neverything, everything gets outta",
+        "start": 1858.13,
+        "duration": 4.05
+    },
+    {
+        "text": "whack, it would be, you could,\nit could learn differently.",
+        "start": 1862.18,
+        "duration": 2.31
+    },
+    {
+        "text": "But my assumption so far is that\nthe spatial pooler is not changing.",
+        "start": 1864.49,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah, we slowly drift the spatial pooler.",
+        "start": 1868.0,
+        "duration": 2.7
+    },
+    {
+        "text": "if the world changed and you no longer\nhave lines, and now all of a sudden",
+        "start": 1871.0,
+        "duration": 3.81
+    },
+    {
+        "text": "you have little curves everywhere,\nthe spatial pooler would change.",
+        "start": 1874.81,
+        "duration": 2.37
+    },
+    {
+        "text": "The other thing is, I'm just thinking\nto a certain degree, maybe this, it's",
+        "start": 1877.99,
+        "duration": 4.08
+    },
+    {
+        "text": "a, this drift could be a bit of a\nfeedback, recurrent thing that pushes it",
+        "start": 1882.07,
+        "duration": 5.34
+    },
+    {
+        "text": "more and more in that okay, yeah, maybe\nthere's not that much overlap initially.",
+        "start": 1887.41,
+        "duration": 4.23
+    },
+    {
+        "text": "And so there's only a few cells that\nhave enough input from each that",
+        "start": 1891.64,
+        "duration": 3.78
+    },
+    {
+        "text": "they kind of form this, new subset.",
+        "start": 1895.42,
+        "duration": 1.95
+    },
+    {
+        "text": "But then that helps.",
+        "start": 1897.37,
+        "duration": 1.74
+    },
+    {
+        "text": "Again, you're gonna have these cove,\nso that's gonna push these, unique",
+        "start": 1899.29,
+        "duration": 4.53
+    },
+    {
+        "text": "location cells, and you overlap there.",
+        "start": 1903.82,
+        "duration": 2.37
+    },
+    {
+        "text": "Those are cells are gonna be more active.",
+        "start": 1906.52,
+        "duration": 1.44
+    },
+    {
+        "text": "And just over time,",
+        "start": 1908.59,
+        "duration": 1.26
+    },
+    {
+        "text": "if you're activating the same\ncells here, then by definition",
+        "start": 1911.86,
+        "duration": 4.38
+    },
+    {
+        "text": "there's gonna be some set of cells\nup here that receive that input.",
+        "start": 1916.24,
+        "duration": 3.12
+    },
+    {
+        "text": "and if deactivate the same cells, then I,\nhad a thought while you're talking, maybe",
+        "start": 1920.32,
+        "duration": 3.63
+    },
+    {
+        "text": "what you're saying, but I, lost your train\nof your thoughts, so if you wanna do it",
+        "start": 1923.95,
+        "duration": 2.88
+    },
+    {
+        "text": "again, or I can Yeah, just that, it's, it\nis a bit of a, recurrent, feedback loop",
+        "start": 1926.865,
+        "duration": 5.995
+    },
+    {
+        "text": "where I get, I see what you're saying now.",
+        "start": 1932.86,
+        "duration": 3.15
+    },
+    {
+        "text": "Okay.",
+        "start": 1936.07,
+        "duration": 0.27
+    },
+    {
+        "text": "There's only gonna be a very small number\nof cells that if these patterns are",
+        "start": 1936.34,
+        "duration": 3.66
+    },
+    {
+        "text": "two totally different, SDRs are going\nto receive in info input from both.",
+        "start": 1940.0,
+        "duration": 5.49
+    },
+    {
+        "text": "But let's say there's a few of those\ncells, so they now, these are more",
+        "start": 1945.58,
+        "duration": 6.06
+    },
+    {
+        "text": "likely to be active when you see those\nobjects for either of those objects.",
+        "start": 1951.64,
+        "duration": 3.12
+    },
+    {
+        "text": "So these cells are always active\nin the context when you're looking",
+        "start": 1955.99,
+        "duration": 3.27
+    },
+    {
+        "text": "at either of these objects.",
+        "start": 1959.26,
+        "duration": 1.08
+    },
+    {
+        "text": "So there's gonna be some, let's\nsay, new location cells that",
+        "start": 1960.4,
+        "duration": 4.77
+    },
+    {
+        "text": "receive, input from these Yeah.",
+        "start": 1965.17,
+        "duration": 3.3
+    },
+    {
+        "text": "That are more likely to become active.",
+        "start": 1968.56,
+        "duration": 1.89
+    },
+    {
+        "text": "And then there's gonna be some new cell up\nhere that receives input from these Yeah.",
+        "start": 1971.08,
+        "duration": 5.19
+    },
+    {
+        "text": "That's more likely to be active.",
+        "start": 1976.27,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah.",
+        "start": 1977.44,
+        "duration": 0.33
+    },
+    {
+        "text": "And so over time, yeah.",
+        "start": 1977.8,
+        "duration": 1.44
+    },
+    {
+        "text": "It might drift to more.",
+        "start": 1979.45,
+        "duration": 1.17
+    },
+    {
+        "text": "Okay.",
+        "start": 1980.62,
+        "duration": 0.24
+    },
+    {
+        "text": "I'll take, I'll throw that.",
+        "start": 1981.41,
+        "duration": 0.77
+    },
+    {
+        "text": "let me, I, that's a good idea.",
+        "start": 1982.72,
+        "duration": 2.25
+    },
+    {
+        "text": "So I'm not gonna, I'm not rejecting that.",
+        "start": 1985.06,
+        "duration": 1.71
+    },
+    {
+        "text": "I'm gonna add something to it.",
+        "start": 1986.77,
+        "duration": 1.315
+    },
+    {
+        "text": "So one of the things, about grid\ncells, they don't seem to forearm",
+        "start": 1988.465,
+        "duration": 3.435
+    },
+    {
+        "text": "units as far as we can tell.",
+        "start": 1991.93,
+        "duration": 1.38
+    },
+    {
+        "text": "And if an animal or rats in an\nenvironment, there's, a grid cell",
+        "start": 1993.73,
+        "duration": 6.09
+    },
+    {
+        "text": "represents, is, active in a certain\nlocation, in that environment.",
+        "start": 1999.82,
+        "duration": 2.79
+    },
+    {
+        "text": "And if, the rat is confused, doesn't know\nwhere it is, you don't see a union of grid",
+        "start": 2003.12,
+        "duration": 4.56
+    },
+    {
+        "text": "cells, one grid cell active, and then when\nthe rat, it says, oh, I know where I'm in,",
+        "start": 2007.68,
+        "duration": 5.37
+    },
+    {
+        "text": "then it shifts to a different grid cell.",
+        "start": 2013.35,
+        "duration": 1.32
+    },
+    {
+        "text": "So there's no evidence of\nviewings of grid cells.",
+        "start": 2015.63,
+        "duration": 2.31
+    },
+    {
+        "text": "It, there's more of an evidence,\nlike I have a representation",
+        "start": 2017.94,
+        "duration": 2.1
+    },
+    {
+        "text": "for generic space, and then now\nI'll, oh no, I know where I am.",
+        "start": 2020.04,
+        "duration": 4.86
+    },
+    {
+        "text": "And you throw away all the old grid\ncells and you now locked into a new set.",
+        "start": 2024.9,
+        "duration": 5.16
+    },
+    {
+        "text": "So yeah.",
+        "start": 2030.42,
+        "duration": 1.2
+    },
+    {
+        "text": "I'm curious, do you know like\na specific paper about this?",
+        "start": 2031.62,
+        "duration": 2.49
+    },
+    {
+        "text": "Because I remember when I was\nworking with Marx's stuff that I was",
+        "start": 2034.11,
+        "duration": 2.94
+    },
+    {
+        "text": "trying to find a paper about, what\nare grid cells doing when arise?",
+        "start": 2037.05,
+        "duration": 3.0
+    },
+    {
+        "text": "Confused.",
+        "start": 2040.05,
+        "duration": 0.54
+    },
+    {
+        "text": "there are a lot, because I'm curious how\nmuch it fit with, I, don't have papers.",
+        "start": 2042.105,
+        "duration": 3.57
+    },
+    {
+        "text": "I can't remember.",
+        "start": 2045.675,
+        "duration": 0.54
+    },
+    {
+        "text": "You should know this by now.",
+        "start": 2046.545,
+        "duration": 0.84
+    },
+    {
+        "text": "this is not a rare finding.",
+        "start": 2048.555,
+        "duration": 1.56
+    },
+    {
+        "text": "Yeah.",
+        "start": 2050.235,
+        "duration": 0.39
+    },
+    {
+        "text": "I don't believe in that question.",
+        "start": 2050.625,
+        "duration": 0.96
+    },
+    {
+        "text": "In the past I said that and\nthen turned out to be rare.",
+        "start": 2051.585,
+        "duration": 1.8
+    },
+    {
+        "text": "this, is, a general way.",
+        "start": 2056.295,
+        "duration": 0.93
+    },
+    {
+        "text": "I, there's been a lot of papers that\ntalk about, when a rat doesn't know",
+        "start": 2057.225,
+        "duration": 5.55
+    },
+    {
+        "text": "where it is and then it doesn't know\nwhere it's right and it locks it.",
+        "start": 2062.775,
+        "duration": 3.15
+    },
+    {
+        "text": "and I believe, oh, just like the\nre-anchoring re it's a re-anchoring,",
+        "start": 2067.125,
+        "duration": 2.884
+    },
+    {
+        "text": "but it's not like a union.",
+        "start": 2070.014,
+        "duration": 1.281
+    },
+    {
+        "text": "And then you narrow it down.",
+        "start": 2071.295,
+        "duration": 1.17
+    },
+    {
+        "text": "yeah.",
+        "start": 2072.735,
+        "duration": 0.12
+    },
+    {
+        "text": "It's not oh, these are all\nthe possible places I can be.",
+        "start": 2072.855,
+        "duration": 2.01
+    },
+    {
+        "text": "it's no, I'm in, the generic space.",
+        "start": 2075.615,
+        "duration": 3.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 2079.065,
+        "duration": 0.24
+    },
+    {
+        "text": "And, because I'm in the room,\nI have no idea where I am",
+        "start": 2079.305,
+        "duration": 2.94
+    },
+    {
+        "text": "until I start seeing landmarks.",
+        "start": 2082.245,
+        "duration": 2.4
+    },
+    {
+        "text": "and then I start narrowing it.",
+        "start": 2085.935,
+        "duration": 1.32
+    },
+    {
+        "text": "And then, and when I do that, the\ngrid cells change, but they're not",
+        "start": 2087.315,
+        "duration": 3.27
+    },
+    {
+        "text": "like a union being narrowed down.",
+        "start": 2090.585,
+        "duration": 1.41
+    },
+    {
+        "text": "There's that.",
+        "start": 2091.995,
+        "duration": 0.45
+    },
+    {
+        "text": "I think, I believe that's\nthe strong evidence for that.",
+        "start": 2092.505,
+        "duration": 3.09
+    },
+    {
+        "text": "So I, it is one of the reasons I\nreject the whole union of vocations",
+        "start": 2096.015,
+        "duration": 3.51
+    },
+    {
+        "text": "thing, because grid cells don't\nrepresent, union implications.",
+        "start": 2099.525,
+        "duration": 3.42
+    },
+    {
+        "text": "Now, grid cells aren't the\nthings I'm talking about here.",
+        "start": 2103.125,
+        "duration": 2.25
+    },
+    {
+        "text": "The minicolumns, that's the\nderivative of minicolumns.",
+        "start": 2105.375,
+        "duration": 3.18
+    },
+    {
+        "text": "but the same could apply\nbetween L three and L four.",
+        "start": 2109.815,
+        "duration": 2.52
+    },
+    {
+        "text": "any of these things could apply\nbetween L. I'm not sure what the,",
+        "start": 2114.075,
+        "duration": 2.76
+    },
+    {
+        "text": "how to parse that statement, but Yes.",
+        "start": 2116.955,
+        "duration": 1.56
+    },
+    {
+        "text": "okay.",
+        "start": 2118.965,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 2119.475,
+        "duration": 0.36
+    },
+    {
+        "text": "I'm just thinking.",
+        "start": 2119.895,
+        "duration": 0.54
+    },
+    {
+        "text": "Okay.",
+        "start": 2120.46,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 2121.02,
+        "duration": 0.29
+    },
+    {
+        "text": "I think it could, but let's take,\nbecause grid cells might be unique too.",
+        "start": 2122.055,
+        "duration": 4.14
+    },
+    {
+        "text": "Locations could be unique.",
+        "start": 2126.195,
+        "duration": 0.99
+    },
+    {
+        "text": "It's a, different mechanism.",
+        "start": 2127.695,
+        "duration": 0.87
+    },
+    {
+        "text": "Where I was coming with this\nis, and we, I'm, trying to avoid",
+        "start": 2129.69,
+        "duration": 4.71
+    },
+    {
+        "text": "using a union of locations.",
+        "start": 2134.4,
+        "duration": 1.53
+    },
+    {
+        "text": "I'm trying to, I'd rather stick to\nsay Hey, I have a, set of assumptions",
+        "start": 2136.47,
+        "duration": 4.95
+    },
+    {
+        "text": "about where I am right now.",
+        "start": 2141.42,
+        "duration": 0.96
+    },
+    {
+        "text": "It may be, a generic, like\nI'm in the unknown space.",
+        "start": 2142.38,
+        "duration": 3.48
+    },
+    {
+        "text": "and Dan, when I start narrowing down,\nI jump to a different set of locations.",
+        "start": 2147.21,
+        "duration": 3.96
+    },
+    {
+        "text": "like I, I lock into the\ncorrect set of grid cells.",
+        "start": 2151.41,
+        "duration": 3.3
+    },
+    {
+        "text": "so you're saying that the representation\nthat gets activated is, is some random",
+        "start": 2155.85,
+        "duration": 5.73
+    },
+    {
+        "text": "subset of, the union of predictions and\nwe will not have I would, no, I would,",
+        "start": 2161.58,
+        "duration": 7.17
+    },
+    {
+        "text": "all I was saying is I'm trying to avoid\nhaving a union of, location position that",
+        "start": 2169.11,
+        "duration": 5.34
+    },
+    {
+        "text": "I'm trying to avoid having the green and\nthe black lines going up simultaneously.",
+        "start": 2174.45,
+        "duration": 3.45
+    },
+    {
+        "text": "Yeah.",
+        "start": 2177.93,
+        "duration": 0.3
+    },
+    {
+        "text": "that's really interesting.",
+        "start": 2178.59,
+        "duration": 1.08
+    },
+    {
+        "text": "But that feels like a radical shift\nin terms of like how we update the",
+        "start": 2179.67,
+        "duration": 3.87
+    },
+    {
+        "text": "hypothesis space, because it does,\nthe whole basis for knowing which,",
+        "start": 2183.63,
+        "duration": 5.28
+    },
+    {
+        "text": "features to reactivate based on which\nreference frame you're in is based",
+        "start": 2189.63,
+        "duration": 4.95
+    },
+    {
+        "text": "on the, location cells being active.",
+        "start": 2194.58,
+        "duration": 2.07
+    },
+    {
+        "text": "So I, I'm, not challenging it.",
+        "start": 2196.83,
+        "duration": 1.77
+    },
+    {
+        "text": "I'm just interested or I, in, I'm\ninterested now where this goes.",
+        "start": 2198.81,
+        "duration": 3.03
+    },
+    {
+        "text": "I found this right for I, as I started\noff this today, I said one of the",
+        "start": 2202.44,
+        "duration": 3.69
+    },
+    {
+        "text": "problems I've always had, I can't\nimagine how unions of locations work.",
+        "start": 2206.13,
+        "duration": 3.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 2209.7,
+        "duration": 0.24
+    },
+    {
+        "text": "It doesn't fit the literature,\nit doesn't fit my models, it",
+        "start": 2209.94,
+        "duration": 3.63
+    },
+    {
+        "text": "doesn't fit other people's models.",
+        "start": 2213.57,
+        "duration": 1.35
+    },
+    {
+        "text": "it's difficult to imagine.",
+        "start": 2216.15,
+        "duration": 1.17
+    },
+    {
+        "text": "I never felt it worked.",
+        "start": 2218.835,
+        "duration": 1.05
+    },
+    {
+        "text": "And when we said, oh, we're gonna\npropagate this prediction of locations,",
+        "start": 2219.885,
+        "duration": 2.88
+    },
+    {
+        "text": "I like, ah, that's gonna happen.",
+        "start": 2222.765,
+        "duration": 1.53
+    },
+    {
+        "text": "it doesn't seem possible.",
+        "start": 2226.395,
+        "duration": 1.08
+    },
+    {
+        "text": "So anyway, maybe it is possible.",
+        "start": 2227.475,
+        "duration": 1.56
+    },
+    {
+        "text": "So I've never felt comfortable with it.",
+        "start": 2229.035,
+        "duration": 1.74
+    },
+    {
+        "text": "So now in this conversation when\nthis came up, I said, maybe this",
+        "start": 2230.925,
+        "duration": 2.881
+    },
+    {
+        "text": "is the way of revisiting all this.",
+        "start": 2233.865,
+        "duration": 1.23
+    },
+    {
+        "text": "And it is a radical shift in some sense.",
+        "start": 2235.305,
+        "duration": 1.71
+    },
+    {
+        "text": "He said, I'm not saying that union\nprediction doesn't occur anywhere.",
+        "start": 2237.225,
+        "duration": 2.61
+    },
+    {
+        "text": "I'm just saying right now I'm\ntalking about the location cells.",
+        "start": 2239.985,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 2242.06,
+        "duration": 0.03
+    },
+    {
+        "text": "And how we know the location cells work.",
+        "start": 2242.09,
+        "duration": 1.735
+    },
+    {
+        "text": "I was, I'm enticed with the idea of\nokay, maybe we can get away from the",
+        "start": 2245.235,
+        "duration": 3.51
+    },
+    {
+        "text": "idea that you have a union of locations.",
+        "start": 2248.745,
+        "duration": 2.4
+    },
+    {
+        "text": "and somehow this, this, drift works\nwith the fact that, if I'm gonna",
+        "start": 2252.255,
+        "duration": 4.83
+    },
+    {
+        "text": "understand the drift in layer four,\nbetween layer and layer six A, I",
+        "start": 2257.085,
+        "duration": 2.97
+    },
+    {
+        "text": "have to somehow accommodate the fact\nthat layer six A is not doing a unit.",
+        "start": 2260.055,
+        "duration": 3.39
+    },
+    {
+        "text": "it, it may be like shifting completely\nfrom one space, the location space",
+        "start": 2263.93,
+        "duration": 4.285
+    },
+    {
+        "text": "to a different location space.",
+        "start": 2268.215,
+        "duration": 1.02
+    },
+    {
+        "text": "Could, that mean that we might\nneed to question the assumption",
+        "start": 2270.105,
+        "duration": 4.8
+    },
+    {
+        "text": "if like objects have unique\nlocations associated with them?",
+        "start": 2274.935,
+        "duration": 3.84
+    },
+    {
+        "text": "'cause if we have a generic location\nspace that lets us move through the",
+        "start": 2279.675,
+        "duration": 4.32
+    },
+    {
+        "text": "feature space of different objects, that\nmight mean that we don't need unique",
+        "start": 2283.995,
+        "duration": 4.95
+    },
+    {
+        "text": "location representation for each object.",
+        "start": 2288.945,
+        "duration": 1.77
+    },
+    {
+        "text": "other than the fact that\nwhen an animal actually does",
+        "start": 2290.835,
+        "duration": 2.55
+    },
+    {
+        "text": "recognize where they are, yeah.",
+        "start": 2293.385,
+        "duration": 2.1
+    },
+    {
+        "text": "The set of SDR of the set of\ngrid cells that are active",
+        "start": 2295.515,
+        "duration": 3.48
+    },
+    {
+        "text": "become unique to that space.",
+        "start": 2298.995,
+        "duration": 2.4
+    },
+    {
+        "text": "Like you, obviously any particular\ngrid cell will become active in",
+        "start": 2302.1,
+        "duration": 3.57
+    },
+    {
+        "text": "many different places, right?",
+        "start": 2305.67,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 2307.02,
+        "duration": 0.51
+    },
+    {
+        "text": "But then before that happens, it must have\nstill been somehow been possible to move",
+        "start": 2307.98,
+        "duration": 4.77
+    },
+    {
+        "text": "through the feature space in a correct\nway to recognize the object, right?",
+        "start": 2312.75,
+        "duration": 6.27
+    },
+    {
+        "text": "It, I, don't, I think you're\nposing the problem more than Yeah.",
+        "start": 2319.02,
+        "duration": 4.14
+    },
+    {
+        "text": "The solution.",
+        "start": 2323.245,
+        "duration": 0.5
+    },
+    {
+        "text": "Yeah.",
+        "start": 2323.745,
+        "duration": 0.2
+    },
+    {
+        "text": "More like saying maybe we need to question\nthat assumption if it's always unique",
+        "start": 2323.95,
+        "duration": 3.71
+    },
+    {
+        "text": "locations for, I don't know about that.",
+        "start": 2327.66,
+        "duration": 2.19
+    },
+    {
+        "text": "It could,",
+        "start": 2330.045,
+        "duration": 0.38
+    },
+    {
+        "text": "it, it is possible, right?",
+        "start": 2332.685,
+        "duration": 1.245
+    },
+    {
+        "text": "It, could be that,",
+        "start": 2334.11,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm not sure why I need to\nthrow away that assumption yet.",
+        "start": 2338.49,
+        "duration": 2.34
+    },
+    {
+        "text": "it looks like grid cells, one, the animals\nin your environment, the set of grid cells",
+        "start": 2341.58,
+        "duration": 4.26
+    },
+    {
+        "text": "are active, tend to be, tend to be unique.",
+        "start": 2345.84,
+        "duration": 2.91
+    },
+    {
+        "text": "obviously any individual grid\ncells can't be unique, right?",
+        "start": 2349.02,
+        "duration": 2.76
+    },
+    {
+        "text": "I just say grid cells can't\nonly fire in some environment.",
+        "start": 2351.99,
+        "duration": 2.34
+    },
+    {
+        "text": "it has to fire in lots of\nall environments practically.",
+        "start": 2355.17,
+        "duration": 2.22
+    },
+    {
+        "text": "But the set of 'em has to be unique.",
+        "start": 2357.45,
+        "duration": 2.04
+    },
+    {
+        "text": "and it seems that's what\nit looks like, right?",
+        "start": 2361.41,
+        "duration": 3.75
+    },
+    {
+        "text": "When you look at the set of\ngood cells, they anchor rean",
+        "start": 2365.16,
+        "duration": 2.49
+    },
+    {
+        "text": "may be a wrong assumption.",
+        "start": 2368.82,
+        "duration": 1.11
+    },
+    {
+        "text": "Maybe I'm extending it beyond the data.",
+        "start": 2370.02,
+        "duration": 1.47
+    },
+    {
+        "text": "I don't know.",
+        "start": 2371.7,
+        "duration": 0.45
+    },
+    {
+        "text": "so I, I'm, I don't, I'm\nnot willing to throw it.",
+        "start": 2373.26,
+        "duration": 2.1
+    },
+    {
+        "text": "I don't know if I want to\nthrow away the nucleation yet.",
+        "start": 2375.36,
+        "duration": 1.746
+    },
+    {
+        "text": "Is, there an advantage\nof throwing it away yet?",
+        "start": 2378.54,
+        "duration": 1.62
+    },
+    {
+        "text": "yeah.",
+        "start": 2382.71,
+        "duration": 0.45
+    },
+    {
+        "text": "I dunno if this is a cop out, but it feels\nAnd I don't know what to what degree,",
+        "start": 2383.31,
+        "duration": 5.325
+    },
+    {
+        "text": "it's just like a cell population question.",
+        "start": 2388.635,
+        "duration": 3.12
+    },
+    {
+        "text": "Like almost there's something\na bit more like place cells",
+        "start": 2391.755,
+        "duration": 3.99
+    },
+    {
+        "text": "or something like that here.",
+        "start": 2396.645,
+        "duration": 1.53
+    },
+    {
+        "text": "I don't mind place cell.",
+        "start": 2398.31,
+        "duration": 0.64
+    },
+    {
+        "text": "I, I, but, and then, but that's\nsupported by the grid cell population,",
+        "start": 2399.03,
+        "duration": 4.515
+    },
+    {
+        "text": "which is, or whatever vector cell\npopulation, which isn't unique.",
+        "start": 2403.545,
+        "duration": 4.17
+    },
+    {
+        "text": "I don't have how we work\nin play cells into this.",
+        "start": 2409.965,
+        "duration": 2.04
+    },
+    {
+        "text": "I've always wondered if the layer of four\ncells are the equivalent to play cells.",
+        "start": 2412.095,
+        "duration": 2.94
+    },
+    {
+        "text": "yeah.",
+        "start": 2415.845,
+        "duration": 0.42
+    },
+    {
+        "text": "And and the layer of six A cells are\nto, there's, a grid cell population",
+        "start": 2416.745,
+        "duration": 5.61
+    },
+    {
+        "text": "down there along with these minicolumns,\nwhich are, the basis of itself.",
+        "start": 2422.355,
+        "duration": 4.32
+    },
+    {
+        "text": "but yeah, I, guess we just start with\nwhat are some assumptions that we feel",
+        "start": 2428.355,
+        "duration": 6.15
+    },
+    {
+        "text": "are necessary to be able to reference\nframe based object recognition?",
+        "start": 2434.505,
+        "duration": 5.16
+    },
+    {
+        "text": "Yeah.",
+        "start": 2440.175,
+        "duration": 0.12
+    },
+    {
+        "text": "And then we can think about, okay,\nwhat are the cell populations",
+        "start": 2440.295,
+        "duration": 2.7
+    },
+    {
+        "text": "that might enable that?",
+        "start": 2442.995,
+        "duration": 1.8
+    },
+    {
+        "text": "Because for example, I feel like we\nhave to, during uncertainty, we have",
+        "start": 2444.795,
+        "duration": 3.93
+    },
+    {
+        "text": "to be able to move through multiple\nreference frames to test hypotheses.",
+        "start": 2448.725,
+        "duration": 4.05
+    },
+    {
+        "text": "okay.",
+        "start": 2453.675,
+        "duration": 0.48
+    },
+    {
+        "text": "I'm not sure.",
+        "start": 2454.155,
+        "duration": 0.75
+    },
+    {
+        "text": "Maybe, not in the same moment in time,\nlike maybe it would cycle serially",
+        "start": 2455.355,
+        "duration": 3.6
+    },
+    {
+        "text": "through them, but there has to be\nsome way to test multiple hypotheses,",
+        "start": 2458.955,
+        "duration": 3.21
+    },
+    {
+        "text": "otherwise how would you ever,\nnarrow it down to the correct one?",
+        "start": 2462.165,
+        "duration": 3.63
+    },
+    {
+        "text": "Okay.",
+        "start": 2466.545,
+        "duration": 0.57
+    },
+    {
+        "text": "It just, as long as you use the word\ntest multiple hypotheses very loosely.",
+        "start": 2468.615,
+        "duration": 3.96
+    },
+    {
+        "text": "You may not believe in them, surly, there\nmay be different ways of doing that.",
+        "start": 2473.21,
+        "duration": 3.055
+    },
+    {
+        "text": "Yeah.",
+        "start": 2476.27,
+        "duration": 0.24
+    },
+    {
+        "text": "obviously you have to somehow\nsettle on the correct one, right?",
+        "start": 2477.255,
+        "duration": 4.35
+    },
+    {
+        "text": "Yeah.",
+        "start": 2482.085,
+        "duration": 0.09
+    },
+    {
+        "text": "Whether you're testing 'em,\ntesting is a loaded word, but,",
+        "start": 2482.205,
+        "duration": 3.3
+    },
+    {
+        "text": "it is.",
+        "start": 2492.48,
+        "duration": 0.28
+    },
+    {
+        "text": "So it is really odd the way, you\nknow how the grid cells rehan and",
+        "start": 2492.76,
+        "duration": 4.235
+    },
+    {
+        "text": "they do it really quick, right?",
+        "start": 2496.995,
+        "duration": 1.35
+    },
+    {
+        "text": "They just fall, they re anchor as soon as\nthe animal knows where it is, there's a,",
+        "start": 2498.345,
+        "duration": 2.97
+    },
+    {
+        "text": "from layer three to layer six A, right?",
+        "start": 2501.825,
+        "duration": 1.92
+    },
+    {
+        "text": "I don't remember that.",
+        "start": 2505.455,
+        "duration": 1.05
+    },
+    {
+        "text": "There might be, I forget.",
+        "start": 2506.505,
+        "duration": 0.84
+    },
+    {
+        "text": "No, I saw it in a couple of figures there.",
+        "start": 2507.795,
+        "duration": 2.61
+    },
+    {
+        "text": "Yeah.",
+        "start": 2510.585,
+        "duration": 0.18
+    },
+    {
+        "text": "Objection.",
+        "start": 2510.915,
+        "duration": 0.42
+    },
+    {
+        "text": "So it's fine.",
+        "start": 2511.695,
+        "duration": 0.99
+    },
+    {
+        "text": "You can find all those\npredictions from any cells.",
+        "start": 2512.685,
+        "duration": 1.56
+    },
+    {
+        "text": "Yeah.",
+        "start": 2514.275,
+        "duration": 0.21
+    },
+    {
+        "text": "The,",
+        "start": 2514.485,
+        "duration": 0.06
+    },
+    {
+        "text": "so one, if, we're assuming that there's\nvoting and there's associative connections",
+        "start": 2517.995,
+        "duration": 4.02
+    },
+    {
+        "text": "between all the columns, once a group\nof columns agrees on something or has",
+        "start": 2522.015,
+        "duration": 4.74
+    },
+    {
+        "text": "more consensus or something that is\nthere, is going to force the layer",
+        "start": 2526.785,
+        "duration": 3.84
+    },
+    {
+        "text": "three of the column talking about to, to\nhave a specific, object representation",
+        "start": 2530.625,
+        "duration": 4.53
+    },
+    {
+        "text": "that's going to very quickly drive.",
+        "start": 2535.155,
+        "duration": 1.86
+    },
+    {
+        "text": "That would be a good way of doing that.",
+        "start": 2538.005,
+        "duration": 1.44
+    },
+    {
+        "text": "if from voting, yeah.",
+        "start": 2539.865,
+        "duration": 1.53
+    },
+    {
+        "text": "So it seems I have multiple\ncolumns, active and Yeah.",
+        "start": 2541.695,
+        "duration": 3.21
+    },
+    {
+        "text": "I'm ambiguous.",
+        "start": 2545.16,
+        "duration": 1.245
+    },
+    {
+        "text": "I don't, my input's ambiguous or I\ndon't have any input obscured whatever.",
+        "start": 2547.065,
+        "duration": 3.33
+    },
+    {
+        "text": "And all the other columns,\noh, we're looking at a banana.",
+        "start": 2550.395,
+        "duration": 2.22
+    },
+    {
+        "text": "Then I get layer three banana and\nif that layer six, you're right,",
+        "start": 2553.065,
+        "duration": 2.64
+    },
+    {
+        "text": "there's a layer, I think there is a\nlayer three to layer six direction.",
+        "start": 2555.735,
+        "duration": 2.76
+    },
+    {
+        "text": "Yeah.",
+        "start": 2558.945,
+        "duration": 0.36
+    },
+    {
+        "text": "Check exactly what it was.",
+        "start": 2559.305,
+        "duration": 1.05
+    },
+    {
+        "text": "Then you'd be able to say, oh\nyeah, I've associated banana",
+        "start": 2561.12,
+        "duration": 2.79
+    },
+    {
+        "text": "with, but you won't associate\nBanana with a particular location.",
+        "start": 2563.91,
+        "duration": 4.11
+    },
+    {
+        "text": "You have to associate banana with\nsomehow anchoring the layer six A cells.",
+        "start": 2568.02,
+        "duration": 6.84
+    },
+    {
+        "text": "because Banana doesn't\ntell what location, right?",
+        "start": 2576.3,
+        "duration": 2.19
+    },
+    {
+        "text": "it just says, I don't, but, a banana\nand a feature, both of them are",
+        "start": 2579.18,
+        "duration": 8.19
+    },
+    {
+        "text": "going to set the location, right?",
+        "start": 2587.37,
+        "duration": 3.03
+    },
+    {
+        "text": "So by I had the feature, right?",
+        "start": 2590.88,
+        "duration": 2.58
+    },
+    {
+        "text": "I would a good observation.",
+        "start": 2593.52,
+        "duration": 1.05
+    },
+    {
+        "text": "So layer force says, Hey, I know the\nfeature, so it's gonna be one of these,",
+        "start": 2594.57,
+        "duration": 3.33
+    },
+    {
+        "text": "set of cells, they need minicolumns.",
+        "start": 2597.9,
+        "duration": 1.68
+    },
+    {
+        "text": "And layer three says,\nI know it's a banana.",
+        "start": 2600.27,
+        "duration": 2.76
+    },
+    {
+        "text": "and so if I have an ambiguous feature,\nor if it's just an edge and I don't",
+        "start": 2606.27,
+        "duration": 4.53
+    },
+    {
+        "text": "know what the edge is, but I know\nit's a banana, then I could really",
+        "start": 2610.8,
+        "duration": 2.58
+    },
+    {
+        "text": "help me figure out where it is.",
+        "start": 2613.38,
+        "duration": 1.2
+    },
+    {
+        "text": "I, I would almost mean that each column is\njust testing one hypothesis and then well,",
+        "start": 2614.58,
+        "duration": 7.08
+    },
+    {
+        "text": "once they reach a consensus, I feel like\nthis only works for the voting scenario.",
+        "start": 2621.66,
+        "duration": 3.54
+    },
+    {
+        "text": "Yeah, I'd like to solve it\nwithout the voting scenario.",
+        "start": 2625.41,
+        "duration": 1.83
+    },
+    {
+        "text": "Yeah.",
+        "start": 2627.87,
+        "duration": 0.45
+    },
+    {
+        "text": "I think that's pretty important.",
+        "start": 2628.95,
+        "duration": 1.11
+    },
+    {
+        "text": "I added a second one.",
+        "start": 2631.56,
+        "duration": 1.8
+    },
+    {
+        "text": "I don't know.",
+        "start": 2633.9,
+        "duration": 0.39
+    },
+    {
+        "text": "We agree with that, just that\na location and reference frame",
+        "start": 2634.47,
+        "duration": 2.91
+    },
+    {
+        "text": "should recall the correct feature.",
+        "start": 2637.38,
+        "duration": 1.71
+    },
+    {
+        "text": "I haven't said a unique feature.",
+        "start": 2639.48,
+        "duration": 1.89
+    },
+    {
+        "text": "'cause if we're throwing out assumptions.",
+        "start": 2641.4,
+        "duration": 1.71
+    },
+    {
+        "text": "Then maybe, I don't, I guess really\nthe question is it a unique location,",
+        "start": 2643.11,
+        "duration": 5.16
+    },
+    {
+        "text": "which I've always assumed, I've always\nwanted it to be a unique location.",
+        "start": 2648.27,
+        "duration": 2.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 2650.885,
+        "duration": 0.29
+    },
+    {
+        "text": "But okay.",
+        "start": 2651.635,
+        "duration": 0.54
+    },
+    {
+        "text": "I haven't written, I dunno, I just thought\nthese are the computational requirements.",
+        "start": 2652.215,
+        "duration": 5.415
+    },
+    {
+        "text": "But what do we, mean by location?",
+        "start": 2658.95,
+        "duration": 1.41
+    },
+    {
+        "text": "Is it unique to the object?",
+        "start": 2660.48,
+        "duration": 1.29
+    },
+    {
+        "text": "If it's unique, then it would,\nit, it should, recall the unique,",
+        "start": 2661.77,
+        "duration": 4.8
+    },
+    {
+        "text": "the correct feature, right?",
+        "start": 2666.78,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 2668.04,
+        "duration": 0.27
+    },
+    {
+        "text": "should predict the correct feature.",
+        "start": 2669.39,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 2671.88,
+        "duration": 0.27
+    },
+    {
+        "text": "I guess this is, this is\nunique in the sense that it's a",
+        "start": 2672.15,
+        "duration": 2.31
+    },
+    {
+        "text": "location in a reference frame.",
+        "start": 2674.46,
+        "duration": 1.65
+    },
+    {
+        "text": "Okay, great.",
+        "start": 2676.14,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 2676.95,
+        "duration": 0.48
+    },
+    {
+        "text": "Okay.",
+        "start": 2677.43,
+        "duration": 0.001
+    },
+    {
+        "text": "it's not ambiguous which\nreference frame it's in.",
+        "start": 2678.24,
+        "duration": 1.83
+    },
+    {
+        "text": "I think that's correct.",
+        "start": 2683.04,
+        "duration": 1.17
+    },
+    {
+        "text": "so yeah, maybe is it worth just thinking\na bit about the serial one a bit like",
+        "start": 2688.26,
+        "duration": 3.66
+    },
+    {
+        "text": "this could almost relate to kind of\nfrequency things and things like that.",
+        "start": 2691.92,
+        "duration": 3.0
+    },
+    {
+        "text": "Where like at a particular frequency,\none hypothesis being tested frequency.",
+        "start": 2695.01,
+        "duration": 3.45
+    },
+    {
+        "text": "I, that's exactly where I was going\nwith the same thinking there when you",
+        "start": 2698.73,
+        "duration": 2.7
+    },
+    {
+        "text": "said, testing it, I'm thinking of that\nexact idea that you have, at a moment",
+        "start": 2701.43,
+        "duration": 6.39
+    },
+    {
+        "text": "in time you have one set of grid cells\nthat are in phase, and the next moment,",
+        "start": 2707.82,
+        "duration": 3.09
+    },
+    {
+        "text": "the different set are slightly in\nphase, but they're not in phase as much.",
+        "start": 2711.03,
+        "duration": 3.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 2715.08,
+        "duration": 0.36
+    },
+    {
+        "text": "It's this is like the phase\nprogression in grid cells.",
+        "start": 2715.53,
+        "duration": 4.08
+    },
+    {
+        "text": "They, become active early, not\nas strongly, and then they,",
+        "start": 2720.57,
+        "duration": 2.88
+    },
+    {
+        "text": "everyone knows face possession,",
+        "start": 2724.53,
+        "duration": 1.26
+    },
+    {
+        "text": "Very well.",
+        "start": 2728.31,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah.",
+        "start": 2729.24,
+        "duration": 0.27
+    },
+    {
+        "text": "The idea is you look at\nan individual grid cell.",
+        "start": 2729.515,
+        "duration": 2.305
+    },
+    {
+        "text": "and it says, okay, I'm active\nat this location in the room.",
+        "start": 2735.39,
+        "duration": 3.12
+    },
+    {
+        "text": "that good self starts to become,",
+        "start": 2740.04,
+        "duration": 2.49
+    },
+    {
+        "text": "it, starts to become active.",
+        "start": 2746.61,
+        "duration": 1.32
+    },
+    {
+        "text": "it is active before and\nafter that location.",
+        "start": 2748.09,
+        "duration": 2.12
+    },
+    {
+        "text": "It's, and it's, it, in the phase of\nwhich it becomes active, it changes.",
+        "start": 2751.2,
+        "duration": 4.62
+    },
+    {
+        "text": "remember there's a base frequency,\nwhatever, I always forget again, whatever.",
+        "start": 2756.06,
+        "duration": 4.29
+    },
+    {
+        "text": "There's a base frequency and\nthat cell becomes active.",
+        "start": 2760.35,
+        "duration": 2.76
+    },
+    {
+        "text": "Its, its activity is peak activity\nat the in phase at this location.",
+        "start": 2763.89,
+        "duration": 5.58
+    },
+    {
+        "text": "But if you move a little bit\nthis way and a little bit this",
+        "start": 2769.83,
+        "duration": 1.56
+    },
+    {
+        "text": "way, it's still overlapping.",
+        "start": 2771.39,
+        "duration": 1.29
+    },
+    {
+        "text": "the two peaks of the waves\nare not perfectly aligned,",
+        "start": 2772.77,
+        "duration": 2.94
+    },
+    {
+        "text": "but they're slightly off.",
+        "start": 2775.71,
+        "duration": 1.11
+    },
+    {
+        "text": "So the cell still becomes active\nhere and still becomes active here.",
+        "start": 2777.12,
+        "duration": 2.28
+    },
+    {
+        "text": "And the way it works is you're\napproaching, I forget, I think was you're",
+        "start": 2779.4,
+        "duration": 2.91
+    },
+    {
+        "text": "approaching the further one becomes active\nfirst and then, and so the, if you look",
+        "start": 2782.31,
+        "duration": 4.08
+    },
+    {
+        "text": "at, if you look at the grid cells as\nyou're approaching its point of maximum",
+        "start": 2786.39,
+        "duration": 3.48
+    },
+    {
+        "text": "representation, it starts becoming, act.",
+        "start": 2789.87,
+        "duration": 4.56
+    },
+    {
+        "text": "The, position that would be\nactive here becomes active.",
+        "start": 2795.6,
+        "duration": 2.58
+    },
+    {
+        "text": "Then the, then it gets, so the,\nposition that's represented by the grid",
+        "start": 2798.45,
+        "duration": 3.57
+    },
+    {
+        "text": "cells moves in phase space from here\nto here, with maximum activity here.",
+        "start": 2802.02,
+        "duration": 4.74
+    },
+    {
+        "text": "So it's almost At different points\nin the phase, different sets",
+        "start": 2806.76,
+        "duration": 4.83
+    },
+    {
+        "text": "of SDRs would be active here.",
+        "start": 2811.59,
+        "duration": 1.23
+    },
+    {
+        "text": "lemme try.",
+        "start": 2814.47,
+        "duration": 0.45
+    },
+    {
+        "text": "Wasn't phase possession in place cells.",
+        "start": 2815.13,
+        "duration": 1.86
+    },
+    {
+        "text": "it's in place cells and in grid cells.",
+        "start": 2817.53,
+        "duration": 1.53
+    },
+    {
+        "text": "Okay.",
+        "start": 2819.09,
+        "duration": 0.03
+    },
+    {
+        "text": "It was in marked.",
+        "start": 2820.41,
+        "duration": 0.63
+    },
+    {
+        "text": "so here you have a location in the space\nand the, this way over here you have SDR",
+        "start": 2823.5,
+        "duration": 7.14
+    },
+    {
+        "text": "one, and, then here you have SDR two.",
+        "start": 2830.79,
+        "duration": 2.97
+    },
+    {
+        "text": "we're talking,",
+        "start": 2835.86,
+        "duration": 0.63
+    },
+    {
+        "text": "individual cells at this point.",
+        "start": 2838.68,
+        "duration": 1.68
+    },
+    {
+        "text": "I guess we're talking,",
+        "start": 2840.69,
+        "duration": 0.54
+    },
+    {
+        "text": "so this cell, this cell starts bec\nas you're moving, like this, it, and",
+        "start": 2844.26,
+        "duration": 5.61
+    },
+    {
+        "text": "there's a, there's an underlying,",
+        "start": 2849.87,
+        "duration": 1.23
+    },
+    {
+        "text": "oscillatory, frequency.",
+        "start": 2854.34,
+        "duration": 2.7
+    },
+    {
+        "text": "this cell starts firing fir it starts\nfiring for all these locations.",
+        "start": 2858.21,
+        "duration": 4.38
+    },
+    {
+        "text": "But I, but when it fires it,\nfirst, it starts firing here.",
+        "start": 2863.07,
+        "duration": 3.03
+    },
+    {
+        "text": "When it is overlapping, I don't know.",
+        "start": 2866.1,
+        "duration": 1.68
+    },
+    {
+        "text": "I'm trying to remember\nexactly how this works.",
+        "start": 2867.78,
+        "duration": 1.26
+    },
+    {
+        "text": "but there's a, the phase possession is\nthat the cell actually becomes active",
+        "start": 2870.57,
+        "duration": 3.45
+    },
+    {
+        "text": "over multiple, locations with the\nmaximum activity at, its direct activity.",
+        "start": 2874.02,
+        "duration": 5.01
+    },
+    {
+        "text": "But that's not phase possession.",
+        "start": 2879.24,
+        "duration": 1.44
+    },
+    {
+        "text": "I don't think I, that's just the\nfade and good cells phase possession",
+        "start": 2880.68,
+        "duration": 3.03
+    },
+    {
+        "text": "is when it fires earlier or later\nrelative to the timing of the spike.",
+        "start": 2883.71,
+        "duration": 4.71
+    },
+    {
+        "text": "that was like a yes.",
+        "start": 2890.97,
+        "duration": 2.105
+    },
+    {
+        "text": "Yes.",
+        "start": 2893.52,
+        "duration": 0.75
+    },
+    {
+        "text": "But I don't think that's\ninconsistent here.",
+        "start": 2894.75,
+        "duration": 2.31
+    },
+    {
+        "text": "But The timing of the spike is,\nthis is like a face, the face shift.",
+        "start": 2897.06,
+        "duration": 4.875
+    },
+    {
+        "text": "You have, a, you have an underlying,",
+        "start": 2902.445,
+        "duration": 1.89
+    },
+    {
+        "text": "so maybe this is the, so\nthis is the upper one.",
+        "start": 2906.615,
+        "duration": 3.93
+    },
+    {
+        "text": "This is, the base and this is the cell.",
+        "start": 2910.905,
+        "duration": 1.92
+    },
+    {
+        "text": "So they're aligned here.",
+        "start": 2912.975,
+        "duration": 1.23
+    },
+    {
+        "text": "That's perfect.",
+        "start": 2914.265,
+        "duration": 0.78
+    },
+    {
+        "text": "And now this one's spiking here\nand this one's spiking here.",
+        "start": 2915.705,
+        "duration": 2.64
+    },
+    {
+        "text": "And the, it's this, different.",
+        "start": 2919.185,
+        "duration": 4.47
+    },
+    {
+        "text": "Isn't that what you just said there?",
+        "start": 2923.655,
+        "duration": 1.2
+    },
+    {
+        "text": "I think it's because yeah, I think,\nat least when I think about this,",
+        "start": 2924.975,
+        "duration": 4.74
+    },
+    {
+        "text": "it's more like each grid cell has\nlike a, preferred, receptive field,",
+        "start": 2929.715,
+        "duration": 4.35
+    },
+    {
+        "text": "almost like when it's on its exact\nlocation than it's maximum firing rate.",
+        "start": 2934.065,
+        "duration": 4.11
+    },
+    {
+        "text": "And then it tails off as you, move\naway from that location and then",
+        "start": 2938.625,
+        "duration": 4.11
+    },
+    {
+        "text": "eventually goes back up again as you\nget into the phase of that grid cell.",
+        "start": 2943.035,
+        "duration": 4.41
+    },
+    {
+        "text": "And the reason that is, is because\nthe input to the grid, okay,",
+        "start": 2947.745,
+        "duration": 2.28
+    },
+    {
+        "text": "so I'm confusing things here.",
+        "start": 2950.025,
+        "duration": 1.05
+    },
+    {
+        "text": "These, are the inputs to the grid cell.",
+        "start": 2951.885,
+        "duration": 1.59
+    },
+    {
+        "text": "There's a base and there was, it is,\nthis is the, these cells here that, it's",
+        "start": 2953.475,
+        "duration": 5.88
+    },
+    {
+        "text": "these, I'm, getting confused here when\nyou, I'm sorry, but No, it's, you've",
+        "start": 2959.355,
+        "duration": 5.91
+    },
+    {
+        "text": "got, the grid cell is the grid cells is\nfiring at a frequency, which is slightly",
+        "start": 2965.265,
+        "duration": 6.09
+    },
+    {
+        "text": "different than the base frequency.",
+        "start": 2971.355,
+        "duration": 1.23
+    },
+    {
+        "text": "I'm, I, the grid cell\nis, that cell anyway.",
+        "start": 2973.185,
+        "duration": 2.67
+    },
+    {
+        "text": "and, so when they're, you get the\nmaximum firing rate when they're,",
+        "start": 2977.865,
+        "duration": 2.88
+    },
+    {
+        "text": "aligned, when they're slightly\noff, you get a less firing rate.",
+        "start": 2980.745,
+        "duration": 3.27
+    },
+    {
+        "text": "It's a lower firing rate.",
+        "start": 2984.135,
+        "duration": 1.14
+    },
+    {
+        "text": "So because the cell is, not Okay.",
+        "start": 2985.92,
+        "duration": 2.04
+    },
+    {
+        "text": "yeah.",
+        "start": 2988.33,
+        "duration": 0.26
+    },
+    {
+        "text": "from this input.",
+        "start": 2988.92,
+        "duration": 0.6
+    },
+    {
+        "text": "I see what you're saying.",
+        "start": 2989.52,
+        "duration": 0.421
+    },
+    {
+        "text": "Yeah.",
+        "start": 2989.946,
+        "duration": 0.219
+    },
+    {
+        "text": "it's it's a lower firing rate.",
+        "start": 2990.235,
+        "duration": 1.955
+    },
+    {
+        "text": "Yeah.",
+        "start": 2992.28,
+        "duration": 0.33
+    },
+    {
+        "text": "So this would be these cells\nhere, but anyway, what is",
+        "start": 2992.7,
+        "duration": 5.43
+    },
+    {
+        "text": "that the, it starts firing.",
+        "start": 2998.13,
+        "duration": 3.33
+    },
+    {
+        "text": "yeah, I get, but I guess the,\ngoing back to can we test different",
+        "start": 3005.33,
+        "duration": 3.99
+    },
+    {
+        "text": "hypotheses at different phases?",
+        "start": 3009.32,
+        "duration": 1.47
+    },
+    {
+        "text": "Ultimately, that's the question.",
+        "start": 3011.96,
+        "duration": 1.14
+    },
+    {
+        "text": "there is, it's, is it, as you're\nmoving through space, it's saying,",
+        "start": 3015.71,
+        "duration": 4.77
+    },
+    {
+        "text": "oh, you might be here a little bit\nmore likely here, more like here.",
+        "start": 3020.6,
+        "duration": 3.865
+    },
+    {
+        "text": "Really like to hear less likely\nto here, less it's like there's a",
+        "start": 3025.25,
+        "duration": 3.27
+    },
+    {
+        "text": "distribution of where you might be.",
+        "start": 3028.52,
+        "duration": 1.71
+    },
+    {
+        "text": "so it would, anyway, that's what it is.",
+        "start": 3032.165,
+        "duration": 3.435
+    },
+    {
+        "text": "yeah.",
+        "start": 3036.815,
+        "duration": 0.29
+    },
+    {
+        "text": "let's, go back to your two points here.",
+        "start": 3038.24,
+        "duration": 1.41
+    },
+    {
+        "text": "I, the thing I would focus on is\nhow do we make this work without a",
+        "start": 3041.21,
+        "duration": 3.0
+    },
+    {
+        "text": "union of predictions coming up here?",
+        "start": 3044.21,
+        "duration": 1.41
+    },
+    {
+        "text": "How would we make it then?",
+        "start": 3045.62,
+        "duration": 1.501
+    },
+    {
+        "text": "Then I, think, should we just\nfocus on the L three L four case?",
+        "start": 3047.45,
+        "duration": 4.14
+    },
+    {
+        "text": "Why?",
+        "start": 3052.07,
+        "duration": 0.3
+    },
+    {
+        "text": "because then we're not talking\nabout locations, but I wanna",
+        "start": 3053.06,
+        "duration": 2.13
+    },
+    {
+        "text": "understand how it works.",
+        "start": 3055.19,
+        "duration": 0.93
+    },
+    {
+        "text": "okay.",
+        "start": 3056.48,
+        "duration": 0.33
+    },
+    {
+        "text": "I guess maybe this is wrong, but\nI, feel like the, drift and pooling",
+        "start": 3057.31,
+        "duration": 5.11
+    },
+    {
+        "text": "SDRs is orthogonal to this issue.",
+        "start": 3062.42,
+        "duration": 3.3
+    },
+    {
+        "text": "All right.",
+        "start": 3065.75,
+        "duration": 0.51
+    },
+    {
+        "text": "It didn't, but maybe that's wrong.",
+        "start": 3066.26,
+        "duration": 1.14
+    },
+    {
+        "text": "It didn't feel that way to me.",
+        "start": 3067.405,
+        "duration": 0.715
+    },
+    {
+        "text": "It felt",
+        "start": 3068.12,
+        "duration": 0.36
+    },
+    {
+        "text": "it felt like they're related somehow.",
+        "start": 3070.82,
+        "duration": 1.89
+    },
+    {
+        "text": "okay.",
+        "start": 3072.865,
+        "duration": 0.24
+    },
+    {
+        "text": "This is this be to walk through the,\ndrift thing, I deal a little bit more.",
+        "start": 3074.705,
+        "duration": 4.71
+    },
+    {
+        "text": "this lemme review the drift idea.",
+        "start": 3084.365,
+        "duration": 1.8
+    },
+    {
+        "text": "You have two inputs to this layer that\nif, they're if they're very different",
+        "start": 3086.945,
+        "duration": 8.94
+    },
+    {
+        "text": "and therefore they don't have to share\nany minicolumns, the current thinking is",
+        "start": 3095.885,
+        "duration": 3.09
+    },
+    {
+        "text": "that in my head that there'd be no drift.",
+        "start": 3098.975,
+        "duration": 1.71
+    },
+    {
+        "text": "it is only when the two inputs are similar\nor identical, then you can have drift",
+        "start": 3101.975,
+        "duration": 4.5
+    },
+    {
+        "text": "because then you have multiple cells,",
+        "start": 3106.475,
+        "duration": 1.5
+    },
+    {
+        "text": "you have the ability, you might pick\nmultiple, you might pick a different",
+        "start": 3111.035,
+        "duration": 2.85
+    },
+    {
+        "text": "cell active in that column and that\nwould only occur if the prediction from",
+        "start": 3113.885,
+        "duration": 6.54
+    },
+    {
+        "text": "here, led to multiple activities here.",
+        "start": 3120.425,
+        "duration": 3.72
+    },
+    {
+        "text": "multiple predictions here.",
+        "start": 3128.135,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm trying to, I'm trying to figure\nout how it is that the drift idea",
+        "start": 3132.335,
+        "duration": 3.0
+    },
+    {
+        "text": "works with the idea that you are\nre-anchoring down here as opposed",
+        "start": 3135.335,
+        "duration": 2.61
+    },
+    {
+        "text": "to representing a union down here.",
+        "start": 3137.945,
+        "duration": 2.04
+    },
+    {
+        "text": "that's what I'm trying to figure out.",
+        "start": 3141.365,
+        "duration": 1.2
+    },
+    {
+        "text": "what would it mean re to re anchor\nand maybe I'm stuck at that point.",
+        "start": 3144.455,
+        "duration": 3.99
+    },
+    {
+        "text": "If you wanna talk about layer\nscreening layer four, that's fine.",
+        "start": 3150.215,
+        "duration": 1.89
+    },
+    {
+        "text": "We can do that.",
+        "start": 3152.135,
+        "duration": 0.45
+    },
+    {
+        "text": "I still wanna stop the other\nproblem, but maybe I don't",
+        "start": 3155.495,
+        "duration": 2.79
+    },
+    {
+        "text": "have enough ideas about it yet.",
+        "start": 3158.285,
+        "duration": 1.08
+    },
+    {
+        "text": "How would you face the\nproblem between until later?",
+        "start": 3160.805,
+        "duration": 1.35
+    },
+    {
+        "text": "So if we assume that we have\ndrift, that would mean that over",
+        "start": 3163.145,
+        "duration": 3.96
+    },
+    {
+        "text": "time we would represent similar\nobjects with similar SDRs.",
+        "start": 3167.105,
+        "duration": 4.41
+    },
+    {
+        "text": "So let's say we have the cup and\nthe can, the only difference is",
+        "start": 3171.875,
+        "duration": 4.17
+    },
+    {
+        "text": "that the cup has a handle over time.",
+        "start": 3176.045,
+        "duration": 2.91
+    },
+    {
+        "text": "We would, they would have similar SDRs.",
+        "start": 3179.885,
+        "duration": 2.25
+    },
+    {
+        "text": "So let's say we are, that sounds good,\nbut can you tell me how that would happen",
+        "start": 3182.135,
+        "duration": 3.06
+    },
+    {
+        "text": "because of the representational drift?",
+        "start": 3186.215,
+        "duration": 1.86
+    },
+    {
+        "text": "So let's say we're on the cup and we're\nmoving only on the outside of the cup.",
+        "start": 3188.075,
+        "duration": 3.54
+    },
+    {
+        "text": "We haven't sensed the handle yet.",
+        "start": 3191.615,
+        "duration": 1.23
+    },
+    {
+        "text": "So do I, what's going implication to\nhave, are you, do I have any unique,",
+        "start": 3193.475,
+        "duration": 3.6
+    },
+    {
+        "text": "yeah, so that's what I'm getting at.",
+        "start": 3197.075,
+        "duration": 1.38
+    },
+    {
+        "text": "Okay.",
+        "start": 3198.485,
+        "duration": 0.27
+    },
+    {
+        "text": "with the re-anchoring.",
+        "start": 3199.205,
+        "duration": 1.35
+    },
+    {
+        "text": "So let's say we would think we are\non the can and we are in the, we",
+        "start": 3200.765,
+        "duration": 4.83
+    },
+    {
+        "text": "are testing the can hypothesis.",
+        "start": 3205.595,
+        "duration": 1.89
+    },
+    {
+        "text": "We are in the location space of the can.",
+        "start": 3207.605,
+        "duration": 2.19
+    },
+    {
+        "text": "And then once we sense the handle,\nit would quickly re-anchor on the",
+        "start": 3210.305,
+        "duration": 5.85
+    },
+    {
+        "text": "bottom to the cups location space.",
+        "start": 3216.155,
+        "duration": 2.76
+    },
+    {
+        "text": "And then what happens?",
+        "start": 3219.905,
+        "duration": 1.14
+    },
+    {
+        "text": "How does it, where does the\ndrift come in at that point?",
+        "start": 3222.365,
+        "duration": 2.16
+    },
+    {
+        "text": "the drift would just mean that is\nactually possible because, while",
+        "start": 3225.155,
+        "duration": 4.68
+    },
+    {
+        "text": "we're not sensing the handle yet, the\nSDRs at the top would be the same.",
+        "start": 3229.835,
+        "duration": 4.05
+    },
+    {
+        "text": "and would work like even\nif we're in the, hang on.",
+        "start": 3234.965,
+        "duration": 3.09
+    },
+    {
+        "text": "so I think on the cup, I think I'm on the\ncan I have a unique space for the can.",
+        "start": 3240.305,
+        "duration": 5.97
+    },
+    {
+        "text": "Yeah.",
+        "start": 3246.665,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 3247.235,
+        "duration": 0.66
+    },
+    {
+        "text": "Then now I've come along and now I have\na feature which doesn't fit the can.",
+        "start": 3247.895,
+        "duration": 4.05
+    },
+    {
+        "text": "so I, it is gonna mis I\na mis prediction, right?",
+        "start": 3255.86,
+        "duration": 4.17
+    },
+    {
+        "text": "A feature that doesn't fit the can\nI'm, and therefore my prediction",
+        "start": 3260.03,
+        "duration": 3.63
+    },
+    {
+        "text": "from the location space is, wrong.",
+        "start": 3263.66,
+        "duration": 2.25
+    },
+    {
+        "text": "And now that has to somehow re-anchor the,\nlet's, it's possible that one new feature,",
+        "start": 3266.6,
+        "duration": 7.65
+    },
+    {
+        "text": "I know I'm on, a cup now or whatever.",
+        "start": 3274.25,
+        "duration": 1.56
+    },
+    {
+        "text": "Yeah.",
+        "start": 3276.59,
+        "duration": 0.33
+    },
+    {
+        "text": "That has to reor the grid cells saying,\noh, I'm not on the can, I'm on the cup.",
+        "start": 3276.98,
+        "duration": 3.48
+    },
+    {
+        "text": "But ideally you wouldn't have thrown\naway, if you, if that actually",
+        "start": 3281.12,
+        "duration": 3.69
+    },
+    {
+        "text": "happened to you, I feel like you'd\nstill have a sense, okay, the cup",
+        "start": 3284.81,
+        "duration": 3.84
+    },
+    {
+        "text": "is oriented like this in space.",
+        "start": 3288.65,
+        "duration": 1.23
+    },
+    {
+        "text": "'cause I just felt its body, which I\nthought was a can at the time, but if, up",
+        "start": 3289.91,
+        "duration": 4.59
+    },
+    {
+        "text": "until that point you'd only been testing\nthe canned location space, then when",
+        "start": 3294.5,
+        "duration": 3.45
+    },
+    {
+        "text": "you feel the handle, all you will know\nabout the location of the cup is that",
+        "start": 3297.95,
+        "duration": 4.05
+    },
+    {
+        "text": "you're on the, that you're on the handle.",
+        "start": 3302.0,
+        "duration": 1.89
+    },
+    {
+        "text": "so I throw everything away.",
+        "start": 3306.315,
+        "duration": 1.985
+    },
+    {
+        "text": "yeah.",
+        "start": 3308.87,
+        "duration": 0.24
+    },
+    {
+        "text": "I feel like we still would want to be\ntesting maybe because if they, multiple",
+        "start": 3309.11,
+        "duration": 4.425
+    },
+    {
+        "text": "locations, if they share an SDR up to\nthat point, like the SDRs are the same",
+        "start": 3313.695,
+        "duration": 4.535
+    },
+    {
+        "text": "up to that point, maybe that would inform\nit to then test the cup hypothesis.",
+        "start": 3318.23,
+        "duration": 5.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 3323.63,
+        "duration": 0.21
+    },
+    {
+        "text": "In the locations.",
+        "start": 3323.845,
+        "duration": 0.53
+    },
+    {
+        "text": "I mean as in but then we still\nneed to, ultimately we still",
+        "start": 3324.41,
+        "duration": 6.24
+    },
+    {
+        "text": "need to somehow be testing the,\nmovements to the location space.",
+        "start": 3330.65,
+        "duration": 3.54
+    },
+    {
+        "text": "But yeah, I didn't think that whether you\ncould have Because we talked a bit about",
+        "start": 3334.19,
+        "duration": 4.875
+    },
+    {
+        "text": "how do we wanna merge graphs as well?",
+        "start": 3339.065,
+        "duration": 2.52
+    },
+    {
+        "text": "So let's say you have a graph for a\ncylinder or something, and then until,",
+        "start": 3341.615,
+        "duration": 5.61
+    },
+    {
+        "text": "whether it's a can or a cup, you're\nyou're moving through the graph or the",
+        "start": 3347.525,
+        "duration": 4.14
+    },
+    {
+        "text": "cylinder graph and that's updating both.",
+        "start": 3351.695,
+        "duration": 3.57
+    },
+    {
+        "text": "Yeah, I think what I was saying, it\ndoesn't work with the idea that they",
+        "start": 3355.745,
+        "duration": 3.21
+    },
+    {
+        "text": "have unique location representations.",
+        "start": 3358.955,
+        "duration": 2.55
+    },
+    {
+        "text": "but yeah, if they would share a\nlocation representation like the",
+        "start": 3364.685,
+        "duration": 4.32
+    },
+    {
+        "text": "cylinder that could be, and then you,\nokay, maybe this won't be helpful.",
+        "start": 3369.005,
+        "duration": 7.2
+    },
+    {
+        "text": "Again, going back to the\ngrid cell literature,",
+        "start": 3376.745,
+        "duration": 1.92
+    },
+    {
+        "text": "when you look at grid cells,",
+        "start": 3381.725,
+        "duration": 1.35
+    },
+    {
+        "text": "we don't see these SDRs, right?",
+        "start": 3385.205,
+        "duration": 2.25
+    },
+    {
+        "text": "We just, we don't see, all is\nsome sort of grid cells are",
+        "start": 3387.485,
+        "duration": 5.34
+    },
+    {
+        "text": "active and and then they reang it.",
+        "start": 3392.825,
+        "duration": 3.66
+    },
+    {
+        "text": "and",
+        "start": 3399.455,
+        "duration": 0.18
+    },
+    {
+        "text": "but what I'm really saying is there\ndoesn't seem to be enough grid cells to",
+        "start": 3401.975,
+        "duration": 3.3
+    },
+    {
+        "text": "have form a unique representation, right?",
+        "start": 3405.275,
+        "duration": 2.85
+    },
+    {
+        "text": "So I, it is it's two things at once.",
+        "start": 3408.575,
+        "duration": 3.81
+    },
+    {
+        "text": "Once it, it does re-anchor when you\ngo to the new object, but it doesn't",
+        "start": 3412.385,
+        "duration": 3.12
+    },
+    {
+        "text": "look like there's enough cells\nto do the unique representation.",
+        "start": 3415.505,
+        "duration": 2.94
+    },
+    {
+        "text": "there're not sparse enough.",
+        "start": 3419.705,
+        "duration": 0.99
+    },
+    {
+        "text": "It's like a every, a, grid cells, okay,\nso imagine have a set of grid cells and",
+        "start": 3421.16,
+        "duration": 5.28
+    },
+    {
+        "text": "you're seeing when one becomes active\nand they, for the most part, what they",
+        "start": 3426.44,
+        "duration": 3.18
+    },
+    {
+        "text": "see is that the grid cells will always\nbecome active in every representation",
+        "start": 3429.62,
+        "duration": 3.51
+    },
+    {
+        "text": "at just different locations.",
+        "start": 3433.13,
+        "duration": 1.05
+    },
+    {
+        "text": "It's like you don't see ones that, for\nthe most part, you don't see ones that",
+        "start": 3434.66,
+        "duration": 4.14
+    },
+    {
+        "text": "are not active at those locations.",
+        "start": 3438.8,
+        "duration": 2.46
+    },
+    {
+        "text": "If you had a real sparse representation,\nyou'd see a grid cell that wouldn't",
+        "start": 3441.53,
+        "duration": 4.35
+    },
+    {
+        "text": "become active at some location\nwhere it might have otherwise.",
+        "start": 3445.88,
+        "duration": 3.57
+    },
+    {
+        "text": "You follow what I'm saying about that?",
+        "start": 3449.66,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah.",
+        "start": 3450.77,
+        "duration": 0.33
+    },
+    {
+        "text": "Now there actually is evidence for that.",
+        "start": 3451.76,
+        "duration": 2.31
+    },
+    {
+        "text": "I can show you that I have a paper\non my laptop where they say, Hey, we",
+        "start": 3454.43,
+        "duration": 4.59
+    },
+    {
+        "text": "expect this grid cell to become active.",
+        "start": 3459.02,
+        "duration": 1.41
+    },
+    {
+        "text": "once you, once a grid cell becomes\nactive and you know its direction,",
+        "start": 3461.12,
+        "duration": 3.45
+    },
+    {
+        "text": "it's supposed to, it's supposed to\nbe co here, Then people have observed",
+        "start": 3464.57,
+        "duration": 6.54
+    },
+    {
+        "text": "that it may not become active at this\nlocation reliably on a particular object.",
+        "start": 3471.68,
+        "duration": 4.05
+    },
+    {
+        "text": "It's like this cell does not, this grid\ncell should become active here, but it",
+        "start": 3476.12,
+        "duration": 2.82
+    },
+    {
+        "text": "doesn't, on this object, on a different\nobject, it would be a different good cell.",
+        "start": 3478.94,
+        "duration": 3.93
+    },
+    {
+        "text": "It's not active, but it's not like\nI see, not like I see like most",
+        "start": 3482.875,
+        "duration": 3.685
+    },
+    {
+        "text": "of the points are, not active.",
+        "start": 3486.56,
+        "duration": 1.62
+    },
+    {
+        "text": "It's like one drops out.",
+        "start": 3488.18,
+        "duration": 1.35
+    },
+    {
+        "text": "I can show you this paper\none drops out reliably.",
+        "start": 3490.1,
+        "duration": 2.82
+    },
+    {
+        "text": "So if I'm looking at the can\nand moving along the can I, this",
+        "start": 3493.13,
+        "duration": 4.05
+    },
+    {
+        "text": "grid cell should be active here.",
+        "start": 3497.18,
+        "duration": 1.14
+    },
+    {
+        "text": "It doesn't become active.",
+        "start": 3498.35,
+        "duration": 0.81
+    },
+    {
+        "text": "If I'm looking at something\nelse, it does become active",
+        "start": 3499.67,
+        "duration": 2.73
+    },
+    {
+        "text": "and another cell may come in.",
+        "start": 3502.4,
+        "duration": 1.02
+    },
+    {
+        "text": "No.",
+        "start": 3503.9,
+        "duration": 0.3
+    },
+    {
+        "text": "Like it never becomes active or\njust not as reliable on that?",
+        "start": 3504.29,
+        "duration": 4.32
+    },
+    {
+        "text": "On that?",
+        "start": 3508.61,
+        "duration": 0.63
+    },
+    {
+        "text": "No, it just totally blank.",
+        "start": 3509.36,
+        "duration": 1.23
+    },
+    {
+        "text": "I can show the paper it and I\ntalked to the research about it.",
+        "start": 3510.62,
+        "duration": 2.07
+    },
+    {
+        "text": "Okay.",
+        "start": 3513.11,
+        "duration": 0.45
+    },
+    {
+        "text": "it's very reliable and\nmultiple people have seen this.",
+        "start": 3513.65,
+        "duration": 2.49
+    },
+    {
+        "text": "They don't report it very\nmuch because they think it's",
+        "start": 3516.14,
+        "duration": 1.89
+    },
+    {
+        "text": "like they don't understand it.",
+        "start": 3518.03,
+        "duration": 1.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 3520.07,
+        "duration": 0.36
+    },
+    {
+        "text": "The common literature grid cells\nis they should be happy to go every",
+        "start": 3520.7,
+        "duration": 1.95
+    },
+    {
+        "text": "location and, so it's not like\nit's just less likely to connect?",
+        "start": 3522.65,
+        "duration": 4.83
+    },
+    {
+        "text": "No, it's reliably.",
+        "start": 3527.48,
+        "duration": 1.2
+    },
+    {
+        "text": "I talk to the researcher about it.",
+        "start": 3529.4,
+        "duration": 1.5
+    },
+    {
+        "text": "It's reliably inactive.",
+        "start": 3531.08,
+        "duration": 1.62
+    },
+    {
+        "text": "Yeah.",
+        "start": 3533.0,
+        "duration": 0.27
+    },
+    {
+        "text": "the majority of the cells are, active\nand majority of the cells are reliable.",
+        "start": 3534.105,
+        "duration": 3.965
+    },
+    {
+        "text": "Then the, this is the\nannoying thing about it.",
+        "start": 3538.07,
+        "duration": 1.77
+    },
+    {
+        "text": "'cause the majority of\nthe cells are correct.",
+        "start": 3539.9,
+        "duration": 2.52
+    },
+    {
+        "text": "yeah, I show, I, I have a picture of here.",
+        "start": 3543.95,
+        "duration": 1.5
+    },
+    {
+        "text": "this is one of my favorite papers.",
+        "start": 3549.05,
+        "duration": 1.17
+    },
+    {
+        "text": "And and we're talking in grid cells.",
+        "start": 3551.21,
+        "duration": 1.41
+    },
+    {
+        "text": "and then that phase of the grid\ncell is never active or it's not",
+        "start": 3552.95,
+        "duration": 3.36
+    },
+    {
+        "text": "active at a particular location.",
+        "start": 3556.31,
+        "duration": 1.8
+    },
+    {
+        "text": "it is, it's not active.",
+        "start": 3559.19,
+        "duration": 1.045
+    },
+    {
+        "text": "It just, the grid cells just doesn't\nbecome active at that location at all.",
+        "start": 3560.51,
+        "duration": 2.67
+    },
+    {
+        "text": "I think it's at the end of the paper.",
+        "start": 3565.94,
+        "duration": 1.885
+    },
+    {
+        "text": "Oh, it's the tank paper?",
+        "start": 3567.885,
+        "duration": 1.325
+    },
+    {
+        "text": "Yeah, the tank paper.",
+        "start": 3569.24,
+        "duration": 0.66
+    },
+    {
+        "text": "oh yeah.",
+        "start": 3574.13,
+        "duration": 0.6
+    },
+    {
+        "text": "Where is it?",
+        "start": 3574.73,
+        "duration": 0.635
+    },
+    {
+        "text": "Oh this, oh, this is\nsupplement information.",
+        "start": 3575.625,
+        "duration": 2.105
+    },
+    {
+        "text": "Not in the supple.",
+        "start": 3577.79,
+        "duration": 0.57
+    },
+    {
+        "text": "It's somewhere else.",
+        "start": 3580.28,
+        "duration": 0.81
+    },
+    {
+        "text": "It's the end of the paper.",
+        "start": 3582.17,
+        "duration": 0.99
+    },
+    {
+        "text": "Little supplementary.",
+        "start": 3584.33,
+        "duration": 0.99
+    },
+    {
+        "text": "Supplementary.",
+        "start": 3585.815,
+        "duration": 0.85
+    },
+    {
+        "text": "Okay.",
+        "start": 3586.79,
+        "duration": 0.54
+    },
+    {
+        "text": "see there's a figure that represented.",
+        "start": 3588.68,
+        "duration": 1.32
+    },
+    {
+        "text": "Lemme see.",
+        "start": 3590.0,
+        "duration": 0.27
+    },
+    {
+        "text": "I can find that.",
+        "start": 3590.33,
+        "duration": 0.75
+    },
+    {
+        "text": "I've got a great set of notes,\nthat I wrote about tank paper.",
+        "start": 3601.46,
+        "duration": 3.87
+    },
+    {
+        "text": "It just says tank paper Plus.",
+        "start": 3605.39,
+        "duration": 2.1
+    },
+    {
+        "text": "Plus as it like to write more\nnotes about the tank paper.",
+        "start": 3607.49,
+        "duration": 4.65
+    },
+    {
+        "text": "Oh, here it is.",
+        "start": 3612.17,
+        "duration": 0.48
+    },
+    {
+        "text": "Now I'm entering the\nmain part of the paper.",
+        "start": 3612.86,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah, I wanna read it again.",
+        "start": 3614.065,
+        "duration": 1.4
+    },
+    {
+        "text": "I remember It's, yeah,\nit's one of these things.",
+        "start": 3615.585,
+        "duration": 3.185
+    },
+    {
+        "text": "it's in here someplace.",
+        "start": 3620.18,
+        "duration": 0.84
+    },
+    {
+        "text": "Yeah.",
+        "start": 3621.025,
+        "duration": 0.2
+    },
+    {
+        "text": "let's see here.",
+        "start": 3623.84,
+        "duration": 0.93
+    },
+    {
+        "text": "C maybe, what does it say?",
+        "start": 3625.64,
+        "duration": 1.17
+    },
+    {
+        "text": "C Mis field patterns.",
+        "start": 3626.81,
+        "duration": 1.92
+    },
+    {
+        "text": "Mis field patterns are highlighted\nfield and B and six cells.",
+        "start": 3629.27,
+        "duration": 3.99
+    },
+    {
+        "text": "So what is that?",
+        "start": 3634.07,
+        "duration": 0.69
+    },
+    {
+        "text": "one by one significant.",
+        "start": 3637.4,
+        "duration": 1.98
+    },
+    {
+        "text": "okay.",
+        "start": 3641.54,
+        "duration": 0.27
+    },
+    {
+        "text": "It's in here someplace.",
+        "start": 3641.81,
+        "duration": 1.05
+    },
+    {
+        "text": "what is this one?",
+        "start": 3644.06,
+        "duration": 0.9
+    },
+    {
+        "text": "Missed patterns?",
+        "start": 3644.99,
+        "duration": 0.96
+    },
+    {
+        "text": "or I have to read this carefully.",
+        "start": 3647.725,
+        "duration": 1.345
+    },
+    {
+        "text": "It's in here and I think I wrote\nthe tank about it and I asked him.",
+        "start": 3649.25,
+        "duration": 6.21
+    },
+    {
+        "text": "I, can't remember exactly where\nit represented here, but Alright.",
+        "start": 3657.53,
+        "duration": 3.48
+    },
+    {
+        "text": "I have to read it more carefully\nagain, it's in here someplace.",
+        "start": 3661.07,
+        "duration": 3.93
+    },
+    {
+        "text": "It's in this figure somehow\nfor these two figures.",
+        "start": 3666.02,
+        "duration": 2.16
+    },
+    {
+        "text": "I think, what is that?",
+        "start": 3671.39,
+        "duration": 1.35
+    },
+    {
+        "text": "Help you All right.",
+        "start": 3672.89,
+        "duration": 2.61
+    },
+    {
+        "text": "unless you wanna sit here and read\nthe paper, which should take an hour.",
+        "start": 3675.83,
+        "duration": 2.13
+    },
+    {
+        "text": "Missed field pattern on the,\non of the field in each cell.",
+        "start": 3681.575,
+        "duration": 4.11
+    },
+    {
+        "text": "so this is a missed field.",
+        "start": 3687.755,
+        "duration": 3.3
+    },
+    {
+        "text": "So, the cells should be active\nthroughout the entire Correct.",
+        "start": 3691.625,
+        "duration": 3.6
+    },
+    {
+        "text": "Throughout the entire run somehow.",
+        "start": 3695.285,
+        "duration": 1.74
+    },
+    {
+        "text": "And, yet there are places\nwhere it reliably was inactive.",
+        "start": 3698.615,
+        "duration": 3.3
+    },
+    {
+        "text": "It should have been active,\nbut it was reliably inactive.",
+        "start": 3702.845,
+        "duration": 2.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 3705.605,
+        "duration": 0.27
+    },
+    {
+        "text": "So this would be, and this is, the\nactual data that's almost half of",
+        "start": 3706.115,
+        "duration": 4.62
+    },
+    {
+        "text": "the, I, thought it wasn't a lot, but\nmaybe I'm misinterpreting it now.",
+        "start": 3710.735,
+        "duration": 3.87
+    },
+    {
+        "text": "I can't remember.",
+        "start": 3714.635,
+        "duration": 0.48
+    },
+    {
+        "text": "Maybe I got that wrong.",
+        "start": 3715.115,
+        "duration": 0.9
+    },
+    {
+        "text": "so I just wanna make sure I understand it.",
+        "start": 3716.885,
+        "duration": 1.35
+    },
+    {
+        "text": "So it was more about the misfield we're\nsaying that the, when we change the,",
+        "start": 3718.235,
+        "duration": 5.19
+    },
+    {
+        "text": "the environment that they're running\nin, some of the, some of the cells",
+        "start": 3724.96,
+        "duration": 5.215
+    },
+    {
+        "text": "should become active and they're not.",
+        "start": 3730.175,
+        "duration": 1.47
+    },
+    {
+        "text": "so there's almost two\nconflicting things here.",
+        "start": 3735.125,
+        "duration": 1.92
+    },
+    {
+        "text": "One is oh, the animal doesn't where it is.",
+        "start": 3737.045,
+        "duration": 1.92
+    },
+    {
+        "text": "So you get one set of grid cells, then the\nanimal doesn't, what it is, it re-anchor.",
+        "start": 3739.205,
+        "duration": 4.05
+    },
+    {
+        "text": "the cells anchor at different\nlocations, they're still active.",
+        "start": 3744.455,
+        "duration": 2.61
+    },
+    {
+        "text": "And now you'd expect, once they\nre-anchor it, now they say, oh, it's",
+        "start": 3747.965,
+        "duration": 2.73
+    },
+    {
+        "text": "now it's gonna be here, not here.",
+        "start": 3750.695,
+        "duration": 1.59
+    },
+    {
+        "text": "So it's in a, it is an array of activity,\na grid of activity that was here,",
+        "start": 3752.375,
+        "duration": 4.17
+    },
+    {
+        "text": "and now it's shifted someplace else.",
+        "start": 3756.575,
+        "duration": 1.35
+    },
+    {
+        "text": "But in that scenario, it doesn't\nreliably become active in every",
+        "start": 3758.375,
+        "duration": 3.27
+    },
+    {
+        "text": "location that, that it should become.",
+        "start": 3761.645,
+        "duration": 1.53
+    },
+    {
+        "text": "And, but it's reliably inactive.",
+        "start": 3763.235,
+        "duration": 1.77
+    },
+    {
+        "text": "It's like for this object that\nlo when you're at this location",
+        "start": 3765.065,
+        "duration": 3.48
+    },
+    {
+        "text": "in the object, it's never active.",
+        "start": 3768.575,
+        "duration": 1.56
+    },
+    {
+        "text": "That would like, that's like the spars\nification of a grid cell pattern,",
+        "start": 3771.3,
+        "duration": 3.005
+    },
+    {
+        "text": "Saying, yo great, I'm, I now have a,\nset of unique, a set of grid cells that",
+        "start": 3774.575,
+        "duration": 5.01
+    },
+    {
+        "text": "all should be active in some place.",
+        "start": 3779.585,
+        "duration": 1.14
+    },
+    {
+        "text": "That's, not enough to create unique\nrepresentations for all objects.",
+        "start": 3781.085,
+        "duration": 3.24
+    },
+    {
+        "text": "but, now you can, you start dropping\n'em out and it says, no, this,",
+        "start": 3786.665,
+        "duration": 3.99
+    },
+    {
+        "text": "so now the, these cells somehow\nbecome, I don't become sparser.",
+        "start": 3790.655,
+        "duration": 3.96
+    },
+    {
+        "text": "yeah.",
+        "start": 3795.545,
+        "duration": 0.3
+    },
+    {
+        "text": "And this was a, piece of data\nthat no one don't, they don't",
+        "start": 3796.835,
+        "duration": 4.68
+    },
+    {
+        "text": "have any explanation for.",
+        "start": 3801.515,
+        "duration": 1.02
+    },
+    {
+        "text": "it's, it wasn't, experimental\nmissing or cell was misbehaving.",
+        "start": 3804.635,
+        "duration": 4.5
+    },
+    {
+        "text": "It's like a reliable\nbehavior, reliable thing.",
+        "start": 3809.135,
+        "duration": 1.86
+    },
+    {
+        "text": "Anyway, see, these are multiple things\nthat are I'm throwing into the mix here.",
+        "start": 3811.325,
+        "duration": 3.0
+    },
+    {
+        "text": "yeah.",
+        "start": 3815.735,
+        "duration": 0.18
+    },
+    {
+        "text": "That will be a useful mechanism if we\nwant unique location or reputation.",
+        "start": 3815.915,
+        "duration": 3.93
+    },
+    {
+        "text": "My recollection, it doesn't do it enough.",
+        "start": 3819.935,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 3822.215,
+        "duration": 0.42
+    },
+    {
+        "text": "To make to, to the unique SDR.",
+        "start": 3822.665,
+        "duration": 3.39
+    },
+    {
+        "text": "but so when I first started\nthis, oh, this is great.",
+        "start": 3827.94,
+        "duration": 2.735
+    },
+    {
+        "text": "Now we have an SDR formed with grid cells.",
+        "start": 3830.675,
+        "duration": 2.58
+    },
+    {
+        "text": "but it could be a clue to this thing.",
+        "start": 3836.315,
+        "duration": 1.44
+    },
+    {
+        "text": "It's, it could be like there's a base.",
+        "start": 3837.755,
+        "duration": 2.67
+    },
+    {
+        "text": "I think it gets very much\nto this generalization.",
+        "start": 3841.175,
+        "duration": 1.74
+    },
+    {
+        "text": "There's a base, maybe there's a base.",
+        "start": 3842.945,
+        "duration": 1.77
+    },
+    {
+        "text": "How about this?",
+        "start": 3845.495,
+        "duration": 0.6
+    },
+    {
+        "text": "There's a base anchoring\nfor, cylinder objects.",
+        "start": 3846.785,
+        "duration": 3.93
+    },
+    {
+        "text": "Individual cylinder objects, you can drop\nout different, you can do a set of, not",
+        "start": 3851.465,
+        "duration": 5.73
+    },
+    {
+        "text": "a very, large set, but a set of cylinder\nobjects by dropping out somehow different,",
+        "start": 3857.195,
+        "duration": 5.91
+    },
+    {
+        "text": "good cells at different locations.",
+        "start": 3864.815,
+        "duration": 1.95
+    },
+    {
+        "text": "yeah.",
+        "start": 3869.855,
+        "duration": 0.21
+    },
+    {
+        "text": "And then you're predicting a sparse\nor pattern of features as well.",
+        "start": 3870.125,
+        "duration": 4.29
+    },
+    {
+        "text": "like before you drop them out, you're\npredicting all of the But again, potential",
+        "start": 3875.165,
+        "duration": 3.84
+    },
+    {
+        "text": "features, if it's not a lot of dropout,\nwhat it means is that you'd have an,",
+        "start": 3879.005,
+        "duration": 3.84
+    },
+    {
+        "text": "you'd have a, set of grid cells that are\nactive and then, on a particular location,",
+        "start": 3883.295,
+        "duration": 6.24
+    },
+    {
+        "text": "it's a subset of them and they're\ngenerally predicting the same features.",
+        "start": 3890.045,
+        "duration": 3.99
+    },
+    {
+        "text": "there, there's a lot of overlap.",
+        "start": 3894.635,
+        "duration": 1.17
+    },
+    {
+        "text": "It's not like I went to a totally\nunique, it's like I don't have a",
+        "start": 3895.805,
+        "duration": 2.52
+    },
+    {
+        "text": "unique representation of that location.",
+        "start": 3898.325,
+        "duration": 1.89
+    },
+    {
+        "text": "On the object.",
+        "start": 3900.215,
+        "duration": 0.81
+    },
+    {
+        "text": "On the object.",
+        "start": 3901.055,
+        "duration": 0.78
+    },
+    {
+        "text": "I have a partially unique,\nsome of the things dropped",
+        "start": 3902.225,
+        "duration": 4.83
+    },
+    {
+        "text": "out and some are still there.",
+        "start": 3907.055,
+        "duration": 1.32
+    },
+    {
+        "text": "I, would've almost thought of it and on\na different level, that basically the",
+        "start": 3910.055,
+        "duration": 5.22
+    },
+    {
+        "text": "unique, like the ification of the grid\ncells tells you what kind of object",
+        "start": 3915.275,
+        "duration": 6.06
+    },
+    {
+        "text": "structure you're on, like cylinder,\nsphere, square, but then which specific",
+        "start": 3921.335,
+        "duration": 5.4
+    },
+    {
+        "text": "cylindrical object it is depends on\nwhat the features are in L four then,",
+        "start": 3926.735,
+        "duration": 6.99
+    },
+    {
+        "text": "because if you wanna encode unique\nlocations for all of the objects.",
+        "start": 3933.845,
+        "duration": 3.87
+    },
+    {
+        "text": "Say it again, I'm, losing it.",
+        "start": 3937.715,
+        "duration": 1.29
+    },
+    {
+        "text": "Say again.",
+        "start": 3939.06,
+        "duration": 0.38
+    },
+    {
+        "text": "You thought just sort\nthat paragraph over here.",
+        "start": 3940.415,
+        "duration": 2.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 3942.995,
+        "duration": 0.27
+    },
+    {
+        "text": "That basically the specification of the\ngrid cells tells you what rough shape",
+        "start": 3943.265,
+        "duration": 5.37
+    },
+    {
+        "text": "of object you're on instead of what\nspecific object with that rough shape.",
+        "start": 3948.635,
+        "duration": 4.08
+    },
+    {
+        "text": "so that the location representation for\ntwo cylindrical objects is the same in L",
+        "start": 3954.425,
+        "duration": 6.33
+    },
+    {
+        "text": "six A, but then which specific cylinder\ncylindrical object it is, determined",
+        "start": 3960.755,
+        "duration": 4.83
+    },
+    {
+        "text": "by the active cells in layer four.",
+        "start": 3965.585,
+        "duration": 2.01
+    },
+    {
+        "text": "But, I guess I, okay, but how, but then I\ncan't predict the specific from layer six.",
+        "start": 3968.675,
+        "duration": 4.26
+    },
+    {
+        "text": "No.",
+        "start": 3972.995,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah, you wouldn't be able to.",
+        "start": 3973.655,
+        "duration": 0.81
+    },
+    {
+        "text": "I it is more than just generic\nYou're saying on a cylinder.",
+        "start": 3974.465,
+        "duration": 3.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 3977.615,
+        "duration": 0.45
+    },
+    {
+        "text": "as opposed to some other shape object.",
+        "start": 3980.375,
+        "duration": 1.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 3982.385,
+        "duration": 0.42
+    },
+    {
+        "text": "And that way it wouldn't be that big\nof a deal that it's not as sparse.",
+        "start": 3982.805,
+        "duration": 3.15
+    },
+    {
+        "text": "'cause we only need to encode like a\nlimited amount of, but then now I move,",
+        "start": 3985.955,
+        "duration": 5.31
+    },
+    {
+        "text": "I have to make a specific prediction.",
+        "start": 3992.345,
+        "duration": 1.83
+    },
+    {
+        "text": "you predict a union.",
+        "start": 3994.745,
+        "duration": 1.11
+    },
+    {
+        "text": "if I know I'm on the, if I know I'm on\nthe coffee cup, you're on the cylinder.",
+        "start": 3998.195,
+        "duration": 3.115
+    },
+    {
+        "text": "I'm touching a cylinder, but\nI know I'm on the coffee cup.",
+        "start": 4001.635,
+        "duration": 2.29
+    },
+    {
+        "text": "The moment I'm not touching anything\nabout related to the coffee cup,",
+        "start": 4004.555,
+        "duration": 2.64
+    },
+    {
+        "text": "I'm just touching the cylinder.",
+        "start": 4007.195,
+        "duration": 1.05
+    },
+    {
+        "text": "But if I know I'm on the coffee\ncup, then when I move, I'm gonna",
+        "start": 4008.545,
+        "duration": 2.28
+    },
+    {
+        "text": "make a very specific prediction.",
+        "start": 4010.825,
+        "duration": 1.53
+    },
+    {
+        "text": "I'm gonna say oh, it\nis not just a cylinder.",
+        "start": 4012.415,
+        "duration": 2.34
+    },
+    {
+        "text": "This is the, I should feel the handle.",
+        "start": 4014.755,
+        "duration": 1.56
+    },
+    {
+        "text": "it's not like I'm gonna be\nsurprised that the handle's there.",
+        "start": 4017.575,
+        "duration": 1.68
+    },
+    {
+        "text": "I know I, at this point\nI'm on the cylinder.",
+        "start": 4019.255,
+        "duration": 2.43
+    },
+    {
+        "text": "I know that I'm on the coffee cup.",
+        "start": 4021.685,
+        "duration": 1.56
+    },
+    {
+        "text": "I, let's say I, I do.",
+        "start": 4023.275,
+        "duration": 1.41
+    },
+    {
+        "text": "But let's say I touched the, handle.",
+        "start": 4024.745,
+        "duration": 2.04
+    },
+    {
+        "text": "I moved away.",
+        "start": 4026.785,
+        "duration": 0.72
+    },
+    {
+        "text": "Now I know I'm on the coffee cup.",
+        "start": 4027.985,
+        "duration": 1.38
+    },
+    {
+        "text": "I have to make very specific predictions\nfor every, could that be biased",
+        "start": 4030.67,
+        "duration": 3.87
+    },
+    {
+        "text": "from L three connections to L four?",
+        "start": 4034.54,
+        "duration": 2.31
+    },
+    {
+        "text": "It could be.",
+        "start": 4036.88,
+        "duration": 0.57
+    },
+    {
+        "text": "If you can come up way of doing it.",
+        "start": 4037.45,
+        "duration": 1.35
+    },
+    {
+        "text": "I need to.",
+        "start": 4040.03,
+        "duration": 0.69
+    },
+    {
+        "text": "It could, But there, I don't\nthink, there aren't many of L",
+        "start": 4042.145,
+        "duration": 2.835
+    },
+    {
+        "text": "three that live four connections.",
+        "start": 4044.98,
+        "duration": 1.8
+    },
+    {
+        "text": "It's, that's a sports.",
+        "start": 4047.23,
+        "duration": 1.05
+    },
+    {
+        "text": "I think there are some, but\nthere's some, but it's a lot.",
+        "start": 4048.58,
+        "duration": 2.37
+    },
+    {
+        "text": "My bag, what you're saying is\nwhen we have the hierarchy and we",
+        "start": 4053.02,
+        "duration": 3.63
+    },
+    {
+        "text": "have the layer three to layer four\nconnections, I'll be right back.",
+        "start": 4056.65,
+        "duration": 2.4
+    },
+    {
+        "text": "And then we do the, generalization\nstuff, the mapping stuff, then",
+        "start": 4059.05,
+        "duration": 6.48
+    },
+    {
+        "text": "the two representations of the,\ncup and one with a handle and one",
+        "start": 4065.77,
+        "duration": 4.68
+    },
+    {
+        "text": "without are gonna be very similar.",
+        "start": 4070.45,
+        "duration": 1.65
+    },
+    {
+        "text": "And then the location in six a in the,\nhigher region are also going to be, become",
+        "start": 4072.58,
+        "duration": 5.43
+    },
+    {
+        "text": "more similar because the, representation\nof those in the higher region are similar.",
+        "start": 4078.07,
+        "duration": 4.53
+    },
+    {
+        "text": "So when that feeds back to six A in the\nlower region, they become more similar.",
+        "start": 4082.6,
+        "duration": 4.29
+    },
+    {
+        "text": "It represents a cylinder more than\nan actual object in the high region.",
+        "start": 4086.95,
+        "duration": 5.07
+    }
+]

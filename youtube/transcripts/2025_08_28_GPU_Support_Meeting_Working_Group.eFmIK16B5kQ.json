@@ -1,0 +1,5302 @@
+[
+    {
+        "text": "Hi Colin.",
+        "start": 8.282,
+        "duration": 0.51
+    },
+    {
+        "text": "Welcome.",
+        "start": 8.822,
+        "duration": 0.57
+    },
+    {
+        "text": "So we're here to talk about the\nhypothesis updated prototype.",
+        "start": 9.452,
+        "duration": 4.53
+    },
+    {
+        "text": "Discuss further.",
+        "start": 17.132,
+        "duration": 1.08
+    },
+    {
+        "text": "Yeah.",
+        "start": 19.667,
+        "duration": 0.15
+    },
+    {
+        "text": "So what should be the next steps?",
+        "start": 19.817,
+        "duration": 1.74
+    },
+    {
+        "text": "like reading your summary?",
+        "start": 21.887,
+        "duration": 1.56
+    },
+    {
+        "text": "you mentioned that, like\nphase one, two makes sense.",
+        "start": 24.047,
+        "duration": 3.09
+    },
+    {
+        "text": "Phase three, like what are your questions?",
+        "start": 27.137,
+        "duration": 2.58
+    },
+    {
+        "text": "We only had one or two exchanges about it.",
+        "start": 29.927,
+        "duration": 2.37
+    },
+    {
+        "text": "Anything else, we should synchronize\non or, I mean in terms of Yeah,",
+        "start": 32.597,
+        "duration": 5.19
+    },
+    {
+        "text": "like the overall workflow plan.",
+        "start": 37.787,
+        "duration": 2.28
+    },
+    {
+        "text": "I think that makes total sense.",
+        "start": 40.187,
+        "duration": 1.83
+    },
+    {
+        "text": "start on a different branch of fork.",
+        "start": 43.547,
+        "duration": 2.7
+    },
+    {
+        "text": "Start trying to.",
+        "start": 46.487,
+        "duration": 0.93
+    },
+    {
+        "text": "Develop a GP background and CPU\nbackground, get it all integrated.",
+        "start": 48.167,
+        "duration": 3.75
+    },
+    {
+        "text": "yeah, so, what, I'm thinking, is\nspecifically like on your TBP monthly",
+        "start": 55.037,
+        "duration": 7.2
+    },
+    {
+        "text": "fork, if you create a branch, and\nthen, the other thing is if you,",
+        "start": 62.237,
+        "duration": 5.965
+    },
+    {
+        "text": "create a draft pull request with\nthat branch Then me as a maintainer,",
+        "start": 68.202,
+        "duration": 4.715
+    },
+    {
+        "text": "that allows me, pushes to them.",
+        "start": 72.917,
+        "duration": 1.68
+    },
+    {
+        "text": "Okay.",
+        "start": 75.557,
+        "duration": 0.15
+    },
+    {
+        "text": "And so that actually can facilitate\nlike me adding something or so like",
+        "start": 75.707,
+        "duration": 5.4
+    },
+    {
+        "text": "we're actually working together versus\njust me trying to work through you.",
+        "start": 81.107,
+        "duration": 3.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 85.547,
+        "duration": 0.15
+    },
+    {
+        "text": "Understand.",
+        "start": 85.697,
+        "duration": 0.27
+    },
+    {
+        "text": "Actually say Hey, how about this commit?",
+        "start": 86.057,
+        "duration": 1.89
+    },
+    {
+        "text": "How about this commit?",
+        "start": 87.947,
+        "duration": 0.75
+    },
+    {
+        "text": "so that might be helpful.",
+        "start": 89.477,
+        "duration": 1.05
+    },
+    {
+        "text": "but I think do then my fork create\na new branch and go ahead and start",
+        "start": 91.307,
+        "duration": 4.14
+    },
+    {
+        "text": "a pull request and we'll just kinda\nwork through that pull request flow.",
+        "start": 95.447,
+        "duration": 3.87
+    },
+    {
+        "text": "Yeah.",
+        "start": 99.707,
+        "duration": 0.27
+    },
+    {
+        "text": "As a draft.",
+        "start": 99.977,
+        "duration": 1.17
+    },
+    {
+        "text": "because that would allow.",
+        "start": 102.142,
+        "duration": 2.045
+    },
+    {
+        "text": "so that would allow,",
+        "start": 108.722,
+        "duration": 1.23
+    },
+    {
+        "text": "I believe if we look at a pull request\nthat we have, what's an external pull",
+        "start": 113.252,
+        "duration": 5.88
+    },
+    {
+        "text": "requests one of them.",
+        "start": 122.287,
+        "duration": 1.135
+    },
+    {
+        "text": "Okay, here's an external request.",
+        "start": 126.527,
+        "duration": 1.44
+    },
+    {
+        "text": "So over here there is a, their maintainers\nare allowed to edit this full request.",
+        "start": 127.997,
+        "duration": 5.97
+    },
+    {
+        "text": "And so I think it gives me\nbranch permissions to the branch.",
+        "start": 134.027,
+        "duration": 4.65
+    },
+    {
+        "text": "hey, can we try that?",
+        "start": 140.057,
+        "duration": 1.77
+    },
+    {
+        "text": "Actually, let's just\ntry it, see if it works.",
+        "start": 141.917,
+        "duration": 1.74
+    },
+    {
+        "text": "You could, yeah, just\nmake a branch, make a,",
+        "start": 144.017,
+        "duration": 1.92
+    },
+    {
+        "text": "pull request.",
+        "start": 148.577,
+        "duration": 0.57
+    },
+    {
+        "text": "See if I can see if I can push to it.",
+        "start": 149.147,
+        "duration": 3.27
+    },
+    {
+        "text": "That'd be a nice experiment.",
+        "start": 152.597,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 154.187,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 154.742,
+        "duration": 0.24
+    },
+    {
+        "text": "Stop presenting.",
+        "start": 157.277,
+        "duration": 0.72
+    },
+    {
+        "text": "Do you want me to do that\nnow or follow up after?",
+        "start": 160.592,
+        "duration": 1.875
+    },
+    {
+        "text": "I was gonna say, do you think\nit's a good use of time?",
+        "start": 162.707,
+        "duration": 2.73
+    },
+    {
+        "text": "Let's, I, have some,\nthings I wanna talk about.",
+        "start": 166.607,
+        "duration": 3.18
+    },
+    {
+        "text": "Okay.",
+        "start": 169.877,
+        "duration": 0.21
+    },
+    {
+        "text": "Let's talk about that.",
+        "start": 170.087,
+        "duration": 0.495
+    },
+    {
+        "text": "Maybe we should prioritize.",
+        "start": 170.872,
+        "duration": 0.91
+    },
+    {
+        "text": "Let's do that.",
+        "start": 171.782,
+        "duration": 0.44
+    },
+    {
+        "text": "Cool.",
+        "start": 172.877,
+        "duration": 0.18
+    },
+    {
+        "text": "Yeah.",
+        "start": 173.507,
+        "duration": 0.39
+    },
+    {
+        "text": "yeah.",
+        "start": 174.527,
+        "duration": 0.12
+    },
+    {
+        "text": "Let me share my page.",
+        "start": 174.647,
+        "duration": 3.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 181.517,
+        "duration": 0.18
+    },
+    {
+        "text": "So I just started looking.",
+        "start": 181.697,
+        "duration": 1.41
+    },
+    {
+        "text": "Making it a little document to talk.",
+        "start": 184.427,
+        "duration": 1.95
+    },
+    {
+        "text": "Okay.",
+        "start": 206.452,
+        "duration": 0.29
+    },
+    {
+        "text": "Getting used to the\nGoogle, Google workflow.",
+        "start": 207.012,
+        "duration": 2.975
+    },
+    {
+        "text": "I can see your id.",
+        "start": 221.372,
+        "duration": 2.265
+    },
+    {
+        "text": "So anyway,",
+        "start": 227.207,
+        "duration": 1.2
+    },
+    {
+        "text": "the key thing I wanted\nto talk about, 'cause",
+        "start": 230.477,
+        "duration": 1.62
+    },
+    {
+        "text": "basically, when I first proposed this.",
+        "start": 234.257,
+        "duration": 3.63
+    },
+    {
+        "text": "I was looking at trying to batch\noperations across lms and then that",
+        "start": 239.222,
+        "duration": 5.25
+    },
+    {
+        "text": "kind of initial post in the comments\nwith Viviane, she was suggesting",
+        "start": 244.562,
+        "duration": 5.49
+    },
+    {
+        "text": "that keeping the kind of LM more\nseparate is more conceptually better.",
+        "start": 250.082,
+        "duration": 7.14
+    },
+    {
+        "text": "And because that runtime is actually not\neasy to predict exactly like which LMS",
+        "start": 257.282,
+        "duration": 4.71
+    },
+    {
+        "text": "will get what inputs at different times.",
+        "start": 261.992,
+        "duration": 1.71
+    },
+    {
+        "text": "So it might have some more complicated\nstructure to try to batch across lms.",
+        "start": 263.702,
+        "duration": 4.53
+    },
+    {
+        "text": "So that's what led me to think about doing\nthis different cuda streaming approach.",
+        "start": 269.012,
+        "duration": 3.9
+    },
+    {
+        "text": "and so I started trying to outline\nthat also in the, in the comments on",
+        "start": 276.242,
+        "duration": 3.84
+    },
+    {
+        "text": "the separate, posts that you created.",
+        "start": 280.262,
+        "duration": 2.16
+    },
+    {
+        "text": "but I think that's where I would just\nmaybe start to change a little bit of",
+        "start": 283.652,
+        "duration": 3.15
+    },
+    {
+        "text": "the, the interface between the Monte\nexperiment and thes to the hypothesis.",
+        "start": 286.802,
+        "duration": 6.03
+    },
+    {
+        "text": "Okay.",
+        "start": 293.432,
+        "duration": 0.57
+    },
+    {
+        "text": "Key thing here is, watch.",
+        "start": 297.302,
+        "duration": 3.72
+    },
+    {
+        "text": "Okay.",
+        "start": 301.022,
+        "duration": 0.3
+    },
+    {
+        "text": "Do you feel like it'd be helpful to, for\nme to explain what a Cuda stream is or",
+        "start": 301.712,
+        "duration": 5.19
+    },
+    {
+        "text": "do you get that from the post I made?",
+        "start": 307.052,
+        "duration": 1.595
+    },
+    {
+        "text": "I think, I I, get it.",
+        "start": 310.082,
+        "duration": 1.92
+    },
+    {
+        "text": "I think I would get it\nout of from context.",
+        "start": 312.727,
+        "duration": 3.475
+    },
+    {
+        "text": "yeah.",
+        "start": 316.682,
+        "duration": 0.09
+    },
+    {
+        "text": "If you want to, you're welcome to.",
+        "start": 316.772,
+        "duration": 1.41
+    },
+    {
+        "text": "No, that just, I think I'll.",
+        "start": 318.962,
+        "duration": 1.495
+    },
+    {
+        "text": "Let know, feel free to ask questions\nif I, it's like a coulda threat that",
+        "start": 322.202,
+        "duration": 2.64
+    },
+    {
+        "text": "runs in parallel, but basically you\ncan put kernel operations per stream.",
+        "start": 324.842,
+        "duration": 4.08
+    },
+    {
+        "text": "Yeah.",
+        "start": 329.702,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 330.602,
+        "duration": 0.3
+    },
+    {
+        "text": "And so it would benefit because we can.",
+        "start": 331.112,
+        "duration": 3.72
+    },
+    {
+        "text": "The code kinda keep the LMS more separate.",
+        "start": 335.672,
+        "duration": 3.15
+    },
+    {
+        "text": "They could launch the same kernels,\nwhich is with different inputs",
+        "start": 339.152,
+        "duration": 3.93
+    },
+    {
+        "text": "or slightly different kernels.",
+        "start": 343.082,
+        "duration": 1.17
+    },
+    {
+        "text": "they can all do that\nfine on their own stream.",
+        "start": 344.792,
+        "duration": 1.98
+    },
+    {
+        "text": "But the GPU itself can actually, schedule\nwork, from all of the different kernels",
+        "start": 347.582,
+        "duration": 6.27
+    },
+    {
+        "text": "across all streams that has available.",
+        "start": 353.852,
+        "duration": 1.56
+    },
+    {
+        "text": "And so we can do, GPUs are\ndesigned to have really complex",
+        "start": 355.772,
+        "duration": 3.81
+    },
+    {
+        "text": "scheduling to maximize throughput.",
+        "start": 359.582,
+        "duration": 2.58
+    },
+    {
+        "text": "if one, Warp in one kernel,\nstarts a memory access that's",
+        "start": 362.882,
+        "duration": 5.04
+    },
+    {
+        "text": "gonna take hundreds of cycles.",
+        "start": 367.922,
+        "duration": 1.26
+    },
+    {
+        "text": "It'll just, switch that out for\na, a different warp that has",
+        "start": 369.992,
+        "duration": 4.53
+    },
+    {
+        "text": "compute work that needs to be done.",
+        "start": 374.522,
+        "duration": 1.11
+    },
+    {
+        "text": "it just cheap user design to\njust fly through all of the",
+        "start": 376.082,
+        "duration": 3.33
+    },
+    {
+        "text": "work that they have stacked up.",
+        "start": 379.412,
+        "duration": 1.2
+    },
+    {
+        "text": "And so we would still benefit from\nparallelism across the lms, but it",
+        "start": 381.332,
+        "duration": 4.38
+    },
+    {
+        "text": "would keep the, keep them defined\nseparately and allow for a little",
+        "start": 385.712,
+        "duration": 4.98
+    },
+    {
+        "text": "bit more variation in behavior.",
+        "start": 390.692,
+        "duration": 1.41
+    },
+    {
+        "text": "I know you were saying in response that,\nbased off of the data flow diagram that",
+        "start": 393.752,
+        "duration": 4.83
+    },
+    {
+        "text": "you outlined, we want LMS to all be doing\nthe same operations at the same time.",
+        "start": 398.582,
+        "duration": 5.58
+    },
+    {
+        "text": "We don't really want different\nflows for the different lms.",
+        "start": 404.162,
+        "duration": 2.91
+    },
+    {
+        "text": "I maybe misspoke about the\nsame operations because.",
+        "start": 407.432,
+        "duration": 2.31
+    },
+    {
+        "text": "That presumes that all LMS\nare the same implementation.",
+        "start": 410.837,
+        "duration": 4.17
+    },
+    {
+        "text": "But they could be\ndifferent implementations.",
+        "start": 416.177,
+        "duration": 1.8
+    },
+    {
+        "text": "The internals of an LM\ncould be different, right?",
+        "start": 418.007,
+        "duration": 2.13
+    },
+    {
+        "text": "Like one of them could be the, current one\nfeature graph lm, but another one could",
+        "start": 420.137,
+        "duration": 3.9
+    },
+    {
+        "text": "be LM using like grid cells and whatever.",
+        "start": 424.037,
+        "duration": 2.07
+    },
+    {
+        "text": "And we're trying to compare them, right?",
+        "start": 426.107,
+        "duration": 1.17
+    },
+    {
+        "text": "Or we have a mix of 'em.",
+        "start": 427.307,
+        "duration": 1.14
+    },
+    {
+        "text": "So, even so, I miss, I, I\nover constrained and misspoke.",
+        "start": 429.407,
+        "duration": 4.62
+    },
+    {
+        "text": "It's not that the same operations but\nthat are all going through the same phase.",
+        "start": 434.057,
+        "duration": 3.78
+    },
+    {
+        "text": "But each one could have\ndifferent operations.",
+        "start": 438.392,
+        "duration": 2.37
+    },
+    {
+        "text": "Yeah, that makes sense.",
+        "start": 441.662,
+        "duration": 0.69
+    },
+    {
+        "text": "And by phase, page, they get inputs\nand they need to produce outputs",
+        "start": 442.892,
+        "duration": 4.02
+    },
+    {
+        "text": "before moving on to the next phase.",
+        "start": 446.912,
+        "duration": 1.71
+    },
+    {
+        "text": "That's what, yeah, no,\nthat makes total sense.",
+        "start": 449.672,
+        "duration": 2.46
+    },
+    {
+        "text": "I think even in my original kind ideation\nof the Stacks implementation, we would",
+        "start": 452.492,
+        "duration": 6.3
+    },
+    {
+        "text": "group LMS based on their type and or input\nI, I didn't really figure out the details",
+        "start": 459.092,
+        "duration": 5.22
+    },
+    {
+        "text": "about whether they all need to have the\nsame input for the kernels, but, That",
+        "start": 464.312,
+        "duration": 3.765
+    },
+    {
+        "text": "would also be a little bit more complex to\nadd that overhead of figuring out how to",
+        "start": 468.077,
+        "duration": 3.75
+    },
+    {
+        "text": "group them into the proper buckets, right?",
+        "start": 471.827,
+        "duration": 2.28
+    },
+    {
+        "text": "That could be stacked.",
+        "start": 474.107,
+        "duration": 0.84
+    },
+    {
+        "text": "And so kuda streams just\navoids that, complexity.",
+        "start": 475.367,
+        "duration": 3.27
+    },
+    {
+        "text": "So yeah, we can have different types\nof LMS processing different inputs.",
+        "start": 478.667,
+        "duration": 3.51
+    },
+    {
+        "text": "or like you say, like some could\nbe doing no ops or, just like other",
+        "start": 483.227,
+        "duration": 2.73
+    },
+    {
+        "text": "kernel operations, and we could\nstill benefit from some paralyzation.",
+        "start": 485.957,
+        "duration": 3.03
+    },
+    {
+        "text": "It'll be less than if we stacked it.",
+        "start": 489.017,
+        "duration": 1.35
+    },
+    {
+        "text": "that's the most efficient way to do it.",
+        "start": 490.457,
+        "duration": 1.38
+    },
+    {
+        "text": "But I think the flexibility that comes\nwith it, I do think that's a more.",
+        "start": 492.482,
+        "duration": 3.435
+    },
+    {
+        "text": "I think it's a better approach for\nMonty, like I think that maps to",
+        "start": 497.267,
+        "duration": 2.13
+    },
+    {
+        "text": "the existing architecture better.",
+        "start": 499.397,
+        "duration": 1.29
+    },
+    {
+        "text": "but what comes with that is basically\nwe need to switch from the sequential,",
+        "start": 502.817,
+        "duration": 4.56
+    },
+    {
+        "text": "blocking loop that we have right\nnow for how we process hypothesis",
+        "start": 508.127,
+        "duration": 3.15
+    },
+    {
+        "text": "updates to a non-blocking ball.",
+        "start": 511.277,
+        "duration": 1.62
+    },
+    {
+        "text": "So right now, the Monty experiment\nwell loops through each LM and call",
+        "start": 513.317,
+        "duration": 4.38
+    },
+    {
+        "text": "the updates, wait for that to finish,\nand then go to the next lm, right?",
+        "start": 517.697,
+        "duration": 3.45
+    },
+    {
+        "text": "We wouldn't benefit from any parallelism,\neven if we use kuda streams, if",
+        "start": 523.007,
+        "duration": 3.15
+    },
+    {
+        "text": "we did that because, one stream\nfinishes before the next one begins.",
+        "start": 526.157,
+        "duration": 3.15
+    },
+    {
+        "text": "So basically we would just need\nto switch to something that's,",
+        "start": 529.637,
+        "duration": 1.92
+    },
+    {
+        "text": "basically got dispatch phase, right?",
+        "start": 532.637,
+        "duration": 1.92
+    },
+    {
+        "text": "So we can obviously work\nout the details more.",
+        "start": 534.977,
+        "duration": 3.54
+    },
+    {
+        "text": "This is just kind a quick pass and\nbasic structure, but, we just wanted",
+        "start": 538.517,
+        "duration": 4.77
+    },
+    {
+        "text": "to launch the kernel update or, like\nthe launch, the pipeline of, kernels.",
+        "start": 543.287,
+        "duration": 4.8
+    },
+    {
+        "text": "For each LM and then\nreturn immediately, right?",
+        "start": 548.702,
+        "duration": 2.88
+    },
+    {
+        "text": "So it actually goes through all of the\nLMS and dispatches the kernels, right?",
+        "start": 551.582,
+        "duration": 3.21
+    },
+    {
+        "text": "And then some sort of just\nkind of synchronization waiting",
+        "start": 555.332,
+        "duration": 1.98
+    },
+    {
+        "text": "phase while that work completes.",
+        "start": 557.312,
+        "duration": 2.16
+    },
+    {
+        "text": "And the Monty Experiment knows not\nto do anything until that's done.",
+        "start": 559.772,
+        "duration": 3.75
+    },
+    {
+        "text": "But once it gets that update that\nit's done, it can then, read the",
+        "start": 563.942,
+        "duration": 3.42
+    },
+    {
+        "text": "results, move on to the other\nsteps in the experiment, right?",
+        "start": 567.362,
+        "duration": 2.67
+    },
+    {
+        "text": "Yeah.",
+        "start": 570.542,
+        "duration": 0.48
+    },
+    {
+        "text": "It's a, pretty common Pattern.",
+        "start": 572.057,
+        "duration": 2.97
+    },
+    {
+        "text": "pretty straightforward, but it\nwill just require a little bit",
+        "start": 575.807,
+        "duration": 2.13
+    },
+    {
+        "text": "more refactoring of the code.",
+        "start": 577.937,
+        "duration": 1.11
+    },
+    {
+        "text": "Like I was starting to take a look\nat, the different calls through here.",
+        "start": 579.047,
+        "duration": 4.38
+    },
+    {
+        "text": "like step learning modules.",
+        "start": 584.387,
+        "duration": 1.95
+    },
+    {
+        "text": "Yeah.",
+        "start": 586.577,
+        "duration": 0.15
+    },
+    {
+        "text": "I.",
+        "start": 586.877,
+        "duration": 0.03
+    },
+    {
+        "text": "Right now we just, call\nthis LM step method.",
+        "start": 587.957,
+        "duration": 3.21
+    },
+    {
+        "text": "Instead here we'd need to do like a\ndispatch step and then maybe rework",
+        "start": 591.587,
+        "duration": 4.92
+    },
+    {
+        "text": "some of the logging and such outta this.",
+        "start": 596.507,
+        "duration": 1.71
+    },
+    {
+        "text": "And then, do, wait, so one thing\nimmediately pops up here is",
+        "start": 598.217,
+        "duration": 4.44
+    },
+    {
+        "text": "that dispatch step,\naren't we getting Yeah.",
+        "start": 607.222,
+        "duration": 3.805
+    },
+    {
+        "text": "'cause we're getting, we're still\ngetting sensory inputs for every",
+        "start": 611.057,
+        "duration": 3.39
+    },
+    {
+        "text": "LM right line 81 sensory inputs.",
+        "start": 614.447,
+        "duration": 2.685
+    },
+    {
+        "text": "Collect.",
+        "start": 617.987,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 618.347,
+        "duration": 0.39
+    },
+    {
+        "text": "But that's still done in\nseries, collect those inputs.",
+        "start": 619.127,
+        "duration": 3.33
+    },
+    {
+        "text": "yeah, so I think",
+        "start": 624.977,
+        "duration": 0.63
+    },
+    {
+        "text": "it, yeah, we'd have to figure out exactly\nwhat operations are worth parallelizing.",
+        "start": 627.677,
+        "duration": 4.5
+    },
+    {
+        "text": "yeah, I didn't really look into\nsort of the details of some of",
+        "start": 633.347,
+        "duration": 2.46
+    },
+    {
+        "text": "these other pre-processing steps.",
+        "start": 635.807,
+        "duration": 1.53
+    },
+    {
+        "text": "If they're pretty quick, it\nmight not be worth the time.",
+        "start": 638.342,
+        "duration": 3.735
+    },
+    {
+        "text": "But we could also look into whether we\ncan paralyze more of the pre-processing.",
+        "start": 642.077,
+        "duration": 3.24
+    },
+    {
+        "text": "Can I do the full pipeline?",
+        "start": 646.367,
+        "duration": 1.08
+    },
+    {
+        "text": "yeah, I guess I'm just wondering\nif in the, parallels switch should",
+        "start": 648.887,
+        "duration": 4.35
+    },
+    {
+        "text": "happen at the step learning modules\nlevel, like it's an alternate step,",
+        "start": 653.237,
+        "duration": 4.44
+    },
+    {
+        "text": "learning modules implementation as\nopposed to reusing it and, swapping",
+        "start": 657.677,
+        "duration": 5.31
+    },
+    {
+        "text": "out calls and parallel sort of thing.",
+        "start": 662.987,
+        "duration": 2.745
+    },
+    {
+        "text": "That's, the question that I have.",
+        "start": 666.572,
+        "duration": 2.085
+    },
+    {
+        "text": "Yeah.",
+        "start": 669.767,
+        "duration": 0.27
+    },
+    {
+        "text": "So instead of having those.",
+        "start": 670.037,
+        "duration": 1.65
+    },
+    {
+        "text": "Learning module in step learning\nmodules, like we do this kind of",
+        "start": 672.092,
+        "duration": 3.21
+    },
+    {
+        "text": "a level up from this function?",
+        "start": 675.302,
+        "duration": 1.92
+    },
+    {
+        "text": "No, What I mean is,",
+        "start": 677.732,
+        "duration": 0.93
+    },
+    {
+        "text": "okay, I see.",
+        "start": 690.842,
+        "duration": 0.6
+    },
+    {
+        "text": "I see what you're saying.",
+        "start": 691.442,
+        "duration": 0.84
+    },
+    {
+        "text": "This is why you're talking about\nnon-blocking because the dispatch",
+        "start": 692.342,
+        "duration": 3.24
+    },
+    {
+        "text": "step will add an unblocking call.",
+        "start": 695.582,
+        "duration": 1.68
+    },
+    {
+        "text": "And so if we have a CPU backend,\nyou can still do the same thing.",
+        "start": 697.622,
+        "duration": 3.99
+    },
+    {
+        "text": "You just essentially collecting it later.",
+        "start": 701.942,
+        "duration": 2.31
+    },
+    {
+        "text": "Where does this, where do you collect\nthe, where's the gathering set?",
+        "start": 704.402,
+        "duration": 2.82
+    },
+    {
+        "text": "Yeah, so this in a super, high level\nthat I was doing right before this.",
+        "start": 707.222,
+        "duration": 3.84
+    },
+    {
+        "text": "Yeah.",
+        "start": 711.332,
+        "duration": 0.18
+    },
+    {
+        "text": "I kept the same code just to\nkinda see where it would insert.",
+        "start": 712.202,
+        "duration": 2.55
+    },
+    {
+        "text": "But basically after that, you'd\nwant these calls to all return.",
+        "start": 715.082,
+        "duration": 3.09
+    },
+    {
+        "text": "So if the loop finishes before any of\nthis work is actually done, all that",
+        "start": 718.172,
+        "duration": 3.72
+    },
+    {
+        "text": "happened as a dispatch, then you probably\njust have a blocking call after that.",
+        "start": 721.892,
+        "duration": 3.72
+    },
+    {
+        "text": "So once all of the LMS have dispatched.",
+        "start": 725.642,
+        "duration": 1.92
+    },
+    {
+        "text": "We just wait until they're all done.",
+        "start": 727.937,
+        "duration": 1.47
+    },
+    {
+        "text": "There's more complex ways\nwe could do it too, right?",
+        "start": 730.097,
+        "duration": 1.98
+    },
+    {
+        "text": "Like as soon as one LM finishes you go\nahead and start with some of the work.",
+        "start": 732.077,
+        "duration": 3.39
+    },
+    {
+        "text": "But I think that could come later.",
+        "start": 735.527,
+        "duration": 2.13
+    },
+    {
+        "text": "I think it's much more simple to\njust wait for the backend to say that",
+        "start": 737.657,
+        "duration": 4.32
+    },
+    {
+        "text": "it's done processing all the work.",
+        "start": 741.977,
+        "duration": 1.38
+    },
+    {
+        "text": "And then you can go ahead with\nthe rest of the code as normal.",
+        "start": 744.197,
+        "duration": 3.27
+    },
+    {
+        "text": "You would just need to add some call to,\nto read the results back from the backend.",
+        "start": 747.827,
+        "duration": 3.72
+    },
+    {
+        "text": "'cause that would also probably,\nthat will need to read the.",
+        "start": 751.577,
+        "duration": 3.48
+    },
+    {
+        "text": "Whatever results you want, right?",
+        "start": 756.182,
+        "duration": 1.02
+    },
+    {
+        "text": "whatever hypothesis, values or\neverything, you have to actually read",
+        "start": 757.562,
+        "duration": 3.09
+    },
+    {
+        "text": "that from GPU memory back to CPU.",
+        "start": 760.652,
+        "duration": 1.59
+    },
+    {
+        "text": "So you want some sort of\nexplicit read call, and then",
+        "start": 762.542,
+        "duration": 2.64
+    },
+    {
+        "text": "you can do the rest of the code.",
+        "start": 765.182,
+        "duration": 1.38
+    },
+    {
+        "text": "Okay.",
+        "start": 768.002,
+        "duration": 0.24
+    },
+    {
+        "text": "Yeah.",
+        "start": 768.242,
+        "duration": 0.24
+    },
+    {
+        "text": "So scatter block, scatter, gather,\nand then block and then gather.",
+        "start": 768.482,
+        "duration": 4.5
+    },
+    {
+        "text": "Okay.",
+        "start": 774.098,
+        "duration": 0.159
+    },
+    {
+        "text": "Yeah, that makes sense.",
+        "start": 774.902,
+        "duration": 0.84
+    },
+    {
+        "text": "I'm, just,",
+        "start": 779.922,
+        "duration": 0.53
+    },
+    {
+        "text": "And this is step learning module.",
+        "start": 784.547,
+        "duration": 1.53
+    },
+    {
+        "text": "Okay, got it.",
+        "start": 786.107,
+        "duration": 0.72
+    },
+    {
+        "text": "Because that allows us to,",
+        "start": 787.217,
+        "duration": 1.17
+    },
+    {
+        "text": "okay.",
+        "start": 791.387,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 792.802,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 793.097,
+        "duration": 0.3
+    },
+    {
+        "text": "And this, yeah, that's helpful.",
+        "start": 793.397,
+        "duration": 1.95
+    },
+    {
+        "text": "certainly, you know the Monte\ncode better than me, right?",
+        "start": 796.757,
+        "duration": 2.28
+    },
+    {
+        "text": "Like I, I was just going through and\nfollowing the functions, and at least",
+        "start": 799.037,
+        "duration": 4.47
+    },
+    {
+        "text": "for the experiments I was running, to\nget a sense of where everything is.",
+        "start": 803.507,
+        "duration": 2.91
+    },
+    {
+        "text": "It seems like this is, because this\nis where the looping over the learning",
+        "start": 808.007,
+        "duration": 3.03
+    },
+    {
+        "text": "modules happens, Where we would start\nwith adjusting how we dispatch the work.",
+        "start": 811.037,
+        "duration": 4.74
+    },
+    {
+        "text": "so would it be helpful to you?",
+        "start": 816.737,
+        "duration": 1.44
+    },
+    {
+        "text": "so I'm just thinking about, more generic\nprocessing, like when, if in case",
+        "start": 818.927,
+        "duration": 4.86
+    },
+    {
+        "text": "you did wanna stack things together.",
+        "start": 823.787,
+        "duration": 1.65
+    },
+    {
+        "text": "Because with this approach,\ndispatch step is pretty much, if I'm",
+        "start": 826.067,
+        "duration": 4.05
+    },
+    {
+        "text": "understanding correctly, a dispatch step.",
+        "start": 830.117,
+        "duration": 2.58
+    },
+    {
+        "text": "We'll, create a GPU.",
+        "start": 833.387,
+        "duration": 1.77
+    },
+    {
+        "text": "Stream, was it?",
+        "start": 835.967,
+        "duration": 0.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 838.187,
+        "duration": 0.27
+    },
+    {
+        "text": "The stream.",
+        "start": 838.457,
+        "duration": 0.54
+    },
+    {
+        "text": "So, dispatch step as a stream could,\ndoes, is that what the output of",
+        "start": 839.687,
+        "duration": 5.67
+    },
+    {
+        "text": "the outcome of a dispatch step is?",
+        "start": 845.447,
+        "duration": 2.01
+    },
+    {
+        "text": "I actually think, because, correct me if\nI'm wrong here, but my understanding is",
+        "start": 848.027,
+        "duration": 5.25
+    },
+    {
+        "text": "it's a pretty set pipeline of operations\nfor the hypothesis update steps.",
+        "start": 854.147,
+        "duration": 5.07
+    },
+    {
+        "text": "I, I, guess what I'm asking is, you\nsaid that stacking things can be",
+        "start": 859.442,
+        "duration": 3.405
+    },
+    {
+        "text": "more efficient than adding streams.",
+        "start": 862.847,
+        "duration": 1.29
+    },
+    {
+        "text": "If we wanna stack things, then we\nwould probably want to scroll up if we",
+        "start": 864.932,
+        "duration": 3.81
+    },
+    {
+        "text": "wanted to gather all the sensory inputs\nall at once and have a set of sensory",
+        "start": 868.742,
+        "duration": 5.94
+    },
+    {
+        "text": "inputs and LMS and then stack them\ntogether and then dispatch that stream.",
+        "start": 874.682,
+        "duration": 5.49
+    },
+    {
+        "text": "That would be, yeah.",
+        "start": 880.592,
+        "duration": 2.67
+    },
+    {
+        "text": "So yeah, what I'm saying, stack them\nlike that's in like my original kind",
+        "start": 883.322,
+        "duration": 3.75
+    },
+    {
+        "text": "of proof concept code where we're\nactually doing one kernel dispatch for.",
+        "start": 887.072,
+        "duration": 6.78
+    },
+    {
+        "text": "Each step in the pipeline for\nall of the data across all lms.",
+        "start": 894.242,
+        "duration": 3.69
+    },
+    {
+        "text": "So in that case, we wouldn't\neven need multiple streams.",
+        "start": 897.962,
+        "duration": 2.61
+    },
+    {
+        "text": "Like it would just be one\ncuda stream, just, one Yeah.",
+        "start": 900.572,
+        "duration": 3.45
+    },
+    {
+        "text": "sequence of kernels.",
+        "start": 904.712,
+        "duration": 1.08
+    },
+    {
+        "text": "And just one kernel dispatch\nfor the entire operation.",
+        "start": 906.452,
+        "duration": 2.31
+    },
+    {
+        "text": "Yeah.",
+        "start": 909.242,
+        "duration": 0.15
+    },
+    {
+        "text": "and that would be more complex\nbecause Yeah, we would have",
+        "start": 909.812,
+        "duration": 2.01
+    },
+    {
+        "text": "to accumulate all of the data.",
+        "start": 911.822,
+        "duration": 2.46
+    },
+    {
+        "text": "Into kinda one continuous buffer\nto pass into the kernel and so",
+        "start": 914.777,
+        "duration": 3.9
+    },
+    {
+        "text": "there's some overhead, right?",
+        "start": 918.677,
+        "duration": 1.35
+    },
+    {
+        "text": "Whereas with this Cuda Stream approach,\nbecause each stream is handled separately,",
+        "start": 920.657,
+        "duration": 5.43
+    },
+    {
+        "text": "has different kernel dispatches,\nyou can have different references to",
+        "start": 926.177,
+        "duration": 2.79
+    },
+    {
+        "text": "the memory objects and everything.",
+        "start": 928.967,
+        "duration": 1.44
+    },
+    {
+        "text": "It's much simpler to implement, but it\nmight be less efficient because you're",
+        "start": 930.947,
+        "duration": 5.31
+    },
+    {
+        "text": "dispatching multiple kernels, right?",
+        "start": 936.347,
+        "duration": 2.88
+    },
+    {
+        "text": "Which might have their work\nparalyzed by the GPU scheduler.",
+        "start": 939.677,
+        "duration": 3.39
+    },
+    {
+        "text": "But you're not actually defining,\nlike thread level parallelism by",
+        "start": 943.952,
+        "duration": 3.57
+    },
+    {
+        "text": "doing one giant kernel dispatch\nthat can just do it all in one go.",
+        "start": 947.522,
+        "duration": 3.45
+    },
+    {
+        "text": "does that make sense with the difference?",
+        "start": 953.642,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 954.812,
+        "duration": 0.12
+    },
+    {
+        "text": "that makes sense.",
+        "start": 955.172,
+        "duration": 0.6
+    },
+    {
+        "text": "and the reason I'm poking at this\nis because if we're gonna change",
+        "start": 955.922,
+        "duration": 3.66
+    },
+    {
+        "text": "the API, I'd rather change it once\nthan change it now and then be like,",
+        "start": 959.582,
+        "duration": 4.35
+    },
+    {
+        "text": "okay, and we're gonna add stacking\nand we have to change the API again.",
+        "start": 963.962,
+        "duration": 2.64
+    },
+    {
+        "text": "Sure.",
+        "start": 966.602,
+        "duration": 0.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 966.787,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 967.082,
+        "duration": 0.21
+    },
+    {
+        "text": "And so that's what I'm saying\nis even if in this initial step",
+        "start": 967.292,
+        "duration": 4.14
+    },
+    {
+        "text": "we're not doing any stacking.",
+        "start": 971.462,
+        "duration": 1.26
+    },
+    {
+        "text": "I want the API.",
+        "start": 973.397,
+        "duration": 1.155
+    },
+    {
+        "text": "Like the, I want the swappable backend\ncomponent to the API for that to support",
+        "start": 975.787,
+        "duration": 6.79
+    },
+    {
+        "text": "stacking if we want to add it later.",
+        "start": 982.577,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah, no, that makes total sense.",
+        "start": 984.947,
+        "duration": 1.26
+    },
+    {
+        "text": "So then, so that's why I'm looking\nat okay, so in this, as you wrote it",
+        "start": 986.582,
+        "duration": 4.185
+    },
+    {
+        "text": "currently, this is super helpful 'cause\nit like allows me to co completely",
+        "start": 990.827,
+        "duration": 3.51
+    },
+    {
+        "text": "understand what you're talking about.",
+        "start": 994.337,
+        "duration": 1.08
+    },
+    {
+        "text": "So in, in this implementation.",
+        "start": 995.867,
+        "duration": 2.07
+    },
+    {
+        "text": "We wouldn't be able to do stacking\nbecause we're dispatching a could a",
+        "start": 998.342,
+        "duration": 6.33
+    },
+    {
+        "text": "stream correct my vocabulary, please.",
+        "start": 1004.672,
+        "duration": 2.07
+    },
+    {
+        "text": "dispatching a different, like\na kernel on a different stream.",
+        "start": 1007.702,
+        "duration": 3.33
+    },
+    {
+        "text": "Okay.",
+        "start": 1011.242,
+        "duration": 0.45
+    },
+    {
+        "text": "So we're dispatching a kernel on a, new\nstream with every dispatch step, right?",
+        "start": 1011.722,
+        "duration": 4.8
+    },
+    {
+        "text": "And sensorimotor inputs are just the\ninputs for that lm. So we're essentially",
+        "start": 1017.182,
+        "duration": 4.23
+    },
+    {
+        "text": "dispatching a kernel stream, a new kernel\nstream per each LM with just its inputs.",
+        "start": 1021.412,
+        "duration": 4.86
+    },
+    {
+        "text": "And it is my understanding that there\nmay be a feature optimization that might,",
+        "start": 1026.977,
+        "duration": 6.15
+    },
+    {
+        "text": "be possible where if we were to stack,\nlike learning modules that are doing the",
+        "start": 1033.127,
+        "duration": 6.45
+    },
+    {
+        "text": "same thing, do they require for stacking?",
+        "start": 1039.577,
+        "duration": 3.39
+    },
+    {
+        "text": "For stacking, I'm assuming we would, that\njust the kernel needs to be the same.",
+        "start": 1043.717,
+        "duration": 3.96
+    },
+    {
+        "text": "The inputs would just also get stacked.",
+        "start": 1047.677,
+        "duration": 2.16
+    },
+    {
+        "text": "Is that true?",
+        "start": 1049.987,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 1051.487,
+        "duration": 0.24
+    },
+    {
+        "text": "So it would be, yeah, like a\nstep where we, Put all of the",
+        "start": 1051.727,
+        "duration": 5.85
+    },
+    {
+        "text": "inputs, stack them into one.",
+        "start": 1057.577,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 1058.837,
+        "duration": 0.21
+    },
+    {
+        "text": "Input buffer.",
+        "start": 1059.317,
+        "duration": 0.87
+    },
+    {
+        "text": "and then one kernel.",
+        "start": 1061.117,
+        "duration": 0.75
+    },
+    {
+        "text": "Yeah, so that, API would require\nmultiple sensory, like an, like a",
+        "start": 1061.957,
+        "duration": 5.31
+    },
+    {
+        "text": "vector of sensory inputs and not\nJust sensory inputs for the cell.",
+        "start": 1067.267,
+        "duration": 3.09
+    },
+    {
+        "text": "So we would have a vector of sensory\ninputs and a vector of a lambs.",
+        "start": 1070.627,
+        "duration": 2.79
+    },
+    {
+        "text": "And then in the current implementation,\nit could always be just a one like vector",
+        "start": 1074.257,
+        "duration": 4.86
+    },
+    {
+        "text": "of we can always, it's the batching rule.",
+        "start": 1079.117,
+        "duration": 2.34
+    },
+    {
+        "text": "We can always have a vector of\none, but it's hard to introduce it.",
+        "start": 1081.517,
+        "duration": 2.35
+    },
+    {
+        "text": "List late after the fact.",
+        "start": 1085.372,
+        "duration": 1.11
+    },
+    {
+        "text": "But that's what I'm thinking\nabout this API where it becomes",
+        "start": 1086.812,
+        "duration": 3.0
+    },
+    {
+        "text": "where to make the breaking point.",
+        "start": 1091.772,
+        "duration": 1.25
+    },
+    {
+        "text": "That's good to consider that.",
+        "start": 1094.222,
+        "duration": 1.14
+    },
+    {
+        "text": "also, if we're actually stacking all\nof the operations across all lms, we",
+        "start": 1095.752,
+        "duration": 6.24
+    },
+    {
+        "text": "also wouldn't have to do this sort\nof three phase approach where you do",
+        "start": 1101.992,
+        "duration": 3.3
+    },
+    {
+        "text": "dispatch, blocking weight and then\nread, because we just have the one.",
+        "start": 1105.382,
+        "duration": 5.28
+    },
+    {
+        "text": "Pipeline, right?",
+        "start": 1111.547,
+        "duration": 0.78
+    },
+    {
+        "text": "So you just dispatch a kernel and\nthen once it's done, read the results.",
+        "start": 1112.327,
+        "duration": 3.48
+    },
+    {
+        "text": "But kinda like we were saying, we might\nhave to do different subgroups, right?",
+        "start": 1116.347,
+        "duration": 3.33
+    },
+    {
+        "text": "Like we might batch LMS of a certain\ntype together, or ones processing",
+        "start": 1119.677,
+        "duration": 3.96
+    },
+    {
+        "text": "different inputs, in which case\nmaybe we would still need a,",
+        "start": 1123.637,
+        "duration": 3.63
+    },
+    {
+        "text": "some level of a sort of\ndispatch step, right?",
+        "start": 1129.427,
+        "duration": 1.68
+    },
+    {
+        "text": "Or maybe each group of LMS that are\nprocessing together run on one stream.",
+        "start": 1131.107,
+        "duration": 4.89
+    },
+    {
+        "text": "So yeah.",
+        "start": 1137.137,
+        "duration": 0.55
+    },
+    {
+        "text": "I don't know, it would introduce\nthis level where we separate LMS into",
+        "start": 1139.252,
+        "duration": 3.63
+    },
+    {
+        "text": "different groups and then you follow\nthe same, this kinda same dispatch API.",
+        "start": 1143.362,
+        "duration": 4.53
+    },
+    {
+        "text": "And, it could be as simple as, and this is\nwhy I was thinking and to screw up a bit,",
+        "start": 1149.722,
+        "duration": 3.99
+    },
+    {
+        "text": "why this, backend might be involved with,\nlike, where do we make the interface at?",
+        "start": 1155.212,
+        "duration": 5.19
+    },
+    {
+        "text": "Because it could just be like,\nhere's all the learning modules,",
+        "start": 1161.512,
+        "duration": 2.43
+    },
+    {
+        "text": "here's all the sensorimotor inputs.",
+        "start": 1163.942,
+        "duration": 1.2
+    },
+    {
+        "text": "Then the initial, even the GPU\ninitial implementation is just a",
+        "start": 1165.982,
+        "duration": 3.39
+    },
+    {
+        "text": "for loop of single dispatchers.",
+        "start": 1169.372,
+        "duration": 1.86
+    },
+    {
+        "text": "But it opens up that, that, grouping\nthen would happen in the future",
+        "start": 1172.672,
+        "duration": 5.79
+    },
+    {
+        "text": "would have to happen inside, inside\nthat, that API not before it.",
+        "start": 1179.032,
+        "duration": 6.54
+    },
+    {
+        "text": "so, yeah.",
+        "start": 1187.312,
+        "duration": 1.35
+    },
+    {
+        "text": "Do you think the grouping\nshould happen before.",
+        "start": 1188.662,
+        "duration": 1.89
+    },
+    {
+        "text": "Do you have enough information\nto do meaningful grouping before",
+        "start": 1191.557,
+        "duration": 3.51
+    },
+    {
+        "text": "handing it to the backend?",
+        "start": 1195.607,
+        "duration": 1.05
+    },
+    {
+        "text": "Or does the backend, should\nthe backend do the grouping?",
+        "start": 1196.657,
+        "duration": 2.01
+    },
+    {
+        "text": "I guess that is the question\nthat I'm trying to pose now.",
+        "start": 1198.667,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 1201.577,
+        "duration": 0.45
+    },
+    {
+        "text": "I don't know, because I think",
+        "start": 1202.027,
+        "duration": 1.47
+    },
+    {
+        "text": "basically we could group alones like as\nlong as they're doing the same operations.",
+        "start": 1208.207,
+        "duration": 6.45
+    },
+    {
+        "text": "And we could figure out how to do\nit with, different inputs, right?",
+        "start": 1215.812,
+        "duration": 3.39
+    },
+    {
+        "text": "Like even if they're processing\ndifferent sensorimotor patches, as",
+        "start": 1219.262,
+        "duration": 2.19
+    },
+    {
+        "text": "long as it's the same type of LM doing\nthe same sequence of kernels, right?",
+        "start": 1221.452,
+        "duration": 3.75
+    },
+    {
+        "text": "We could stack, them, but like in\nVivian's comments she was saying, it's",
+        "start": 1226.102,
+        "duration": 7.5
+    },
+    {
+        "text": "hard at runtime to know which kernels\nare gonna be processing which inputs,",
+        "start": 1233.632,
+        "duration": 4.47
+    },
+    {
+        "text": "like some might, not be processing.",
+        "start": 1238.942,
+        "duration": 2.19
+    },
+    {
+        "text": "The same input, in which case you\nmight not wanna include in the back.",
+        "start": 1241.822,
+        "duration": 2.37
+    },
+    {
+        "text": "So it does seem like almost per\nstep, the grouping could change.",
+        "start": 1244.192,
+        "duration": 4.44
+    },
+    {
+        "text": "I think that's what we\nwould need to figure out.",
+        "start": 1248.962,
+        "duration": 1.53
+    },
+    {
+        "text": "'cause it'd probably be more efficient\nif it's more like experiment wide.",
+        "start": 1250.822,
+        "duration": 3.51
+    },
+    {
+        "text": "We can do the grouping at the\nbeginning and then have that be",
+        "start": 1255.052,
+        "duration": 2.76
+    },
+    {
+        "text": "consistent throughout all the steps.",
+        "start": 1257.812,
+        "duration": 1.92
+    },
+    {
+        "text": "Versus if at every step we're like\ndoing a different grouping of, lms, I",
+        "start": 1259.972,
+        "duration": 3.18
+    },
+    {
+        "text": "think that would start to get complex.",
+        "start": 1263.152,
+        "duration": 1.71
+    },
+    {
+        "text": "and then.",
+        "start": 1268.762,
+        "duration": 0.63
+    },
+    {
+        "text": "this is a, naive question, but if\nan LM doesn't have inputs for a nu",
+        "start": 1271.267,
+        "duration": 5.925
+    },
+    {
+        "text": "up, would you just zero in, zero\nout the sensory inputs and just,",
+        "start": 1277.192,
+        "duration": 5.46
+    },
+    {
+        "text": "or, would just zero out the sensory?",
+        "start": 1283.702,
+        "duration": 2.19
+    },
+    {
+        "text": "No, because we don't Would you just,\nwould we just ignore the outputs?",
+        "start": 1286.462,
+        "duration": 3.12
+    },
+    {
+        "text": "I think, would that be more efficient\nthan trying to regroup things?",
+        "start": 1290.782,
+        "duration": 3.72
+    },
+    {
+        "text": "Yeah, I think zero out.",
+        "start": 1295.942,
+        "duration": 1.98
+    },
+    {
+        "text": "Then have a, you could have a simple\ncase in the kernel itself for it, like",
+        "start": 1298.312,
+        "duration": 3.72
+    },
+    {
+        "text": "a flag or, if it just sees, it's like\nthe input is just the, it's just zeros.",
+        "start": 1302.032,
+        "duration": 5.82
+    },
+    {
+        "text": "It, skips doing the work.",
+        "start": 1307.912,
+        "duration": 1.71
+    },
+    {
+        "text": "That would probably be better than\ndoing a whole new grouping if it was",
+        "start": 1310.162,
+        "duration": 2.64
+    },
+    {
+        "text": "just to skip like a noop for one lm.",
+        "start": 1312.802,
+        "duration": 2.64
+    },
+    {
+        "text": "yeah, we don't ask that because\nthat sort of just handles the The",
+        "start": 1317.962,
+        "duration": 4.005
+    },
+    {
+        "text": "not everything will be processing.",
+        "start": 1322.192,
+        "duration": 1.59
+    },
+    {
+        "text": "It's okay, then yes.",
+        "start": 1323.782,
+        "duration": 2.58
+    },
+    {
+        "text": "So, that will handle that case.",
+        "start": 1327.247,
+        "duration": 1.2
+    },
+    {
+        "text": "So the only other case would be,",
+        "start": 1328.447,
+        "duration": 1.65
+    },
+    {
+        "text": "the other thing is so, lms,",
+        "start": 1332.497,
+        "duration": 2.73
+    },
+    {
+        "text": "I'm just trying to,",
+        "start": 1337.807,
+        "duration": 0.69
+    },
+    {
+        "text": "this is a sensory.",
+        "start": 1340.507,
+        "duration": 0.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 1342.427,
+        "duration": 0.12
+    },
+    {
+        "text": "These, this is sensory\ninputs, but they could get",
+        "start": 1342.547,
+        "duration": 2.1
+    },
+    {
+        "text": "NLM in the future could get.",
+        "start": 1347.257,
+        "duration": 2.04
+    },
+    {
+        "text": "So as, I'm building the CPV one, right?",
+        "start": 1353.512,
+        "duration": 3.33
+    },
+    {
+        "text": "so what can happen is a learning\nmodule, learning modules, inputs,",
+        "start": 1357.262,
+        "duration": 3.33
+    },
+    {
+        "text": "let me pull this up so I'm not\ntrying to do this one memory.",
+        "start": 1360.652,
+        "duration": 2.79
+    },
+    {
+        "text": "Do you wanna share?",
+        "start": 1364.432,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah, I'm gonna share the screen.",
+        "start": 1365.602,
+        "duration": 1.59
+    },
+    {
+        "text": "what am I looking for?",
+        "start": 1368.692,
+        "duration": 0.9
+    },
+    {
+        "text": "Is the,",
+        "start": 1369.592,
+        "duration": 0.57
+    },
+    {
+        "text": "I'm trying to say.",
+        "start": 1373.807,
+        "duration": 0.735
+    },
+    {
+        "text": "Okay.",
+        "start": 1377.777,
+        "duration": 0.29
+    },
+    {
+        "text": "So, this thing,",
+        "start": 1387.547,
+        "duration": 1.59
+    },
+    {
+        "text": "okay,",
+        "start": 1391.807,
+        "duration": 0.51
+    },
+    {
+        "text": "so learning modules received, okay, so\nthe things that are getting delivered,",
+        "start": 1394.417,
+        "duration": 3.36
+    },
+    {
+        "text": "okay, so this is the interesting,\nthis is what I was gonna highlight.",
+        "start": 1397.777,
+        "duration": 2.13
+    },
+    {
+        "text": "when the inputs into learning modules.",
+        "start": 1401.347,
+        "duration": 2.1
+    },
+    {
+        "text": "Will be like the outputs from\nthe sensorimotor modules.",
+        "start": 1404.227,
+        "duration": 3.48
+    },
+    {
+        "text": "These are, gonna be stable.",
+        "start": 1407.947,
+        "duration": 1.14
+    },
+    {
+        "text": "So like once your sensors are\nhooked up to your learning",
+        "start": 1409.897,
+        "duration": 3.09
+    },
+    {
+        "text": "modules, it's always the same.",
+        "start": 1412.987,
+        "duration": 1.17
+    },
+    {
+        "text": "Same.",
+        "start": 1414.457,
+        "duration": 0.24
+    },
+    {
+        "text": "The difference is the inputs\nfrom the previous steps.",
+        "start": 1415.927,
+        "duration": 4.83
+    },
+    {
+        "text": "Learning modules.",
+        "start": 1420.757,
+        "duration": 0.9
+    },
+    {
+        "text": "what this encodes is\nhierarchy of learning modules,",
+        "start": 1423.127,
+        "duration": 2.97
+    },
+    {
+        "text": "so, when learning mo, so\nlearning module outputs.",
+        "start": 1428.383,
+        "duration": 2.724
+    },
+    {
+        "text": "It can output, zero, one or\ntwo cortical messages, and",
+        "start": 1433.057,
+        "duration": 6.0
+    },
+    {
+        "text": "so it can output no messages.",
+        "start": 1439.057,
+        "duration": 2.25
+    },
+    {
+        "text": "it can output a, goal or it can\noutput a, what do we call now?",
+        "start": 1443.557,
+        "duration": 5.25
+    },
+    {
+        "text": "Preset percept, like a perception.",
+        "start": 1449.047,
+        "duration": 2.55
+    },
+    {
+        "text": "And so a goal would go to a\nlower level learning module, and",
+        "start": 1452.557,
+        "duration": 3.36
+    },
+    {
+        "text": "a percept would go to a higher\nlevel learning module essentially.",
+        "start": 1455.917,
+        "duration": 2.94
+    },
+    {
+        "text": "It's like a top down goal driven\nstuff, and then there's bottom up,",
+        "start": 1459.607,
+        "duration": 3.27
+    },
+    {
+        "text": "like assembling a hierarchy of inputs.",
+        "start": 1462.997,
+        "duration": 2.58
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 1465.907,
+        "duration": 0.81
+    },
+    {
+        "text": "Yeah.",
+        "start": 1467.287,
+        "duration": 0.42
+    },
+    {
+        "text": "so the reason I wanna highlight that\nis the inputs, this will be constant,",
+        "start": 1468.727,
+        "duration": 5.34
+    },
+    {
+        "text": "but the inputs to the learning module\nactually might be different width if it",
+        "start": 1474.127,
+        "duration": 5.79
+    },
+    {
+        "text": "gets, because it's gonna get a sensory\nprecept and then it might get a goal",
+        "start": 1479.952,
+        "duration": 4.495
+    },
+    {
+        "text": "from a higher level learning module.",
+        "start": 1484.447,
+        "duration": 1.32
+    },
+    {
+        "text": "And so so sometimes it might\nget no sensation, zero inputs.",
+        "start": 1487.027,
+        "duration": 3.78
+    },
+    {
+        "text": "It might get percept from a\nsensorimotor module that's stable,",
+        "start": 1490.957,
+        "duration": 3.03
+    },
+    {
+        "text": "but it also might get additional.",
+        "start": 1494.287,
+        "duration": 1.59
+    },
+    {
+        "text": "There's some bounded count\nof how many messages.",
+        "start": 1498.427,
+        "duration": 2.34
+    },
+    {
+        "text": "It depends on connectivity.",
+        "start": 1501.367,
+        "duration": 1.08
+    },
+    {
+        "text": "But, so the inputs will be\nvariable with no input one or",
+        "start": 1502.897,
+        "duration": 4.08
+    },
+    {
+        "text": "more To some finite amount.",
+        "start": 1506.982,
+        "duration": 2.905
+    },
+    {
+        "text": "But that, but, that any\nstep, that width can change.",
+        "start": 1510.252,
+        "duration": 3.565
+    },
+    {
+        "text": "How does, so I just wanna highlight that.",
+        "start": 1514.327,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah.",
+        "start": 1517.147,
+        "duration": 0.51
+    },
+    {
+        "text": "I think at a high level that should be\nfine because we're already envisioning",
+        "start": 1518.107,
+        "duration": 6.36
+    },
+    {
+        "text": "a, input processing phase, right?",
+        "start": 1525.007,
+        "duration": 3.63
+    },
+    {
+        "text": "Where we stack the appropriate\ninputs and kinda assuming",
+        "start": 1528.667,
+        "duration": 3.0
+    },
+    {
+        "text": "these would be, variable sizes.",
+        "start": 1531.667,
+        "duration": 2.31
+    },
+    {
+        "text": "Yep.",
+        "start": 1534.277,
+        "duration": 0.18
+    },
+    {
+        "text": "in prac, like when you get into\nsome of the lower level details,",
+        "start": 1535.327,
+        "duration": 3.54
+    },
+    {
+        "text": "there definitely could be some.",
+        "start": 1541.687,
+        "duration": 1.2
+    },
+    {
+        "text": "Overhead by having\nparticularly if you're stacking",
+        "start": 1543.607,
+        "duration": 4.17
+    },
+    {
+        "text": "kinda recreating a new buffer\nand transferring that every time.",
+        "start": 1552.097,
+        "duration": 2.61
+    },
+    {
+        "text": "Whereas if you had fixed size\ninputs, you could more easily pin",
+        "start": 1554.707,
+        "duration": 4.89
+    },
+    {
+        "text": "the memory between the CPU and GPU\nand just push to the right place.",
+        "start": 1559.597,
+        "duration": 3.48
+    },
+    {
+        "text": "But it seems like we could even get\naround that by just over allocating.",
+        "start": 1563.917,
+        "duration": 3.75
+    },
+    {
+        "text": "So if it's a certain max.",
+        "start": 1567.907,
+        "duration": 1.74
+    },
+    {
+        "text": "Input size and it's not an unreasonable\namount of memory or something, we",
+        "start": 1570.307,
+        "duration": 3.42
+    },
+    {
+        "text": "would know, give that for each input.",
+        "start": 1573.727,
+        "duration": 1.41
+    },
+    {
+        "text": "We would know that amount because\nthat is a configured connectivity.",
+        "start": 1575.707,
+        "duration": 4.77
+    },
+    {
+        "text": "Yeah.",
+        "start": 1581.557,
+        "duration": 0.06
+    },
+    {
+        "text": "So, that is defined at the start of the\nprogram and it's like you can only, get",
+        "start": 1581.977,
+        "duration": 5.19
+    },
+    {
+        "text": "inputs from the things you connected to.",
+        "start": 1587.797,
+        "duration": 1.42
+    },
+    {
+        "text": "So we will know that.",
+        "start": 1589.327,
+        "duration": 1.02
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 1590.467,
+        "duration": 0.54
+    },
+    {
+        "text": "So yeah, that's probably pretty\nstraightforward to get around, I think.",
+        "start": 1591.577,
+        "duration": 3.72
+    },
+    {
+        "text": "Yeah.",
+        "start": 1596.437,
+        "duration": 0.18
+    },
+    {
+        "text": "It's really just more,",
+        "start": 1596.617,
+        "duration": 0.66
+    },
+    {
+        "text": "Figuring out the LM grouping and having\nthat consistent, if the individual",
+        "start": 1599.647,
+        "duration": 4.32
+    },
+    {
+        "text": "input data is, changing step to step.",
+        "start": 1603.997,
+        "duration": 3.45
+    },
+    {
+        "text": "I don't think that's a big hurdle.",
+        "start": 1607.447,
+        "duration": 1.26
+    },
+    {
+        "text": "and right now just",
+        "start": 1611.217,
+        "duration": 1.75
+    },
+    {
+        "text": "I'm thinking, LM grouping\nis by type, right?",
+        "start": 1615.127,
+        "duration": 4.71
+    },
+    {
+        "text": "Like it's, if it's the same\nclass as gonna have the same",
+        "start": 1619.837,
+        "duration": 2.01
+    },
+    {
+        "text": "implementations, gonna do the same\ncomputations, it's It's, it should be.",
+        "start": 1621.847,
+        "duration": 4.62
+    },
+    {
+        "text": "M before the backend.",
+        "start": 1628.342,
+        "duration": 1.785
+    },
+    {
+        "text": "It should be trivial to group these.",
+        "start": 1630.127,
+        "duration": 1.5
+    },
+    {
+        "text": "but something backend\nwouldn't have to worry about.",
+        "start": 1634.057,
+        "duration": 2.13
+    },
+    {
+        "text": "So backend, so the API could just get\nthe grouping and I guess, in the simpler",
+        "start": 1636.307,
+        "duration": 6.36
+    },
+    {
+        "text": "cases I was looking at or just, yeah.",
+        "start": 1642.667,
+        "duration": 2.31
+    },
+    {
+        "text": "One level of hierarchy of lms.",
+        "start": 1644.977,
+        "duration": 2.91
+    },
+    {
+        "text": "But to your point, you guys are\nenvisioning a more complex graph of lms.",
+        "start": 1648.427,
+        "duration": 4.53
+    },
+    {
+        "text": "We probably have to do the grouping.",
+        "start": 1653.317,
+        "duration": 1.41
+    },
+    {
+        "text": "Based off of,",
+        "start": 1655.747,
+        "duration": 0.81
+    },
+    {
+        "text": "like when the LM would be processing\ndata, so like the first level would",
+        "start": 1659.257,
+        "duration": 3.48
+    },
+    {
+        "text": "get grouped together and then if those\nare passing to a second level of lms,",
+        "start": 1662.737,
+        "duration": 3.36
+    },
+    {
+        "text": "that's not how it's gonna work.",
+        "start": 1668.977,
+        "duration": 1.26
+    },
+    {
+        "text": "So any hierarchy messages\nare across steps.",
+        "start": 1670.237,
+        "duration": 4.44
+    },
+    {
+        "text": "Okay.",
+        "start": 1676.177,
+        "duration": 0.3
+    },
+    {
+        "text": "That's kinda like the\nhead archy kind of thing.",
+        "start": 1676.477,
+        "duration": 1.8
+    },
+    {
+        "text": "So it's like they're all one\nlevel and getting it from.",
+        "start": 1678.277,
+        "duration": 2.4
+    },
+    {
+        "text": "Previous steps?",
+        "start": 1682.297,
+        "duration": 0.6
+    },
+    {
+        "text": "No, There's still like a set up.",
+        "start": 1682.957,
+        "duration": 1.8
+    },
+    {
+        "text": "What, I'm, there is a,\nlet me show a graphic.",
+        "start": 1685.057,
+        "duration": 2.37
+    },
+    {
+        "text": "but it's super helpful for this,\noh, let me just trying to find it.",
+        "start": 1687.727,
+        "duration": 4.53
+    },
+    {
+        "text": "How was it?",
+        "start": 1694.692,
+        "duration": 0.565
+    },
+    {
+        "text": "It was, I think thread.",
+        "start": 1695.257,
+        "duration": 1.5
+    },
+    {
+        "text": "I'll, download it and share it real quick.",
+        "start": 1697.147,
+        "duration": 1.59
+    },
+    {
+        "text": "it's, it was a give we go.",
+        "start": 1701.197,
+        "duration": 4.23
+    },
+    {
+        "text": "Take a screenshot.",
+        "start": 1709.327,
+        "duration": 1.08
+    },
+    {
+        "text": "Put this in here.",
+        "start": 1712.837,
+        "duration": 1.29
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 1715.417,
+        "duration": 0.54
+    },
+    {
+        "text": "it works like this,",
+        "start": 1717.637,
+        "duration": 1.65
+    },
+    {
+        "text": "so when it's getting passed between\nthe levels, it only ever travels",
+        "start": 1726.517,
+        "duration": 4.62
+    },
+    {
+        "text": "It's at, time, at frame one.",
+        "start": 1731.887,
+        "duration": 2.4
+    },
+    {
+        "text": "That's one step.",
+        "start": 1734.467,
+        "duration": 1.05
+    },
+    {
+        "text": "And even if it goes up the hierarchy.",
+        "start": 1735.907,
+        "duration": 1.765
+    },
+    {
+        "text": "There's travel time, so it's step\ntwo that one LM will receive the",
+        "start": 1738.982,
+        "duration": 5.55
+    },
+    {
+        "text": "previous steps from lower level\nand then same thing from top down.",
+        "start": 1744.532,
+        "duration": 3.69
+    },
+    {
+        "text": "So that level L will send down to\nLL minus one, but in the next time.",
+        "start": 1749.092,
+        "duration": 4.29
+    },
+    {
+        "text": "So what you see every step, but, what I'm\nsaying is every step, all alarms, compute.",
+        "start": 1754.282,
+        "duration": 5.91
+    },
+    {
+        "text": "There's not like a, there's\nnot a hierarchy breakdown.",
+        "start": 1761.302,
+        "duration": 2.82
+    },
+    {
+        "text": "Inside a step.",
+        "start": 1765.202,
+        "duration": 0.765
+    },
+    {
+        "text": "So it's just so every step, every\nLM gets inputs, m puts outputs,",
+        "start": 1767.137,
+        "duration": 4.5
+    },
+    {
+        "text": "and then go onto to the next step.",
+        "start": 1772.537,
+        "duration": 1.77
+    },
+    {
+        "text": "Going to the next step.",
+        "start": 1774.307,
+        "duration": 0.72
+    },
+    {
+        "text": "There's not like a, in a step\nwe're gonna do level one and then",
+        "start": 1775.027,
+        "duration": 3.12
+    },
+    {
+        "text": "level two and then level three\nand pass messages between that.",
+        "start": 1778.147,
+        "duration": 2.94
+    },
+    {
+        "text": "We don't do that in a step.",
+        "start": 1781.087,
+        "duration": 1.14
+    },
+    {
+        "text": "it's, gotcha.",
+        "start": 1782.382,
+        "duration": 0.31
+    },
+    {
+        "text": "It's not how it's set.",
+        "start": 1782.827,
+        "duration": 0.9
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 1783.787,
+        "duration": 0.66
+    },
+    {
+        "text": "Yeah, that makes total sense.",
+        "start": 1784.807,
+        "duration": 1.05
+    },
+    {
+        "text": "So yeah, that would be even\neasier for the grouping.",
+        "start": 1786.217,
+        "duration": 1.95
+    },
+    {
+        "text": "'cause you can just do Yeah.",
+        "start": 1788.197,
+        "duration": 0.93
+    },
+    {
+        "text": "LMS all in one group\nregardless of the level.",
+        "start": 1789.847,
+        "duration": 2.28
+    },
+    {
+        "text": "Exactly, that.",
+        "start": 1793.267,
+        "duration": 0.69
+    },
+    {
+        "text": "That's why I was thinking that.",
+        "start": 1793.957,
+        "duration": 0.695
+    },
+    {
+        "text": "So that's why the, framework\ncan just give you the groupings",
+        "start": 1795.502,
+        "duration": 3.15
+    },
+    {
+        "text": "of here are the same things.",
+        "start": 1798.652,
+        "duration": 1.38
+    },
+    {
+        "text": "It'll compute the same.",
+        "start": 1800.722,
+        "duration": 0.93
+    },
+    {
+        "text": "Okay.",
+        "start": 1803.602,
+        "duration": 0.15
+    },
+    {
+        "text": "Yeah.",
+        "start": 1805.582,
+        "duration": 0.3
+    },
+    {
+        "text": "yeah.",
+        "start": 1807.322,
+        "duration": 0.15
+    },
+    {
+        "text": "So it seems like stacking could be",
+        "start": 1807.472,
+        "duration": 2.25
+    },
+    {
+        "text": "feasible with the system.",
+        "start": 1811.942,
+        "duration": 1.05
+    },
+    {
+        "text": "Like it wouldn't deviate too much from the\nprinciples and require too many changes.",
+        "start": 1814.402,
+        "duration": 6.24
+    },
+    {
+        "text": "I do think it'd be more complex.",
+        "start": 1823.147,
+        "duration": 1.95
+    },
+    {
+        "text": "I think the Coda streaming approach\nis simpler and I just don't",
+        "start": 1825.097,
+        "duration": 5.1
+    },
+    {
+        "text": "know what the benefits would be.",
+        "start": 1830.197,
+        "duration": 1.32
+    },
+    {
+        "text": "comparing them.",
+        "start": 1832.627,
+        "duration": 0.63
+    },
+    {
+        "text": "Without profiling data.",
+        "start": 1833.527,
+        "duration": 1.14
+    },
+    {
+        "text": "Comparing what's the\nalternative could of streaming.",
+        "start": 1835.387,
+        "duration": 2.13
+    },
+    {
+        "text": "Oh, like doing like the coda streaming\napproach, versus trying to stack and",
+        "start": 1837.517,
+        "duration": 4.035
+    },
+    {
+        "text": "do single kernel dispatch for all.",
+        "start": 1841.597,
+        "duration": 1.5
+    },
+    {
+        "text": "Oh, I, okay.",
+        "start": 1843.097,
+        "duration": 1.295
+    },
+    {
+        "text": "I would, so, I am not advocating\nthat we try stacking now.",
+        "start": 1844.507,
+        "duration": 3.84
+    },
+    {
+        "text": "Okay.",
+        "start": 1849.127,
+        "duration": 0.36
+    },
+    {
+        "text": "You just wanna make sure\nwe can support that.",
+        "start": 1849.667,
+        "duration": 1.38
+    },
+    {
+        "text": "I just wanna make sure that the API, that\nwe don't have to change the API twice.",
+        "start": 1851.437,
+        "duration": 4.14
+    },
+    {
+        "text": "Yeah.",
+        "start": 1855.932,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 1856.227,
+        "duration": 0.19
+    },
+    {
+        "text": "And so, what, like when you get\na group, just I guess that's,",
+        "start": 1856.567,
+        "duration": 7.5
+    },
+    {
+        "text": "a consequence of that, right?",
+        "start": 1864.067,
+        "duration": 1.14
+    },
+    {
+        "text": "Because that means inside that call\nif you get, even if you get groups, do",
+        "start": 1865.207,
+        "duration": 6.21
+    },
+    {
+        "text": "you then now dispatch block and get,\nscatter block and gather in that call?",
+        "start": 1871.417,
+        "duration": 6.63
+    },
+    {
+        "text": "Or do you.",
+        "start": 1878.047,
+        "duration": 0.57
+    },
+    {
+        "text": "Across the group calls.",
+        "start": 1880.072,
+        "duration": 1.32
+    },
+    {
+        "text": "I see, the, I feel like could, we try to\nhave the API support this idea of an LM",
+        "start": 1881.937,
+        "duration": 6.685
+    },
+    {
+        "text": "group and for the initial implementation,\nit's just every LM is in its own group.",
+        "start": 1888.712,
+        "duration": 3.78
+    },
+    {
+        "text": "We're not trying to, if we don't wanna\nsupport any stacking, but maybe that",
+        "start": 1892.792,
+        "duration": 5.67
+    },
+    {
+        "text": "API would be consistent in the future.",
+        "start": 1898.462,
+        "duration": 1.56
+    },
+    {
+        "text": "If we start to group lms, then they just\nbecome, that group is now a part of that",
+        "start": 1900.082,
+        "duration": 4.74
+    },
+    {
+        "text": "dis watch dispatch block the results flow.",
+        "start": 1904.822,
+        "duration": 3.9
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 1909.997,
+        "duration": 0.63
+    },
+    {
+        "text": "Yeah, I see what you're saying.",
+        "start": 1910.637,
+        "duration": 0.92
+    },
+    {
+        "text": "my question is,",
+        "start": 1912.817,
+        "duration": 0.99
+    },
+    {
+        "text": "do you,",
+        "start": 1916.597,
+        "duration": 0.66
+    },
+    {
+        "text": "would you want to,",
+        "start": 1920.227,
+        "duration": 0.84
+    },
+    {
+        "text": "so so if we, do the grouping thing,\nI know we're talking about something",
+        "start": 1924.502,
+        "duration": 4.635
+    },
+    {
+        "text": "we're not gonna implement, so I'm sorry.",
+        "start": 1929.137,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 1930.427,
+        "duration": 0.09
+    },
+    {
+        "text": "if we do the grouping thing.",
+        "start": 1933.127,
+        "duration": 1.62
+    },
+    {
+        "text": "Would the approach be then you'd wait\nfor that group compete to, to, finish",
+        "start": 1935.377,
+        "duration": 5.58
+    },
+    {
+        "text": "before starting an next group or,\nyou're, because it's, you're essentially",
+        "start": 1940.957,
+        "duration": 5.55
+    },
+    {
+        "text": "for that group, the, implementation\nwould be for that group stack.",
+        "start": 1946.597,
+        "duration": 4.62
+    },
+    {
+        "text": "One CPU, sorry, one GPU Stream.",
+        "start": 1952.687,
+        "duration": 2.935
+    },
+    {
+        "text": "dispatch one GP Stream and then wait for\nthat to finish or for that group stack.",
+        "start": 1957.952,
+        "duration": 5.55
+    },
+    {
+        "text": "Dispatch that one stream,\nthen grab another group.",
+        "start": 1963.502,
+        "duration": 2.67
+    },
+    {
+        "text": "Stack dispatch that one stream, and\nthen wait for all streams to finish.",
+        "start": 1966.202,
+        "duration": 3.42
+    },
+    {
+        "text": "And then the second approach, okay, so\nbasically keep the same idea we're doing",
+        "start": 1970.192,
+        "duration": 3.39
+    },
+    {
+        "text": "now for per lm, and then do that same\ndispatching scheme, multiple streams,",
+        "start": 1973.582,
+        "duration": 5.76
+    },
+    {
+        "text": "but just have each stream be a group.",
+        "start": 1979.342,
+        "duration": 1.835
+    },
+    {
+        "text": "Got it.",
+        "start": 1981.832,
+        "duration": 0.36
+    },
+    {
+        "text": "Got it.",
+        "start": 1982.192,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay.",
+        "start": 1982.612,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 1983.002,
+        "duration": 0.36
+    },
+    {
+        "text": "okay.",
+        "start": 1984.022,
+        "duration": 0.39
+    },
+    {
+        "text": "I, I think I'm now caught up\nwith what you were saying.",
+        "start": 1984.442,
+        "duration": 2.49
+    },
+    {
+        "text": "The API is a list of groups.",
+        "start": 1987.502,
+        "duration": 2.67
+    },
+    {
+        "text": "And initially it's, I can give you\neither the list of one group or I",
+        "start": 1991.612,
+        "duration": 6.15
+    },
+    {
+        "text": "can give you a list of one LM groups.",
+        "start": 1997.762,
+        "duration": 2.88
+    },
+    {
+        "text": "Yeah.",
+        "start": 2000.972,
+        "duration": 0.33
+    },
+    {
+        "text": "But it, doesn't matter.",
+        "start": 2001.422,
+        "duration": 2.25
+    },
+    {
+        "text": "Okay.",
+        "start": 2003.702,
+        "duration": 0.27
+    },
+    {
+        "text": "Got it.",
+        "start": 2003.972,
+        "duration": 0.33
+    },
+    {
+        "text": "But the API, you get a list of groups.",
+        "start": 2004.302,
+        "duration": 1.8
+    },
+    {
+        "text": "Okay.",
+        "start": 2006.132,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 2007.152,
+        "duration": 0.3
+    },
+    {
+        "text": "yeah.",
+        "start": 2007.662,
+        "duration": 0.15
+    },
+    {
+        "text": "At least, yeah, the experiment level.",
+        "start": 2007.812,
+        "duration": 1.74
+    },
+    {
+        "text": "We can design the flow around that.",
+        "start": 2010.197,
+        "duration": 1.71
+    },
+    {
+        "text": "So kind a consistent interface,\nso then the backend, we can start",
+        "start": 2012.027,
+        "duration": 3.42
+    },
+    {
+        "text": "to change depending on whether\nwe do stacking groups or not.",
+        "start": 2015.447,
+        "duration": 2.52
+    },
+    {
+        "text": "And this allows the backend\nto use the group if it wants.",
+        "start": 2018.357,
+        "duration": 5.07
+    },
+    {
+        "text": "Basically list of lists.",
+        "start": 2023.487,
+        "duration": 1.14
+    },
+    {
+        "text": "It uses the groups if it wants, or it\nflattens it if it does not know how to.",
+        "start": 2024.777,
+        "duration": 4.02
+    },
+    {
+        "text": "Do any, except for the CPU\nversion, we would just flatten it.",
+        "start": 2029.847,
+        "duration": 3.15
+    },
+    {
+        "text": "There's no distinction between\nthis group or that group.",
+        "start": 2033.687,
+        "duration": 2.22
+    },
+    {
+        "text": "It would just become a for\nloop of what it currently is.",
+        "start": 2036.777,
+        "duration": 2.64
+    },
+    {
+        "text": "we might wanna do some multithreading\nat that level for the cpu.",
+        "start": 2040.227,
+        "duration": 2.88
+    },
+    {
+        "text": "Okay.",
+        "start": 2043.107,
+        "duration": 0.01
+    },
+    {
+        "text": "There you go.",
+        "start": 2043.117,
+        "duration": 0.41
+    },
+    {
+        "text": "Yeah, Some ization we could do.",
+        "start": 2043.587,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah.",
+        "start": 2046.017,
+        "duration": 0.24
+    },
+    {
+        "text": "But the naive, like current approach\nof, we just flatten into a for loop",
+        "start": 2046.257,
+        "duration": 4.11
+    },
+    {
+        "text": "and that would be the equivalent\nof, I'm just trying to think",
+        "start": 2050.367,
+        "duration": 3.03
+    },
+    {
+        "text": "of, if you recall, I was saying,",
+        "start": 2053.397,
+        "duration": 5.7
+    },
+    {
+        "text": "sharing screen, this bit.",
+        "start": 2061.587,
+        "duration": 2.97
+    },
+    {
+        "text": "Where I was like the, Q and CPU\nbackend, like when, whenever",
+        "start": 2065.652,
+        "duration": 5.73
+    },
+    {
+        "text": "refactor it that want the default\nimplementation be the Q implementation.",
+        "start": 2071.382,
+        "duration": 3.36
+    },
+    {
+        "text": "And so the default implementation\nof the SAP, I will just flatten",
+        "start": 2074.937,
+        "duration": 3.015
+    },
+    {
+        "text": "that list of list into Forough and\nbe exact the same code, basically.",
+        "start": 2077.952,
+        "duration": 4.11
+    },
+    {
+        "text": "Yeah.",
+        "start": 2082.062,
+        "duration": 0.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 2082.302,
+        "duration": 0.27
+    },
+    {
+        "text": "Start list.",
+        "start": 2082.992,
+        "duration": 0.345
+    },
+    {
+        "text": "Yeah.",
+        "start": 2084.337,
+        "duration": 0.28
+    },
+    {
+        "text": "Okay.",
+        "start": 2085.512,
+        "duration": 0.45
+    },
+    {
+        "text": "It sounds plausible.",
+        "start": 2086.937,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm sure we missed something that\nwill become, I'm sure, apparent",
+        "start": 2087.987,
+        "duration": 2.43
+    },
+    {
+        "text": "as soon as start writing code and\nit's like this will never work.",
+        "start": 2090.417,
+        "duration": 3.12
+    },
+    {
+        "text": "It's somewhere only a half hour in.",
+        "start": 2094.737,
+        "duration": 1.05
+    },
+    {
+        "text": "It's a pretty reasonable somewhere.",
+        "start": 2095.787,
+        "duration": 1.53
+    },
+    {
+        "text": "okay.",
+        "start": 2102.087,
+        "duration": 0.42
+    },
+    {
+        "text": "What else would we like talk about?",
+        "start": 2102.777,
+        "duration": 1.02
+    },
+    {
+        "text": "Because I feel that's, not\nimpossible and it seems like",
+        "start": 2105.417,
+        "duration": 4.11
+    },
+    {
+        "text": "we can figure out a way.",
+        "start": 2111.702,
+        "duration": 1.1
+    },
+    {
+        "text": "the rest of it, I think is starting\nto just get more into the, into the",
+        "start": 2114.972,
+        "duration": 2.85
+    },
+    {
+        "text": "weeds about what all we need to change.",
+        "start": 2117.822,
+        "duration": 2.88
+    },
+    {
+        "text": "Like I was starting to look at the, the\nstack of functions before you actually",
+        "start": 2120.702,
+        "duration": 5.25
+    },
+    {
+        "text": "reach the hypothesis updater, right?",
+        "start": 2125.952,
+        "duration": 1.89
+    },
+    {
+        "text": "Like step learning modules.",
+        "start": 2127.842,
+        "duration": 1.5
+    },
+    {
+        "text": "The matching step.",
+        "start": 2129.432,
+        "duration": 0.81
+    },
+    {
+        "text": "Okay.",
+        "start": 2130.902,
+        "duration": 0.18
+    },
+    {
+        "text": "Compute possible matches, update.",
+        "start": 2131.442,
+        "duration": 1.29
+    },
+    {
+        "text": "we'd have to figure out how to do all of\nthat in like a non-blocking dispatch way.",
+        "start": 2132.882,
+        "duration": 4.26
+    },
+    {
+        "text": "That, that's what I wanted to ask.",
+        "start": 2137.592,
+        "duration": 1.14
+    },
+    {
+        "text": "which Kers work?",
+        "start": 2140.862,
+        "duration": 2.76
+    },
+    {
+        "text": "What is the minimum set of, operations?",
+        "start": 2144.507,
+        "duration": 3.42
+    },
+    {
+        "text": "Because for the prototype, yeah, we should\njust use the minimum set just to make",
+        "start": 2147.957,
+        "duration": 3.09
+    },
+    {
+        "text": "sure that it Like end to end can run,\nwithout necessarily trying to make all",
+        "start": 2151.047,
+        "duration": 5.37
+    },
+    {
+        "text": "the kernels work, make the machinery work.",
+        "start": 2156.417,
+        "duration": 1.98
+    },
+    {
+        "text": "So it's just so just pick the kernels\nthat are functioning and, yeah.",
+        "start": 2158.397,
+        "duration": 5.85
+    },
+    {
+        "text": "So of the ones that I.\nShared in that post.",
+        "start": 2164.367,
+        "duration": 7.125
+    },
+    {
+        "text": "Everything is working except for,\nKNN with the caveat of a couple",
+        "start": 2172.332,
+        "duration": 6.66
+    },
+    {
+        "text": "are like not quite as, consistent.",
+        "start": 2178.992,
+        "duration": 2.91
+    },
+    {
+        "text": "So like the custom distance is\nAccurate to like a tolerance of",
+        "start": 2182.622,
+        "duration": 5.82
+    },
+    {
+        "text": "e negative two, I think.",
+        "start": 2191.097,
+        "duration": 1.56
+    },
+    {
+        "text": "Whereas the others are all to e negative\nfive and I'm not really sure why",
+        "start": 2192.957,
+        "duration": 3.81
+    },
+    {
+        "text": "custom distance isn't as consistent.",
+        "start": 2197.217,
+        "duration": 2.13
+    },
+    {
+        "text": "Okay.",
+        "start": 2200.217,
+        "duration": 0.06
+    },
+    {
+        "text": "There was a bug with the pose, evidence\nkernel, and I think for that, but",
+        "start": 2200.277,
+        "duration": 3.57
+    },
+    {
+        "text": "it's also now it just has a slightly\nlower tolerance for it to pass.",
+        "start": 2203.847,
+        "duration": 3.36
+    },
+    {
+        "text": "so it's, Gotcha.",
+        "start": 2209.967,
+        "duration": 1.62
+    },
+    {
+        "text": "But the kernels seem to be functional\nand I give pretty much the right answer.",
+        "start": 2212.307,
+        "duration": 3.09
+    },
+    {
+        "text": "Okay.",
+        "start": 2216.627,
+        "duration": 0.03
+    },
+    {
+        "text": "Everything except, K on.",
+        "start": 2216.657,
+        "duration": 1.32
+    },
+    {
+        "text": "Okay,",
+        "start": 2219.222,
+        "duration": 0.24
+    },
+    {
+        "text": "okay.",
+        "start": 2222.012,
+        "duration": 0.24
+    },
+    {
+        "text": "So that, gives us, so that gives\nthe target to what, the GPU",
+        "start": 2222.252,
+        "duration": 5.13
+    },
+    {
+        "text": "hypothesis up there can swap,",
+        "start": 2228.642,
+        "duration": 2.76
+    },
+    {
+        "text": "can say that again.",
+        "start": 2234.552,
+        "duration": 0.99
+    },
+    {
+        "text": "That gives a target of what the\ninitial implementation of the.",
+        "start": 2236.202,
+        "duration": 3.66
+    },
+    {
+        "text": "GPU hypothesis update.",
+        "start": 2241.932,
+        "duration": 1.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 2243.252,
+        "duration": 0.39
+    },
+    {
+        "text": "I think the, thing that's missing\nand in my understanding of yeah,",
+        "start": 2244.062,
+        "duration": 3.18
+    },
+    {
+        "text": "how well we could drop and replace.",
+        "start": 2247.332,
+        "duration": 1.5
+    },
+    {
+        "text": "like this proof of concept that kind\nof took the core computation, made sure",
+        "start": 2249.192,
+        "duration": 4.77
+    },
+    {
+        "text": "made that work, made it work for the\ntrace data that I was saving through",
+        "start": 2253.992,
+        "duration": 4.2
+    },
+    {
+        "text": "like the profile hypothesis update.",
+        "start": 2258.192,
+        "duration": 1.71
+    },
+    {
+        "text": "But, I feel like there's still\ngotta be edge cases and like control",
+        "start": 2260.682,
+        "duration": 4.77
+    },
+    {
+        "text": "flow linking these computations.",
+        "start": 2265.452,
+        "duration": 2.7
+    },
+    {
+        "text": "Okay.",
+        "start": 2268.212,
+        "duration": 0.03
+    },
+    {
+        "text": "I haven't worked through like how that\nwould all map to A GPO implementation.",
+        "start": 2269.802,
+        "duration": 3.03
+    },
+    {
+        "text": "Like I once I got to the level\nof breaking into these different",
+        "start": 2273.132,
+        "duration": 3.18
+    },
+    {
+        "text": "operators, I lived at that level\none and implemented the kernels.",
+        "start": 2276.312,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 2279.672,
+        "duration": 0.09
+    },
+    {
+        "text": "But, some more work would need to go\nthrough to actually think about, okay,",
+        "start": 2279.852,
+        "duration": 3.36
+    },
+    {
+        "text": "if we're actually doing the full end\nto end, you give a input, sensorimotor,",
+        "start": 2283.362,
+        "duration": 5.34
+    },
+    {
+        "text": "and then sensorimotor reading and\nthen, final hypothesis, update outputs.",
+        "start": 2288.912,
+        "duration": 5.16
+    },
+    {
+        "text": "probably need do some work\nto chain those together.",
+        "start": 2295.902,
+        "duration": 1.62
+    },
+    {
+        "text": "Is that something you wanna do?",
+        "start": 2298.977,
+        "duration": 0.9
+    },
+    {
+        "text": "Not, or is that something\nyou wanna do offline?",
+        "start": 2299.877,
+        "duration": 2.94
+    },
+    {
+        "text": "Oh, we can start to go\nthrough it and talk about it.",
+        "start": 2304.257,
+        "duration": 2.005
+    },
+    {
+        "text": "is there anything else\nyou'd rather talk about?",
+        "start": 2307.077,
+        "duration": 3.54
+    },
+    {
+        "text": "because Yeah, I agree.",
+        "start": 2314.157,
+        "duration": 0.57
+    },
+    {
+        "text": "Like it sounds like we have a\nidea for the high level API.",
+        "start": 2314.727,
+        "duration": 3.6
+    },
+    {
+        "text": "And that's still not\nthe thing that you need.",
+        "start": 2318.627,
+        "duration": 2.565
+    },
+    {
+        "text": "Yeah.",
+        "start": 2322.342,
+        "duration": 0.29
+    },
+    {
+        "text": "'cause so, the thing that\nyou need is actually.",
+        "start": 2323.952,
+        "duration": 2.145
+    },
+    {
+        "text": "The, nitty gritty detail of swapping out,\nlike what object can we swap out or Right.",
+        "start": 2327.792,
+        "duration": 8.1
+    },
+    {
+        "text": "What we have to change\nto make that possible.",
+        "start": 2335.952,
+        "duration": 2.01
+    },
+    {
+        "text": "UMIs.",
+        "start": 2347.677,
+        "duration": 0.29
+    },
+    {
+        "text": "This is just the multi code base.",
+        "start": 2355.182,
+        "duration": 1.74
+    },
+    {
+        "text": "okay.",
+        "start": 2357.697,
+        "duration": 0.29
+    },
+    {
+        "text": "So yeah, I don't have a specific question.",
+        "start": 2365.067,
+        "duration": 1.275
+    },
+    {
+        "text": "I just need to spend some more time\ngoing through this and, thinking",
+        "start": 2366.672,
+        "duration": 2.58
+    },
+    {
+        "text": "about how everything chains together.",
+        "start": 2369.252,
+        "duration": 1.62
+    },
+    {
+        "text": "but yeah, we can do that right here",
+        "start": 2373.467,
+        "duration": 3.045
+    },
+    {
+        "text": "because the other thing\nI'm wondering like.",
+        "start": 2380.442,
+        "duration": 1.5
+    },
+    {
+        "text": "We have the hypothesis update.",
+        "start": 2383.607,
+        "duration": 1.2
+    },
+    {
+        "text": "are all the operations there?",
+        "start": 2385.977,
+        "duration": 1.32
+    },
+    {
+        "text": "There's, I remember there's, and\nthen the, is there like one, and",
+        "start": 2387.297,
+        "duration": 4.62
+    },
+    {
+        "text": "then this, what's, in the, there's\nsome things are in the displacer and",
+        "start": 2391.917,
+        "duration": 3.21
+    },
+    {
+        "text": "some things are in the update, right?",
+        "start": 2395.127,
+        "duration": 1.56
+    },
+    {
+        "text": "but what we're talking about even is\nwe're not even talking about, it sounds",
+        "start": 2399.417,
+        "duration": 3.84
+    },
+    {
+        "text": "to me like we're not even talking\nabout an alternate hypothesis update.",
+        "start": 2403.257,
+        "duration": 2.61
+    },
+    {
+        "text": "We're talking about.",
+        "start": 2406.017,
+        "duration": 0.93
+    },
+    {
+        "text": "Actually inside the hypothesis update,\nthere is a different implementation.",
+        "start": 2409.632,
+        "duration": 4.29
+    },
+    {
+        "text": "so, let's say, yeah, I mean\nI think this could just be a",
+        "start": 2414.792,
+        "duration": 3.09
+    },
+    {
+        "text": "different hypothesis update.",
+        "start": 2417.882,
+        "duration": 1.71
+    },
+    {
+        "text": "I think.",
+        "start": 2420.012,
+        "duration": 0.36
+    },
+    {
+        "text": "I think it's up to us figure out\nwhat, what makes the more sense.",
+        "start": 2421.752,
+        "duration": 3.15
+    },
+    {
+        "text": "the reason I'm, the reason, I'm\nthinking is because if you look",
+        "start": 2425.892,
+        "duration": 3.84
+    },
+    {
+        "text": "at, resampling hypothesis update,\nthat's already an alternate.",
+        "start": 2429.732,
+        "duration": 3.96
+    },
+    {
+        "text": "Implementation.",
+        "start": 2434.187,
+        "duration": 0.78
+    },
+    {
+        "text": "And so the, question then is you probably\ndon't want to re-implement a GP or re",
+        "start": 2435.207,
+        "duration": 6.99
+    },
+    {
+        "text": "hypothesis of data and A GPU default one.",
+        "start": 2442.527,
+        "duration": 2.25
+    },
+    {
+        "text": "And so there is, There is some operate.",
+        "start": 2445.017,
+        "duration": 3.69
+    },
+    {
+        "text": "Did you actually have a chance to look\nat this and see if it has other, yeah.",
+        "start": 2448.827,
+        "duration": 2.61
+    },
+    {
+        "text": "Okay.",
+        "start": 2452.187,
+        "duration": 0.27
+    },
+    {
+        "text": "Gotcha.",
+        "start": 2452.457,
+        "duration": 0.39
+    },
+    {
+        "text": "So that's what I kinda highlight.",
+        "start": 2453.927,
+        "duration": 1.035
+    },
+    {
+        "text": "Yeah.",
+        "start": 2454.962,
+        "duration": 0.12
+    },
+    {
+        "text": "I saw that it was updated, but I\nhaven't really looked through it.",
+        "start": 2455.082,
+        "duration": 2.305
+    },
+    {
+        "text": "So this does different things.",
+        "start": 2459.302,
+        "duration": 1.525
+    },
+    {
+        "text": "Yeah.",
+        "start": 2461.427,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah.",
+        "start": 2461.877,
+        "duration": 0.33
+    },
+    {
+        "text": "Okay.",
+        "start": 2462.477,
+        "duration": 0.21
+    },
+    {
+        "text": "So yeah, I mean it would probably\nbe, make sense then to do,",
+        "start": 2462.687,
+        "duration": 3.0
+    },
+    {
+        "text": "like just a different backend\nfor the hypothesis updater so",
+        "start": 2468.627,
+        "duration": 3.27
+    },
+    {
+        "text": "we can The current level API.",
+        "start": 2471.897,
+        "duration": 1.98
+    },
+    {
+        "text": "And then it's really,",
+        "start": 2475.197,
+        "duration": 1.26
+    },
+    {
+        "text": "it's when it calls into update hypotheses\nis where we start having the backend take",
+        "start": 2478.677,
+        "duration": 6.24
+    },
+    {
+        "text": "over and actually do the consultation.",
+        "start": 2484.917,
+        "duration": 1.95
+    },
+    {
+        "text": "Yeah.",
+        "start": 2487.872,
+        "duration": 0.15
+    },
+    {
+        "text": "And I can, ask the team.",
+        "start": 2488.562,
+        "duration": 2.22
+    },
+    {
+        "text": "'cause I don't know off the top of my head\nwhether Resampling one is the feature and",
+        "start": 2490.782,
+        "duration": 4.62
+    },
+    {
+        "text": "just don't even bother with the default\nbecause it's gonna go away or something.",
+        "start": 2495.402,
+        "duration": 3.03
+    },
+    {
+        "text": "I, can double check.",
+        "start": 2499.162,
+        "duration": 0.83
+    },
+    {
+        "text": "Let me make a note to myself.",
+        "start": 2499.992,
+        "duration": 1.26
+    },
+    {
+        "text": "I haven't just, haven't\nreally gone through.",
+        "start": 2502.212,
+        "duration": 0.99
+    },
+    {
+        "text": "It's what, at a high level, what's\ndifferent about the resampling?",
+        "start": 2503.202,
+        "duration": 2.04
+    },
+    {
+        "text": "I don't remember off the top of my head.",
+        "start": 2506.022,
+        "duration": 1.5
+    },
+    {
+        "text": "Yeah, that's, Ramy built that one.",
+        "start": 2507.552,
+        "duration": 3.09
+    },
+    {
+        "text": "I, I, I refactor a lot of the code.",
+        "start": 2512.322,
+        "duration": 2.28
+    },
+    {
+        "text": "But it was like, I was very much from a\nmechanical software design perspective,",
+        "start": 2515.052,
+        "duration": 5.16
+    },
+    {
+        "text": "not looking in the guts of it.",
+        "start": 2520.212,
+        "duration": 2.61
+    },
+    {
+        "text": "so I have to ask,",
+        "start": 2523.992,
+        "duration": 0.96
+    },
+    {
+        "text": "I could, hold on.",
+        "start": 2528.012,
+        "duration": 1.02
+    },
+    {
+        "text": "Let me just write down,\ncheck if resampling,",
+        "start": 2529.032,
+        "duration": 3.9
+    },
+    {
+        "text": "it might come back to\nme when I look at it.",
+        "start": 2535.567,
+        "duration": 1.505
+    },
+    {
+        "text": "The resampling hypothesis\nupdate is the feature.",
+        "start": 2537.072,
+        "duration": 3.51
+    },
+    {
+        "text": "Let me not bother with GPU\nfor default hypothesis.",
+        "start": 2545.502,
+        "duration": 5.43
+    },
+    {
+        "text": "Okay.",
+        "start": 2551.802,
+        "duration": 0.21
+    },
+    {
+        "text": "Let me, lemme I'm gonna look\non my screen here real quick",
+        "start": 2552.012,
+        "duration": 4.41
+    },
+    {
+        "text": "to see what the difference was.",
+        "start": 2556.452,
+        "duration": 4.14
+    },
+    {
+        "text": "actually I'm gonna look at the pull\nrequest that introduced this 'cause",
+        "start": 2561.012,
+        "duration": 3.215
+    },
+    {
+        "text": "because probably has a good high level\ndescription of what the change was.",
+        "start": 2564.232,
+        "duration": 3.44
+    },
+    {
+        "text": "I feel like there was a, was\nthere an RFC for third sampling?",
+        "start": 2569.052,
+        "duration": 3.24
+    },
+    {
+        "text": "Oh yeah, probably a good call.",
+        "start": 2573.822,
+        "duration": 2.07
+    },
+    {
+        "text": "Let's see that.",
+        "start": 2576.132,
+        "duration": 0.72
+    },
+    {
+        "text": "I feel like I remember seeing\nthat, but I didn't go through this.",
+        "start": 2576.852,
+        "duration": 2.13
+    },
+    {
+        "text": "yeah.",
+        "start": 2580.362,
+        "duration": 0.24
+    },
+    {
+        "text": "Resampling Dynamic Adjustments.",
+        "start": 2580.782,
+        "duration": 1.71
+    },
+    {
+        "text": "RFC 13.",
+        "start": 2582.492,
+        "duration": 1.11
+    },
+    {
+        "text": "Okay.",
+        "start": 2585.102,
+        "duration": 0.39
+    },
+    {
+        "text": "Oh, Okay.",
+        "start": 2587.652,
+        "duration": 1.8
+    },
+    {
+        "text": "Yeah, so the Resampling thing is.",
+        "start": 2590.412,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah.",
+        "start": 2600.507,
+        "duration": 0.27
+    },
+    {
+        "text": "So right now, so the default\nhypothesis update you like at the",
+        "start": 2600.927,
+        "duration": 4.11
+    },
+    {
+        "text": "beginning of the program you set\nev, this is how much sampling you",
+        "start": 2605.037,
+        "duration": 4.05
+    },
+    {
+        "text": "have to do for every iteration.",
+        "start": 2609.087,
+        "duration": 1.89
+    },
+    {
+        "text": "It is basically fixed.",
+        "start": 2611.277,
+        "duration": 1.35
+    },
+    {
+        "text": "And what we want to do is with the\nresampling thing is, and when we're",
+        "start": 2612.957,
+        "duration": 3.57
+    },
+    {
+        "text": "talking about the resampling is,\nhow many hypothesis are we testing?",
+        "start": 2616.527,
+        "duration": 4.29
+    },
+    {
+        "text": "So resampling means do we add the\nnew hypothesis to this hypothesis",
+        "start": 2622.182,
+        "duration": 4.5
+    },
+    {
+        "text": "pool, or do we remove some\nhypothesis from the hypothesis pool?",
+        "start": 2626.682,
+        "duration": 3.63
+    },
+    {
+        "text": "And right now that, prior to this,\nthere was a fixed, like ratio of",
+        "start": 2630.462,
+        "duration": 4.8
+    },
+    {
+        "text": "old hypothesis and new hypothesis,\nand it was just always constant.",
+        "start": 2635.322,
+        "duration": 3.63
+    },
+    {
+        "text": "But the thing is, as you're, but\nthis means hypothesis come from like",
+        "start": 2639.702,
+        "duration": 4.59
+    },
+    {
+        "text": "unlikely things, but they'll still get\ncomputed and tested, et cetera, because",
+        "start": 2644.592,
+        "duration": 4.02
+    },
+    {
+        "text": "you have a fixed hypothesis pool.",
+        "start": 2648.612,
+        "duration": 1.86
+    },
+    {
+        "text": "The resampling means we don't, we\nwanna stop computing hypothesis",
+        "start": 2650.892,
+        "duration": 5.4
+    },
+    {
+        "text": "that are very unlikely.",
+        "start": 2656.292,
+        "duration": 1.08
+    },
+    {
+        "text": "And we want to sample more\nhypothesis from the object that",
+        "start": 2658.242,
+        "duration": 4.8
+    },
+    {
+        "text": "we think we are actually on.",
+        "start": 2663.042,
+        "duration": 1.29
+    },
+    {
+        "text": "So for example, if I'm looking at a\ncup or a potato, and if I'm trying",
+        "start": 2665.202,
+        "duration": 5.19
+    },
+    {
+        "text": "to decide behind, behind a cup and\na potato, I'm gonna have like maybe",
+        "start": 2670.392,
+        "duration": 3.3
+    },
+    {
+        "text": "50 50 split of, cup points and\npotato points that I'm sampling.",
+        "start": 2673.692,
+        "duration": 5.79
+    },
+    {
+        "text": "And, but as I'm doing on the cup and the\nevidence for the cup grows, I want to",
+        "start": 2680.637,
+        "duration": 5.145
+    },
+    {
+        "text": "get a more fine tuned sampling of the,\ndifferent cup rotations and other things.",
+        "start": 2686.232,
+        "duration": 5.19
+    },
+    {
+        "text": "'cause rotation is a hypothesis as well.",
+        "start": 2691.422,
+        "duration": 2.16
+    },
+    {
+        "text": "So I wanna sample more from the\nhypothesis about cups and sample,",
+        "start": 2693.942,
+        "duration": 4.2
+    },
+    {
+        "text": "less about hypothesis around potatoes.",
+        "start": 2698.142,
+        "duration": 2.13
+    },
+    {
+        "text": "That's where the resembling\nvocabulary comes from.",
+        "start": 2701.382,
+        "duration": 2.1
+    },
+    {
+        "text": "My understanding is that.",
+        "start": 2704.112,
+        "duration": 1.245
+    },
+    {
+        "text": "You do different hypothesis update\noperations for each object graph in",
+        "start": 2706.542,
+        "duration": 5.22
+    },
+    {
+        "text": "the lm. So does that mean for that, if\nyou're doing this resampled hypothesis,",
+        "start": 2711.762,
+        "duration": 5.25
+    },
+    {
+        "text": "updater, like whichever is object, you\nwanna do more, you just set that one to",
+        "start": 2717.072,
+        "duration": 6.15
+    },
+    {
+        "text": "use more hypothesis and its update step.",
+        "start": 2724.332,
+        "duration": 2.7
+    },
+    {
+        "text": "And then in the separate potato\nstep you just reduce the number of",
+        "start": 2727.032,
+        "duration": 3.69
+    },
+    {
+        "text": "hypotheses that you're looking at.",
+        "start": 2730.722,
+        "duration": 1.35
+    },
+    {
+        "text": "But they're still like separate.",
+        "start": 2732.132,
+        "duration": 1.53
+    },
+    {
+        "text": "Calls to like the\nhypothesis updater, right?",
+        "start": 2734.802,
+        "duration": 3.39
+    },
+    {
+        "text": "I think so, but",
+        "start": 2741.132,
+        "duration": 1.05
+    },
+    {
+        "text": "I, don't know the answer\nto your, yeah, to that.",
+        "start": 2745.122,
+        "duration": 2.79
+    },
+    {
+        "text": "I don't know enough.",
+        "start": 2749.112,
+        "duration": 0.06
+    },
+    {
+        "text": "No.",
+        "start": 2749.172,
+        "duration": 0.01
+    },
+    {
+        "text": "It was just my understanding, from\nthe, older version of the code",
+        "start": 2749.182,
+        "duration": 3.92
+    },
+    {
+        "text": "that I was implementing this and\nit, it seemed all, every object",
+        "start": 2753.102,
+        "duration": 3.3
+    },
+    {
+        "text": "graph is processed separately.",
+        "start": 2756.402,
+        "duration": 1.95
+    },
+    {
+        "text": "Like independently.",
+        "start": 2760.242,
+        "duration": 0.69
+    },
+    {
+        "text": "Gotcha.",
+        "start": 2760.932,
+        "duration": 0.12
+    },
+    {
+        "text": "Even in this case, like when I was\nshifting away from doing all LMS at once",
+        "start": 2764.817,
+        "duration": 5.91
+    },
+    {
+        "text": "in one kernel dispatch, I was still gonna\nbenefit, try to have every, all objects",
+        "start": 2770.727,
+        "duration": 6.93
+    },
+    {
+        "text": "for one LM run in one stacked kernel.",
+        "start": 2777.657,
+        "duration": 2.64
+    },
+    {
+        "text": "I think nothing you said so far\nmakes me think that wouldn't",
+        "start": 2782.697,
+        "duration": 2.22
+    },
+    {
+        "text": "work for the resampling one.",
+        "start": 2784.917,
+        "duration": 1.29
+    },
+    {
+        "text": "just conceptually, I wanna make\nsure I understand whether okay.",
+        "start": 2789.087,
+        "duration": 2.49
+    },
+    {
+        "text": "Object graphs or process\nseparately in the existing code.",
+        "start": 2792.642,
+        "duration": 3.0
+    },
+    {
+        "text": "I don't know if, I don't\nknow if this answers it.",
+        "start": 2798.792,
+        "duration": 3.0
+    },
+    {
+        "text": "This is what I'm looking at.",
+        "start": 2801.912,
+        "duration": 1.17
+    },
+    {
+        "text": "so one thing that's new in the\nresampling hypothesis update is",
+        "start": 2803.922,
+        "duration": 4.41
+    },
+    {
+        "text": "inside the update hypothesis.",
+        "start": 2808.332,
+        "duration": 1.95
+    },
+    {
+        "text": "This is big enough.",
+        "start": 2811.302,
+        "duration": 0.75
+    },
+    {
+        "text": "Yeah.",
+        "start": 2813.687,
+        "duration": 0.3
+    },
+    {
+        "text": "so accepting hypo update hypothesis,\nThese are the relevant bits, right?",
+        "start": 2817.527,
+        "duration": 5.91
+    },
+    {
+        "text": "Existing hypothesis, informed hypothesis.",
+        "start": 2823.467,
+        "duration": 2.22
+    },
+    {
+        "text": "So, these will choose hypothesis\nbased on what's going on.",
+        "start": 2826.197,
+        "duration": 4.47
+    },
+    {
+        "text": "versus, this does not occur in the\ndefault one as far as I recall.",
+        "start": 2832.377,
+        "duration": 3.84
+    },
+    {
+        "text": "Okay, and this is still\nhappening per object graph.",
+        "start": 2839.547,
+        "duration": 2.88
+    },
+    {
+        "text": "that's what the graph ID is there.",
+        "start": 2842.547,
+        "duration": 1.71
+    },
+    {
+        "text": "Sample informed, that is an object graph.",
+        "start": 2845.067,
+        "duration": 2.55
+    },
+    {
+        "text": "Yeah.",
+        "start": 2847.617,
+        "duration": 0.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 2848.307,
+        "duration": 0.36
+    },
+    {
+        "text": "Is called separately on each object graph?",
+        "start": 2848.847,
+        "duration": 1.71
+    },
+    {
+        "text": "Yes.",
+        "start": 2850.767,
+        "duration": 0.42
+    },
+    {
+        "text": "Oh, okay.",
+        "start": 2851.937,
+        "duration": 0.48
+    },
+    {
+        "text": "this is the answer to your question.",
+        "start": 2852.627,
+        "duration": 0.975
+    },
+    {
+        "text": "Yeah, I think So so that's the, yeah.",
+        "start": 2855.087,
+        "duration": 1.8
+    },
+    {
+        "text": "'cause the API here is, yeah.",
+        "start": 2856.917,
+        "duration": 2.64
+    },
+    {
+        "text": "So update hypothesis is\ncalled her object route.",
+        "start": 2859.587,
+        "duration": 2.46
+    },
+    {
+        "text": "Just at the API level, if that,\nanswers, so this just adds some.",
+        "start": 2863.162,
+        "duration": 4.495
+    },
+    {
+        "text": "Overhead at the beginning to\ndo some thoughtful adjustment",
+        "start": 2868.632,
+        "duration": 3.93
+    },
+    {
+        "text": "about which hypotheses from that\nobject graph we're actually gonna",
+        "start": 2872.562,
+        "duration": 4.56
+    },
+    {
+        "text": "consider and do updates for.",
+        "start": 2877.122,
+        "duration": 1.41
+    },
+    {
+        "text": "Yeah,",
+        "start": 2880.062,
+        "duration": 0.21
+    },
+    {
+        "text": "Return hypothesis updates.",
+        "start": 2884.742,
+        "duration": 1.89
+    },
+    {
+        "text": "Yeah.",
+        "start": 2887.802,
+        "duration": 0.09
+    },
+    {
+        "text": "No, I'd have to look into like how the\nsampling operations work to see how",
+        "start": 2887.892,
+        "duration": 2.82
+    },
+    {
+        "text": "easy that'd be to, do that on GPU as\nwell, because we wouldn't want that.",
+        "start": 2890.712,
+        "duration": 4.895
+    },
+    {
+        "text": "To go sequentially either, right?",
+        "start": 2896.562,
+        "duration": 1.77
+    },
+    {
+        "text": "We'd wanna be able to do that in a batch.",
+        "start": 2898.332,
+        "duration": 1.56
+    },
+    {
+        "text": "Let's see.",
+        "start": 2900.612,
+        "duration": 0.42
+    },
+    {
+        "text": "Yeah, so this is the sample\ninformed and sample existing.",
+        "start": 2901.242,
+        "duration": 3.24
+    },
+    {
+        "text": "sample specimen.",
+        "start": 2913.512,
+        "duration": 0.9
+    },
+    {
+        "text": "I think this is just\nlike a array operation.",
+        "start": 2915.102,
+        "duration": 2.61
+    },
+    {
+        "text": "I don't think there's much happening here.",
+        "start": 2918.102,
+        "duration": 1.77
+    },
+    {
+        "text": "Okay.",
+        "start": 2920.622,
+        "duration": 0.21
+    },
+    {
+        "text": "Calculate, keep and remove IDs.",
+        "start": 2921.012,
+        "duration": 2.22
+    },
+    {
+        "text": "Yeah.",
+        "start": 2928.257,
+        "duration": 0.21
+    },
+    {
+        "text": "like calculate slopes.",
+        "start": 2928.767,
+        "duration": 1.71
+    },
+    {
+        "text": "it's, this is a, looks like\na, an umpire Matrix thing.",
+        "start": 2930.777,
+        "duration": 5.34
+    },
+    {
+        "text": "Yeah.",
+        "start": 2937.317,
+        "duration": 0.18
+    },
+    {
+        "text": "The big thing for identifying Yeah,\nlike what would, what easy versus a",
+        "start": 2937.497,
+        "duration": 3.06
+    },
+    {
+        "text": "pain for the GPU is how much, does one\nvalue depending on all the other values.",
+        "start": 2940.557,
+        "duration": 5.49
+    },
+    {
+        "text": "So if we can, if we have a\nbig list, but everything.",
+        "start": 2946.527,
+        "duration": 3.51
+    },
+    {
+        "text": "each index is being processed\ncompletely separately.",
+        "start": 2950.952,
+        "duration": 2.01
+    },
+    {
+        "text": "It's like phenomenal for GPUs,\nwhereas like KN is annoying for the",
+        "start": 2952.992,
+        "duration": 2.85
+    },
+    {
+        "text": "GPU because it actually matters what\nthe other ones are and you have to",
+        "start": 2955.842,
+        "duration": 2.91
+    },
+    {
+        "text": "synchronize between them and all that.",
+        "start": 2958.752,
+        "duration": 1.32
+    },
+    {
+        "text": "Gotcha.",
+        "start": 2960.972,
+        "duration": 0.18
+    },
+    {
+        "text": "I don't know, seems like this might\nbe pretty straightforward, but so",
+        "start": 2964.122,
+        "duration": 3.09
+    },
+    {
+        "text": "yeah, so, that, that might help.",
+        "start": 2967.212,
+        "duration": 1.41
+    },
+    {
+        "text": "And, then it's I don't know if, yeah.",
+        "start": 2969.642,
+        "duration": 3.99
+    },
+    {
+        "text": "If, that default hypothesis\nupdated or uses that.",
+        "start": 2974.142,
+        "duration": 2.88
+    },
+    {
+        "text": "So tracker dot, yeah.",
+        "start": 2977.412,
+        "duration": 1.83
+    },
+    {
+        "text": "It doesn't even use a tracker.",
+        "start": 2979.242,
+        "duration": 1.02
+    },
+    {
+        "text": "It's not a thing.",
+        "start": 2980.262,
+        "duration": 0.69
+    },
+    {
+        "text": "and this is what I'm talking about\nis I think this is the feature.",
+        "start": 2983.232,
+        "duration": 2.4
+    },
+    {
+        "text": "And so I think if you're gonna\nbother with the GPU, I think it",
+        "start": 2985.632,
+        "duration": 2.64
+    },
+    {
+        "text": "should be the resampling hypothesis.",
+        "start": 2988.272,
+        "duration": 1.44
+    },
+    {
+        "text": "Updater.",
+        "start": 2989.747,
+        "duration": 0.48
+    },
+    {
+        "text": "Okay.",
+        "start": 2990.767,
+        "duration": 0.29
+    },
+    {
+        "text": "Be because this is too rigid.",
+        "start": 2991.242,
+        "duration": 1.29
+    },
+    {
+        "text": "Like we, we definitely don't want,\nyeah, I would just say right now, do",
+        "start": 2992.562,
+        "duration": 5.25
+    },
+    {
+        "text": "this unless like I come with counter\nevidence and I'll confirm it for you, but",
+        "start": 2997.812,
+        "duration": 3.57
+    },
+    {
+        "text": "I think this is the one to care about.",
+        "start": 3001.592,
+        "duration": 1.44
+    },
+    {
+        "text": "Yeah, I'll take a look at it and see,\nhow much that would change things.",
+        "start": 3004.967,
+        "duration": 3.75
+    },
+    {
+        "text": "yeah, that okay.",
+        "start": 3013.402,
+        "duration": 2.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 3016.242,
+        "duration": 0.29
+    },
+    {
+        "text": "Like in terms of next steps, it\nseems like we still probably have",
+        "start": 3016.537,
+        "duration": 4.66
+    },
+    {
+        "text": "some more digging and discussions to\nfigure out the, API and the way that",
+        "start": 3021.197,
+        "duration": 4.38
+    },
+    {
+        "text": "we wanna integrate these backends.",
+        "start": 3025.577,
+        "duration": 0.96
+    },
+    {
+        "text": "we're doing these graphs Yeah.",
+        "start": 3027.617,
+        "duration": 2.22
+    },
+    {
+        "text": "Groups and things like that.",
+        "start": 3029.927,
+        "duration": 1.5
+    },
+    {
+        "text": "what's most helpful for me to\nstart working on for the backend.",
+        "start": 3035.807,
+        "duration": 3.24
+    },
+    {
+        "text": "So I wanna look into seeing what\nit take to make kernels for the",
+        "start": 3039.617,
+        "duration": 3.45
+    },
+    {
+        "text": "re-sample type of update or operations.",
+        "start": 3043.067,
+        "duration": 2.43
+    },
+    {
+        "text": "So I would think do that and I'll\ntry to change the API on the monthly",
+        "start": 3046.487,
+        "duration": 6.03
+    },
+    {
+        "text": "side of things With a grouping thing.",
+        "start": 3052.517,
+        "duration": 2.49
+    },
+    {
+        "text": "See what the grouping API would look like.",
+        "start": 3055.187,
+        "duration": 1.95
+    },
+    {
+        "text": "Because I don't need GP\nexpertise to do that.",
+        "start": 3057.922,
+        "duration": 3.385
+    },
+    {
+        "text": "Versus like, you you, could do\nthat, but it's that's, not helpful.",
+        "start": 3062.417,
+        "duration": 5.04
+    },
+    {
+        "text": "So let's say I, Jeremy, or\nI can look at, look at that.",
+        "start": 3067.457,
+        "duration": 6.78
+    },
+    {
+        "text": "Okay.",
+        "start": 3075.107,
+        "duration": 0.15
+    },
+    {
+        "text": "and then we'll, so I'm trying to think.",
+        "start": 3076.727,
+        "duration": 4.5
+    },
+    {
+        "text": "So we actually have,",
+        "start": 3081.617,
+        "duration": 1.59
+    },
+    {
+        "text": "from this thing,",
+        "start": 3085.517,
+        "duration": 1.02
+    },
+    {
+        "text": "As we talked about the\nscope, so it's, this part,",
+        "start": 3093.257,
+        "duration": 2.91
+    },
+    {
+        "text": "this and this.",
+        "start": 3098.267,
+        "duration": 0.81
+    },
+    {
+        "text": "so actually this we're talking\nabout, this is resampling.",
+        "start": 3099.257,
+        "duration": 3.055
+    },
+    {
+        "text": "Actually talking about\nresampling hypothesis update.",
+        "start": 3104.117,
+        "duration": 2.04
+    },
+    {
+        "text": "and then this will be resampling.",
+        "start": 3109.522,
+        "duration": 2.34
+    },
+    {
+        "text": "But then the other part is,\nso there's another thing that",
+        "start": 3113.222,
+        "duration": 2.76
+    },
+    {
+        "text": "we're missing, a thing here.",
+        "start": 3116.222,
+        "duration": 1.05
+    },
+    {
+        "text": "So this is, a, refactor,",
+        "start": 3117.272,
+        "duration": 4.08
+    },
+    {
+        "text": "for parallel is and,",
+        "start": 3123.812,
+        "duration": 2.7
+    },
+    {
+        "text": "refactor their into a grouping call.",
+        "start": 3133.507,
+        "duration": 5.64
+    },
+    {
+        "text": "that makes sense to me right now.",
+        "start": 3141.137,
+        "duration": 1.59
+    },
+    {
+        "text": "I don't know if I read it tomorrow.",
+        "start": 3142.727,
+        "duration": 1.32
+    },
+    {
+        "text": "If I know what that means.",
+        "start": 3144.282,
+        "duration": 1.025
+    },
+    {
+        "text": "Yeah, But,",
+        "start": 3146.677,
+        "duration": 0.58
+    },
+    {
+        "text": "what am I trying to say?",
+        "start": 3150.227,
+        "duration": 0.99
+    },
+    {
+        "text": "Can you help me?",
+        "start": 3151.277,
+        "duration": 0.66
+    },
+    {
+        "text": "You know what this is.",
+        "start": 3156.617,
+        "duration": 1.17
+    },
+    {
+        "text": "Wait, what are you trying to say?",
+        "start": 3158.837,
+        "duration": 1.23
+    },
+    {
+        "text": "this, so the hypothesis, the, so\nI'm thinking this is the stuff",
+        "start": 3161.327,
+        "duration": 5.82
+    },
+    {
+        "text": "we talked about where it's like.",
+        "start": 3167.147,
+        "duration": 1.295
+    },
+    {
+        "text": "It's the grouping call at the high level.",
+        "start": 3169.502,
+        "duration": 1.74
+    },
+    {
+        "text": "That was not helpful at all.",
+        "start": 3171.502,
+        "duration": 1.15
+    },
+    {
+        "text": "Helpful to actually the GPU conversation.",
+        "start": 3172.652,
+        "duration": 2.13
+    },
+    {
+        "text": "This refactored the hypothesis\nupdated to support moveable backends.",
+        "start": 3175.082,
+        "duration": 3.09
+    },
+    {
+        "text": "This is actually the helpful part.",
+        "start": 3178.502,
+        "duration": 2.46
+    },
+    {
+        "text": "Resampling hypothesis updated\nto support moveable backends.",
+        "start": 3181.982,
+        "duration": 3.42
+    },
+    {
+        "text": "This was like, this is the thing\nthat I said I can do because I don't",
+        "start": 3185.672,
+        "duration": 4.56
+    },
+    {
+        "text": "need GP expertise to do the grouping.",
+        "start": 3190.232,
+        "duration": 1.74
+    },
+    {
+        "text": "But,",
+        "start": 3191.972,
+        "duration": 0.24
+    },
+    {
+        "text": "yeah, this is refactor step.",
+        "start": 3195.422,
+        "duration": 2.075
+    },
+    {
+        "text": "Learning modules",
+        "start": 3199.037,
+        "duration": 1.59
+    },
+    {
+        "text": "to use.",
+        "start": 3203.147,
+        "duration": 1.02
+    },
+    {
+        "text": "Grouping?",
+        "start": 3204.377,
+        "duration": 0.84
+    },
+    {
+        "text": "Yeah, like grouping of lms.",
+        "start": 3206.357,
+        "duration": 1.59
+    },
+    {
+        "text": "Oh, lms.",
+        "start": 3209.082,
+        "duration": 1.06
+    },
+    {
+        "text": "Whether that's just one LM per\ngroup or Yeah, larger groups.",
+        "start": 3211.427,
+        "duration": 3.48
+    },
+    {
+        "text": "that's the, from the experience\nside, that's what it wants to see.",
+        "start": 3215.087,
+        "duration": 2.43
+    },
+    {
+        "text": "It's just groups of LMS that it, and then\nwe feel good about this, at least for",
+        "start": 3217.517,
+        "duration": 4.92
+    },
+    {
+        "text": "now, the kind of simple, just dispatch.",
+        "start": 3222.437,
+        "duration": 2.55
+    },
+    {
+        "text": "Oh yeah.",
+        "start": 3225.302,
+        "duration": 1.77
+    },
+    {
+        "text": "Absolutely.",
+        "start": 3227.762,
+        "duration": 0.33
+    },
+    {
+        "text": "That should work fine for the groups.",
+        "start": 3230.612,
+        "duration": 1.56
+    },
+    {
+        "text": "And then the backend can handle whether\nit's a, group that gets stacked into",
+        "start": 3232.202,
+        "duration": 5.91
+    },
+    {
+        "text": "one kernel dispatch or just an L one.",
+        "start": 3238.112,
+        "duration": 2.1
+    },
+    {
+        "text": "Yeah.",
+        "start": 3241.052,
+        "duration": 0.12
+    },
+    {
+        "text": "Where we'll stack across object graphs.",
+        "start": 3241.592,
+        "duration": 1.56
+    },
+    {
+        "text": "So yeah, we already have to\nfigure out some of the stacking",
+        "start": 3243.152,
+        "duration": 1.77
+    },
+    {
+        "text": "and so anyway, it's just whether\nwe go across our loans or not.",
+        "start": 3246.902,
+        "duration": 2.88
+    },
+    {
+        "text": "Then, yeah.",
+        "start": 3250.982,
+        "duration": 1.05
+    },
+    {
+        "text": "And there's not a clear path between this\nand getting to the resampling hypothesis,",
+        "start": 3252.032,
+        "duration": 4.44
+    },
+    {
+        "text": "so, this is agnostic of the backend\nbasically, is what I'm trying to say.",
+        "start": 3256.772,
+        "duration": 3.24
+    },
+    {
+        "text": "And",
+        "start": 3260.817,
+        "duration": 0.22
+    },
+    {
+        "text": "I'm, this is like an independent thing.",
+        "start": 3264.632,
+        "duration": 2.22
+    },
+    {
+        "text": "Yeah.",
+        "start": 3268.202,
+        "duration": 0.06
+    },
+    {
+        "text": "Like I'm trying, I'm like,\nwhat depends on this?",
+        "start": 3268.262,
+        "duration": 1.86
+    },
+    {
+        "text": "nothing depends on this.",
+        "start": 3270.302,
+        "duration": 1.11
+    },
+    {
+        "text": "That's great.",
+        "start": 3273.002,
+        "duration": 0.45
+    },
+    {
+        "text": "technically.",
+        "start": 3274.922,
+        "duration": 0.69
+    },
+    {
+        "text": "because if you do the Resampling\nhypothesis updater, then it's just cool.",
+        "start": 3278.537,
+        "duration": 5.4
+    },
+    {
+        "text": "We can still run it in a for loop and it's\ngonna be terrible, but it still will work.",
+        "start": 3283.937,
+        "duration": 5.31
+    },
+    {
+        "text": "Like it will still run on the GPU, but\nin order to help with that, this step,",
+        "start": 3289.337,
+        "duration": 5.01
+    },
+    {
+        "text": "that's the question.",
+        "start": 3296.687,
+        "duration": 0.72
+    },
+    {
+        "text": "So the, so this is Breakening.",
+        "start": 3297.407,
+        "duration": 1.62
+    },
+    {
+        "text": "That's okay.",
+        "start": 3299.237,
+        "duration": 1.86
+    },
+    {
+        "text": "So now, I have a cold question\nthat I know the answer to is.",
+        "start": 3301.127,
+        "duration": 3.24
+    },
+    {
+        "text": "but we are out of time.",
+        "start": 3306.437,
+        "duration": 0.75
+    },
+    {
+        "text": "My,",
+        "start": 3307.457,
+        "duration": 0.24
+    },
+    {
+        "text": "the, question I have is hypothesis\nupdate called per lm? is there a clear",
+        "start": 3310.997,
+        "duration": 5.58
+    },
+    {
+        "text": "linkage between the groups and hypothesis\nupdaters, or is there like another",
+        "start": 3316.577,
+        "duration": 4.17
+    },
+    {
+        "text": "loop inside an LM hypothesis update?",
+        "start": 3320.747,
+        "duration": 1.92
+    },
+    {
+        "text": "Yeah, so every, right now, every\nLM has its own hypothesis updater.",
+        "start": 3323.177,
+        "duration": 4.65
+    },
+    {
+        "text": "Yep.",
+        "start": 3328.067,
+        "duration": 0.18
+    },
+    {
+        "text": "But it calls it separately on every object\ngraph in the lm. Thank you for that.",
+        "start": 3328.367,
+        "duration": 4.8
+    },
+    {
+        "text": "Yeah.",
+        "start": 3333.737,
+        "duration": 0.39
+    },
+    {
+        "text": "And already we wanna shift it for\ndefinitely put GV back on where it's",
+        "start": 3334.187,
+        "duration": 4.98
+    },
+    {
+        "text": "doing all object graphs at once within\nan LM and then stacking the group.",
+        "start": 3339.347,
+        "duration": 4.32
+    },
+    {
+        "text": "Is that would be, do all object graphs\nacross all LS as one chord dispatch.",
+        "start": 3343.667,
+        "duration": 4.14
+    },
+    {
+        "text": "So that's, but that's still to be\ndefined then that part of the API.",
+        "start": 3348.437,
+        "duration": 5.01
+    },
+    {
+        "text": "Is that true or do you have a\nclear idea of how you wanna do it?",
+        "start": 3354.227,
+        "duration": 2.64
+    },
+    {
+        "text": "Yeah, I think that.",
+        "start": 3357.887,
+        "duration": 0.72
+    },
+    {
+        "text": "Yeah, I think there's still some details.",
+        "start": 3365.282,
+        "duration": 1.32
+    },
+    {
+        "text": "it's internal to the LM fine, because\nI think on the side, like it's just",
+        "start": 3367.862,
+        "duration": 5.31
+    },
+    {
+        "text": "whether it's calling a dispatch on\na group of LMS or on the LM itself,",
+        "start": 3373.532,
+        "duration": 3.21
+    },
+    {
+        "text": "but then inside that, inside the\nLM, how it calls into the backend.",
+        "start": 3377.522,
+        "duration": 7.8
+    },
+    {
+        "text": "And how we do the stacking, whether\nit's across LMS or not, I think",
+        "start": 3386.222,
+        "duration": 4.17
+    },
+    {
+        "text": "there's more to figure out about that",
+        "start": 3390.392,
+        "duration": 2.865
+    },
+    {
+        "text": "is, am I saying the right thing?",
+        "start": 3396.032,
+        "duration": 1.32
+    },
+    {
+        "text": "Define how LM to object to hypothesis.",
+        "start": 3397.352,
+        "duration": 2.61
+    },
+    {
+        "text": "object graph.",
+        "start": 3401.042,
+        "duration": 0.78
+    },
+    {
+        "text": "LM to object graph.",
+        "start": 3404.817,
+        "duration": 1.16
+    },
+    {
+        "text": "Hypothesis update call should work, right?",
+        "start": 3406.302,
+        "duration": 1.85
+    },
+    {
+        "text": "this is hypothesis update.",
+        "start": 3408.662,
+        "duration": 1.17
+    },
+    {
+        "text": "You're confident we got this, we\nkind of confidence we got this.",
+        "start": 3410.672,
+        "duration": 4.2
+    },
+    {
+        "text": "But then we are still missing the lm\nthe path through the object graph.",
+        "start": 3415.457,
+        "duration": 4.29
+    },
+    {
+        "text": "How the object graphs are getting\nYeah, we're missing the ap, the,",
+        "start": 3419.747,
+        "duration": 3.48
+    },
+    {
+        "text": "we're missing the definition, the\nclear definition of A API where stuff",
+        "start": 3423.797,
+        "duration": 4.26
+    },
+    {
+        "text": "gets paralyzed across object graphs.",
+        "start": 3428.057,
+        "duration": 1.95
+    },
+    {
+        "text": "This paralyzes across lms,",
+        "start": 3430.427,
+        "duration": 1.74
+    },
+    {
+        "text": "this paralyzed across hypotheses, and\nwe wanna paralyze it across object",
+        "start": 3434.177,
+        "duration": 7.35
+    },
+    {
+        "text": "graphs, and we wanna paralyze across.",
+        "start": 3441.527,
+        "duration": 2.43
+    },
+    {
+        "text": "Hypothesis update call,\nwhich is the same thing.",
+        "start": 3444.332,
+        "duration": 2.07
+    },
+    {
+        "text": "Script.",
+        "start": 3448.532,
+        "duration": 0.27
+    },
+    {
+        "text": "Okay.",
+        "start": 3449.162,
+        "duration": 0.27
+    },
+    {
+        "text": "Important to, say that in order for\nthis Cuda streaming approach to work,",
+        "start": 3449.492,
+        "duration": 3.81
+    },
+    {
+        "text": "I think how it works is we'd have\none backend object that's shared",
+        "start": 3453.302,
+        "duration": 4.56
+    },
+    {
+        "text": "between LMS because it needs to be.",
+        "start": 3457.862,
+        "duration": 2.58
+    },
+    {
+        "text": "It's like one backend that's handling\nthe streams and running them across",
+        "start": 3464.087,
+        "duration": 3.66
+    },
+    {
+        "text": "lms and then being able to report\nback when all streams finish.",
+        "start": 3467.747,
+        "duration": 3.0
+    },
+    {
+        "text": "Like you just want one call to\none backend and not have to go",
+        "start": 3470.987,
+        "duration": 2.85
+    },
+    {
+        "text": "ask every LM whether it's done.",
+        "start": 3473.837,
+        "duration": 1.62
+    },
+    {
+        "text": "And so also then across groups,\nis that one backend across?",
+        "start": 3477.017,
+        "duration": 4.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 3481.277,
+        "duration": 0.18
+    },
+    {
+        "text": "'cause the groups also call\ninto the dispatch the same flow.",
+        "start": 3481.487,
+        "duration": 3.33
+    },
+    {
+        "text": "So yeah, it's still one backend.",
+        "start": 3484.817,
+        "duration": 1.17
+    },
+    {
+        "text": "And then every group or slash every l\nlab references that same backend object.",
+        "start": 3488.222,
+        "duration": 4.65
+    },
+    {
+        "text": "Does that make any sense?",
+        "start": 3494.792,
+        "duration": 0.78
+    },
+    {
+        "text": "it, it probably would, but\nI'm also feeling like time",
+        "start": 3497.582,
+        "duration": 2.13
+    },
+    {
+        "text": "pressure that should be done.",
+        "start": 3499.712,
+        "duration": 1.68
+    },
+    {
+        "text": "And",
+        "start": 3501.542,
+        "duration": 0.18
+    },
+    {
+        "text": "so, when do you wanna meet next?",
+        "start": 3504.272,
+        "duration": 1.35
+    },
+    {
+        "text": "when it's good, I'll just send you\na schedule and then see what we can",
+        "start": 3507.512,
+        "duration": 3.9
+    },
+    {
+        "text": "do if you're willing to meet next.",
+        "start": 3511.412,
+        "duration": 1.56
+    },
+    {
+        "text": "In the meantime, while we've figured\nthis out, I think I can at least attempt",
+        "start": 3514.022,
+        "duration": 5.76
+    },
+    {
+        "text": "some progress on the refactoring bit.",
+        "start": 3519.782,
+        "duration": 3.18
+    },
+    {
+        "text": "And then this is still a\nbig unknown, and then I,",
+        "start": 3523.052,
+        "duration": 3.19
+    },
+    {
+        "text": "yeah, I, think we then, so next Legion\nthat will be trying to figure this out.",
+        "start": 3528.362,
+        "duration": 3.99
+    },
+    {
+        "text": "Does that sound reasonable?",
+        "start": 3532.862,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah, yeah.",
+        "start": 3534.542,
+        "duration": 0.27
+    },
+    {
+        "text": "And we can, we can talk over\nthe discourse and Perfect.",
+        "start": 3534.812,
+        "duration": 4.44
+    },
+    {
+        "text": "Sometime early next week\nor something like that.",
+        "start": 3539.252,
+        "duration": 1.68
+    },
+    {
+        "text": "Be, it'd be fine.",
+        "start": 3540.947,
+        "duration": 0.855
+    },
+    {
+        "text": "Awesome.",
+        "start": 3542.687,
+        "duration": 0.39
+    },
+    {
+        "text": "thanks.",
+        "start": 3543.887,
+        "duration": 0.3
+    },
+    {
+        "text": "This was, yeah, no, it's really fun\nto actually finally get to talk about",
+        "start": 3544.397,
+        "duration": 4.11
+    },
+    {
+        "text": "it, and spend a lot of me just like\nreading documentation and I think this",
+        "start": 3548.507,
+        "duration": 3.06
+    },
+    {
+        "text": "is right, but, I'm not really sure.",
+        "start": 3551.567,
+        "duration": 2.28
+    },
+    {
+        "text": "Sounds good.",
+        "start": 3554.687,
+        "duration": 0.45
+    },
+    {
+        "text": "I'll, also see if if I can drag Viviane\ninto this too, because that will, she",
+        "start": 3555.772,
+        "duration": 5.935
+    },
+    {
+        "text": "is the expert on, that stuff, so that\nwill, that should help tremendously.",
+        "start": 3561.707,
+        "duration": 3.93
+    }
+]

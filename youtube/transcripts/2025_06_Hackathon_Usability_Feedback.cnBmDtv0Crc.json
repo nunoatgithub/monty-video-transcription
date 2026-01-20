@@ -1,0 +1,3367 @@
+[
+    {
+        "text": "Okay, put a recording.",
+        "start": 241.513,
+        "duration": 2.49
+    },
+    {
+        "text": "we wrote down all our feedback in\nthe hackathon code feedback document",
+        "start": 244.663,
+        "duration": 3.45
+    },
+    {
+        "text": "that's linked, and we all voted\non what we're going to discuss.",
+        "start": 248.113,
+        "duration": 2.58
+    },
+    {
+        "text": "Looking two votes.",
+        "start": 251.323,
+        "duration": 0.72
+    },
+    {
+        "text": "Two votes.",
+        "start": 252.043,
+        "duration": 0.42
+    },
+    {
+        "text": "Two votes, two votes, 1 1 3 votes.",
+        "start": 252.463,
+        "duration": 3.81
+    },
+    {
+        "text": "Okay.",
+        "start": 257.143,
+        "duration": 0.27
+    },
+    {
+        "text": "So first item, so we're talking about is.",
+        "start": 257.413,
+        "duration": 2.31
+    },
+    {
+        "text": "I can't use my own sensorimotor\nID convention and I have to split",
+        "start": 260.263,
+        "duration": 3.93
+    },
+    {
+        "text": "one sensorimotor into two that\nuse top depth and RGBA suffixes.",
+        "start": 264.193,
+        "duration": 4.95
+    },
+    {
+        "text": "So this was, an example\nthat I had to do here.",
+        "start": 269.143,
+        "duration": 5.37
+    },
+    {
+        "text": "Initially, I was just returning, From\nthe environment state, I was returning",
+        "start": 274.603,
+        "duration": 7.77
+    },
+    {
+        "text": "a sensorimotor and it only had a patch,\nbut I couldn't do it because patch depth",
+        "start": 282.373,
+        "duration": 5.4
+    },
+    {
+        "text": "and patch dot R-B-A-R-G-B-A were hard\ncoded expectations for the sensorimotor",
+        "start": 287.863,
+        "duration": 4.47
+    },
+    {
+        "text": "state, even though, as you can see, it's\njust the fully coupled to each other.",
+        "start": 292.333,
+        "duration": 5.25
+    },
+    {
+        "text": "So there's some assumption\nthat's built in here.",
+        "start": 298.033,
+        "duration": 1.92
+    },
+    {
+        "text": "So that's the.",
+        "start": 300.013,
+        "duration": 0.84
+    },
+    {
+        "text": "Problem that I encountered.",
+        "start": 301.843,
+        "duration": 1.92
+    },
+    {
+        "text": "Viviane, you have two other items above\nthat seem to refer to the same issue.",
+        "start": 304.573,
+        "duration": 3.36
+    },
+    {
+        "text": "Which one are you?",
+        "start": 308.443,
+        "duration": 0.27
+    },
+    {
+        "text": "it's, I guess it's not the same issue,\nbut there were two other that were",
+        "start": 308.833,
+        "duration": 3.33
+    },
+    {
+        "text": "referring to that they're confusing\nnaming conventions of calling things",
+        "start": 312.433,
+        "duration": 4.32
+    },
+    {
+        "text": "Patch or Sensorimotor Module Zero and like\nimplicit assumptions in other, places of",
+        "start": 316.753,
+        "duration": 5.88
+    },
+    {
+        "text": "the code that you're using those names,",
+        "start": 322.633,
+        "duration": 2.01
+    },
+    {
+        "text": "which seems maybe related.",
+        "start": 327.013,
+        "duration": 1.35
+    },
+    {
+        "text": "I guess one comment now that you showed\nthis, code snippet is that I, totally",
+        "start": 330.313,
+        "duration": 6.87
+    },
+    {
+        "text": "agree that it's, a problem, but, it's\nonly a problem I think if you are just",
+        "start": 337.183,
+        "duration": 7.8
+    },
+    {
+        "text": "customizing a certain part of the code.",
+        "start": 344.983,
+        "duration": 1.98
+    },
+    {
+        "text": "for example, when we wrote\nour hackathon project.",
+        "start": 347.383,
+        "duration": 3.45
+    },
+    {
+        "text": "we're able to return state with no RGBA\nor depth because we have ultrasound.",
+        "start": 352.378,
+        "duration": 6.48
+    },
+    {
+        "text": "So we just called it ultrasound, but\nthat was possible because we also",
+        "start": 358.858,
+        "duration": 4.53
+    },
+    {
+        "text": "wrote custom sensorimotor module\nclass that then expected those,",
+        "start": 363.388,
+        "duration": 3.69
+    },
+    {
+        "text": "that, then didn't expect those.",
+        "start": 368.968,
+        "duration": 1.5
+    },
+    {
+        "text": "I think the main place where it is.",
+        "start": 371.248,
+        "duration": 1.41
+    },
+    {
+        "text": "You probably encountered the issues in the\ndepth to 3D locations transform, I assume.",
+        "start": 373.768,
+        "duration": 5.28
+    },
+    {
+        "text": "And in our project we didn't use\nthat transform, so maybe that's",
+        "start": 379.468,
+        "duration": 4.38
+    },
+    {
+        "text": "why it wasn't as big of an issue.",
+        "start": 383.848,
+        "duration": 2.01
+    },
+    {
+        "text": "But yeah,",
+        "start": 385.858,
+        "duration": 2.61
+    },
+    {
+        "text": "I'm not sure.",
+        "start": 391.948,
+        "duration": 0.51
+    },
+    {
+        "text": "Did you, do you remember where it,\nwhere that ex expectation was set?",
+        "start": 392.463,
+        "duration": 3.955
+    },
+    {
+        "text": "That it has those two fields?",
+        "start": 396.418,
+        "duration": 1.56
+    },
+    {
+        "text": "I think it was in the depth.",
+        "start": 401.083,
+        "duration": 0.975
+    },
+    {
+        "text": "Yes.",
+        "start": 402.058,
+        "duration": 0.33
+    },
+    {
+        "text": "Depths two, 3D if I'm, yeah.",
+        "start": 402.418,
+        "duration": 2.585
+    },
+    {
+        "text": "Yeah, that sounds right.",
+        "start": 406.193,
+        "duration": 0.93
+    },
+    {
+        "text": "I can't remember where that,",
+        "start": 409.543,
+        "duration": 1.16
+    },
+    {
+        "text": "okay.",
+        "start": 413.953,
+        "duration": 0.29
+    },
+    {
+        "text": "Yeah.",
+        "start": 414.273,
+        "duration": 0.29
+    },
+    {
+        "text": "I guess then the question is\nlike, how general do we want",
+        "start": 418.978,
+        "duration": 2.61
+    },
+    {
+        "text": "that TRA transform to be?",
+        "start": 421.588,
+        "duration": 2.58
+    },
+    {
+        "text": "Generally that transform requires\na depth channel to be able to do",
+        "start": 424.468,
+        "duration": 3.54
+    },
+    {
+        "text": "anything, and then it, its purpose is\nto transform the RGBA channel into,",
+        "start": 428.008,
+        "duration": 6.12
+    },
+    {
+        "text": "to return that in a different format.",
+        "start": 436.498,
+        "duration": 2.19
+    },
+    {
+        "text": "So it requires those two fields.",
+        "start": 439.078,
+        "duration": 2.49
+    },
+    {
+        "text": "but then yeah, it wouldn't necessarily\nneed them to be called exactly that.",
+        "start": 443.623,
+        "duration": 4.23
+    },
+    {
+        "text": "So we could, like in some other places,\nwe have variables that you pass to",
+        "start": 447.913,
+        "duration": 5.25
+    },
+    {
+        "text": "the function that tell where you pass.",
+        "start": 453.163,
+        "duration": 2.13
+    },
+    {
+        "text": "what's the name of the field that\nI want to use for the dev channel?",
+        "start": 455.503,
+        "duration": 4.26
+    },
+    {
+        "text": "yeah, the, and the other thing here,",
+        "start": 467.923,
+        "duration": 3.09
+    },
+    {
+        "text": "structurally, right?",
+        "start": 474.253,
+        "duration": 1.14
+    },
+    {
+        "text": "because you're given a dictionary\nand you're hard coding a key.",
+        "start": 476.323,
+        "duration": 5.73
+    },
+    {
+        "text": "that's the coupling, right?",
+        "start": 482.413,
+        "duration": 1.26
+    },
+    {
+        "text": "Like with what you just said.",
+        "start": 484.093,
+        "duration": 1.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 485.413,
+        "duration": 0.09
+    },
+    {
+        "text": "and this pattern happens\na lot in the code.",
+        "start": 486.553,
+        "duration": 1.98
+    },
+    {
+        "text": "So it just like feedback would be,\navoid this pattern of Of magically",
+        "start": 488.533,
+        "duration": 5.925
+    },
+    {
+        "text": "knowing what property to access on\nan object that was passed to you.",
+        "start": 494.458,
+        "duration": 3.84
+    },
+    {
+        "text": "Just",
+        "start": 498.298,
+        "duration": 0.45
+    },
+    {
+        "text": "have whoever's calling you\nmake it their responsibility",
+        "start": 500.848,
+        "duration": 3.27
+    },
+    {
+        "text": "to give you the right thing.",
+        "start": 504.118,
+        "duration": 1.29
+    },
+    {
+        "text": "Don't be, and especially\nlike in a generic dictionary.",
+        "start": 505.678,
+        "duration": 4.53
+    },
+    {
+        "text": "So that's the pattern to avoid there.",
+        "start": 510.208,
+        "duration": 1.89
+    },
+    {
+        "text": "as to the, yeah, I had some\nquestions about where the, how",
+        "start": 513.778,
+        "duration": 4.53
+    },
+    {
+        "text": "generic this transforms were\nsupposed to be because they,",
+        "start": 518.308,
+        "duration": 3.78
+    },
+    {
+        "text": "they get",
+        "start": 524.278,
+        "duration": 0.84
+    },
+    {
+        "text": "my experiments so they\nget, specified here.",
+        "start": 528.928,
+        "duration": 4.89
+    },
+    {
+        "text": "So it's, like this thing, right?",
+        "start": 535.138,
+        "duration": 2.55
+    },
+    {
+        "text": "by the way, this is what I know.",
+        "start": 539.068,
+        "duration": 2.31
+    },
+    {
+        "text": "You've probably never seen this.",
+        "start": 541.378,
+        "duration": 1.11
+    },
+    {
+        "text": "This is what a flat,\nconfiguration looks like.",
+        "start": 542.488,
+        "duration": 2.58
+    },
+    {
+        "text": "Never seen in the wild before.",
+        "start": 547.123,
+        "duration": 1.83
+    },
+    {
+        "text": "But, so in the transform, it\ntried to be the same for our",
+        "start": 549.223,
+        "duration": 3.18
+    },
+    {
+        "text": "ultrasound project this time too.",
+        "start": 552.403,
+        "duration": 1.65
+    },
+    {
+        "text": "I think that says a lot about\nusability and configurations.",
+        "start": 554.803,
+        "duration": 3.0
+    },
+    {
+        "text": "We both, the teams went\nwith the flat config,",
+        "start": 557.953,
+        "duration": 2.61
+    },
+    {
+        "text": "the, so the dataset, so this is in,\nso this is, so this is what the other",
+        "start": 562.723,
+        "duration": 5.31
+    },
+    {
+        "text": "basket that was confusing to me.",
+        "start": 568.033,
+        "duration": 1.5
+    },
+    {
+        "text": "this is a dataset configuration.",
+        "start": 570.523,
+        "duration": 1.86
+    },
+    {
+        "text": "this.",
+        "start": 573.883,
+        "duration": 0.33
+    },
+    {
+        "text": "So there's a transform that's happening\non the data set, and this happens",
+        "start": 574.213,
+        "duration": 4.62
+    },
+    {
+        "text": "inside, under git item implementation.",
+        "start": 578.833,
+        "duration": 2.85
+    },
+    {
+        "text": "so when the data, when we a,\nwhen we tell the data sets to",
+        "start": 582.823,
+        "duration": 3.75
+    },
+    {
+        "text": "give me a, thing, it gets an\nobservation and state, and then it",
+        "start": 589.153,
+        "duration": 2.76
+    },
+    {
+        "text": "transforms the observations themselves.",
+        "start": 591.913,
+        "duration": 1.86
+    },
+    {
+        "text": "Shouldn't this be happening\nin like sensorimotor module",
+        "start": 597.298,
+        "duration": 4.2
+    },
+    {
+        "text": "or something like that?",
+        "start": 601.708,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah.",
+        "start": 602.728,
+        "duration": 0.06
+    },
+    {
+        "text": "So for a bit of context or history, first\nI'm not happy with this and I agree with",
+        "start": 603.448,
+        "duration": 6.87
+    },
+    {
+        "text": "you that kind of by how we think about\nSensorimotor module, this should be",
+        "start": 610.318,
+        "duration": 3.75
+    },
+    {
+        "text": "happening in the sensorimotor module to.",
+        "start": 614.068,
+        "duration": 1.71
+    },
+    {
+        "text": "Kind of to transform, incoming data into\nthe CMP and get the world coordinates.",
+        "start": 616.318,
+        "duration": 6.15
+    },
+    {
+        "text": "The reason why we have this kind\nof data set up that then applies",
+        "start": 623.218,
+        "duration": 4.68
+    },
+    {
+        "text": "transforms is because when we\nfirst started out writing this code",
+        "start": 627.898,
+        "duration": 3.24
+    },
+    {
+        "text": "base, we wrote it using kinda 10.",
+        "start": 631.138,
+        "duration": 2.82
+    },
+    {
+        "text": "torch Conventions and in Torch\nthey have like dataset and data",
+        "start": 634.938,
+        "duration": 5.16
+    },
+    {
+        "text": "loader and transforms, and it's\nexactly that kind of setup.",
+        "start": 640.098,
+        "duration": 3.78
+    },
+    {
+        "text": "And the original idea was that this will\nmake it really easy to then just plug in a",
+        "start": 644.088,
+        "duration": 5.4
+    },
+    {
+        "text": "deep learning system and compare to that.",
+        "start": 649.488,
+        "duration": 2.34
+    },
+    {
+        "text": "But we never really did that.",
+        "start": 652.318,
+        "duration": 2.4
+    },
+    {
+        "text": "We did it with, I think, vector neurons\nonce, because like deep learning systems",
+        "start": 654.748,
+        "duration": 5.34
+    },
+    {
+        "text": "aren't really made for interacting with\nenvironments and learning continually.",
+        "start": 660.088,
+        "duration": 3.93
+    },
+    {
+        "text": "And we, we, are, not learning from static\ndata sets, so we set up the repository",
+        "start": 664.348,
+        "duration": 6.78
+    },
+    {
+        "text": "to be made for static data sets, even\nthough we are not working with that.",
+        "start": 671.608,
+        "duration": 3.81
+    },
+    {
+        "text": "so yeah.",
+        "start": 677.668,
+        "duration": 1.77
+    },
+    {
+        "text": "Long story short, I'm not a fan of it.",
+        "start": 680.353,
+        "duration": 2.1
+    },
+    {
+        "text": "Okay.",
+        "start": 683.323,
+        "duration": 0.3
+    },
+    {
+        "text": "So, this, so to me what\nI'm hearing is, this sounds",
+        "start": 683.863,
+        "duration": 2.43
+    },
+    {
+        "text": "okay, so the transforms themselves will\nbecome part of the sensorimotor modules.",
+        "start": 689.353,
+        "duration": 4.53
+    },
+    {
+        "text": "That's part of the refactor of going\naway from dataset, data loader and just",
+        "start": 693.883,
+        "duration": 5.13
+    },
+    {
+        "text": "finding a different place for them.",
+        "start": 699.013,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah, that makes sense.",
+        "start": 700.573,
+        "duration": 0.69
+    },
+    {
+        "text": "I'm tracking that then.",
+        "start": 701.503,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 702.313,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah.",
+        "start": 702.913,
+        "duration": 0.3
+    },
+    {
+        "text": "Okay.",
+        "start": 703.213,
+        "duration": 0.15
+    },
+    {
+        "text": "I was gonna say, yeah, we already\nhave that noted somewhere, otherwise.",
+        "start": 703.363,
+        "duration": 2.25
+    },
+    {
+        "text": "Yep.",
+        "start": 705.703,
+        "duration": 0.12
+    },
+    {
+        "text": "Wanna make sure we.",
+        "start": 705.823,
+        "duration": 0.6
+    },
+    {
+        "text": "Does anybody else wanna\ndiscuss any of this further?",
+        "start": 710.008,
+        "duration": 2.76
+    },
+    {
+        "text": "Okay.",
+        "start": 714.658,
+        "duration": 0.33
+    },
+    {
+        "text": "Let's go to the first one with two votes.",
+        "start": 715.198,
+        "duration": 2.46
+    },
+    {
+        "text": "Hojae and Jeremy voted for Embodied\nEnvironment as abstract classes that",
+        "start": 717.838,
+        "duration": 4.17
+    },
+    {
+        "text": "seem too specific to simulators.",
+        "start": 722.008,
+        "duration": 1.74
+    },
+    {
+        "text": "Add object, remove objects.",
+        "start": 723.748,
+        "duration": 1.35
+    },
+    {
+        "text": "Close.",
+        "start": 725.338,
+        "duration": 0.48
+    },
+    {
+        "text": "Gonna share maybe a screen too.",
+        "start": 726.238,
+        "duration": 2.16
+    },
+    {
+        "text": "I was fa, I just happened to be\nfamiliar with the previous one.",
+        "start": 729.688,
+        "duration": 2.19
+    },
+    {
+        "text": "The screen.",
+        "start": 732.178,
+        "duration": 0.42
+    },
+    {
+        "text": "Let me know.",
+        "start": 732.628,
+        "duration": 0.63
+    },
+    {
+        "text": "Better discuss this or.",
+        "start": 733.678,
+        "duration": 0.99
+    },
+    {
+        "text": "Yeah, I think I added this, item\nbecause when I was customizing the",
+        "start": 737.248,
+        "duration": 4.29
+    },
+    {
+        "text": "embodied environment, I had to write\nthese cla boil up plate classes.",
+        "start": 741.538,
+        "duration": 5.13
+    },
+    {
+        "text": "'cause they're in the abstract\nclass, even though they're just",
+        "start": 746.818,
+        "duration": 4.35
+    },
+    {
+        "text": "for Habitat made for habitat.",
+        "start": 751.168,
+        "duration": 1.68
+    },
+    {
+        "text": "and I, might have been the one\nwho actually added it, but I",
+        "start": 755.263,
+        "duration": 4.635
+    },
+    {
+        "text": "don't remember why it should\nbe part of the abstract class.",
+        "start": 759.898,
+        "duration": 3.12
+    },
+    {
+        "text": "And I think it.",
+        "start": 763.018,
+        "duration": 1.59
+    },
+    {
+        "text": "Should not be.",
+        "start": 765.133,
+        "duration": 0.72
+    },
+    {
+        "text": "but I, ran into very similar thing.",
+        "start": 769.063,
+        "duration": 3.39
+    },
+    {
+        "text": "again, please, if you wanna show your code",
+        "start": 773.503,
+        "duration": 2.04
+    },
+    {
+        "text": "go ahead.",
+        "start": 777.643,
+        "duration": 0.6
+    },
+    {
+        "text": "I just remembered working on\nthis as well, environments.",
+        "start": 778.513,
+        "duration": 4.23
+    },
+    {
+        "text": "so I think I, yeah, so I just skipped\nthe, that environment, I think, right?",
+        "start": 784.873,
+        "duration": 7.8
+    },
+    {
+        "text": "Because the problem here was.",
+        "start": 792.673,
+        "duration": 1.32
+    },
+    {
+        "text": "But environment has abstract classes\nseem to, specific to simulators, yeah.",
+        "start": 794.518,
+        "duration": 3.6
+    },
+    {
+        "text": "So I just inherited directly from\nEmbodied Environment because I",
+        "start": 798.118,
+        "duration": 3.0
+    },
+    {
+        "text": "didn't want that add object stuff.",
+        "start": 801.118,
+        "duration": 1.92
+    },
+    {
+        "text": "so when I, so we implemented everything.",
+        "start": 804.583,
+        "duration": 1.875
+    },
+    {
+        "text": "It's also environment.",
+        "start": 806.458,
+        "duration": 0.99
+    },
+    {
+        "text": "We just went directly\nfrom Embodied Environment.",
+        "start": 807.448,
+        "duration": 2.22
+    },
+    {
+        "text": "Hang on.",
+        "start": 811.408,
+        "duration": 0.36
+    },
+    {
+        "text": "But, maybe I'll share my, so\nwhat we have Yeah, please.",
+        "start": 811.773,
+        "duration": 3.58
+    },
+    {
+        "text": "Was,",
+        "start": 816.213,
+        "duration": 0.22
+    },
+    {
+        "text": "Also inherit from embodied environment,\nwhich I think is the abstract class,",
+        "start": 818.848,
+        "duration": 4.38
+    },
+    {
+        "text": "but then it requires you to implement.",
+        "start": 823.258,
+        "duration": 2.88
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 826.408,
+        "duration": 0.51
+    },
+    {
+        "text": "I, see it.",
+        "start": 826.924,
+        "duration": 0.294
+    },
+    {
+        "text": "Object.",
+        "start": 827.218,
+        "duration": 0.18
+    },
+    {
+        "text": "Race, not implemented error.",
+        "start": 827.818,
+        "duration": 1.62
+    },
+    {
+        "text": "Ultrasound environment does\nnot support adding objects.",
+        "start": 829.648,
+        "duration": 3.15
+    },
+    {
+        "text": "And I saw this pattern in couple\nof other c custom environments",
+        "start": 832.978,
+        "duration": 4.41
+    },
+    {
+        "text": "too, that are not Habitat.",
+        "start": 837.388,
+        "duration": 1.8
+    },
+    {
+        "text": "oh yeah.",
+        "start": 841.798,
+        "duration": 0.36
+    },
+    {
+        "text": "I just scroll down and I see I. I\nput raise, not implemented error.",
+        "start": 842.488,
+        "duration": 5.745
+    },
+    {
+        "text": "I just myself here, like I Okay.",
+        "start": 848.833,
+        "duration": 3.21
+    },
+    {
+        "text": "I don't think you shared,\nso I'll reshare again.",
+        "start": 852.103,
+        "duration": 2.1
+    },
+    {
+        "text": "yeah.",
+        "start": 855.583,
+        "duration": 0.3
+    },
+    {
+        "text": "This is what you're talking about.",
+        "start": 856.273,
+        "duration": 0.96
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 858.193,
+        "duration": 0.96
+    },
+    {
+        "text": "We just needed to raise,\nimplement, implemented error.",
+        "start": 859.783,
+        "duration": 2.49
+    },
+    {
+        "text": "Okay.",
+        "start": 862.333,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah, so that's just,\nit's too coupled too.",
+        "start": 862.693,
+        "duration": 3.51
+    },
+    {
+        "text": "yeah.",
+        "start": 870.973,
+        "duration": 0.27
+    },
+    {
+        "text": "This fun.",
+        "start": 871.243,
+        "duration": 0.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 871.783,
+        "duration": 0.45
+    },
+    {
+        "text": "It's, it feels like.",
+        "start": 872.323,
+        "duration": 1.11
+    },
+    {
+        "text": "This is definitely a sims, simulator.",
+        "start": 874.138,
+        "duration": 2.16
+    },
+    {
+        "text": "So maybe there's, it's just\ncoupled to a simulator too soon.",
+        "start": 876.298,
+        "duration": 4.92
+    },
+    {
+        "text": "maybe there's a more generic environment.",
+        "start": 882.208,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah.",
+        "start": 885.478,
+        "duration": 0.42
+    },
+    {
+        "text": "'cause I think we have a habitat\nenvironment class that inherits",
+        "start": 885.898,
+        "duration": 4.14
+    },
+    {
+        "text": "from embodied environment and\nI feel like that would be the",
+        "start": 890.038,
+        "duration": 3.06
+    },
+    {
+        "text": "place to have those, or to, yeah.",
+        "start": 893.098,
+        "duration": 5.88
+    },
+    {
+        "text": "Or have a simulated environment class.",
+        "start": 899.008,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah, that strong of a requirement.",
+        "start": 903.823,
+        "duration": 2.55
+    },
+    {
+        "text": "what, it goes jumping into my head is\nwe probably just should have environment",
+        "start": 907.063,
+        "duration": 3.3
+    },
+    {
+        "text": "and then there's simulated environment\nand then maybe embodied environment.",
+        "start": 910.363,
+        "duration": 4.56
+    },
+    {
+        "text": "And those are like the, simulated one\nhas, you can add objects to it versus the",
+        "start": 914.923,
+        "duration": 5.79
+    },
+    {
+        "text": "embodied environment maybe has something\nto do with other things like positioning",
+        "start": 920.713,
+        "duration": 4.89
+    },
+    {
+        "text": "you in, a place or something like that.",
+        "start": 925.603,
+        "duration": 2.07
+    },
+    {
+        "text": "Okay.",
+        "start": 928.123,
+        "duration": 0.3
+    },
+    {
+        "text": "That makes, this makes sense to me.",
+        "start": 929.593,
+        "duration": 1.53
+    },
+    {
+        "text": "see my",
+        "start": 934.963,
+        "duration": 1.965
+    },
+    {
+        "text": "notes.",
+        "start": 939.798,
+        "duration": 0.12
+    },
+    {
+        "text": "Yeah, I don't dunno.",
+        "start": 939.918,
+        "duration": 0.36
+    },
+    {
+        "text": "Notes.",
+        "start": 940.933,
+        "duration": 0.21
+    },
+    {
+        "text": "Jeremy, if you had some comments on\nthat since you put your name there.",
+        "start": 941.143,
+        "duration": 3.96
+    },
+    {
+        "text": "Think mine was more around just the\ngeneral, that's something I've seen",
+        "start": 945.283,
+        "duration": 3.78
+    },
+    {
+        "text": "in a lot of places of stuff being\ntoo tied to simulation environments",
+        "start": 949.063,
+        "duration": 3.96
+    },
+    {
+        "text": "and, kinda we discuss that more.",
+        "start": 953.503,
+        "duration": 2.04
+    },
+    {
+        "text": "But this is, good.",
+        "start": 955.873,
+        "duration": 1.23
+    },
+    {
+        "text": "Although looking at that pattern\nthat y'all did in both of those,",
+        "start": 964.528,
+        "duration": 2.58
+    },
+    {
+        "text": "reminded me of I've never actually\nused abstract based classes.",
+        "start": 967.738,
+        "duration": 4.875
+    },
+    {
+        "text": "Like we never used that in Bitbucket.",
+        "start": 972.613,
+        "duration": 1.56
+    },
+    {
+        "text": "what we would do is we'd have a base\nclass and then manually implement",
+        "start": 974.653,
+        "duration": 2.85
+    },
+    {
+        "text": "the methods and have them throw\nnot implemented, and usually have",
+        "start": 977.503,
+        "duration": 3.24
+    },
+    {
+        "text": "it pull the name of the class off.",
+        "start": 980.743,
+        "duration": 1.35
+    },
+    {
+        "text": "So if you sub classed it, it would still\ngive you the message saying, this is",
+        "start": 982.093,
+        "duration": 2.64
+    },
+    {
+        "text": "the class that doesn't implement this.",
+        "start": 984.733,
+        "duration": 1.5
+    },
+    {
+        "text": "and that might be something\nyou could do here is put, make",
+        "start": 987.163,
+        "duration": 2.34
+    },
+    {
+        "text": "those methods optional, really.",
+        "start": 989.503,
+        "duration": 2.97
+    },
+    {
+        "text": "But I think I like, I think I like\nthe idea of embodied versus simulated",
+        "start": 994.963,
+        "duration": 3.6
+    },
+    {
+        "text": "a little bit better than that.",
+        "start": 998.563,
+        "duration": 0.93
+    },
+    {
+        "text": "Yeah.",
+        "start": 1001.083,
+        "duration": 0.3
+    },
+    {
+        "text": "So in my mind, the reason we have\nthese abstract classes is because.",
+        "start": 1001.383,
+        "duration": 3.515
+    },
+    {
+        "text": "We want Monty to be this very modular\nand customizable system where you can",
+        "start": 1005.568,
+        "duration": 5.13
+    },
+    {
+        "text": "just write your own learning module and\nplug it in with all the other existing",
+        "start": 1010.698,
+        "duration": 3.18
+    },
+    {
+        "text": "components without changing other stuff.",
+        "start": 1013.878,
+        "duration": 2.31
+    },
+    {
+        "text": "And so having the abstract class\ngives you the boilerplate of these",
+        "start": 1016.488,
+        "duration": 4.41
+    },
+    {
+        "text": "are the functions that the other\ncomponent expect this class to have.",
+        "start": 1020.898,
+        "duration": 4.02
+    },
+    {
+        "text": "And makes it a bit clearer to alright, I\nwanna write my custom learning module, so",
+        "start": 1026.618,
+        "duration": 5.07
+    },
+    {
+        "text": "I need to implement those five functions.",
+        "start": 1031.688,
+        "duration": 2.1
+    },
+    {
+        "text": "but yeah, I'm not a, what you describe\nis exactly like a protocol, actually.",
+        "start": 1035.528,
+        "duration": 5.46
+    },
+    {
+        "text": "Like protocol is.",
+        "start": 1041.678,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah.",
+        "start": 1042.193,
+        "duration": 0.15
+    },
+    {
+        "text": "So yeah.",
+        "start": 1042.343,
+        "duration": 0.72
+    },
+    {
+        "text": "Yeah.",
+        "start": 1043.148,
+        "duration": 0.39
+    },
+    {
+        "text": "Basically defining, The\nkind of interface of that.",
+        "start": 1043.538,
+        "duration": 4.375
+    },
+    {
+        "text": "The template.",
+        "start": 1047.913,
+        "duration": 0.84
+    },
+    {
+        "text": "Yeah.",
+        "start": 1048.753,
+        "duration": 0.39
+    },
+    {
+        "text": "The, difference between abstract\nclass and a protocol will be abstract.",
+        "start": 1049.863,
+        "duration": 3.45
+    },
+    {
+        "text": "Class will fail upon nationalization\nversus protocol will fail at runtime.",
+        "start": 1053.313,
+        "duration": 4.05
+    },
+    {
+        "text": "Yes, I understand.",
+        "start": 1058.203,
+        "duration": 2.16
+    },
+    {
+        "text": "So that's the, trade off.",
+        "start": 1060.363,
+        "duration": 1.98
+    },
+    {
+        "text": "It's arbitrary where we do\nit depending on our tooling.",
+        "start": 1062.343,
+        "duration": 5.64
+    },
+    {
+        "text": "For protocols to be useful, we need the.",
+        "start": 1068.433,
+        "duration": 2.28
+    },
+    {
+        "text": "Developers need to\nhave, type checking, say",
+        "start": 1071.193,
+        "duration": 3.93
+    },
+    {
+        "text": "tooling implemented as\npart of code development.",
+        "start": 1077.163,
+        "duration": 2.19
+    },
+    {
+        "text": "Yes.",
+        "start": 1080.403,
+        "duration": 0.51
+    },
+    {
+        "text": "which I don't think we should do\nright now with lower versions of",
+        "start": 1081.393,
+        "duration": 2.91
+    },
+    {
+        "text": "Python and even the latest version\ntyping is still changing a lot.",
+        "start": 1084.303,
+        "duration": 4.17
+    },
+    {
+        "text": "So anyways,",
+        "start": 1088.473,
+        "duration": 1.41
+    },
+    {
+        "text": "yeah, I think I put it for\nthe same reason as Jeremy.",
+        "start": 1091.893,
+        "duration": 2.94
+    },
+    {
+        "text": "I had one more thing to say,\nbut now I forget what it is.",
+        "start": 1097.653,
+        "duration": 2.34
+    },
+    {
+        "text": "I thought that abstract based class,\njust correct me if I'm wrong, is it,",
+        "start": 1101.988,
+        "duration": 3.51
+    },
+    {
+        "text": "also partially used for tests like,\nso I don't know testing very well,",
+        "start": 1106.698,
+        "duration": 3.3
+    },
+    {
+        "text": "but there I know something about like\nmocking objects or something like that.",
+        "start": 1109.998,
+        "duration": 3.45
+    },
+    {
+        "text": "Like I know there's some fake\nbuffer, fake agent thing.",
+        "start": 1113.598,
+        "duration": 3.48
+    },
+    {
+        "text": "Does that do those require\nabstract classes or no?",
+        "start": 1117.408,
+        "duration": 3.12
+    },
+    {
+        "text": "No.",
+        "start": 1120.528,
+        "duration": 0.001
+    },
+    {
+        "text": "Okay.",
+        "start": 1121.368,
+        "duration": 0.33
+    },
+    {
+        "text": "You can mock any class.",
+        "start": 1123.168,
+        "duration": 1.14
+    },
+    {
+        "text": "Okay.",
+        "start": 1125.268,
+        "duration": 0.27
+    },
+    {
+        "text": "Generally in Python, it's\nall duck typed, right?",
+        "start": 1126.363,
+        "duration": 1.98
+    },
+    {
+        "text": "Like you just call it, and if\nthe method's not there, you get",
+        "start": 1128.343,
+        "duration": 2.31
+    },
+    {
+        "text": "a attribute error or whatever.",
+        "start": 1130.653,
+        "duration": 1.5
+    },
+    {
+        "text": "this sort of like abstract\nclass is more of a more strongly",
+        "start": 1133.203,
+        "duration": 3.3
+    },
+    {
+        "text": "typed language type of thing.",
+        "start": 1136.503,
+        "duration": 1.35
+    },
+    {
+        "text": "Okay.",
+        "start": 1139.263,
+        "duration": 0.18
+    },
+    {
+        "text": "The, fakes aren't there to\nwrap abstractions, it's just",
+        "start": 1140.613,
+        "duration": 2.91
+    },
+    {
+        "text": "to provide fake implementations\nfor, the purpose of testing.",
+        "start": 1143.523,
+        "duration": 3.3
+    },
+    {
+        "text": "But PS would be there without the\nabstract classes as well, just",
+        "start": 1146.883,
+        "duration": 3.57
+    },
+    {
+        "text": "so they could be help the test.",
+        "start": 1150.453,
+        "duration": 2.64
+    },
+    {
+        "text": "All right.",
+        "start": 1154.023,
+        "duration": 0.21
+    },
+    {
+        "text": "Thank you.",
+        "start": 1154.293,
+        "duration": 0.3
+    },
+    {
+        "text": "All right.",
+        "start": 1157.083,
+        "duration": 0.33
+    },
+    {
+        "text": "yeah, and in my mind, I, guess I\nstill see a lot of value in having",
+        "start": 1157.503,
+        "duration": 5.28
+    },
+    {
+        "text": "the abstract classes for now,\nbecause it's all in one place.",
+        "start": 1162.783,
+        "duration": 3.96
+    },
+    {
+        "text": "It tells you, all right, this, is\nwhat is expected of this class.",
+        "start": 1166.743,
+        "duration": 3.03
+    },
+    {
+        "text": "An environment should, implement\na step function, a reset function.",
+        "start": 1169.953,
+        "duration": 3.54
+    },
+    {
+        "text": "And, I don't know, the pre and post\nepisode function, and it, and then",
+        "start": 1173.913,
+        "duration": 5.79
+    },
+    {
+        "text": "you just see it all in one place.",
+        "start": 1179.703,
+        "duration": 1.77
+    },
+    {
+        "text": "we could add a little bit\nmore documentation to what,",
+        "start": 1182.463,
+        "duration": 3.03
+    },
+    {
+        "text": "these functions should do or\nsomething like that, but yeah.",
+        "start": 1185.493,
+        "duration": 3.99
+    },
+    {
+        "text": "Yeah.",
+        "start": 1190.533,
+        "duration": 0.42
+    },
+    {
+        "text": "No, I agree.",
+        "start": 1191.013,
+        "duration": 0.905
+    },
+    {
+        "text": "I think it definitely has value\nand I think just as you guys have",
+        "start": 1192.273,
+        "duration": 3.18
+    },
+    {
+        "text": "identified it, maybe just needed\nto be made more abstract and then",
+        "start": 1195.693,
+        "duration": 4.2
+    },
+    {
+        "text": "Simulated environment or whatever has\nthese kind of more specific things.",
+        "start": 1202.008,
+        "duration": 2.58
+    },
+    {
+        "text": "okay.",
+        "start": 1212.898,
+        "duration": 0.27
+    },
+    {
+        "text": "It's, let's move on to the next thing with\nthe two votes, which would be this one?",
+        "start": 1214.278,
+        "duration": 5.415
+    },
+    {
+        "text": "There are multiple libraries used\nfor defining orientation, SciPi.",
+        "start": 1222.198,
+        "duration": 3.39
+    },
+    {
+        "text": "Rotation, quans.",
+        "start": 1225.588,
+        "duration": 1.17
+    },
+    {
+        "text": "They use different qua conventions.",
+        "start": 1226.758,
+        "duration": 1.86
+    },
+    {
+        "text": "It's like a, I'm laughing 'cause we have\nour slack threads on this just now too.",
+        "start": 1230.178,
+        "duration": 3.99
+    },
+    {
+        "text": "Ordering of, they use d ordering of quan.",
+        "start": 1234.498,
+        "duration": 2.25
+    },
+    {
+        "text": "this is scaler last or scaler first.",
+        "start": 1238.758,
+        "duration": 2.97
+    },
+    {
+        "text": "W being the scaler X, Y, z. Being the\nimaginary can be confusing may to errors.",
+        "start": 1242.088,
+        "duration": 4.8
+    },
+    {
+        "text": "Rami Hojae, whoever wrote this, discuss.",
+        "start": 1247.038,
+        "duration": 2.82
+    },
+    {
+        "text": "Oh, I just think that they, the order\nis, slightly different from also the",
+        "start": 1251.538,
+        "duration": 4.05
+    },
+    {
+        "text": "problem of having multiple libraries\nthat are doing the same thing.",
+        "start": 1255.588,
+        "duration": 2.4
+    },
+    {
+        "text": "I don't know why we have, SPI rotations\nand also we have just, IANS that are like,",
+        "start": 1258.348,
+        "duration": 6.27
+    },
+    {
+        "text": "it's, they seem, IANS seem to be defined\nin earlier parts of the code where,",
+        "start": 1264.798,
+        "duration": 4.17
+    },
+    {
+        "text": "we had the, habitat simulation stuff.",
+        "start": 1269.688,
+        "duration": 2.97
+    },
+    {
+        "text": "Maybe it requires it, I'm not sure.",
+        "start": 1273.213,
+        "duration": 1.74
+    },
+    {
+        "text": "But, so the NIA package is like\nan extension of mpa so that it",
+        "start": 1275.043,
+        "duration": 5.19
+    },
+    {
+        "text": "would allow for, I think it,\nit's like a very janky one.",
+        "start": 1280.233,
+        "duration": 3.18
+    },
+    {
+        "text": "I actually looked into this\nand I wanted to get rid of it.",
+        "start": 1283.563,
+        "duration": 2.665
+    },
+    {
+        "text": "'cause I think we only use\nit in like a few places.",
+        "start": 1286.293,
+        "duration": 3.36
+    },
+    {
+        "text": "I think.",
+        "start": 1289.653,
+        "duration": 0.6
+    },
+    {
+        "text": "I think we use it in the\ninterface with Habitat.",
+        "start": 1291.508,
+        "duration": 2.375
+    },
+    {
+        "text": "Yeah.",
+        "start": 1294.813,
+        "duration": 0.51
+    },
+    {
+        "text": "They did?",
+        "start": 1300.078,
+        "duration": 0.39
+    },
+    {
+        "text": "I'm not sure, I think Louis\nwrote that part of the code.",
+        "start": 1300.648,
+        "duration": 2.94
+    },
+    {
+        "text": "I think it does, but we could\nprobably put it even further towards",
+        "start": 1304.548,
+        "duration": 5.1
+    },
+    {
+        "text": "just the interface with Habitat.",
+        "start": 1309.648,
+        "duration": 2.07
+    },
+    {
+        "text": "Yeah.",
+        "start": 1312.798,
+        "duration": 0.45
+    },
+    {
+        "text": "I'm not sure actually 'cause I know\nHabitat has, I feel like they have their",
+        "start": 1313.248,
+        "duration": 4.92
+    },
+    {
+        "text": "own Coran thing, which they've is in their\nkind of c plus or whatever implementation.",
+        "start": 1318.168,
+        "duration": 6.06
+    },
+    {
+        "text": "So I don't actually know if it is.",
+        "start": 1324.228,
+        "duration": 2.1
+    },
+    {
+        "text": "Essential.",
+        "start": 1327.768,
+        "duration": 0.6
+    },
+    {
+        "text": "I, don't think an appetite requires\nit, but I think we have it so that,",
+        "start": 1329.268,
+        "duration": 3.21
+    },
+    {
+        "text": "it will, I think it's just a matter of\nus using that or us just transposing",
+        "start": 1334.308,
+        "duration": 6.33
+    },
+    {
+        "text": "things to put it in the right order.",
+        "start": 1340.638,
+        "duration": 3.63
+    },
+    {
+        "text": "So like we may be able to get rid of the.",
+        "start": 1344.268,
+        "duration": 4.59
+    },
+    {
+        "text": "Dependency, at the cost of\nclarity, clarity as in okay.",
+        "start": 1349.968,
+        "duration": 7.23
+    },
+    {
+        "text": "that package will say it's in\nthis format, but, we just manually",
+        "start": 1357.648,
+        "duration": 4.5
+    },
+    {
+        "text": "implement it in some sense.",
+        "start": 1362.418,
+        "duration": 1.2
+    },
+    {
+        "text": "I, don't exactly know, but, all but\nmy, my, I guess reason for putting",
+        "start": 1364.338,
+        "duration": 4.41
+    },
+    {
+        "text": "it on was just like, let's decide on\nordering at least as a group, and so",
+        "start": 1368.748,
+        "duration": 8.52
+    },
+    {
+        "text": "that we can at least Stick with it.",
+        "start": 1377.268,
+        "duration": 2.535
+    },
+    {
+        "text": "So everything will be converted to that.",
+        "start": 1379.803,
+        "duration": 3.03
+    },
+    {
+        "text": "so that everybody knows that\nanything that comes out of Monty",
+        "start": 1383.973,
+        "duration": 3.66
+    },
+    {
+        "text": "will also be in that ordering.",
+        "start": 1387.633,
+        "duration": 1.44
+    },
+    {
+        "text": "And if they have to visualize using\nOpenGL, they will know, okay, which",
+        "start": 1389.553,
+        "duration": 4.08
+    },
+    {
+        "text": "ordering I'm getting and which, if I\nneed to transport transpose or not.",
+        "start": 1393.633,
+        "duration": 4.05
+    },
+    {
+        "text": "like I so open.",
+        "start": 1400.638,
+        "duration": 1.185
+    },
+    {
+        "text": "Yeah, I think it, yeah.",
+        "start": 1401.823,
+        "duration": 1.2
+    },
+    {
+        "text": "Yeah.",
+        "start": 1403.353,
+        "duration": 0.33
+    },
+    {
+        "text": "So from, So I know OpenGL and Blender, so\nI think it's like visualize visualization",
+        "start": 1403.683,
+        "duration": 7.395
+    },
+    {
+        "text": "tools and game like Unity use XY, ZW.",
+        "start": 1411.078,
+        "duration": 3.39
+    },
+    {
+        "text": "while like science libraries,\nlike ROS SciPi use, WXYZ,",
+        "start": 1415.668,
+        "duration": 5.07
+    },
+    {
+        "text": "wait, doesn't, isn't SciPi\nXYZW and MPA is WXYZ.",
+        "start": 1423.258,
+        "duration": 5.4
+    },
+    {
+        "text": "Oh, sorry.",
+        "start": 1429.588,
+        "duration": 0.48
+    },
+    {
+        "text": "I might be forgetting.",
+        "start": 1430.068,
+        "duration": 0.9
+    },
+    {
+        "text": "it's like it's already confusing.",
+        "start": 1431.833,
+        "duration": 1.175
+    },
+    {
+        "text": "yeah.",
+        "start": 1434.033,
+        "duration": 0.29
+    },
+    {
+        "text": "yeah.",
+        "start": 1435.078,
+        "duration": 0.3
+    },
+    {
+        "text": "'cause I think.",
+        "start": 1435.378,
+        "duration": 0.9
+    },
+    {
+        "text": "Jeremy, you made a good point on\nSlack, like the more intuitive way is",
+        "start": 1436.893,
+        "duration": 3.0
+    },
+    {
+        "text": "to have W first, but if sci-fi is the\nmain thing we're using and that's like",
+        "start": 1439.893,
+        "duration": 5.7
+    },
+    {
+        "text": "everywhere in the code, then we should\nprobably stick to that convention.",
+        "start": 1445.593,
+        "duration": 3.15
+    },
+    {
+        "text": "And I guess the main other instance\nwe might use it is what you just",
+        "start": 1449.373,
+        "duration": 3.48
+    },
+    {
+        "text": "raised, Hojae, which is like 3D graphic\nsoftware when we like exported stuff.",
+        "start": 1452.853,
+        "duration": 3.48
+    },
+    {
+        "text": "So maybe we say X, Y, ZW, but then\njust make sure it's really clear.",
+        "start": 1456.993,
+        "duration": 5.79
+    },
+    {
+        "text": "my, my vote goes for WXYZ still.",
+        "start": 1464.553,
+        "duration": 2.37
+    },
+    {
+        "text": "'cause I think you can, as in\nan argument to yeah, okay, the,",
+        "start": 1466.953,
+        "duration": 6.75
+    },
+    {
+        "text": "array that I'm giving is an WXYZ.",
+        "start": 1474.123,
+        "duration": 2.79
+    },
+    {
+        "text": "I think it's worse.",
+        "start": 1477.543,
+        "duration": 0.78
+    },
+    {
+        "text": "Okay.",
+        "start": 1478.383,
+        "duration": 0.06
+    },
+    {
+        "text": "If we could do that, that,\nthat's actually really nice.",
+        "start": 1478.443,
+        "duration": 2.43
+    },
+    {
+        "text": "'cause Yeah.",
+        "start": 1480.873,
+        "duration": 0.3
+    },
+    {
+        "text": "Then we could do WXYZ and then we\ncould also, it would be very clear",
+        "start": 1481.173,
+        "duration": 3.42
+    },
+    {
+        "text": "every time you're calling SciPi, this\nis the convention that's being used.",
+        "start": 1484.593,
+        "duration": 3.835
+    },
+    {
+        "text": "Yeah, it has.",
+        "start": 1488.428,
+        "duration": 0.082
+    },
+    {
+        "text": "So even someone who doesn't\nuse SciPi would, know.",
+        "start": 1488.515,
+        "duration": 2.558
+    },
+    {
+        "text": "Yeah.",
+        "start": 1491.463,
+        "duration": 0.21
+    },
+    {
+        "text": "Has a scaler first equals true\nwould be the key word to add.",
+        "start": 1491.673,
+        "duration": 3.75
+    },
+    {
+        "text": "That sounds, yeah, like a nice approach.",
+        "start": 1495.813,
+        "duration": 2.61
+    },
+    {
+        "text": "Yeah.",
+        "start": 1500.193,
+        "duration": 0.33
+    },
+    {
+        "text": "The reason why I'm going for WXYZ\nis just it's easier to do math.",
+        "start": 1500.943,
+        "duration": 4.26
+    },
+    {
+        "text": "yeah, no, I agree.",
+        "start": 1507.303,
+        "duration": 0.99
+    },
+    {
+        "text": "It's definitely better from that.",
+        "start": 1508.293,
+        "duration": 1.26
+    },
+    {
+        "text": "I just didn't want us to have\nto, every time we call SciPi,",
+        "start": 1509.883,
+        "duration": 2.85
+    },
+    {
+        "text": "it'd be like, I, dunno, but yeah.",
+        "start": 1512.733,
+        "duration": 2.19
+    },
+    {
+        "text": "But no, that argument sounds,\nlike flag sounds perfect.",
+        "start": 1514.923,
+        "duration": 3.48
+    },
+    {
+        "text": "Okay.",
+        "start": 1519.788,
+        "duration": 0.29
+    },
+    {
+        "text": "But it also the balance is that\nI think that having it easier for",
+        "start": 1520.293,
+        "duration": 4.2
+    },
+    {
+        "text": "math is more important than having\nit easier for like visualization.",
+        "start": 1524.493,
+        "duration": 4.05
+    },
+    {
+        "text": "So if, if you have a strong case that\nlike, okay, visualization is the main",
+        "start": 1528.783,
+        "duration": 4.41
+    },
+    {
+        "text": "issue or more difficult to solve, then\nokay, I'm like, sabotaging myself, but I'm",
+        "start": 1533.913,
+        "duration": 5.19
+    },
+    {
+        "text": "open to that devil is advocating myself.",
+        "start": 1539.103,
+        "duration": 2.25
+    },
+    {
+        "text": "no.",
+        "start": 1543.068,
+        "duration": 0.01
+    },
+    {
+        "text": "Yeah, no, I don't think\nthat's that important.",
+        "start": 1544.203,
+        "duration": 1.5
+    },
+    {
+        "text": "I just go ahead.",
+        "start": 1546.603,
+        "duration": 2.94
+    },
+    {
+        "text": "Oh, yeah.",
+        "start": 1550.893,
+        "duration": 0.69
+    },
+    {
+        "text": "My only remaining concern would\nbe if it adds any computational",
+        "start": 1551.583,
+        "duration": 3.75
+    },
+    {
+        "text": "overhead to have to keep converting.",
+        "start": 1555.333,
+        "duration": 3.42
+    },
+    {
+        "text": "But as far as I remember, we just get\nthe coran from the observations and",
+        "start": 1558.843,
+        "duration": 5.25
+    },
+    {
+        "text": "then, once we're in, like inside the\nlearning module, we don't work with coons",
+        "start": 1564.093,
+        "duration": 5.73
+    },
+    {
+        "text": "anymore, which is where all the heavy\nlifting is happening with rotations.",
+        "start": 1569.823,
+        "duration": 3.51
+    },
+    {
+        "text": "so it shouldn't be too big of an\nissue, even if we have to convert once.",
+        "start": 1574.563,
+        "duration": 4.44
+    },
+    {
+        "text": "Yeah, I think even, I,\nthink transposing is,",
+        "start": 1580.803,
+        "duration": 3.0
+    },
+    {
+        "text": "I'm not saying it, it's nothing,\nbut I think it's like not on top",
+        "start": 1585.963,
+        "duration": 4.62
+    },
+    {
+        "text": "of what's slowing things down.",
+        "start": 1590.583,
+        "duration": 1.47
+    },
+    {
+        "text": "yeah, if we would have to do it for\na thought 10,000 hypotheses that",
+        "start": 1593.578,
+        "duration": 4.505
+    },
+    {
+        "text": "we're testing, it might add up, but.",
+        "start": 1598.083,
+        "duration": 2.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 1601.683,
+        "duration": 0.42
+    },
+    {
+        "text": "When we are testing our es, we're\nworking with rotation matrices,",
+        "start": 1602.163,
+        "duration": 3.39
+    },
+    {
+        "text": "so shouldn't be an issue.",
+        "start": 1605.553,
+        "duration": 1.68
+    },
+    {
+        "text": "Yeah.",
+        "start": 1607.923,
+        "duration": 0.33
+    },
+    {
+        "text": "And I would be surprised if sci-fi\nsupports an argument for it, that they",
+        "start": 1608.253,
+        "duration": 3.75
+    },
+    {
+        "text": "don't handle it relatively gracefully.",
+        "start": 1612.003,
+        "duration": 2.43
+    },
+    {
+        "text": "Gracefully, but",
+        "start": 1614.733,
+        "duration": 2.485
+    },
+    {
+        "text": "Okay.",
+        "start": 1624.998,
+        "duration": 0.29
+    },
+    {
+        "text": "I think the person this must\nimmediately will impact this.",
+        "start": 1625.833,
+        "duration": 3.42
+    },
+    {
+        "text": "Jeremy as he's working towards Muko work,\nso you might have to mess around with,",
+        "start": 1629.823,
+        "duration": 7.44
+    },
+    {
+        "text": "that one looks like it's WX, YZ as well.",
+        "start": 1637.713,
+        "duration": 2.37
+    },
+    {
+        "text": "Yes.",
+        "start": 1641.913,
+        "duration": 0.75
+    },
+    {
+        "text": "Cool.",
+        "start": 1644.673,
+        "duration": 0.18
+    },
+    {
+        "text": "Another password for Muko, our code.",
+        "start": 1644.853,
+        "duration": 2.655
+    },
+    {
+        "text": "Oh, not in this meeting, but I'm\nexcited to tell you what we're doing",
+        "start": 1649.923,
+        "duration": 3.21
+    },
+    {
+        "text": "with Monty to make it work with Maka.",
+        "start": 1653.133,
+        "duration": 2.13
+    },
+    {
+        "text": "Jeremy should give a presentation at\nsome point about what we're thinking.",
+        "start": 1655.683,
+        "duration": 3.48
+    },
+    {
+        "text": "'cause that's all sorts of exciting.",
+        "start": 1659.223,
+        "duration": 1.83
+    },
+    {
+        "text": "Okay.",
+        "start": 1661.953,
+        "duration": 0.3
+    },
+    {
+        "text": "Exciting.",
+        "start": 1662.703,
+        "duration": 0.36
+    },
+    {
+        "text": "In a good way.",
+        "start": 1663.063,
+        "duration": 0.78
+    },
+    {
+        "text": "It's, a little, almost now it's in a\ngood way, but, you'll feel very, yeah.",
+        "start": 1664.058,
+        "duration": 4.51
+    },
+    {
+        "text": "It sounded very obvious\nwhat we're doing with Monte.",
+        "start": 1668.568,
+        "duration": 2.52
+    },
+    {
+        "text": "It's a, this was a teaser.",
+        "start": 1671.278,
+        "duration": 1.505
+    },
+    {
+        "text": "Okay.",
+        "start": 1673.743,
+        "duration": 0.45
+    },
+    {
+        "text": "Trailer.",
+        "start": 1674.193,
+        "duration": 0.48
+    },
+    {
+        "text": "This is a teaser for a trailer.",
+        "start": 1674.673,
+        "duration": 1.29
+    },
+    {
+        "text": "Trailer is coming later.",
+        "start": 1676.023,
+        "duration": 1.02
+    },
+    {
+        "text": "So Sounds great.",
+        "start": 1678.393,
+        "duration": 0.765
+    },
+    {
+        "text": "okay,",
+        "start": 1682.353,
+        "duration": 0.39
+    },
+    {
+        "text": "next two vote item is\nsome abstract classes.",
+        "start": 1685.473,
+        "duration": 5.16
+    },
+    {
+        "text": "Are these needed for testing?",
+        "start": 1690.633,
+        "duration": 1.68
+    },
+    {
+        "text": "may simply for code, if not also,\nmultiple inheritance makes things",
+        "start": 1694.413,
+        "duration": 3.66
+    },
+    {
+        "text": "harder to understand more and more\ndifficult to extend by other users.",
+        "start": 1698.073,
+        "duration": 3.21
+    },
+    {
+        "text": "I think more often than not.",
+        "start": 1701.283,
+        "duration": 1.08
+    },
+    {
+        "text": "So I added this per, I\nthink this is address.",
+        "start": 1705.418,
+        "duration": 2.405
+    },
+    {
+        "text": "yeah.",
+        "start": 1708.423,
+        "duration": 0.21
+    },
+    {
+        "text": "so yeah, I added this, but this is address\nin the sense that, so abstraction, I",
+        "start": 1709.138,
+        "duration": 5.195
+    },
+    {
+        "text": "think like promotes stronger coupling\ncompared to vertical, or other things.",
+        "start": 1714.333,
+        "duration": 6.78
+    },
+    {
+        "text": "But yeah, so that, that's\nwhy like I, add this.",
+        "start": 1721.113,
+        "duration": 5.4
+    },
+    {
+        "text": "But I think we also talked about this.",
+        "start": 1726.513,
+        "duration": 1.5
+    },
+    {
+        "text": "What are your reasons for\nputting in, putting your names.",
+        "start": 1728.643,
+        "duration": 2.97
+    },
+    {
+        "text": "I think we already have this in the kind\nof undesirable things, but I just thought",
+        "start": 1733.983,
+        "duration": 4.2
+    },
+    {
+        "text": "it was worth kinda resurfacing that like\nright now with the different types of",
+        "start": 1738.183,
+        "duration": 4.47
+    },
+    {
+        "text": "learning modules and graph, classes and\nstuff like that, it's really hard for",
+        "start": 1742.653,
+        "duration": 5.82
+    },
+    {
+        "text": "new people I think, to read the code or\neven people who are familiar with it.",
+        "start": 1748.473,
+        "duration": 3.0
+    },
+    {
+        "text": "and that a lot of that could\nprobably be collapsed down into.",
+        "start": 1752.883,
+        "duration": 2.97
+    },
+    {
+        "text": "Yeah, like that, would be one approach,\njust collapse everything down into",
+        "start": 1757.473,
+        "duration": 3.18
+    },
+    {
+        "text": "a couple layers of inheritance.",
+        "start": 1760.653,
+        "duration": 1.53
+    },
+    {
+        "text": "And then I guess a more extreme\nthing would be maybe trying",
+        "start": 1762.423,
+        "duration": 5.07
+    },
+    {
+        "text": "like a more modular approach.",
+        "start": 1767.493,
+        "duration": 1.26
+    },
+    {
+        "text": "but, yeah, sorry.",
+        "start": 1770.853,
+        "duration": 1.021
+    },
+    {
+        "text": "Okay.",
+        "start": 1771.879,
+        "duration": 0.024
+    },
+    {
+        "text": "Which was not really discussed,\nI don't think, but yeah.",
+        "start": 1771.903,
+        "duration": 2.79
+    },
+    {
+        "text": "Okay.",
+        "start": 1774.963,
+        "duration": 0.24
+    },
+    {
+        "text": "So I wrote after Ness, and then\nmy mind went to another thing",
+        "start": 1775.203,
+        "duration": 2.7
+    },
+    {
+        "text": "about multiple inheritances.",
+        "start": 1777.903,
+        "duration": 1.41
+    },
+    {
+        "text": "So it's, so the abstract part is.",
+        "start": 1779.313,
+        "duration": 1.38
+    },
+    {
+        "text": "address that, that part is fine actually.",
+        "start": 1781.968,
+        "duration": 1.68
+    },
+    {
+        "text": "the, yeah, the multiple inheritance.",
+        "start": 1784.368,
+        "duration": 1.59
+    },
+    {
+        "text": "I think Niels and I like, experienced\nthis when we were trying to",
+        "start": 1785.958,
+        "duration": 3.66
+    },
+    {
+        "text": "write like a data loader for DMC.",
+        "start": 1789.888,
+        "duration": 2.34
+    },
+    {
+        "text": "it was a crazy kind of Gotcha.",
+        "start": 1793.338,
+        "duration": 3.27
+    },
+    {
+        "text": "You need to, yeah.",
+        "start": 1796.998,
+        "duration": 0.605
+    },
+    {
+        "text": "Yeah.",
+        "start": 1798.378,
+        "duration": 0.33
+    },
+    {
+        "text": "when, okay.",
+        "start": 1799.578,
+        "duration": 0.93
+    },
+    {
+        "text": "Let me, I wanna ask a clarifying question.",
+        "start": 1800.748,
+        "duration": 2.16
+    },
+    {
+        "text": "When you say multiple\ninheritance, do you mean.",
+        "start": 1803.598,
+        "duration": 4.26
+    },
+    {
+        "text": "Multiple levels.",
+        "start": 1809.868,
+        "duration": 0.66
+    },
+    {
+        "text": "Height.",
+        "start": 1810.528,
+        "duration": 0.12
+    },
+    {
+        "text": "Yes.",
+        "start": 1811.728,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay, so that's not multiple.",
+        "start": 1812.148,
+        "duration": 1.23
+    },
+    {
+        "text": "That's okay.",
+        "start": 1813.468,
+        "duration": 0.78
+    },
+    {
+        "text": "So sorry.",
+        "start": 1814.248,
+        "duration": 0.51
+    },
+    {
+        "text": "Yeah, it's, this is the\nintent inheritance hierarchy.",
+        "start": 1814.758,
+        "duration": 2.34
+    },
+    {
+        "text": "I'm gonna switch that.",
+        "start": 1817.098,
+        "duration": 1.08
+    },
+    {
+        "text": "Thank you.",
+        "start": 1818.898,
+        "duration": 0.21
+    },
+    {
+        "text": "Yeah, because that's also\nwhat I was thinking of.",
+        "start": 1819.438,
+        "duration": 2.1
+    },
+    {
+        "text": "Deep inheritance hierarchy.",
+        "start": 1821.748,
+        "duration": 1.56
+    },
+    {
+        "text": "So for, correct, for the learning module.",
+        "start": 1824.178,
+        "duration": 1.44
+    },
+    {
+        "text": "I think we addressed this already.",
+        "start": 1825.888,
+        "duration": 1.68
+    },
+    {
+        "text": "Neil, when we did the\nrefactor like two years ago.",
+        "start": 1827.838,
+        "duration": 3.12
+    },
+    {
+        "text": "Before we had all the learning\nmodules inheriting from each other.",
+        "start": 1831.648,
+        "duration": 3.48
+    },
+    {
+        "text": "Like we had the abstract test and we\nhad the graph learning module, then",
+        "start": 1835.128,
+        "duration": 3.66
+    },
+    {
+        "text": "the displacement graph learning module,\nthen feature graph learning module,",
+        "start": 1838.788,
+        "duration": 3.33
+    },
+    {
+        "text": "then evidence graph learning module.",
+        "start": 1842.118,
+        "duration": 1.56
+    },
+    {
+        "text": "So it was like a six part hierarchy,\nand then we refactored it all.",
+        "start": 1843.858,
+        "duration": 3.69
+    },
+    {
+        "text": "So it was just graph learning\nmodule and then the three types.",
+        "start": 1847.548,
+        "duration": 4.14
+    },
+    {
+        "text": "From graph learning module each.",
+        "start": 1853.653,
+        "duration": 1.77
+    },
+    {
+        "text": "Yeah.",
+        "start": 1855.423,
+        "duration": 0.06
+    },
+    {
+        "text": "So there, I think we can flatten\nthat hierarchy as flat as it can",
+        "start": 1855.783,
+        "duration": 3.39
+    },
+    {
+        "text": "be for now, as far as I can tell.",
+        "start": 1859.173,
+        "duration": 2.04
+    },
+    {
+        "text": "But I agree for some of the other classes,\nlike the data loaders and, I think the,",
+        "start": 1861.213,
+        "duration": 7.26
+    },
+    {
+        "text": "maybe the experiment classes too, still\nsome more nesting that then might be",
+        "start": 1869.253,
+        "duration": 7.68
+    },
+    {
+        "text": "necessary or policies, I'm not sure.",
+        "start": 1876.933,
+        "duration": 2.1
+    },
+    {
+        "text": "Yeah.",
+        "start": 1879.993,
+        "duration": 0.06
+    },
+    {
+        "text": "Yeah.",
+        "start": 1880.773,
+        "duration": 0.27
+    },
+    {
+        "text": "maybe it's not necessary.",
+        "start": 1881.493,
+        "duration": 0.99
+    },
+    {
+        "text": "I guess we could flatten that\nmore if we got rid of the,",
+        "start": 1882.483,
+        "duration": 3.96
+    },
+    {
+        "text": "feature and the displacement one.",
+        "start": 1887.973,
+        "duration": 1.86
+    },
+    {
+        "text": "Like it's to maintain that\nability to go lateral, that we",
+        "start": 1889.833,
+        "duration": 4.2
+    },
+    {
+        "text": "still have that.",
+        "start": 1896.163,
+        "duration": 0.57
+    },
+    {
+        "text": "But, but yeah, no, I\ntake your point there.",
+        "start": 1896.733,
+        "duration": 3.48
+    },
+    {
+        "text": "It's, definitely much better than it was.",
+        "start": 1900.518,
+        "duration": 1.315
+    },
+    {
+        "text": "Yeah.",
+        "start": 1903.363,
+        "duration": 0.24
+    },
+    {
+        "text": "So I think we just need to think about\nother Big classes, like besides learning",
+        "start": 1903.603,
+        "duration": 5.715
+    },
+    {
+        "text": "modules, like just taking a look at\nthe sensorimotor modules, how they're",
+        "start": 1909.318,
+        "duration": 3.06
+    },
+    {
+        "text": "connected, taking a look at data sets\nand data loaders, how they're connected,",
+        "start": 1912.378,
+        "duration": 4.89
+    },
+    {
+        "text": "and just go through the same process.",
+        "start": 1917.268,
+        "duration": 1.505
+    },
+    {
+        "text": "but, for what it's worth, I, my\ngoal is for every inheritance",
+        "start": 1923.773,
+        "duration": 6.2
+    },
+    {
+        "text": "hierarchy to be one level deep.",
+        "start": 1930.133,
+        "duration": 1.96
+    },
+    {
+        "text": "You have an abstraction and you\nhave instances of it and that's it.",
+        "start": 1932.508,
+        "duration": 2.58
+    },
+    {
+        "text": "So everywhere I'm in code, I\nwill be attempting to flatten",
+        "start": 1935.628,
+        "duration": 4.77
+    },
+    {
+        "text": "the hierarchy to that always.",
+        "start": 1940.398,
+        "duration": 1.89
+    },
+    {
+        "text": "That's my intent with policies and pro\npositioning procedures for example,",
+        "start": 1942.648,
+        "duration": 3.93
+    },
+    {
+        "text": "like I do intend to flatten the policies\nand also to flatten the make your",
+        "start": 1946.938,
+        "duration": 4.14
+    },
+    {
+        "text": "PO positioning procedures are flat.",
+        "start": 1951.078,
+        "duration": 2.46
+    },
+    {
+        "text": "so I think that, yeah, I think\nthat makes a lot of sense.",
+        "start": 1956.148,
+        "duration": 2.79
+    },
+    {
+        "text": "'cause yeah, I think that's the\nchallenge is as soon as you go.",
+        "start": 1958.938,
+        "duration": 1.98
+    },
+    {
+        "text": "Deeper than that, it's when it\nbecomes hard to think about.",
+        "start": 1961.623,
+        "duration": 2.31
+    },
+    {
+        "text": "for me it would be useful.",
+        "start": 1966.603,
+        "duration": 2.1
+    },
+    {
+        "text": "if it's not too much work to sometime\nhave a meeting where you could just give",
+        "start": 1970.833,
+        "duration": 4.29
+    },
+    {
+        "text": "some tips of alternative patterns to use.",
+        "start": 1975.123,
+        "duration": 2.94
+    },
+    {
+        "text": "Because at least to me, like I\nkinda default to hierarchy sometimes",
+        "start": 1978.273,
+        "duration": 3.69
+    },
+    {
+        "text": "when I'm like, oh yeah, I want to\nreuse this stuff from that class",
+        "start": 1981.963,
+        "duration": 2.94
+    },
+    {
+        "text": "and just customize this function.",
+        "start": 1984.903,
+        "duration": 1.47
+    },
+    {
+        "text": "So if you could just maybe.",
+        "start": 1986.673,
+        "duration": 1.44
+    },
+    {
+        "text": "Present, what would be the alternative\nthat, that would be better for us to use?",
+        "start": 1988.548,
+        "duration": 4.56
+    },
+    {
+        "text": "A general quick first approximation\nanswer will be a mixing.",
+        "start": 1994.458,
+        "duration": 4.44
+    },
+    {
+        "text": "You have, you're trying to share some\nfunctionality, ripping it out as a",
+        "start": 2000.038,
+        "duration": 5.76
+    },
+    {
+        "text": "so, if you have a class and there's\na functionality sitting in there and",
+        "start": 2006.668,
+        "duration": 4.11
+    },
+    {
+        "text": "you're like, I wanna reuse it, instead of\ngoing, I'm gonna make a subclass of it.",
+        "start": 2010.778,
+        "duration": 4.23
+    },
+    {
+        "text": "Think of it, the functionality that you\nwanna reuse, how do I rewrite it as a",
+        "start": 2015.788,
+        "duration": 3.54
+    },
+    {
+        "text": "mix in, then mix it into your original\nclass, make sure everything still works,",
+        "start": 2019.328,
+        "duration": 5.34
+    },
+    {
+        "text": "and then write a peer class and then grab\nthat mix in and put it in there as well.",
+        "start": 2024.938,
+        "duration": 5.1
+    },
+    {
+        "text": "that would be the general pattern to\nreuse functionality as a, Rami has",
+        "start": 2030.398,
+        "duration": 4.92
+    },
+    {
+        "text": "been doing that recently, I think.",
+        "start": 2035.318,
+        "duration": 1.23
+    },
+    {
+        "text": "Oh.",
+        "start": 2037.988,
+        "duration": 0.27
+    },
+    {
+        "text": "about like mix.",
+        "start": 2039.098,
+        "duration": 0.81
+    },
+    {
+        "text": "Is it, would it be easier to do something.",
+        "start": 2039.998,
+        "duration": 3.12
+    },
+    {
+        "text": "Because so inheritance is like\nfor me is, what's call it like,",
+        "start": 2043.973,
+        "duration": 6.27
+    },
+    {
+        "text": "it's part of the class definition.",
+        "start": 2050.243,
+        "duration": 1.5
+    },
+    {
+        "text": "So instead of passing as a class\ndefinition, like passing as a argument.",
+        "start": 2052.823,
+        "duration": 4.8
+    },
+    {
+        "text": "So if I need some functionalities of.",
+        "start": 2058.433,
+        "duration": 2.25
+    },
+    {
+        "text": "Let's say visualizer.",
+        "start": 2061.718,
+        "duration": 1.62
+    },
+    {
+        "text": "I don't know, let's say that's a class.",
+        "start": 2063.638,
+        "duration": 2.28
+    },
+    {
+        "text": "Then the argument is if the, if let's\nsay my LM needs a visualizer, then like",
+        "start": 2066.428,
+        "duration": 5.58
+    },
+    {
+        "text": "one way to do is to do, just pass in\na visualizer instance as an argument",
+        "start": 2072.068,
+        "duration": 5.94
+    },
+    {
+        "text": "and then just call, visit that whatever\nfunction we need from that class or.",
+        "start": 2078.008,
+        "duration": 5.37
+    },
+    {
+        "text": "So this called, I think this's called\nlike dependent injection, right?",
+        "start": 2083.453,
+        "duration": 3.45
+    },
+    {
+        "text": "Something like that.",
+        "start": 2086.903,
+        "duration": 0.69
+    },
+    {
+        "text": "Dependent, or positionality.",
+        "start": 2087.593,
+        "duration": 1.89
+    },
+    {
+        "text": "Yeah.",
+        "start": 2089.843,
+        "duration": 0.15
+    },
+    {
+        "text": "Com positionality.",
+        "start": 2089.993,
+        "duration": 0.27
+    },
+    {
+        "text": "That's actually the better way.",
+        "start": 2091.103,
+        "duration": 1.11
+    },
+    {
+        "text": "sorry, I was, my brain\nwas stuck in Makes sense.",
+        "start": 2092.753,
+        "duration": 2.04
+    },
+    {
+        "text": "what, how j say is the, probably the most\npreferred way is positionality especially,",
+        "start": 2095.693,
+        "duration": 4.02
+    },
+    {
+        "text": "so I would go with what JJ said\ninstead, as default I'll post And just",
+        "start": 2101.813,
+        "duration": 4.59
+    },
+    {
+        "text": "to clarify the difference Exactly.",
+        "start": 2106.403,
+        "duration": 1.8
+    },
+    {
+        "text": "So sorry.",
+        "start": 2108.623,
+        "duration": 0.84
+    },
+    {
+        "text": "With the composition on\nhow is it injected or.",
+        "start": 2109.463,
+        "duration": 3.03
+    },
+    {
+        "text": "I know I, I'll post an\nexample, it'll be much clearer.",
+        "start": 2112.538,
+        "duration": 3.15
+    },
+    {
+        "text": "it's very easy to, I know this no, obscure\nterm, but like it's actually very easy to",
+        "start": 2115.878,
+        "duration": 6.14
+    },
+    {
+        "text": "understand, so I'll just post an example.",
+        "start": 2122.018,
+        "duration": 1.62
+    },
+    {
+        "text": "It Slack.",
+        "start": 2123.638,
+        "duration": 0.48
+    },
+    {
+        "text": "Yeah, that would be great.",
+        "start": 2124.753,
+        "duration": 0.89
+    },
+    {
+        "text": "Nice.",
+        "start": 2125.753,
+        "duration": 0.29
+    },
+    {
+        "text": "It, yeah, I was trying to think\nsomething on the code base, but",
+        "start": 2127.603,
+        "duration": 6.115
+    },
+    {
+        "text": "my mind is blanking, so sorry.",
+        "start": 2134.288,
+        "duration": 1.44
+    },
+    {
+        "text": "So with the very first, the question on\nthe top, you suggested for the abstract",
+        "start": 2138.923,
+        "duration": 5.22
+    },
+    {
+        "text": "class to have a another class that's like\nsimulator environment from which then I",
+        "start": 2144.143,
+        "duration": 6.27
+    },
+    {
+        "text": "assume some other class would inherit.",
+        "start": 2150.413,
+        "duration": 2.28
+    },
+    {
+        "text": "Is that a case where you\nwould say hierarchy is better?",
+        "start": 2153.173,
+        "duration": 2.88
+    },
+    {
+        "text": "'cause it makes it clear to distinguish\ndistinguished types of classes?",
+        "start": 2156.083,
+        "duration": 4.23
+    },
+    {
+        "text": "Or would you also use composition there?",
+        "start": 2160.313,
+        "duration": 3.3
+    },
+    {
+        "text": "I would.",
+        "start": 2164.993,
+        "duration": 0.3
+    },
+    {
+        "text": "So environment would be abstract.",
+        "start": 2165.923,
+        "duration": 2.07
+    },
+    {
+        "text": "Simulated environment would be\nspecific, like concrete and that's it.",
+        "start": 2167.993,
+        "duration": 6.06
+    },
+    {
+        "text": "Yeah.",
+        "start": 2174.053,
+        "duration": 0.15
+    },
+    {
+        "text": "Nothing inherits from\nsimulated environment flat.",
+        "start": 2174.263,
+        "duration": 4.14
+    },
+    {
+        "text": "So then if I wanna have a habitat\nenvironment, what would I do?",
+        "start": 2178.523,
+        "duration": 3.96
+    },
+    {
+        "text": "you would create a habitat environment.",
+        "start": 2184.258,
+        "duration": 1.675
+    },
+    {
+        "text": "So what, does sim, what does simulated\nenvironment for, it sounds like",
+        "start": 2187.523,
+        "duration": 3.09
+    },
+    {
+        "text": "it's like general to any simulator.",
+        "start": 2190.613,
+        "duration": 1.77
+    },
+    {
+        "text": "I think this is, This\nis an abstract, right?",
+        "start": 2192.713,
+        "duration": 3.33
+    },
+    {
+        "text": "I might have misspoke.",
+        "start": 2196.163,
+        "duration": 1.11
+    },
+    {
+        "text": "Like we have an abstract\nenvironment, an abstract simulated",
+        "start": 2197.393,
+        "duration": 2.49
+    },
+    {
+        "text": "environment, and then habitat\nwould be a concrete implementation.",
+        "start": 2199.883,
+        "duration": 3.51
+    },
+    {
+        "text": "This so as in simulated environment does\nnot inherit from gen generic environment.",
+        "start": 2203.393,
+        "duration": 4.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 2209.543,
+        "duration": 0.33
+    },
+    {
+        "text": "Maybe that's, maybe there's an\nenvironment protocol I don't snow.",
+        "start": 2210.083,
+        "duration": 4.74
+    },
+    {
+        "text": "we have to think about it.",
+        "start": 2216.083,
+        "duration": 0.96
+    },
+    {
+        "text": "Okay.",
+        "start": 2217.373,
+        "duration": 0.03
+    },
+    {
+        "text": "But that's a good, that's a great example\nof, yeah, so it's Specifically, what would",
+        "start": 2218.603,
+        "duration": 8.835
+    },
+    {
+        "text": "we do to implement Habitat environment?",
+        "start": 2227.438,
+        "duration": 2.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 2230.468,
+        "duration": 0.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 2232.118,
+        "duration": 0.18
+    },
+    {
+        "text": "I don't know if this is, if this\nis like a standard or, Yeah.",
+        "start": 2232.298,
+        "duration": 4.77
+    },
+    {
+        "text": "It'd be, interesting to look into this\nmore, but it feels if the second level",
+        "start": 2237.068,
+        "duration": 4.95
+    },
+    {
+        "text": "of inheritance is still abstract,\nas in it's not implementing methods,",
+        "start": 2242.018,
+        "duration": 4.26
+    },
+    {
+        "text": "but it's just defining them, it\nstill feels like that's easy to read.",
+        "start": 2246.338,
+        "duration": 4.02
+    },
+    {
+        "text": "As in, I could imagine, yeah.",
+        "start": 2251.243,
+        "duration": 1.32
+    },
+    {
+        "text": "We, us having this very abstract\nenvironment, which covers everything,",
+        "start": 2252.803,
+        "duration": 2.91
+    },
+    {
+        "text": "including simulated environments\nand maybe robotic funds or whatever.",
+        "start": 2255.713,
+        "duration": 2.94
+    },
+    {
+        "text": "And then we have simulated environment,\nwhich is oh, you should have ad",
+        "start": 2259.283,
+        "duration": 2.28
+    },
+    {
+        "text": "object, all this kinda stuff,\nbut it's all not implemented.",
+        "start": 2261.563,
+        "duration": 2.58
+    },
+    {
+        "text": "And then, so technically there's three\nlevels, but then it's the third level",
+        "start": 2265.433,
+        "duration": 4.59
+    },
+    {
+        "text": "that implements everything concretely.",
+        "start": 2270.023,
+        "duration": 1.47
+    },
+    {
+        "text": "But at least when you're\nreading the third level.",
+        "start": 2272.093,
+        "duration": 2.015
+    },
+    {
+        "text": "Going up a level isn't you're\nnot having to understand what",
+        "start": 2275.378,
+        "duration": 3.27
+    },
+    {
+        "text": "a function is actually doing.",
+        "start": 2278.648,
+        "duration": 1.14
+    },
+    {
+        "text": "Going up a level is just telling you this\nis the structure, this is the skeleton,",
+        "start": 2279.788,
+        "duration": 4.17
+    },
+    {
+        "text": "of, this class and going, and then\nhaving the top level tells you, okay,",
+        "start": 2284.438,
+        "duration": 4.74
+    },
+    {
+        "text": "this is how it relates to other ones.",
+        "start": 2289.178,
+        "duration": 1.26
+    },
+    {
+        "text": "But maybe it's not even\nhelpful to have that top one.",
+        "start": 2290.438,
+        "duration": 3.18
+    },
+    {
+        "text": "I dunno.",
+        "start": 2293.798,
+        "duration": 0.33
+    },
+    {
+        "text": "Yeah.",
+        "start": 2294.428,
+        "duration": 0.33
+    },
+    {
+        "text": "so thinking about answer is\nforming in my head because",
+        "start": 2295.718,
+        "duration": 4.23
+    },
+    {
+        "text": "again, this is like a rule that.",
+        "start": 2300.038,
+        "duration": 1.83
+    },
+    {
+        "text": "Really don't wanna break.",
+        "start": 2303.008,
+        "duration": 1.26
+    },
+    {
+        "text": "And so what I maybe would do would\nbe Habitat environment inherits from",
+        "start": 2304.748,
+        "duration": 5.31
+    },
+    {
+        "text": "environment and it also implements\nthe simulated environment protocol.",
+        "start": 2310.058,
+        "duration": 3.87
+    },
+    {
+        "text": "Okay.",
+        "start": 2316.208,
+        "duration": 0.33
+    },
+    {
+        "text": "It's, that makes it one\ndeep, it just an environment.",
+        "start": 2319.628,
+        "duration": 3.45
+    },
+    {
+        "text": "But simulated environment also\nhas an additional protocol",
+        "start": 2323.228,
+        "duration": 3.03
+    },
+    {
+        "text": "that these environments do.",
+        "start": 2326.258,
+        "duration": 1.26
+    },
+    {
+        "text": "And then when we have an experiment class\nthat would like an experiment class for",
+        "start": 2328.538,
+        "duration": 6.09
+    },
+    {
+        "text": "running on a simulated environment, it\nwould check whether our environment is",
+        "start": 2334.928,
+        "duration": 5.22
+    },
+    {
+        "text": "following the simulated environment.",
+        "start": 2340.148,
+        "duration": 1.62
+    },
+    {
+        "text": "has that in it.",
+        "start": 2343.448,
+        "duration": 1.02
+    },
+    {
+        "text": "Okay.",
+        "start": 2345.713,
+        "duration": 0.29
+    },
+    {
+        "text": "So if you, pass an environment to Yeah.",
+        "start": 2346.343,
+        "duration": 2.715
+    },
+    {
+        "text": "Experiment, it's hey, this is\nnot a simulated environment.",
+        "start": 2349.058,
+        "duration": 2.58
+    },
+    {
+        "text": "What's wrong?",
+        "start": 2351.638,
+        "duration": 0.39
+    },
+    {
+        "text": "Exactly.",
+        "start": 2352.433,
+        "duration": 0.49
+    },
+    {
+        "text": "Yeah.",
+        "start": 2352.923,
+        "duration": 0.28
+    },
+    {
+        "text": "Okay.",
+        "start": 2354.393,
+        "duration": 0.29
+    },
+    {
+        "text": "Cool.",
+        "start": 2359.498,
+        "duration": 0.18
+    },
+    {
+        "text": "Thanks.",
+        "start": 2359.678,
+        "duration": 0.45
+    },
+    {
+        "text": "Yeah, it's, I, just wanna highlight, just\nto really try not to break the rule with",
+        "start": 2361.598,
+        "duration": 6.96
+    },
+    {
+        "text": "forces this, these types of solutions\nwhich end up being more intuitive.",
+        "start": 2368.558,
+        "duration": 3.99
+    },
+    {
+        "text": "So it's like when you hit a\nwall of a rule, just don't",
+        "start": 2372.548,
+        "duration": 4.23
+    },
+    {
+        "text": "give up on the rule just yet.",
+        "start": 2376.778,
+        "duration": 1.41
+    },
+    {
+        "text": "Like it, it'll guide you to a solution.",
+        "start": 2378.308,
+        "duration": 2.19
+    },
+    {
+        "text": "That's how I feel.",
+        "start": 2381.353,
+        "duration": 0.69
+    },
+    {
+        "text": "What happened here.",
+        "start": 2382.043,
+        "duration": 0.96
+    },
+    {
+        "text": "I was just like, once we say, no,\nlet's keep this one level deep.",
+        "start": 2383.453,
+        "duration": 3.15
+    },
+    {
+        "text": "How else can we solve the problem?",
+        "start": 2386.603,
+        "duration": 1.32
+    },
+    {
+        "text": "And that should help.",
+        "start": 2387.923,
+        "duration": 0.9
+    },
+    {
+        "text": "And so the reason why this\nis preferred is because",
+        "start": 2390.053,
+        "duration": 3.36
+    },
+    {
+        "text": "it's probably just familiarity for me, but\nit, still seems to me if it's a hierarchy,",
+        "start": 2397.148,
+        "duration": 4.29
+    },
+    {
+        "text": "it's easy to follow the path versus if\nthere are like multiple things in there,",
+        "start": 2401.438,
+        "duration": 4.41
+    },
+    {
+        "text": "I have to there's like a fork and I have\nto decide where I want to go first and I",
+        "start": 2405.848,
+        "duration": 4.26
+    },
+    {
+        "text": "have to come back and then I have to go\nto the other place to see what's there.",
+        "start": 2410.108,
+        "duration": 3.0
+    },
+    {
+        "text": "so I feel like, I could make the\nargument for it being harder to follow.",
+        "start": 2414.158,
+        "duration": 5.82
+    },
+    {
+        "text": "Yeah.",
+        "start": 2420.938,
+        "duration": 0.21
+    },
+    {
+        "text": "Niels and Hojae said the opposite.",
+        "start": 2421.808,
+        "duration": 1.855
+    },
+    {
+        "text": "for me it's, the difficulty is if, yeah,\nlike kinda what I was saying before, I",
+        "start": 2425.573,
+        "duration": 6.09
+    },
+    {
+        "text": "feel like if the parent class is also\nlike making concrete implementations",
+        "start": 2431.663,
+        "duration": 4.92
+    },
+    {
+        "text": "of methods, I think that's when it's\nmore likely to get confusing because",
+        "start": 2436.583,
+        "duration": 4.23
+    },
+    {
+        "text": "then it's like some things are calling\nlike super and some things aren't, and",
+        "start": 2440.813,
+        "duration": 5.07
+    },
+    {
+        "text": "there's just like a lot of back and forth.",
+        "start": 2446.123,
+        "duration": 1.56
+    },
+    {
+        "text": "I feel like as long as the parent is\nstill abstract and it's oh, okay, this.",
+        "start": 2448.583,
+        "duration": 4.29
+    },
+    {
+        "text": "Parent one is just adding these abstract\nmethods, which is what makes it unique.",
+        "start": 2453.338,
+        "duration": 4.98
+    },
+    {
+        "text": "this is what makes it a simulator thing.",
+        "start": 2458.528,
+        "duration": 1.26
+    },
+    {
+        "text": "I feel like that, yeah, but maybe\nlike Viviane says, it's also just",
+        "start": 2460.598,
+        "duration": 2.97
+    },
+    {
+        "text": "familiarity that would be equally\neasy to read and understand.",
+        "start": 2463.568,
+        "duration": 4.35
+    },
+    {
+        "text": "I feel so happy to stick to the rules\nand also when you're like, when it starts",
+        "start": 2467.918,
+        "duration": 6.78
+    },
+    {
+        "text": "not to make sense, just let's you know.",
+        "start": 2474.698,
+        "duration": 2.52
+    },
+    {
+        "text": "Ping me, ping Jeremy.",
+        "start": 2477.698,
+        "duration": 0.99
+    },
+    {
+        "text": "Let's have a conversation.",
+        "start": 2478.688,
+        "duration": 1.08
+    },
+    {
+        "text": "It'll be much easier.",
+        "start": 2480.128,
+        "duration": 1.08
+    },
+    {
+        "text": "It's somewhat, difficult to\ndish out this generic guidance.",
+        "start": 2481.898,
+        "duration": 3.09
+    },
+    {
+        "text": "It's like much easier to do it\nspecifically on the problem because then",
+        "start": 2484.988,
+        "duration": 3.27
+    },
+    {
+        "text": "it's EAs, then it's easier to provide\na solution for a specific instance",
+        "start": 2488.258,
+        "duration": 5.07
+    },
+    {
+        "text": "of what is happening, than to talk\nin generalities and then apply them.",
+        "start": 2493.328,
+        "duration": 4.89
+    }
+]

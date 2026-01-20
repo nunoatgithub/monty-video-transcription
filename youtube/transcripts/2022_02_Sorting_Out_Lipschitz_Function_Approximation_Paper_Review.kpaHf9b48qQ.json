@@ -1,0 +1,5797 @@
+[
+    {
+        "text": "today I'm gonna talk about this\npaper sorting out Lipschitz",
+        "start": 9.371,
+        "duration": 2.71
+    },
+    {
+        "text": "function approximation.",
+        "start": 12.101,
+        "duration": 1.17
+    },
+    {
+        "text": "the paper has a couple of motivations.",
+        "start": 15.191,
+        "duration": 3.0
+    },
+    {
+        "text": "I wanted to start out really big\npicture, and, I have some slides in",
+        "start": 19.331,
+        "duration": 5.28
+    },
+    {
+        "text": "this presentation that, are trying to\ncram a semester's worth of statistical",
+        "start": 24.611,
+        "duration": 6.27
+    },
+    {
+        "text": "learning theory into a couple slides.",
+        "start": 30.881,
+        "duration": 1.86
+    },
+    {
+        "text": "And, I did that not to convey that\nknowledge to my audience necessarily.",
+        "start": 32.771,
+        "duration": 6.06
+    },
+    {
+        "text": "It was an exercise for myself to just.",
+        "start": 38.831,
+        "duration": 2.25
+    },
+    {
+        "text": "Actually go back to the basics\nand make sure I understood it.",
+        "start": 41.636,
+        "duration": 2.4
+    },
+    {
+        "text": "really high level, the idea is to\nreduce generalization error and",
+        "start": 45.176,
+        "duration": 5.28
+    },
+    {
+        "text": "increase adversarial robustness.",
+        "start": 50.456,
+        "duration": 2.1
+    },
+    {
+        "text": "this is like the high level\nproblem they're trying to tackle.",
+        "start": 53.276,
+        "duration": 3.42
+    },
+    {
+        "text": "They also talk about some stuff I'm\nnot so familiar with, like wasserstein",
+        "start": 56.756,
+        "duration": 3.24
+    },
+    {
+        "text": "distance and things like that.",
+        "start": 59.996,
+        "duration": 1.83
+    },
+    {
+        "text": "I came across this paver because\nI've been interested in the fusion",
+        "start": 62.756,
+        "duration": 3.87
+    },
+    {
+        "text": "of, or the intersection of symbolic\nreasoning, deep learning, solving",
+        "start": 66.626,
+        "duration": 5.28
+    },
+    {
+        "text": "discrete optimization problems.",
+        "start": 71.906,
+        "duration": 1.83
+    },
+    {
+        "text": "and up until now I had this\nimpression that deep learning",
+        "start": 74.936,
+        "duration": 4.65
+    },
+    {
+        "text": "had these glaring weaknesses.",
+        "start": 79.916,
+        "duration": 1.62
+    },
+    {
+        "text": "Like it couldn't do something fairly\nstraightforward, like sorting a",
+        "start": 81.536,
+        "duration": 2.55
+    },
+    {
+        "text": "list, despite its pretty impressive\ncapabilities in other areas.",
+        "start": 84.086,
+        "duration": 4.92
+    },
+    {
+        "text": "so I didn't think that, it could do that.",
+        "start": 89.876,
+        "duration": 3.06
+    },
+    {
+        "text": "And a buddy of mine was like,\nactually, yeah, it can, you",
+        "start": 92.936,
+        "duration": 3.42
+    },
+    {
+        "text": "should check out this paper.",
+        "start": 96.356,
+        "duration": 1.08
+    },
+    {
+        "text": "So that's how I got here.",
+        "start": 97.976,
+        "duration": 1.8
+    },
+    {
+        "text": "All right.",
+        "start": 103.091,
+        "duration": 0.36
+    },
+    {
+        "text": "time to just, like quickly do a\nwhirlwind of statistical ml, just to",
+        "start": 104.921,
+        "duration": 5.04
+    },
+    {
+        "text": "get kind of notation on the board.",
+        "start": 109.961,
+        "duration": 2.04
+    },
+    {
+        "text": "generally we assume there's some input\nDomain X, there's an output domain y",
+        "start": 114.356,
+        "duration": 4.5
+    },
+    {
+        "text": "frequently to like derive theorems.",
+        "start": 119.036,
+        "duration": 2.16
+    },
+    {
+        "text": "We assume that y the labels\nare, just binary zero or one.",
+        "start": 121.196,
+        "duration": 4.47
+    },
+    {
+        "text": "And, not all points in\nX are equally likely.",
+        "start": 126.596,
+        "duration": 2.79
+    },
+    {
+        "text": "There's a data generating distribution,\nDA samples points from X, and there's a",
+        "start": 129.386,
+        "duration": 4.65
+    },
+    {
+        "text": "labeling function F, which takes points\nin X and labels them with something in",
+        "start": 134.036,
+        "duration": 6.12
+    },
+    {
+        "text": "Y for now, the said zero one, there's a\nloss function and again, like in early",
+        "start": 140.276,
+        "duration": 7.26
+    },
+    {
+        "text": "basic theorems, you just assume it's\nzero one loss For simplicity, you have",
+        "start": 147.536,
+        "duration": 4.5
+    },
+    {
+        "text": "a training set, x s, which consists\nof this series of two pulls, point X,",
+        "start": 152.036,
+        "duration": 6.15
+    },
+    {
+        "text": "and then F of X, which is its label.",
+        "start": 158.246,
+        "duration": 2.76
+    },
+    {
+        "text": "Models, neural networks\nare just functions.",
+        "start": 162.851,
+        "duration": 3.27
+    },
+    {
+        "text": "The set of all possible models.",
+        "start": 166.601,
+        "duration": 1.95
+    },
+    {
+        "text": "It's called the hypothesis class.",
+        "start": 168.881,
+        "duration": 1.71
+    },
+    {
+        "text": "It's for example, if I'm using\nresnet 50, the hypothesis class",
+        "start": 170.651,
+        "duration": 3.96
+    },
+    {
+        "text": "would be the set of all parameter\nconfigurations for RESNET 50.",
+        "start": 174.611,
+        "duration": 3.99
+    },
+    {
+        "text": "A single model is what you try\nand get through optimization.",
+        "start": 179.411,
+        "duration": 3.42
+    },
+    {
+        "text": "It's a single lowercase h\nin that hypothesis class.",
+        "start": 182.831,
+        "duration": 3.51
+    },
+    {
+        "text": "So training is basically just trying\nto approximate f the labeling function",
+        "start": 186.911,
+        "duration": 4.71
+    },
+    {
+        "text": "with some H. So I'm searching through\nthis big stack of hypotheses to find",
+        "start": 191.711,
+        "duration": 4.35
+    },
+    {
+        "text": "lowercase H and generalization error.",
+        "start": 196.061,
+        "duration": 3.93
+    },
+    {
+        "text": "this is the overall, error.",
+        "start": 201.251,
+        "duration": 3.78
+    },
+    {
+        "text": "this is the expected error, the\nexpectation of the loss over",
+        "start": 206.321,
+        "duration": 3.6
+    },
+    {
+        "text": "D, so like over the whole data\ngenerating distribution minus",
+        "start": 209.981,
+        "duration": 3.93
+    },
+    {
+        "text": "the loss on the training set.",
+        "start": 213.911,
+        "duration": 1.89
+    },
+    {
+        "text": "So I'm sure that.",
+        "start": 217.421,
+        "duration": 1.29
+    },
+    {
+        "text": "Most of this is like\nextremely obvious to you all.",
+        "start": 219.356,
+        "duration": 2.73
+    },
+    {
+        "text": "But, again, it was just an\nexercise to go through and make",
+        "start": 222.086,
+        "duration": 4.29
+    },
+    {
+        "text": "sure I understood some stuff.",
+        "start": 226.376,
+        "duration": 1.68
+    },
+    {
+        "text": "going one step deeper, a couple\nimportant notions to keep in mind.",
+        "start": 230.426,
+        "duration": 3.48
+    },
+    {
+        "text": "there's sample complexity.",
+        "start": 234.566,
+        "duration": 2.04
+    },
+    {
+        "text": "So this is a function actually,\nthese are open intervals, but it's",
+        "start": 236.666,
+        "duration": 2.85
+    },
+    {
+        "text": "a function from zero one cross\nzero one to the natural numbers.",
+        "start": 239.516,
+        "duration": 4.11
+    },
+    {
+        "text": "And the sample complexity just asks,\nhow many samples do I need to be",
+        "start": 244.196,
+        "duration": 4.8
+    },
+    {
+        "text": "within epsilon of the truth with\nprobability, at least one minus delta.",
+        "start": 248.996,
+        "duration": 4.02
+    },
+    {
+        "text": "So going back to the generalization error,\nif I want my, true my LDH, this thing, if",
+        "start": 253.796,
+        "duration": 8.4
+    },
+    {
+        "text": "I want the expectation of the error, to be\nwithin epsilon with high probability, how",
+        "start": 262.196,
+        "duration": 6.33
+    },
+    {
+        "text": "many samples do I need to guarantee that?",
+        "start": 268.526,
+        "duration": 1.95
+    },
+    {
+        "text": "Then there's the notion of VC dimension.",
+        "start": 271.991,
+        "duration": 2.58
+    },
+    {
+        "text": "This is the largest size of a\ndataset C, which is a subset of",
+        "start": 274.931,
+        "duration": 4.2
+    },
+    {
+        "text": "x. such that my hypothesis class\nshatters it and shattering just",
+        "start": 279.131,
+        "duration": 4.98
+    },
+    {
+        "text": "means I can label it every which way.",
+        "start": 284.111,
+        "duration": 2.07
+    },
+    {
+        "text": "to make that concrete, the size of,\nthe restriction of H to C. So this",
+        "start": 288.251,
+        "duration": 5.52
+    },
+    {
+        "text": "is, all the ways H can label C.",
+        "start": 293.771,
+        "duration": 2.34
+    },
+    {
+        "text": "I sh I can shatter this thing if the size\nof the restriction of H to C is just two",
+        "start": 297.881,
+        "duration": 5.58
+    },
+    {
+        "text": "to the C or you can replace two with the\nsize of the output space y. And, generally",
+        "start": 303.461,
+        "duration": 7.965
+    },
+    {
+        "text": "speaking, the more parameters you have\nin your model or your hypothesis space,",
+        "start": 311.426,
+        "duration": 4.74
+    },
+    {
+        "text": "the larger the VC dimension is gonna be.",
+        "start": 316.616,
+        "duration": 1.95
+    },
+    {
+        "text": "neural networks with tons and\ntons of parameters may have",
+        "start": 318.956,
+        "duration": 2.97
+    },
+    {
+        "text": "a very high VC dimension.",
+        "start": 321.926,
+        "duration": 1.32
+    },
+    {
+        "text": "It doesn't always correlate\nwith the number of parameters.",
+        "start": 323.786,
+        "duration": 2.28
+    },
+    {
+        "text": "So in, understanding machine learning\nby Shale Schwartz and Ben David,",
+        "start": 326.066,
+        "duration": 4.98
+    },
+    {
+        "text": "which is like my bible for statistical\nml, they give the counter example",
+        "start": 331.076,
+        "duration": 5.16
+    },
+    {
+        "text": "that, even something really simple\nlike a sinusoid function, with this",
+        "start": 336.236,
+        "duration": 6.03
+    },
+    {
+        "text": "ceiling, non-linearity applied to it.",
+        "start": 342.266,
+        "duration": 2.13
+    },
+    {
+        "text": "Even this thing has an\ninfinite VC dimension.",
+        "start": 344.816,
+        "duration": 2.37
+    },
+    {
+        "text": "'cause you can basically crank up\nthe frequency so that, you hit the",
+        "start": 347.216,
+        "duration": 4.95
+    },
+    {
+        "text": "training points, with perfect labeling.",
+        "start": 352.736,
+        "duration": 3.03
+    },
+    {
+        "text": "Okay.",
+        "start": 358.346,
+        "duration": 0.27
+    },
+    {
+        "text": "I know I'm babbling a lot about\nstatistical learning theory,",
+        "start": 358.616,
+        "duration": 3.42
+    },
+    {
+        "text": "but, we're, almost done.",
+        "start": 362.036,
+        "duration": 2.7
+    },
+    {
+        "text": "I just, I, again, I wanted to do this\nto contextualize the actual problem that",
+        "start": 364.736,
+        "duration": 4.59
+    },
+    {
+        "text": "they're trying to solve in this paper.",
+        "start": 369.326,
+        "duration": 1.77
+    },
+    {
+        "text": "two more ideas.",
+        "start": 371.786,
+        "duration": 1.02
+    },
+    {
+        "text": "There's the growth function tau\nwith respect to a hypothesis class.",
+        "start": 372.926,
+        "duration": 4.83
+    },
+    {
+        "text": "so this just asks the question, how\nmany ways can I label this small",
+        "start": 379.316,
+        "duration": 4.2
+    },
+    {
+        "text": "dataset c with my hypothesis space?",
+        "start": 383.516,
+        "duration": 3.27
+    },
+    {
+        "text": "And what happens is I change the\nsize of C as I go from a dataset with",
+        "start": 387.596,
+        "duration": 4.59
+    },
+    {
+        "text": "one point to two points, 10 points.",
+        "start": 392.186,
+        "duration": 2.25
+    },
+    {
+        "text": "How many functions are there that\nmy hypothesis space can represent?",
+        "start": 394.916,
+        "duration": 3.96
+    },
+    {
+        "text": "so you can shuffle symbols\naround for quite some time.",
+        "start": 402.536,
+        "duration": 3.48
+    },
+    {
+        "text": "And, Prove the following textbook,\ngeneralization error bound the",
+        "start": 406.286,
+        "duration": 6.15
+    },
+    {
+        "text": "gap in the overall risk versus\nthe, the risk on the training set.",
+        "start": 412.436,
+        "duration": 5.79
+    },
+    {
+        "text": "This gap is bounded above by this quantity\nhere, and tau h is in the numerator,",
+        "start": 418.766,
+        "duration": 5.82
+    },
+    {
+        "text": "which depends in fact on the VC dimension.",
+        "start": 424.586,
+        "duration": 3.0
+    },
+    {
+        "text": "And the number of samples down\nhere is in the denominator.",
+        "start": 428.396,
+        "duration": 3.24
+    },
+    {
+        "text": "So if I want to decrease my,\ngeneralization error and get a tighter",
+        "start": 432.146,
+        "duration": 5.37
+    },
+    {
+        "text": "bound, I can basically do two things.",
+        "start": 437.516,
+        "duration": 2.52
+    },
+    {
+        "text": "I can lower the VC dimension of my\nhypothesis space, perhaps by choosing",
+        "start": 440.456,
+        "duration": 4.92
+    },
+    {
+        "text": "a simpler model or reducing the number\nof parameters or, layers or something.",
+        "start": 445.376,
+        "duration": 4.59
+    },
+    {
+        "text": "Or I can get more samples.",
+        "start": 450.866,
+        "duration": 2.19
+    },
+    {
+        "text": "So these are two sides of this\ninequality, but generally we wanna",
+        "start": 453.116,
+        "duration": 4.02
+    },
+    {
+        "text": "make this as small as possible.",
+        "start": 457.136,
+        "duration": 2.07
+    },
+    {
+        "text": "Could I ask a question, Ben, on, on\nyour first paragraph up there with that.",
+        "start": 461.066,
+        "duration": 4.08
+    },
+    {
+        "text": "Epsilon Delta is, are we supposed to\nhave some kind of intuitive feel for",
+        "start": 467.366,
+        "duration": 5.16
+    },
+    {
+        "text": "what the shape of Epsilon Delta space is?",
+        "start": 472.526,
+        "duration": 2.49
+    },
+    {
+        "text": "An intuitive feel for what\nthat space looks like?",
+        "start": 477.176,
+        "duration": 2.79
+    },
+    {
+        "text": "Yeah.",
+        "start": 480.536,
+        "duration": 0.24
+    },
+    {
+        "text": "So you have epsilon within the\ntruth, and then you have a, with",
+        "start": 480.776,
+        "duration": 3.03
+    },
+    {
+        "text": "a probability of one minus Delta.",
+        "start": 483.806,
+        "duration": 1.98
+    },
+    {
+        "text": "So I'm just trying to get,",
+        "start": 485.786,
+        "duration": 1.23
+    },
+    {
+        "text": "what the relationship is between those.",
+        "start": 489.116,
+        "duration": 2.58
+    },
+    {
+        "text": "You've got this functional relationship.",
+        "start": 491.696,
+        "duration": 2.25
+    },
+    {
+        "text": "I'm trying to figure out whether\nthat's a sim if I, plotted, M of h",
+        "start": 494.126,
+        "duration": 7.02
+    },
+    {
+        "text": "as a function of Epsilon and Delta.",
+        "start": 501.146,
+        "duration": 1.95
+    },
+    {
+        "text": "Does it, is it just some kind of\nsmooth thing or is it, there's",
+        "start": 503.366,
+        "duration": 5.61
+    },
+    {
+        "text": "all sorts of gotchas in there.",
+        "start": 508.976,
+        "duration": 1.29
+    },
+    {
+        "text": "Yeah, fair question.",
+        "start": 512.516,
+        "duration": 1.83
+    },
+    {
+        "text": "The way I would think about\nit is, that there's a trade",
+        "start": 514.346,
+        "duration": 3.36
+    },
+    {
+        "text": "off between Epsilon and Delta.",
+        "start": 517.706,
+        "duration": 1.8
+    },
+    {
+        "text": "If I just need my risk to be\nlike barely above chance, I can",
+        "start": 521.426,
+        "duration": 4.35
+    },
+    {
+        "text": "have epsilon is my error term.",
+        "start": 525.776,
+        "duration": 2.37
+    },
+    {
+        "text": "So if the error can be really\nhigh, I can guarantee that",
+        "start": 528.146,
+        "duration": 3.93
+    },
+    {
+        "text": "with probability almost one.",
+        "start": 532.076,
+        "duration": 1.65
+    },
+    {
+        "text": "Delta can be really, small.",
+        "start": 535.466,
+        "duration": 2.7
+    },
+    {
+        "text": "On the other hand, if I want, an\nerror to be really, small, I may have",
+        "start": 538.556,
+        "duration": 5.52
+    },
+    {
+        "text": "to start sacrificing my probability.",
+        "start": 544.076,
+        "duration": 1.95
+    },
+    {
+        "text": "So if I want to get a hundred percent\naccuracy, maybe possible, but with",
+        "start": 546.026,
+        "duration": 3.96
+    },
+    {
+        "text": "very low probability, I'm gonna\nfind that needle in the haystack.",
+        "start": 549.986,
+        "duration": 3.3
+    },
+    {
+        "text": "And you can go the other way too,",
+        "start": 553.946,
+        "duration": 1.62
+    },
+    {
+        "text": "if I relax the probability bound\nwell, I can have perfect accuracy.",
+        "start": 557.606,
+        "duration": 4.38
+    },
+    {
+        "text": "I can guarantee that as long\nas I'm allowed to do it, a",
+        "start": 562.346,
+        "duration": 3.39
+    },
+    {
+        "text": "low percentage of the time.",
+        "start": 565.736,
+        "duration": 1.29
+    },
+    {
+        "text": "Okay.",
+        "start": 569.906,
+        "duration": 0.33
+    },
+    {
+        "text": "I guess maybe I'm anticipating\nthe Lipschitz condition, but with",
+        "start": 572.081,
+        "duration": 3.345
+    },
+    {
+        "text": "the question I have, just trying\nto visualize that you're, couchy",
+        "start": 575.426,
+        "duration": 5.31
+    },
+    {
+        "text": "has a form of trade off, but, the,",
+        "start": 580.736,
+        "duration": 4.17
+    },
+    {
+        "text": "it's, I'm presuming it's a\nnonlinear trade off of some sort.",
+        "start": 587.786,
+        "duration": 3.9
+    },
+    {
+        "text": "it's, so I'm just wondering if\nthere's anything interesting in the",
+        "start": 593.186,
+        "duration": 3.24
+    },
+    {
+        "text": "shape of that, those that trade off.",
+        "start": 596.426,
+        "duration": 1.92
+    },
+    {
+        "text": "It's a good question.",
+        "start": 600.506,
+        "duration": 0.93
+    },
+    {
+        "text": "I've never stopped to try\nand plot a sample complexity,",
+        "start": 602.336,
+        "duration": 3.24
+    },
+    {
+        "text": "bound.",
+        "start": 608.126,
+        "duration": 0.54
+    },
+    {
+        "text": "So I don't know that I can give\nyou a whole lot more, honestly.",
+        "start": 610.016,
+        "duration": 3.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 614.366,
+        "duration": 0.18
+    },
+    {
+        "text": "'cause when I, see the lift\ncondition, there's usually some.",
+        "start": 614.606,
+        "duration": 3.51
+    },
+    {
+        "text": "in other context, some, that\nthe surface is continuous and",
+        "start": 621.021,
+        "duration": 4.67
+    },
+    {
+        "text": "is locally differentiable and a\ncouple other interesting things.",
+        "start": 625.691,
+        "duration": 3.39
+    },
+    {
+        "text": "So I was just trying to map that\nphilosophy to what you were showing there.",
+        "start": 629.081,
+        "duration": 4.62
+    },
+    {
+        "text": "But anyway, why, don't\nyou, yeah, I'll, get there.",
+        "start": 633.851,
+        "duration": 2.25
+    },
+    {
+        "text": "It's, a little bit different.",
+        "start": 636.371,
+        "duration": 1.08
+    },
+    {
+        "text": "the lipitz thing is gonna be with respect\nto the function that you're learning,",
+        "start": 637.661,
+        "duration": 3.18
+    },
+    {
+        "text": "like the H and the small H and Big H, the\nactual, neural network that you learn.",
+        "start": 640.841,
+        "duration": 5.52
+    },
+    {
+        "text": "We're gonna look for something that has a\nnet, like a network, a function that has",
+        "start": 647.081,
+        "duration": 3.81
+    },
+    {
+        "text": "looks, its property, which is a little\ndifferent than sample complexity function",
+        "start": 650.891,
+        "duration": 4.86
+    },
+    {
+        "text": "and the smoothness or whatever of this.",
+        "start": 655.781,
+        "duration": 2.34
+    },
+    {
+        "text": "Okay.",
+        "start": 658.511,
+        "duration": 0.33
+    },
+    {
+        "text": "Fair enough.",
+        "start": 659.381,
+        "duration": 0.42
+    },
+    {
+        "text": "Okay.",
+        "start": 662.561,
+        "duration": 0.48
+    },
+    {
+        "text": "promise, last slide on theory.",
+        "start": 664.301,
+        "duration": 2.7
+    },
+    {
+        "text": "the way I like to think of this to try\nand make things concrete is by thinking",
+        "start": 668.321,
+        "duration": 3.66
+    },
+    {
+        "text": "about how many functions I have to search\nthrough, or how many samples I need.",
+        "start": 671.981,
+        "duration": 4.32
+    },
+    {
+        "text": "So if I take some dataset C with,\nlet's say 10 points or whatever, there",
+        "start": 677.486,
+        "duration": 7.65
+    },
+    {
+        "text": "are gonna be, and if the labels are\nbinary, there's gonna be two to the 10",
+        "start": 685.136,
+        "duration": 3.66
+    },
+    {
+        "text": "possible functions, between the two.",
+        "start": 688.796,
+        "duration": 2.67
+    },
+    {
+        "text": "so this is just a general\nformula to keep in mind.",
+        "start": 692.606,
+        "duration": 2.67
+    },
+    {
+        "text": "Now, how many functions can my\nhypothesis class represent from",
+        "start": 696.056,
+        "duration": 3.99
+    },
+    {
+        "text": "this little dataset C to zero?",
+        "start": 700.046,
+        "duration": 2.31
+    },
+    {
+        "text": "One, it depends on the vc, excuse me, the\nVC dimension of your hypothesis space.",
+        "start": 702.356,
+        "duration": 7.14
+    },
+    {
+        "text": "And for a neural network with a\nreally large number parameters,",
+        "start": 710.726,
+        "duration": 3.48
+    },
+    {
+        "text": "the VC dimension can be high.",
+        "start": 714.536,
+        "duration": 1.92
+    },
+    {
+        "text": "So the question is, doesn't this mean that\nthe generalization error bound, increases?",
+        "start": 717.146,
+        "duration": 5.55
+    },
+    {
+        "text": "it does.",
+        "start": 723.986,
+        "duration": 0.69
+    },
+    {
+        "text": "And so there's also an interesting\nquestion here of I. Yes, neural networks",
+        "start": 724.676,
+        "duration": 5.805
+    },
+    {
+        "text": "overfit, but shouldn't they actually\ndo even worse than we see in practice?",
+        "start": 730.481,
+        "duration": 4.32
+    },
+    {
+        "text": "So just an interesting\nthing to keep in mind.",
+        "start": 734.861,
+        "duration": 2.82
+    },
+    {
+        "text": "And I made this slide to try\nand tie together two notions.",
+        "start": 739.751,
+        "duration": 4.83
+    },
+    {
+        "text": "there's the notion that as I add more\nparameters to my model, the function space",
+        "start": 745.121,
+        "duration": 5.1
+    },
+    {
+        "text": "that I have to search through gets larger.",
+        "start": 750.221,
+        "duration": 1.74
+    },
+    {
+        "text": "So that hurts my generalization error.",
+        "start": 752.021,
+        "duration": 1.83
+    },
+    {
+        "text": "On the other hand, there's what\npeople always refer to as the curse",
+        "start": 754.211,
+        "duration": 3.03
+    },
+    {
+        "text": "of dimensionality, which has to\ndo with the dimensionality of X.",
+        "start": 757.241,
+        "duration": 3.81
+    },
+    {
+        "text": "And everyone just knows that as I increase\nthe number of dimensions, I need more and",
+        "start": 761.651,
+        "duration": 4.83
+    },
+    {
+        "text": "more samples to cover that space better.",
+        "start": 766.481,
+        "duration": 2.16
+    },
+    {
+        "text": "so how are these ideas related?",
+        "start": 769.661,
+        "duration": 1.74
+    },
+    {
+        "text": "It's, a good exercise to sit\ndown and walk through it.",
+        "start": 771.581,
+        "duration": 4.5
+    },
+    {
+        "text": "So here was my thought process.",
+        "start": 776.501,
+        "duration": 2.37
+    },
+    {
+        "text": "if I disco discretized\nmy space X into bins.",
+        "start": 779.441,
+        "duration": 3.36
+    },
+    {
+        "text": "So for now, imagine x to just be, like the\ninterval, zero to one on the real numbers.",
+        "start": 783.611,
+        "duration": 7.08
+    },
+    {
+        "text": "And I want to chop that thing into bins.",
+        "start": 791.471,
+        "duration": 1.8
+    },
+    {
+        "text": "So let's say I chop into 10 bins,\nzero to 0.1, 0.1 to 0.2, and so on.",
+        "start": 793.271,
+        "duration": 4.71
+    },
+    {
+        "text": "the question is, how many samples\ndo I need to construct my dataset?",
+        "start": 799.601,
+        "duration": 3.81
+    },
+    {
+        "text": "C?",
+        "start": 803.681,
+        "duration": 0.54
+    },
+    {
+        "text": "obviously if, it's just, one dimensional\nand need only 10 or, n bins, 10 samples.",
+        "start": 805.301,
+        "duration": 7.35
+    },
+    {
+        "text": "but if I take that interval zero one\nand, turn it into a square, so now",
+        "start": 813.401,
+        "duration": 4.71
+    },
+    {
+        "text": "I've got zero one cross zero one.",
+        "start": 818.111,
+        "duration": 1.92
+    },
+    {
+        "text": "Now I've got the product\nof those two kind of.",
+        "start": 820.841,
+        "duration": 2.22
+    },
+    {
+        "text": "Sets of bins.",
+        "start": 823.861,
+        "duration": 1.14
+    },
+    {
+        "text": "And that means it's gonna be\n10 squared, which is a hundred.",
+        "start": 825.091,
+        "duration": 2.7
+    },
+    {
+        "text": "And then if I turn that into a cube and\nscan back and forth, it's gonna go up",
+        "start": 828.241,
+        "duration": 4.14
+    },
+    {
+        "text": "to 10 to the three or n to the three.",
+        "start": 832.381,
+        "duration": 3.03
+    },
+    {
+        "text": "And generally speaking, with K bins\nand dimensionality D the size of this",
+        "start": 835.951,
+        "duration": 5.73
+    },
+    {
+        "text": "dataset, C, which samples, one point in\neach bin, this thing scales exponentially.",
+        "start": 841.681,
+        "duration": 5.88
+    },
+    {
+        "text": "So that means if I want to construct\na data set like this, the size of C is",
+        "start": 848.851,
+        "duration": 4.44
+    },
+    {
+        "text": "exponential in D. And finally, to tie\nthis back to the problem of how many",
+        "start": 853.291,
+        "duration": 6.87
+    },
+    {
+        "text": "functions there are, that means if I\ngo back up here and construct such a",
+        "start": 860.161,
+        "duration": 4.38
+    },
+    {
+        "text": "dataset, the number of functions is\nexponential in the dimensionality of",
+        "start": 864.541,
+        "duration": 5.88
+    },
+    {
+        "text": "the inputs for a dataset of this type.",
+        "start": 870.421,
+        "duration": 2.91
+    },
+    {
+        "text": "So the takeaways, basically the\nnumber of functions I have to",
+        "start": 874.591,
+        "duration": 4.38
+    },
+    {
+        "text": "search through is gonna grow in.",
+        "start": 878.971,
+        "duration": 2.1
+    },
+    {
+        "text": "Two ways.",
+        "start": 881.651,
+        "duration": 0.75
+    },
+    {
+        "text": "First of all, it's gonna tend\nto grow in the input dimension",
+        "start": 882.401,
+        "duration": 3.15
+    },
+    {
+        "text": "and in the number of parameters.",
+        "start": 886.301,
+        "duration": 1.77
+    },
+    {
+        "text": "So both of these things, will tend to\nhurt the generalization error bound.",
+        "start": 888.071,
+        "duration": 4.89
+    },
+    {
+        "text": "So I started this presentation by saying\nthe whole problem that they're trying to",
+        "start": 893.021,
+        "duration": 3.39
+    },
+    {
+        "text": "tackle in this paper, like one of the main\nones is lowering the generalization error.",
+        "start": 896.411,
+        "duration": 6.06
+    },
+    {
+        "text": "And there are these two problems\nwith generalization error.",
+        "start": 903.011,
+        "duration": 4.11
+    },
+    {
+        "text": "There's how many parameters\nyou have, and then there's the",
+        "start": 907.211,
+        "duration": 2.79
+    },
+    {
+        "text": "dimensionality of the inputs.",
+        "start": 910.001,
+        "duration": 1.71
+    },
+    {
+        "text": "And I just wanted to tie them\ntogether as part of the same",
+        "start": 911.981,
+        "duration": 3.99
+    },
+    {
+        "text": "coin about generalization error.",
+        "start": 916.001,
+        "duration": 2.1
+    },
+    {
+        "text": "so that's all I have on learning theory.",
+        "start": 919.781,
+        "duration": 2.91
+    },
+    {
+        "text": "Does anyone want to respond or\nhave like questions about this",
+        "start": 922.781,
+        "duration": 3.81
+    },
+    {
+        "text": "before I get into the actual paper",
+        "start": 926.591,
+        "duration": 1.53
+    },
+    {
+        "text": "there?",
+        "start": 934.721,
+        "duration": 0.39
+    },
+    {
+        "text": "So that's the space.",
+        "start": 935.321,
+        "duration": 1.32
+    },
+    {
+        "text": "It's exponential in, in, in, two fashions.",
+        "start": 937.871,
+        "duration": 4.44
+    },
+    {
+        "text": "but that's, like the total space.",
+        "start": 946.241,
+        "duration": 3.9
+    },
+    {
+        "text": "if, are there priors that reduce\nthe effective ity of that space",
+        "start": 951.401,
+        "duration": 6.93
+    },
+    {
+        "text": "that we're gonna be talking about?",
+        "start": 958.331,
+        "duration": 1.98
+    },
+    {
+        "text": "Or is, is that a question\nfor a different day?",
+        "start": 960.371,
+        "duration": 3.75
+    },
+    {
+        "text": "I'm going to touch on it\nright here and I'll tie back.",
+        "start": 965.141,
+        "duration": 3.12
+    },
+    {
+        "text": "you're right.",
+        "start": 970.331,
+        "duration": 0.45
+    },
+    {
+        "text": "So generally, like this is just\ntwo to the size of C functions.",
+        "start": 970.811,
+        "duration": 3.99
+    },
+    {
+        "text": "Okay.",
+        "start": 974.831,
+        "duration": 0.27
+    },
+    {
+        "text": "How do I restrict?",
+        "start": 975.101,
+        "duration": 0.99
+    },
+    {
+        "text": "So instead of having to learn every\npossible function here, I don't have",
+        "start": 976.091,
+        "duration": 3.66
+    },
+    {
+        "text": "to search through every function.",
+        "start": 979.751,
+        "duration": 1.32
+    },
+    {
+        "text": "So here are some strategies.",
+        "start": 982.241,
+        "duration": 1.92
+    },
+    {
+        "text": "One idea is to assume that the\nlabeling function or the target f.",
+        "start": 984.191,
+        "duration": 4.68
+    },
+    {
+        "text": "Has certain properties.",
+        "start": 989.306,
+        "duration": 1.65
+    },
+    {
+        "text": "one would be to assume that it's like\ninvariant to certain changes in the input.",
+        "start": 991.616,
+        "duration": 4.29
+    },
+    {
+        "text": "So we've all talked about in\nvariance recently, obviously the",
+        "start": 995.996,
+        "duration": 3.63
+    },
+    {
+        "text": "idea would be if I'm trying to\ndetect is there a dog in my image?",
+        "start": 999.626,
+        "duration": 3.93
+    },
+    {
+        "text": "If we want translation in\nvariance, it shouldn't matter",
+        "start": 1003.616,
+        "duration": 2.64
+    },
+    {
+        "text": "where the dog is in the image.",
+        "start": 1006.256,
+        "duration": 1.425
+    },
+    {
+        "text": "It can appear anywhere.",
+        "start": 1007.681,
+        "duration": 1.125
+    },
+    {
+        "text": "The labeling function should be\ninva to those types of changes.",
+        "start": 1009.076,
+        "duration": 3.63
+    },
+    {
+        "text": "another one would be maybe the labeling\nfunction has a small lipitz constant.",
+        "start": 1014.206,
+        "duration": 4.23
+    },
+    {
+        "text": "So the labeling function is really,\nfrom the input domain to zero one.",
+        "start": 1018.811,
+        "duration": 4.35
+    },
+    {
+        "text": "So what's lipitz got to do with this?",
+        "start": 1023.161,
+        "duration": 2.76
+    },
+    {
+        "text": "if we just assume there's like a\ncontinuous lipitz function and then",
+        "start": 1026.881,
+        "duration": 3.3
+    },
+    {
+        "text": "we threshold it to get the labels,\nwe can think about the underlying F",
+        "start": 1030.181,
+        "duration": 4.65
+    },
+    {
+        "text": "as having a small lipitz constant.",
+        "start": 1034.921,
+        "duration": 2.58
+    },
+    {
+        "text": "So that also restricts us down from\nhaving to learn, all possible functions",
+        "start": 1037.921,
+        "duration": 4.71
+    },
+    {
+        "text": "to like a smaller set of functions.",
+        "start": 1042.631,
+        "duration": 1.89
+    },
+    {
+        "text": "Another one would be to assume that\nthe labeling function only makes use",
+        "start": 1044.971,
+        "duration": 3.63
+    },
+    {
+        "text": "of a subset of the features in X. and\nthen we can try and learn functions",
+        "start": 1048.601,
+        "duration": 5.64
+    },
+    {
+        "text": "that respect these properties.",
+        "start": 1054.241,
+        "duration": 1.5
+    },
+    {
+        "text": "and I have noted here, remember how\nmany functions, this will help us",
+        "start": 1058.056,
+        "duration": 3.595
+    },
+    {
+        "text": "decrease the size of the function\nspace we have to search through.",
+        "start": 1061.651,
+        "duration": 3.15
+    },
+    {
+        "text": "Maybe to put a finer point on that, if\nwe go back to the growth function tau,",
+        "start": 1066.961,
+        "duration": 6.09
+    },
+    {
+        "text": "this thing is gonna grow exponentially as\nlong as my hypothesis class shatters C.",
+        "start": 1074.131,
+        "duration": 5.85
+    },
+    {
+        "text": "So if I wanna slow down the growth\nfunction, a couple of things can happen.",
+        "start": 1080.371,
+        "duration": 3.87
+    },
+    {
+        "text": "I can either increase m or I can\ndecrease the size of my hypothesis class.",
+        "start": 1084.871,
+        "duration": 5.52
+    },
+    {
+        "text": "there's, a theorem which basically\nshows that as soon as you exceed the",
+        "start": 1090.751,
+        "duration": 5.28
+    },
+    {
+        "text": "VC dimension of h the growth function\ngoes from exponential to polynomial.",
+        "start": 1096.031,
+        "duration": 6.27
+    },
+    {
+        "text": "And if you have enough samples,\nthen the growth function slows down.",
+        "start": 1102.931,
+        "duration": 4.8
+    },
+    {
+        "text": "Or if I make the VC dimension smaller,\nthe growth function slows down.",
+        "start": 1107.731,
+        "duration": 4.47
+    },
+    {
+        "text": "Which gets back to your point,\nKevin, of now I don't have to search",
+        "start": 1112.681,
+        "duration": 3.36
+    },
+    {
+        "text": "through exponentially many functions.",
+        "start": 1116.041,
+        "duration": 2.88
+    },
+    {
+        "text": "Now I have to search through poly mally.",
+        "start": 1118.921,
+        "duration": 1.8
+    },
+    {
+        "text": "Many functions could, I\njust wanna make one comment.",
+        "start": 1120.781,
+        "duration": 4.89
+    },
+    {
+        "text": "the reason why I was going there is that,\nthere was a problem in computer graphics",
+        "start": 1125.871,
+        "duration": 5.98
+    },
+    {
+        "text": "of, in ray tracing where you're trying\nto, there are a lot of variables when",
+        "start": 1131.941,
+        "duration": 6.06
+    },
+    {
+        "text": "you're trying to launch rays that how many\nsamples do you fire for anti-aliasing?",
+        "start": 1138.001,
+        "duration": 6.06
+    },
+    {
+        "text": "How much do you do for detecting shadows?",
+        "start": 1144.061,
+        "duration": 1.92
+    },
+    {
+        "text": "How much for detecting, depth of\nfield and there's like end dimensions",
+        "start": 1145.981,
+        "duration": 5.67
+    },
+    {
+        "text": "that you're trying to go across.",
+        "start": 1151.651,
+        "duration": 2.13
+    },
+    {
+        "text": "the critical thing that made Ray\ntracing work so well was the fact",
+        "start": 1154.051,
+        "duration": 5.28
+    },
+    {
+        "text": "that they found out that they didn't\nhave to increase the number, the",
+        "start": 1159.331,
+        "duration": 2.79
+    },
+    {
+        "text": "sample size with the dimensionality.",
+        "start": 1162.121,
+        "duration": 1.83
+    },
+    {
+        "text": "They just simply scattered the\nsamples across all dimensions",
+        "start": 1163.951,
+        "duration": 3.75
+    },
+    {
+        "text": "independently of each other, and that\nwas sufficient to sample the space.",
+        "start": 1168.181,
+        "duration": 3.96
+    },
+    {
+        "text": "So this is giving something of a bound,",
+        "start": 1172.621,
+        "duration": 3.06
+    },
+    {
+        "text": "more detail from that finding that\nyou're able to actually do something",
+        "start": 1177.946,
+        "duration": 4.89
+    },
+    {
+        "text": "like that, and still, sample that space.",
+        "start": 1182.836,
+        "duration": 4.8
+    },
+    {
+        "text": "So that's what intrigued me about\nthe thing is that's something that",
+        "start": 1187.636,
+        "duration": 3.6
+    },
+    {
+        "text": "came up in the 1980s and, the math\nwas too complex for me to understand",
+        "start": 1191.236,
+        "duration": 4.83
+    },
+    {
+        "text": "at the time, but you've presented\na nice, background for that.",
+        "start": 1196.066,
+        "duration": 3.09
+    },
+    {
+        "text": "It's a very nice tie in.",
+        "start": 1201.346,
+        "duration": 1.47
+    },
+    {
+        "text": "yeah, so as I'm digesting it, it's, I'm\njust thinking, how many samples do I",
+        "start": 1203.836,
+        "duration": 6.3
+    },
+    {
+        "text": "need so I can, is the question or was the\nproblem, like, how many samples do I need",
+        "start": 1210.136,
+        "duration": 4.41
+    },
+    {
+        "text": "to learn a function that, like shades\nproperly and represents these different",
+        "start": 1214.546,
+        "duration": 4.89
+    },
+    {
+        "text": "aspects of computer graphics properly?",
+        "start": 1219.436,
+        "duration": 2.01
+    },
+    {
+        "text": "Yeah.",
+        "start": 1222.826,
+        "duration": 0.3
+    },
+    {
+        "text": "That, that, that's essentially it.",
+        "start": 1223.231,
+        "duration": 1.365
+    },
+    {
+        "text": "'cause you, basically, you have to\nlaunch enough samples so that, You,",
+        "start": 1224.626,
+        "duration": 8.205
+    },
+    {
+        "text": "simultaneously, minimize like Ailey\nsink, and all these other aspects, and",
+        "start": 1233.311,
+        "duration": 7.56
+    },
+    {
+        "text": "in including, distributing samples in\ntime so that you can get motion blur.",
+        "start": 1240.871,
+        "duration": 4.62
+    },
+    {
+        "text": "So the worry was that you, you're gonna\nhave to, go up, again, exponential number",
+        "start": 1246.181,
+        "duration": 7.17
+    },
+    {
+        "text": "of samples because, you, you wanna sample\neach of those dimensions equally, right?",
+        "start": 1253.351,
+        "duration": 3.9
+    },
+    {
+        "text": "And it turned out no, after a certain\nnumber of samples, it actually, I, maybe",
+        "start": 1257.671,
+        "duration": 5.22
+    },
+    {
+        "text": "it's that cut point where you said it\nwent from exponential to polynomial.",
+        "start": 1262.891,
+        "duration": 3.96
+    },
+    {
+        "text": "I'm not sure.",
+        "start": 1266.851,
+        "duration": 0.72
+    },
+    {
+        "text": "But the finding was, that no, you just\nhave to launch a sufficient number of",
+        "start": 1268.111,
+        "duration": 3.96
+    },
+    {
+        "text": "samples and the rest of the error converts\ninto a form of noise, which is acceptable.",
+        "start": 1272.071,
+        "duration": 7.56
+    },
+    {
+        "text": "So the, yeah, it somehow, so that's, one,\none of the, it was, it just solved this",
+        "start": 1280.606,
+        "duration": 8.58
+    },
+    {
+        "text": "huge dimensionality problem that they're\nhaving and made gray tracing practical.",
+        "start": 1289.186,
+        "duration": 3.96
+    },
+    {
+        "text": "Yeah.",
+        "start": 1296.326,
+        "duration": 0.24
+    },
+    {
+        "text": "It's a very nice tie in.",
+        "start": 1296.566,
+        "duration": 1.23
+    },
+    {
+        "text": "So I'm trying to relate to that, to like\nthe properties of the target function.",
+        "start": 1297.796,
+        "duration": 4.65
+    },
+    {
+        "text": "And there are two ways I could\nunpack what you're saying or two",
+        "start": 1302.626,
+        "duration": 3.78
+    },
+    {
+        "text": "kind of guesses I have about this.",
+        "start": 1306.406,
+        "duration": 1.65
+    },
+    {
+        "text": "one would be, of all\nthose dimensions like.",
+        "start": 1308.956,
+        "duration": 3.03
+    },
+    {
+        "text": "Motion blur and, like shading.",
+        "start": 1312.856,
+        "duration": 3.42
+    },
+    {
+        "text": "And I have no idea what I'm talking about\nwith computer graphics, but with all of",
+        "start": 1316.276,
+        "duration": 3.42
+    },
+    {
+        "text": "those things, one possibility that would\nmake it tractable is that, some of these",
+        "start": 1319.696,
+        "duration": 5.34
+    },
+    {
+        "text": "dimensions matter a lot more than others.",
+        "start": 1325.036,
+        "duration": 2.79
+    },
+    {
+        "text": "so I can sample some of\n'em heavily in some of 'em.",
+        "start": 1328.126,
+        "duration": 3.36
+    },
+    {
+        "text": "I just don't really need that many\nsamples and it doesn't hurt me.",
+        "start": 1331.486,
+        "duration": 2.52
+    },
+    {
+        "text": "Or another, possibility is that, like\nyou said, if they're independent of",
+        "start": 1334.456,
+        "duration": 4.41
+    },
+    {
+        "text": "one another, then I don't have to\nsample like for two dimensions, all",
+        "start": 1338.866,
+        "duration": 4.29
+    },
+    {
+        "text": "pairs of points in a grid or like\nall triples of points in a cube.",
+        "start": 1343.156,
+        "duration": 4.05
+    },
+    {
+        "text": "I just have to actually sample\neach dimension, end times, and",
+        "start": 1347.716,
+        "duration": 4.11
+    },
+    {
+        "text": "then it would, the complexity\nwould be linear in the number of",
+        "start": 1351.826,
+        "duration": 2.88
+    },
+    {
+        "text": "dimensions instead of exponential.",
+        "start": 1354.706,
+        "duration": 1.74
+    },
+    {
+        "text": "That would make it polynomial, right?",
+        "start": 1359.536,
+        "duration": 1.8
+    },
+    {
+        "text": "But they found out that it\nactually was more or less linear.",
+        "start": 1361.606,
+        "duration": 3.84
+    },
+    {
+        "text": "It's a, good tie in.",
+        "start": 1370.096,
+        "duration": 1.35
+    },
+    {
+        "text": "I'm, glad you brought it up.",
+        "start": 1372.486,
+        "duration": 1.03
+    },
+    {
+        "text": "'cause, it's nice when the ideas\nhere actually feel, tangible and",
+        "start": 1373.516,
+        "duration": 5.88
+    },
+    {
+        "text": "they relate to a real world problem.",
+        "start": 1379.396,
+        "duration": 2.13
+    },
+    {
+        "text": "Okay.",
+        "start": 1385.036,
+        "duration": 0.42
+    },
+    {
+        "text": "yeah,",
+        "start": 1388.156,
+        "duration": 0.45
+    },
+    {
+        "text": "the other thing that they talk about\nin this paper are adversarial examples.",
+        "start": 1391.786,
+        "duration": 4.2
+    },
+    {
+        "text": "I'm not an expert.",
+        "start": 1397.096,
+        "duration": 1.83
+    },
+    {
+        "text": "I'm not even really a beginner\nin adversarial machine learning.",
+        "start": 1399.316,
+        "duration": 2.88
+    },
+    {
+        "text": "and this seems to be a pretty deep\nfield, and the person who notified me",
+        "start": 1402.556,
+        "duration": 4.2
+    },
+    {
+        "text": "of this paper, studies adversarial L",
+        "start": 1406.756,
+        "duration": 2.85
+    },
+    {
+        "text": "I'm tempted to say this is, through\nthe extremely blurry, probably largely",
+        "start": 1411.856,
+        "duration": 5.88
+    },
+    {
+        "text": "wrong lens of generalization error.",
+        "start": 1417.736,
+        "duration": 1.95
+    },
+    {
+        "text": "But, anyway, the sort of definition.",
+        "start": 1420.376,
+        "duration": 4.02
+    },
+    {
+        "text": "Roughly of an adversarial example\nmeans, I can apply a small perturbation.",
+        "start": 1425.101,
+        "duration": 5.79
+    },
+    {
+        "text": "for example, the norm of the\nnoise that I add has to be small.",
+        "start": 1432.061,
+        "duration": 3.3
+    },
+    {
+        "text": "I perturb, the inputs X by a small\namount and it changes the decision rule.",
+        "start": 1435.901,
+        "duration": 5.1
+    },
+    {
+        "text": "so basically the label that the\nmodel spits out from, in binary",
+        "start": 1441.361,
+        "duration": 3.72
+    },
+    {
+        "text": "classifications zero one, but in\nmulti-class cases, it just means",
+        "start": 1445.081,
+        "duration": 4.98
+    },
+    {
+        "text": "it flips it to the wrong answer.",
+        "start": 1450.061,
+        "duration": 1.5
+    },
+    {
+        "text": "so naively, not knowing anything\nabout adversarial ml, there, it's",
+        "start": 1454.171,
+        "duration": 6.21
+    },
+    {
+        "text": "part of the generalization error.",
+        "start": 1460.381,
+        "duration": 1.59
+    },
+    {
+        "text": "So all of those examples that you\nget wrong, some of those are gonna",
+        "start": 1461.971,
+        "duration": 3.06
+    },
+    {
+        "text": "be due to adversarial examples,\nlike cases that look adversarial.",
+        "start": 1465.031,
+        "duration": 4.8
+    },
+    {
+        "text": "Then some of 'em are gonna be\ncases that, are not, but you",
+        "start": 1470.251,
+        "duration": 3.33
+    },
+    {
+        "text": "just still got them wrong.",
+        "start": 1473.581,
+        "duration": 1.11
+    },
+    {
+        "text": "So all other things equal.",
+        "start": 1475.351,
+        "duration": 1.32
+    },
+    {
+        "text": "If I just make my model more\nadversarially robust, then",
+        "start": 1476.671,
+        "duration": 3.21
+    },
+    {
+        "text": "theoretically I should decrease my risk.",
+        "start": 1480.241,
+        "duration": 2.28
+    },
+    {
+        "text": "Another kind of just\nthing to note is that,",
+        "start": 1485.161,
+        "duration": 2.07
+    },
+    {
+        "text": "from what I can tell, adversarial\nvulnerability is generally",
+        "start": 1489.241,
+        "duration": 4.11
+    },
+    {
+        "text": "observed in these really large\nmodels with a high VC dimension.",
+        "start": 1493.351,
+        "duration": 4.14
+    },
+    {
+        "text": "and not so much in small models\nlike an SVM or something.",
+        "start": 1498.121,
+        "duration": 3.48
+    },
+    {
+        "text": "again, I'm not an expert in this\ndomain, but, my naive read of this",
+        "start": 1502.591,
+        "duration": 4.68
+    },
+    {
+        "text": "problem would be something like,\nadversarial vulnerability is, a",
+        "start": 1507.271,
+        "duration": 5.13
+    },
+    {
+        "text": "symptom of the fact that you've\ngot a really high VC dimension.",
+        "start": 1512.401,
+        "duration": 4.29
+    },
+    {
+        "text": "And so the generalization error,\nhas a potential to be pretty high.",
+        "start": 1516.721,
+        "duration": 4.26
+    },
+    {
+        "text": "Hey, Ben, by the way, I worked in\nadversarial AI on machine learning",
+        "start": 1521.851,
+        "duration": 4.59
+    },
+    {
+        "text": "and yeah, you characterized it well.",
+        "start": 1526.441,
+        "duration": 2.37
+    },
+    {
+        "text": "Yeah.",
+        "start": 1529.771,
+        "duration": 0.33
+    },
+    {
+        "text": "that's all correct.",
+        "start": 1530.761,
+        "duration": 0.96
+    },
+    {
+        "text": "And regarding the difference between\nthe vulnerability to the other kind",
+        "start": 1532.351,
+        "duration": 5.04
+    },
+    {
+        "text": "of generalization errors, from I.\nMisclassification, those sometimes",
+        "start": 1537.391,
+        "duration": 7.395
+    },
+    {
+        "text": "are not directly, eliminated by making\nit more robust adversarial attacks",
+        "start": 1544.846,
+        "duration": 6.54
+    },
+    {
+        "text": "because those adversarial attacks\ntend to be more obscure, right?",
+        "start": 1551.776,
+        "duration": 4.71
+    },
+    {
+        "text": "You change pixels and in a random way\nthat's not even notice and you wanna do",
+        "start": 1557.026,
+        "duration": 5.7
+    },
+    {
+        "text": "it in a way that's not noticeable, right?",
+        "start": 1562.726,
+        "duration": 1.44
+    },
+    {
+        "text": "You have a very small\nabsalon on the pixel.",
+        "start": 1564.166,
+        "duration": 2.79
+    },
+    {
+        "text": "Either you do a small absalon on the\npixel value, you change, or you do,",
+        "start": 1567.496,
+        "duration": 5.4
+    },
+    {
+        "text": "a few amount of pixels you change.",
+        "start": 1573.826,
+        "duration": 1.59
+    },
+    {
+        "text": "There have been examples with\none single pixel can change it.",
+        "start": 1575.566,
+        "duration": 2.61
+    },
+    {
+        "text": "so those are a bit different in nature\nthan just mistaking a banana for a cap",
+        "start": 1580.196,
+        "duration": 6.17
+    },
+    {
+        "text": "and, so yeah.",
+        "start": 1589.666,
+        "duration": 1.11
+    },
+    {
+        "text": "So you don't necessarily get\na better performance by making",
+        "start": 1590.776,
+        "duration": 4.68
+    },
+    {
+        "text": "it more robust actually.",
+        "start": 1595.456,
+        "duration": 1.56
+    },
+    {
+        "text": "What, what happens in.",
+        "start": 1597.016,
+        "duration": 1.35
+    },
+    {
+        "text": "In practice is that in, with these\nvarious techniques to making it",
+        "start": 1598.891,
+        "duration": 5.64
+    },
+    {
+        "text": "more robust, typically you lose\nsome classification performance,",
+        "start": 1604.531,
+        "duration": 4.77
+    },
+    {
+        "text": "so there's some trade off, right?",
+        "start": 1610.051,
+        "duration": 1.2
+    },
+    {
+        "text": "Making it robust, but then you\nlose some of the performance.",
+        "start": 1611.251,
+        "duration": 3.0
+    },
+    {
+        "text": "Yeah.",
+        "start": 1617.911,
+        "duration": 0.39
+    },
+    {
+        "text": "not to derail into adversarial ml, which\nis gonna be pretty much speculation",
+        "start": 1619.651,
+        "duration": 5.13
+    },
+    {
+        "text": "for me, but, I've, heard both kind\nof takes, I've heard that there's a",
+        "start": 1624.781,
+        "duration": 5.49
+    },
+    {
+        "text": "trade off between, your performance\nand how adversarially robust you are.",
+        "start": 1630.271,
+        "duration": 5.34
+    },
+    {
+        "text": "but I've heard that in some cases,\nlike surprisingly, making it more",
+        "start": 1637.801,
+        "duration": 3.48
+    },
+    {
+        "text": "robust actually also increases just\noverall accuracy in some cases.",
+        "start": 1641.281,
+        "duration": 4.98
+    },
+    {
+        "text": "Yeah.",
+        "start": 1646.261,
+        "duration": 0.27
+    },
+    {
+        "text": "Yeah.",
+        "start": 1646.681,
+        "duration": 0.3
+    },
+    {
+        "text": "Depends what the kind of errors you make.",
+        "start": 1647.071,
+        "duration": 1.65
+    },
+    {
+        "text": "Yeah.",
+        "start": 1648.901,
+        "duration": 0.06
+    },
+    {
+        "text": "Okay.",
+        "start": 1651.396,
+        "duration": 0.34
+    },
+    {
+        "text": "Basically the read that I have on this\nis that it's just relying on theory here.",
+        "start": 1652.606,
+        "duration": 6.78
+    },
+    {
+        "text": "The number of functions that your\nhypothesis class contains is extremely",
+        "start": 1660.346,
+        "duration": 4.47
+    },
+    {
+        "text": "large, and that means the number\nof functions that fit the training",
+        "start": 1664.816,
+        "duration": 2.76
+    },
+    {
+        "text": "data well, but don't fit the test\ndata well, is also extremely large.",
+        "start": 1667.576,
+        "duration": 4.41
+    },
+    {
+        "text": "So the kind of naive interpretation is\nthat I'm just selecting a hypothesis from",
+        "start": 1672.466,
+        "duration": 4.5
+    },
+    {
+        "text": "this hypothesis space that, fits the data.",
+        "start": 1677.026,
+        "duration": 3.63
+    },
+    {
+        "text": "But, it's basically a, I, my guess\nwould've been, it's a type of overfitting.",
+        "start": 1680.656,
+        "duration": 4.47
+    },
+    {
+        "text": "So I don't know if that rings\nremotely true, but that would be",
+        "start": 1685.156,
+        "duration": 4.86
+    },
+    {
+        "text": "my naive model of what's going on.",
+        "start": 1690.016,
+        "duration": 2.37
+    },
+    {
+        "text": "Oops.",
+        "start": 1693.196,
+        "duration": 0.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 1694.276,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah, there's, certainly\nsome amount of overfeeding.",
+        "start": 1694.666,
+        "duration": 2.22
+    },
+    {
+        "text": "Okay.",
+        "start": 1700.936,
+        "duration": 0.48
+    },
+    {
+        "text": "So now, let's actually talk about\nthe paper and let lipitz functions.",
+        "start": 1702.346,
+        "duration": 5.22
+    },
+    {
+        "text": "here's the definition\nof a Lipschitz function.",
+        "start": 1710.596,
+        "duration": 2.55
+    },
+    {
+        "text": "my X and my Y both need\nto be metric spaces.",
+        "start": 1714.166,
+        "duration": 3.39
+    },
+    {
+        "text": "And D is, like DY is a metric and the Y\nworld, and DX is a metric in the X world",
+        "start": 1717.886,
+        "duration": 7.02
+    },
+    {
+        "text": "and a function is Lipschitz's continuous.",
+        "start": 1725.716,
+        "duration": 2.07
+    },
+    {
+        "text": "If there's some constant K, so that,\nover the whole kind of domain X.",
+        "start": 1727.786,
+        "duration": 5.88
+    },
+    {
+        "text": "this difference, the, distance\nbetween F of X one and F of X two",
+        "start": 1735.316,
+        "duration": 4.56
+    },
+    {
+        "text": "is always bounded by this K times\nthe difference in these inputs.",
+        "start": 1740.326,
+        "duration": 3.24
+    },
+    {
+        "text": "So mentally you start shuffling symbols\naround or okay, I've got DYDX on the left",
+        "start": 1744.256,
+        "duration": 5.94
+    },
+    {
+        "text": "hand side, if I divide both sides by this.",
+        "start": 1750.196,
+        "duration": 2.58
+    },
+    {
+        "text": "so the intuitive way to grasp this for\nme is just that the slope is less or",
+        "start": 1754.636,
+        "duration": 5.19
+    },
+    {
+        "text": "equal to this constant awe at all times.",
+        "start": 1759.826,
+        "duration": 3.03
+    },
+    {
+        "text": "So they're trying to learn a\nneural network that is, that",
+        "start": 1765.166,
+        "duration": 4.23
+    },
+    {
+        "text": "has this lip, its property.",
+        "start": 1769.396,
+        "duration": 1.44
+    },
+    {
+        "text": "'cause it narrows down the space of\nfunctions that you have to choose from.",
+        "start": 1770.866,
+        "duration": 4.17
+    },
+    {
+        "text": "It makes your hypothesis\nclass a lot smaller.",
+        "start": 1775.066,
+        "duration": 2.34
+    },
+    {
+        "text": "And this has benefits including\npossibly reducing generalization",
+        "start": 1778.126,
+        "duration": 4.47
+    },
+    {
+        "text": "error, providing guarantees about\nadversarial robustness, and maybe",
+        "start": 1782.596,
+        "duration": 4.62
+    },
+    {
+        "text": "even making it more interpretable.",
+        "start": 1787.216,
+        "duration": 1.8
+    },
+    {
+        "text": "Okay.",
+        "start": 1793.486,
+        "duration": 0.51
+    },
+    {
+        "text": "a little bit of math.",
+        "start": 1794.626,
+        "duration": 0.87
+    },
+    {
+        "text": "Can I ask one quick\nquestion back on that slide?",
+        "start": 1796.096,
+        "duration": 2.01
+    },
+    {
+        "text": "do we know of problems where we\ncan't guarantee that continuity?",
+        "start": 1801.556,
+        "duration": 4.92
+    },
+    {
+        "text": "Or is it's always possible you just\nbasically try to, construct solutions",
+        "start": 1806.776,
+        "duration": 7.89
+    },
+    {
+        "text": "that do satisfy that property?",
+        "start": 1814.666,
+        "duration": 1.68
+    },
+    {
+        "text": "No, I think it's the, opposite.",
+        "start": 1818.536,
+        "duration": 2.19
+    },
+    {
+        "text": "It's that, With generally\nspeaking, this is not satisfied.",
+        "start": 1820.726,
+        "duration": 5.61
+    },
+    {
+        "text": "Like when you learn a neural network.",
+        "start": 1826.456,
+        "duration": 1.41
+    },
+    {
+        "text": "I think generally there are no\nguarantees about lipitz whatsoever",
+        "start": 1827.866,
+        "duration": 5.04
+    },
+    {
+        "text": "and trying to make it satisfied.",
+        "start": 1832.966,
+        "duration": 2.49
+    },
+    {
+        "text": "this is trying to make the\nfunction that you learn.",
+        "start": 1836.026,
+        "duration": 3.93
+    },
+    {
+        "text": "Lipschitz's continuous is like\na somewhat new line of research.",
+        "start": 1839.956,
+        "duration": 5.28
+    },
+    {
+        "text": "Okay.",
+        "start": 1846.016,
+        "duration": 0.3
+    },
+    {
+        "text": "That's my take.",
+        "start": 1847.126,
+        "duration": 0.75
+    },
+    {
+        "text": "Thanks.",
+        "start": 1847.876,
+        "duration": 0.15
+    },
+    {
+        "text": "Yeah.",
+        "start": 1848.536,
+        "duration": 0.24
+    },
+    {
+        "text": "Okay, thanks.",
+        "start": 1849.001,
+        "duration": 0.495
+    },
+    {
+        "text": "By the way, Ben, what do you think makes\nit discontinuous since generally el ship,",
+        "start": 1851.506,
+        "duration": 5.85
+    },
+    {
+        "text": "we're not talking about, small K, right?",
+        "start": 1857.626,
+        "duration": 2.1
+    },
+    {
+        "text": "K could be very large",
+        "start": 1859.726,
+        "duration": 2.4
+    },
+    {
+        "text": "and so it means if it's\nnot lip, it's continuous.",
+        "start": 1864.856,
+        "duration": 3.15
+    },
+    {
+        "text": "There's some discontinuity, right?",
+        "start": 1868.006,
+        "duration": 1.44
+    },
+    {
+        "text": "Some gap, some chunk.",
+        "start": 1869.446,
+        "duration": 1.2
+    },
+    {
+        "text": "How do we get, how do we get the jump in?",
+        "start": 1872.686,
+        "duration": 1.8
+    },
+    {
+        "text": "Why do you think?",
+        "start": 1874.516,
+        "duration": 0.69
+    },
+    {
+        "text": "Yeah, I mean my, so my intuition\nhere would be that like adversarial",
+        "start": 1875.206,
+        "duration": 4.71
+    },
+    {
+        "text": "examples suggest that functions\nthat are normally learned are not",
+        "start": 1879.916,
+        "duration": 4.17
+    },
+    {
+        "text": "Lipschitz continuous, because a small\nchange in the inputs flips the label.",
+        "start": 1884.086,
+        "duration": 3.66
+    },
+    {
+        "text": "So it could be that you're already just,\nyou're, it's not actually a big change",
+        "start": 1888.136,
+        "duration": 3.21
+    },
+    {
+        "text": "in the, the logs of the network, but\nbecause it's like a one heart vector",
+        "start": 1891.346,
+        "duration": 4.38
+    },
+    {
+        "text": "and we just choose one like the best.",
+        "start": 1895.726,
+        "duration": 1.83
+    },
+    {
+        "text": "Yeah.",
+        "start": 1899.301,
+        "duration": 0.29
+    },
+    {
+        "text": "yeah.",
+        "start": 1899.951,
+        "duration": 0.001
+    },
+    {
+        "text": "Okay.",
+        "start": 1900.286,
+        "duration": 0.3
+    },
+    {
+        "text": "Do you agree with that?",
+        "start": 1900.856,
+        "duration": 0.9
+    },
+    {
+        "text": "yeah, that's right on.",
+        "start": 1903.136,
+        "duration": 0.84
+    },
+    {
+        "text": "On the output.",
+        "start": 1903.976,
+        "duration": 0.6
+    },
+    {
+        "text": "Yeah.",
+        "start": 1904.576,
+        "duration": 0.24
+    },
+    {
+        "text": "Since we only choose one One\ncorrect sample, one correct class,",
+        "start": 1906.196,
+        "duration": 5.55
+    },
+    {
+        "text": "and we know a small change, at\nsome point it flips the class.",
+        "start": 1912.886,
+        "duration": 3.06
+    },
+    {
+        "text": "yeah.",
+        "start": 1916.486,
+        "duration": 0.33
+    },
+    {
+        "text": "Actually, yeah.",
+        "start": 1917.506,
+        "duration": 0.57
+    },
+    {
+        "text": "Now that I'm remembering,\nI think there are.",
+        "start": 1918.076,
+        "duration": 1.53
+    },
+    {
+        "text": "Are plenty of examples where,\nan adversarial perturbation also",
+        "start": 1919.876,
+        "duration": 4.26
+    },
+    {
+        "text": "causes the logs to change a lot.",
+        "start": 1924.136,
+        "duration": 2.34
+    },
+    {
+        "text": "So instead of being like very confident\nthat there, that I'm looking at a dog,",
+        "start": 1926.476,
+        "duration": 3.54
+    },
+    {
+        "text": "the logs can flip to being like really\nconfident that I'm looking at a cat.",
+        "start": 1930.496,
+        "duration": 4.14
+    },
+    {
+        "text": "So I think that's a clear example of\nnot being Lipschitz continuous, or, it",
+        "start": 1934.636,
+        "duration": 6.42
+    },
+    {
+        "text": "means that, K is just really, large.",
+        "start": 1941.056,
+        "duration": 2.94
+    },
+    {
+        "text": "Yeah, K is large.",
+        "start": 1944.326,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 1945.136,
+        "duration": 0.15
+    },
+    {
+        "text": "In that case it would be\ncontinuous, but K is large.",
+        "start": 1945.286,
+        "duration": 2.4
+    },
+    {
+        "text": "But then at some point, if I do\nthe threshold, this is this class,",
+        "start": 1947.746,
+        "duration": 3.78
+    },
+    {
+        "text": "that's where I get the discontinuity.",
+        "start": 1951.646,
+        "duration": 2.01
+    },
+    {
+        "text": "I see.",
+        "start": 1954.076,
+        "duration": 0.48
+    },
+    {
+        "text": "I'm, I'm sorry.",
+        "start": 1954.556,
+        "duration": 1.26
+    },
+    {
+        "text": "You were asking about why do I think it's\ndiscontinuous and I don't necessarily",
+        "start": 1955.816,
+        "duration": 4.92
+    },
+    {
+        "text": "think that for like the logins, I'm\nmore just thinking that K is large.",
+        "start": 1960.736,
+        "duration": 3.15
+    },
+    {
+        "text": "Yeah.",
+        "start": 1963.886,
+        "duration": 0.06
+    },
+    {
+        "text": "Okay, good.",
+        "start": 1965.836,
+        "duration": 0.45
+    },
+    {
+        "text": "Thanks.",
+        "start": 1966.286,
+        "duration": 0.36
+    },
+    {
+        "text": "Okay.",
+        "start": 1969.256,
+        "duration": 0.3
+    },
+    {
+        "text": "so they just casually mention in\nthis paper, one lipitz functions",
+        "start": 1972.106,
+        "duration": 5.13
+    },
+    {
+        "text": "are closed under composition.",
+        "start": 1977.236,
+        "duration": 1.56
+    },
+    {
+        "text": "this paper took a long time\n'cause I had to stop and convince",
+        "start": 1979.666,
+        "duration": 3.84
+    },
+    {
+        "text": "myself of a bunch of things.",
+        "start": 1983.506,
+        "duration": 1.44
+    },
+    {
+        "text": "that also means I ran out of time and\ndidn't get every theory in this paper.",
+        "start": 1986.116,
+        "duration": 4.11
+    },
+    {
+        "text": "But,",
+        "start": 1990.226,
+        "duration": 0.3
+    },
+    {
+        "text": "I've never, taken a class on functional\nanalysis or anything, so I wanted",
+        "start": 1992.626,
+        "duration": 3.72
+    },
+    {
+        "text": "to take this opportunity to try and\nthink through what they mean by this.",
+        "start": 1996.346,
+        "duration": 3.24
+    },
+    {
+        "text": "generally, this was\njust my naive reasoning.",
+        "start": 2002.136,
+        "duration": 4.62
+    },
+    {
+        "text": "Here I have two functions, F1 and F two.",
+        "start": 2006.756,
+        "duration": 2.37
+    },
+    {
+        "text": "and let's say they have Lipschitz\nconstant, C one and C two.",
+        "start": 2010.656,
+        "duration": 3.57
+    },
+    {
+        "text": "that means this is just the\ndefinition of legits continuity.",
+        "start": 2015.426,
+        "duration": 3.72
+    },
+    {
+        "text": "The left one has a constant C one,\nthe right one has a constant C two.",
+        "start": 2020.676,
+        "duration": 4.08
+    },
+    {
+        "text": "And, if we assume that this distance\nmetric, excuse me, has the property that,",
+        "start": 2025.536,
+        "duration": 6.99
+    },
+    {
+        "text": "in the limit as X one minus X two goes\nto zero, that, if I divide both sides",
+        "start": 2033.726,
+        "duration": 6.99
+    },
+    {
+        "text": "of this inequality by this distance\nin the XS and get this in the limit",
+        "start": 2040.716,
+        "duration": 5.61
+    },
+    {
+        "text": "as X one minus X two goes to zero, I\nrecover the derivative of this function.",
+        "start": 2046.326,
+        "duration": 5.82
+    },
+    {
+        "text": "And I think this would be true for some,\nfor a distance metric like absolute value.",
+        "start": 2052.626,
+        "duration": 4.74
+    },
+    {
+        "text": "So if that is the case, then what\nthat means is I can say, DDX for this",
+        "start": 2059.571,
+        "duration": 7.65
+    },
+    {
+        "text": "function is less al to C one and it's\nless al to C two for this function.",
+        "start": 2067.221,
+        "duration": 4.74
+    },
+    {
+        "text": "And that means if I compose the functions,\nby the chain rule, I get the derivative",
+        "start": 2072.561,
+        "duration": 6.03
+    },
+    {
+        "text": "with respect to acts of F two times the\nderivative with respect to acts of F1.",
+        "start": 2078.591,
+        "duration": 5.55
+    },
+    {
+        "text": "And these are both bounded\nby C one and C two.",
+        "start": 2084.381,
+        "duration": 2.88
+    },
+    {
+        "text": "So the pro, the composition of Lipschitz's\nfunctions, has Lipschitz's constant",
+        "start": 2087.681,
+        "duration": 6.66
+    },
+    {
+        "text": "the product of the, two functions.",
+        "start": 2094.581,
+        "duration": 4.05
+    },
+    {
+        "text": "maybe ko if you or anyone else\nreally, if anyone's familiar with",
+        "start": 2099.921,
+        "duration": 4.56
+    },
+    {
+        "text": "this, you could maybe check me on\nthis and see if this reasoning is",
+        "start": 2104.481,
+        "duration": 3.3
+    },
+    {
+        "text": "accurate or if there's a level in it.",
+        "start": 2107.991,
+        "duration": 1.47
+    },
+    {
+        "text": "Yeah, that's a good reasoning.",
+        "start": 2109.461,
+        "duration": 1.26
+    },
+    {
+        "text": "Yeah.",
+        "start": 2110.721,
+        "duration": 0.21
+    },
+    {
+        "text": "Okay, cool.",
+        "start": 2112.551,
+        "duration": 0.87
+    },
+    {
+        "text": "so if, this bullet point is correct,\nthen if C one and C two are both one,",
+        "start": 2115.311,
+        "duration": 6.78
+    },
+    {
+        "text": "then the composition of one lipitz\nfunctions is automatically one lipitz.",
+        "start": 2122.181,
+        "duration": 5.43
+    },
+    {
+        "text": "and they just mentioned that in the paper.",
+        "start": 2130.071,
+        "duration": 1.5
+    },
+    {
+        "text": "I didn't get it initially, so\nI thought I would try and I go",
+        "start": 2131.571,
+        "duration": 2.7
+    },
+    {
+        "text": "through and actually, get it.",
+        "start": 2134.271,
+        "duration": 3.18
+    },
+    {
+        "text": "The one lip sheets means that's\nthe K. Is it K equal one?",
+        "start": 2137.661,
+        "duration": 5.67
+    },
+    {
+        "text": "Yes.",
+        "start": 2144.756,
+        "duration": 0.22
+    },
+    {
+        "text": "Is the not patient.",
+        "start": 2144.976,
+        "duration": 0.76
+    },
+    {
+        "text": "Okay.",
+        "start": 2146.006,
+        "duration": 0.29
+    },
+    {
+        "text": "Yes.",
+        "start": 2146.691,
+        "duration": 0.54
+    },
+    {
+        "text": "I used C here I probably should used.",
+        "start": 2147.651,
+        "duration": 2.37
+    },
+    {
+        "text": "Okay, I see upstairs.",
+        "start": 2150.021,
+        "duration": 1.59
+    },
+    {
+        "text": "Yeah.",
+        "start": 2151.611,
+        "duration": 0.18
+    },
+    {
+        "text": "In the first line it says C one Nip.",
+        "start": 2151.791,
+        "duration": 1.47
+    },
+    {
+        "text": "Okay.",
+        "start": 2153.621,
+        "duration": 0.3
+    },
+    {
+        "text": "So when you mentioned this,\nfunction that includes whatever",
+        "start": 2157.641,
+        "duration": 4.98
+    },
+    {
+        "text": "non-linearities in the layer.",
+        "start": 2162.621,
+        "duration": 1.65
+    },
+    {
+        "text": "everything above this last bullet\npoint, we're not even necessarily",
+        "start": 2166.461,
+        "duration": 3.42
+    },
+    {
+        "text": "talking about a neural network.",
+        "start": 2169.881,
+        "duration": 1.26
+    },
+    {
+        "text": "We're just talking about\nfunctions, generally speaking.",
+        "start": 2171.141,
+        "duration": 2.97
+    },
+    {
+        "text": "so it's the bolded one that, where\nyou're basically saying that you're",
+        "start": 2176.661,
+        "duration": 8.49
+    },
+    {
+        "text": "connoting a MLP layer to being a\nfunction in the same with the same",
+        "start": 2186.021,
+        "duration": 6.24
+    },
+    {
+        "text": "properties as you're trying to apply.",
+        "start": 2192.261,
+        "duration": 1.89
+    },
+    {
+        "text": "in the preamble there, is that the\ncase that you consider a, whatever",
+        "start": 2195.831,
+        "duration": 6.06
+    },
+    {
+        "text": "the non-linearity is, you consider\na, an MLP layer to be a function.",
+        "start": 2201.891,
+        "duration": 6.69
+    },
+    {
+        "text": "Yep.",
+        "start": 2210.021,
+        "duration": 0.24
+    },
+    {
+        "text": "That's, exactly right.",
+        "start": 2210.831,
+        "duration": 1.5
+    },
+    {
+        "text": "And, you, nailed it.",
+        "start": 2212.631,
+        "duration": 2.19
+    },
+    {
+        "text": "It's to make the whole thing,\nthe whole function, the whole",
+        "start": 2214.821,
+        "duration": 2.85
+    },
+    {
+        "text": "network start to finish.",
+        "start": 2217.671,
+        "duration": 1.23
+    },
+    {
+        "text": "One lipitz.",
+        "start": 2219.726,
+        "duration": 1.2
+    },
+    {
+        "text": "It means that like the weights in\neach layer need to be one lipitz, but",
+        "start": 2220.956,
+        "duration": 3.57
+    },
+    {
+        "text": "then the nonlinear activation also\nhas to be one lipitz, and they tackle",
+        "start": 2224.526,
+        "duration": 4.17
+    },
+    {
+        "text": "both aspects of that in this paper.",
+        "start": 2228.966,
+        "duration": 2.07
+    },
+    {
+        "text": "Okay.",
+        "start": 2231.846,
+        "duration": 0.27
+    },
+    {
+        "text": "yeah, so yeah, that's exactly it.",
+        "start": 2236.196,
+        "duration": 2.4
+    },
+    {
+        "text": "So now this problem making the whole\nnetwork lipitz is boiling down to,",
+        "start": 2238.596,
+        "duration": 4.62
+    },
+    {
+        "text": "I need the weights to be lipitz and\nI need the activations to be lipitz.",
+        "start": 2243.516,
+        "duration": 3.93
+    },
+    {
+        "text": "I'll skip that slide for now and\ncome back to it if necessary.",
+        "start": 2249.726,
+        "duration": 3.39
+    },
+    {
+        "text": "so",
+        "start": 2254.196,
+        "duration": 0.6
+    },
+    {
+        "text": "here's what I understood from\nthe next section in the paper.",
+        "start": 2257.496,
+        "duration": 4.47
+    },
+    {
+        "text": "If the weights w",
+        "start": 2262.596,
+        "duration": 1.62
+    },
+    {
+        "text": "so not the activations,\nbut just the weights here.",
+        "start": 2266.616,
+        "duration": 2.01
+    },
+    {
+        "text": "If these are norm constrained,\nthen I have a lipitz function.",
+        "start": 2268.626,
+        "duration": 4.65
+    },
+    {
+        "text": "the, reason is that having the\nnorm constrained is a stronger",
+        "start": 2280.611,
+        "duration": 3.63
+    },
+    {
+        "text": "condition than being lipitz.",
+        "start": 2284.241,
+        "duration": 1.56
+    },
+    {
+        "text": "So if I have a function that's one lipitz,\nthat doesn't necessarily mean, that",
+        "start": 2286.101,
+        "duration": 6.75
+    },
+    {
+        "text": "the, the slope equals one everywhere.",
+        "start": 2294.231,
+        "duration": 3.6
+    },
+    {
+        "text": "It just means it's less or\nequal to one everywhere.",
+        "start": 2297.831,
+        "duration": 2.1
+    },
+    {
+        "text": "So the relu activation, for example, that\nis definitely lipitz almost everywhere.",
+        "start": 2299.991,
+        "duration": 5.76
+    },
+    {
+        "text": "It's not at the single point\nwhere you cross zero, but",
+        "start": 2305.931,
+        "duration": 3.3
+    },
+    {
+        "text": "that point has measured zero.",
+        "start": 2309.651,
+        "duration": 1.44
+    },
+    {
+        "text": "So almost everywhere Relu is one\nlipitz, but on the left side of",
+        "start": 2311.091,
+        "duration": 6.24
+    },
+    {
+        "text": "zero, you, have no change going on.",
+        "start": 2317.331,
+        "duration": 2.76
+    },
+    {
+        "text": "So the derivative is actually zero, and\nso you're less than one Lipschitzs there.",
+        "start": 2320.091,
+        "duration": 5.01
+    },
+    {
+        "text": "you're zero Lipschitzs on the\nleft side of the real numbers.",
+        "start": 2325.661,
+        "duration": 3.37
+    },
+    {
+        "text": "if I constrain the norm so that, basically\nwhen I multiply by x, the norm of the",
+        "start": 2332.031,
+        "duration": 7.11
+    },
+    {
+        "text": "output, Y is constrained to be one.",
+        "start": 2339.141,
+        "duration": 3.18
+    },
+    {
+        "text": "Now I'm saying that I have to be Lipschitz\none exactly one, like everywhere.",
+        "start": 2342.711,
+        "duration": 4.65
+    },
+    {
+        "text": "I can never even be less than one.",
+        "start": 2347.421,
+        "duration": 1.74
+    },
+    {
+        "text": "Does that make sense?",
+        "start": 2350.061,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 2354.381,
+        "duration": 0.36
+    },
+    {
+        "text": "Question regarding the\ndefinition of Lipschitz.",
+        "start": 2355.191,
+        "duration": 1.99
+    },
+    {
+        "text": "One, does it mean it doesn't\nmean it, it has to be one.",
+        "start": 2357.201,
+        "duration": 5.01
+    },
+    {
+        "text": "It says the K is one, right?",
+        "start": 2362.661,
+        "duration": 1.59
+    },
+    {
+        "text": "Isn't it like the upper limit?",
+        "start": 2364.791,
+        "duration": 1.14
+    },
+    {
+        "text": "Yeah, exactly.",
+        "start": 2366.951,
+        "duration": 0.81
+    },
+    {
+        "text": "K is the upper limit.",
+        "start": 2367.761,
+        "duration": 1.17
+    },
+    {
+        "text": "Yeah.",
+        "start": 2369.291,
+        "duration": 0.27
+    },
+    {
+        "text": "So that's, it took me a while to\nparse this, but I think what's",
+        "start": 2370.821,
+        "duration": 4.62
+    },
+    {
+        "text": "going on is that's why Relu is.",
+        "start": 2375.441,
+        "duration": 3.66
+    },
+    {
+        "text": "It's one lipitz.",
+        "start": 2381.276,
+        "duration": 1.11
+    },
+    {
+        "text": "But if you just looked at the left side\nof the function between minus infinity",
+        "start": 2383.256,
+        "duration": 3.96
+    },
+    {
+        "text": "and zero, it's zero lipitz on that side.",
+        "start": 2387.216,
+        "duration": 3.09
+    },
+    {
+        "text": "On its own.",
+        "start": 2391.326,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah.",
+        "start": 2392.106,
+        "duration": 0.21
+    },
+    {
+        "text": "But the whole thing is\nstill one lipitz, right?",
+        "start": 2392.676,
+        "duration": 2.34
+    },
+    {
+        "text": "Exactly.",
+        "start": 2395.016,
+        "duration": 0.48
+    },
+    {
+        "text": "More than one.",
+        "start": 2395.496,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 2396.186,
+        "duration": 0.18
+    },
+    {
+        "text": "Okay.",
+        "start": 2396.396,
+        "duration": 0.36
+    },
+    {
+        "text": "But if I make the norm so that I\nmultiply X by W and the norm of Y is",
+        "start": 2397.806,
+        "duration": 6.12
+    },
+    {
+        "text": "always fixed to be one, now I've just\nmade it so that the slope has to be,",
+        "start": 2403.926,
+        "duration": 6.21
+    },
+    {
+        "text": "I've made it so that the slope\nbasically has to be exactly one",
+        "start": 2413.916,
+        "duration": 2.94
+    },
+    {
+        "text": "everywhere, not just less than one.",
+        "start": 2416.916,
+        "duration": 1.8
+    },
+    {
+        "text": "But by the way, I'm not quite\nsure how the definition is.",
+        "start": 2420.006,
+        "duration": 2.64
+    },
+    {
+        "text": "You mentioned for the\nrail low around zero.",
+        "start": 2422.646,
+        "duration": 3.33
+    },
+    {
+        "text": "It's not, but isn't it, if\nI take any delta, if I think",
+        "start": 2425.976,
+        "duration": 6.45
+    },
+    {
+        "text": "about function Y or x, right?",
+        "start": 2432.426,
+        "duration": 1.83
+    },
+    {
+        "text": "For, any delta Y divided\nby delta X. Right.",
+        "start": 2436.626,
+        "duration": 3.18
+    },
+    {
+        "text": "It's always bounded, right?",
+        "start": 2441.396,
+        "duration": 1.2
+    },
+    {
+        "text": "It's, it doesn't have a derivative.",
+        "start": 2442.596,
+        "duration": 1.68
+    },
+    {
+        "text": "It's not, it's, you cannot\nderive it at the 0.0.",
+        "start": 2445.861,
+        "duration": 3.275
+    },
+    {
+        "text": "but it's still lip shifts, isn't it?",
+        "start": 2450.186,
+        "duration": 1.17
+    },
+    {
+        "text": "Because it's always bounded,\nbut the slope is discontinuous.",
+        "start": 2452.466,
+        "duration": 4.11
+    },
+    {
+        "text": "Yeah, it is, but it is question\nhow exactly is defined, but",
+        "start": 2457.266,
+        "duration": 6.21
+    },
+    {
+        "text": "isn't it has to be bounded.",
+        "start": 2463.476,
+        "duration": 3.12
+    },
+    {
+        "text": "It doesn't need to be.",
+        "start": 2466.596,
+        "duration": 1.14
+    },
+    {
+        "text": "if, the definition where they were showing\nwhere we were trying to approximate",
+        "start": 2468.366,
+        "duration": 3.99
+    },
+    {
+        "text": "a partial derivative with the finite\nderivative, and it's ambiguous at a point,",
+        "start": 2472.656,
+        "duration": 6.63
+    },
+    {
+        "text": "then it's a singularity in that sense.",
+        "start": 2480.396,
+        "duration": 3.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 2483.966,
+        "duration": 0.18
+    },
+    {
+        "text": "That if the function is\nthe derivative itself,",
+        "start": 2484.236,
+        "duration": 2.58
+    },
+    {
+        "text": "but the criteria, that they were\ndefining there, if you're saying, so",
+        "start": 2489.756,
+        "duration": 5.13
+    },
+    {
+        "text": "if I approach it from the right hand\nside, I'm gonna have the lip one.",
+        "start": 2495.066,
+        "duration": 4.44
+    },
+    {
+        "text": "If I approach it from the left\nhand side, I'm Lipschitz zero.",
+        "start": 2499.506,
+        "duration": 2.82
+    },
+    {
+        "text": "So at that point itself,\nyou have a conundrum.",
+        "start": 2502.686,
+        "duration": 2.97
+    },
+    {
+        "text": "it's continuous in some, in, in some\nsense, but the derivative is not so what",
+        "start": 2509.046,
+        "duration": 6.81
+    },
+    {
+        "text": "impact that has on Lipschitz continuity\nis, I guess what the question is.",
+        "start": 2515.856,
+        "duration": 6.27
+    },
+    {
+        "text": "I think, you raised a good point, Haiko.",
+        "start": 2529.026,
+        "duration": 1.56
+    },
+    {
+        "text": "I was thinking that, it wasn't Lipschitzs\nat that one point, but actually going",
+        "start": 2530.616,
+        "duration": 4.62
+    },
+    {
+        "text": "back and looking at the definition.",
+        "start": 2535.236,
+        "duration": 1.5
+    },
+    {
+        "text": "The changes in, this and\nthis, if I move this around.",
+        "start": 2538.161,
+        "duration": 4.86
+    },
+    {
+        "text": "Yeah.",
+        "start": 2543.411,
+        "duration": 0.06
+    },
+    {
+        "text": "Seems like it's,",
+        "start": 2544.371,
+        "duration": 1.53
+    },
+    {
+        "text": "It might actually still\nsatisfy this upper bound.",
+        "start": 2548.031,
+        "duration": 2.28
+    },
+    {
+        "text": "So it's like Lipschitz continuous\neven though it's not like actually",
+        "start": 2550.311,
+        "duration": 3.39
+    },
+    {
+        "text": "differeintial at that point.",
+        "start": 2553.701,
+        "duration": 1.41
+    },
+    {
+        "text": "Yeah.",
+        "start": 2555.116,
+        "duration": 0.28
+    },
+    {
+        "text": "Differential.",
+        "start": 2555.621,
+        "duration": 0.63
+    },
+    {
+        "text": "But it's more, how do you say, stricter?",
+        "start": 2556.311,
+        "duration": 2.91
+    },
+    {
+        "text": "Yeah.",
+        "start": 2559.581,
+        "duration": 0.24
+    },
+    {
+        "text": "yeah, if the f is the rail low, right?",
+        "start": 2561.261,
+        "duration": 1.68
+    },
+    {
+        "text": "Then it is continuous Lipschitz continues.",
+        "start": 2563.001,
+        "duration": 3.42
+    },
+    {
+        "text": "Okay.",
+        "start": 2568.371,
+        "duration": 0.45
+    },
+    {
+        "text": "I think I learned something\nimportant just now.",
+        "start": 2568.821,
+        "duration": 2.22
+    },
+    {
+        "text": "Differentiability is a stronger\ncondition than Lipschitz continuity.",
+        "start": 2571.071,
+        "duration": 4.02
+    },
+    {
+        "text": "Okay.",
+        "start": 2580.761,
+        "duration": 0.42
+    },
+    {
+        "text": "So back to the idea of making\nthe weights and the activations.",
+        "start": 2583.701,
+        "duration": 4.5
+    },
+    {
+        "text": "one lipitz a stronger condition\nis that their norm preserving,",
+        "start": 2589.431,
+        "duration": 3.93
+    },
+    {
+        "text": "gradient norm preserving.",
+        "start": 2593.811,
+        "duration": 1.47
+    },
+    {
+        "text": "But wait a minute, if their\nnorm preserving, that means the",
+        "start": 2595.881,
+        "duration": 2.73
+    },
+    {
+        "text": "slope is just one all the time.",
+        "start": 2598.611,
+        "duration": 1.89
+    },
+    {
+        "text": "And doesn't that mean I just\nhave a linear function now?",
+        "start": 2601.101,
+        "duration": 3.78
+    },
+    {
+        "text": "so now they have a couple\ntheorems about this.",
+        "start": 2605.661,
+        "duration": 2.85
+    },
+    {
+        "text": "They say that if I have a whole\nfunction, a neural network from RN to",
+        "start": 2608.511,
+        "duration": 5.82
+    },
+    {
+        "text": "R, and the weights are always too norm\nconstrained to be less or equal to one.",
+        "start": 2614.331,
+        "duration": 6.18
+    },
+    {
+        "text": "then the norm of the gradient,\nis one almost everywhere.",
+        "start": 2623.301,
+        "duration": 4.86
+    },
+    {
+        "text": "Then the whole function F is linear.",
+        "start": 2629.031,
+        "duration": 2.61
+    },
+    {
+        "text": "It's a little bit to unpack, but I think\nthe general idea here is that, as I add",
+        "start": 2637.026,
+        "duration": 7.005
+    },
+    {
+        "text": "these constraints that like the norm and\nthe gradient norm, therefore, have to be",
+        "start": 2644.031,
+        "duration": 5.64
+    },
+    {
+        "text": "not just lipitz, but actually exactly.",
+        "start": 2649.761,
+        "duration": 2.61
+    },
+    {
+        "text": "actually I'm not sure they use or equal\nto here, but for the gradient, they",
+        "start": 2654.561,
+        "duration": 3.39
+    },
+    {
+        "text": "say the gradient has to be exactly one.",
+        "start": 2657.951,
+        "duration": 2.1
+    },
+    {
+        "text": "But I think the, this is not obvious they\nprove Ethereum about this, but I think the",
+        "start": 2662.151,
+        "duration": 4.53
+    },
+    {
+        "text": "high level intuitive view is that, these\nconstraints basically take your network",
+        "start": 2666.681,
+        "duration": 5.34
+    },
+    {
+        "text": "and cause the nonlinearity to disappear.",
+        "start": 2672.021,
+        "duration": 2.52
+    },
+    {
+        "text": "okay.",
+        "start": 2686.001,
+        "duration": 0.33
+    },
+    {
+        "text": "So next, this is quite\ndense, I'm realizing.",
+        "start": 2686.331,
+        "duration": 4.32
+    },
+    {
+        "text": "They prove another theorem.",
+        "start": 2692.451,
+        "duration": 1.5
+    },
+    {
+        "text": "I'll just read it to be, keep\neveryone on the same page.",
+        "start": 2695.541,
+        "duration": 3.09
+    },
+    {
+        "text": "So we have this network from our\nend to R and it's built with matrix",
+        "start": 2698.631,
+        "duration": 3.63
+    },
+    {
+        "text": "two norm constrained weights and\nthe gradient is always equal to one.",
+        "start": 2702.261,
+        "duration": 4.47
+    },
+    {
+        "text": "then without changing the actual\ncomputation of the neural network,",
+        "start": 2708.561,
+        "duration": 3.48
+    },
+    {
+        "text": "I can replace all of my Ws, with\nsome w till day whose singular",
+        "start": 2712.071,
+        "duration": 5.82
+    },
+    {
+        "text": "values are all equal to one.",
+        "start": 2717.921,
+        "duration": 1.8
+    },
+    {
+        "text": "And when I read this, I was wait\na minute, if the singular values",
+        "start": 2719.991,
+        "duration": 5.04
+    },
+    {
+        "text": "are all equal to one, that tells\nme it's stretching and squishing",
+        "start": 2725.031,
+        "duration": 4.95
+    },
+    {
+        "text": "space equally in all the different\ndirections that w is warping space.",
+        "start": 2729.981,
+        "duration": 6.45
+    },
+    {
+        "text": "And, I guess they actually,\nthey show something similar.",
+        "start": 2736.941,
+        "duration": 4.77
+    },
+    {
+        "text": "in the proof.",
+        "start": 2742.341,
+        "duration": 0.63
+    },
+    {
+        "text": "They basically say that depending on\nthe dimensions, M and K, you either",
+        "start": 2742.971,
+        "duration": 4.59
+    },
+    {
+        "text": "get, ortho normal rows or columns.",
+        "start": 2747.561,
+        "duration": 3.69
+    },
+    {
+        "text": "And when they're the same,\nthen w is, orthogonal.",
+        "start": 2751.761,
+        "duration": 4.62
+    },
+    {
+        "text": "and so I guess indeed that means that,",
+        "start": 2758.991,
+        "duration": 3.75
+    },
+    {
+        "text": "the rows are all warping the,\nspace in different directions.",
+        "start": 2764.811,
+        "duration": 3.69
+    },
+    {
+        "text": "Yeah.",
+        "start": 2771.681,
+        "duration": 0.15
+    },
+    {
+        "text": "I'm not sure I really get what's going\non here, but if you blur your eyes a",
+        "start": 2771.831,
+        "duration": 4.47
+    },
+    {
+        "text": "little bit, it seems like it makes sense.",
+        "start": 2776.301,
+        "duration": 1.62
+    },
+    {
+        "text": "Okay.",
+        "start": 2785.331,
+        "duration": 0.45
+    },
+    {
+        "text": "Now on to activations.",
+        "start": 2787.911,
+        "duration": 3.12
+    },
+    {
+        "text": "So I guess the whole point of all\nthese theorems is that, first of all,",
+        "start": 2791.121,
+        "duration": 3.27
+    },
+    {
+        "text": "instead of searching over WI can search\nover W with singular values that have",
+        "start": 2794.391,
+        "duration": 4.14
+    },
+    {
+        "text": "this pro, the class of matrices with\nsingular values all equal to one.",
+        "start": 2798.531,
+        "duration": 4.89
+    },
+    {
+        "text": "And,",
+        "start": 2804.261,
+        "duration": 0.45
+    },
+    {
+        "text": "this helps with searching over Ws.",
+        "start": 2806.721,
+        "duration": 2.01
+    },
+    {
+        "text": "And then for activation functions,",
+        "start": 2809.511,
+        "duration": 2.25
+    },
+    {
+        "text": "they have a couple of notes.",
+        "start": 2814.641,
+        "duration": 1.35
+    },
+    {
+        "text": "First of all, they note that most\nactivation functions like tan and Relu.",
+        "start": 2815.991,
+        "duration": 4.92
+    },
+    {
+        "text": "Are already one lipitz, or if\nthey're not, you can do some",
+        "start": 2821.556,
+        "duration": 3.99
+    },
+    {
+        "text": "scaling to make them one lipitz.",
+        "start": 2825.546,
+        "duration": 2.7
+    },
+    {
+        "text": "so Relu is lipitz, but it's not\nnorm preserving because when you're",
+        "start": 2830.316,
+        "duration": 4.35
+    },
+    {
+        "text": "on the left side of zero, the\ngradient goes to zero, and so it",
+        "start": 2834.666,
+        "duration": 3.99
+    },
+    {
+        "text": "doesn't preserve the gradient norm.",
+        "start": 2838.656,
+        "duration": 1.53
+    },
+    {
+        "text": "So the whole function is no longer\ngonna satisfy that gradient,",
+        "start": 2840.186,
+        "duration": 4.17
+    },
+    {
+        "text": "norm preservation property.",
+        "start": 2844.356,
+        "duration": 1.71
+    },
+    {
+        "text": "Maybe a question here might\nbe something I missed.",
+        "start": 2846.666,
+        "duration": 4.41
+    },
+    {
+        "text": "Why do they care about this non preserving\nas opposed to just one Lipschitz?",
+        "start": 2852.246,
+        "duration": 5.9
+    },
+    {
+        "text": "Yeah.",
+        "start": 2860.166,
+        "duration": 0.21
+    },
+    {
+        "text": "My, my guess about that is that\nnorm preserving is a stronger",
+        "start": 2860.376,
+        "duration": 5.07
+    },
+    {
+        "text": "condition than one litz.",
+        "start": 2865.446,
+        "duration": 1.2
+    },
+    {
+        "text": "So yeah, it is.",
+        "start": 2866.646,
+        "duration": 1.045
+    },
+    {
+        "text": "but why, do we care about it?",
+        "start": 2868.146,
+        "duration": 1.23
+    },
+    {
+        "text": "Because it means that if I'm trying to\nlearn a lips function, if I can restrict",
+        "start": 2874.221,
+        "duration": 4.32
+    },
+    {
+        "text": "my Ws to norm preserving Ws, I have\na smaller space of Ws to search over.",
+        "start": 2878.541,
+        "duration": 5.7
+    },
+    {
+        "text": "is that the motivation here?",
+        "start": 2886.251,
+        "duration": 1.11
+    },
+    {
+        "text": "You just wanna limit the, search space?",
+        "start": 2887.421,
+        "duration": 3.18
+    },
+    {
+        "text": "and it's also, actually I don't\nknow that's really the motivation.",
+        "start": 2891.951,
+        "duration": 3.42
+    },
+    {
+        "text": "I think it may just be hard to guarantee\nthat the whole function is one lipitz.",
+        "start": 2895.431,
+        "duration": 5.04
+    },
+    {
+        "text": "So you might consider several strategies.",
+        "start": 2900.891,
+        "duration": 2.61
+    },
+    {
+        "text": "And the strategy to ensure\nthat it's one lipitz here is",
+        "start": 2903.501,
+        "duration": 2.94
+    },
+    {
+        "text": "to focus on norm preserving Ws.",
+        "start": 2906.441,
+        "duration": 2.55
+    },
+    {
+        "text": "Yeah.",
+        "start": 2910.431,
+        "duration": 0.39
+    },
+    {
+        "text": "Okay.",
+        "start": 2910.826,
+        "duration": 0.2
+    },
+    {
+        "text": "Interesting.",
+        "start": 2911.091,
+        "duration": 0.57
+    },
+    {
+        "text": "Maybe the concern is you\ncould have, Some parts, right?",
+        "start": 2912.231,
+        "duration": 4.53
+    },
+    {
+        "text": "Of if you think about deep net right?",
+        "start": 2916.761,
+        "duration": 1.8
+    },
+    {
+        "text": "It, collapses to almost zero w and\nthen it, you would, so at another",
+        "start": 2918.741,
+        "duration": 6.36
+    },
+    {
+        "text": "layer need to blow it up, right?",
+        "start": 2925.101,
+        "duration": 1.41
+    },
+    {
+        "text": "They probably wanna avoid that.",
+        "start": 2927.201,
+        "duration": 1.2
+    },
+    {
+        "text": "This way it's nicely if,\nyou go deeper, right?",
+        "start": 2929.151,
+        "duration": 2.49
+    },
+    {
+        "text": "It nicely stays",
+        "start": 2931.641,
+        "duration": 0.9
+    },
+    {
+        "text": "the same norm.",
+        "start": 2935.091,
+        "duration": 0.69
+    },
+    {
+        "text": "Maybe that's the reason they\ndo talk about that later, that",
+        "start": 2938.271,
+        "duration": 2.94
+    },
+    {
+        "text": "because the norm is preserved, then\nthe gradient norm is preserved.",
+        "start": 2941.601,
+        "duration": 5.82
+    },
+    {
+        "text": "I think that follows.",
+        "start": 2947.631,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah.",
+        "start": 2948.651,
+        "duration": 0.06
+    },
+    {
+        "text": "But if the gradient norm is preserved,\nthen you can stack as many layers",
+        "start": 2949.161,
+        "duration": 5.01
+    },
+    {
+        "text": "as you like and you won't have\nvanishing or exploding gradients.",
+        "start": 2954.171,
+        "duration": 3.12
+    },
+    {
+        "text": "so this seemed like a\nbit of a conundrum to me.",
+        "start": 2966.096,
+        "duration": 2.46
+    },
+    {
+        "text": "It's like you're looking\nfor a non-linear activation",
+        "start": 2968.556,
+        "duration": 2.82
+    },
+    {
+        "text": "function that's norm preserving.",
+        "start": 2971.376,
+        "duration": 2.94
+    },
+    {
+        "text": "So the slope is one everywhere,\nbut then you're just it's linear.",
+        "start": 2974.346,
+        "duration": 4.56
+    },
+    {
+        "text": "Isn't that just a linear function?",
+        "start": 2979.146,
+        "duration": 1.5
+    },
+    {
+        "text": "So what's going on here?",
+        "start": 2982.116,
+        "duration": 1.89
+    },
+    {
+        "text": "Okay.",
+        "start": 2987.456,
+        "duration": 0.3
+    },
+    {
+        "text": "here's how I interpreted this.",
+        "start": 2988.776,
+        "duration": 1.41
+    },
+    {
+        "text": "First of all,",
+        "start": 2990.186,
+        "duration": 0.72
+    },
+    {
+        "text": "actually no, let's go to the next slide.",
+        "start": 2994.326,
+        "duration": 2.07
+    },
+    {
+        "text": "so this is a nonlinear activation function\nthat they introduce in this paper.",
+        "start": 2997.686,
+        "duration": 3.81
+    },
+    {
+        "text": "And, each cell here is a neuron,\nand what they're doing is they",
+        "start": 3001.586,
+        "duration": 5.61
+    },
+    {
+        "text": "group these neurons into clusters\nof, say, five in this example.",
+        "start": 3007.496,
+        "duration": 4.41
+    },
+    {
+        "text": "So here's five neurons,\nhere's five neurons.",
+        "start": 3011.906,
+        "duration": 2.58
+    },
+    {
+        "text": "And in each of these windows,\nthey just sort the neurons",
+        "start": 3014.786,
+        "duration": 3.87
+    },
+    {
+        "text": "based on their pre activations.",
+        "start": 3018.686,
+        "duration": 2.28
+    },
+    {
+        "text": "So this is still not intuitive\nbecause when I saw this, I",
+        "start": 3022.511,
+        "duration": 5.43
+    },
+    {
+        "text": "just thought you're sorting.",
+        "start": 3027.941,
+        "duration": 1.98
+    },
+    {
+        "text": "And sorting can be like for any\ninputs that look like this and",
+        "start": 3030.071,
+        "duration": 4.5
+    },
+    {
+        "text": "outputs that look like this, I can\ndo that with a permutation matrix.",
+        "start": 3034.571,
+        "duration": 3.33
+    },
+    {
+        "text": "So am I not just multiplying by\na permutation matrix, making the",
+        "start": 3038.501,
+        "duration": 3.96
+    },
+    {
+        "text": "entire thing linear once again.",
+        "start": 3042.461,
+        "duration": 1.95
+    },
+    {
+        "text": "and that's where the kind\nof almost everywhere thing",
+        "start": 3049.241,
+        "duration": 4.2
+    },
+    {
+        "text": "seems like it might matter.",
+        "start": 3053.441,
+        "duration": 1.47
+    },
+    {
+        "text": "they do show that they're able\nto learn functions like absolute",
+        "start": 3056.081,
+        "duration": 3.36
+    },
+    {
+        "text": "value, or, chopping it up into Ws.",
+        "start": 3059.441,
+        "duration": 4.23
+    },
+    {
+        "text": "And it seems like the network\nbasically has this one linear",
+        "start": 3064.421,
+        "duration": 3.99
+    },
+    {
+        "text": "function over here and it doesn't\nhave to worry about this one point.",
+        "start": 3068.411,
+        "duration": 3.33
+    },
+    {
+        "text": "It can have another\nlinear function over here.",
+        "start": 3071.801,
+        "duration": 3.66
+    },
+    {
+        "text": "maybe now it's also a good time to.",
+        "start": 3077.141,
+        "duration": 2.43
+    },
+    {
+        "text": "Look at the actual paper.",
+        "start": 3081.251,
+        "duration": 1.17
+    },
+    {
+        "text": "Let me make my participant\nbe a little smaller.",
+        "start": 3089.051,
+        "duration": 2.55
+    },
+    {
+        "text": "Okay.",
+        "start": 3100.006,
+        "duration": 0.29
+    },
+    {
+        "text": "Running short on time.",
+        "start": 3100.901,
+        "duration": 1.14
+    },
+    {
+        "text": "So they try and provide some\nintuition for like why this is",
+        "start": 3107.951,
+        "duration": 3.42
+    },
+    {
+        "text": "a non-linearity in the appendix.",
+        "start": 3111.371,
+        "duration": 1.755
+    },
+    {
+        "text": "Pretty interesting.",
+        "start": 3114.671,
+        "duration": 1.38
+    },
+    {
+        "text": "Still, not really sure I get it\nyet, but, they show, so min max min,",
+        "start": 3116.051,
+        "duration": 6.81
+    },
+    {
+        "text": "this is when the window size is two.",
+        "start": 3123.431,
+        "duration": 2.64
+    },
+    {
+        "text": "So I just look at, two\nneurons and I sort them.",
+        "start": 3126.161,
+        "duration": 3.93
+    },
+    {
+        "text": "That's all I'm doing.",
+        "start": 3130.151,
+        "duration": 0.87
+    },
+    {
+        "text": "They show that this is in fact the same\nthing as applying this relu versus minus",
+        "start": 3131.681,
+        "duration": 8.67
+    },
+    {
+        "text": "relu, minus x, this composition, this like\nmix of non-linear activation functions.",
+        "start": 3140.351,
+        "duration": 6.81
+    },
+    {
+        "text": "So they try and demonstrate that\nflipping my x's around basically",
+        "start": 3148.121,
+        "duration": 5.79
+    },
+    {
+        "text": "can recover relu functions and\ndifferent variations on relu.",
+        "start": 3154.301,
+        "duration": 4.8
+    },
+    {
+        "text": "They also show that it can do the same\nthing as the absolute value function.",
+        "start": 3160.631,
+        "duration": 4.26
+    },
+    {
+        "text": "I'll be honest, I just, I've\nlooked at this for a little while.",
+        "start": 3167.081,
+        "duration": 2.79
+    },
+    {
+        "text": "I didn't quite get it.",
+        "start": 3169.871,
+        "duration": 1.86
+    },
+    {
+        "text": "Seems like it's correct, though.",
+        "start": 3174.371,
+        "duration": 2.37
+    },
+    {
+        "text": "They can learn the absolute value.",
+        "start": 3176.741,
+        "duration": 1.95
+    },
+    {
+        "text": "it can be the same thing as absolute\nvalue, non-linear activation.",
+        "start": 3180.401,
+        "duration": 4.41
+    },
+    {
+        "text": "The other way to get some intuition about\nwhat's going on is, they train the network",
+        "start": 3186.371,
+        "duration": 6.51
+    },
+    {
+        "text": "to learn one dimensional functions.",
+        "start": 3192.881,
+        "duration": 2.43
+    },
+    {
+        "text": "And so this just means instead\nof a vector, I just have a single",
+        "start": 3196.451,
+        "duration": 3.42
+    },
+    {
+        "text": "number as input to my network,",
+        "start": 3199.871,
+        "duration": 1.74
+    },
+    {
+        "text": "as a way of diagnosing what's happening.",
+        "start": 3203.981,
+        "duration": 2.13
+    },
+    {
+        "text": "So here are the inputs, and if\nI have a network with just two",
+        "start": 3206.201,
+        "duration": 3.45
+    },
+    {
+        "text": "hidden units, then these are what\nmy two hidden units are doing.",
+        "start": 3209.711,
+        "duration": 4.53
+    },
+    {
+        "text": "And if I sort them, you\ncan see that on the right.",
+        "start": 3214.931,
+        "duration": 4.08
+    },
+    {
+        "text": "Basically the green and the blue, the\ntwo units flip on the left hand side.",
+        "start": 3219.011,
+        "duration": 6.57
+    },
+    {
+        "text": "So I get this, and with\nthis network with two.",
+        "start": 3225.731,
+        "duration": 6.81
+    },
+    {
+        "text": "With one hidden layer of only two\nunits and a one dimensional input,",
+        "start": 3233.351,
+        "duration": 4.65
+    },
+    {
+        "text": "they're able to read out in the\noutput, something that looks exactly",
+        "start": 3238.451,
+        "duration": 4.65
+    },
+    {
+        "text": "like the absolute value function.",
+        "start": 3243.101,
+        "duration": 1.65
+    },
+    {
+        "text": "I just make a quick observation here.",
+        "start": 3247.901,
+        "duration": 1.86
+    },
+    {
+        "text": "it's, they jing the rail because the\nfact that it's zero in one half space",
+        "start": 3250.091,
+        "duration": 5.91
+    },
+    {
+        "text": "of the inputs, have they just simply\nsplit the problem into two half spaces.",
+        "start": 3256.001,
+        "duration": 4.98
+    },
+    {
+        "text": "One, dealing with the negative inputs\nand one dealing with positive inputs.",
+        "start": 3260.981,
+        "duration": 3.33
+    },
+    {
+        "text": "that, minus rail of negative X.",
+        "start": 3267.041,
+        "duration": 3.21
+    },
+    {
+        "text": "So if X is negative, that makes it\npositive, that means it's positive,",
+        "start": 3270.731,
+        "duration": 3.51
+    },
+    {
+        "text": "but then you give it a negative\nvalue, so you're just displacing it.",
+        "start": 3274.241,
+        "duration": 3.54
+    },
+    {
+        "text": "And, so have they basically\nmade a bilateral relu?",
+        "start": 3279.051,
+        "duration": 4.76
+    },
+    {
+        "text": "is that what's happening here?",
+        "start": 3284.831,
+        "duration": 1.29
+    },
+    {
+        "text": "Honestly, I, wish I knew Kevin.",
+        "start": 3292.061,
+        "duration": 4.41
+    },
+    {
+        "text": "you're talking about\nthis equation right here?",
+        "start": 3298.571,
+        "duration": 1.89
+    },
+    {
+        "text": "Yeah.",
+        "start": 3300.491,
+        "duration": 0.45
+    },
+    {
+        "text": "So that, that will admit to both,",
+        "start": 3302.951,
+        "duration": 2.16
+    },
+    {
+        "text": "positive and negative values of X, right?",
+        "start": 3307.331,
+        "duration": 2.22
+    },
+    {
+        "text": "Yeah.",
+        "start": 3310.751,
+        "duration": 0.24
+    },
+    {
+        "text": "let's just walk through it.",
+        "start": 3311.771,
+        "duration": 0.96
+    },
+    {
+        "text": "If X is positive, then X is gonna be\ngreater than zero, and that means X is",
+        "start": 3312.941,
+        "duration": 6.18
+    },
+    {
+        "text": "gonna be here and zero is gonna be here.",
+        "start": 3319.121,
+        "duration": 2.19
+    },
+    {
+        "text": "So what's happening, X is positive.",
+        "start": 3323.081,
+        "duration": 2.73
+    },
+    {
+        "text": "This is just X minus X is negative now.",
+        "start": 3325.811,
+        "duration": 4.29
+    },
+    {
+        "text": "So that means this part goes\nto zero, so that makes sense.",
+        "start": 3330.551,
+        "duration": 4.2
+    },
+    {
+        "text": "Now, if X is negative, then relu\nof a negative number is zero.",
+        "start": 3334.781,
+        "duration": 5.13
+    },
+    {
+        "text": "So now I've switched zero\nto be on top and relu of.",
+        "start": 3339.941,
+        "duration": 4.53
+    },
+    {
+        "text": "Minus.",
+        "start": 3347.651,
+        "duration": 0.69
+    },
+    {
+        "text": "Minus.",
+        "start": 3348.401,
+        "duration": 0.72
+    },
+    {
+        "text": "Now I basically just get X here and\nthen I apply the minus sign to it.",
+        "start": 3349.331,
+        "duration": 4.62
+    },
+    {
+        "text": "So I get,",
+        "start": 3353.951,
+        "duration": 0.48
+    },
+    {
+        "text": "Hey, wait a minute.",
+        "start": 3357.521,
+        "duration": 0.54
+    },
+    {
+        "text": "Negative value.",
+        "start": 3358.061,
+        "duration": 0.78
+    },
+    {
+        "text": "Yeah, you're right.",
+        "start": 3359.591,
+        "duration": 1.02
+    },
+    {
+        "text": "but X was, no, X was\nnegative in the first place.",
+        "start": 3361.691,
+        "duration": 4.56
+    },
+    {
+        "text": "So then it becomes\npositive, oh, you're right.",
+        "start": 3367.691,
+        "duration": 2.475
+    },
+    {
+        "text": "You apply rally to it and\nthen, you basically, but you",
+        "start": 3370.166,
+        "duration": 5.295
+    },
+    {
+        "text": "could say it's ex again, right?",
+        "start": 3375.461,
+        "duration": 1.47
+    },
+    {
+        "text": "Yeah, it is.",
+        "start": 3377.681,
+        "duration": 1.53
+    },
+    {
+        "text": "Exactly.",
+        "start": 3379.241,
+        "duration": 0.66
+    },
+    {
+        "text": "So it's, like they, I don't know if\nit's the function of the sorting or",
+        "start": 3382.151,
+        "duration": 5.58
+    },
+    {
+        "text": "what, but at least in this kind of toy\nexample, they've split the problem into",
+        "start": 3387.731,
+        "duration": 5.25
+    },
+    {
+        "text": "two pieces and it looks like they're\ndealing with them independently.",
+        "start": 3393.101,
+        "duration": 2.64
+    },
+    {
+        "text": "I don't think they\nimplemented it this way.",
+        "start": 3402.266,
+        "duration": 2.34
+    },
+    {
+        "text": "I think what they're doing here is they're\ntrying to show that this swapping of",
+        "start": 3404.636,
+        "duration": 4.14
+    },
+    {
+        "text": "things around and sorting a couple of\nelements is like equivalent to some.",
+        "start": 3408.776,
+        "duration": 6.3
+    },
+    {
+        "text": "It's like similar to other\nnon-linear activations, okay?",
+        "start": 3415.106,
+        "duration": 4.38
+    },
+    {
+        "text": "But it's, if you start out with X,\nnow you're going to, you go to a",
+        "start": 3427.136,
+        "duration": 5.07
+    },
+    {
+        "text": "space where you, now you have two x,\nyou've doubled the dimensionality.",
+        "start": 3432.206,
+        "duration": 3.9
+    },
+    {
+        "text": "So in that sense, in what?",
+        "start": 3437.126,
+        "duration": 1.95
+    },
+    {
+        "text": "In, the, in, in the upper one, you're\ndealing with one half space of X",
+        "start": 3439.646,
+        "duration": 5.16
+    },
+    {
+        "text": "and the other one you're dealing\nwith the other half space of X.",
+        "start": 3444.806,
+        "duration": 2.52
+    },
+    {
+        "text": "So you, you've doubled the dimensionality,",
+        "start": 3449.156,
+        "duration": 1.95
+    },
+    {
+        "text": "excuse me.",
+        "start": 3454.346,
+        "duration": 0.48
+    },
+    {
+        "text": "dimensionality is the wrong way of saying\nit, but you've, you've double, you've",
+        "start": 3456.746,
+        "duration": 4.38
+    },
+    {
+        "text": "gone from a scaler to a two vector.",
+        "start": 3461.126,
+        "duration": 2.61
+    },
+    {
+        "text": "In this particular case,",
+        "start": 3463.736,
+        "duration": 1.05
+    },
+    {
+        "text": "I'm not sure I actually follow that.",
+        "start": 3472.011,
+        "duration": 1.955
+    },
+    {
+        "text": "You've gone, you have gone exactly\nfrom a two vector to a two vector.",
+        "start": 3474.446,
+        "duration": 5.28
+    },
+    {
+        "text": "you start with X, right?",
+        "start": 3480.716,
+        "duration": 1.89
+    },
+    {
+        "text": "If you just had X and did ue,\nyou'd get, a single value, right?",
+        "start": 3482.996,
+        "duration": 5.7
+    },
+    {
+        "text": "You wouldn't get, you\nwouldn't get a, column vector.",
+        "start": 3489.206,
+        "duration": 2.31
+    },
+    {
+        "text": "But in this case,",
+        "start": 3492.746,
+        "duration": 1.05
+    },
+    {
+        "text": "you're, getting two\noutputs for every one in",
+        "start": 3497.066,
+        "duration": 1.95
+    },
+    {
+        "text": "I think I see what you're saying.",
+        "start": 3503.796,
+        "duration": 1.55
+    },
+    {
+        "text": "you don't, they're trying to show\nthat if I apply this function",
+        "start": 3505.916,
+        "duration": 4.14
+    },
+    {
+        "text": "to this vector, x and zero.",
+        "start": 3510.056,
+        "duration": 2.82
+    },
+    {
+        "text": "It is the same thing as applying to\nnon-linear activations to just X. Okay.",
+        "start": 3514.136,
+        "duration": 5.73
+    },
+    {
+        "text": "I, misunderstood.",
+        "start": 3520.227,
+        "duration": 1.109
+    },
+    {
+        "text": "I'm sorry.",
+        "start": 3521.456,
+        "duration": 0.42
+    },
+    {
+        "text": "Okay.",
+        "start": 3521.936,
+        "duration": 0.3
+    },
+    {
+        "text": "No, that's fine.",
+        "start": 3523.436,
+        "duration": 0.63
+    },
+    {
+        "text": "it's good to pick this apart 'cause,\nit's, honestly, it's pretty confusing.",
+        "start": 3525.206,
+        "duration": 4.98
+    },
+    {
+        "text": "I'm still not totally reconciled with\nthe idea that you're basically just",
+        "start": 3530.186,
+        "duration": 3.72
+    },
+    {
+        "text": "applying a permutation matrix, as an\nactivation function and Yeah, it's, I",
+        "start": 3533.906,
+        "duration": 7.11
+    },
+    {
+        "text": "still don't really get it, honestly.",
+        "start": 3541.016,
+        "duration": 1.47
+    },
+    {
+        "text": "But, the permutation\nmatrix seems interesting.",
+        "start": 3542.486,
+        "duration": 3.421
+    },
+    {
+        "text": "Assume that the sort\norder is constant right?",
+        "start": 3546.021,
+        "duration": 3.395
+    },
+    {
+        "text": "But you don't necessarily, for each\nindividual thing, if you're doing a",
+        "start": 3549.926,
+        "duration": 4.11
+    },
+    {
+        "text": "real sort, that, that permutation maker\nis gonna vary depending upon what, the",
+        "start": 3554.036,
+        "duration": 5.1
+    },
+    {
+        "text": "input is in order to get things sorted.",
+        "start": 3559.136,
+        "duration": 2.01
+    },
+    {
+        "text": "So it's not a constant function.",
+        "start": 3561.836,
+        "duration": 1.8
+    },
+    {
+        "text": "Oh, may.",
+        "start": 3564.821,
+        "duration": 0.75
+    },
+    {
+        "text": "Is that the idea that, basically it's\na different, it's non-linear because",
+        "start": 3565.571,
+        "duration": 5.91
+    },
+    {
+        "text": "it's basically just a different\npermutation matrix at every time step.",
+        "start": 3571.481,
+        "duration": 3.54
+    },
+    {
+        "text": "Yeah.",
+        "start": 3575.261,
+        "duration": 0.24
+    },
+    {
+        "text": "It's, it is almost like K winners.",
+        "start": 3575.501,
+        "duration": 1.53
+    },
+    {
+        "text": "you're sorting the thing,",
+        "start": 3577.301,
+        "duration": 1.08
+    },
+    {
+        "text": "you're, breaking it up into parts\nof groups and then sorting each",
+        "start": 3580.481,
+        "duration": 2.4
+    },
+    {
+        "text": "one of those things and they have a\ncanonical order based upon, the rank.",
+        "start": 3582.881,
+        "duration": 4.5
+    },
+    {
+        "text": "I'm not sure what happens after\nthat, but that's at least, so it's,",
+        "start": 3588.191,
+        "duration": 4.35
+    },
+    {
+        "text": "if you had a static permutation\nmatrix, you'd be exactly correct.",
+        "start": 3592.841,
+        "duration": 3.36
+    },
+    {
+        "text": "But because it's a sort\nfunction that's not the case.",
+        "start": 3596.201,
+        "duration": 2.7
+    },
+    {
+        "text": "You're using rank\nstatistics on those pieces.",
+        "start": 3598.901,
+        "duration": 2.34
+    },
+    {
+        "text": "Thanks, Kevin.",
+        "start": 3603.646,
+        "duration": 0.5
+    },
+    {
+        "text": "You could document it as such, but it\nchange each time you change your input.",
+        "start": 3604.146,
+        "duration": 3.515
+    },
+    {
+        "text": "Yeah, I just, I don't think\nI quite got that until now.",
+        "start": 3611.021,
+        "duration": 3.3
+    },
+    {
+        "text": "I'll have to go back and make\nsure it really makes sense when",
+        "start": 3615.491,
+        "duration": 2.22
+    },
+    {
+        "text": "I really get into it, but I\nthink initially that seems right.",
+        "start": 3617.711,
+        "duration": 3.51
+    },
+    {
+        "text": "'cause that seem right to you, Ko.",
+        "start": 3621.491,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah, I don't have a good intuition\nyet about how this sorting works.",
+        "start": 3624.521,
+        "duration": 5.88
+    },
+    {
+        "text": "Okay.",
+        "start": 3632.861,
+        "duration": 0.45
+    },
+    {
+        "text": "we're actually already over time,\nso let me just try and summarize",
+        "start": 3634.661,
+        "duration": 4.32
+    },
+    {
+        "text": "now some results and ideas.",
+        "start": 3638.981,
+        "duration": 3.21
+    },
+    {
+        "text": "pretty much every machine learning\npaper that gets accepted somewhere, they",
+        "start": 3646.481,
+        "duration": 3.03
+    },
+    {
+        "text": "had to do experiments that show that\ntheir method works well in some cases.",
+        "start": 3649.511,
+        "duration": 3.72
+    },
+    {
+        "text": "So they do various experiments on",
+        "start": 3653.771,
+        "duration": 2.04
+    },
+    {
+        "text": "wasserstein distance and,",
+        "start": 3658.061,
+        "duration": 1.95
+    },
+    {
+        "text": "looking at the wasserstein distance\nbetween samples generated by",
+        "start": 3662.111,
+        "duration": 2.85
+    },
+    {
+        "text": "gans and like a real dataset and\ntheir method does really well.",
+        "start": 3664.961,
+        "duration": 4.32
+    },
+    {
+        "text": "they're able to learn those\nnon-linear functions like absolute",
+        "start": 3670.421,
+        "duration": 3.0
+    },
+    {
+        "text": "value or w so they can learn zigzags\nand things like that with this.",
+        "start": 3673.421,
+        "duration": 4.53
+    },
+    {
+        "text": "So it's pretty interesting.",
+        "start": 3677.951,
+        "duration": 1.86
+    },
+    {
+        "text": "Going back to my original kind of\ncuriosity about being able to solve",
+        "start": 3681.671,
+        "duration": 4.32
+    },
+    {
+        "text": "discreet optimization problems.",
+        "start": 3685.991,
+        "duration": 1.89
+    },
+    {
+        "text": "this is an interesting way that deep\nlearning might actually be able to",
+        "start": 3689.261,
+        "duration": 3.27
+    },
+    {
+        "text": "get a handhold, or a foothold on that\nbecause now you're sorting, you're,",
+        "start": 3692.561,
+        "duration": 5.52
+    },
+    {
+        "text": "the non-linear activation is sorting.",
+        "start": 3698.231,
+        "duration": 2.4
+    },
+    {
+        "text": "So it seems like you could probably\nsort a list using this technique.",
+        "start": 3700.661,
+        "duration": 3.09
+    },
+    {
+        "text": "Like you said, Kevin, this relates\nto relu and K winners 'cause K",
+        "start": 3704.471,
+        "duration": 4.56
+    },
+    {
+        "text": "winners just, you're sorting and\nthen, changing the threshold so that",
+        "start": 3709.031,
+        "duration": 6.0
+    },
+    {
+        "text": "exactly K units are on at any time.",
+        "start": 3715.031,
+        "duration": 2.04
+    },
+    {
+        "text": "So the relationship of group\nsort to K winners is interesting.",
+        "start": 3717.071,
+        "duration": 5.91
+    },
+    {
+        "text": "throwing a lot of stuff out there, but,",
+        "start": 3726.641,
+        "duration": 1.65
+    },
+    {
+        "text": "I had never heard of this\ndynamical isometry property.",
+        "start": 3730.301,
+        "duration": 3.15
+    },
+    {
+        "text": "had you guys, no.",
+        "start": 3734.291,
+        "duration": 1.86
+    },
+    {
+        "text": "I think what dynamical isometry means\nto look more closely at the definition",
+        "start": 3738.401,
+        "duration": 6.0
+    },
+    {
+        "text": "to be sure, but it's, something about\nhaving the weights of the network all",
+        "start": 3744.401,
+        "duration": 5.34
+    },
+    {
+        "text": "norm preserved, norm preserving, and\nthat means gradients are norm preserving.",
+        "start": 3749.801,
+        "duration": 5.01
+    },
+    {
+        "text": "And that means as you take,\noptimization steps, the network",
+        "start": 3754.811,
+        "duration": 5.28
+    },
+    {
+        "text": "continues to be norm preserving.",
+        "start": 3760.091,
+        "duration": 1.65
+    },
+    {
+        "text": "So that's what I, think it means.",
+        "start": 3761.741,
+        "duration": 1.74
+    },
+    {
+        "text": "And apparently one paper showed\nthat if you initialize the network",
+        "start": 3764.861,
+        "duration": 3.57
+    },
+    {
+        "text": "so that the weights are norm\npreserving, this can radically",
+        "start": 3768.611,
+        "duration": 3.66
+    },
+    {
+        "text": "speed up convergence and training.",
+        "start": 3772.271,
+        "duration": 1.95
+    },
+    {
+        "text": "And I had not heard that until I\nlooked at the discussion in this paper.",
+        "start": 3774.281,
+        "duration": 4.56
+    },
+    {
+        "text": "And so that seemed like a pretty\ncool, interesting thread to pull on.",
+        "start": 3778.901,
+        "duration": 3.54
+    },
+    {
+        "text": "Like you said, heco.",
+        "start": 3783.836,
+        "duration": 1.11
+    },
+    {
+        "text": "if the gradient norm is one, then you\ncan stack as many layers as you like.",
+        "start": 3785.426,
+        "duration": 3.66
+    },
+    {
+        "text": "So no vanishing gradients.",
+        "start": 3789.176,
+        "duration": 1.77
+    },
+    {
+        "text": "Finally, they also prove, something\npretty interesting about being",
+        "start": 3793.256,
+        "duration": 4.62
+    },
+    {
+        "text": "able to, approximate arbitrary one\nLipschitzs functions using this method.",
+        "start": 3797.876,
+        "duration": 6.33
+    },
+    {
+        "text": "So it, the math is a little involved.",
+        "start": 3804.206,
+        "duration": 2.82
+    },
+    {
+        "text": "It gets into function spaces and like the\nwire strau stone theorem, which, I have",
+        "start": 3807.026,
+        "duration": 6.27
+    },
+    {
+        "text": "never looked at until I saw this paper.",
+        "start": 3813.296,
+        "duration": 2.28
+    },
+    {
+        "text": "But anyway, these are just the\ninteresting kind of threads to pull",
+        "start": 3815.636,
+        "duration": 4.38
+    },
+    {
+        "text": "on that this paper alerted me to.",
+        "start": 3820.016,
+        "duration": 1.53
+    },
+    {
+        "text": "Interesting.",
+        "start": 3822.026,
+        "duration": 0.6
+    },
+    {
+        "text": "Cool.",
+        "start": 3822.626,
+        "duration": 0.42
+    },
+    {
+        "text": "did they show it on more like\nsome complicated function, like",
+        "start": 3823.496,
+        "duration": 3.06
+    },
+    {
+        "text": "non linear, your function or?",
+        "start": 3826.586,
+        "duration": 1.29
+    },
+    {
+        "text": "they can learn it,",
+        "start": 3829.256,
+        "duration": 0.81
+    },
+    {
+        "text": "pull up the paper and look through it.",
+        "start": 3833.726,
+        "duration": 1.53
+    },
+    {
+        "text": "no, but this is actually, this is\njust estimating the wire stress",
+        "start": 3843.986,
+        "duration": 3.21
+    },
+    {
+        "text": "distance between, like the real\ndata and GaN generated data.",
+        "start": 3847.196,
+        "duration": 4.95
+    },
+    {
+        "text": "Yeah, did, okay.",
+        "start": 3852.536,
+        "duration": 0.93
+    },
+    {
+        "text": "So they did mne, right?",
+        "start": 3853.466,
+        "duration": 1.096
+    },
+    {
+        "text": "And then Yeah, you, no, you're right.",
+        "start": 3855.206,
+        "duration": 3.0
+    },
+    {
+        "text": "They said they did M nest\nand ImageNet and cfar.",
+        "start": 3858.206,
+        "duration": 4.02
+    },
+    {
+        "text": "I understand.",
+        "start": 3862.226,
+        "duration": 0.3
+    },
+    {
+        "text": "Cfi.",
+        "start": 3862.526,
+        "duration": 0.48
+    },
+    {
+        "text": "I thought so, but I think they\nburied it somewhere in the appendix.",
+        "start": 3863.006,
+        "duration": 3.6
+    },
+    {
+        "text": "It faces.",
+        "start": 3872.366,
+        "duration": 0.78
+    },
+    {
+        "text": "Okay.",
+        "start": 3873.506,
+        "duration": 0.24
+    },
+    {
+        "text": "So I have a quick question.",
+        "start": 3878.126,
+        "duration": 2.37
+    },
+    {
+        "text": "so we have this conundrum where it\nsays the slope is one everywhere.",
+        "start": 3880.976,
+        "duration": 5.55
+    },
+    {
+        "text": "if you're in two dimensions, that\nwould be somewhat constraining.",
+        "start": 3887.846,
+        "duration": 3.9
+    },
+    {
+        "text": "But what if you're, how do you define the\nslope when you're in multiple dimensions?",
+        "start": 3891.866,
+        "duration": 5.01
+    },
+    {
+        "text": "are you, is it.",
+        "start": 3898.496,
+        "duration": 1.29
+    },
+    {
+        "text": "you look at,",
+        "start": 3901.421,
+        "duration": 0.69
+    },
+    {
+        "text": "I'm just wondering if what they're\ndoing is by making, requiring things",
+        "start": 3904.331,
+        "duration": 4.44
+    },
+    {
+        "text": "to be, ortho normal, whether they're\nsitting on some kind of hyper sphere",
+        "start": 3908.771,
+        "duration": 6.24
+    },
+    {
+        "text": "where the local slope is one everywhere.",
+        "start": 3915.011,
+        "duration": 3.63
+    },
+    {
+        "text": "But does it mean that in every\ndimension it projects to being one?",
+        "start": 3918.641,
+        "duration": 4.41
+    },
+    {
+        "text": "I'm just wondering if that's the degree of\nfreedom that they're allowing themselves.",
+        "start": 3924.701,
+        "duration": 3.15
+    },
+    {
+        "text": "Do you have a good intuition for that ko?",
+        "start": 3932.951,
+        "duration": 1.71
+    },
+    {
+        "text": "No.",
+        "start": 3935.291,
+        "duration": 0.39
+    },
+    {
+        "text": "Yeah, that, that's a good point, Karen.",
+        "start": 3935.681,
+        "duration": 1.5
+    },
+    {
+        "text": "I don't know at this\npoint to think about it.",
+        "start": 3939.431,
+        "duration": 2.67
+    },
+    {
+        "text": "if I run with that for a second,\nand if you basically look at,",
+        "start": 3943.541,
+        "duration": 4.23
+    },
+    {
+        "text": "their con, their, condition for\ninitializing the weight to be.",
+        "start": 3948.641,
+        "duration": 5.64
+    },
+    {
+        "text": "Orthogonal, if you wish, you've\ncollapsed the dimensionality down.",
+        "start": 3955.151,
+        "duration": 3.78
+    },
+    {
+        "text": "So now you're sitting on a, a manifold\nthat's ortho normal as opposed to all",
+        "start": 3958.931,
+        "duration": 6.72
+    },
+    {
+        "text": "the various other combinations in.",
+        "start": 3965.651,
+        "duration": 2.43
+    },
+    {
+        "text": "So maybe it has really good properties\nthat you're starting out, making sure",
+        "start": 3968.081,
+        "duration": 4.59
+    },
+    {
+        "text": "that each of the columns of your matrix\nare pointing in different directions",
+        "start": 3972.671,
+        "duration": 6.09
+    },
+    {
+        "text": "and that they're actually capturing\nsome independent aspect of, your input.",
+        "start": 3983.531,
+        "duration": 4.71
+    },
+    {
+        "text": "Yeah.",
+        "start": 3992.591,
+        "duration": 0.39
+    },
+    {
+        "text": "For,",
+        "start": 3992.986,
+        "duration": 0.22
+    },
+    {
+        "text": "so, the metrics is set it",
+        "start": 3995.591,
+        "duration": 2.16
+    },
+    {
+        "text": "essentially if, let's say if it\nwould be a square, metrics is,",
+        "start": 4001.261,
+        "duration": 3.33
+    },
+    {
+        "text": "all the values are all one, right?",
+        "start": 4004.591,
+        "duration": 2.07
+    },
+    {
+        "text": "And it's like identity metrics.",
+        "start": 4006.901,
+        "duration": 3.54
+    },
+    {
+        "text": "If the are all one, then\nit's, nway is degenerate.",
+        "start": 4012.241,
+        "duration": 4.47
+    },
+    {
+        "text": "yeah.",
+        "start": 4021.901,
+        "duration": 0.15
+    },
+    {
+        "text": "It's just a rotation.",
+        "start": 4022.051,
+        "duration": 1.02
+    },
+    {
+        "text": "Yeah.",
+        "start": 4024.301,
+        "duration": 0.3
+    },
+    {
+        "text": "So that's clearly you've cut down the\ndimensionality if that's the case.",
+        "start": 4027.271,
+        "duration": 3.9
+    },
+    {
+        "text": "But it's, yeah.",
+        "start": 4033.396,
+        "duration": 0.805
+    },
+    {
+        "text": "It's not gonna be just, a rotation\nif, the dimension, if the matrix is",
+        "start": 4034.201,
+        "duration": 5.13
+    },
+    {
+        "text": "not square, 'cause then the singular\nval, it's only that case because",
+        "start": 4039.331,
+        "duration": 4.8
+    },
+    {
+        "text": "singular values are the same as eigen\nvalues when it's a square matrix.",
+        "start": 4044.131,
+        "duration": 3.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 4048.331,
+        "duration": 0.33
+    },
+    {
+        "text": "I think the singular values are\ndifferent when it's not square.",
+        "start": 4048.661,
+        "duration": 2.58
+    },
+    {
+        "text": "Yeah.",
+        "start": 4052.831,
+        "duration": 0.51
+    },
+    {
+        "text": "yeah.",
+        "start": 4054.691,
+        "duration": 0.21
+    },
+    {
+        "text": "The definition of singular in that\ncase, I, I. You've gotta go to what,",
+        "start": 4054.901,
+        "duration": 4.275
+    },
+    {
+        "text": "pseudo inverse or something like\nthat in order to make sense of that.",
+        "start": 4059.176,
+        "duration": 3.21
+    },
+    {
+        "text": "I think that's right.",
+        "start": 4063.736,
+        "duration": 0.9
+    },
+    {
+        "text": "And so I think, yeah.",
+        "start": 4064.846,
+        "duration": 1.23
+    },
+    {
+        "text": "Yeah.",
+        "start": 4066.076,
+        "duration": 0.001
+    },
+    {
+        "text": "It seems right.",
+        "start": 4066.166,
+        "duration": 1.08
+    },
+    {
+        "text": "Like then you get Yeah.",
+        "start": 4067.246,
+        "duration": 1.65
+    },
+    {
+        "text": "Somebody to dump, project it and rotate.",
+        "start": 4068.896,
+        "duration": 2.04
+    },
+    {
+        "text": "Yeah.",
+        "start": 4070.936,
+        "duration": 0.18
+    },
+    {
+        "text": "Something like that.",
+        "start": 4072.526,
+        "duration": 0.66
+    },
+    {
+        "text": "But it's an interesting space to play\nin if in fact they found some more",
+        "start": 4075.196,
+        "duration": 5.64
+    },
+    {
+        "text": "principled way of assigning the, weight.",
+        "start": 4080.836,
+        "duration": 3.69
+    },
+    {
+        "text": "and then you have the interesting notion\nof, okay, what if your weights are sparse?",
+        "start": 4087.406,
+        "duration": 3.57
+    },
+    {
+        "text": "What's the implication then?",
+        "start": 4091.786,
+        "duration": 1.23
+    },
+    {
+        "text": "Okay.",
+        "start": 4095.241,
+        "duration": 0.29
+    },
+    {
+        "text": "You're projecting a\ndifferent subspace, maybe.",
+        "start": 4095.716,
+        "duration": 2.04
+    },
+    {
+        "text": "I don't know.",
+        "start": 4097.756,
+        "duration": 0.48
+    },
+    {
+        "text": "it's, the matrix itself is going to be\nsingular, maybe depending, I don't know.",
+        "start": 4098.716,
+        "duration": 7.845
+    },
+    {
+        "text": "No, that's, not true.",
+        "start": 4107.251,
+        "duration": 1.38
+    },
+    {
+        "text": "I'll take that one back.",
+        "start": 4108.751,
+        "duration": 0.96
+    },
+    {
+        "text": "But it's, it would be interesting to\nwork through the thing of saying, okay,",
+        "start": 4110.911,
+        "duration": 4.38
+    },
+    {
+        "text": "you, you create this dense matrix.",
+        "start": 4115.291,
+        "duration": 2.4
+    },
+    {
+        "text": "It's got these properties that\nthey claim is really good.",
+        "start": 4117.691,
+        "duration": 2.55
+    },
+    {
+        "text": "Now how can you add zeros to that and\nstill preserve these nice properties",
+        "start": 4121.231,
+        "duration": 8.04
+    },
+    {
+        "text": "that they claim are, you wanna preserve?",
+        "start": 4129.271,
+        "duration": 3.84
+    },
+    {
+        "text": "is there some kind of interesting.",
+        "start": 4133.711,
+        "duration": 2.91
+    },
+    {
+        "text": "That you can say how we assign our zeros\nto continue to get these nice properties.",
+        "start": 4138.226,
+        "duration": 6.21
+    },
+    {
+        "text": "Yeah.",
+        "start": 4144.436,
+        "duration": 0.18
+    },
+    {
+        "text": "I think if you think about in terms\nof the square mattresses, so you then",
+        "start": 4144.826,
+        "duration": 3.93
+    },
+    {
+        "text": "essentially have rotations and to get\nzeros, and once then you have like",
+        "start": 4148.756,
+        "duration": 5.76
+    },
+    {
+        "text": "only 90 degree different rotations.",
+        "start": 4154.546,
+        "duration": 3.0
+    },
+    {
+        "text": "So it would be a very\nlimited set of rotations.",
+        "start": 4157.726,
+        "duration": 2.58
+    },
+    {
+        "text": "it's al it's almost like you're\nprojecting into subspaces then",
+        "start": 4161.806,
+        "duration": 3.635
+    },
+    {
+        "text": "when you put the zeros there.",
+        "start": 4165.441,
+        "duration": 1.135
+    },
+    {
+        "text": "Yeah.",
+        "start": 4167.506,
+        "duration": 0.39
+    },
+    {
+        "text": "so your collapsing, can it\nalso be permutation matrices?",
+        "start": 4169.701,
+        "duration": 3.835
+    },
+    {
+        "text": "Those would have egen values\nof one and they can be square.",
+        "start": 4173.566,
+        "duration": 4.05
+    },
+    {
+        "text": "Yeah.",
+        "start": 4178.516,
+        "duration": 0.36
+    },
+    {
+        "text": "Yeah.",
+        "start": 4182.266,
+        "duration": 0.33
+    },
+    {
+        "text": "okay.",
+        "start": 4184.906,
+        "duration": 0.36
+    },
+    {
+        "text": "did you, understand at the end what\nthe Wasser scene distance is about?",
+        "start": 4187.096,
+        "duration": 3.21
+    },
+    {
+        "text": "no.",
+        "start": 4193.216,
+        "duration": 0.36
+    },
+    {
+        "text": "That's gonna be.",
+        "start": 4193.576,
+        "duration": 0.495
+    },
+    {
+        "text": "But yeah, that's, yeah.",
+        "start": 4194.941,
+        "duration": 2.64
+    },
+    {
+        "text": "Boin distance is optimal transport.",
+        "start": 4197.581,
+        "duration": 2.1
+    },
+    {
+        "text": "So typically it's the boan\nstand distance between two",
+        "start": 4200.521,
+        "duration": 3.45
+    },
+    {
+        "text": "prob probability distributions.",
+        "start": 4204.751,
+        "duration": 2.22
+    },
+    {
+        "text": "And it measures instead of",
+        "start": 4208.081,
+        "duration": 2.25
+    },
+    {
+        "text": "like you probably know, the colberg\nlabel divergence measures the",
+        "start": 4213.421,
+        "duration": 3.06
+    },
+    {
+        "text": "distance between the distributions.",
+        "start": 4216.481,
+        "duration": 1.8
+    },
+    {
+        "text": "so for the wasserstein distance, it's\nlike the, amount of transport, let's",
+        "start": 4220.801,
+        "duration": 4.86
+    },
+    {
+        "text": "say these are the two distributions,\nthe amount of transport it takes to make",
+        "start": 4225.661,
+        "duration": 3.12
+    },
+    {
+        "text": "them overlap as much overlap as possible.",
+        "start": 4228.781,
+        "duration": 3.69
+    },
+    {
+        "text": "the other name for it is\nthe earth mover distance.",
+        "start": 4232.821,
+        "duration": 2.23
+    },
+    {
+        "text": "So if you imagine a bulldozer\nkind of, pushing values",
+        "start": 4235.051,
+        "duration": 5.1
+    },
+    {
+        "text": "from one bin to another bin,",
+        "start": 4240.151,
+        "duration": 1.65
+    },
+    {
+        "text": "that's how much, energy does\nit take to, to make the one",
+        "start": 4244.741,
+        "duration": 4.8
+    },
+    {
+        "text": "distribution match the other one?",
+        "start": 4249.541,
+        "duration": 1.59
+    },
+    {
+        "text": "Yeah.",
+        "start": 4251.461,
+        "duration": 0.36
+    },
+    {
+        "text": "And, the nice thing is, We worked\nwith buses stand distance in the past.",
+        "start": 4252.241,
+        "duration": 4.455
+    },
+    {
+        "text": "So the nice thing is for this, compared\nto Berg Lab blood diversions is you",
+        "start": 4256.726,
+        "duration": 5.7
+    },
+    {
+        "text": "have a, very good distance measure,\neven if they're very far apart from",
+        "start": 4262.426,
+        "duration": 4.59
+    },
+    {
+        "text": "each other, You have a nice gradient",
+        "start": 4267.016,
+        "duration": 1.47
+    },
+    {
+        "text": "for the dis for the distance measure and\notherwise ready for two go functions.",
+        "start": 4270.616,
+        "duration": 4.59
+    },
+    {
+        "text": "They're far apart, the overlap is almost\nzero and you get very bad gradients.",
+        "start": 4275.206,
+        "duration": 4.29
+    },
+    {
+        "text": "And so for something where\nyou need the distance between",
+        "start": 4280.366,
+        "duration": 3.03
+    },
+    {
+        "text": "distributions, vasel, stein distance\nis nice, nu for numerical reasons.",
+        "start": 4283.396,
+        "duration": 5.73
+    },
+    {
+        "text": "nice.",
+        "start": 4293.386,
+        "duration": 0.09
+    },
+    {
+        "text": "Yeah.",
+        "start": 4293.476,
+        "duration": 0.15
+    },
+    {
+        "text": "Ben, regarding the, results, what were\nthe results on the cci, far on the faces?",
+        "start": 4294.411,
+        "duration": 5.035
+    },
+    {
+        "text": "What did they report\ncompared to other methods?",
+        "start": 4299.776,
+        "duration": 2.34
+    },
+    {
+        "text": "Go back to it.",
+        "start": 4303.916,
+        "duration": 0.54
+    },
+    {
+        "text": "I actually didn't look at it.",
+        "start": 4304.456,
+        "duration": 1.26
+    },
+    {
+        "text": "table five at the very\nend of the appendix?",
+        "start": 4307.156,
+        "duration": 2.04
+    },
+    {
+        "text": "Yes.",
+        "start": 4310.006,
+        "duration": 0.24
+    },
+    {
+        "text": "On table five.",
+        "start": 4310.336,
+        "duration": 0.69
+    },
+    {
+        "text": "Okay.",
+        "start": 4311.056,
+        "duration": 0.27
+    },
+    {
+        "text": "So they have.",
+        "start": 4312.346,
+        "duration": 0.66
+    },
+    {
+        "text": "This is mde.",
+        "start": 4315.661,
+        "duration": 0.835
+    },
+    {
+        "text": "Yeah.",
+        "start": 4316.566,
+        "duration": 0.29
+    },
+    {
+        "text": "Okay.",
+        "start": 4316.856,
+        "duration": 0.001
+    },
+    {
+        "text": "The, which one is theirs?",
+        "start": 4321.421,
+        "duration": 2.85
+    },
+    {
+        "text": "It's gonna be C",
+        "start": 4326.731,
+        "duration": 1.11
+    },
+    {
+        "text": "because, okay.",
+        "start": 4330.481,
+        "duration": 0.9
+    },
+    {
+        "text": "So I didn't even talk about this technique\nin the paper, but, the technique they",
+        "start": 4331.441,
+        "duration": 6.96
+    },
+    {
+        "text": "use to actually make the weights not the\nactivations and norm preserving, is they",
+        "start": 4338.401,
+        "duration": 5.04
+    },
+    {
+        "text": "use this thing called the Bjork something\nor other algorithm, which does like this",
+        "start": 4343.441,
+        "duration": 6.09
+    },
+    {
+        "text": "iterative procedure to find the closest,\northogonal matrix to a given matrix.",
+        "start": 4349.561,
+        "duration": 6.99
+    },
+    {
+        "text": "So they use this to try and find, weights",
+        "start": 4356.911,
+        "duration": 4.05
+    },
+    {
+        "text": "so that then, so the last\ncolumn would be theirs.",
+        "start": 4365.611,
+        "duration": 2.94
+    },
+    {
+        "text": "Oh, everything with Min Max is theirs.",
+        "start": 4369.706,
+        "duration": 1.56
+    },
+    {
+        "text": "That's the comparison, I think.",
+        "start": 4372.136,
+        "duration": 1.32
+    },
+    {
+        "text": "Yeah.",
+        "start": 4373.456,
+        "duration": 0.24
+    },
+    {
+        "text": "Both of these, both of these columns\nare theirs and they, this is the",
+        "start": 4373.696,
+        "duration": 3.84
+    },
+    {
+        "text": "one where they used orthogonal\nweights as well as Max Min. Oh, okay.",
+        "start": 4377.536,
+        "duration": 5.16
+    },
+    {
+        "text": "Okay.",
+        "start": 4382.726,
+        "duration": 0.39
+    },
+    {
+        "text": "And they get, and these\nare the test errors.",
+        "start": 4386.011,
+        "duration": 3.015
+    },
+    {
+        "text": "Okay.",
+        "start": 4389.146,
+        "duration": 0.3
+    },
+    {
+        "text": "So sort comparable with relo,",
+        "start": 4390.826,
+        "duration": 1.56
+    },
+    {
+        "text": "slightly worse.",
+        "start": 4396.466,
+        "duration": 1.02
+    },
+    {
+        "text": "yeah, they compare against the resnet.",
+        "start": 4404.026,
+        "duration": 1.705
+    },
+    {
+        "text": "So did they actually use it within\nthe, like a resnet architecture?",
+        "start": 4406.811,
+        "duration": 3.515
+    },
+    {
+        "text": "I don't think so.",
+        "start": 4412.876,
+        "duration": 1.2
+    },
+    {
+        "text": "I think they, they said that they\njust worried about, like multilayer",
+        "start": 4414.076,
+        "duration": 4.02
+    },
+    {
+        "text": "perceptions in this paper.",
+        "start": 4418.096,
+        "duration": 1.74
+    },
+    {
+        "text": "And they have a couple caveats that like\nyou can extend it to more complicated.",
+        "start": 4419.956,
+        "duration": 3.66
+    },
+    {
+        "text": "Table six is talking about wide resonance.",
+        "start": 4423.616,
+        "duration": 2.28
+    },
+    {
+        "text": "Yeah.",
+        "start": 4426.706,
+        "duration": 0.36
+    },
+    {
+        "text": "I'm looking at six",
+        "start": 4427.066,
+        "duration": 0.9
+    },
+    {
+        "text": "I don't know.",
+        "start": 4432.916,
+        "duration": 0.54
+    },
+    {
+        "text": "Maybe then what?",
+        "start": 4434.866,
+        "duration": 0.57
+    },
+    {
+        "text": "Yeah.",
+        "start": 4435.466,
+        "duration": 0.24
+    },
+    {
+        "text": "because what I was wondering,",
+        "start": 4435.946,
+        "duration": 0.96
+    },
+    {
+        "text": "with the, avoiding the weight decay,\ndo you need the, residual layers?",
+        "start": 4438.916,
+        "duration": 7.86
+    },
+    {
+        "text": "Can you just do that standard,\nthe standard linear, linear layers",
+        "start": 4446.986,
+        "duration": 5.7
+    },
+    {
+        "text": "instead of the residual connections?",
+        "start": 4454.396,
+        "duration": 1.53
+    },
+    {
+        "text": "Yeah.",
+        "start": 4457.366,
+        "duration": 0.45
+    },
+    {
+        "text": "I'm not sure.",
+        "start": 4461.596,
+        "duration": 0.6
+    },
+    {
+        "text": "Let me jump back to the\npoint where they said this.",
+        "start": 4462.196,
+        "duration": 3.69
+    },
+    {
+        "text": "Okay.",
+        "start": 4478.471,
+        "duration": 0.29
+    },
+    {
+        "text": "So they, turn the convolution into the\ntypical thing, turning into a matrix.",
+        "start": 4478.766,
+        "duration": 4.28
+    },
+    {
+        "text": "I, I honestly didn't read the results\nsection of this paper that carefully.",
+        "start": 4494.971,
+        "duration": 3.78
+    },
+    {
+        "text": "yeah, that's okay.",
+        "start": 4499.621,
+        "duration": 0.645
+    },
+    {
+        "text": "Yeah.",
+        "start": 4514.466,
+        "duration": 0.29
+    },
+    {
+        "text": "honestly, it would probably\ntake a few minutes to figure out",
+        "start": 4515.551,
+        "duration": 3.36
+    },
+    {
+        "text": "what the results were and we're\nalready 20 minutes over, Yeah.",
+        "start": 4518.911,
+        "duration": 4.11
+    },
+    {
+        "text": "Okay.",
+        "start": 4524.371,
+        "duration": 0.39
+    },
+    {
+        "text": "Cool.",
+        "start": 4524.761,
+        "duration": 0.33
+    },
+    {
+        "text": "Thanks, Ben.",
+        "start": 4525.961,
+        "duration": 0.6
+    },
+    {
+        "text": "thanks guys.",
+        "start": 4527.041,
+        "duration": 0.54
+    },
+    {
+        "text": "I definitely learned a few\nthings from your, comments",
+        "start": 4528.061,
+        "duration": 2.13
+    },
+    {
+        "text": "today, so I appreciate the input.",
+        "start": 4530.191,
+        "duration": 1.41
+    },
+    {
+        "text": "sure.",
+        "start": 4532.411,
+        "duration": 0.33
+    },
+    {
+        "text": "All right.",
+        "start": 4533.791,
+        "duration": 0.3
+    },
+    {
+        "text": "Yeah.",
+        "start": 4534.361,
+        "duration": 0.09
+    },
+    {
+        "text": "Wish you both have a nice weekend.",
+        "start": 4534.481,
+        "duration": 1.41
+    },
+    {
+        "text": "See you.",
+        "start": 4536.431,
+        "duration": 0.39
+    },
+    {
+        "text": "Thank you.",
+        "start": 4537.121,
+        "duration": 0.42
+    },
+    {
+        "text": "You too.",
+        "start": 4537.541,
+        "duration": 0.42
+    },
+    {
+        "text": "Likewise.",
+        "start": 4538.231,
+        "duration": 0.45
+    },
+    {
+        "text": "Thanks.",
+        "start": 4538.681,
+        "duration": 0.39
+    }
+]

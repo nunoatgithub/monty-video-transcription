@@ -1,0 +1,547 @@
+[
+    {
+        "text": "Viviane Clay: as usual, I'll start\nwith the shoutouts to the community.",
+        "start": 8.187,
+        "duration": 3.25
+    },
+    {
+        "text": "And\u2026 kind of\u2026 since I started last\nmonth reordering things, I'll start with",
+        "start": 12.127,
+        "duration": 5.76
+    },
+    {
+        "text": "the more significant things, and then\u2026",
+        "start": 17.907,
+        "duration": 2.12
+    },
+    {
+        "text": "go to some of the interesting\ninteractions on this course.",
+        "start": 20.717,
+        "duration": 2.56
+    },
+    {
+        "text": "we had,",
+        "start": 24.407,
+        "duration": 0.56
+    },
+    {
+        "text": "several PRs to our codebase this month.",
+        "start": 27.707,
+        "duration": 2.59
+    },
+    {
+        "text": "I think one thing that's usually\na really good starting point for",
+        "start": 31.377,
+        "duration": 3.416
+    },
+    {
+        "text": "people who want to start contributing\nto Monty is to start addressing",
+        "start": 34.793,
+        "duration": 4.074
+    },
+    {
+        "text": "some of the rough linting rules.",
+        "start": 38.867,
+        "duration": 1.83
+    },
+    {
+        "text": "That we're currently ignoring, which\nis basically our code format checker.",
+        "start": 41.857,
+        "duration": 4.3
+    },
+    {
+        "text": "And it's a good starting point, because\nit doesn't require understanding",
+        "start": 46.677,
+        "duration": 3.27
+    },
+    {
+        "text": "the whole algorithm, but you can\nmake some really good contributions,",
+        "start": 49.947,
+        "duration": 5.17
+    },
+    {
+        "text": "drive our goals further, and also get\nfamiliar with our code review process.",
+        "start": 55.147,
+        "duration": 4.81
+    },
+    {
+        "text": "And the codebase in general.",
+        "start": 62.127,
+        "duration": 1.75
+    },
+    {
+        "text": "And yeah, for instance,\nCarver made, several PRs.",
+        "start": 64.657,
+        "duration": 3.98
+    },
+    {
+        "text": "here, several PRs addressing lint rules,\nand then a little refactor removing a",
+        "start": 70.217,
+        "duration": 4.48
+    },
+    {
+        "text": "function, another refactor, on how we\nuse the OmniGlot dataset, moving from",
+        "start": 74.707,
+        "duration": 7.26
+    },
+    {
+        "text": "addressing some of the rough rules to",
+        "start": 81.977,
+        "duration": 1.72
+    },
+    {
+        "text": "refactoring some of the code and making\nsome kind of functional improvements.",
+        "start": 85.727,
+        "duration": 2.02
+    },
+    {
+        "text": "And then, MFME also made, several PRs,",
+        "start": 89.927,
+        "duration": 5.29
+    },
+    {
+        "text": "Again, targeting some of the rough\nrules that we're currently ignoring.",
+        "start": 97.167,
+        "duration": 3.41
+    },
+    {
+        "text": "And then Agent Rafe, showed last\nmonth already, had picked up this,",
+        "start": 101.357,
+        "duration": 5.79
+    },
+    {
+        "text": "larger chunk of work on our future\nwork roadmap map, which is to",
+        "start": 107.437,
+        "duration": 4.06
+    },
+    {
+        "text": "simplify the simulator protocol.",
+        "start": 111.517,
+        "duration": 1.81
+    },
+    {
+        "text": "This was something that Tristan\nand Will had prototyped during the,",
+        "start": 113.677,
+        "duration": 3.65
+    },
+    {
+        "text": "Focus Week in Brighton.",
+        "start": 118.357,
+        "duration": 1.34
+    },
+    {
+        "text": "And\u2026 but couldn't keep working on, so\nwe had posted the videos of that online,",
+        "start": 120.247,
+        "duration": 6.31
+    },
+    {
+        "text": "and, Agent Ref saw it, and, yeah.",
+        "start": 126.557,
+        "duration": 3.75
+    },
+    {
+        "text": "I graciously volunteered to\nstart working on this task.",
+        "start": 131.087,
+        "duration": 2.64
+    },
+    {
+        "text": "And has made, several larger and\nsmaller PRs, working towards that goal.",
+        "start": 134.247,
+        "duration": 5.83
+    },
+    {
+        "text": "Several refactors at different places,\nsimplifying the code, removing an old",
+        "start": 141.667,
+        "duration": 4.55
+    },
+    {
+        "text": "environment that we weren't using anymore.",
+        "start": 146.477,
+        "duration": 1.91
+    },
+    {
+        "text": "So yeah, thanks for working on that.",
+        "start": 149.297,
+        "duration": 2.97
+    },
+    {
+        "text": "And then some kind of projects that\nwe've heard on\u2026 about on\u2026 on this course.",
+        "start": 154.327,
+        "duration": 5.91
+    },
+    {
+        "text": "Here's Zachary, who's, working on\nan undergraduate final year project,",
+        "start": 160.517,
+        "duration": 5.71
+    },
+    {
+        "text": "trying to use Monty in a robot.",
+        "start": 166.927,
+        "duration": 1.94
+    },
+    {
+        "text": "To recognize objects, and shared\nan update on this course a couple",
+        "start": 168.877,
+        "duration": 5.01
+    },
+    {
+        "text": "of days ago on, the plan for that.",
+        "start": 173.887,
+        "duration": 2.83
+    },
+    {
+        "text": "And then this is still in the early\nstages, but Carver posted a couple of",
+        "start": 177.247,
+        "duration": 4.31
+    },
+    {
+        "text": "days ago about addressing another item\non our future work roadmap, which is",
+        "start": 181.557,
+        "duration": 4.05
+    },
+    {
+        "text": "around this\u2026 the way we're currently\ngiving some special treatment",
+        "start": 187.497,
+        "duration": 3.7
+    },
+    {
+        "text": "to off-object observations.",
+        "start": 191.207,
+        "duration": 2.05
+    },
+    {
+        "text": "Since we're in a simulator where we\nactually have, empty void, which doesn't",
+        "start": 194.487,
+        "duration": 5.25
+    },
+    {
+        "text": "really exist in the world, and also\u2026",
+        "start": 199.737,
+        "duration": 2.06
+    },
+    {
+        "text": "Yeah, it's a pretty involved task, so\nwe'll have to see how to best address it.",
+        "start": 201.807,
+        "duration": 6.82
+    },
+    {
+        "text": "And then\u2026",
+        "start": 212.997,
+        "duration": 0.7
+    },
+    {
+        "text": "Yeah, there were several really\ninteresting discussions on this course.",
+        "start": 214.397,
+        "duration": 3.74
+    },
+    {
+        "text": "For instance, Agent Ref shared\na summary of a paper by Google,",
+        "start": 218.147,
+        "duration": 4.7
+    },
+    {
+        "text": "basically highlighting main points,\nand then also particularly how",
+        "start": 223.467,
+        "duration": 4.02
+    },
+    {
+        "text": "it relates to the Thousand Brains\nProject, which is really useful.",
+        "start": 227.487,
+        "duration": 2.7
+    },
+    {
+        "text": "When people share papers like that,\nso we don't have to scour everything",
+        "start": 231.047,
+        "duration": 4.53
+    },
+    {
+        "text": "that's happening in the space ourselves,\nand yeah, it's really nice to hear",
+        "start": 235.587,
+        "duration": 4.636
+    },
+    {
+        "text": "from someone who also understands\nour project, how it relates, and",
+        "start": 240.447,
+        "duration": 3.71
+    },
+    {
+        "text": "where the kind of overlaps are.",
+        "start": 244.157,
+        "duration": 1.53
+    },
+    {
+        "text": "And then, Carver posted some questions\nand ideas around, inferring and learning",
+        "start": 246.577,
+        "duration": 5.52
+    },
+    {
+        "text": "non-rigid objects, like a rope or a\nnapkin, liquids, and there was some",
+        "start": 252.097,
+        "duration": 5.22
+    },
+    {
+        "text": "interesting discussion on this thread.",
+        "start": 257.357,
+        "duration": 2.21
+    },
+    {
+        "text": "And then, Andreas, posted a PDF document\nwith some thoughts around how Thousand",
+        "start": 260.347,
+        "duration": 7.73
+    },
+    {
+        "text": "Brains Theory relates to some other ideas.",
+        "start": 268.077,
+        "duration": 2.63
+    },
+    {
+        "text": "Also, some interesting discussion in\nthat thread, if someone's interested.",
+        "start": 272.637,
+        "duration": 3.84
+    },
+    {
+        "text": "There was another interesting\ndiscussion here between, Xavier and,",
+        "start": 278.187,
+        "duration": 3.91
+    },
+    {
+        "text": "specifically asking, some questions\naround representations in Layer 6, and",
+        "start": 283.977,
+        "duration": 4.8
+    },
+    {
+        "text": "how locations could be represented,\nand how our thinking has changed on",
+        "start": 289.117,
+        "duration": 3.96
+    },
+    {
+        "text": "that over the years, and, Jeff has\nbeen replying there several times.",
+        "start": 293.077,
+        "duration": 3.56
+    },
+    {
+        "text": "Giving, the up-to-date,\nthoughts on where we are.",
+        "start": 298.647,
+        "duration": 3.89
+    },
+    {
+        "text": "On those questions.",
+        "start": 303.067,
+        "duration": 1.31
+    },
+    {
+        "text": "then, yeah, helping others.",
+        "start": 306.767,
+        "duration": 1.24
+    },
+    {
+        "text": "I think Agent Ref has been falling into\nthis category several months in a row now.",
+        "start": 308.017,
+        "duration": 4.28
+    },
+    {
+        "text": "Someone asked about a way to export our\ndocumentation as a PDF, and shared a\u2026",
+        "start": 313.007,
+        "duration": 7.95
+    },
+    {
+        "text": "yeah, Python script to, yeah,\ndownload the Markdown files.",
+        "start": 321.047,
+        "duration": 4.64
+    },
+    {
+        "text": "Then, several first-time posts.",
+        "start": 328.007,
+        "duration": 1.86
+    },
+    {
+        "text": "We have this introductions\ncategory on our forum where",
+        "start": 330.107,
+        "duration": 2.69
+    },
+    {
+        "text": "people can introduce themselves.",
+        "start": 332.797,
+        "duration": 1.7
+    },
+    {
+        "text": "for instance, cover came to\u2026",
+        "start": 335.097,
+        "duration": 1.88
+    },
+    {
+        "text": "the project, and introduced himself here.",
+        "start": 337.557,
+        "duration": 2.36
+    },
+    {
+        "text": "Like you saw earlier, he made\nsome PRs already, and started",
+        "start": 340.867,
+        "duration": 3.43
+    },
+    {
+        "text": "some interesting discussions, and\nyeah, just introduced himself.",
+        "start": 344.297,
+        "duration": 3.35
+    },
+    {
+        "text": "Some topics he's interested in.",
+        "start": 348.537,
+        "duration": 1.84
+    },
+    {
+        "text": "And then Andreas also introduced himself.",
+        "start": 350.987,
+        "duration": 2.31
+    },
+    {
+        "text": "He's the one who posted that PDF document.",
+        "start": 354.247,
+        "duration": 2.07
+    },
+    {
+        "text": "And then also Oscar from Melbourne.",
+        "start": 356.317,
+        "duration": 3.49
+    },
+    {
+        "text": "And yeah, so welcome to the forum, to the\nthree of you, and, invitation to anyone",
+        "start": 360.567,
+        "duration": 7.38
+    },
+    {
+        "text": "else who's joining to introduce yourself\non this\u2026 in this category as well.",
+        "start": 367.947,
+        "duration": 4.29
+    },
+    {
+        "text": "Always happy to hear about\nwho's interested in the project.",
+        "start": 372.747,
+        "duration": 3.44
+    },
+    {
+        "text": "And then also on social media, really\nappreciate anyone who's sharing the",
+        "start": 377.787,
+        "duration": 3.47
+    },
+    {
+        "text": "project and mentioning us, and even\njust tagging us in posts that you might",
+        "start": 381.257,
+        "duration": 6.44
+    },
+    {
+        "text": "think are interesting for our project.",
+        "start": 387.697,
+        "duration": 2.49
+    },
+    {
+        "text": "And then also, a big thank you\nto anyone who filled out our poll",
+        "start": 391.277,
+        "duration": 3.2
+    },
+    {
+        "text": "about, what the next community event,",
+        "start": 394.867,
+        "duration": 2.78
+    },
+    {
+        "text": "should look like, or what\nwould be most useful.",
+        "start": 398.967,
+        "duration": 2.16
+    },
+    {
+        "text": "That was really useful feedback,\nand we used that to craft our",
+        "start": 401.127,
+        "duration": 4.96
+    },
+    {
+        "text": "new community event, which will\nbe happening on December 17th,",
+        "start": 406.097,
+        "duration": 3.68
+    },
+    {
+        "text": "in about 2 weeks, 7pm",
+        "start": 411.887,
+        "duration": 2.64
+    },
+    {
+        "text": "Oh, no, NAMPST?",
+        "start": 415.077,
+        "duration": 0.74
+    },
+    {
+        "text": "I took that screenshot here.",
+        "start": 420.107,
+        "duration": 1.17
+    },
+    {
+        "text": "And\u2026",
+        "start": 421.757,
+        "duration": 0.31
+    },
+    {
+        "text": "Yeah, it's called Meet Monty 2026,\nReverse Engineering Intelligence.",
+        "start": 424.487,
+        "duration": 4.2
+    },
+    {
+        "text": "We're gonna give an update of all\nthe cool and interesting stuff",
+        "start": 429.067,
+        "duration": 3.99
+    },
+    {
+        "text": "that happened in the past year.",
+        "start": 433.057,
+        "duration": 1.52
+    },
+    {
+        "text": "There's been a lot of development\nsince the last symposium last",
+        "start": 436.137,
+        "duration": 3.39
+    },
+    {
+        "text": "December, and we're gonna give a\nreally nice high-level overview",
+        "start": 439.527,
+        "duration": 4.91
+    },
+    {
+        "text": "of all the aspects of the project.",
+        "start": 444.437,
+        "duration": 1.68
+    },
+    {
+        "text": "You'll hear from everyone on our team.",
+        "start": 446.117,
+        "duration": 1.89
+    },
+    {
+        "text": "Get to meet all of us, get to ask\nquestions in the end, and even if",
+        "start": 449.857,
+        "duration": 4.21
+    },
+    {
+        "text": "someone's interested and hasn't heard\nthe previous symposium, or read anything",
+        "start": 454.167,
+        "duration": 6.35
+    },
+    {
+        "text": "about the project, it will be still a\nreally interesting event to attend, and",
+        "start": 460.517,
+        "duration": 4.55
+    },
+    {
+        "text": "a great first entry point to the project.",
+        "start": 465.207,
+        "duration": 3.34
+    },
+    {
+        "text": "So feel free to forward\nthis invitation to anyone.",
+        "start": 469.567,
+        "duration": 2.69
+    },
+    {
+        "text": "Who might be interested?",
+        "start": 472.967,
+        "duration": 0.95
+    }
+]

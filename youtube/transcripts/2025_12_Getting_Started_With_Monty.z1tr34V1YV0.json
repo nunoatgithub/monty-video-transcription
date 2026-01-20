@@ -1,0 +1,782 @@
+[
+    {
+        "text": "Hojae Lee: My name is Hojae.",
+        "start": 1.663,
+        "duration": 0.96
+    },
+    {
+        "text": "For my part, I'm gonna be giving a\nshort presentation on how to run Monty,",
+        "start": 3.423,
+        "duration": 4.37
+    },
+    {
+        "text": "and also how to configure Monty, so\nthat you can run your own experiments.",
+        "start": 8.253,
+        "duration": 4.45
+    },
+    {
+        "text": "I'm gonna just jump right into it.",
+        "start": 14.213,
+        "duration": 1.78
+    },
+    {
+        "text": "First, our code is available\nat github.com slash",
+        "start": 16.753,
+        "duration": 3.7
+    },
+    {
+        "text": "thousandbrainsproject slash tbp.monty.",
+        "start": 20.503,
+        "duration": 2.31
+    },
+    {
+        "text": "Our documentation is available at\nthousandbrainsproject.readme.io.",
+        "start": 23.163,
+        "duration": 4.0
+    },
+    {
+        "text": "After you get the code from the\nGitHub, I highly recommend you",
+        "start": 27.663,
+        "duration": 3.31
+    },
+    {
+        "text": "to go to the documentation site.",
+        "start": 30.973,
+        "duration": 1.82
+    },
+    {
+        "text": "It has additional information on\nhow to set up a conda environment",
+        "start": 32.863,
+        "duration": 3.26
+    },
+    {
+        "text": "or a programming environment\nfor where you can run Monty.",
+        "start": 36.123,
+        "duration": 2.64
+    },
+    {
+        "text": "It also has link to\ndownload the YCB dataset.",
+        "start": 38.763,
+        "duration": 4.29
+    },
+    {
+        "text": "So the YCB dataset consists of household\nobjects that you have seen in previous",
+        "start": 43.133,
+        "duration": 4.76
+    },
+    {
+        "text": "presentations from Scott and Niels,\nlike the mug, bowl, the bananas, etc.",
+        "start": 48.883,
+        "duration": 5.26
+    },
+    {
+        "text": "And finally, it also has a link\nto download some pre-trained Monty",
+        "start": 55.123,
+        "duration": 3.07
+    },
+    {
+        "text": "models, so that you can immediately\nstart playing around with Monty.",
+        "start": 58.223,
+        "duration": 4.18
+    },
+    {
+        "text": "highly recommend these two\nwebsites to get started.",
+        "start": 63.423,
+        "duration": 2.35
+    },
+    {
+        "text": "And with that said, I'm going to actually\nswitch over to a different window to",
+        "start": 66.423,
+        "duration": 3.55
+    },
+    {
+        "text": "actually show you what a Monty run\nlooks like, and what you can expect",
+        "start": 69.973,
+        "duration": 4.4
+    },
+    {
+        "text": "when you actually run an experiment.",
+        "start": 74.393,
+        "duration": 2.44
+    },
+    {
+        "text": "So I'm going to switch over.",
+        "start": 77.183,
+        "duration": 1.21
+    },
+    {
+        "text": "Alright, so hopefully, you\nare looking at my code editor.",
+        "start": 80.733,
+        "duration": 4.13
+    },
+    {
+        "text": "Just to orient you a little bit, on the\nleft, what you see here is a YAML-based",
+        "start": 85.853,
+        "duration": 4.76
+    },
+    {
+        "text": "configuration file that specifies\nthe parameters of an experiment, and",
+        "start": 90.613,
+        "duration": 4.005
+    },
+    {
+        "text": "I'll explain what that experiment is.",
+        "start": 94.743,
+        "duration": 1.29
+    },
+    {
+        "text": "On the right is my integrated terminal,\nand I'll be typing in some commands",
+        "start": 96.763,
+        "duration": 3.97
+    },
+    {
+        "text": "to run a monty-experiment, the\nexperiment that we specified here.",
+        "start": 100.733,
+        "duration": 5.78
+    },
+    {
+        "text": "This is going to be a very quick\nexperiment, doing object recognition.",
+        "start": 107.223,
+        "duration": 4.98
+    },
+    {
+        "text": "So what this is going to do is it's going\nto evaluate a pre-trained Monty model, to",
+        "start": 112.483,
+        "duration": 4.3
+    },
+    {
+        "text": "identify two objects from the YCB dataset.",
+        "start": 116.783,
+        "duration": 2.355
+    },
+    {
+        "text": "So simply, I specified a bowl and a mug.",
+        "start": 119.443,
+        "duration": 2.74
+    },
+    {
+        "text": "And the goal of Monty, is to move around\nthe object, gather features at different",
+        "start": 123.443,
+        "duration": 6.06
+    },
+    {
+        "text": "locations, and try to come to a conclusion\nabout which object it is sensing.",
+        "start": 129.503,
+        "duration": 4.24
+    },
+    {
+        "text": "So this pre-trained Monty\nmodel, has already learned,",
+        "start": 134.063,
+        "duration": 3.08
+    },
+    {
+        "text": "actually up to 77 objects.",
+        "start": 137.783,
+        "duration": 1.84
+    },
+    {
+        "text": "We're gonna\u2026 here, we're gonna present\nwith two, and, the Monty has to try to.",
+        "start": 140.163,
+        "duration": 4.73
+    },
+    {
+        "text": "Infer what that is.",
+        "start": 146.253,
+        "duration": 0.96
+    },
+    {
+        "text": "Okay, one last thing before I actually\ntype in the command, on just how",
+        "start": 149.173,
+        "duration": 4.09
+    },
+    {
+        "text": "to read the configuration file.",
+        "start": 153.293,
+        "duration": 0.807
+    },
+    {
+        "text": "the configuration for",
+        "start": 154.158,
+        "duration": 0.195
+    },
+    {
+        "text": "experiments are basically\ndivided into two parts.",
+        "start": 158.533,
+        "duration": 2.46
+    },
+    {
+        "text": "One called defaults.",
+        "start": 160.993,
+        "duration": 1.77
+    },
+    {
+        "text": "So defaults just mean, oh import\nthese configurations from other files.",
+        "start": 162.763,
+        "duration": 4.93
+    },
+    {
+        "text": "And they're going to\nprovide the default values.",
+        "start": 168.453,
+        "duration": 2.44
+    },
+    {
+        "text": "Hence the name, defaults.",
+        "start": 170.933,
+        "duration": 0.96
+    },
+    {
+        "text": "For any kind of parameters that's\nnot specified under config.",
+        "start": 173.383,
+        "duration": 3.99
+    },
+    {
+        "text": "So if you're familiar with Python,\nthese are like import statements,",
+        "start": 177.553,
+        "duration": 3.11
+    },
+    {
+        "text": "so it just says import all these\nconfigurations from different files.",
+        "start": 180.663,
+        "duration": 3.95
+    },
+    {
+        "text": "Under config are overrides that you\ncan make to specific parameters,",
+        "start": 184.643,
+        "duration": 4.2
+    },
+    {
+        "text": "that are unique to that experiment.",
+        "start": 189.333,
+        "duration": 1.45
+    },
+    {
+        "text": "Okay, I know there's a lot of words\nhere, but I'm going to move on to",
+        "start": 191.793,
+        "duration": 4.52
+    },
+    {
+        "text": "running the experiment itself, so let\nme activate the Conda environment first.",
+        "start": 196.423,
+        "duration": 4.52
+    },
+    {
+        "text": "tbp.monty",
+        "start": 202.913,
+        "duration": 1.62
+    },
+    {
+        "text": "and to run the monty experiment\nand you have to specify which",
+        "start": 206.733,
+        "duration": 7.66
+    },
+    {
+        "text": "experiment you have to run.",
+        "start": 214.403,
+        "duration": 0.83
+    },
+    {
+        "text": "That's the only required argument, so\nto do that you just have to pass you",
+        "start": 215.273,
+        "duration": 3.52
+    },
+    {
+        "text": "just have to specify experiment equals\nand the name of the experimental file.",
+        "start": 218.793,
+        "duration": 4.76
+    },
+    {
+        "text": "So in this case it's just demo.",
+        "start": 223.583,
+        "duration": 1.69
+    },
+    {
+        "text": "You don't need to specify\nthe file extension.",
+        "start": 225.833,
+        "duration": 2.37
+    },
+    {
+        "text": "And press enter.",
+        "start": 228.613,
+        "duration": 1.23
+    },
+    {
+        "text": "So what this is gonna do, it's gonna\nprint out a long list of configs.",
+        "start": 231.613,
+        "duration": 3.5
+    },
+    {
+        "text": "So this is the full\nconfiguration listed out.",
+        "start": 235.133,
+        "duration": 2.37
+    },
+    {
+        "text": "And soon, it should pop up,\nshould start the, evaluation.",
+        "start": 239.963,
+        "duration": 4.26
+    },
+    {
+        "text": "Let's wait a couple\nseconds for that to pop up.",
+        "start": 247.193,
+        "duration": 2.98
+    },
+    {
+        "text": "There we go.",
+        "start": 250.423,
+        "duration": 0.4
+    },
+    {
+        "text": "Just gonna start some there we go.",
+        "start": 251.733,
+        "duration": 2.17
+    },
+    {
+        "text": "So you can see here, it's a kind\nof a crude visualization of Monty",
+        "start": 254.283,
+        "duration": 4.28
+    },
+    {
+        "text": "moving around looking at the bowl.",
+        "start": 259.063,
+        "duration": 1.56
+    },
+    {
+        "text": "It thinks that the most likely\nhypothesis, MLH, is a bowl with",
+        "start": 260.673,
+        "duration": 3.87
+    },
+    {
+        "text": "a certain amount of evidence.",
+        "start": 264.543,
+        "duration": 1.06
+    },
+    {
+        "text": "It's gonna move on to the mug.",
+        "start": 266.653,
+        "duration": 1.2
+    },
+    {
+        "text": "Again, it's gonna, it's gonna move around\nthe mug, explore around different parts.",
+        "start": 268.343,
+        "duration": 3.7
+    },
+    {
+        "text": "I think sets the most likely hypothesis is\nthe mug, So that was a quick experiment.",
+        "start": 272.053,
+        "duration": 7.97
+    },
+    {
+        "text": "I know it flew by.",
+        "start": 280.413,
+        "duration": 1.32
+    },
+    {
+        "text": "If we have time at the end\nmaybe we can come back to this.",
+        "start": 281.793,
+        "duration": 2.6
+    },
+    {
+        "text": "But basically the experiment's\ngonna run until Monty detects",
+        "start": 284.393,
+        "duration": 2.62
+    },
+    {
+        "text": "a match or has timed out.",
+        "start": 287.013,
+        "duration": 1.56
+    },
+    {
+        "text": "And another thing that I want to note\nfor object recognition experiments, or",
+        "start": 290.723,
+        "duration": 5.31
+    },
+    {
+        "text": "inference experiments, they're gonna\noutput, we usually save some summary",
+        "start": 296.033,
+        "duration": 4.92
+    },
+    {
+        "text": "statistics of how Monty has performed.",
+        "start": 300.953,
+        "duration": 2.1
+    },
+    {
+        "text": "So you can find this in the output\ndirectory and what you should see so",
+        "start": 303.673,
+        "duration": 5.85
+    },
+    {
+        "text": "this is actually my output directory.",
+        "start": 309.523,
+        "duration": 2.41
+    },
+    {
+        "text": "What you should see is a folder\nname with the name of the run name.",
+        "start": 311.933,
+        "duration": 4.54
+    },
+    {
+        "text": "just FYI, the run name doesn't\nneed to be the same as the",
+        "start": 317.503,
+        "duration": 2.52
+    },
+    {
+        "text": "file name, it can be different.",
+        "start": 320.023,
+        "duration": 1.11
+    },
+    {
+        "text": "It can be the same, that's up to you.",
+        "start": 321.133,
+        "duration": 2.08
+    },
+    {
+        "text": "And the most important kind of file\nhere is the eval underscore stats.csv.",
+        "start": 323.213,
+        "duration": 5.05
+    },
+    {
+        "text": "So if I just double-click\nand open this up.",
+        "start": 329.163,
+        "duration": 2.15
+    },
+    {
+        "text": "It's a little bit small.",
+        "start": 332.243,
+        "duration": 0.81
+    },
+    {
+        "text": "So you can see, this contains some\nstatistics for each object or each",
+        "start": 333.363,
+        "duration": 5.74
+    },
+    {
+        "text": "episode that Monty encountered.",
+        "start": 339.183,
+        "duration": 1.66
+    },
+    {
+        "text": "in the first episode it encountered\nground-truth object, bowl.",
+        "start": 341.503,
+        "duration": 3.5
+    },
+    {
+        "text": "It thought that the most\nlikely object was bowl.",
+        "start": 345.133,
+        "duration": 1.91
+    },
+    {
+        "text": "We saw that but there's also other, many\nother, kind of columns, calculating the",
+        "start": 347.803,
+        "duration": 5.64
+    },
+    {
+        "text": "rotation error, how long did Monty take\nto get to this conclusion, etc... So this",
+        "start": 353.443,
+        "duration": 6.38
+    },
+    {
+        "text": "is how we measure performance of Monty and\nthese are the kind of metrics that you'll",
+        "start": 359.823,
+        "duration": 3.98
+    },
+    {
+        "text": "see if you go to our benchmark pages.",
+        "start": 363.803,
+        "duration": 2.04
+    },
+    {
+        "text": "And yeah, so this is what you\ncan expect when you run Monty.",
+        "start": 366.883,
+        "duration": 4.32
+    },
+    {
+        "text": "I'm gonna go back to\nthe slides real quick.",
+        "start": 371.653,
+        "duration": 2.38
+    },
+    {
+        "text": "Alright,",
+        "start": 376.363,
+        "duration": 0.59
+    },
+    {
+        "text": "I think, previous presentations has\nalluded to this already, but, this is",
+        "start": 380.813,
+        "duration": 4.23
+    },
+    {
+        "text": "another kind of view of the high-level,\nkind of classes that exist in Monty.",
+        "start": 385.043,
+        "duration": 4.47
+    },
+    {
+        "text": "So Monty itself is composed of one or\nmore sensor modules, one or more learning",
+        "start": 389.513,
+        "duration": 5.1
+    },
+    {
+        "text": "modules, and a single motor system.",
+        "start": 394.623,
+        "duration": 1.37
+    },
+    {
+        "text": "It can then be placed in an environment,\nsimulated or real, to run an experiment.",
+        "start": 396.963,
+        "duration": 5.59
+    },
+    {
+        "text": "you just saw an experiment for object\nrecognition to identify YCB objects.",
+        "start": 403.013,
+        "duration": 4.84
+    },
+    {
+        "text": "And every one of these components\nare designed to be modular so",
+        "start": 408.843,
+        "duration": 3.45
+    },
+    {
+        "text": "you can easily swap in or out.",
+        "start": 412.293,
+        "duration": 1.98
+    },
+    {
+        "text": "So you don't need to just change\nparticular arguments or parameter values",
+        "start": 414.433,
+        "duration": 3.22
+    },
+    {
+        "text": "but you can actually write whole new\nclasses for data that you might have",
+        "start": 417.683,
+        "duration": 4.41
+    },
+    {
+        "text": "that you want to experiment with Monty.",
+        "start": 422.093,
+        "duration": 2.14
+    },
+    {
+        "text": "As an example of that this is\nactually my own configuration for",
+        "start": 426.253,
+        "duration": 4.43
+    },
+    {
+        "text": "a project that I'm working on.",
+        "start": 430.683,
+        "duration": 1.21
+    },
+    {
+        "text": "So you'll not see\u2026 you'll not see this in\ndocumentation yet, because I'm not done",
+        "start": 432.443,
+        "duration": 3.64
+    },
+    {
+        "text": "with the project, but hopefully soon.",
+        "start": 436.083,
+        "duration": 1.39
+    },
+    {
+        "text": "But you can see that I have,\nwent to Python, I've written up",
+        "start": 438.243,
+        "duration": 3.47
+    },
+    {
+        "text": "a custom sensor module class.",
+        "start": 441.713,
+        "duration": 1.67
+    },
+    {
+        "text": "I specify that here, and\nthe sensor module class",
+        "start": 443.393,
+        "duration": 3.56
+    },
+    {
+        "text": "key.",
+        "start": 449.153,
+        "duration": 0.38
+    },
+    {
+        "text": "I have some custom arguments as well.",
+        "start": 449.903,
+        "duration": 4.65
+    },
+    {
+        "text": "And you can see that in the config\nI'm mostly importing, again,",
+        "start": 454.923,
+        "duration": 4.23
+    },
+    {
+        "text": "defaults, it's analogous to import,\nfrom this control experiment.",
+        "start": 459.223,
+        "duration": 4.1
+    },
+    {
+        "text": "But for this experiment I'm going to\njust override the sensor module class.",
+        "start": 463.633,
+        "duration": 3.37
+    },
+    {
+        "text": "this is kind of a tip for\nhow to set up experiments.",
+        "start": 468.593,
+        "duration": 3.61
+    },
+    {
+        "text": "If you want to compare, two different\nexperiments like a control and an",
+        "start": 472.223,
+        "duration": 6.16
+    },
+    {
+        "text": "experimental without accidentally\noverriding or changing other",
+        "start": 478.383,
+        "duration": 5.56
+    },
+    {
+        "text": "kind of irrelevant parameters.",
+        "start": 483.973,
+        "duration": 2.99
+    },
+    {
+        "text": "So in general, the configuration is\nwritten in YAML, so that hopefully",
+        "start": 488.063,
+        "duration": 3.8
+    },
+    {
+        "text": "you can read through and understand\nsome of the major classes, even",
+        "start": 491.863,
+        "duration": 4.14
+    },
+    {
+        "text": "if you don't know what Python is.",
+        "start": 496.003,
+        "duration": 1.19
+    },
+    {
+        "text": "It's supposed to be composable\nand modular so that you can easily",
+        "start": 497.843,
+        "duration": 2.72
+    },
+    {
+        "text": "plug in your own sensor module.",
+        "start": 500.883,
+        "duration": 1.63
+    },
+    {
+        "text": "Plug in your own custom classes,\nsuch as the sensor module or",
+        "start": 502.533,
+        "duration": 4.43
+    },
+    {
+        "text": "learning module, or environment.",
+        "start": 506.963,
+        "duration": 1.66
+    },
+    {
+        "text": "Yeah,",
+        "start": 508.633,
+        "duration": 0.02
+    },
+    {
+        "text": "so that's actually it\nfrom my presentation.",
+        "start": 511.373,
+        "duration": 3.055
+    },
+    {
+        "text": "I know that was a lot of information, so\nif you didn't get everything, that's okay.",
+        "start": 514.943,
+        "duration": 3.9
+    },
+    {
+        "text": "Most of everything that I covered\nis actually written up in running",
+        "start": 519.333,
+        "duration": 4.17
+    },
+    {
+        "text": "your first experiment tutorial.",
+        "start": 523.873,
+        "duration": 1.4
+    },
+    {
+        "text": "This is actually one of many tutorials\nthat we have, I highly recommend you to",
+        "start": 525.833,
+        "duration": 5.22
+    },
+    {
+        "text": "start with running your first experiment.",
+        "start": 531.603,
+        "duration": 1.83
+    },
+    {
+        "text": "Go through this, but there's\nalso more advanced tutorials",
+        "start": 533.793,
+        "duration": 3.76
+    },
+    {
+        "text": "if you want to dig in deeper.",
+        "start": 537.583,
+        "duration": 1.84
+    },
+    {
+        "text": "If at any point you get stuck or\nhave questions please feel free to",
+        "start": 540.003,
+        "duration": 4.96
+    },
+    {
+        "text": "post on Discourse or GitHub Issues.",
+        "start": 544.963,
+        "duration": 1.83
+    },
+    {
+        "text": "Even if you don't have questions, please\ncome say hi, we love meeting new community",
+        "start": 547.273,
+        "duration": 3.76
+    },
+    {
+        "text": "members and interacting with you all.",
+        "start": 551.033,
+        "duration": 1.57
+    },
+    {
+        "text": "And for those who are advanced, got\neverything I said, went through all",
+        "start": 553.873,
+        "duration": 4.48
+    },
+    {
+        "text": "the tutorials in the past 5 minutes and\nactually want to use Monty immediately",
+        "start": 558.353,
+        "duration": 4.69
+    },
+    {
+        "text": "for your own application, and you need\ninspiration, I highly recommend you to",
+        "start": 563.063,
+        "duration": 4.26
+    },
+    {
+        "text": "check out the project showcase page.",
+        "start": 567.323,
+        "duration": 1.79
+    },
+    {
+        "text": "Alright, so with that, I'm\ngonna hand it over to Ramy.",
+        "start": 569.943,
+        "duration": 3.0
+    },
+    {
+        "text": "He's gonna show you some\nreally cool interactive",
+        "start": 573.553,
+        "duration": 2.0
+    },
+    {
+        "text": "visualization tools that exist.",
+        "start": 575.553,
+        "duration": 1.99
+    },
+    {
+        "text": "And that's gonna give you a good\nsense of how Monty's brain work.",
+        "start": 577.793,
+        "duration": 4.59
+    },
+    {
+        "text": "Alright, thank you.",
+        "start": 583.233,
+        "duration": 0.69
+    }
+]

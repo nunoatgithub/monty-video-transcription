@@ -1,0 +1,1402 @@
+[
+    {
+        "text": "Ramy Mounir: Yeah, my name is Ramy\nMounir, and I'm one of the researchers",
+        "start": 1.638,
+        "duration": 2.96
+    },
+    {
+        "text": "here at the Thousand Brains Project.",
+        "start": 4.598,
+        "duration": 1.32
+    },
+    {
+        "text": "Yeah, so today I'm going to be\ntalking to you about the learning",
+        "start": 7.508,
+        "duration": 2.21
+    },
+    {
+        "text": "modules, and we really think the\nlearning modules are at the core of",
+        "start": 9.718,
+        "duration": 3.07
+    },
+    {
+        "text": "how Monty learns and infers objects.",
+        "start": 12.788,
+        "duration": 2.07
+    },
+    {
+        "text": "Scott talked about them a\nlittle bit in his presentation.",
+        "start": 17.278,
+        "duration": 2.42
+    },
+    {
+        "text": "I'm going to go into a lot more details,\nand then we're going to also show",
+        "start": 19.748,
+        "duration": 4.49
+    },
+    {
+        "text": "some visualizations that are really\ngoing to give you this intuition of",
+        "start": 24.238,
+        "duration": 3.5
+    },
+    {
+        "text": "what Monty is doing behind the scenes.",
+        "start": 27.748,
+        "duration": 1.64
+    },
+    {
+        "text": "So yeah, let's, start.",
+        "start": 29.848,
+        "duration": 3.69
+    },
+    {
+        "text": "Okay.",
+        "start": 35.718,
+        "duration": 0.28
+    },
+    {
+        "text": "I've just set up an\nexperiment with 3 episodes.",
+        "start": 40.208,
+        "duration": 3.2
+    },
+    {
+        "text": "Every episode is just a single\nobject at some orientation.",
+        "start": 43.588,
+        "duration": 3.97
+    },
+    {
+        "text": "And Monty is going to go through\nthe, this is just a, the Monty",
+        "start": 47.958,
+        "duration": 6.48
+    },
+    {
+        "text": "agent or an agent and Monty is\njust going to go around the object.",
+        "start": 54.438,
+        "duration": 3.68
+    },
+    {
+        "text": "Let me run this animation here.",
+        "start": 58.118,
+        "duration": 1.49
+    },
+    {
+        "text": "So Monty's just going to go around the\nobject and it's just going to observe",
+        "start": 63.678,
+        "duration": 4.47
+    },
+    {
+        "text": "or move its little sensory patch.",
+        "start": 68.238,
+        "duration": 3.49
+    },
+    {
+        "text": "This is just one learning module\nworking, so it's going to move its",
+        "start": 71.728,
+        "duration": 3.74
+    },
+    {
+        "text": "own sensory patch around the object.",
+        "start": 75.508,
+        "duration": 1.68
+    },
+    {
+        "text": "And the goal here is to\nfigure out three things.",
+        "start": 77.538,
+        "duration": 2.97
+    },
+    {
+        "text": "First, the object identity.",
+        "start": 81.408,
+        "duration": 1.27
+    },
+    {
+        "text": "What that object is; it a spam\ncan, or a spoon, or whatever.",
+        "start": 82.678,
+        "duration": 3.58
+    },
+    {
+        "text": "And then the orientation at which\nthis object is currently at and also",
+        "start": 86.608,
+        "duration": 4.8
+    },
+    {
+        "text": "the sensor location on the object.",
+        "start": 91.408,
+        "duration": 2.08
+    },
+    {
+        "text": "Because this is a sensorimotor experiment\nwe expect that the learning system should",
+        "start": 95.798,
+        "duration": 5.7
+    },
+    {
+        "text": "also know where it is on the object.",
+        "start": 101.528,
+        "duration": 1.82
+    },
+    {
+        "text": "Just like if you drop a rat\nin an unfamiliar environment.",
+        "start": 103.348,
+        "duration": 3.02
+    },
+    {
+        "text": "When the grid cells re-anchor, it not\nonly knows what the maze is or what",
+        "start": 107.518,
+        "duration": 3.46
+    },
+    {
+        "text": "the environment is, but also where\nit is in the environment, because",
+        "start": 110.978,
+        "duration": 2.99
+    },
+    {
+        "text": "it uses this information to path\nintegrate and do all that fun stuff.",
+        "start": 113.968,
+        "duration": 3.22
+    },
+    {
+        "text": "now, the cool thing about this experiment\nis, that Monty also doesn't know where",
+        "start": 119.758,
+        "duration": 4.29
+    },
+    {
+        "text": "the object ends and a new object begins.",
+        "start": 124.048,
+        "duration": 2.63
+    },
+    {
+        "text": "for a potted meat can and then\nit will just magically switch to",
+        "start": 128.028,
+        "duration": 3.35
+    },
+    {
+        "text": "a die or a mug, and then it just",
+        "start": 131.378,
+        "duration": 2.42
+    },
+    {
+        "text": "it just has to figure\nout, when it did that, or.",
+        "start": 135.928,
+        "duration": 3.12
+    },
+    {
+        "text": "Just basically all the temporal or\nspatial object boundaries, which is also",
+        "start": 139.548,
+        "duration": 4.947
+    },
+    {
+        "text": "useful for learning compositional models.",
+        "start": 144.495,
+        "duration": 1.423
+    },
+    {
+        "text": "if you're looking at a car and you're\nyou're fixated on the car wheel, and",
+        "start": 146.458,
+        "duration": 6.96
+    },
+    {
+        "text": "then you go over to the car door,\nfor example, and these are like",
+        "start": 153.418,
+        "duration": 3.02
+    },
+    {
+        "text": "low-level, objects, then you want to\nbe able to figure out what the spatial",
+        "start": 156.908,
+        "duration": 6.01
+    },
+    {
+        "text": "boundaries are and how you detect when\nyou moved from one object to another.",
+        "start": 162.918,
+        "duration": 3.8
+    },
+    {
+        "text": "yeah, so let's open up Monty's\nbrain and take a look inside.",
+        "start": 169.468,
+        "duration": 4.54
+    },
+    {
+        "text": "And so basically, this is one of the\nvisualizations I'm going to show.",
+        "start": 174.048,
+        "duration": 6.65
+    },
+    {
+        "text": "I have another one here, which\nI'm going to be switching between",
+        "start": 180.748,
+        "duration": 2.41
+    },
+    {
+        "text": "them, during the presentation.",
+        "start": 183.158,
+        "duration": 1.74
+    },
+    {
+        "text": "But, we've seen this part before,\nwhere the agent is over here,",
+        "start": 186.238,
+        "duration": 5.84
+    },
+    {
+        "text": "this violet or purple sphere.",
+        "start": 192.328,
+        "duration": 3.29
+    },
+    {
+        "text": "And we have a step, so we can go\nthrough the steps within this episode.",
+        "start": 196.068,
+        "duration": 7.25
+    },
+    {
+        "text": "The agent is moving and it's also\nmoving its sensory patch on the object.",
+        "start": 204.468,
+        "duration": 2.97
+    },
+    {
+        "text": "We could also change the episode\nto another object and another one.",
+        "start": 208.518,
+        "duration": 4.35
+    },
+    {
+        "text": "Monty doesn't really\nknow when what happens.",
+        "start": 213.368,
+        "duration": 3.45
+    },
+    {
+        "text": "We don't tell it that we\nchanged the episode or change",
+        "start": 217.298,
+        "duration": 2.48
+    },
+    {
+        "text": "the object to another one.",
+        "start": 219.778,
+        "duration": 1.12
+    },
+    {
+        "text": "One of the other cool things that we\ncould do here is that we can activate",
+        "start": 223.818,
+        "duration": 2.63
+    },
+    {
+        "text": "a tracer for the agent and for",
+        "start": 226.568,
+        "duration": 2.07
+    },
+    {
+        "text": "the sensor patch.",
+        "start": 230.778,
+        "duration": 0.79
+    },
+    {
+        "text": "So if I run this animation it'll\nbasically just tell you these are the",
+        "start": 231.848,
+        "duration": 6.53
+    },
+    {
+        "text": "parts that we've seen of the object.",
+        "start": 238.888,
+        "duration": 1.72
+    },
+    {
+        "text": "And yeah, so this is the agent path,\nand this is the sensory patch path.",
+        "start": 240.778,
+        "duration": 5.44
+    },
+    {
+        "text": "Okay.",
+        "start": 248.498,
+        "duration": 0.36
+    },
+    {
+        "text": "Let's now go to talk about\nthe second part of this.",
+        "start": 251.778,
+        "duration": 4.75
+    },
+    {
+        "text": "how does Monty figure out\nwhat is the actual object?",
+        "start": 258.768,
+        "duration": 4.51
+    },
+    {
+        "text": "It wants to infer those three\nthings that we talked about before.",
+        "start": 263.728,
+        "duration": 2.26
+    },
+    {
+        "text": "Monty comes up with what\nwe call hypothesis space.",
+        "start": 266.928,
+        "duration": 3.03
+    },
+    {
+        "text": "Which is just a collection of hypotheses.",
+        "start": 270.408,
+        "duration": 1.73
+    },
+    {
+        "text": "And we want to now get an\nintuitive understanding of",
+        "start": 272.518,
+        "duration": 3.54
+    },
+    {
+        "text": "what a hypothesis is in Monty.",
+        "start": 276.058,
+        "duration": 1.58
+    },
+    {
+        "text": "let me just, reveal this other\npart of the visualization.",
+        "start": 279.578,
+        "duration": 3.87
+    },
+    {
+        "text": "Where I'm going to lay out\nall of the hypotheses that",
+        "start": 283.988,
+        "duration": 3.42
+    },
+    {
+        "text": "Monty has about this object.",
+        "start": 287.408,
+        "duration": 2.6
+    },
+    {
+        "text": "Let's move to step 6 or something.",
+        "start": 291.008,
+        "duration": 3.12
+    },
+    {
+        "text": "And now forget about the X and Y axes for\na moment, I'm going to discuss them in",
+        "start": 294.868,
+        "duration": 5.21
+    },
+    {
+        "text": "a little bit, but you could just think\nof all these scatter points as just",
+        "start": 300.078,
+        "duration": 4.27
+    },
+    {
+        "text": "laid out randomly without any patterns.",
+        "start": 304.428,
+        "duration": 1.62
+    },
+    {
+        "text": "But the idea here is that every\none of those little points",
+        "start": 306.678,
+        "duration": 4.94
+    },
+    {
+        "text": "is a hypothesis of its own.",
+        "start": 311.618,
+        "duration": 1.5
+    },
+    {
+        "text": "And we're going to investigate further\nand look into what representation is",
+        "start": 313.318,
+        "duration": 5.43
+    },
+    {
+        "text": "being captured into those hypotheses.",
+        "start": 318.748,
+        "duration": 0.96
+    },
+    {
+        "text": "So I can now reveal the third part of\nthe visualization, and I can select",
+        "start": 321.178,
+        "duration": 6.94
+    },
+    {
+        "text": "these hypotheses, and it will tell you\nbasically what's in this hypothesis here.",
+        "start": 328.148,
+        "duration": 5.64
+    },
+    {
+        "text": "So you could look at this\nright side to figure that out.",
+        "start": 333.788,
+        "duration": 2.97
+    },
+    {
+        "text": "for example, if I click on this\nhypothesis over here will tell you I'm",
+        "start": 337.938,
+        "duration": 5.36
+    },
+    {
+        "text": "seeing the potted meat can, which is\nthe object identity, and I'm seeing",
+        "start": 343.298,
+        "duration": 3.9
+    },
+    {
+        "text": "it in this rotation, or orientation.",
+        "start": 347.198,
+        "duration": 1.66
+    },
+    {
+        "text": "That's the second piece of\ninformation, and then I'm also",
+        "start": 349.808,
+        "duration": 2.11
+    },
+    {
+        "text": "seeing the place where it thinks\nthe sensor location is right now.",
+        "start": 351.918,
+        "duration": 7.51
+    },
+    {
+        "text": "The only part of this hypothesis that\nis correct is the object identity, but",
+        "start": 360.198,
+        "duration": 7.09
+    },
+    {
+        "text": "it didn't get the orientation correct,\nor it didn't get the sensor location.",
+        "start": 367.288,
+        "duration": 3.74
+    },
+    {
+        "text": "So what Monty does at the very\nearly stages of the episode,",
+        "start": 371.358,
+        "duration": 3.96
+    },
+    {
+        "text": "or, the very early phase, is it\nwill generate some hypotheses.",
+        "start": 375.318,
+        "duration": 4.21
+    },
+    {
+        "text": "It will sample them intelligently,\nI'm not going to get into how it does",
+        "start": 379.638,
+        "duration": 2.27
+    },
+    {
+        "text": "that right now, but it basically will\nsample some hypotheses, and then it",
+        "start": 381.938,
+        "duration": 4.594
+    },
+    {
+        "text": "will start testing those hypotheses.",
+        "start": 386.532,
+        "duration": 1.116
+    },
+    {
+        "text": "So it will sample some very\ngood hypotheses, for example,",
+        "start": 388.108,
+        "duration": 3.2
+    },
+    {
+        "text": "some over here, this might not\nbe best hypothesis, let's see.",
+        "start": 392.118,
+        "duration": 4.93
+    },
+    {
+        "text": "So it'll basically sample somehow.",
+        "start": 400.318,
+        "duration": 1.53
+    },
+    {
+        "text": "So this one's a good one, right?",
+        "start": 401.918,
+        "duration": 2.14
+    },
+    {
+        "text": "So it got the right orientation, it\ngot the right identity, it also got",
+        "start": 404.298,
+        "duration": 4.13
+    },
+    {
+        "text": "the right sensor location, right?",
+        "start": 408.428,
+        "duration": 2.33
+    },
+    {
+        "text": "Almost.",
+        "start": 411.568,
+        "duration": 0.61
+    },
+    {
+        "text": "Some of those are , when we test\nthem, they're going to prove that",
+        "start": 415.388,
+        "duration": 4.65
+    },
+    {
+        "text": "they're good, others are not.",
+        "start": 420.038,
+        "duration": 1.74
+    },
+    {
+        "text": "we could also sample hypotheses that\nare not on the same object, right?",
+        "start": 425.988,
+        "duration": 3.38
+    },
+    {
+        "text": "So we have many of these views here\nwhere we have many hypotheses, right?",
+        "start": 429.368,
+        "duration": 6.33
+    },
+    {
+        "text": "Since the dice, The\nmustard bottle whatever.",
+        "start": 435.698,
+        "duration": 4.2
+    },
+    {
+        "text": "So if we go back to just the ones that\nare on the correct identity, and just to",
+        "start": 440.868,
+        "duration": 5.647
+    },
+    {
+        "text": "drive this point home about hypotheses.",
+        "start": 446.515,
+        "duration": 1.483
+    },
+    {
+        "text": "We can also activate here.",
+        "start": 449.978,
+        "duration": 2.15
+    },
+    {
+        "text": "Look at the path that\nthe sensor moved, right?",
+        "start": 453.288,
+        "duration": 4.7
+    },
+    {
+        "text": "Because the hypothesis is just going to\nintegrate, it's going to get a movement.",
+        "start": 458.008,
+        "duration": 5.6
+    },
+    {
+        "text": "It's going to adjust transform this\nmovement so that it fits the allocentric",
+        "start": 463.608,
+        "duration": 3.365
+    },
+    {
+        "text": "reference frame of the object and then\nit's just going to path integrate and",
+        "start": 467.198,
+        "duration": 3.37
+    },
+    {
+        "text": "add this movement to the sensor location.",
+        "start": 470.678,
+        "duration": 1.96
+    },
+    {
+        "text": "So this is what it looks like.",
+        "start": 473.038,
+        "duration": 1.71
+    },
+    {
+        "text": "This is the trajectory that\nit thinks that it moved.",
+        "start": 475.088,
+        "duration": 3.09
+    },
+    {
+        "text": "We started over here, and then\nwe moved all the way here.",
+        "start": 478.198,
+        "duration": 2.54
+    },
+    {
+        "text": "Which really just matches what we moved,\nthrough with the simulator, right?",
+        "start": 481.108,
+        "duration": 6.95
+    },
+    {
+        "text": "Started over here, and then\nwe just moved this way.",
+        "start": 488.068,
+        "duration": 2.1
+    },
+    {
+        "text": "So you'll see that the movements\nare the same, it's just that it",
+        "start": 490.488,
+        "duration": 4.22
+    },
+    {
+        "text": "might not be at the same location,\nor at the same orientation.",
+        "start": 494.748,
+        "duration": 3.02
+    },
+    {
+        "text": "So if I look at some of these\nhypotheses at the bottom",
+        "start": 498.128,
+        "duration": 2.9
+    },
+    {
+        "text": "here with the low pose error.",
+        "start": 501.028,
+        "duration": 1.94
+    },
+    {
+        "text": "These all have low pose error\nso they all match this one.",
+        "start": 504.448,
+        "duration": 4.75
+    },
+    {
+        "text": "You will see that they\nlook the same, but they are",
+        "start": 511.358,
+        "duration": 2.78
+    },
+    {
+        "text": "just translated, right?",
+        "start": 516.188,
+        "duration": 1.39
+    },
+    {
+        "text": "Just translated because it thinks that,\nyeah, the pose is correct, but the",
+        "start": 518.218,
+        "duration": 3.78
+    },
+    {
+        "text": "location of the sensor is different.",
+        "start": 522.008,
+        "duration": 1.42
+    },
+    {
+        "text": "But if I move to something\nthat has a high pose error.",
+        "start": 523.748,
+        "duration": 2.36
+    },
+    {
+        "text": "Over here, you'll see that",
+        "start": 527.508,
+        "duration": 1.19
+    },
+    {
+        "text": "the whole trajectory is just rotated,\nand that's just it's trying to fit it",
+        "start": 530.818,
+        "duration": 3.62
+    },
+    {
+        "text": "into the allocentric reference frame.",
+        "start": 534.468,
+        "duration": 1.4
+    },
+    {
+        "text": "Yeah, let's actually run this, or,\nlet's just replay the animation",
+        "start": 539.238,
+        "duration": 4.53
+    },
+    {
+        "text": "and see what happens to the to the\nhypothesis space as a whole, right?",
+        "start": 544.108,
+        "duration": 4.27
+    },
+    {
+        "text": "Because we have all of these hypotheses\nand we want to look at what happens there.",
+        "start": 548.378,
+        "duration": 4.73
+    },
+    {
+        "text": "started again.",
+        "start": 555.008,
+        "duration": 0.96
+    },
+    {
+        "text": "And\u2026",
+        "start": 556.808,
+        "duration": 0.72
+    },
+    {
+        "text": "So the",
+        "start": 559.918,
+        "duration": 0.4
+    },
+    {
+        "text": "hypothesis space, it starts\u2026 this is,\nthe hypothesis-based side so basically",
+        "start": 563.288,
+        "duration": 1.16
+    },
+    {
+        "text": "it starts with a lot of hypotheses,\nand then we start pruning them.",
+        "start": 564.448,
+        "duration": 5.02
+    },
+    {
+        "text": "And the pruning is basically\ndepending on the evidence.",
+        "start": 569.728,
+        "duration": 2.23
+    },
+    {
+        "text": "what happens is that as Monty as\nMonty moves or as the agent moves,",
+        "start": 572.448,
+        "duration": 7.46
+    },
+    {
+        "text": "it will send those movements and\nfeatures to the reference frame,",
+        "start": 580.138,
+        "duration": 3.04
+    },
+    {
+        "text": "and it will compare it to what the\nhypothesis thinks it's seeing, right?",
+        "start": 583.188,
+        "duration": 5.77
+    },
+    {
+        "text": "Because the movements are also\napplied in the hypothesis.",
+        "start": 589.178,
+        "duration": 2.34
+    },
+    {
+        "text": "it will apply the movement, and it will\ncompare it to it will make a prediction",
+        "start": 593.148,
+        "duration": 3.26
+    },
+    {
+        "text": "about what it will see, and then it will\ncompare that to what the simulator has",
+        "start": 596.408,
+        "duration": 5.78
+    },
+    {
+        "text": "sent it, which is the actual observation.",
+        "start": 602.188,
+        "duration": 3.02
+    },
+    {
+        "text": "And then it will basically build,\nif it matches, it will add some",
+        "start": 605.638,
+        "duration": 5.35
+    },
+    {
+        "text": "evidence, and if it doesn't match,\nit will subtract some evidence.",
+        "start": 610.988,
+        "duration": 2.55
+    },
+    {
+        "text": "So the evidence added is really\nproportional to what it sees.",
+        "start": 613.548,
+        "duration": 2.75
+    },
+    {
+        "text": "this is what, a typical good\nhypothesis would look like, right?",
+        "start": 617.678,
+        "duration": 4.63
+    },
+    {
+        "text": "You have evidence just growing like this.",
+        "start": 622.378,
+        "duration": 2.11
+    },
+    {
+        "text": "And then we also have the evidence\nchange which is like the slope",
+        "start": 624.818,
+        "duration": 3.77
+    },
+    {
+        "text": "averaged over the last few steps.",
+        "start": 629.228,
+        "duration": 1.36
+    },
+    {
+        "text": "And that's what we use to delete\nhypotheses or add new hypotheses as a",
+        "start": 631.008,
+        "duration": 4.14
+    },
+    {
+        "text": "signal of adding or deleting hypotheses.",
+        "start": 635.148,
+        "duration": 1.61
+    },
+    {
+        "text": "yeah, so let's just run it to the end.",
+        "start": 639.548,
+        "duration": 2.51
+    },
+    {
+        "text": "We will see that we have over\nhere just a few hypotheses, I",
+        "start": 642.538,
+        "duration": 3.28
+    },
+    {
+        "text": "don't know, 10 hypotheses at the\nend, which is very efficient.",
+        "start": 645.818,
+        "duration": 2.85
+    },
+    {
+        "text": "What we will look at now is what Monty\nthinks is\u2026 which one of them is the best.",
+        "start": 650.068,
+        "duration": 5.36
+    },
+    {
+        "text": "So we can just set this\nto 1, this is the top.",
+        "start": 655.438,
+        "duration": 3.45
+    },
+    {
+        "text": "Top one hypothesis according\nto the evidence score, the",
+        "start": 659.868,
+        "duration": 2.11
+    },
+    {
+        "text": "accumulated evidence score.",
+        "start": 661.998,
+        "duration": 1.1
+    },
+    {
+        "text": "Not necessarily the\nslope, but just the score.",
+        "start": 663.458,
+        "duration": 2.28
+    },
+    {
+        "text": "And we can try and look\nat, what this one is.",
+        "start": 666.998,
+        "duration": 3.53
+    },
+    {
+        "text": "this one's actually a pretty good\none, and you can see here that",
+        "start": 672.728,
+        "duration": 2.975
+    },
+    {
+        "text": "the evidence has been climbing\nsince we started the episode.",
+        "start": 675.778,
+        "duration": 3.99
+    },
+    {
+        "text": "It's just been adding evidence, and it\nonly started, the evidence started only",
+        "start": 679.808,
+        "duration": 6.25
+    },
+    {
+        "text": "decreasing after we switched to the\nnext object and then we deleted that",
+        "start": 686.088,
+        "duration": 3.65
+    },
+    {
+        "text": "hypothesis, which is what we would want.",
+        "start": 689.748,
+        "duration": 1.91
+    },
+    {
+        "text": "So we could also we could look at this\nhypothesis, and we can see that it's",
+        "start": 693.638,
+        "duration": 2.78
+    },
+    {
+        "text": "the right orientation, right object,\nbut also, as equally important, it's the",
+        "start": 696.528,
+        "duration": 4.87
+    },
+    {
+        "text": "right\u2026 it knows where it is on the object.",
+        "start": 701.398,
+        "duration": 2.25
+    },
+    {
+        "text": "So that's that's a very\nimportant piece of information.",
+        "start": 703.708,
+        "duration": 2.03
+    },
+    {
+        "text": "But we could also look at what is\nthe second most likely hypothesis,",
+        "start": 706.758,
+        "duration": 4.25
+    },
+    {
+        "text": "which would be over here, and you can\nsee that it's structurally the same.",
+        "start": 711.138,
+        "duration": 4.8
+    },
+    {
+        "text": "It's like a very high pose\nerror, at 180 degrees rotation.",
+        "start": 715.938,
+        "duration": 3.54
+    },
+    {
+        "text": "But it's structurally the same, which\nis, that's because Monty focuses more on",
+        "start": 719.758,
+        "duration": 4.49
+    },
+    {
+        "text": "the shape of the object rather\nthan the texture or the the colors.",
+        "start": 726.878,
+        "duration": 3.75
+    },
+    {
+        "text": "And that's something that\nwe've built into Monty.",
+        "start": 730.638,
+        "duration": 2.3
+    },
+    {
+        "text": "You can change that if you\nwant but this is something that",
+        "start": 732.938,
+        "duration": 2.24
+    },
+    {
+        "text": "is really important to Monty.",
+        "start": 735.618,
+        "duration": 1.61
+    },
+    {
+        "text": "we could also look at the third\nmost likely hypothesis, which",
+        "start": 741.178,
+        "duration": 2.46
+    },
+    {
+        "text": "would be something over here.",
+        "start": 743.638,
+        "duration": 1.3
+    },
+    {
+        "text": "So that's it, again, it's the\nsame object, just rotated 180",
+        "start": 745.428,
+        "duration": 3.54
+    },
+    {
+        "text": "degrees and 180 degrees, or\u2026",
+        "start": 748.968,
+        "duration": 1.34
+    },
+    {
+        "text": "Yeah, it's keeping the same overall shape.",
+        "start": 751.528,
+        "duration": 2.81
+    },
+    {
+        "text": "I don't have a lot of time so I'm\ngoing to skip over the die example.",
+        "start": 756.498,
+        "duration": 3.73
+    },
+    {
+        "text": "But it's getting the correct information.",
+        "start": 760.228,
+        "duration": 6.06
+    },
+    {
+        "text": "And then these are just\u2026\nit's the same orientation.",
+        "start": 766.618,
+        "duration": 3.85
+    },
+    {
+        "text": "But it's different faces over here.",
+        "start": 770.468,
+        "duration": 1.84
+    },
+    {
+        "text": "Just swap some of them.",
+        "start": 772.418,
+        "duration": 1.01
+    },
+    {
+        "text": "Because again it's just\nfocusing on this overall shape.",
+        "start": 773.818,
+        "duration": 2.61
+    },
+    {
+        "text": "But one interesting example\nover here is the mug.",
+        "start": 778.428,
+        "duration": 5.11
+    },
+    {
+        "text": "Where if I just run this to the end.",
+        "start": 784.188,
+        "duration": 3.53
+    },
+    {
+        "text": "Let's just take a look at what\nthe results would look like.",
+        "start": 787.778,
+        "duration": 3.3
+    },
+    {
+        "text": "it thinks that this hypothesis\nover here, the green hypothesis",
+        "start": 792.428,
+        "duration": 4.453
+    },
+    {
+        "text": "over here, this is the most likely\nhypothesis, according to evidence.",
+        "start": 796.881,
+        "duration": 2.097
+    },
+    {
+        "text": "if we take a look at it, it's\nan interesting hypothesis.",
+        "start": 799.808,
+        "duration": 3.44
+    },
+    {
+        "text": "It's the object is in the right\norientation, but it looks like",
+        "start": 803.278,
+        "duration": 5.81
+    },
+    {
+        "text": "it's rotated around one axis.",
+        "start": 809.088,
+        "duration": 1.3
+    },
+    {
+        "text": "Which is the the Y-axis, and it\nwould be the axis of symmetry",
+        "start": 810.408,
+        "duration": 6.04
+    },
+    {
+        "text": "if the handle was not there.",
+        "start": 816.448,
+        "duration": 1.51
+    },
+    {
+        "text": "Let's take a look at a few\nmore and you'll see that all",
+        "start": 819.288,
+        "duration": 2.14
+    },
+    {
+        "text": "of them are actually the same.",
+        "start": 821.428,
+        "duration": 1.58
+    },
+    {
+        "text": "same trend, right?",
+        "start": 823.718,
+        "duration": 1.0
+    },
+    {
+        "text": "Same pattern, it's just rotating\naround that axis of symmetry",
+        "start": 824.718,
+        "duration": 2.8
+    },
+    {
+        "text": "assuming that the handle's not there.",
+        "start": 827.858,
+        "duration": 1.63
+    },
+    {
+        "text": "what we could conclude that it\nhasn't really seen the handle yet,",
+        "start": 829.778,
+        "duration": 3.05
+    },
+    {
+        "text": "and that's what we can also explore\nby looking at the sensory patch.",
+        "start": 833.038,
+        "duration": 6.06
+    },
+    {
+        "text": "We could just remove the cup from\nhere and we'll see that it's just",
+        "start": 839.698,
+        "duration": 3.4
+    },
+    {
+        "text": "been moved around the object.",
+        "start": 843.098,
+        "duration": 1.16
+    },
+    {
+        "text": "It explored also on the bottom of\nthe object, but it hasn't really",
+        "start": 844.468,
+        "duration": 2.89
+    },
+    {
+        "text": "seen the handle at all, right?",
+        "start": 848.058,
+        "duration": 2.28
+    },
+    {
+        "text": "it would make sense that it didn't\nknow where the handle is and",
+        "start": 851.048,
+        "duration": 2.893
+    },
+    {
+        "text": "it would just think that all of\nthese are very good hypotheses.",
+        "start": 853.941,
+        "duration": 2.907
+    },
+    {
+        "text": "They've been accumulating\nevidence as you can see here.",
+        "start": 856.848,
+        "duration": 2.18
+    },
+    {
+        "text": "Another view that we can look\nat is, this view over here.",
+        "start": 859.498,
+        "duration": 4.5
+    },
+    {
+        "text": "I'm just going to talk briefly\nabout this figure at the bottom.",
+        "start": 864.288,
+        "duration": 5.15
+    },
+    {
+        "text": "Which we're just calling\nthe hypothesis space.",
+        "start": 869.748,
+        "duration": 3.85
+    },
+    {
+        "text": "If you look at the one with\nthe area under the curve.",
+        "start": 873.618,
+        "duration": 2.36
+    },
+    {
+        "text": "They highlighted area under the curve.",
+        "start": 876.428,
+        "duration": 1.44
+    },
+    {
+        "text": "This is the hypothesis space size.",
+        "start": 878.138,
+        "duration": 1.95
+    },
+    {
+        "text": "at the beginning it grows as it thinks\nthat it needs hypotheses because at the",
+        "start": 881.158,
+        "duration": 4.557
+    },
+    {
+        "text": "beginning, it didn't have any hypotheses.",
+        "start": 885.715,
+        "duration": 1.213
+    },
+    {
+        "text": "So it needs to sample some.",
+        "start": 887.168,
+        "duration": 1.04
+    },
+    {
+        "text": "And then, oh, and then\nit prunes them, right?",
+        "start": 889.508,
+        "duration": 2.91
+    },
+    {
+        "text": "it will just prune those hypotheses and\nthen go to almost a few, 10, as I think",
+        "start": 894.778,
+        "duration": 4.05
+    },
+    {
+        "text": "we've seen in the previous visualization.",
+        "start": 898.858,
+        "duration": 2.6
+    },
+    {
+        "text": "But then after some time, we'll\nswitch the object with another one.",
+        "start": 901.918,
+        "duration": 4.48
+    },
+    {
+        "text": "And Monty figures out that it will\nautomatically figure that out based",
+        "start": 906.678,
+        "duration": 4.22
+    },
+    {
+        "text": "on just looking at the evidence\nand the slopes and all of that.",
+        "start": 910.898,
+        "duration": 3.615
+    },
+    {
+        "text": "It'll just figure out that it needs to\nsample new hypotheses because the ones",
+        "start": 914.513,
+        "duration": 3.835
+    },
+    {
+        "text": "existing are not really good enough.",
+        "start": 918.398,
+        "duration": 2.35
+    },
+    {
+        "text": "So it will trigger what\nwe call a sampling burst.",
+        "start": 921.008,
+        "duration": 2.93
+    },
+    {
+        "text": "It will just burst some\nhypothesis over a few steps.",
+        "start": 924.058,
+        "duration": 2.77
+    },
+    {
+        "text": "And that will increase the\nnumber of hypotheses again.",
+        "start": 927.348,
+        "duration": 2.99
+    },
+    {
+        "text": "And then it will start pruning them.",
+        "start": 930.338,
+        "duration": 1.13
+    },
+    {
+        "text": "It will happen again when\nwe switch it out with a mug.",
+        "start": 932.168,
+        "duration": 2.22
+    },
+    {
+        "text": "You can imagine this also working\nif you move from one object to",
+        "start": 935.428,
+        "duration": 2.74
+    },
+    {
+        "text": "another sharing the same space.",
+        "start": 938.168,
+        "duration": 2.41
+    },
+    {
+        "text": "I just want to show you what\nit will look like here in this",
+        "start": 943.418,
+        "duration": 4.08
+    },
+    {
+        "text": "different visualization for the cup\nbecause I think it's interesting.",
+        "start": 947.968,
+        "duration": 3.12
+    },
+    {
+        "text": "Let me just run this again\nand turn on the hypotheses.",
+        "start": 951.588,
+        "duration": 6.75
+    },
+    {
+        "text": "So here what I'm showing here is\nnot the hypothesis orientations,",
+        "start": 958.498,
+        "duration": 3.75
+    },
+    {
+        "text": "again, I'm just showing where every\nhypothesis thinks its sensor is.",
+        "start": 962.248,
+        "duration": 4.72
+    },
+    {
+        "text": "there's a lot of hypotheses they think\nthey're all over the object but once we",
+        "start": 967.948,
+        "duration": 4.0
+    },
+    {
+        "text": "start running the animation it will just\nlook like we'll be pruning them, but it",
+        "start": 971.948,
+        "duration": 5.96
+    },
+    {
+        "text": "will also leave only a few hypotheses.",
+        "start": 977.908,
+        "duration": 2.94
+    },
+    {
+        "text": "So let's do that.",
+        "start": 982.068,
+        "duration": 1.28
+    },
+    {
+        "text": "And\u2026",
+        "start": 984.838,
+        "duration": 0.65
+    },
+    {
+        "text": "transparency.",
+        "start": 989.748,
+        "duration": 0.61
+    },
+    {
+        "text": "So yeah, so we've pruned the\nhypothesis, we are over here right",
+        "start": 991.848,
+        "duration": 3.19
+    },
+    {
+        "text": "now, and it thinks that there are\njust a few hypotheses over here.",
+        "start": 995.038,
+        "duration": 3.79
+    },
+    {
+        "text": "And the hypotheses are all around\nthe object, because, again, it",
+        "start": 999.198,
+        "duration": 3.86
+    },
+    {
+        "text": "hasn't seen the handle so it just\nthinks that they're all around.",
+        "start": 1003.068,
+        "duration": 3.15
+    },
+    {
+        "text": "If I turn on the evidence scores you'll\nbe able to see that it thinks that there",
+        "start": 1006.888,
+        "duration": 4.62
+    },
+    {
+        "text": "are basically good hypotheses all over.",
+        "start": 1011.508,
+        "duration": 4.22
+    },
+    {
+        "text": "there are very high hypotheses everywhere.",
+        "start": 1017.458,
+        "duration": 2.26
+    },
+    {
+        "text": "Again, it thinks that this is symmetric.",
+        "start": 1020.038,
+        "duration": 2.086
+    },
+    {
+        "text": "This is what happens when Monty\nsees a symmetric object, or",
+        "start": 1022.268,
+        "duration": 3.15
+    },
+    {
+        "text": "thinks this is a symmetric object.",
+        "start": 1025.438,
+        "duration": 1.28
+    },
+    {
+        "text": "It will just think all of these hypotheses\nare equally valid or are good hypotheses.",
+        "start": 1027.028,
+        "duration": 5.33
+    },
+    {
+        "text": "And let's just to end this\nlet's run this, again.",
+        "start": 1035.868,
+        "duration": 5.62
+    },
+    {
+        "text": "You'll be able to see that as the sensor\nmoves up and down these hypotheses",
+        "start": 1041.488,
+        "duration": 3.795
+    },
+    {
+        "text": "will go up and down with it, right?",
+        "start": 1045.608,
+        "duration": 2.4
+    },
+    {
+        "text": "Because we're path integrating\nso every movement is just",
+        "start": 1048.008,
+        "duration": 3.2
+    },
+    {
+        "text": "moving those sensor locations.",
+        "start": 1051.208,
+        "duration": 1.35
+    },
+    {
+        "text": "it'll just move up and\ndown with the sensor.",
+        "start": 1054.018,
+        "duration": 2.65
+    },
+    {
+        "text": "Which is what we want to see, right?",
+        "start": 1058.018,
+        "duration": 1.44
+    },
+    {
+        "text": "I think I'm gonna end it here, because\nI took more time than I should.",
+        "start": 1061.148,
+        "duration": 3.05
+    },
+    {
+        "text": "Just the last thing is if you like\nthese kinds of visualizations there's",
+        "start": 1064.788,
+        "duration": 7.14
+    },
+    {
+        "text": "a repository for it: tbp.plot, and\nwe have a very small gallery here",
+        "start": 1071.928,
+        "duration": 4.37
+    },
+    {
+        "text": "and you can contribute to it or\nyou could just use them to view",
+        "start": 1077.098,
+        "duration": 4.88
+    },
+    {
+        "text": "your experiments that you run.",
+        "start": 1081.978,
+        "duration": 1.35
+    },
+    {
+        "text": "And there are some written\ntutorials on how to create new ones.",
+        "start": 1084.698,
+        "duration": 2.96
+    },
+    {
+        "text": "And there's also a video\ntutorial on how to use those.",
+        "start": 1088.028,
+        "duration": 2.88
+    },
+    {
+        "text": "with that, I'm gonna hand it off to\nWill, who will actually guide you",
+        "start": 1091.538,
+        "duration": 3.7
+    },
+    {
+        "text": "into how to contribute more into\nvarious  aspects of this project.",
+        "start": 1096.538,
+        "duration": 3.5
+    }
+]
