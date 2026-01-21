@@ -38,6 +38,11 @@ class YouTubeVideoInfo:
             self._title = self._sanitize_title(metadata_title)
         return self._title
 
+    @property
+    def description(self):
+        metadata_description = self.metadata.get("description") or ""
+        return metadata_description.split("\n\n")[0]
+
     @staticmethod
     def from_file(path: Path) -> YouTubeVideoInfo | None:
         try:
