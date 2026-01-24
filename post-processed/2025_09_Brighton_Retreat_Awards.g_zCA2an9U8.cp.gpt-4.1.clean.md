@@ -1,0 +1,11 @@
+Are you ready? I'm going to present the prizes. We are using five of the awards and changing one a little, as Viviane suggested.
+
+First, for what makes the community happiest, we chose Willa and Tristan's project. It was amazing that you could forget about it being too slow because we know you'll fix that. Once that's fixed, making it easier to install and modular is really awesome. There's a lot of work that went into that, and you had to do a lot to make it happen.
+
+Second, for most ambitious, we wanted to give a nod to Will and Tristan because, as Jeff said, it was very ambitious. In the end, we are awarding this to Rami's project because it's amazing. He had to do this all by himself, including the presentation, and managed to complete it. Did you sleep this week, Rami? Just checking.
+
+For most exciting results, we thought Scott and Ho J's results from the Showdown were amazing, with no caveats. That was quite exciting and looks like it could be rolled in today.
+
+The fourth award is most essential for the team, changed from most impactful, with the subtext to keep the legend going. This goes to Viviane, Niels, and Jeremy of the legend team. This was a very ambitious project too, but what you are working on is really essential for the whole internal team and eventually the community, to do compositional objects. You get some minor kudo points for finding bugs, but we didn't want a separate award for bugs. Will and Tristan did a super amount of refactoring, so that's up there too. No special award for bugs.
+
+Finally, for best in show and most entertaining presentation, this is why we're a little late. We talked about this and are awarding it to two teams because there are two overall trophies: Will and Tristan's team, and Scott and Ho J's team. All four of these were quite amazing. You did amazing work in a week. Not only did you present well, but both teams also had slight gags, which made us happy. You had peer programming and cowboy spam, both entertaining, so a little side shout out for that. They were more interactive, with one team showing the code running and the other showing different highlighted areas on the dog, making it more engaging for non-technical people.

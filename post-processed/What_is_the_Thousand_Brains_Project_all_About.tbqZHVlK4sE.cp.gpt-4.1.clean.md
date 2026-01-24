@@ -1,0 +1,9 @@
+Every intelligent system, human or animal, learns by interacting with the world. We touch, look around, move, actively test hypotheses, and explore our environment. This is called sensorimotor learning, and it's how we understand the world.
+
+We often hear that modern artificial intelligence is inspired by the brain, but the truth is current AI is very different. Current AI systems don't learn through active interaction with the world; they're trained on massive static datasets, like being shown a photo album without ever touching or exploring the objects in the pictures, or reading all the texts on the internet without knowing what the words refer to. At their core, they are just strong pattern recognizers.
+
+Humans learn in a much more flexible, efficient, and robust way. We don't need thousands of examples to learn something new. Think of how quickly a child can learn a new word, or how you can perform a new task after watching someone just a few times. We also don't stop learning once we finish a specific task; we always absorb new information and refine our knowledge.
+
+Imagine machines that could learn like we do—machines that interact, sense, and adapt in real time. This could solve many real-world challenges where internet-scale data isn't available or quick adaptation is required. This is what the Thousand Brains Project is all about.
+
+At Numenta, we spent many years studying the brain and figuring out the principles underlying our intelligence. Now we're building an open-source AI framework that runs on these core principles. It's a fundamentally different approach that will change the way we think about AI.
