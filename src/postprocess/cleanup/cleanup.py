@@ -84,17 +84,17 @@ async def main():
                 print("Shutdown requested, stopping...")
                 break
 
-            target_path = Path(__file__).parent.parent.parent.parent / f"post-processed/{filename}.cp.{transcript_cleanup.model}.clean.md"
+            target_path = Path(__file__).parent.parent.parent.parent / f"data/post-processed/{filename}.cp.{transcript_cleanup.model}.clean.md"
             if target_path.exists():
                 print(f"Clean transcript {target_path} already exists, skipped.")
                 continue
 
             video_info_path = Path(
-                __file__).parent.parent.parent.parent / f"youtube/info/{filename}.json"
+                __file__).parent.parent.parent.parent / f"data/youtube/info/{filename}.json"
             video_definition = YouTubeVideoInfo.from_file(video_info_path)
 
             transcript_path = Path(
-                __file__).parent.parent.parent.parent / f"youtube/transcripts/{filename}.md"
+                __file__).parent.parent.parent.parent / f"data/youtube/transcripts/{filename}.md"
 
             with open(transcript_path, "r") as f:
                 transcription = f.read()

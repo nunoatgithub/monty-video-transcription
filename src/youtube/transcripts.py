@@ -16,7 +16,7 @@ from youtube.info import YouTubeVideoInfo
 class YouTubeTranscript:
 
     _ytt_api = None
-    _TRANSCRIPTS_DIR = Path(__file__).parent.parent.parent / "youtube" / "transcripts"
+    _TRANSCRIPTS_DIR = Path(__file__).parent.parent.parent / "data/youtube/transcripts"
 
     def __init__(self, title: str, video_id:str, fetched_transcript: list[dict]) -> None:
         self.title = title
@@ -225,7 +225,9 @@ def main():
         raw_transcript, fetched = YouTubeTranscript.fetch_or_load_transcript(video_info)
         raw_transcript.process()
         if fetched and i + 1 < len(video_infos):
-            time.sleep(random.randint(30, 60)) # otherwise you get your IP blocked...
+            seconds = random.randint(30, 60)
+            print(f"Pausing for {seconds} seconds...")
+            time.sleep(seconds) # otherwise you get your IP blocked...
 
 if __name__ == "__main__":
     main()

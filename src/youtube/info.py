@@ -10,7 +10,7 @@ import yt_dlp
 
 class YouTubeVideoInfo:
 
-    _VIDEO_INFO_DIR = Path(__file__).parent.parent.parent / "youtube" / "info"
+    _VIDEO_INFO_DIR = Path(__file__).parent.parent.parent / "data/youtube/info"
 
     def __init__(self, url: str, metadata: dict) -> None:
         self.url = url
@@ -28,7 +28,7 @@ class YouTubeVideoInfo:
     @property
     def video_id(self) -> str:
         if self._video_id is None:
-            self._video_id = self._extract_video_id(self.url)
+            self._video_id = self.metadata["id"]
         return self._video_id
 
     @property
