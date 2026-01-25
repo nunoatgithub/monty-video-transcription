@@ -1,0 +1,37 @@
+Maybe related to this, let's talk about tactile sensors. There are different kinds of tactile sensors, like real sensors that use pressure. What I'm talking about is a vision-type sensorimotor. Basically, it's like your finger has a little camera. They have a surface that deforms, and a camera registers the deformation. They use rubber components, lenses, and LEDs around those lenses, with a camera at the end to capture the information. For example, they get very high resolution using cell phone cameras. 
+
+Todd, do you remember at Interval they had something like this, capturing the surface of a drum as it was being deformed? One tricky part is getting the rubber component. There was a company from MIT called GelSight that developed a very high-resolution version. Someone makes the whole thing. That's what it looks like—the output of the sensorimotor. For example, this is Velcro being touched, and this is the output. Touching foam, styrofoam, a circuit board, and some coins. The resolution is clearly higher than my finger. You can't read the numbers on a coin, but the sensorimotor can. They have pretty good sensorimotor capabilities.
+
+How big is the tip face? It's about the size of your fingertip. It's clearly higher resolution than our skin—much higher. This one is being developed by Facebook and is open source. You can buy it off the shelf. Do they have simulators you could use? That's the next slide. There's a simulator, not exactly Habitat, but it can be integrated into Habitat. It's also by Facebook Research. The physical sensorimotor is from GelSight, not Facebook. The design is open source. You can buy the whole thing or build your own. They'll assemble it for you, or you can buy the elements and build it yourself. There's a bill of materials, and it's 3D printable.
+
+That's what the sensorimotor looks like in a simulator. Here's a different one with a hand that has multiple sensors, one for each finger. This is just putting a marble on the sensorimotor. There's an example with a corner, which is different from the surface. This would be like multiple columns on your skin detecting at the same time. Those are two fingers. You can probably detect the normal to the surface too, which is exactly what you can do. The intensity is basically the pressure of the tip, the gel inside. You get a very high-resolution point cloud.
+
+This is also open source—the simulator and the sensorimotor. We can integrate that if we want, or even go upstream since it's the same company. They just released it in November.
+
+I was thinking about integrating it into Monty initially, before any manipulation. You just need these sensors to tap different places, even without manipulating the object yet. This would be the thing to use.
+
+Is anyone using this commercially, or is it just for research? It's a commercial company selling it, but this specific sensorimotor isn't used commercially. They bought it for VR. Facebook bought the company that was building hands with the sensorimotor. They've already shown the prototype, using it in VR.
+
+How would they use this in VR? You don't really need a physical sensorimotor in VR. If you're wearing a glove that imparts the same sensation on your fingertips in a virtual world, you need to know how to deform your glove. If you feel something in the virtual world, you need to transmit that. They can use this as a training module for the virtual reality stimulator. Someone shows a physical object, and then they figure out what to put on your fingers to make you feel it. If I'm touching something in the virtual world, I need to know exactly what that shape is to transmit the feeling. But when you're in the virtual world, you're not actually touching anything, so this wouldn't be useful. This is a simulation, but this is actually a physical sensorimotor. It only gives input if you touch something. No, this one's a virtual sensorimotor—there's no physical object, but it's still detecting, based on this design.
+
+It's still an input. It's a virtual 3D input, but it won't make you feel something. In order to make you feel something, you need to know what detailed sensation to transmit. This will give you that detail. In the end, if I'm using the virtual reality world, I wouldn't have this, right? 
+
+You would. Why would you need this? Why would you need the camera? Not the physical one, the other one. I'm talking about the simulation. I don't need the simulation one. Oh, I see. You're asking how you would know what that virtual puppet feels like otherwise. So, a direct connection to haptics in your virtual reality. This is a haptic sensorimotor. The thing you would wear on your hand would be totally different. You'd have a virtual one that's touching the virtual objects. 
+
+You were asking why you would need a virtual one. That's why I was thinking, why did you need a physical one? I didn't realize that. Maybe a physical one. For physical robots, it's really hard to do subtle manipulations. They have videos of this robot grabbing an egg. You said they bought a company making these, and I'm saying, why did they make the company making these for virtual reality? Because you don't need the physical one for virtual reality; for the simulator one, you don't need to buy anything. I don't know. They have something, and it creates something called I Touch.
+
+We'll have models and data sets for this.
+
+Right now, it doesn't have anything. In that animation you were showing, when they pressed the virtual ball against the top figure, I noticed the top joint was actually displacing not just the surface. You could see it pushing back. I'm just wondering what they're simulating there—the fact that the whole thing is spring-loaded. In this one, they run the simulator inside ROS. I think it's a ROS visualizer. It's truly articulated, but you shouldn't focus on the movement or the finger, just focus on the right side. It's a focus. I understand. They had to make that happen somehow. 
+
+One of the other things I realized is that, depending on how this thing displaces, it's not only sensing texture but also pressure. So you get both of those with this one sensorimotor. On the right side, when you have the intensity, it turns brighter once the value changes. According to Mountcastle, which could be wrong, a single column wouldn't be able to get information like this because the signals going in are mixed. You don't really have spatial resolution. I've mentioned this many times: you don't get further spatial resolution. Here, you can actually see where the ball is moving around. Multiple sensors, multiple columns here, which is fine. It's pretty cool.
+
+Okay, that's cool. Thanks.
+
+Okay, so probably the next step would be to see how to integrate this. That would be great. It could be like a single finger exploring your object.
+
+So what would we use this for as a touch sensorimotor? Instead of going directly to the sensorimotor, we go directly to that, but this would be to train the vision module. It could be used to try a model.
+
+I suggest that we work on two modules at once, for two reasons. One is to keep us honest and not get pulled into one direction. Vision has its own problems, and we might not realize there are other issues. The other is that ultimately we want to do manipulation of objects.
+
+I thought we should probably keep vision and touch going simultaneously, so learning modules can be generic. The system has different issues, so just keep us honest about the whole system.
