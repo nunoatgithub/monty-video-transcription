@@ -229,5 +229,7 @@ def main():
             print(f"Pausing for {seconds} seconds...")
             time.sleep(seconds) # otherwise you get your IP blocked...
 
+    print(f"Processed {len(video_infos)} transcripts")
+
 if __name__ == "__main__":
     main()

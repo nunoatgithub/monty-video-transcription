@@ -1,41 +1,11 @@
-import abc
 import argparse
 import asyncio
 import signal
-from dataclasses import dataclass
 from pathlib import Path
 
+from postprocess.cleanup.abstract_cleanup import TranscriptCleanup
+from postprocess.cleanup.copilot_cleanup import CopilotCleanup
 from youtube.info import YouTubeVideoInfo
-
-@dataclass
-class CleanupContext:
-    description: str
-    title: str
-    previous_chunk_last_words: str
-    next_chunk_first_words: str
-
-class TranscriptCleanup(abc.ABC):
-
-    @abc.abstractmethod
-    async def clean(self, transcription: str, description: str, title: str) -> str:
-        ...
-
-    @abc.abstractmethod
-    async def close(self) -> None:
-        ...
-
-    @property
-    @abc.abstractmethod
-    def model(self) -> str:
-        ...
-
-    @property
-    @abc.abstractmethod
-    def delay_secs(self) -> float:
-        """Return a polite delay between requests."""
-        ...
-
-#----------------------------------------------------------------
 
 shutdown_event: asyncio.Event | None = None
 
@@ -69,9 +39,6 @@ async def main():
     else:
         raise ValueError(f"Input path does not exist: {input_path}")
 
-    # import the implementation here to avoid a circular import at module import time
-    from postprocess.cleanup.copilot_cleanup import CopilotCleanup
-
     transcript_cleanup: TranscriptCleanup = CopilotCleanup()
 
     # Register signal handler for graceful shutdown
@@ -84,7 +51,8 @@ async def main():
                 print("Shutdown requested, stopping...")
                 break
 
-            target_path = Path(__file__).parent.parent.parent.parent / f"data/post-processed/{filename}.cp.{transcript_cleanup.model}.clean.md"
+            target_path = Path(
+                __file__).parent.parent.parent.parent / f"data/post-processed/{filename}.cp.{transcript_cleanup.model}.clean.md"
             if target_path.exists():
                 print(f"Clean transcript {target_path} already exists, skipped.")
                 continue
